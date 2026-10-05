@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1180" viewBox="0 0 1800 1180">
+<title>回测复盘完整页面布局草图</title>
+<desc>独立完整页面线框，所有数据和运行结果保持空态，仅表达设计要求。</desc>
+<rect width="1800" height="1180" fill="white"/>
+<text x="20" y="32" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="bold">回测复盘 · 全页面草图</text>
+<text x="1250" y="32" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">布局提案 · 未取得的数据与结果显示 —</text>
+<rect x="20" y="58" width="1760" height="1050" fill="none" stroke="#444" stroke-width="1.5"/>
+<path d="M168 58L168 1108" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M168 166L1780 166" fill="none" stroke="#666" stroke-width="1.2"/>
+<text x="36" y="100" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="bold">大类导航</text>
+<text x="34" y="244" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20">交易工作台</text>
+<text x="34" y="334" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20">数据中心</text>
+<text x="34" y="424" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20">策略管理</text>
+<rect x="28" y="485" width="132" height="44" fill="#eee" stroke="#444" stroke-width="1.5"/>
+<text x="34" y="514" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">回测复盘</text>
+<text x="730" y="104" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="bold">顶部总览 / 状态区</text>
+<text x="698" y="143" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20">具体内容待沟通，保留统一顶部区域</text>
+<text x="190" y="204" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="bold">回测复盘</text>
+<text x="190" y="240" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" font-weight="bold">历史回测（当前页）｜模拟实盘复盘｜实盘仓位复盘｜信号日志</text>
+<text x="1130" y="240" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">回测 / 模拟 / 实盘只读记录分别查看</text>
+<rect x="190" y="260" width="183" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="202" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">净收益</text>
+<text x="202" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="202" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">账户成本后收益</text>
+<rect x="391" y="260" width="183" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="403" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">最大回撤</text>
+<text x="403" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="403" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">含未平仓权益</text>
+<rect x="592" y="260" width="183" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="604" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">夏普比率</text>
+<text x="604" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="604" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">按日净收益计算</text>
+<rect x="793" y="260" width="183" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="805" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">收益因子</text>
+<text x="805" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="805" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">净盈利 / 净亏损</text>
+<rect x="994" y="260" width="183" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1006" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">成交笔数</text>
+<text x="1006" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="1006" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">完整交易数</text>
+<rect x="1195" y="260" width="183" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1207" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">胜率</text>
+<text x="1207" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="1207" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">尚无运行结果</text>
+<rect x="1396" y="260" width="183" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1408" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">盈亏比</text>
+<text x="1408" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="1408" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">平均盈利 / 平均亏损</text>
+<rect x="1597" y="260" width="183" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1609" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">总费用</text>
+<text x="1609" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="1609" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">手续费与资金费</text>
+<rect x="190" y="382" width="270" height="448" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="206" y="412" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">历史回测配置</text>
+<text x="206" y="446" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">交易所：—</text>
+<text x="206" y="476" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">币池 / 合约：—</text>
+<text x="206" y="506" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">开始日期 / 结束日期：—</text>
+<text x="206" y="536" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">策略版本：—</text>
+<text x="206" y="566" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">执行精度：—</text>
+<text x="206" y="596" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">每策略周期：2000U（口径待定）</text>
+<text x="206" y="626" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">实际覆盖与缺口：—</text>
+<text x="206" y="656" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">1分钟精度仅近10天覆盖</text>
+<text x="206" y="686" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">运行按钮：待实现，禁用</text>
+<text x="206" y="726" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">占用 / 预留 / 可用：—</text>
+<text x="206" y="756" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">开仓占用，平仓释放</text>
+<text x="206" y="786" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">盈亏扣成本，全部留存</text>
+<rect x="190" y="848" width="270" height="242" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="206" y="878" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">留存与复盘筛选</text>
+<text x="206" y="912" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">模拟 / 实盘 / 信号：—</text>
+<text x="206" y="942" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">币种 / 时间 / 策略版本</text>
+<text x="206" y="972" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">持仓变化 / 成交 / 信号日志</text>
+<text x="206" y="1002" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">有效 / 失效 / 拒绝原因</text>
+<text x="206" y="1032" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">各模式不合计收益</text>
+<text x="206" y="1062" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">持仓归零不删除历史记录</text>
+<rect x="480" y="382" width="447" height="262" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="496" y="414" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="bold">净值曲线</text>
+<path d="M522 441L522 608" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M522 608L909 608" fill="none" stroke="#666" stroke-width="1.2"/>
+<text x="565" y="522" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">尚无回测结果，不绘制曲线</text>
+<text x="496" y="634" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">所选回测日期窗口</text>
+<rect x="947" y="382" width="447" height="262" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="963" y="414" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="bold">回撤曲线</text>
+<path d="M989 441L989 608" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M989 608L1376 608" fill="none" stroke="#666" stroke-width="1.2"/>
+<text x="1032" y="522" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">尚无回测结果，不绘制曲线</text>
+<text x="963" y="634" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">所选回测日期窗口</text>
+<rect x="480" y="662" width="914" height="228" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="496" y="694" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="bold">留存记录清单 · 按当前页签显示</text>
+<path d="M480 712L1394 712" fill="none" stroke="#666" stroke-width="1.2"/>
+<text x="496" y="740" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">时间</text>
+<text x="651" y="740" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">代币</text>
+<text x="821" y="740" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">方向</text>
+<text x="917" y="740" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">事件 / 价位</text>
+<text x="1094" y="740" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">净盈亏</text>
+<text x="1240" y="740" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">状态 / 原因</text>
+<path d="M480 758L1394 758" fill="none" stroke="#666" stroke-width="1.2"/>
+<text x="728" y="814" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">尚无记录；持仓和信号的完整过程在此留存查看</text>
+<rect x="480" y="908" width="914" height="182" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="496" y="938" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">单条记录回放 · 信号 ↔ 持仓变化 ↔ 成交与退出</text>
+<text x="496" y="972" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">当时K线、信号条件、持仓/成交时间线；原始证据长期留存</text>
+<text x="496" y="1002" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">1分钟原始K线仅近10天；更早案例按真实可得周期查看</text>
+<text x="496" y="1032" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">中文复盘与事后标签单独记录，不改写当时证据</text>
+<rect x="1414" y="382" width="346" height="240" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1430" y="412" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">成本与结果明细</text>
+<text x="1430" y="446" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">手续费：—</text>
+<text x="1430" y="476" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">资金费：—</text>
+<text x="1430" y="506" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">滑点影响：—（成交价计入不重扣）</text>
+<text x="1430" y="536" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">已实现净盈亏：—</text>
+<text x="1430" y="566" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">资金费缺失则标结果限制</text>
+<rect x="1414" y="640" width="346" height="220" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1430" y="670" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">数据与回放限制</text>
+<text x="1430" y="704" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">实际覆盖：—</text>
+<text x="1430" y="734" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">缺段 / 未决样本：—</text>
+<text x="1430" y="764" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">同根止损止盈顺序：—</text>
+<text x="1430" y="794" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">结果精度与数据版本：—</text>
+<text x="1430" y="824" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">未来数据检查：未执行</text>
+<rect x="1414" y="878" width="346" height="212" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1430" y="908" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">复盘与样本外检查</text>
+<text x="1430" y="942" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">选中记录的原因与证据</text>
+<text x="1430" y="972" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">触发 / 失效 / 拒绝 / 未成交均保留</text>
+<text x="1430" y="1002" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">人工操作、模拟与实际成交分别标明</text>
+<text x="1430" y="1032" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">中文备注 / 标签：待记录</text>
+<text x="1430" y="1062" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">样本外 / 参数稳定性：未检查</text>
+<text x="20" y="1153" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">仅沟通草图与需求；未启动采集、回测或交易，按钮与曲线均为设计槽位。</text>
+</svg>

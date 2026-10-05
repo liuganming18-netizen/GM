@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1180" viewBox="0 0 1800 1180">
+<title>数据中心完整页面布局草图</title>
+<desc>独立完整页面线框，所有数据和运行结果保持空态，仅表达设计要求。</desc>
+<rect width="1800" height="1180" fill="white"/>
+<text x="20" y="32" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="bold">数据中心 · 全页面草图</text>
+<text x="1250" y="32" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">布局提案 · 未取得的数据与结果显示 —</text>
+<rect x="20" y="58" width="1760" height="1050" fill="none" stroke="#444" stroke-width="1.5"/>
+<path d="M168 58L168 1108" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M168 166L1780 166" fill="none" stroke="#666" stroke-width="1.2"/>
+<text x="36" y="100" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="bold">大类导航</text>
+<text x="34" y="244" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20">交易工作台</text>
+<rect x="28" y="305" width="132" height="44" fill="#eee" stroke="#444" stroke-width="1.5"/>
+<text x="34" y="334" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">数据中心</text>
+<text x="34" y="424" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20">策略管理</text>
+<text x="34" y="514" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20">回测复盘</text>
+<text x="730" y="104" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="bold">顶部总览 / 状态区</text>
+<text x="698" y="143" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20">具体内容待沟通，保留统一顶部区域</text>
+<text x="190" y="204" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="bold">数据中心</text>
+<text x="190" y="240" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" font-weight="bold">K线（当前页）｜OI｜资金费率｜聪明钱与市值</text>
+<text x="1120" y="240" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">交易所：全部 ▾　搜索代币　状态筛选 ▾</text>
+<rect x="190" y="260" width="382" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="206" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">实际数据覆盖</text>
+<text x="206" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="206" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">以真实覆盖记录为准</text>
+<rect x="590" y="260" width="382" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="606" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">缺段与异常</text>
+<text x="606" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="606" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">未接通，尚无缺口统计</text>
+<rect x="990" y="260" width="382" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1006" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">最后同步时间</text>
+<text x="1006" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="1006" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">来源与时间逐项保留</text>
+<rect x="1390" y="260" width="382" height="98" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1406" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">导入任务状态</text>
+<text x="1406" y="318" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">—</text>
+<text x="1406" y="342" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">尚未启动下载任务</text>
+<text x="208" y="396" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="bold">K线覆盖主表 · 周期模板，不代表已有数据</text>
+<rect x="190" y="412" width="1130" height="484" fill="none" stroke="#444" stroke-width="1.5"/>
+<path d="M286 412L286 896" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M456 412L456 896" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M606 412L606 896" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M756 412L756 896" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M846 412L846 896" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M996 412L996 896" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M1136 412L1136 896" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M190 458L1320 458" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M190 506L1320 506" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M190 554L1320 554" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M190 602L1320 602" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M190 650L1320 650" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M190 698L1320 698" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M190 746L1320 746" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M190 794L1320 794" fill="none" stroke="#666" stroke-width="1.2"/>
+<path d="M190 842L1320 842" fill="none" stroke="#666" stroke-width="1.2"/>
+<text x="202" y="442" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">周期</text>
+<text x="298" y="442" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">目标范围</text>
+<text x="468" y="442" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">实际最早</text>
+<text x="618" y="442" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">实际最新</text>
+<text x="768" y="442" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">缺段</text>
+<text x="858" y="442" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">最后更新</text>
+<text x="1008" y="442" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">来源</text>
+<text x="1148" y="442" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="bold">状态</text>
+<text x="200" y="489" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">1分钟</text>
+<text x="298" y="489" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">滚动10天</text>
+<text x="468" y="489" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="618" y="489" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="768" y="489" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="858" y="489" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1008" y="489" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1148" y="489" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">待核查</text>
+<text x="200" y="537" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">5分钟</text>
+<text x="298" y="537" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">首次1年</text>
+<text x="468" y="537" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="618" y="537" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="768" y="537" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="858" y="537" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1008" y="537" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1148" y="537" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">待核查</text>
+<text x="200" y="585" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">15分钟</text>
+<text x="298" y="585" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">首次2年</text>
+<text x="468" y="585" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="618" y="585" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="768" y="585" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="858" y="585" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1008" y="585" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1148" y="585" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">待核查</text>
+<text x="200" y="633" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">30分钟</text>
+<text x="298" y="633" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">全部可得历史</text>
+<text x="468" y="633" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="618" y="633" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="768" y="633" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="858" y="633" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1008" y="633" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1148" y="633" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">待核查</text>
+<text x="200" y="681" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">1小时</text>
+<text x="298" y="681" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">全部可得历史</text>
+<text x="468" y="681" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="618" y="681" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="768" y="681" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="858" y="681" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1008" y="681" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1148" y="681" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">待核查</text>
+<text x="200" y="729" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">4小时</text>
+<text x="298" y="729" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">全部可得历史</text>
+<text x="468" y="729" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="618" y="729" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="768" y="729" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="858" y="729" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1008" y="729" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1148" y="729" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">待核查</text>
+<text x="200" y="777" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">8小时</text>
+<text x="298" y="777" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">全部可得历史</text>
+<text x="468" y="777" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="618" y="777" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="768" y="777" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="858" y="777" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1008" y="777" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1148" y="777" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">待核查</text>
+<text x="200" y="825" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">12小时</text>
+<text x="298" y="825" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">全部可得历史</text>
+<text x="468" y="825" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="618" y="825" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="768" y="825" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="858" y="825" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1008" y="825" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1148" y="825" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">待核查</text>
+<path d="M190 890L1320 890" fill="none" stroke="#666" stroke-width="1.2"/>
+<text x="200" y="873" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14">日线</text>
+<text x="298" y="873" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">全部可得历史</text>
+<text x="468" y="873" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="618" y="873" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="768" y="873" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="858" y="873" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1008" y="873" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">—</text>
+<text x="1148" y="873" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">待核查</text>
+<rect x="190" y="918" width="1130" height="172" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="206" y="948" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">选中记录 → 查看来源与缺段</text>
+<text x="206" y="982" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">合约 / 原始周期 / 单位 / 来源地址 / 时间：—</text>
+<text x="206" y="1012" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">缺段起止与原因：—；无法访问、未核查、未提供分别显示</text>
+<text x="206" y="1042" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">只有1分钟按10天滚动保留；其他周期与OI后续持续保存</text>
+<rect x="1340" y="382" width="420" height="450" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1356" y="414" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="bold">历史导入任务队列</text>
+<text x="1356" y="454" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">○ 日线</text>
+<text x="1570" y="454" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">尚未启动</text>
+<text x="1356" y="492" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">○ 12小时</text>
+<text x="1570" y="492" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">尚未启动</text>
+<text x="1356" y="530" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">○ 8小时</text>
+<text x="1570" y="530" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">尚未启动</text>
+<text x="1356" y="568" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">○ 4小时</text>
+<text x="1570" y="568" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">尚未启动</text>
+<text x="1356" y="606" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">○ 1小时</text>
+<text x="1570" y="606" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">尚未启动</text>
+<text x="1356" y="644" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">○ 30分钟</text>
+<text x="1570" y="644" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">尚未启动</text>
+<text x="1356" y="682" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">○ 15分钟</text>
+<text x="1570" y="682" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">尚未启动</text>
+<text x="1356" y="720" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">○ 5分钟</text>
+<text x="1570" y="720" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">尚未启动</text>
+<text x="1356" y="778" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">1分钟：独立近10天补充</text>
+<text x="1356" y="807" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">原生周期没有就跳过，并记录原因</text>
+<rect x="1340" y="850" width="420" height="240" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="1356" y="880" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">任务进度与补齐记录</text>
+<text x="1356" y="914" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">当前批次 / 已完成量：—</text>
+<text x="1356" y="944" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">暂停或失败原因：—</text>
+<text x="1356" y="974" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">最近任务记录：暂无</text>
+<text x="1356" y="1004" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">补齐 / 暂停入口：待实现，禁用</text>
+<text x="1356" y="1034" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">进度按任务记录，不填写假百分比</text>
+<text x="20" y="1153" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">仅沟通草图与需求；未启动采集、回测或交易，按钮与曲线均为设计槽位。</text>
+</svg>
