@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1180" viewBox="0 0 1800 1180">
+<title>交易工作台 · 按原草图格式渲染</title>
+<desc>依据《交易工作台布局草图.svg》渲染的格式图。沿用原三栏比例与原图七组主表字段；叠加用户后续确定规则：代币仅简称、方向多绿空红未知中性、K线涨绿跌红、去掉资格、展开全宽K线→OI→逻辑与信号→相关指标。仅格式渲染，不代表数据已取得。</desc>
+<rect width="1800" height="1180" fill="#ffffff"/>
+<text x="20" y="32" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="bold">交易工作台 · 按原草图格式渲染</text>
+<text x="1780" y="32" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="end">只渲染布局与格式，不代表数据已取得</text>
+
+<!-- 外框与原图分栏：导航148 / 信号230 / 市场1092 / 持仓290 -->
+<rect x="20" y="58" width="1760" height="1050" fill="none" stroke="#222" stroke-width="2"/>
+<path d="M168 58L168 1108" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M398 166L398 1108" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M1490 166L1490 1108" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M168 166L1780 166" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M1490 650L1780 650" fill="none" stroke="#555" stroke-width="1.5"/>
+
+<!-- 一级导航 -->
+<text x="94" y="100" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" font-weight="bold">大类导航</text>
+<text x="94" y="260" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle">交易工作台</text>
+<text x="94" y="344" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle">数据中心</text>
+<text x="94" y="428" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle">策略管理</text>
+<text x="94" y="512" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle">回测复盘</text>
+
+<!-- 顶部状态区 -->
+<text x="974" y="104" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" text-anchor="middle" font-weight="bold">顶部总览 / 状态区</text>
+<text x="974" y="144" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle">具体内容待沟通；保留这一整块空间</text>
+
+<!-- 左栏信号区 -->
+<text x="283" y="208" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" text-anchor="middle" font-weight="bold">信号区</text>
+<text x="186" y="244" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15">筛选：全部 / 有效 / 失效</text>
+<g font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif">
+  <rect x="184" y="266" width="198" height="178" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="198" y="296" fill="#168a57" font-size="16">● 多 代币简称：—</text>
+  <text x="198" y="326" fill="#222" font-size="15">交易所 / 周期：—</text>
+  <text x="198" y="356" fill="#222" font-size="15">策略阶段 / 触发时间：—</text>
+  <text x="198" y="386" fill="#222" font-size="15">有效状态：未接通</text>
+  <text x="198" y="416" fill="#222" font-size="15">点击 → 定位中间K线</text>
+  <rect x="184" y="472" width="198" height="178" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="198" y="502" fill="#cc334d" font-size="16">● 空 代币简称：—</text>
+  <text x="198" y="532" fill="#222" font-size="15">交易所 / 周期：—</text>
+  <text x="198" y="562" fill="#222" font-size="15">策略阶段 / 触发时间：—</text>
+  <text x="198" y="592" fill="#222" font-size="15">有效状态：未接通</text>
+  <text x="198" y="622" fill="#222" font-size="15">点击 → 定位中间K线</text>
+  <rect x="184" y="678" width="198" height="178" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="198" y="708" fill="#777" font-size="16">○ 未知 代币简称：—</text>
+  <text x="198" y="738" fill="#222" font-size="15">交易所 / 周期：—</text>
+  <text x="198" y="768" fill="#222" font-size="15">策略阶段 / 触发时间：—</text>
+  <text x="198" y="798" fill="#222" font-size="15">有效状态：未接通</text>
+  <text x="198" y="828" fill="#222" font-size="15">点击 → 定位中间K线</text>
+</g>
+<text x="188" y="914" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">信号与代币联动</text>
+<text x="188" y="946" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">排名来自后台信号逻辑</text>
+<text x="188" y="978" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">成交量轮换不改变排名</text>
+<text x="188" y="1014" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">历史信号 → 回测复盘</text>
+<text x="188" y="1056" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">电报提醒：未配置</text>
+
+<!-- 中栏：全市场代币排序（原图七组） -->
+<text x="420" y="205" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="bold">全市场代币排序</text>
+<text x="1474" y="205" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" text-anchor="end">按信号逻辑排序 ↓</text>
+<text x="420" y="240" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">搜索代币｜交易所｜排序｜分页</text>
+<rect x="412" y="260" width="1062" height="206" fill="none" stroke="#222" stroke-width="2"/>
+<path d="M580 260L580 466" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M754 260L754 466" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M936 260L936 466" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M1118 260L1118 466" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M1212 260L1212 466" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M1324 260L1324 466" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M412 300L1474 300" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M412 344L1474 344" fill="none" stroke="#555" stroke-width="1.5"/>
+<path d="M412 405L1474 405" fill="none" stroke="#555" stroke-width="1.5"/>
+<text x="496" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" font-weight="bold">代币</text>
+<text x="667" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" font-weight="bold">成交量</text>
+<text x="845" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" font-weight="bold">聪明钱多头</text>
+<text x="1027" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" font-weight="bold">聪明钱空头</text>
+<text x="1165" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" font-weight="bold">总OI持仓</text>
+<text x="1268" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" font-weight="bold">当前资金费率</text>
+<text x="1399" y="286" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" font-weight="bold">费率变化小图</text>
+<text x="429" y="326" fill="#168a57" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="12">● 多（绿）</text>
+<text x="496" y="326" fill="#cc334d" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="12">● 空（红）</text>
+<text x="556" y="326" fill="#777" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="12">○ 未知</text>
+<text x="667" y="326" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" text-anchor="middle">动态周期量｜固定24h量</text>
+<text x="845" y="326" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" text-anchor="middle">持仓额 / 内部占比 / 均价</text>
+<text x="1027" y="326" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" text-anchor="middle">持仓额 / 内部占比 / 均价</text>
+<text x="1165" y="326" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" text-anchor="middle">数量 / 名义额 USDT</text>
+<text x="1268" y="326" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" text-anchor="middle">当前值 %</text>
+<text x="1399" y="326" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" text-anchor="middle">近24h · 每小时</text>
+
+<!-- 行 1 -->
+<g font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif">
+  <text x="424" y="368" fill="#777" font-size="14">▶ ○ 代币简称</text>
+  <text x="588" y="368" fill="#222" font-size="14">5分钟量：—</text>
+  <text x="588" y="391" fill="#222" font-size="14">24小时量：—</text>
+  <text x="766" y="362" fill="#222" font-size="13">持仓额：— USDT</text>
+  <text x="766" y="380" fill="#222" font-size="13">占比：— %</text>
+  <text x="766" y="398" fill="#222" font-size="13">均价：— USDT</text>
+  <text x="948" y="362" fill="#222" font-size="13">持仓额：— USDT</text>
+  <text x="948" y="380" fill="#222" font-size="13">占比：— %</text>
+  <text x="948" y="398" fill="#222" font-size="13">均价：— USDT</text>
+  <text x="1120" y="370" fill="#222" font-size="14">—</text>
+  <text x="1120" y="390" fill="#777" font-size="12">张/标的币</text>
+  <text x="1212" y="376" fill="#222" font-size="16">— %</text>
+  <rect x="1331" y="351" width="135" height="51" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M1356 382L1454 382" fill="none" stroke="#555" stroke-width="1.5"/>
+  <path d="M1356 376.5L1454 376.5" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="1398.5" y="372" fill="#222" font-size="13" text-anchor="middle">小时变化</text>
+  <text x="1398.5" y="388" fill="#222" font-size="13" text-anchor="middle">暂无数据</text>
+  <text x="1356" y="399" fill="#222" font-size="12">-24h</text>
+  <text x="1454" y="399" fill="#222" font-size="12" text-anchor="end">现在</text>
+</g>
+
+<!-- 行 2 -->
+<g font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif">
+  <text x="424" y="429" fill="#168a57" font-size="14">▼ ● 代币简称</text>
+  <text x="588" y="429" fill="#222" font-size="14">5分钟量：—</text>
+  <text x="588" y="452" fill="#222" font-size="14">24小时量：—</text>
+  <text x="766" y="423" fill="#222" font-size="13">持仓额：— USDT</text>
+  <text x="766" y="441" fill="#222" font-size="13">占比：— %</text>
+  <text x="766" y="459" fill="#222" font-size="13">均价：— USDT</text>
+  <text x="948" y="423" fill="#222" font-size="13">持仓额：— USDT</text>
+  <text x="948" y="441" fill="#222" font-size="13">占比：— %</text>
+  <text x="948" y="459" fill="#222" font-size="13">均价：— USDT</text>
+  <text x="1120" y="431" fill="#222" font-size="14">—</text>
+  <text x="1120" y="451" fill="#777" font-size="12">张/标的币</text>
+  <text x="1212" y="437" fill="#222" font-size="16">— %</text>
+  <rect x="1331" y="412" width="135" height="51" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M1356 443L1454 443" fill="none" stroke="#555" stroke-width="1.5"/>
+  <path d="M1356 437.5L1454 437.5" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="1398.5" y="433" fill="#222" font-size="13" text-anchor="middle">小时变化</text>
+  <text x="1398.5" y="449" fill="#222" font-size="13" text-anchor="middle">暂无数据</text>
+  <text x="1356" y="460" fill="#222" font-size="12">-24h</text>
+  <text x="1454" y="460" fill="#222" font-size="12" text-anchor="end">现在</text>
+</g>
+
+<!-- 行内展开：全宽纵向 K线→OI→逻辑与信号→相关指标 -->
+<rect x="412" y="480" width="1062" height="454" fill="none" stroke="#222" stroke-width="2"/>
+<text x="428" y="510" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="bold">▼ 行内展开：全宽K线（含成交量）→ OI → 逻辑与信号 → 相关指标</text>
+<text x="428" y="543" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17"><tspan font-weight="bold" text-decoration="underline">1分钟（默认）</tspan> / 5分钟 / 15分钟 / 30分钟 / 1小时 / 4小时 / 8小时 / 12小时 / 日线</text>
+
+<rect x="428" y="558" width="1030" height="150" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="943" y="588" fill="#168a57" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" text-anchor="middle" font-weight="bold">全宽 1分钟K线图（含成交量副图）</text>
+<text x="443" y="626" fill="#168a57" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">■ 收涨（绿）</text>
+<text x="560" y="626" fill="#cc334d" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">□ 收跌（红）</text>
+<text x="672" y="626" fill="#777" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">─ 平盘（中性）</text>
+<text x="786" y="626" fill="#777" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">┄ 虚线＝未收盘</text>
+<text x="943" y="656" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" text-anchor="middle">区间边界 / 突破 / 独立回踩 / 止损目标标注；点击真实信号触发点 → 查看该时点规则条件</text>
+<text x="943" y="688" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" text-anchor="middle">1分钟滚动10天｜5分钟导入1年｜15分钟导入2年｜30分钟及以上全部可得历史</text>
+
+<text x="428" y="736" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" font-weight="bold">OI总持仓变化（与K线共用时间轴）</text>
+<text x="1458" y="736" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" text-anchor="end">数量 / 名义额切换</text>
+<rect x="428" y="748" width="1030" height="80" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6 5"/>
+<path d="M453 762L453 810L1440 810" fill="none" stroke="#555" stroke-width="1.5"/>
+<text x="943" y="782" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" text-anchor="middle">历史范围按本地已保存数据扩展；显示覆盖与缺口；未接通不绘制假曲线、不填补历史缺口</text>
+<text x="453" y="825" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="12">所选历史起点</text>
+<text x="1440" y="825" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="12" text-anchor="end">所选历史终点</text>
+
+<rect x="428" y="840" width="640" height="82" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="444" y="868" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">信号逻辑与数据详情</text>
+<text x="444" y="892" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">冻结区间 / 突破 / 独立回踩 · 条件实际值 ↔ 触发阈值 · 有效 / 失效原因</text>
+<text x="444" y="912" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">多空均价与持仓额 · OI单位 · 数据来源 / 时点 / 缺口</text>
+<rect x="1080" y="840" width="378" height="82" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="1096" y="868" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="bold">相关指标</text>
+<text x="1096" y="892" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13">随当前周期展示；缺失为空态</text>
+
+<!-- 其余折叠行 -->
+<text x="425" y="963" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">▶ 其他代币折叠行：同样显示多空持仓额、占比、均价、OI及费率小图</text>
+<path d="M412 982L1474 982" fill="none" stroke="#555" stroke-width="1.5"/>
+<text x="425" y="1014" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18">▶ 其他代币折叠行……</text>
+<path d="M412 1030L1474 1030" fill="none" stroke="#555" stroke-width="1.5"/>
+<text x="425" y="1068" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">币种固定可见；其余字段按列组排列，窄屏可横向查看。</text>
+
+<!-- 右栏：模拟实盘 / 实盘仓位 -->
+<text x="1635" y="208" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" text-anchor="middle" font-weight="bold">模拟实盘持仓</text>
+<g font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" fill="#222">
+  <text x="1510" y="254">账户 / 连接状态：—</text>
+  <text x="1510" y="296">权益 / 可用余额：—</text>
+  <text x="1510" y="338">币种 / 方向 / 数量：—</text>
+  <text x="1510" y="380">入场均价 / 标记价：—</text>
+  <text x="1510" y="422">未实现盈亏 / 盈亏率：—</text>
+  <text x="1510" y="464">止损 / 目标 / 风险：—</text>
+  <text x="1510" y="506">点击持仓 → 定位中间K线</text>
+  <text x="1510" y="558" font-size="16">持仓历史 → 回测复盘</text>
+  <text x="1510" y="604">模拟与实盘分别统计</text>
+</g>
+<text x="1635" y="690" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" text-anchor="middle" font-weight="bold">实盘仓位（只读）</text>
+<g font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" fill="#222">
+  <text x="1510" y="736">账户 / 连接状态：—</text>
+  <text x="1510" y="778">权益 / 可用余额：—</text>
+  <text x="1510" y="820">币种 / 方向 / 数量：—</text>
+  <text x="1510" y="862">入场均价 / 标记价：—</text>
+  <text x="1510" y="904">未实现盈亏 / 盈亏率：—</text>
+  <text x="1510" y="946">止损 / 目标 / 风险：—</text>
+  <text x="1510" y="988">点击持仓 → 定位中间K线</text>
+  <text x="1510" y="1040" font-size="16">仓位历史 → 回测复盘</text>
+  <text x="1510" y="1075">未接通时显示明确空态</text>
+</g>
+
+<text x="20" y="1140" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17">成交量动态列：5分钟 → 15分钟 → 30分钟 → 1小时 → 4小时 → 8小时 → 12小时 → 回到5分钟（每5秒切换）</text>
+<text x="20" y="1166" fill="#222" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16">代币仅简称：确认倍率映射后去前缀（如1000000BOB→BOB），0G、1INCH等名称固有数字保留；方向绿多红空、未知中性；K线涨绿跌红；费率小时图口径待确认。</text>
+</svg>
