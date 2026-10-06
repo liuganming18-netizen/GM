@@ -28,13 +28,16 @@ interface InlineExpandedChartProps {
   token: TokenMarketItem;
   activeSignal?: CryptoSignal;
   onClose?: () => void;
+  defaultView?: 'orderflow' | 'kline' | 'oi' | 'all';
 }
 
 export const InlineExpandedChart: React.FC<InlineExpandedChartProps> = ({
   token,
   activeSignal,
   onClose,
+  defaultView = 'orderflow',
 }) => {
+  const [mainView, setMainView] = useState<'orderflow' | 'kline' | 'oi' | 'all'>(defaultView);
   const [selectedTf, setSelectedTf] = useState<Timeframe>('1m');
   const [oiUnit, setOiUnit] = useState<'amount' | 'usd'>('usd');
   const [oiDisplayMode, setOiDisplayMode] = useState<'split' | 'ratio' | 'total'>('split');
@@ -109,8 +112,79 @@ export const InlineExpandedChart: React.FC<InlineExpandedChartProps> = ({
         </div>
       </div>
 
+      {/* Top View Mode Switcher: 订单流与OK/币安热力图 | K线主图 | OI持仓分析 | 全部展开 */}
+      <div className="flex flex-wrap items-center justify-between gap-2 bg-neutral-900/90 p-1.5 rounded-xl border border-neutral-800 text-xs shadow-inner">
+        <div className="flex flex-wrap items-center gap-1.5">
+          <button
+            onClick={() => setMainView('orderflow')}
+            className={`px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${
+              mainView === 'orderflow'
+                ? 'bg-indigo-600 text-white shadow-[0_0_12px_rgba(99,102,241,0.45)]'
+                : 'text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800'
+            }`}
+          >
+            <Layers className="w-3.5 h-3.5 text-amber-300" />
+            <span>🔥 订单流与 OKX / 币安热力图</span>
+            <span className="px-1.5 py-0.2 rounded bg-amber-400 text-black text-[9px] font-black">
+              当前展示
+            </span>
+          </button>
+
+          <button
+            onClick={() => setMainView('kline')}
+            className={`px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${
+              mainView === 'kline'
+                ? 'bg-emerald-700/90 text-white shadow-sm'
+                : 'text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800'
+            }`}
+          >
+            <TrendingUp className="w-3.5 h-3.5" />
+            <span>K线与成交量主图</span>
+          </button>
+
+          <button
+            onClick={() => setMainView('oi')}
+            className={`px-3 py-1.5 rounded-lg font-bold transition-all flex items-center gap-1.5 ${
+              mainView === 'oi'
+                ? 'bg-amber-700/90 text-white shadow-sm'
+                : 'text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800'
+            }`}
+          >
+            <Flame className="w-3.5 h-3.5" />
+            <span>OI持仓变化热力图</span>
+          </button>
+
+          <button
+            onClick={() => setMainView('all')}
+            className={`px-2.5 py-1.5 rounded-lg text-xs transition-all ${
+              mainView === 'all'
+                ? 'bg-neutral-800 text-neutral-100 font-bold border border-neutral-700'
+                : 'text-neutral-500 hover:text-neutral-300'
+            }`}
+          >
+            全部展开
+          </button>
+        </div>
+
+        <span className="text-[11px] text-neutral-400 font-mono hidden md:inline">
+          {mainView === 'orderflow'
+            ? '● 币安与OKX挂单深度热力梯队 / Footprint / 巨鲸大单流'
+            : mainView === 'kline'
+            ? '● 全宽K线形态与成交量副图'
+            : mainView === 'oi'
+            ? '● 24小时逐小时OI机构增减仓'
+            : '● 完整图表组合视图'}
+        </span>
+      </div>
+
+      {/* 1. Main View Mode: 订单流与OKX / 币安热力图 (Immediately visible at the top) */}
+      {(mainView === 'orderflow' || mainView === 'all') && (
+        <OrderFlowHeatmap token={token} />
+      )}
+
       {/* Candlestick & Volume Subplot Area (Full-Width SVG Canvas) */}
-      <div className="space-y-2">
+      {(mainView === 'kline' || mainView === 'all') && (
+        <div className="space-y-2">
         {/* Canvas Toolbar & Ticker Stats */}
         <div className="flex flex-wrap items-center justify-between text-xs text-neutral-400 gap-2 px-1">
           <div className="flex items-center gap-4 font-mono text-[11px]">
@@ -222,65 +296,12 @@ export const InlineExpandedChart: React.FC<InlineExpandedChartProps> = ({
           </div>
         </div>
       </div>
+      )}
 
-      {/* Analytics Heatmap Section */}
-      <div className="space-y-2">
-        {/* Sub-tab Switcher: 订单流与OK/币安热力图 | OI逐小时变化率热力图 */}
-        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-neutral-850 pb-1.5 text-xs">
-          <div className="flex items-center gap-1.5 bg-neutral-900/90 p-1 rounded-lg border border-neutral-800">
-            <button
-              onClick={() => setAnalysisTab('orderflow')}
-              className={`px-3 py-1 rounded-md font-bold transition-all flex items-center gap-1.5 ${
-                analysisTab === 'orderflow'
-                  ? 'bg-indigo-600 text-white shadow-sm'
-                  : 'text-neutral-400 hover:text-neutral-200'
-              }`}
-            >
-              <Layers className="w-3.5 h-3.5" />
-              <span>订单流与OKX / 币安热力图</span>
-            </button>
-            <button
-              onClick={() => setAnalysisTab('oi_heatmap')}
-              className={`px-3 py-1 rounded-md font-bold transition-all flex items-center gap-1.5 ${
-                analysisTab === 'oi_heatmap'
-                  ? 'bg-amber-600 text-white shadow-sm'
-                  : 'text-neutral-400 hover:text-neutral-200'
-              }`}
-            >
-              <Flame className="w-3.5 h-3.5" />
-              <span>OI逐小时变化率热力图</span>
-            </button>
-            <button
-              onClick={() => setAnalysisTab('both')}
-              className={`px-2.5 py-1 rounded-md text-[11px] transition-all ${
-                analysisTab === 'both'
-                  ? 'bg-neutral-800 text-neutral-100 font-bold border border-neutral-700'
-                  : 'text-neutral-500 hover:text-neutral-300'
-              }`}
-            >
-              全部展开
-            </button>
-          </div>
-
-          <span className="text-[10px] text-neutral-500 font-mono">
-            {analysisTab === 'orderflow'
-              ? 'OKX + Binance 实时聚合挂单与清算深度'
-              : analysisTab === 'oi_heatmap'
-              ? '近24小时逐小时机构增减仓追踪'
-              : '双热力图并列透视'}
-          </span>
-        </div>
-
-        {/* 1. 订单流与OKX / 币安热力图 */}
-        {(analysisTab === 'orderflow' || analysisTab === 'both') && (
-          <OrderFlowHeatmap token={token} />
-        )}
-
-        {/* 2. OI (持仓量) 逐小时变化率热力图 */}
-        {(analysisTab === 'oi_heatmap' || analysisTab === 'both') && (
+      {/* 3. OI Section (When oi or all is selected) */}
+      {(mainView === 'oi' || mainView === 'all') && (
+        <div className="space-y-3">
           <OIHeatmap token={token} />
-        )}
-      </div>
 
       {/* OI Section: OI多空持仓变化 */}
       <div className="space-y-1.5 pt-1">
@@ -523,6 +544,8 @@ export const InlineExpandedChart: React.FC<InlineExpandedChartProps> = ({
           </svg>
         </div>
       </div>
+      </div>
+      )}
 
       {/* Bottom Dual Panels: 信号逻辑与数据详情 + 相关指标 */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1 text-xs">
