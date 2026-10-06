@@ -4,8 +4,6 @@
  */
 
 import React, { useState } from 'react';
-import { initialTokens } from '../mock/cryptoData';
-import { OrderFlowHeatmap } from './OrderFlowHeatmap';
 import {
   Database,
   Search,
@@ -20,7 +18,7 @@ import {
 } from 'lucide-react';
 
 export const DataCenterView: React.FC = () => {
-  const [activeSubTab, setActiveSubTab] = useState<'kline' | 'oi' | 'orderflow' | 'funding' | 'smart_money'>('kline');
+  const [activeSubTab, setActiveSubTab] = useState<'kline' | 'oi' | 'funding' | 'smart_money'>('kline');
   const [selectedCycle, setSelectedCycle] = useState<string>('1m');
 
   const klineTemplates = [
@@ -77,17 +75,6 @@ export const DataCenterView: React.FC = () => {
               }`}
             >
               OI
-            </button>
-            <span className="text-neutral-700">|</span>
-            <button
-              onClick={() => setActiveSubTab('orderflow')}
-              className={`px-2.5 py-1 rounded transition-colors flex items-center gap-1 ${
-                activeSubTab === 'orderflow'
-                  ? 'bg-indigo-600 text-white font-bold shadow-sm'
-                  : 'text-neutral-400 hover:text-neutral-200'
-              }`}
-            >
-              <span>🔥 订单流与OK/币安热力图</span>
             </button>
             <span className="text-neutral-700">|</span>
             <button
@@ -159,14 +146,8 @@ export const DataCenterView: React.FC = () => {
         </div>
       </div>
 
-      {/* 3. Main Body */}
-      {activeSubTab === 'orderflow' ? (
-        <div className="flex-1 overflow-y-auto pr-1">
-          <OrderFlowHeatmap token={initialTokens[0]} />
-        </div>
-      ) : (
-        /* 3. Main Center Split Layout matching sketch */
-        <div className="flex-1 flex gap-3 overflow-hidden min-h-0">
+      {/* 3. Main Center Split Layout matching sketch */}
+      <div className="flex-1 flex gap-3 overflow-hidden min-h-0">
         {/* Left Column: K线覆盖主表 + 详情 (width ~72%) */}
         <div className="flex-1 flex flex-col gap-3 overflow-hidden min-w-0">
           {/* Table Container */}
@@ -285,7 +266,6 @@ export const DataCenterView: React.FC = () => {
           </div>
         </div>
       </div>
-      )}
 
       {/* 4. Footer Note matching sketch */}
       <div className="text-[11px] text-neutral-500 border-t border-neutral-800 pt-2 flex items-center justify-between">

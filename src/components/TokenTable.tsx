@@ -272,30 +272,15 @@ export const TokenTable: React.FC<TokenTableProps> = ({
 
                     {/* Action Column */}
                     <td className="py-3 px-3 text-right">
-                      <div className="flex items-center justify-end gap-1.5">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            onToggleExpand(token.id);
-                          }}
-                          className={`px-2.5 py-1 rounded text-[11px] font-bold transition-all flex items-center gap-1 ${
-                            isExpanded
-                              ? 'bg-neutral-800 text-neutral-300'
-                              : 'bg-indigo-600/90 hover:bg-indigo-500 text-white shadow-sm ring-1 ring-indigo-400/50'
-                          }`}
-                        >
-                          <span>🔥 订单流热力图</span>
-                        </button>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            onToggleExpand(token.id);
-                          }}
-                          className="px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-300 text-[11px] font-medium transition-colors"
-                        >
-                          {isExpanded ? '收起' : 'K线'}
-                        </button>
-                      </div>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onToggleExpand(token.id);
+                        }}
+                        className="px-2.5 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-300 text-[11px] font-medium transition-colors"
+                      >
+                        {isExpanded ? '收起' : '展开K线'}
+                      </button>
                     </td>
                   </tr>
 
