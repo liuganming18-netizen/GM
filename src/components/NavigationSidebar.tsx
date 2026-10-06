@@ -12,6 +12,7 @@ import {
   Image as ImageIcon,
   Activity,
   Layers,
+  Flame,
   Radio
 } from 'lucide-react';
 
@@ -28,6 +29,7 @@ export const NavigationSidebar: React.FC<NavigationSidebarProps> = ({
 }) => {
   const navItems = [
     { id: 'workbench', label: '交易工作台', icon: LayoutDashboard, badge: 'Live' },
+    { id: 'heatmap', label: '热力图', icon: Flame, badge: 'Hot' },
     { id: 'datacenter', label: '数据中心', icon: Database },
     { id: 'strategy', label: '策略管理', icon: Sliders },
     { id: 'backtest', label: '回测复盘', icon: History },

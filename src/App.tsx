@@ -13,6 +13,7 @@ import { TokenTable } from './components/TokenTable';
 import { PositionPanel } from './components/PositionPanel';
 import { SketchDrawerModal } from './components/SketchDrawerModal';
 import { DataCenterView } from './components/DataCenterView';
+import { HeatmapView } from './components/HeatmapView';
 import { StrategyManagementView } from './components/StrategyManagementView';
 import { BacktestReviewView } from './components/BacktestReviewView';
 import { formatWanYi } from './utils/formatters';
@@ -150,6 +151,9 @@ export default function App() {
               onOpenQuickPosition={handleOpenQuickPosition}
             />
           </div>
+        ) : currentNav === 'heatmap' ? (
+          /* 热力图专区 (全景订单流与OK/币安深度清算热力图) */
+          <HeatmapView />
         ) : currentNav === 'datacenter' ? (
           /* 数据中心 (按数据中心全页面草图.svg渲染) */
           <DataCenterView />
