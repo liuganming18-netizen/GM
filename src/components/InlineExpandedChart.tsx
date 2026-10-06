@@ -15,6 +15,7 @@ import {
   BarChart2,
   Sliders,
   Layers,
+  Flame,
   Info,
   Maximize2,
   ChevronDown,

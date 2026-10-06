@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { CryptoSignal, Position, Timeframe, TokenMarketItem, Candle, OIPoint } from '../types/crypto';
+import { CryptoSignal, Position, Timeframe, TokenMarketItem, Candle, OIPoint, TokenVolumeInfo } from '../types/crypto';
 
 // Helper to generate simulated candles with timeframe-accurate interval
 function generateCandles(basePrice: number, volatility: number, count: number = 32, tf: Timeframe = '1m'): Candle[] {
