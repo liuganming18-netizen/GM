@@ -8,6 +8,7 @@ import { TokenMarketItem, Timeframe, CryptoSignal } from '../types/crypto';
 import { generateOIPointsForCandles } from '../mock/cryptoData';
 import { TokenIcon } from './TokenIcon';
 import { OIHeatmap } from './OIHeatmap';
+import { OrderFlowHeatmap } from './OrderFlowHeatmap';
 import { formatWanYi, formatAmountWanYi } from '../utils/formatters';
 import {
   TrendingUp,
@@ -38,6 +39,7 @@ export const InlineExpandedChart: React.FC<InlineExpandedChartProps> = ({
   const [oiUnit, setOiUnit] = useState<'amount' | 'usd'>('usd');
   const [oiDisplayMode, setOiDisplayMode] = useState<'split' | 'ratio' | 'total'>('split');
   const [hoveredCandleIndex, setHoveredCandleIndex] = useState<number | null>(null);
+  const [analysisTab, setAnalysisTab] = useState<'orderflow' | 'oi_heatmap' | 'both'>('orderflow');
 
   const timeframes: Timeframe[] = ['1m', '5m', '15m', '30m', '1h', '4h', '8h', '12h', '1d'];
   const candles = token.candles[selectedTf] || token.candles['1m'];
@@ -221,8 +223,64 @@ export const InlineExpandedChart: React.FC<InlineExpandedChartProps> = ({
         </div>
       </div>
 
-      {/* OI (持仓量) 逐小时变化率热力图 (识别机构资金动向) */}
-      <OIHeatmap token={token} />
+      {/* Analytics Heatmap Section */}
+      <div className="space-y-2">
+        {/* Sub-tab Switcher: 订单流与OK/币安热力图 | OI逐小时变化率热力图 */}
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-neutral-850 pb-1.5 text-xs">
+          <div className="flex items-center gap-1.5 bg-neutral-900/90 p-1 rounded-lg border border-neutral-800">
+            <button
+              onClick={() => setAnalysisTab('orderflow')}
+              className={`px-3 py-1 rounded-md font-bold transition-all flex items-center gap-1.5 ${
+                analysisTab === 'orderflow'
+                  ? 'bg-indigo-600 text-white shadow-sm'
+                  : 'text-neutral-400 hover:text-neutral-200'
+              }`}
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span>订单流与OKX / 币安热力图</span>
+            </button>
+            <button
+              onClick={() => setAnalysisTab('oi_heatmap')}
+              className={`px-3 py-1 rounded-md font-bold transition-all flex items-center gap-1.5 ${
+                analysisTab === 'oi_heatmap'
+                  ? 'bg-amber-600 text-white shadow-sm'
+                  : 'text-neutral-400 hover:text-neutral-200'
+              }`}
+            >
+              <Flame className="w-3.5 h-3.5" />
+              <span>OI逐小时变化率热力图</span>
+            </button>
+            <button
+              onClick={() => setAnalysisTab('both')}
+              className={`px-2.5 py-1 rounded-md text-[11px] transition-all ${
+                analysisTab === 'both'
+                  ? 'bg-neutral-800 text-neutral-100 font-bold border border-neutral-700'
+                  : 'text-neutral-500 hover:text-neutral-300'
+              }`}
+            >
+              全部展开
+            </button>
+          </div>
+
+          <span className="text-[10px] text-neutral-500 font-mono">
+            {analysisTab === 'orderflow'
+              ? 'OKX + Binance 实时聚合挂单与清算深度'
+              : analysisTab === 'oi_heatmap'
+              ? '近24小时逐小时机构增减仓追踪'
+              : '双热力图并列透视'}
+          </span>
+        </div>
+
+        {/* 1. 订单流与OKX / 币安热力图 */}
+        {(analysisTab === 'orderflow' || analysisTab === 'both') && (
+          <OrderFlowHeatmap token={token} />
+        )}
+
+        {/* 2. OI (持仓量) 逐小时变化率热力图 */}
+        {(analysisTab === 'oi_heatmap' || analysisTab === 'both') && (
+          <OIHeatmap token={token} />
+        )}
+      </div>
 
       {/* OI Section: OI多空持仓变化 */}
       <div className="space-y-1.5 pt-1">
