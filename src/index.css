@@ -1,1 +1,152 @@
 @import "tailwindcss";
+
+/* GM — 极简白色专业量化终端主题 */
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #111827;
+  background: #f6f7f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #f6f7f9;
+}
+
+body {
+  font-size: 13px;
+  color: #111827;
+}
+
+/* 页面底色与主框架 */
+.bg-neutral-950 { background-color: #f6f7f9 !important; }
+.bg-neutral-900 { background-color: #ffffff !important; }
+.bg-neutral-900\/90 { background-color: rgba(255,255,255,.98) !important; }
+.bg-neutral-900\/30 { background-color: #ffffff !important; }
+.bg-neutral-850\/90, .bg-neutral-850\/50 { background-color: #f1f5f9 !important; }
+.bg-neutral-950\/60 { background-color: #fafafa !important; }
+.bg-neutral-950\/80 { background-color: #f8fafc !important; }
+.bg-neutral-800 { background-color: #f1f3f5 !important; }
+.bg-neutral-800\/80, .bg-neutral-800\/60, .bg-neutral-800\/50 { background-color: #f3f4f6 !important; }
+.bg-neutral-700 { background-color: #e5e7eb !important; }
+
+/* 边框 */
+.border-neutral-800,
+.border-neutral-800\/60,
+.border-neutral-700,
+.border-neutral-700\/60,
+.border-neutral-700\/80 {
+  border-color: #e5e7eb !important;
+}
+.border-neutral-850 { border-color: #edf0f2 !important; }
+
+/* 中性文字 */
+.text-neutral-100 { color: #111827 !important; }
+.text-neutral-200 { color: #1f2937 !important; }
+.text-neutral-300 { color: #374151 !important; }
+.text-neutral-400 { color: #6b7280 !important; }
+.text-neutral-500 { color: #6b7280 !important; }
+.text-neutral-600 { color: #9ca3af !important; }
+
+/* 量化终端语义色 */
+.text-emerald-400 { color: #059669 !important; }
+.text-emerald-300 { color: #047857 !important; }
+.text-rose-400 { color: #e11d48 !important; }
+.text-rose-300 { color: #be123c !important; }
+.text-indigo-300 { color: #4f46e5 !important; }
+.text-indigo-400 { color: #4f46e5 !important; }
+.text-amber-400 { color: #d97706 !important; }
+
+.bg-emerald-500\/10 { background-color: #ecfdf5 !important; }
+.bg-emerald-500\/20 { background-color: #d1fae5 !important; }
+.bg-emerald-600\/20 { background-color: #ecfdf5 !important; }
+.bg-rose-500\/10 { background-color: #fff1f2 !important; }
+.bg-rose-500\/20 { background-color: #ffe4e6 !important; }
+.bg-rose-600\/20 { background-color: #fff1f2 !important; }
+.bg-indigo-600\/20 { background-color: #eef2ff !important; }
+.bg-indigo-600\/30 { background-color: #e0e7ff !important; }
+
+.border-emerald-500\/20,
+.border-emerald-500\/30,
+.border-emerald-500\/40 { border-color: #a7f3d0 !important; }
+.border-rose-500\/20,
+.border-rose-500\/30 { border-color: #fecdd3 !important; }
+.border-indigo-500\/30 { border-color: #c7d2fe !important; }
+
+/* 去掉卡片化、玻璃感，统一专业终端密度 */
+.rounded-lg { border-radius: 5px !important; }
+.rounded-xl { border-radius: 6px !important; }
+.rounded-full { border-radius: 999px !important; }
+.shadow, .shadow-sm, .shadow-lg { box-shadow: none !important; }
+
+/* 导航与按钮 hover */
+button:hover {
+  filter: none;
+}
+.hover\\:bg-neutral-800\\/50:hover { background-color: #f3f4f6 !important; }
+.hover\\:bg-neutral-700:hover { background-color: #e5e7eb !important; }
+
+/* 表格：更接近机构终端 */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+thead th {
+  background: #f8fafc !important;
+  color: #64748b !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+tbody tr {
+  background: #fff !important;
+}
+tbody tr:hover {
+  background: #f8fafc !important;
+}
+tbody td {
+  border-color: #edf0f2 !important;
+}
+
+/* 输入框 */
+input, select {
+  color: #111827 !important;
+  background: #fff !important;
+  border-color: #dfe3e8 !important;
+}
+input::placeholder { color: #9ca3af !important; }
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: #f6f7f9; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* 保持图表/行情数字的终端感 */
+.font-mono {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* 顶部状态栏 */
+header {
+  background: #fff !important;
+  border-bottom-color: #e5e7eb !important;
+}
+
+/* 左右面板分割线 */
+aside {
+  background: #fff !important;
+}
+
+/* 移动端/小窗口保持可用 */
+@media (max-width: 1200px) {
+  aside.w-80, aside.sm\\:w-80 { width: 270px !important; }
+  .w-60, .sm\\:w-60 { width: 220px !important; }
+}
