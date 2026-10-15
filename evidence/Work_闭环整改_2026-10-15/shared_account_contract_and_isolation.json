@@ -1,0 +1,175 @@
+{
+ "mode": "read_only_isolation_validation",
+ "legacy_accounts": {
+  "3a": {
+   "db": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3a.sqlite3",
+   "db_sha256_size": 1859584,
+   "account_rows": [
+    {
+     "account_id": "paper43_3a",
+     "arm": "3a",
+     "initial_equity": 5000.0,
+     "cash": 5000.0,
+     "leverage": 1.0,
+     "dry_run": 1,
+     "created_at": 1791824389712
+    }
+   ],
+   "cash_rows": [
+    {
+     "account_id": "paper43_3a",
+     "arm": "3a",
+     "initial_equity": 5000.0,
+     "cash": 5000.0,
+     "leverage": 1.0,
+     "dry_run": 1,
+     "created_at": 1791824389712
+    }
+   ],
+   "n_positions_total": 50,
+   "n_open": 7,
+   "n_fills": 88,
+   "equity_ts_min": 1791898403851,
+   "equity_ts_max": 1792033729056,
+   "equity_rows": 330
+  },
+  "3b": {
+   "db": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3b.sqlite3",
+   "db_sha256_size": 1556480,
+   "account_rows": [
+    {
+     "account_id": "paper43_3b",
+     "arm": "3b",
+     "initial_equity": 5000.0,
+     "cash": 5000.0,
+     "leverage": 1.0,
+     "dry_run": 1,
+     "created_at": 1791824389725
+    }
+   ],
+   "cash_rows": [
+    {
+     "account_id": "paper43_3b",
+     "arm": "3b",
+     "initial_equity": 5000.0,
+     "cash": 5000.0,
+     "leverage": 1.0,
+     "dry_run": 1,
+     "created_at": 1791824389725
+    }
+   ],
+   "n_positions_total": 35,
+   "n_open": 4,
+   "n_fills": 65,
+   "equity_ts_min": 1791937824181,
+   "equity_ts_max": 1792033729063,
+   "equity_rows": 305
+  },
+  "3c": {
+   "db": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3c.sqlite3",
+   "db_sha256_size": 1871872,
+   "account_rows": [
+    {
+     "account_id": "paper43_3c",
+     "arm": "3c",
+     "initial_equity": 5000.0,
+     "cash": 5000.0,
+     "leverage": 1.0,
+     "dry_run": 1,
+     "created_at": 1791824389738
+    }
+   ],
+   "cash_rows": [
+    {
+     "account_id": "paper43_3c",
+     "arm": "3c",
+     "initial_equity": 5000.0,
+     "cash": 5000.0,
+     "leverage": 1.0,
+     "dry_run": 1,
+     "created_at": 1791824389738
+    }
+   ],
+   "n_positions_total": 46,
+   "n_open": 7,
+   "n_fills": 80,
+   "equity_ts_min": 1791937824193,
+   "equity_ts_max": 1792033729066,
+   "equity_rows": 321
+  },
+  "3d": {
+   "db": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3d.sqlite3",
+   "db_sha256_size": 1835008,
+   "account_rows": [
+    {
+     "account_id": "paper43_3d",
+     "arm": "3d",
+     "initial_equity": 5000.0,
+     "cash": 5000.0,
+     "leverage": 1.0,
+     "dry_run": 1,
+     "created_at": 1791824389752
+    }
+   ],
+   "cash_rows": [
+    {
+     "account_id": "paper43_3d",
+     "arm": "3d",
+     "initial_equity": 5000.0,
+     "cash": 5000.0,
+     "leverage": 1.0,
+     "dry_run": 1,
+     "created_at": 1791824389752
+    }
+   ],
+   "n_positions_total": 46,
+   "n_open": 7,
+   "n_fills": 80,
+   "equity_ts_min": 1791937824253,
+   "equity_ts_max": 1792033729069,
+   "equity_rows": 320
+  }
+ },
+ "legacy_account_ids": [
+  "paper43_3a",
+  "paper43_3b",
+  "paper43_3c",
+  "paper43_3d"
+ ],
+ "n_legacy_dbs": 4,
+ "legacy_merged": false,
+ "equity_reset": false,
+ "prospective_shared_account": {
+  "status": "NOT_CREATED_NOT_ACTIVATED",
+  "planned_ledger": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/live/shared5000/paper_shared.sqlite3",
+  "requires": "Codex 运行验收 + 受控启用时刻（epoch）后才可创建/启用",
+  "never_backfill_history": true,
+  "does_not_touch_existing_ledgers": true
+ },
+ "frozen_shared_contract": {
+  "spec_version": "F_WX_v2.2_project_closure_user_5000_shared",
+  "view_sha256": "6d18d222d1991f99dd2ba0cdf80b35fbc57f4f482904c945f43d66ebb9df9501",
+  "model": "one_shared_virtual_account_5000USDT",
+  "initial_equity_USDT": 5000,
+  "max_positions_total": 10,
+  "leverage": 1,
+  "direction": "long_only",
+  "short_enabled": false,
+  "risk_per_trade_equity_fraction": 0.005,
+  "single_name_notional_equity_cap": 0.1,
+  "gross_long_notional_equity_cap": 0.8,
+  "cash_or_free_margin_reserve_fraction": 0.2,
+  "portfolio_initial_stop_risk_cap": 0.03,
+  "entry_participation_previous_15m_quote_cap": 0.01,
+  "fee_each_side": 0.0005,
+  "slippage_each_side": 0.0005,
+  "entry_delay_minutes": 15,
+  "max_holding_hours": 720
+ },
+ "contract_matches_frozen_view": true,
+ "notes": [
+  "四份旧账户保持**各自独立**（独立 DB 文件 + 独立 account_id）；本阶段**未**合并。",
+  "旧账本金额守恒证据见 old_ledger_violation_audit.json（原样保留，未改时间/价格/费用）。",
+  "共享 5000U 单账户为**契约**，尚未创建、未启用；不得补开历史信号。"
+ ]
+}

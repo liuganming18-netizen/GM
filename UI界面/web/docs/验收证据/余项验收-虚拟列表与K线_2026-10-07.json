@@ -1,0 +1,158 @@
+{
+ "startedAt": "2026-10-07T14:53:39.302Z",
+ "emulatedViewport": "1800x1180",
+ "label": "余项验收",
+ "sections": {
+  "readiness": {
+   "scrollerFound": true
+  },
+  "poolAndUi": {
+   "headerColumnCount": 10,
+   "headerColumns": [
+    "",
+    "1.代币(简称)",
+    "2.流动市值",
+    "3.24h成交量",
+    "4.聪明钱多头",
+    "5.聪明钱空头",
+    "6.总OI持仓",
+    "7.资金费率(8h)",
+    "8.近24h小时图",
+    "展开详情"
+   ],
+   "hasSmartMoneyLong": true,
+   "hasOiColumn": true,
+   "hasSparkline": 21,
+   "tabCount": 4,
+   "poolSizeFromSearch": null
+  },
+  "scrollBottomAndBack": {
+   "before": {
+    "clientH": 945,
+    "scrollH": 46825,
+    "scrollTop": 0
+   },
+   "atBottom": {
+    "clientH": 945,
+    "scrollH": 46825,
+    "scrollTop": 45880
+   },
+   "reachedBottom": true,
+   "bottomLastRowId": "okx:XDP-USDT-SWAP",
+   "afterBackToTop": {
+    "clientH": 945,
+    "scrollH": 46825,
+    "scrollTop": 0
+   },
+   "returnedToTop": true,
+   "topFirstRowId": "binance:0GUSDT",
+   "scrollHeightConsistent": true,
+   "screenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/余项验收-滚动到底再返回-1800x1180.png"
+  },
+  "expandedRowHeight": {
+   "targetId": "binance:0GUSDT",
+   "scrollHeightBefore": 46825,
+   "scrollHeightExpanded": 47744,
+   "scrollHeightCollapsed": 46165,
+   "deltaExpanded": 919,
+   "deltaCollapsedBack": -660,
+   "expandedChartMounted": true,
+   "heightChangedOnExpand": true,
+   "heightRestoredOnCollapse": false,
+   "screenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/余项验收-展开行高度-1800x1180.png"
+  },
+  "search": [
+   {
+    "query": "B",
+    "renderedRows": 22,
+    "poolMatched": null,
+    "elapsedMs": 429
+   },
+   {
+    "query": "BT",
+    "renderedRows": 6,
+    "poolMatched": null,
+    "elapsedMs": 417
+   },
+   {
+    "query": "BTC",
+    "renderedRows": 2,
+    "poolMatched": null,
+    "elapsedMs": 416
+   },
+   {
+    "query": "",
+    "renderedRows": 22,
+    "poolMatched": null,
+    "elapsedMs": 431
+   }
+  ],
+  "klineZoomPan": {
+   "viewBeforeZoom": {
+    "raw": "视窗 2026-10",
+    "span": -2016
+   },
+   "viewAfterZoomIn": {
+    "raw": "视窗 2026-10",
+    "span": -2016
+   },
+   "viewAfterZoomOut": {
+    "raw": "视窗 2026-10",
+    "span": -2016
+   },
+   "zoomInChangedSpan": false,
+   "zoomReversible": true,
+   "viewBeforeDrag": {
+    "raw": "视窗 2026-10",
+    "span": -2016
+   },
+   "viewAfterDrag": {
+    "raw": "视窗 2026-10",
+    "span": -2016
+   },
+   "panKeptSpan": true,
+   "pageScrollBefore": 0,
+   "pageScrollAfter": 0,
+   "pageNotScrolled": true,
+   "screenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/余项验收-K线缩放平移-1800x1180.png"
+  },
+  "stateRetention": {
+   "holdSeconds": 30,
+   "holdStartTs": "2026-10-07T14:53:55.730Z",
+   "holdEndTs": "2026-10-07T14:54:25.734Z",
+   "start": {
+    "search": "0G",
+    "stillExpanded": true,
+    "timeframeButtons": [
+     "1m",
+     "5m",
+     "15m",
+     "1h",
+     "4h",
+     "1d"
+    ],
+    "activeTimeframe": "1m",
+    "navCount": 1
+   },
+   "end": {
+    "search": "0G",
+    "stillExpanded": true,
+    "timeframeButtons": [
+     "1m",
+     "5m",
+     "15m",
+     "1h",
+     "4h",
+     "1d"
+    ],
+    "activeTimeframe": "1m",
+    "navCount": 1
+   },
+   "searchKept": true,
+   "stillExpanded": true,
+   "timeframeKept": true,
+   "pageNavigations": 0
+  }
+ },
+ "endedAt": "2026-10-07T14:54:25.734Z"
+}

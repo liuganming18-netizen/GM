@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UI 改版设计规范 · 浅色清爽风</title>
+<style>
+  :root{
+    --bg:#f2f5f9; --surface:#ffffff; --surface-2:#f7f9fc;
+    --border:#e7ecf3; --border-2:#d4dbe6;
+    --t1:#0b1322; --t2:#586880; --t3:#8491a5;
+    --up:#0b8a5e; --down:#d92d48; --warn:#ad6800;
+    --ai1:#2b6bff; --ai2:#6d5ef8; --ai3:#00b8d9;
+    --r-s:8px; --r-m:12px; --r-l:16px; --r-xl:22px;
+    --sh1:0 1px 2px rgba(15,23,42,.05);
+    --sh2:0 8px 24px -12px rgba(15,23,42,.18);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--t1);
+    font-family:-apple-system,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;
+    font-size:14px; line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:56px 28px 96px}
+  h1{font-size:34px; line-height:1.25; margin:0 0 10px; letter-spacing:-.01em}
+  h2{font-size:21px; margin:56px 0 6px; letter-spacing:-.005em}
+  h2 .n{font-size:12px; font-weight:700; color:var(--ai1); vertical-align:2px; margin-right:8px; font-variant-numeric:tabular-nums}
+  h3{font-size:15px; margin:26px 0 8px}
+  p{margin:8px 0}
+  .lede{font-size:16px; color:var(--t2); max-width:74ch}
+  .sub{color:var(--t2); font-size:13px}
+  .hr{height:1px; background:var(--border); margin:40px 0 0}
+  code,.mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace; font-variant-numeric:tabular-nums}
+
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--r-l); padding:20px 22px; box-shadow:var(--sh1)}
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px}
+  .grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px}
+
+  table{width:100%; border-collapse:collapse; font-size:13px; margin:10px 0}
+  th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--border)}
+  th{color:var(--t2); font-weight:600; font-size:12px; background:var(--surface-2)}
+  tr:last-child td{border-bottom:0}
+  td.mono{font-size:12px}
+
+  .sw{display:flex; align-items:center; gap:10px; padding:9px 11px; border:1px solid var(--border); border-radius:var(--r-m); background:var(--surface)}
+  .dot{width:26px; height:26px; border-radius:8px; border:1px solid rgba(15,23,42,.10); flex:0 0 auto}
+  .sw .nm{font-size:12px; font-weight:600}
+  .sw .hx{font-size:11px; color:var(--t3); font-family:ui-monospace,Menlo,monospace}
+
+  .pill{display:inline-flex; align-items:center; gap:6px; padding:2px 9px; border-radius:999px; font-size:11px; font-weight:600; border:1px solid}
+  .pill.ok{color:var(--up); border-color:#bfe3d3; background:#eefaf5}
+  .pill.no{color:var(--down); border-color:#f5ccd4; background:#fdeef1}
+  .pill.ai{color:#fff; border-color:transparent; background:linear-gradient(96deg,var(--ai1),var(--ai2),var(--ai3))}
+
+  .shot{width:100%; border-radius:var(--r-m); border:1px solid var(--border-2); display:block; box-shadow:var(--sh2)}
+  .shotcap{font-size:12px; color:var(--t3); margin:8px 0 0; text-align:center}
+
+  /* ── AI 特效演示（与工程 src/index.css 同源实现） ── */
+  @property --ai-angle{syntax:"<angle>"; initial-value:0deg; inherits:false}
+  .demo-stage{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:12px}
+  .demo{background:var(--surface); border:1px solid var(--border); border-radius:var(--r-m); padding:18px 14px; text-align:center; font-size:12px; color:var(--t2); min-height:104px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px}
+  .demo b{color:var(--t1); font-size:12px}
+  .demo .tag{font-family:ui-monospace,Menlo,monospace; font-size:10px; color:var(--t3)}
+
+  .ai-aurora{position:relative}
+  .ai-aurora::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;
+    background:conic-gradient(from var(--ai-angle),
+      color-mix(in oklab,var(--ai1) 0%,transparent) 0deg,
+      color-mix(in oklab,var(--ai1) 70%,transparent) 60deg,
+      color-mix(in oklab,var(--ai2) 92%,transparent) 130deg,
+      color-mix(in oklab,var(--ai3) 78%,transparent) 200deg,
+      color-mix(in oklab,var(--ai1) 0%,transparent) 300deg,
+      color-mix(in oklab,var(--ai1) 0%,transparent) 360deg);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+    mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;
+    animation:ai-orbit 6.5s linear infinite;pointer-events:none;z-index:3}
+  @keyframes ai-orbit{to{--ai-angle:360deg}}
+
+  .ai-pulse{position:relative}
+  .ai-pulse::after{content:"";position:absolute;inset:-5px;border-radius:9999px;
+    background:radial-gradient(circle,color-mix(in oklab,var(--up) 42%,transparent) 0%,transparent 68%);
+    animation:ai-breathe 2.6s ease-in-out infinite;pointer-events:none}
+  @keyframes ai-breathe{0%,100%{opacity:.3;transform:scale(.82)}50%{opacity:.95;transform:scale(1.3)}}
+  .live-dot{width:9px;height:9px;border-radius:9999px;background:var(--up);display:inline-block}
+
+  .ai-shimmer{position:relative;overflow:hidden}
+  .ai-shimmer::after{content:"";position:absolute;top:0;bottom:0;left:0;width:42%;
+    background:linear-gradient(100deg,transparent 0%,color-mix(in oklab,var(--ai3) 26%,transparent) 45%,color-mix(in oklab,var(--ai1) 30%,transparent) 55%,transparent 100%);
+    transform:translateX(-160%) skewX(-18deg);animation:ai-sweep 5s cubic-bezier(.4,0,.2,1) infinite;pointer-events:none}
+  @keyframes ai-sweep{0%{transform:translateX(-160%) skewX(-18deg)}55%,100%{transform:translateX(340%) skewX(-18deg)}}
+
+  .ai-gradient-text{background-image:linear-gradient(96deg,var(--ai1) 0%,var(--ai2) 48%,var(--ai3) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
+
+  .ai-grid{background-image:linear-gradient(color-mix(in oklab,var(--ai1) 6%,transparent) 1px,transparent 1px),
+    linear-gradient(90deg,color-mix(in oklab,var(--ai1) 6%,transparent) 1px,transparent 1px);
+    background-size:26px 26px;animation:ai-drift 30s linear infinite}
+  @keyframes ai-drift{to{background-position:26px 26px}}
+
+  .ai-scanline{position:relative}
+  .ai-scanline::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+    background:linear-gradient(90deg,transparent 0%,color-mix(in oklab,var(--ai1) 70%,transparent) 50%,transparent 100%);
+    animation:ai-scan 4.2s ease-in-out infinite;pointer-events:none}
+  @keyframes ai-scan{0%,100%{opacity:.15;transform:translateX(-38%)}50%{opacity:1;transform:translateX(38%)}}
+
+  .ai-glow-hover{transition:box-shadow .25s ease}
+  .ai-glow-hover:hover{box-shadow:0 6px 20px -6px color-mix(in oklab,var(--ai1) 38%,transparent)}
+  .scanwrap{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:var(--r-m);padding:16px;background:var(--surface-2)}
+
+  .note{border-left:3px solid var(--ai1); background:#f4f7ff; padding:12px 16px; border-radius:0 var(--r-m) var(--r-m) 0; margin:14px 0; font-size:13px; color:var(--t2)}
+  .note b{color:var(--t1)}
+  .kbd{font-family:ui-monospace,Menlo,monospace; font-size:12px; background:var(--surface-2); border:1px solid var(--border-2); border-radius:5px; padding:1px 6px}
+  ul{margin:8px 0; padding-left:20px}
+  li{margin:5px 0}
+  .cols{columns:2; column-gap:28px}
+  @media (max-width:720px){.cols{columns:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="pill ai">UI 改版交付</div>
+  <h1>加密货币趋势判断系统<br/>界面改版设计规范 · 浅色清爽风</h1>
+  <p class="lede">在不改动页面布局与任何内容的前提下，把整套深色界面翻转为浅色清爽风，并注入一组克制的 AI 动效。全部改动只落在「颜色令牌」与「已有元素的类名」上 —— 未新增、未删除任何 DOM 节点。</p>
+
+  <div class="grid3" style="margin-top:26px">
+    <div class="card"><div class="sub">改版范围</div><div style="font-size:20px;font-weight:700">4 个页面</div><div class="sub">交易工作台 / 数据中心 / 策略管理 / 回测复盘</div></div>
+    <div class="card"><div class="sub">DOM 节点变化</div><div style="font-size:20px;font-weight:700;color:var(--up)">0 增 0 删</div><div class="sub">逐标签直方图逐项相等</div></div>
+    <div class="card"><div class="sub">布局位移</div><div style="font-size:20px;font-weight:700;color:var(--up)">0 px</div><div class="sub">10 个关键容器几何完全一致</div></div>
+  </div>
+
+  <div class="hr"></div>
+  <h2><span class="n">01</span>设计目标与硬约束</h2>
+  <p>这是一次<strong>纯皮肤层改版</strong>。产品已有一套经草图验收的布局与信息架构，本次不动骨架，只解决三件事：</p>
+  <ul>
+    <li><b>可读性</b> —— 长时间盯盘场景下，把深底 + 低饱和荧光色换成浅底 + 高对比墨色，降低视觉疲劳。</li>
+    <li><b>信息层级</b> —— 用「灰画布 + 白卡片」重建层次，让卡片、表头、冻结列各归其位。</li>
+    <li><b>科技感</b> —— 用极低干扰的 AI 动效替代原来的静态描边，传达「系统正在实时计算」。</li>
+  </ul>
+  <div class="note"><b>约束纪律：</b>不改变页面布局、不改变文案与数据、不新增/删除任何元素、不新增按钮与入口。所有 AI 特效一律由 <span class="kbd">::before</span> / <span class="kbd">::after</span> 伪元素承载，因此天然零节点开销。</div>
+
+  <div class="hr"></div>
+  <h2><span class="n">02</span>色彩系统</h2>
+  <p>原界面的中性色阶本身就是一套完整的「画布 → 卡片 → 描边 → 三级文字」语义位。本次采用<strong>色阶整体反转</strong>：越深的色值现在越浅（页面底），越浅的色值现在越深（正文）。因为语义位没动，所以 <span class="kbd">bg-neutral-950</span> 仍是「页面画布」、<span class="kbd">text-neutral-100</span> 仍是「一级正文」，全站 40+ 处颜色工具类自动跟随，无需逐处改写。</p>
+
+  <h3>中性色阶（深 → 浅反转）</h3>
+  <div class="grid3">
+    <div class="sw"><span class="dot" style="background:#f2f5f9"></span><span><span class="nm">neutral-950</span><br/><span class="hx">#f2f5f9 · 页面画布</span></span></div>
+    <div class="sw"><span class="dot" style="background:#ffffff"></span><span><span class="nm">neutral-900</span><br/><span class="hx">#ffffff · 卡片 / 面板</span></span></div>
+    <div class="sw"><span class="dot" style="background:#f7f9fc"></span><span><span class="nm">neutral-850</span><br/><span class="hx">#f7f9fc · 展开行</span></span></div>
+    <div class="sw"><span class="dot" style="background:#e7ecf3"></span><span><span class="nm">neutral-800</span><br/><span class="hx">#e7ecf3 · 分隔线</span></span></div>
+    <div class="sw"><span class="dot" style="background:#d4dbe6"></span><span><span class="nm">neutral-700</span><br/><span class="hx">#d4dbe6 · 控件描边</span></span></div>
+    <div class="sw"><span class="dot" style="background:#8491a5"></span><span><span class="nm">neutral-500</span><br/><span class="hx">#8491a5 · 三级文字</span></span></div>
+    <div class="sw"><span class="dot" style="background:#586880"></span><span><span class="nm">neutral-400</span><br/><span class="hx">#586880 · 二级文字</span></span></div>
+    <div class="sw"><span class="dot" style="background:#36445a"></span><span><span class="nm">neutral-300</span><br/><span class="hx">#36445a · 强调文字</span></span></div>
+    <div class="sw"><span class="dot" style="background:#0b1322"></span><span><span class="nm">neutral-100</span><br/><span class="hx">#0b1322 · 一级正文</span></span></div>
+  </div>
+
+  <h3>语义色</h3>
+  <p class="sub">涨跌 / 多空方向<strong>沿用产品既有口径</strong>（页脚与图表注释均写明「方向绿多红空、K线涨绿跌红」），本次只把明度调到浅底可读，未改动语义方向。</p>
+  <table>
+    <thead><tr><th>语义</th><th>令牌</th><th>色值</th><th>用途</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pill ok">涨 / 多 / 盈利</span></td><td class="mono">emerald-400</td><td class="mono">#0b8a5e</td><td>涨幅、做多、未实现盈利、有效信号</td></tr>
+      <tr><td><span class="pill no">跌 / 空 / 亏损</span></td><td class="mono">rose-400</td><td class="mono">#d92d48</td><td>跌幅、做空、未实现亏损、失效信号</td></tr>
+      <tr><td><span class="pill" style="color:#ad6800;border-color:#f0dcb4;background:#fdf6e8">陈旧 / 待确认</span></td><td class="mono">amber-400</td><td class="mono">#ad6800</td><td>数据陈旧、未锁定、待配置</td></tr>
+      <tr><td><span class="pill" style="color:#4f5bd5;border-color:#d3d7f8;background:#f0f2ff">AI / 信号标记</span></td><td class="mono">indigo-400</td><td class="mono">#4f5bd5</td><td>信号触发标记、数据指标图标</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><b>一处可切换项：</b>若你更希望采用 A 股习惯的「涨红跌绿」，只需把 <span class="kbd">src/index.css</span> 中 <span class="kbd">--color-emerald-*</span> 与 <span class="kbd">--color-rose-*</span> 两组色值互换即可全站生效（含 K 线与成交量）。当前保持产品原有口径，因为页脚文案与图表注释里已显式写明该约定，改方向会与页面文字自相矛盾。</div>
+
+  <h3>AI 特效调色板</h3>
+  <div class="grid3">
+    <div class="sw"><span class="dot" style="background:linear-gradient(135deg,#2b6bff,#6d5ef8,#00b8d9)"></span><span><span class="nm">AI 三色渐变</span><br/><span class="hx">#2b6bff → #6d5ef8 → #00b8d9</span></span></div>
+  </div>
+
+  <div class="hr"></div>
+  <h2><span class="n">03</span>字体与数字排版</h2>
+  <table>
+    <thead><tr><th>层级</th><th>字号 / 字重</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>页面主标题</td><td class="mono">20px / 700</td><td>数据中心、策略管理、回测复盘，配 AI 渐变</td></tr>
+      <tr><td>区块标题</td><td class="mono">14px / 700</td><td>信号区、全市场代币排序</td></tr>
+      <tr><td>正文 / 表体</td><td class="mono">12px / 400–500</td><td>表格数据、说明文字</td></tr>
+      <tr><td>辅助说明</td><td class="mono">10–11px / 400</td><td>脚注、口径说明</td></tr>
+      <tr><td>所有数值</td><td class="mono">tabular-nums</td><td>等宽数字，保证列与列纵向对齐不跳动</td></tr>
+    </tbody>
+  </table>
+
+  <div class="hr"></div>
+  <h2><span class="n">04</span>AI 特效规范</h2>
+  <p>七种特效，全部为伪元素实现。<strong>设计克制原则：</strong>动效只出现在「状态」与「AI 参与」的位置，绝不覆盖在数据本身之上；周期统一在 2.6–6.5 秒，避免干扰盯盘。同时遵循 <span class="kbd">prefers-reduced-motion</span>，系统开启减弱动效时全部自动停止。</p>
+
+  <div class="demo-stage">
+    <div class="demo ai-aurora"><b>极光流光描边</b><span>品牌徽标 · AI 排序 · 选中信号 · 展开分析区</span><span class="tag">.ai-aurora · 6.5s 环绕</span></div>
+    <div class="demo"><b>呼吸光晕</b><span style="display:flex;align-items:center;gap:10px"><i class="live-dot ai-pulse"></i> 实时链路在线</span><span class="tag">.ai-pulse · 2.6s 脉冲</span></div>
+    <div class="demo"><b>扫光</b><span class="pill ai ai-shimmer" style="font-size:11px">Live · 7 组标准列结构</span><span class="tag">.ai-shimmer · 5s 掠过</span></div>
+    <div class="demo"><b>渐变文字</b><span class="ai-gradient-text" style="font-size:17px">数据中心</span><span class="tag">.ai-gradient-text</span></div>
+    <div class="demo ai-grid"><b>数据流网格</b><span>页面画布背景层</span><span class="tag">.ai-grid · 30s 漂移</span></div>
+    <div class="demo scanwrap ai-scanline"><b>扫描线</b><span>顶栏底部 · 分析区标题下缘</span><span class="tag">.ai-scanline · 4.2s 往复</span></div>
+  </div>
+  <p class="sub" style="margin-top:10px">悬停辉光 <span class="kbd">.ai-glow-hover</span> 为第 7 种，仅在鼠标悬停时生效，静置无任何视觉变化。</p>
+
+  <h3>落点清单</h3>
+  <table>
+    <thead><tr><th>特效</th><th>落点</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">ai-aurora</td><td>侧栏品牌徽标、按信号逻辑排序、选中信号卡、行内展开分析区、数据中心主表卡、策略条件序列卡、回测留存记录卡</td></tr>
+      <tr><td class="mono">ai-pulse</td><td>侧栏实时链路点、顶部总览状态点</td></tr>
+      <tr><td class="mono">ai-shimmer</td><td>Live 徽章、7 组标准列结构徽章</td></tr>
+      <tr><td class="mono">ai-gradient-text</td><td>四个页面主标题、信号区、全市场代币排序</td></tr>
+      <tr><td class="mono">ai-grid</td><td>四个页面根画布</td></tr>
+      <tr><td class="mono">ai-scanline</td><td>顶部总览栏底缘、展开区两个面板标题下缘</td></tr>
+      <tr><td class="mono">ai-glow-hover</td><td>快速做多 / 快速做空按钮、信号卡</td></tr>
+    </tbody>
+  </table>
+
+  <div class="hr"></div>
+  <h2><span class="n">05</span>改前 / 改后对照</h2>
+
+  <h3>交易工作台</h3>
+  <img class="shot" src="before/before-workbench.png" alt="改前 交易工作台" />
+  <p class="shotcap">改前 · 深色主题</p>
+  <img class="shot" src="after/after-workbench.png" alt="改后 交易工作台" style="margin-top:16px" />
+  <p class="shotcap">改后 · 浅色清爽风（布局、列宽、行高、文案与数据完全一致）</p>
+
+  <div class="grid2" style="margin-top:26px">
+    <div>
+      <h3>数据中心</h3>
+      <img class="shot" src="after/after-datacenter.png" alt="改后 数据中心" />
+    </div>
+    <div>
+      <h3>策略管理</h3>
+      <img class="shot" src="after/after-strategy.png" alt="改后 策略管理" />
+    </div>
+  </div>
+  <h3 style="margin-top:26px">回测复盘</h3>
+  <img class="shot" src="after/after-backtest.png" alt="改后 回测复盘" />
+
+  <div class="hr"></div>
+  <h2><span class="n">06</span>顺手修掉的一个真实缺陷</h2>
+  <p>换色过程中暴露出一个<strong>原本就存在、但在深色下看不见</strong>的问题：市场表的冻结列（展开箭头 + 代币列）底色写的是 <span class="kbd">background-color: inherit</span>，继承到的是行上的半透明色 <span class="kbd">bg-neutral-900/30</span>。深色下 <span class="mono">rgba(23,23,23,.3)</span> 压在 <span class="mono">#0d0d0d</span> 上几乎无差别；换成浅色后变成 <span class="mono">rgba(255,255,255,.3)</span> 压在近白底上，<strong>横向滚动时下层单元格的深色文字会直接透出来</strong>，冻结列与滚动内容糊在一起。</p>
+  <div class="grid2">
+    <div>
+      <img class="shot" src="after/zoom-sticky-scrolled.png" alt="冻结列修复后" />
+      <p class="shotcap">修复后：横向滚动 420px，冻结列底色实心，文字不串行</p>
+    </div>
+    <div>
+      <img class="shot" src="after/zoom-titles.png" alt="标题渐变与徽章" />
+      <p class="shotcap">渐变标题、扫光徽章、呼吸状态点的实际渲染</p>
+    </div>
+  </div>
+  <p class="sub">修法：把三种行状态（默认 / 悬停 / 展开）在<strong>行级</strong>换成等价实色，冻结 td 继续 inherit 即可自动拿到实色。不新增节点、不改结构，三种状态的视觉层次与原版一一对应。</p>
+
+  <div class="hr"></div>
+  <h2><span class="n">07</span>改动清单</h2>
+  <table>
+    <thead><tr><th>文件</th><th>改动性质</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">src/index.css</td><td>新增设计令牌层（中性色阶反转、语义色、AI 调色板）+ 7 个 AI 特效类 + 滚动条/弹窗/冻结列实色修正</td></tr>
+      <tr><td class="mono">src/components/LightweightChart.tsx</td><td>图表 COLOR 常量由深色主题换为浅色主题（背景、网格、坐标轴、十字光标、蜡烛、成交量、OI 线）；语义方向未变</td></tr>
+      <tr><td class="mono">src/components/TokenTable.tsx</td><td>迷你图描边色随语义色更新；根画布 / 标题 / 徽章 / 排序胶囊挂 AI 类名</td></tr>
+      <tr><td class="mono">src/components/NavigationSidebar.tsx</td><td>品牌徽标挂极光描边；Live 徽章挂扫光；实时链路点挂呼吸光晕</td></tr>
+      <tr><td class="mono">src/components/TopStatusBar.tsx</td><td>顶栏挂扫描线；状态点挂呼吸光晕</td></tr>
+      <tr><td class="mono">src/components/SignalListPanel.tsx</td><td>标题挂渐变文字；信号卡挂悬停辉光；选中态挂极光描边</td></tr>
+      <tr><td class="mono">src/components/InlineExpandedChart.tsx</td><td>分析区根容器挂极光描边；两个面板标题挂扫描线</td></tr>
+      <tr><td class="mono">src/components/PositionPanel.tsx</td><td>快速做多 / 做空按钮挂悬停辉光</td></tr>
+      <tr><td class="mono">src/components/{DataCenter,StrategyManagement,BacktestReview}View.tsx</td><td>根画布挂数据流网格；主标题挂渐变文字；主卡片挂极光描边；回测页空态坐标轴由 #333 改为浅灰</td></tr>
+    </tbody>
+  </table>
+  <p class="sub">未改动：<span class="kbd">App.tsx</span>、全部数据层与 API、全部业务逻辑、全部文案、全部布局类名、代币品牌 logo 配色。</p>
+
+  <div class="hr"></div>
+  <h2><span class="n">08</span>验收证据</h2>
+  <p>「不改布局与内容」不是自述，而是可复算的机器判据。方法：在同一 JS 任务内把所有 <span class="kbd">ai-*</span> 类名从运行中的 DOM 上摘掉（不触发 React 重渲染），前后各记录一次指标并逐项比对。</p>
+  <table>
+    <thead><tr><th>页面</th><th>元素总数</th><th>节点数不变</th><th>文本不变</th><th>标签直方图不变</th><th>关键容器几何不变</th></tr></thead>
+    <tbody>
+      <tr><td>交易工作台</td><td class="mono">2027</td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td></tr>
+      <tr><td>数据中心</td><td class="mono">377</td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td></tr>
+      <tr><td>策略管理</td><td class="mono">298</td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td></tr>
+      <tr><td>回测复盘</td><td class="mono">310</td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td><td><span class="pill ok">PASS</span></td></tr>
+    </tbody>
+  </table>
+  <p class="sub">几何比对覆盖 10 个关键容器：侧栏、顶栏、信号区、行情区、持仓区、表格滚动容器、主表、表头、首个数据行、冻结列单元格 —— 改前改后逐项相等（含 x / y / width / height）。</p>
+  <div class="note"><b>构建校验：</b><span class="kbd">tsc --noEmit</span> 通过（exit 0）；<span class="kbd">vite build</span> 成功（1685 modules，CSS 54.68 kB / JS 561.98 kB）。</div>
+
+  <div class="hr"></div>
+  <h2><span class="n">09</span>待你决策</h2>
+  <ul>
+    <li><b>涨跌配色方向</b> —— 当前沿用产品原有的「涨绿跌红」。若要改成 A 股习惯的「涨红跌绿」，改 <span class="kbd">src/index.css</span> 两组色值即可，全站（含 K 线与成交量）一次生效。但需同步修改页脚那行「方向绿多红空、K线涨绿跌红」的说明文案，否则页面自相矛盾。</li>
+    <li><b>AI 动效强度</b> —— 当前刻意做得克制。若希望更「科技感」，可提高 <span class="kbd">.ai-grid</span> 网格透明度、给更多卡片加极光描边，或加入数字跳动闪光（需少量 JS 监听刷新事件）。</li>
+    <li><b>浅色主题的长时间盯盘体验</b> —— 建议实际用一轮再定。若夜间使用为主，可在此基础上增加一个深色主题开关（令牌层已就位，加 <span class="kbd">.dark</span> 作用域覆盖即可）。</li>
+  </ul>
+
+  <div class="hr"></div>
+  <p class="sub" style="margin-top:24px">加密货币趋势判断系统 · UI 改版设计规范 · 浅色清爽风 · 全部截图摄于 1800×1180 视口</p>
+</div>
+</body>
+</html>

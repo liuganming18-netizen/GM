@@ -1,0 +1,69 @@
+{
+  "n_manifest": 4612,
+  "missing": [],
+  "byte_mismatch": [],
+  "row_mismatch": [],
+  "footer_error": [],
+  "datasets": {
+    "is/funding": {
+      "files": 270,
+      "rows": 603116
+    },
+    "is/mark1h": {
+      "files": 270,
+      "rows": 4142332
+    },
+    "is/ohlcv/15m": {
+      "files": 264,
+      "rows": 15999558
+    },
+    "is/ohlcv/1h": {
+      "files": 264,
+      "rows": 4004576
+    },
+    "is/ohlcv/4h": {
+      "files": 264,
+      "rows": 1001211
+    },
+    "is/oi_metrics": {
+      "files": 270,
+      "rows": 38346580
+    },
+    "val/funding": {
+      "files": 502,
+      "rows": 1075571
+    },
+    "val/mark1h": {
+      "files": 499,
+      "rows": 4983473
+    },
+    "val/ohlcv/15m": {
+      "files": 502,
+      "rows": 19787052
+    },
+    "val/ohlcv/1h": {
+      "files": 502,
+      "rows": 4946855
+    },
+    "val/ohlcv/4h": {
+      "files": 502,
+      "rows": 1236814
+    },
+    "val/oi_metrics": {
+      "files": 502,
+      "rows": 59405616
+    },
+    "instruments.parquet": {
+      "files": 1,
+      "rows": 526
+    }
+  },
+  "funding_mark_null": {
+    "is/funding": 24,
+    "val/funding": 0
+  },
+  "time_boundary_violations": [],
+  "time_stats_unknown": [],
+  "at_utc": "2026-10-15T05:41:01.652337+00:00",
+  "scope": "manifest file presence/size/Parquet rows/time stats; funding mark null counts; not full SHA/content/coverage audit"
+}

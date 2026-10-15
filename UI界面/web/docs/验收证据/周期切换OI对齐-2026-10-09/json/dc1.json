@@ -1,0 +1,691 @@
+{
+  "prefix": "dc1",
+  "errors": [],
+  "results": [
+    {
+      "sym": "BTCUSDT",
+      "id": "binance:BTCUSDT",
+      "ex": "binance",
+      "mid": "BTCUSDT",
+      "tfButtons": [
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "4h",
+        "8h",
+        "12h",
+        "1d"
+      ],
+      "tfs": [
+        {
+          "tf": "1m",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791484320,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1791454080,
+              "tailTime": 1791484320
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 240,
+            "match": 240,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 240,
+            "bad": [],
+            "headTime": 1791174156,
+            "tailTime": 1791483600
+          }
+        },
+        {
+          "tf": "5m",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791484200,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1791334200,
+              "tailTime": 1791484200
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 240,
+            "match": 240,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 240,
+            "bad": [],
+            "headTime": 1791174156,
+            "tailTime": 1791483600
+          }
+        },
+        {
+          "tf": "15m",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791484200,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1791034200,
+              "tailTime": 1791484200
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 240,
+            "match": 240,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 240,
+            "bad": [],
+            "headTime": 1791174156,
+            "tailTime": 1791483600
+          }
+        },
+        {
+          "tf": "30m",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791484200,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1790584200,
+              "tailTime": 1791484200
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 240,
+            "match": 240,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 240,
+            "bad": [],
+            "headTime": 1791174156,
+            "tailTime": 1791483600
+          }
+        },
+        {
+          "tf": "1h",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791482400,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1789682400,
+              "tailTime": 1791482400
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 240,
+            "match": 240,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 240,
+            "bad": [],
+            "headTime": 1791174156,
+            "tailTime": 1791483600
+          }
+        },
+        {
+          "tf": "4h",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791475200,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1784275200,
+              "tailTime": 1791475200
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 240,
+            "match": 240,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 240,
+            "bad": [],
+            "headTime": 1791174156,
+            "tailTime": 1791483600
+          }
+        },
+        {
+          "tf": "8h",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791475200,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1777075200,
+              "tailTime": 1791475200
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 240,
+            "match": 240,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 240,
+            "bad": [],
+            "headTime": 1791174156,
+            "tailTime": 1791483600
+          }
+        },
+        {
+          "tf": "12h",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791460800,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1769860800,
+              "tailTime": 1791460800
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 240,
+            "match": 240,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 240,
+            "bad": [],
+            "headTime": 1791174156,
+            "tailTime": 1791483600
+          }
+        },
+        {
+          "tf": "1d",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791417600,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1748217600,
+              "tailTime": 1791417600
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 240,
+            "match": 240,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 240,
+            "bad": [],
+            "headTime": 1791174156,
+            "tailTime": 1791483600
+          }
+        }
+      ]
+    },
+    {
+      "sym": "ETHUSDT",
+      "id": "binance:ETHUSDT",
+      "ex": "binance",
+      "mid": "ETHUSDT",
+      "tfButtons": [
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "4h",
+        "8h",
+        "12h",
+        "1d"
+      ],
+      "tfs": [
+        {
+          "tf": "30m",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791484200,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1790584200,
+              "tailTime": 1791484200
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 243,
+            "match": 243,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 243,
+            "bad": [],
+            "headTime": 1791174163,
+            "tailTime": 1791483600
+          }
+        },
+        {
+          "tf": "1d",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791417600,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1748217600,
+              "tailTime": 1791417600
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 243,
+            "match": 243,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 243,
+            "bad": [],
+            "headTime": 1791174163,
+            "tailTime": 1791483600
+          }
+        }
+      ]
+    },
+    {
+      "sym": "0GUSDT",
+      "id": "binance:0GUSDT",
+      "ex": "binance",
+      "mid": "0GUSDT",
+      "tfButtons": [
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "4h",
+        "8h",
+        "12h",
+        "1d"
+      ],
+      "tfs": [
+        {
+          "tf": "30m",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 501,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791484200,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1790584200,
+              "tailTime": 1791484200
+            }
+          ],
+          "volume": {
+            "n": 501,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 238,
+            "match": 238,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 238,
+            "bad": [],
+            "headTime": 1791174687,
+            "tailTime": 1791483900
+          }
+        },
+        {
+          "tf": "1d",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 387,
+              "match": 386,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791417600,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1758067200,
+              "tailTime": 1791417600
+            }
+          ],
+          "volume": {
+            "n": 387,
+            "match": 386,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 238,
+            "match": 238,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 238,
+            "bad": [],
+            "headTime": 1791174687,
+            "tailTime": 1791483900
+          }
+        }
+      ]
+    },
+    {
+      "sym": "AEON-USDT-SWAP",
+      "id": "okx:AEON-USDT-SWAP",
+      "ex": "okx",
+      "mid": "AEON-USDT-SWAP",
+      "tfButtons": [
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "4h",
+        "12h",
+        "1d"
+      ],
+      "tfs": [
+        {
+          "tf": "30m",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 500,
+              "match": 500,
+              "mismatch": 0,
+              "unknown": 0,
+              "dup": 0,
+              "isForming": false,
+              "bad": [],
+              "headTime": 1790582400,
+              "tailTime": 1791480600
+            }
+          ],
+          "volume": {
+            "n": 500,
+            "match": 500,
+            "mismatch": 0,
+            "unknown": 0,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 245,
+            "match": 245,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 245,
+            "bad": [],
+            "headTime": 1791174163,
+            "tailTime": 1791483935
+          }
+        },
+        {
+          "tf": "1d",
+          "candleSeriesCount": 1,
+          "candles": [
+            {
+              "n": 74,
+              "match": 73,
+              "mismatch": 0,
+              "unknown": 1,
+              "dup": 0,
+              "isForming": false,
+              "bad": [
+                {
+                  "t": 1791417600,
+                  "why": "no backend bar"
+                }
+              ],
+              "headTime": 1785110400,
+              "tailTime": 1791417600
+            }
+          ],
+          "volume": {
+            "n": 74,
+            "match": 73,
+            "mismatch": 0,
+            "unknown": 1,
+            "zero": 0,
+            "bad": []
+          },
+          "oi": {
+            "n": 245,
+            "match": 245,
+            "mismatch": 0,
+            "unknown": 0,
+            "dup": 0,
+            "apiRows": 245,
+            "bad": [],
+            "headTime": 1791174163,
+            "tailTime": 1791483935
+          }
+        }
+      ]
+    }
+  ]
+}

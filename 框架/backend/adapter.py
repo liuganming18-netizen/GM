@@ -53,6 +53,9 @@ PROJECT_ROOT = os.environ.get(
 DB_PATH = os.environ.get("MARKET_DB", os.path.join(PROJECT_ROOT, "data", "market_v2.sqlite3"))
 PORT = int(os.environ.get("PORT", "8787"))
 HERE = os.path.dirname(os.path.abspath(__file__))
+FRAMEWORK_ROOT = os.path.dirname(HERE)
+if FRAMEWORK_ROOT not in sys.path:
+    sys.path.insert(0, FRAMEWORK_ROOT)
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 if HERE not in sys.path:
@@ -3107,6 +3110,9 @@ def route_v1(path, params):
         if seg == ["paper", "funding-audit"]:
             # 资金费符号口径 + 迟到补记缺口（只读）
             return live.paper_funding_audit(params), 200
+        if seg == ["paper", "legacy-audit"]:
+            # 旧版/未验收/规则违规 只读审计清单（2026-10-15 闭环整改·阶段A）
+            return live.legacy_audit(), 200
     if seg == ["live", "health"]:
         if live is None:
             return _live_missing(f"实时模块导入失败：{_LIVE_IMPORT_ERROR}"), 200

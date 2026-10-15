@@ -1,0 +1,66 @@
+{
+  "accounts": 4,
+  "initial_equity_total": 20000.0,
+  "open_positions": 25,
+  "by_arm": {
+    "3a": 7,
+    "3b": 4,
+    "3c": 7,
+    "3d": 7
+  },
+  "entries_before_requested": 0,
+  "entry_delay_lt15m": 17,
+  "earliest_delay_zero": 17,
+  "sample_delay_violations": [
+    {
+      "symbol": "龙虾USDT",
+      "entry_ts": 1792005300000,
+      "event_time": 1792004399999,
+      "requested_at": 1792004474125,
+      "earliest_fill_ms": 1792004474125,
+      "stop_price": 0.02364,
+      "atr_at_entry": 0.0026722708201901394,
+      "signal_uid": "structure_prototype_39|sc|wx:1bc2bdda6cb3307c3dce|3a"
+    },
+    {
+      "symbol": "INJUSDT",
+      "entry_ts": 1792012500000,
+      "event_time": 1792011599999,
+      "requested_at": 1792011902617,
+      "earliest_fill_ms": 1792011902617,
+      "stop_price": 7.227,
+      "atr_at_entry": 0.16456495630740495,
+      "signal_uid": "structure_prototype_39|sc|wx:b90796cb0eb0b5e0e66f|3a"
+    },
+    {
+      "symbol": "USUSDT",
+      "entry_ts": 1792030500000,
+      "event_time": 1792029599999,
+      "requested_at": 1792029903710,
+      "earliest_fill_ms": 1792029903710,
+      "stop_price": 0.006179,
+      "atr_at_entry": 0.0004066941962478288,
+      "signal_uid": "structure_prototype_39|sc|wx:e86a8930eb9bc8d84795|3a"
+    },
+    {
+      "symbol": "牛来USDT",
+      "entry_ts": 1792030500000,
+      "event_time": 1792029599999,
+      "requested_at": 1792029903710,
+      "earliest_fill_ms": 1792029903710,
+      "stop_price": 0.05929,
+      "atr_at_entry": 0.0020954201980904526,
+      "signal_uid": "structure_prototype_39|sc|wx:3fa9637a95b860bf74d2|3a"
+    },
+    {
+      "symbol": "NEARUSDT",
+      "entry_ts": 1792030500000,
+      "event_time": 1792029599999,
+      "requested_at": 1792029903710,
+      "earliest_fill_ms": 1792029903710,
+      "stop_price": 4.5120000000000005,
+      "atr_at_entry": 0.10831322224727348,
+      "signal_uid": "structure_prototype_39|sc|wx:bfc99268d701f112a6b9|3a"
+    }
+  ]
+}

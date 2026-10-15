@@ -19,15 +19,23 @@ set -eu
 
 HERE="$(cd "$(dirname "$0")" && pwd -P)"
 PY="${PY:-/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3}"
-PROJ="${DATA_HUB_PROJECT:-/Users/boos/WorkBuddy AI/加密货币趋势判断系统}"
+PROJECT_ROOT="$(cd "$HERE/../.." && pwd -P)"
+PROJ="${DATA_HUB_PROJECT:-$PROJECT_ROOT}"
 PIDFILE="$HERE/logs/realtime.pid"
 LOG="$HERE/logs/realtime.log"
 mkdir -p "$HERE/logs"
 
 export PYTHONDONTWRITEBYTECODE=1
 export DATA_HUB_PROJECT="$PROJ"
-# P3 切流（2026-10-13）：采集器默认写入**新热库** market_v2.sqlite3（旧库已退役）
-export MARKET_DB="${MARKET_DB:-$PROJ/data/market_v2.sqlite3}"
+if [ -f "$PROJECT_ROOT/数据/市场数据/db/market_v2.sqlite3" ]; then
+  DEFAULT_DB="$PROJECT_ROOT/数据/市场数据/db/market_v2.sqlite3"
+elif [ -f "$PROJ/data/market_v2.sqlite3" ]; then
+  DEFAULT_DB="$PROJ/data/market_v2.sqlite3"
+else
+  DEFAULT_DB="$HERE/data/market_v2.sqlite3"
+fi
+export MARKET_DB="${MARKET_DB:-$DEFAULT_DB}"
+export PYTHONPATH="$PROJECT_ROOT/框架:$HERE:$PROJECT_ROOT:${PYTHONPATH:-}"
 export NO_PROXY="${NO_PROXY:-127.0.0.1,localhost,::1}"
 export no_proxy="$NO_PROXY"
 

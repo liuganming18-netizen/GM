@@ -1,0 +1,2870 @@
+{
+  "token": "binance:BTCUSDT",
+  "prefix": "after2",
+  "errors": [],
+  "results": [
+    {
+      "label": "01_initial_1m",
+      "tf": "1m",
+      "dom": {
+        "found": true,
+        "selectedTf": "1m",
+        "viewport": "2026-10-05T04:45:15Z–2026-10-08T18:26:00Z",
+        "closedLast": "2026-10-08T18:25:00Z",
+        "forming": "2026-10-08T18:26:00Z",
+        "loaded": "60 根\n相关指标 (随当前周期展示)\n周期: 1m\n大户持仓量多空比（1h）:\n1.6588",
+        "oiTime": "10-9",
+        "oiUnitText": "9.37万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791175515,
+              "to": 1791483960
+            },
+            "logical": {
+              "from": 2.57168141592922,
+              "to": 296
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.8175675675675675,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791175515,
+              "to": 1791483960
+            },
+            "logical": {
+              "from": 2.57168141592922,
+              "to": 296
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.817567567567568,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 296,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.8175675675675675,
+          "barSpacingOi": 3.817567567567568,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1791174156,
+              "xc": -8.909,
+              "xo": -8.909,
+              "d": 0
+            },
+            {
+              "t": 1791226600,
+              "xc": 178.152,
+              "xo": 178.152,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": 365.213,
+              "xo": 365.213,
+              "d": 0
+            },
+            {
+              "t": 1791342380,
+              "xc": 552.274,
+              "xo": 552.274,
+              "d": 0
+            },
+            {
+              "t": 1791439800,
+              "xc": 739.334,
+              "xo": 739.334,
+              "d": 0
+            },
+            {
+              "t": 1791480900,
+              "xc": 926.395,
+              "xo": 926.395,
+              "d": 0
+            },
+            {
+              "t": 1791483840,
+              "xc": 1113.456,
+              "xo": 1113.456,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/01_initial_1m.png"
+    },
+    {
+      "label": "02_tf_1m",
+      "tf": "1m",
+      "dom": {
+        "found": true,
+        "selectedTf": "1m",
+        "viewport": "2026-10-08T13:29:00Z–2026-10-08T18:26:00Z",
+        "closedLast": "2026-10-08T18:25:00Z",
+        "forming": "2026-10-08T18:26:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.37万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791466140,
+              "to": 1791483960
+            },
+            "logical": {
+              "from": 415.5716814159292,
+              "to": 709
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.8175675675675675,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791466140,
+              "to": 1791483960
+            },
+            "logical": {
+              "from": 415.5716814159292,
+              "to": 709
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.817567567567568,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 709,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.8175675675675675,
+          "barSpacingOi": 3.817567567567568,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1791174156,
+              "xc": -1585.564,
+              "xo": -1585.564,
+              "d": 0
+            },
+            {
+              "t": 1791311285,
+              "xc": -1135.091,
+              "xo": -1135.091,
+              "d": 0
+            },
+            {
+              "t": 1791455340,
+              "xc": -684.618,
+              "xo": -684.618,
+              "d": 0
+            },
+            {
+              "t": 1791462420,
+              "xc": -234.145,
+              "xo": -234.145,
+              "d": 0
+            },
+            {
+              "t": 1791469560,
+              "xc": 216.328,
+              "xo": 216.328,
+              "d": 0
+            },
+            {
+              "t": 1791476820,
+              "xc": 666.801,
+              "xo": 666.801,
+              "d": 0
+            },
+            {
+              "t": 1791483900,
+              "xc": 1117.274,
+              "xo": 1117.274,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/02_tf_1m.png"
+    },
+    {
+      "label": "02_tf_5m",
+      "tf": "5m",
+      "dom": {
+        "found": true,
+        "selectedTf": "5m",
+        "viewport": "2026-10-07T19:00:00Z–2026-10-08T18:25:00Z",
+        "closedLast": "2026-10-08T18:20:00Z",
+        "forming": "2026-10-08T18:25:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.37万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791399600,
+              "to": 1791483900
+            },
+            "logical": {
+              "from": 403.50265486725664,
+              "to": 684
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.9929328621908127,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791399600,
+              "to": 1791483900
+            },
+            "logical": {
+              "from": 403.50265486725664,
+              "to": 684
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.9929328621908127,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 684,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.9929328621908127,
+          "barSpacingOi": 3.9929328621908127,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1791174156,
+              "xc": -1610.163,
+              "xo": -1610.163,
+              "d": 0
+            },
+            {
+              "t": 1791305067,
+              "xc": -1154.968,
+              "xo": -1154.968,
+              "d": 0
+            },
+            {
+              "t": 1791355200,
+              "xc": -699.774,
+              "xo": -699.774,
+              "d": 0
+            },
+            {
+              "t": 1791382200,
+              "xc": -244.58,
+              "xo": -244.58,
+              "d": 0
+            },
+            {
+              "t": 1791415500,
+              "xc": 210.615,
+              "xo": 210.615,
+              "d": 0
+            },
+            {
+              "t": 1791449700,
+              "xc": 665.809,
+              "xo": 665.809,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/02_tf_5m.png"
+    },
+    {
+      "label": "02_tf_15m",
+      "tf": "15m",
+      "dom": {
+        "found": true,
+        "selectedTf": "15m",
+        "viewport": "2026-10-06T19:26:54Z–2026-10-08T18:15:00Z",
+        "closedLast": "2026-10-08T18:00:00Z",
+        "forming": "2026-10-08T18:15:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.37万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791314814,
+              "to": 1791483300
+            },
+            "logical": {
+              "from": 434.5079646017699,
+              "to": 716
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.9788732394366195,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791314814,
+              "to": 1791483300
+            },
+            "logical": {
+              "from": 434.5079646017699,
+              "to": 716
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.9788732394366195,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 717,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.9788732394366195,
+          "barSpacingOi": 3.9788732394366195,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1791033300,
+              "xc": -1727.863,
+              "xo": -1727.863,
+              "d": 0
+            },
+            {
+              "t": 1791140400,
+              "xc": -1254.377,
+              "xo": -1254.377,
+              "d": 0
+            },
+            {
+              "t": 1791213300,
+              "xc": -780.891,
+              "xo": -780.891,
+              "d": 0
+            },
+            {
+              "t": 1791271597,
+              "xc": -307.405,
+              "xo": -307.405,
+              "d": 0
+            },
+            {
+              "t": 1791334800,
+              "xc": 166.081,
+              "xo": 166.081,
+              "d": 0
+            },
+            {
+              "t": 1791401400,
+              "xc": 639.567,
+              "xo": 639.567,
+              "d": 0
+            },
+            {
+              "t": 1791482400,
+              "xc": 1113.053,
+              "xo": 1113.053,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/02_tf_15m.png"
+    },
+    {
+      "label": "02_tf_30m",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T00:35:42Z–2026-10-08T18:00:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.36万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791246942,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 439.5345132743363,
+              "to": 726
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.9100346020761245,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791246942,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 439.5345132743363,
+              "to": 726
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.9100346020761245,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.9100346020761245,
+          "barSpacingOi": 3.9100346020761245,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -1717.64,
+              "xo": -1717.64,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1244.526,
+              "xo": -1244.526,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -771.412,
+              "xo": -771.412,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -298.298,
+              "xo": -298.298,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": 174.817,
+              "xo": 174.817,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 647.931,
+              "xo": 647.931,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1124.955,
+              "xo": 1124.955,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/02_tf_30m.png"
+    },
+    {
+      "label": "02_tf_1h",
+      "tf": "1h",
+      "dom": {
+        "found": true,
+        "selectedTf": "1h",
+        "viewport": "2026-10-05T09:35:47Z–2026-10-08T18:00:00Z",
+        "closedLast": "2026-10-08T17:00:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.36万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791192947,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 439.56637168141594,
+              "to": 732
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.830508474576271,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791192947,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 439.56637168141594,
+              "to": 732
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.830508474576271,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 734,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.830508474576271,
+          "barSpacingOi": 3.830508474576271,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1789682400,
+              "xc": -1682.847,
+              "xo": -1682.847,
+              "d": 0
+            },
+            {
+              "t": 1790121600,
+              "xc": -1215.525,
+              "xo": -1215.525,
+              "d": 0
+            },
+            {
+              "t": 1790560800,
+              "xc": -748.203,
+              "xo": -748.203,
+              "d": 0
+            },
+            {
+              "t": 1791000000,
+              "xc": -280.881,
+              "xo": -280.881,
+              "d": 0
+            },
+            {
+              "t": 1791234000,
+              "xc": 186.441,
+              "xo": 186.441,
+              "d": 0
+            },
+            {
+              "t": 1791343806,
+              "xc": 653.763,
+              "xo": 653.763,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1124.915,
+              "xo": 1124.915,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/02_tf_1h.png"
+    },
+    {
+      "label": "02_tf_4h",
+      "tf": "4h",
+      "dom": {
+        "found": true,
+        "selectedTf": "4h",
+        "viewport": "2026-09-27T08:00:00Z–2026-10-08T16:00:00Z",
+        "closedLast": "2026-10-08T12:00:00Z",
+        "forming": "2026-10-08T16:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.38万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1790496000,
+              "to": 1791475200
+            },
+            "logical": {
+              "from": 432.58761061946905,
+              "to": 729
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.779264214046823,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1790496000,
+              "to": 1791475200
+            },
+            "logical": {
+              "from": 432.58761061946905,
+              "to": 729
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.779264214046823,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 738,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.779264214046823,
+          "barSpacingOi": 3.779264214046823,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1784275200,
+              "xc": -1633.973,
+              "xo": -1633.973,
+              "d": 0
+            },
+            {
+              "t": 1786046400,
+              "xc": -1169.124,
+              "xo": -1169.124,
+              "d": 0
+            },
+            {
+              "t": 1787817600,
+              "xc": -704.274,
+              "xo": -704.274,
+              "d": 0
+            },
+            {
+              "t": 1789588800,
+              "xc": -239.425,
+              "xo": -239.425,
+              "d": 0
+            },
+            {
+              "t": 1791185794,
+              "xc": 225.425,
+              "xo": 225.425,
+              "d": 0
+            },
+            {
+              "t": 1791319304,
+              "xc": 690.274,
+              "xo": 690.274,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/02_tf_4h.png"
+    },
+    {
+      "label": "02_tf_8h",
+      "tf": "8h",
+      "dom": {
+        "found": true,
+        "selectedTf": "8h",
+        "viewport": "2026-09-16T00:00:00Z–2026-10-08T16:00:00Z",
+        "closedLast": "2026-10-08T08:00:00Z",
+        "forming": "2026-10-08T16:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.38万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1789516800,
+              "to": 1791475200
+            },
+            "logical": {
+              "from": 432.5929203539823,
+              "to": 730
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.7666666666666666,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1789516800,
+              "to": 1791475200
+            },
+            "logical": {
+              "from": 432.5929203539823,
+              "to": 730
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.766666666666667,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 739,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.7666666666666666,
+          "barSpacingOi": 3.766666666666667,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1777075200,
+              "xc": -1628.55,
+              "xo": -1628.55,
+              "d": 0
+            },
+            {
+              "t": 1780617600,
+              "xc": -1165.25,
+              "xo": -1165.25,
+              "d": 0
+            },
+            {
+              "t": 1784160000,
+              "xc": -701.95,
+              "xo": -701.95,
+              "d": 0
+            },
+            {
+              "t": 1787702400,
+              "xc": -238.65,
+              "xo": -238.65,
+              "d": 0
+            },
+            {
+              "t": 1791175515,
+              "xc": 224.65,
+              "xo": 224.65,
+              "d": 0
+            },
+            {
+              "t": 1791313645,
+              "xc": 687.95,
+              "xo": 687.95,
+              "d": 0
+            },
+            {
+              "t": 1791483600,
+              "xc": 1155.017,
+              "xo": 1155.017,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/02_tf_8h.png"
+    },
+    {
+      "label": "02_tf_12h",
+      "tf": "12h",
+      "dom": {
+        "found": true,
+        "selectedTf": "12h",
+        "viewport": "2026-08-28T12:00:00Z–2026-10-08T12:00:00Z",
+        "closedLast": "2026-10-08T00:00:00Z",
+        "forming": "2026-10-08T12:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-8",
+        "oiUnitText": "9.64万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1787918400,
+              "to": 1791460800
+            },
+            "logical": {
+              "from": 418.5929203539823,
+              "to": 716
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.7666666666666666,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1787918400,
+              "to": 1791460800
+            },
+            "logical": {
+              "from": 418.5929203539823,
+              "to": 716
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.766666666666667,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 740,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.7666666666666666,
+          "barSpacingOi": 3.766666666666667,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1769860800,
+              "xc": -1575.817,
+              "xo": -1575.817,
+              "d": 0
+            },
+            {
+              "t": 1775174400,
+              "xc": -1112.517,
+              "xo": -1112.517,
+              "d": 0
+            },
+            {
+              "t": 1780488000,
+              "xc": -649.217,
+              "xo": -649.217,
+              "d": 0
+            },
+            {
+              "t": 1785801600,
+              "xc": -185.917,
+              "xo": -185.917,
+              "d": 0
+            },
+            {
+              "t": 1791115200,
+              "xc": 277.383,
+              "xo": 277.383,
+              "d": 0
+            },
+            {
+              "t": 1791311285,
+              "xc": 740.683,
+              "xo": 740.683,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1203.983,
+              "xo": 1203.983,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/02_tf_12h.png"
+    },
+    {
+      "label": "02_tf_1d",
+      "tf": "1d",
+      "dom": {
+        "found": true,
+        "selectedTf": "1d",
+        "viewport": "2026-06-19T00:00:00Z–2026-10-08T00:00:00Z",
+        "closedLast": "2026-10-07T00:00:00Z",
+        "forming": "2026-10-08T00:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-8",
+        "oiUnitText": "9.57万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1781827200,
+              "to": 1791417600
+            },
+            "logical": {
+              "from": 389.5982300884956,
+              "to": 688
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.7541528239202657,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1781827200,
+              "to": 1791417600
+            },
+            "logical": {
+              "from": 389.5982300884956,
+              "to": 688
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.754152823920266,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 740,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.7541528239202657,
+          "barSpacingOi": 3.754152823920266,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1748217600,
+              "xc": -1461.734,
+              "xo": -1461.734,
+              "d": 0
+            },
+            {
+              "t": 1758844800,
+              "xc": -999.973,
+              "xo": -999.973,
+              "d": 0
+            },
+            {
+              "t": 1769472000,
+              "xc": -538.213,
+              "xo": -538.213,
+              "d": 0
+            },
+            {
+              "t": 1780099200,
+              "xc": -76.452,
+              "xo": -76.452,
+              "d": 0
+            },
+            {
+              "t": 1790726400,
+              "xc": 385.309,
+              "xo": 385.309,
+              "d": 0
+            },
+            {
+              "t": 1791307773,
+              "xc": 847.07,
+              "xo": 847.07,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1312.585,
+              "xo": 1312.585,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/02_tf_1d.png"
+    },
+    {
+      "label": "03_30m",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T00:52:29Z–2026-10-08T18:00:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.36万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791247949,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 440.529203539823,
+              "to": 726
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.923611111111111,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791247949,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 440.529203539823,
+              "to": 726
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.923611111111111,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.923611111111111,
+          "barSpacingOi": 3.923611111111111,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -1727.503,
+              "xo": -1727.503,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1252.747,
+              "xo": -1252.747,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -777.99,
+              "xo": -777.99,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -303.233,
+              "xo": -303.233,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": 171.524,
+              "xo": 171.524,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 646.281,
+              "xo": 646.281,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1124.962,
+              "xo": 1124.962,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/03_30m.png"
+    },
+    {
+      "label": "04_1h",
+      "tf": "1h",
+      "dom": {
+        "found": true,
+        "selectedTf": "1h",
+        "viewport": "2026-10-05T09:52:10Z–2026-10-08T18:00:00Z",
+        "closedLast": "2026-10-08T17:00:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.36万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791193930,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 440.56106194690267,
+              "to": 732
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.8435374149659864,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791193930,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 440.56106194690267,
+              "to": 732
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.8435374149659864,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 734,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.8435374149659864,
+          "barSpacingOi": 3.8435374149659864,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1789682400,
+              "xc": -1692.391,
+              "xo": -1692.391,
+              "d": 0
+            },
+            {
+              "t": 1790121600,
+              "xc": -1223.48,
+              "xo": -1223.48,
+              "d": 0
+            },
+            {
+              "t": 1790560800,
+              "xc": -754.568,
+              "xo": -754.568,
+              "d": 0
+            },
+            {
+              "t": 1791000000,
+              "xc": -285.656,
+              "xo": -285.656,
+              "d": 0
+            },
+            {
+              "t": 1791234000,
+              "xc": 183.255,
+              "xo": 183.255,
+              "d": 0
+            },
+            {
+              "t": 1791343806,
+              "xc": 652.167,
+              "xo": 652.167,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1124.922,
+              "xo": 1124.922,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/04_1h.png"
+    },
+    {
+      "label": "05_back_30m",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T00:52:29Z–2026-10-08T18:00:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.36万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791247949,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 440.529203539823,
+              "to": 726
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.923611111111111,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791247949,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 440.529203539823,
+              "to": 726
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.923611111111111,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.923611111111111,
+          "barSpacingOi": 3.923611111111111,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -1727.503,
+              "xo": -1727.503,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1252.747,
+              "xo": -1252.747,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -777.99,
+              "xo": -777.99,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -303.233,
+              "xo": -303.233,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": 171.524,
+              "xo": 171.524,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 646.281,
+              "xo": 646.281,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1124.962,
+              "xo": 1124.962,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/05_back_30m.png"
+    },
+    {
+      "label": "06_rapid_after",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T00:52:29Z–2026-10-08T18:00:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.36万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791247949,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 440.529203539823,
+              "to": 726
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.923611111111111,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791247949,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 440.529203539823,
+              "to": 726
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.923611111111111,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.923611111111111,
+          "barSpacingOi": 3.923611111111111,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -1727.503,
+              "xo": -1727.503,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1252.747,
+              "xo": -1252.747,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -777.99,
+              "xo": -777.99,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -303.233,
+              "xo": -303.233,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": 171.524,
+              "xo": 171.524,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 646.281,
+              "xo": 646.281,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1124.962,
+              "xo": 1124.962,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/06_rapid_after.png"
+    },
+    {
+      "label": "07_after_pagination_30m",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T00:52:29Z–2026-10-08T18:00:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "1,000 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.36万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791247949,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 940.529203539823,
+              "to": 1226
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.923611111111111,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791247949,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 940.529203539823,
+              "to": 1226
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.923611111111111,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.923611111111111,
+          "barSpacingOi": 3.923611111111111,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -1727.503,
+              "xo": -1727.503,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1252.747,
+              "xo": -1252.747,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -777.99,
+              "xo": -777.99,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -303.233,
+              "xo": -303.233,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": 171.524,
+              "xo": 171.524,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 646.281,
+              "xo": 646.281,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1124.962,
+              "xo": 1124.962,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/07_after_pagination_30m.png"
+    },
+    {
+      "label": "08_page_1h",
+      "tf": "1h",
+      "dom": {
+        "found": true,
+        "selectedTf": "1h",
+        "viewport": "2026-10-05T09:52:10Z–2026-10-08T18:00:00Z",
+        "closedLast": "2026-10-08T17:00:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.36万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791193930,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 440.56106194690267,
+              "to": 732
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.8435374149659864,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791193930,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 440.56106194690267,
+              "to": 732
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.8435374149659864,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 734,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.8435374149659864,
+          "barSpacingOi": 3.8435374149659864,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1789682400,
+              "xc": -1692.391,
+              "xo": -1692.391,
+              "d": 0
+            },
+            {
+              "t": 1790121600,
+              "xc": -1223.48,
+              "xo": -1223.48,
+              "d": 0
+            },
+            {
+              "t": 1790560800,
+              "xc": -754.568,
+              "xo": -754.568,
+              "d": 0
+            },
+            {
+              "t": 1791000000,
+              "xc": -285.656,
+              "xo": -285.656,
+              "d": 0
+            },
+            {
+              "t": 1791234000,
+              "xc": 183.255,
+              "xo": 183.255,
+              "d": 0
+            },
+            {
+              "t": 1791343806,
+              "xc": 652.167,
+              "xo": 652.167,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1124.922,
+              "xo": 1124.922,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/08_page_1h.png"
+    },
+    {
+      "label": "09_page_back_30m",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T00:52:29Z–2026-10-08T18:00:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "1,000 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.36万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791247949,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 940.529203539823,
+              "to": 1226
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.923611111111111,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791247949,
+              "to": 1791482400
+            },
+            "logical": {
+              "from": 940.529203539823,
+              "to": 1226
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 3.923611111111111,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 3.923611111111111,
+          "barSpacingOi": 3.923611111111111,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -1727.503,
+              "xo": -1727.503,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1252.747,
+              "xo": -1252.747,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -777.99,
+              "xo": -777.99,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -303.233,
+              "xo": -303.233,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": 171.524,
+              "xo": 171.524,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 646.281,
+              "xo": 646.281,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1124.962,
+              "xo": 1124.962,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/09_page_back_30m.png"
+    },
+    {
+      "label": "10_wheel_zoom_candle",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T03:30:00Z–2026-10-08T15:50:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "1,000 根",
+        "oiTime": "10-7",
+        "oiUnitText": "9.61万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791257400,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 954.5469032180208,
+              "to": 1213.9749
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.315972222222221,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791257400,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 954.5469032180208,
+              "to": 1213.9749
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.315972222222221,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 4.315972222222221,
+          "barSpacingOi": 4.315972222222221,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -1960.654,
+              "xo": -1960.654,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1438.421,
+              "xo": -1438.421,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -916.189,
+              "xo": -916.189,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -393.956,
+              "xo": -393.956,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": 128.277,
+              "xo": 128.277,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 650.509,
+              "xo": 650.509,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1177.058,
+              "xo": 1177.058,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/10_wheel_zoom_candle.png"
+    },
+    {
+      "label": "11_drag_candle",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T09:38:37Z–2026-10-08T18:20:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "1,000 根",
+        "oiTime": "10-7",
+        "oiUnitText": "9.60万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791279517,
+              "to": 1791483600
+            },
+            "logical": {
+              "from": 989.3015291230893,
+              "to": 1248.7295259050684
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.315972222222221,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791279517,
+              "to": 1791483600
+            },
+            "logical": {
+              "from": 989.3015291230893,
+              "to": 1248.7295259050684
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.315972222222221,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 4.315972222222221,
+          "barSpacingOi": 4.315972222222221,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -2110.654,
+              "xo": -2110.654,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1588.421,
+              "xo": -1588.421,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -1066.189,
+              "xo": -1066.189,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -543.956,
+              "xo": -543.956,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": -21.723,
+              "xo": -21.723,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 500.509,
+              "xo": 500.509,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1027.058,
+              "xo": 1027.058,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/11_drag_candle.png"
+    },
+    {
+      "label": "12_wheel_zoom_oi",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T14:00:00Z–2026-10-08T18:20:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "1,000 根",
+        "oiTime": "10-7",
+        "oiUnitText": "9.58万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791295200,
+              "to": 1791483600
+            },
+            "logical": {
+              "from": 1002.0448915578146,
+              "to": 1237.7976159050684
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.747569444444443,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791295200,
+              "to": 1791483600
+            },
+            "logical": {
+              "from": 1002.0448915578146,
+              "to": 1237.7976159050684
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.747569444444443,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 4.747569444444443,
+          "barSpacingOi": 4.747569444444443,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -2382.119,
+              "xo": -2382.119,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1807.663,
+              "xo": -1807.663,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -1233.207,
+              "xo": -1233.207,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -658.751,
+              "xo": -658.751,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": -84.296,
+              "xo": -84.296,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 490.16,
+              "xo": 490.16,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1069.364,
+              "xo": 1069.364,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/12_wheel_zoom_oi.png"
+    },
+    {
+      "label": "13_drag_oi",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T07:44:22Z–2026-10-08T15:50:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "1,000 根",
+        "oiTime": "10-7",
+        "oiUnitText": "9.58万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791272662,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 977.4007022796751,
+              "to": 1213.1534266269289
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.747569444444443,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791272662,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 977.4007022796751,
+              "to": 1213.1534266269289
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.747569444444443,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 4.747569444444443,
+          "barSpacingOi": 4.747569444444443,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -2265.119,
+              "xo": -2265.119,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1690.663,
+              "xo": -1690.663,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -1116.207,
+              "xo": -1116.207,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -541.751,
+              "xo": -541.751,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": 32.704,
+              "xo": 32.704,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 607.16,
+              "xo": 607.16,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1186.364,
+              "xo": 1186.364,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/13_drag_oi.png"
+    },
+    {
+      "label": "14_oi_unit_usd",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T08:37:08Z–2026-10-08T15:50:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "1,000 根",
+        "oiTime": "—",
+        "oiUnitText": "— USD",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791275828,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 984.9835297498719,
+              "to": 1213.1534266269289
+            },
+            "paneW": 1088,
+            "psW": 120,
+            "barSpacing": 4.747569444444443,
+            "paneWidth": 1088
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791275828,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 984.9835297498719,
+              "to": 1213.1534266269289
+            },
+            "paneW": 1088,
+            "psW": 120,
+            "barSpacing": 4.747569444444444,
+            "paneWidth": 1088
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 4.747569444444443,
+          "barSpacingOi": 4.747569444444444,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -2301.119,
+              "xo": -2301.119,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1726.663,
+              "xo": -1726.663,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -1152.207,
+              "xo": -1152.207,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -577.751,
+              "xo": -577.751,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": -3.296,
+              "xo": -3.296,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 571.16,
+              "xo": 571.16,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1150.364,
+              "xo": 1150.364,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/14_oi_unit_usd.png"
+    },
+    {
+      "label": "15_oi_unit_amount",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T08:37:08Z–2026-10-08T15:50:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "1,000 根",
+        "oiTime": "—",
+        "oiUnitText": "— 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791275828,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 984.9835297498719,
+              "to": 1213.1534266269289
+            },
+            "paneW": 1088,
+            "psW": 120,
+            "barSpacing": 4.747569444444443,
+            "paneWidth": 1088
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791275828,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 984.9835297498719,
+              "to": 1213.1534266269289
+            },
+            "paneW": 1088,
+            "psW": 120,
+            "barSpacing": 4.747569444444444,
+            "paneWidth": 1088
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 4.747569444444443,
+          "barSpacingOi": 4.747569444444444,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -2301.119,
+              "xo": -2301.119,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1726.663,
+              "xo": -1726.663,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -1152.207,
+              "xo": -1152.207,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -577.751,
+              "xo": -577.751,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": -3.296,
+              "xo": -3.296,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 571.16,
+              "xo": 571.16,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1150.364,
+              "xo": 1150.364,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/15_oi_unit_amount.png"
+    },
+    {
+      "label": "16_collapse_expand_30m",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T09:00:00Z–2026-10-08T15:50:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "1,000 根",
+        "oiTime": "10-7",
+        "oiUnitText": "9.69万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 427,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 722,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791277200,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 985.2265486725664,
+              "to": 1214
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.891774891774892,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791277200,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 985.2265486725664,
+              "to": 1214
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.891774891774893,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 4.891774891774892,
+          "barSpacingOi": 4.891774891774893,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -2372.173,
+              "xo": -2372.173,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1780.268,
+              "xo": -1780.268,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -1188.364,
+              "xo": -1188.364,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -596.459,
+              "xo": -596.459,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": -4.554,
+              "xo": -4.554,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 587.351,
+              "xo": 587.351,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1184.147,
+              "xo": 1184.147,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/16_collapse_expand_30m.png"
+    },
+    {
+      "label": "17_after_reload",
+      "tf": "30m",
+      "dom": {
+        "found": true,
+        "selectedTf": "30m",
+        "viewport": "2026-10-06T08:37:08Z–2026-10-08T15:50:00Z",
+        "closedLast": "2026-10-08T17:30:00Z",
+        "forming": "2026-10-08T18:00:00Z",
+        "loaded": "500 根",
+        "oiTime": "10-9",
+        "oiUnitText": "9.36万 单位待核验",
+        "candleRect": {
+          "left": 443,
+          "top": 448,
+          "w": 1208,
+          "h": 206
+        },
+        "oiRect": {
+          "left": 443,
+          "top": 742,
+          "w": 1208,
+          "h": 110
+        }
+      },
+      "measure": {
+        "rows": [
+          {
+            "label": "lightweight-candles",
+            "range": {
+              "from": 1791275828,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 484,
+              "to": 714
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.865800865800866,
+            "paneWidth": 1124
+          },
+          {
+            "label": "lightweight-oi",
+            "range": {
+              "from": 1791275828,
+              "to": 1791474600
+            },
+            "logical": {
+              "from": 484,
+              "to": 714
+            },
+            "paneW": 1124,
+            "psW": 84,
+            "barSpacing": 4.865800865800866,
+            "paneWidth": 1124
+          }
+        ],
+        "align": {
+          "n": 728,
+          "rangeEqual": true,
+          "logicalEqual": true,
+          "barSpacingCandle": 4.865800865800866,
+          "barSpacingOi": 4.865800865800866,
+          "maxAbsDiff": 0,
+          "meanAbsDiff": 0,
+          "over1px": 0,
+          "samples": [
+            {
+              "t": 1790582400,
+              "xc": -2353.615,
+              "xo": -2353.615,
+              "d": 0
+            },
+            {
+              "t": 1790800200,
+              "xc": -1764.853,
+              "xo": -1764.853,
+              "d": 0
+            },
+            {
+              "t": 1791018000,
+              "xc": -1176.091,
+              "xo": -1176.091,
+              "d": 0
+            },
+            {
+              "t": 1791195931,
+              "xc": -587.329,
+              "xo": -587.329,
+              "d": 0
+            },
+            {
+              "t": 1791275828,
+              "xc": 1.433,
+              "xo": 1.433,
+              "d": 0
+            },
+            {
+              "t": 1791368805,
+              "xc": 590.195,
+              "xo": 590.195,
+              "d": 0
+            },
+            {
+              "t": 1791482700,
+              "xc": 1183.823,
+              "xo": 1183.823,
+              "d": 0
+            }
+          ]
+        }
+      },
+      "shot": "/tmp/oi_fix/shots_after2/17_after_reload.png"
+    }
+  ]
+}

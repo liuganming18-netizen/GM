@@ -1,0 +1,171 @@
+diff --git "a/\346\241\206\346\236\266/backend/paper_engine.py" "b/\346\241\206\346\236\266/backend/paper_engine.py"
+index add84a09..71cafa08 100644
+--- "a/\346\241\206\346\236\266/backend/paper_engine.py"
++++ "b/\346\241\206\346\236\266/backend/paper_engine.py"
+@@ -34,6 +34,7 @@
+ from __future__ import annotations
+ 
+ import datetime as dt
++import hashlib
+ import json
+ import sqlite3
+ from pathlib import Path
+@@ -92,6 +93,43 @@ MAX_FILL_LAG_MS = 3600_000
+ MARKET_SOURCE = "binance.um.candles_15m.is_closed.open"
+ FUNDING_SOURCE = "funding_history.settled"
+ 
++# ── 服务端新开仓总闸（2026-10-15 闭环整改·阶段A）────────────────────────────────
++# 合同 A 要求：对「尚未通过闭环验收的模拟盘」设置**可回滚**的新开仓阻断，且
++# **自动（worker）/手工（POST /api/v1/paper/orders）/挂单推进（advance_pending）**
++# 三条路径必须一致；**不得**把「仅禁用 UI 按钮」当服务端门禁。
++#
++# 设计原则：
++#   · **fail-closed**：控制文件缺失 / 不可读 / 未显式放行 ⇒ **一律拒绝新开仓**；
++#     仅当文件显式 `{"allow_new_entries": true}` 才放行（供 Codex 运行验收后受控启用）。
++#   · **每次调用实时读盘** ⇒ 无需重启进程即可生效 / 回滚（可回滚即改回 false）。
++#   · **作用域仅限「新开仓」**：退出（close_*）、费用、资金费（accrue_funding）、
++#     健康采集与只读 API **不经过** `open_position`，因此**不受本闸影响**。
++#   · 被拦下的信号写 `paper_order(status='rejected')` + `paper_blocked`（幂等、可审计），
++#     **不写** `paper_processed` ⇒ 属**可重试**拒单，不会把信号静默丢弃或补开。
++GATE_FILE = Path(__file__).resolve().parent / "live" / "paper_new_entry_gate.json"
++GATE_REASON = "new_entry_blocked_pending_closure_review"
++
++
++def new_entry_gate() -> dict:
++    """读取服务端新开仓总闸（实时读盘；fail-closed）。"""
++    raw = None
++    try:
++        raw = json.loads(GATE_FILE.read_text(encoding="utf-8"))
++    except Exception:                                    # noqa: BLE001
++        raw = None
++    ok = isinstance(raw, dict)
++    allow = bool(ok and raw.get("allow_new_entries") is True)
++    return {
++        "allow_new_entries": allow,
++        "gate_reason": GATE_REASON,
++        "reason": (raw.get("reason") if ok else "gate_file_missing_or_unreadable"),
++        "gate_file": str(GATE_FILE),
++        "gate_scope": "server_side_new_entry_only",
++        "exits_fees_funding_health_unaffected": True,
++        "set_by": (raw.get("set_by") if ok else None),
++        "since_ms": (raw.get("since_ms") if ok else None),
++    }
++
+ # 已批准参数视图（**只读引用**，运行期读取）
+ EFFECTIVE_VIEW = Path(
+     "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/"
+@@ -99,46 +137,70 @@ EFFECTIVE_VIEW = Path(
+     "10_研究参数生效视图_v2_2_user5000_shared.json")
+ 
+ # 兜底（仅当视图文件不可读时使用；并在返回值里显式标注 source=fallback）
++# **2026-10-15 闭环整改·阶段A**：兜底值**改为冻结视图 v2.2 的保守真值**，
++# 不再沿用此前那份「更宽松」的兜底（risk 1%、20 仓、单名 15%、总敞口 90%、
++# 现金 10%、组合 5%、short_enabled=True、2×ATR、参与率 2%、delay 0）。
++# 依据：`10_研究参数生效视图_v2_2_user5000_shared.json`（spec
++# `F_WX_v2.2_project_closure_user_5000_shared`）。**视图不可读时按冻结规则 fail-safe**。
+ FALLBACK = {
+     "fee_each_side": 0.0005, "slippage_each_side": 0.0005,
+-    "signal_execution_delay_minutes": 0, "signal_exit_delay_minutes": 0,
++    "signal_execution_delay_minutes": 15, "signal_exit_delay_minutes": 15,
+     "detail_timeframe": "15m",
+-    "initial_equity_USDT": 5000.0, "risk_per_trade_equity_fraction": 0.01,
+-    "leverage": 1, "max_positions": 20, "single_name_notional_equity_cap": 0.15,
+-    "gross_long_notional_equity_cap": 0.9, "cash_or_free_margin_reserve_fraction": 0.1,
+-    "portfolio_initial_stop_risk_cap": 0.05, "maximum_account_drawdown_fraction": 0.2,
+-    "short_enabled": True, "max_holding_hours": 720,
+-    "uniform_stop_atr_mult": 2.0,
++    "initial_equity_USDT": 5000.0, "risk_per_trade_equity_fraction": 0.005,
++    "leverage": 1, "max_positions": 10, "single_name_notional_equity_cap": 0.1,
++    "gross_long_notional_equity_cap": 0.8, "cash_or_free_margin_reserve_fraction": 0.2,
++    "portfolio_initial_stop_risk_cap": 0.03, "maximum_account_drawdown_fraction": 0.2,
++    "short_enabled": False, "max_holding_hours": 720,
++    "uniform_stop_atr_mult": 3.0,
+     # 已批准参与率上限（**上一根** 15m quote 的 1%）。视图键名逐字：
+-    # `risk.entry_participation_previous_15m_quote_cap`。缺失 ⇒ 保留此兜底值并标注 fallback。
+-    "entry_participation_previous_15m_quote_cap": 0.02,
++    # `risk.entry_participation_previous_15m_quote_cap`。缺失 ⇒ 保留此冻结值并标注 fallback。
++    "entry_participation_previous_15m_quote_cap": 0.01,
+ }
+ 
+ 
+ def approved_params() -> dict:
+-    """只读引用已批准参数（不复制到库、不改字节）。返回扁平 dict + source 标注。"""
++    """只读引用已批准参数（不复制到库、不改字节）。返回扁平 dict + source 标注。
++
++    **2026-10-15 闭环整改·阶段A（无授权 AI 覆盖已删除）**：本函数此前在读取视图后
++    **强行覆盖**了四处参数（`uniform_stop_atr_mult=2.0` / `signal_execution_delay_minutes=0`
++    / `short_enabled=True` / `max_positions=20`），注释自称「优化」。经核对：
++      · 冻结视图 `10_研究参数生效视图_v2_2_user5000_shared.json` 明列
++        `execution.signal_execution_delay_minutes=15`、`risk.short_enabled=false`、
++        `risk.max_positions=10`、`stops.uniform=actual_entry_minus_3_signal_ATR_fixed`（=3×ATR）；
++      · 视图 `user_actual_risk_per_trade_approval=false`、`user_actual_leverage_cap_approval=false`、
++        `live_trading_authorized=false`；人类授权原文见
++        `evidence/Work_闭环整改_2026-10-15/01_授权来源核对.md`（**无**更新授权可覆盖上述四项）。
++    ⇒ 删除四处覆盖，**逐字按冻结视图执行**；同时补齐此前**漏读**的
++    `signal_exit_delay_minutes` / `max_positions` / 单名·总敞口·现金·组合风险·单笔风险·
++    参与率 / `short_enabled` 等冻结键。返回 `view_sha256` 供逐笔核对绑定。
++    """
+     p = dict(FALLBACK)
+-    src = "fallback_hardcoded"
++    src = "fallback_frozen_v2_2_conservative"
+     try:
+         view = json.loads(EFFECTIVE_VIEW.read_text(encoding="utf-8"))
+         ex = view.get("execution") or {}
+         rk = view.get("risk") or {}
+         st = view.get("stops") or {}
+-        for k in ("fee_each_side", "slippage_each_side", "detail_timeframe"):
++        for k in ("fee_each_side", "slippage_each_side", "detail_timeframe",
++                  "signal_execution_delay_minutes", "signal_exit_delay_minutes"):
+             if k in ex:
+                 p[k] = ex[k]
+-        for k in ("initial_equity_USDT", "leverage", "cash_or_free_margin_reserve_fraction",
+-                  "maximum_account_drawdown_fraction"):
++        for k in ("initial_equity_USDT", "leverage", "max_positions",
++                  "single_name_notional_equity_cap", "gross_long_notional_equity_cap",
++                  "cash_or_free_margin_reserve_fraction", "portfolio_initial_stop_risk_cap",
++                  "risk_per_trade_equity_fraction",
++                  "entry_participation_previous_15m_quote_cap",
++                  "maximum_account_drawdown_fraction", "short_enabled"):
+             if k in rk:
+                 p[k] = rk[k]
+         if "max_holding_hours" in st:
+             p["max_holding_hours"] = st["max_holding_hours"]
+-        p["uniform_stop_atr_mult"] = 2.0            # 优化为 2×ATR，止损紧凑、防止利润大回吐
+-        p["signal_execution_delay_minutes"] = 0     # 优化为即时可用撮合
+-        p["short_enabled"] = True                   # 启用多空双向支持
+-        p["max_positions"] = 20                     # 扩充单臂持仓上限
++        # 固定止损倍数：冻结 `stops.uniform` = `actual_entry_minus_3_signal_ATR_fixed`
++        # ⇒ 3×信号 ATR（原实现被无授权「优化」成 2×，本阶段还原）。
++        p["uniform_stop_atr_mult"] = 3.0
+         p["view_spec_version"] = view.get("spec_version")
+-        src = "optimized_v3_user5000_shared"
++        p["view_sha256"] = hashlib.sha256(EFFECTIVE_VIEW.read_bytes()).hexdigest()
++        src = "frozen_view_v2_2_user5000_shared"
+     except Exception:                                # noqa: BLE001
+         pass
+     p["_source"] = src
+@@ -573,6 +635,24 @@ def open_position(arm: str, symbol: str, *, signal_uid=None, direction="long",
+         return _reject(arm, symbol, signal_uid, f"invalid_direction_{direction}")
+     if direction == "short" and not params.get("short_enabled", False):
+         return _reject(arm, symbol, signal_uid, "short_disabled_by_approved_view_only_long")
++    # ── 服务端新开仓总闸（阶段A·fail-closed）────────────────────────────────────
++    # 覆盖自动 / 手工 / 挂单推进三条路径（它们**都**经由本函数）。
++    # 退出、费用、资金费、健康采集与只读 API 不经过此处 ⇒ 不受影响。
++    _gate = new_entry_gate()
++    if not _gate["allow_new_entries"]:
++        if pending_id is not None:
++            _con_g = L.paper_conn(arm)
++            try:
++                _resolve_pending(_con_g, int(pending_id), "rejected", GATE_REASON,
++                                 T=int(now_ms or L.now_ms()))
++            finally:
++                _con_g.close()
++        r = _reject(arm, symbol, signal_uid, GATE_REASON)
++        r.update({"gate": _gate,
++                  "note": "该模拟盘尚未通过闭环验收 ⇒ 服务端拒绝一切新开仓"
++                          "（自动/手工/挂单三路一致）。退出、费用、资金费与健康采集不受影响；"
++                          "本闸为可回滚控制文件，验收通过后由受控启用时刻放行，绝不补开历史信号。"})
++        return r
+     con = L.paper_conn(arm)
+     try:
+         con_mkt = L.market_conn()

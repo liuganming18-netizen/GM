@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+from pathlib import Path
 
 import live_store as L
 import paper_engine as PE
@@ -313,6 +314,60 @@ def live_signals(params) -> dict:
 
 
 # ── 模拟盘 ───────────────────────────────────────────────────────────────────
+# ── 旧版/未验收/规则违规 标记（2026-10-15 闭环整改·阶段A）────────────────────────
+# 合同 A：**保留**全部历史信号/订单/成交/持仓/现金原始记录，用**追加审计**标注违规，
+# 页面明确「旧版/未验收/规则违规」，并**排除**正式策略表现；不删历史、不改时间价格、
+# 不抹费用、不重画曲线。审计清单由只读脚本产出（**不写原账本**）：
+#   evidence/Work_闭环整改_2026-10-15/tools/audit_legacy_ledger.py
+LEGACY_AUDIT_JSON = Path(
+    "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_闭环整改_2026-10-15/"
+    "old_ledger_violation_audit.json")
+LEGACY_AUDIT_SIDE_DB = Path(__file__).resolve().parent / "live" / "paper_legacy_audit.sqlite3"
+_LEGACY_CACHE: dict = {"mtime": None, "index": {}}
+
+
+def _legacy_index() -> dict:
+    """(arm, position_id) → {violations, verification_status, label}（只读、按 mtime 缓存）。"""
+    try:
+        mt = LEGACY_AUDIT_JSON.stat().st_mtime
+    except OSError:
+        return {}
+    if _LEGACY_CACHE["mtime"] == mt:
+        return _LEGACY_CACHE["index"]
+    idx = {}
+    try:
+        doc = json.loads(LEGACY_AUDIT_JSON.read_text(encoding="utf-8"))
+        for r in (doc.get("positions") or {}).get("rows") or []:
+            idx[(r.get("arm"), int(r.get("position_id")))] = {
+                "violations": r.get("violations") or [],
+                "verification_status": r.get("verification_status"),
+                "label": r.get("label"),
+                "delay_ms": r.get("delay_ms"),
+            }
+    except Exception:                                    # noqa: BLE001
+        idx = {}
+    _LEGACY_CACHE["mtime"] = mt
+    _LEGACY_CACHE["index"] = idx
+    return idx
+
+
+def legacy_audit() -> dict:
+    """**只读**旧版/未验收/规则违规审计清单（原账本未被修改）。"""
+    try:
+        doc = json.loads(LEGACY_AUDIT_JSON.read_text(encoding="utf-8"))
+    except Exception as exc:                             # noqa: BLE001
+        return envelope(missing_reason=f"审计清单尚未生成或不可读：{type(exc).__name__}",
+                        quality={"status": "not_connected", "age_seconds": None,
+                                 "note": "运行只读审计脚本生成；不影响任何账本"})
+    return envelope(items=[doc], total=1, mode="paper_read_only",
+                    quality={"status": "ok", "age_seconds": None,
+                             "note": "只读审计：原始账本与信号**未被修改**；"
+                                     "违规记录标注为 旧版/未验收/规则违规，"
+                                     "并排除正式策略表现。",
+                             "audit_json": str(LEGACY_AUDIT_JSON),
+                             "side_table": str(LEGACY_AUDIT_SIDE_DB)})
+
+
 def paper_accounts() -> dict:
     snap = PE.snapshot_all()
     items = list(snap.values())
@@ -346,6 +401,14 @@ def paper_accounts() -> dict:
                              "n_pending_orders": sum(int(s.get("n_pending") or 0)
                                                      for s in snap.values()),
                              "fill_policy": PE.FILL_POLICY,
+                             "new_entry_gate": PE.new_entry_gate(),
+                             "legacy_ledger": {
+                                 "preserved": True,
+                                 "verification_status": "legacy_unverified",
+                                 "label": "旧版/未验收/规则违规",
+                                 "excluded_from_official_strategy_performance": True,
+                                 "audit": str(LEGACY_AUDIT_JSON),
+                             },
                              "note": "服务端纸面账本（四臂各 5000U 初始）；成交模型见 "
                                      "model_version。成交时钟：**第一根 `open_time >= "
                                      "max(信号确认时刻,信号可用时刻,真实请求时刻)+15m` 的已闭合 "
@@ -353,17 +416,28 @@ def paper_accounts() -> dict:
                                      "进程时钟推进；错过成交时刻 ⇒ 拒单，**不用旧价回填**。"
                                      "资金费按 `funding_history` **真实结算事件逐笔记账**"
                                      "（事件经过时即更新账户/权益；不固定 8h、不补 0、不倒填）。"
-                                     "**自动开仓只对确认时刻不早于实时起点的信号**："
-                                     f"起点前有 {n_pre} 条窗口内历史实时信号（真实事件，"
-                                     "照常展示）**不自动开仓**；页面手工开/平仓不受影响"})
+                                     "**当前新开仓已被服务端总闸阻断**（见 `new_entry_gate`；"
+                                     "退出/费用/资金费/健康采集不受影响）；既有持仓为"
+                                     "**旧版/未验收**，已排除正式策略表现。"})
 
 
 def paper_positions() -> dict:
+    idx = _legacy_index()
     out = []
     for arm, s in PE.snapshot_all().items():
         for p in s["positions"]:
-            out.append({"arm": arm, "account_id": s["account_id"], **p})
-    return envelope(items=out, total=len(out), mode="paper")
+            row = {"arm": arm, "account_id": s["account_id"], **p}
+            lg = idx.get((arm, int(p.get("position_id") or -1)))
+            row["verification_status"] = (lg or {}).get("verification_status") or "legacy_unverified"
+            row["label"] = (lg or {}).get("label") or "旧版/未验收"
+            row["violations"] = (lg or {}).get("violations") or []
+            row["excluded_from_official_strategy_performance"] = True
+            out.append(row)
+    return envelope(items=out, total=len(out), mode="paper",
+                    quality={"status": "ok", "age_seconds": None,
+                             "note": "旧版/未验收持仓：原账本**未修改**，按追加审计标注"
+                                     "（verification_status/label/violations），"
+                                     "并排除正式策略表现。"})
 
 
 def paper_orders(params=None) -> dict:

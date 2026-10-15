@@ -1,0 +1,299 @@
+{
+  "cdpUrl": "ws://127.0.0.1:56404/devtools/browser/7db3f6fa-d569-45c1-b577-842b938f7961",
+  "startedAt": "2026-10-07T13:10:04.700Z",
+  "steps": {
+    "coldStart": {
+      "reloadAt": "2026-10-07T13:10:05.249Z",
+      "firstRowMs": 953,
+      "fullPoolMs": 953,
+      "stableMs": 3455,
+      "finalRowCount": 549,
+      "note": "Vite dev(HMR) 服务；首次编译已缓存，数值为运行时渲染耗时"
+    },
+    "domBaseline": {
+      "totalElements": 22761,
+      "rows": 549,
+      "tbodyRows": 550,
+      "svg": 1135,
+      "polyline": 4,
+      "path": 631,
+      "circle": 13,
+      "line": 68,
+      "rect": 127,
+      "canvas": 0,
+      "buttons": 569,
+      "expandedCharts": 1,
+      "oiCharts": 1,
+      "visibleRows": 1
+    },
+    "domBaselineScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/改前-全列表-1280x577.png",
+    "search": [
+      {
+        "input": "B",
+        "countChangedMs": 86.5,
+        "paintedMs": 99.2,
+        "countText": "共 65 个标的",
+        "rowsAfter": 65
+      },
+      {
+        "input": "BT",
+        "countChangedMs": 19.2,
+        "paintedMs": 27.9,
+        "countText": "共 6 个标的",
+        "rowsAfter": 6
+      },
+      {
+        "input": "BTC",
+        "countChangedMs": 13.4,
+        "paintedMs": 17.6,
+        "countText": "共 2 个标的",
+        "rowsAfter": 2
+      },
+      {
+        "input": "",
+        "countChangedMs": 128.8,
+        "paintedMs": 362.8,
+        "countText": "共 549 个标的",
+        "rowsAfter": 549
+      }
+    ],
+    "expand": {
+      "tokenId": "binance:0GUSDT",
+      "ok": true,
+      "svgAppearedMs": 71.8,
+      "paintedMs": 161.2,
+      "domAfter": {
+        "totalElements": 22416,
+        "rows": 549,
+        "tbodyRows": 550,
+        "svg": 1135,
+        "polyline": 4,
+        "path": 631,
+        "circle": 11,
+        "line": 7,
+        "rect": 5,
+        "canvas": 0,
+        "buttons": 569,
+        "expandedCharts": 1,
+        "oiCharts": 1,
+        "visibleRows": 1
+      }
+    },
+    "expandScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/改前-展开0G-1280x577.png",
+    "collapse": {
+      "tokenId": "binance:0GUSDT",
+      "ok": true,
+      "svgAppearedMs": 0.2,
+      "paintedMs": 166.8,
+      "domAfter": {
+        "totalElements": 22257,
+        "rows": 549,
+        "tbodyRows": 549,
+        "svg": 1128,
+        "polyline": 4,
+        "path": 615,
+        "circle": 8,
+        "line": 1,
+        "rect": 5,
+        "canvas": 0,
+        "buttons": 558,
+        "expandedCharts": 0,
+        "oiCharts": 0,
+        "visibleRows": 1
+      }
+    },
+    "scroll": {
+      "frameCount": 223,
+      "avgMs": 27,
+      "p95Ms": 75.4,
+      "maxMs": 800.5,
+      "droppedOver50ms": 23,
+      "scrollRange": {
+        "max": 155528,
+        "reached": 0
+      },
+      "domAfterScroll": {
+        "totalElements": 22277,
+        "rows": 549,
+        "tbodyRows": 549,
+        "svg": 1128,
+        "polyline": 24,
+        "path": 615,
+        "circle": 8,
+        "line": 1,
+        "rect": 5,
+        "canvas": 0,
+        "buttons": 558,
+        "expandedCharts": 0,
+        "oiCharts": 0,
+        "visibleRows": 1
+      }
+    },
+    "scrollScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/改前-滚动到底-1280x577.png",
+    "refreshCost": {
+      "profileSeconds": 12,
+      "samplingIntervalUs": 200,
+      "totalSamples": 42134,
+      "topFunctions": [
+        {
+          "fn": "(idle) @ ?:0",
+          "hits": 30025,
+          "pct": 71.26
+        },
+        {
+          "fn": "(program) @ ?:0",
+          "hits": 8766,
+          "pct": 20.81
+        },
+        {
+          "fn": "exports.jsxDEV @ react_jsx-dev-runtime.js?v=e20618cb:192",
+          "hits": 938,
+          "pct": 2.23
+        },
+        {
+          "fn": "ReactElement @ react_jsx-dev-runtime.js?v=e20618cb:105",
+          "hits": 313,
+          "pct": 0.74
+        },
+        {
+          "fn": "fmtPrice @ TokenTable.tsx?t=1791377527335:33",
+          "hits": 229,
+          "pct": 0.54
+        },
+        {
+          "fn": "run @ ?:0",
+          "hits": 209,
+          "pct": 0.5
+        },
+        {
+          "fn": "now @ ?:0",
+          "hits": 153,
+          "pct": 0.36
+        },
+        {
+          "fn": "(anonymous) @ TokenTable.tsx?t=1791377527335:379",
+          "hits": 113,
+          "pct": 0.27
+        },
+        {
+          "fn": "validateProperty @ react-dom_client.js?v=e20618cb:1974",
+          "hits": 113,
+          "pct": 0.27
+        },
+        {
+          "fn": "runWithFiberInDEV @ react-dom_client.js?v=e20618cb:940",
+          "hits": 106,
+          "pct": 0.25
+        },
+        {
+          "fn": "updateProperties @ react-dom_client.js?v=e20618cb:10695",
+          "hits": 99,
+          "pct": 0.23
+        },
+        {
+          "fn": "(garbage collector) @ ?:0",
+          "hits": 88,
+          "pct": 0.21
+        },
+        {
+          "fn": "updatedAncestorInfoDev @ react-dom_client.js?v=e20618cb:1744",
+          "hits": 77,
+          "pct": 0.18
+        },
+        {
+          "fn": "commitUpdate @ react-dom_client.js?v=e20618cb:11377",
+          "hits": 59,
+          "pct": 0.14
+        },
+        {
+          "fn": "validateProperty$1 @ react-dom_client.js?v=e20618cb:1950",
+          "hits": 49,
+          "pct": 0.12
+        },
+        {
+          "fn": "reconcileChildrenArray @ react-dom_client.js?v=e20618cb:3899",
+          "hits": 47,
+          "pct": 0.11
+        },
+        {
+          "fn": "warnUnknownProperties @ react-dom_client.js?v=e20618cb:2094",
+          "hits": 47,
+          "pct": 0.11
+        },
+        {
+          "fn": "jsxDEVImpl @ react_jsx-dev-runtime.js?v=e20618cb:149",
+          "hits": 40,
+          "pct": 0.09
+        }
+      ],
+      "longtasks": [
+        {
+          "start": 12037,
+          "dur": 205
+        },
+        {
+          "start": 12293,
+          "dur": 74
+        },
+        {
+          "start": 12459,
+          "dur": 53
+        },
+        {
+          "start": 12513,
+          "dur": 60
+        },
+        {
+          "start": 13696,
+          "dur": 174
+        },
+        {
+          "start": 15601,
+          "dur": 191
+        },
+        {
+          "start": 15846,
+          "dur": 77
+        },
+        {
+          "start": 15934,
+          "dur": 66
+        },
+        {
+          "start": 16336,
+          "dur": 59
+        },
+        {
+          "start": 20597,
+          "dur": 162
+        },
+        {
+          "start": 20773,
+          "dur": 57
+        },
+        {
+          "start": 20873,
+          "dur": 59
+        },
+        {
+          "start": 21263,
+          "dur": 50
+        }
+      ],
+      "longtaskUnsupported": false,
+      "mutations": {
+        "attr": 172,
+        "child": 4,
+        "character": 2164
+      },
+      "longtaskSummary": {
+        "count": 13,
+        "totalBlockingMs": 1287,
+        "maxMs": 205
+      }
+    },
+    "refreshScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/改前-刷新窗口-1280x577.png"
+  },
+  "endedAt": "2026-10-07T13:10:28.930Z",
+  "screenshotNote": "本文件是**真实改前**测量（代码未改动时采集，startedAt=2026-10-07T13:10:04.700Z）。其 screenshot 字段指向的 改前-*.png 由**复现运行**（性能基线-复现全量渲染-2026-10-07.json，临时把渲染窗口开到全池以复现“全量渲染”）生成——原因是探针早期版本让改后运行复用了同名截图并覆盖了原图；探针已修复为按 LABEL+视口命名。本文件的**数值**是原始采集值，未经修改。"
+}

@@ -45,11 +45,11 @@ from urllib.parse import quote as _urlquote
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-PROJECT = os.environ.get("DATA_HUB_PROJECT",
-                         "/Users/boos/WorkBuddy AI/加密货币趋势判断系统")
+PROJECT = os.environ.get("DATA_HUB_PROJECT", str(HERE.parent.parent))
 # P3 切流（2026-10-13）：默认写库 = 新热库 market_v2.sqlite3（旧 market.sqlite3 已退役）
-DB = os.environ.get("MARKET_DB", PROJECT + "/data/market_v2.sqlite3")
-POOL_DIR = HERE / "历史下载" / "标的池"
+DEFAULT_MARKET_DB = str(HERE.parent.parent / "数据" / "市场数据" / "db" / "market_v2.sqlite3")
+DB = os.environ.get("MARKET_DB", DEFAULT_MARKET_DB if Path(DEFAULT_MARKET_DB).exists() else PROJECT + "/data/market_v2.sqlite3")
+POOL_DIR = HERE / "历史下载" / "标的池" if (HERE / "历史下载" / "标的池").exists() else HERE.parent.parent / "数据" / "contracts" / "旧标的池"
 LOGS = HERE / "logs"
 LOGS.mkdir(parents=True, exist_ok=True)
 # 进程内控制入口：写入该文件即让**运行中的生产采集进程**对真实 WS 连接做一次强制

@@ -1,0 +1,206 @@
+{
+ "startedAt": "2026-10-07T15:49:52.388Z",
+ "emulatedViewport": "1800x1180",
+ "label": "余项验收修正",
+ "sections": {
+  "readiness": {
+   "scrollerFound": true
+  },
+  "poolAndUi": {
+   "headerColumnCount": 10,
+   "headerColumns": [
+    "",
+    "1.代币(简称)",
+    "2.流动市值",
+    "3.24h成交量",
+    "4.聪明钱多头",
+    "5.聪明钱空头",
+    "6.总OI持仓",
+    "7.资金费率(8h)",
+    "8.近24h小时图",
+    "展开详情"
+   ],
+   "hasSmartMoneyLong": true,
+   "hasOiColumn": true,
+   "hasSparkline": 5,
+   "tabCount": 4,
+   "poolSizeFromSearch": {
+    "filtered": 549,
+    "total": 549
+   }
+  },
+  "scrollBottomAndBack": {
+   "before": {
+    "clientH": 945,
+    "scrollH": 46825,
+    "scrollTop": 0
+   },
+   "atBottom": {
+    "clientH": 945,
+    "scrollH": 46825,
+    "scrollTop": 45880
+   },
+   "reachedBottom": true,
+   "bottomLastRowId": "okx:XDP-USDT-SWAP",
+   "afterBackToTop": {
+    "clientH": 945,
+    "scrollH": 46825,
+    "scrollTop": 0
+   },
+   "returnedToTop": true,
+   "topFirstRowId": "binance:0GUSDT",
+   "scrollHeightConsistent": true,
+   "screenshot": "docs/验收截图/余项验收修正-滚动到底再返回-1800x1180.png"
+  },
+  "expandedRowHeight": {
+   "formula": "total = 行数 × 实测行高 + 展开块实测高（ResizeObserver 量测）；同时只允许一个展开项",
+   "preExistingExpandedBlockMounted": false,
+   "warmup": {
+    "note": "预热：展开→收起第一行，用于清掉 App 启动时对 BTC 的默认展开（其块在窗口外未挂载，但高度计入 total）",
+    "before": 46825,
+    "expanded": 47230,
+    "collapsed": 46178,
+    "deltaCollapsedBack": -647
+   },
+   "targetId": "binance:0GUSDT",
+   "scrollHeightBefore": 46178,
+   "scrollHeightExpanded": 47230,
+   "scrollHeightCollapsed": 46178,
+   "deltaExpanded": 1052,
+   "deltaCollapsedBack": 0,
+   "expandedChartMounted": true,
+   "heightChangedOnExpand": true,
+   "heightRestoredOnCollapse": true,
+   "restoreResidualRatioOfExpandedBlock": 0,
+   "screenshot": "docs/验收截图/余项验收修正-展开行高度-1800x1180.png"
+  },
+  "search": [
+   {
+    "query": "B",
+    "renderedRows": 22,
+    "poolMatched": 65,
+    "elapsedMs": 571
+   },
+   {
+    "query": "BT",
+    "renderedRows": 6,
+    "poolMatched": 6,
+    "elapsedMs": 490
+   },
+   {
+    "query": "BTC",
+    "renderedRows": 2,
+    "poolMatched": 2,
+    "elapsedMs": 435
+   },
+   {
+    "query": "",
+    "renderedRows": 19,
+    "poolMatched": 549,
+    "elapsedMs": 473
+   }
+  ],
+  "klineZoomPan": {
+   "viewBeforeZoom": {
+    "raw": "视窗 2026-10-07T15:07:46.190Z–2026-10-07T15:50:00Z",
+    "startIso": "2026-10-07T15:07:46.190Z",
+    "endIso": "2026-10-07T15:50:00Z",
+    "startMs": 1791385666190,
+    "endMs": 1791388200000,
+    "spanMs": 2533810,
+    "spanDays": 0.0293
+   },
+   "viewAfterZoomIn": {
+    "raw": "视窗 2026-10-07T15:14:43.437Z–2026-10-07T15:43:01.901Z",
+    "startIso": "2026-10-07T15:14:43.437Z",
+    "endIso": "2026-10-07T15:43:01.901Z",
+    "startMs": 1791386083437,
+    "endMs": 1791387781901,
+    "spanMs": 1698464,
+    "spanDays": 0.0197
+   },
+   "viewAfterZoomOut": {
+    "raw": "视窗 2026-10-07T15:07:46.190Z–2026-10-07T15:50:00Z",
+    "startIso": "2026-10-07T15:07:46.190Z",
+    "endIso": "2026-10-07T15:50:00Z",
+    "startMs": 1791385666190,
+    "endMs": 1791388200000,
+    "spanMs": 2533810,
+    "spanDays": 0.0293
+   },
+   "parseOk": true,
+   "spanMsBefore": 2533810,
+   "spanMsAfterZoomIn": 1698464,
+   "spanMsAfterZoomOut": 2533810,
+   "spanDaysBefore": 0.0293,
+   "spanDaysAfterZoomIn": 0.0197,
+   "spanDaysAfterZoomOut": 0.0293,
+   "zoomInShrankSpan": true,
+   "zoomReversible": true,
+   "panTestedWhileZoomedIn": true,
+   "viewBeforeDrag": {
+    "raw": "视窗 2026-10-07T15:14:43.437Z–2026-10-07T15:43:01.901Z",
+    "startIso": "2026-10-07T15:14:43.437Z",
+    "endIso": "2026-10-07T15:43:01.901Z",
+    "startMs": 1791386083437,
+    "endMs": 1791387781901,
+    "spanMs": 1698464,
+    "spanDays": 0.0197
+   },
+   "viewAfterDrag": {
+    "raw": "视窗 2026-10-07T15:21:41.536Z–2026-10-07T15:50:00Z",
+    "startIso": "2026-10-07T15:21:41.536Z",
+    "endIso": "2026-10-07T15:50:00Z",
+    "startMs": 1791386501536,
+    "endMs": 1791388200000,
+    "spanMs": 1698464,
+    "spanDays": 0.0197
+   },
+   "panKeptSpan": true,
+   "panMovedWindow": true,
+   "panShiftedMs": 418099,
+   "pageScrollBefore": 0,
+   "pageScrollAfter": 0,
+   "pageNotScrolled": true,
+   "screenshot": "docs/验收截图/余项验收修正-K线缩放平移-1800x1180.png"
+  },
+  "stateRetention": {
+   "holdSeconds": 30,
+   "holdStartTs": "2026-10-07T15:50:15.815Z",
+   "holdEndTs": "2026-10-07T15:50:45.839Z",
+   "start": {
+    "search": "0G",
+    "stillExpanded": true,
+    "timeframeButtons": [
+     "1m",
+     "5m",
+     "15m",
+     "1h",
+     "4h",
+     "1d"
+    ],
+    "activeTimeframe": "1m",
+    "navCount": 1
+   },
+   "end": {
+    "search": "0G",
+    "stillExpanded": true,
+    "timeframeButtons": [
+     "1m",
+     "5m",
+     "15m",
+     "1h",
+     "4h",
+     "1d"
+    ],
+    "activeTimeframe": "1m",
+    "navCount": 1
+   },
+   "searchKept": true,
+   "stillExpanded": true,
+   "timeframeKept": true,
+   "pageNavigations": 0
+  }
+ },
+ "endedAt": "2026-10-07T15:50:45.839Z"
+}

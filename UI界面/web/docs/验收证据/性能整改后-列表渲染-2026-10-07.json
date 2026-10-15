@@ -1,0 +1,324 @@
+{
+  "cdpUrl": "ws://127.0.0.1:56404/devtools/browser/7db3f6fa-d569-45c1-b577-842b938f7961",
+  "startedAt": "2026-10-07T13:29:03.557Z",
+  "steps": {
+    "coldStart": {
+      "reloadAt": "2026-10-07T13:29:03.647Z",
+      "firstRowMs": 253,
+      "fullPoolMs": null,
+      "stableMs": 2832,
+      "finalRowCount": 7,
+      "viewport": {
+        "w": 1280,
+        "h": 577,
+        "dpr": 1
+      },
+      "emulatedViewport": null,
+      "note": "Vite dev(HMR) 服务；首次编译已缓存，数值为运行时渲染耗时"
+    },
+    "domBaseline": {
+      "totalElements": 555,
+      "rows": 7,
+      "tbodyRows": 8,
+      "svg": 40,
+      "polyline": 7,
+      "path": 61,
+      "circle": 8,
+      "line": 1,
+      "rect": 5,
+      "canvas": 0,
+      "buttons": 16,
+      "expandedCharts": 0,
+      "oiCharts": 0,
+      "spacerRows": 1,
+      "rowHeight": 284,
+      "scroller": {
+        "clientH": 294,
+        "scrollH": 156694,
+        "scrollTop": 0
+      },
+      "renderedFirstId": "binance:0GUSDT",
+      "renderedLastId": "binance:1000FLOKIUSDT",
+      "visibleRows": 1
+    },
+    "domBaselineScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/改后-全列表-1280x577.png",
+    "search": [
+      {
+        "input": "B",
+        "countChangedMs": 10.8,
+        "paintedMs": 27.9,
+        "countText": "共 65 个标的",
+        "rowsAfter": 7
+      },
+      {
+        "input": "BT",
+        "countChangedMs": 62.3,
+        "paintedMs": 69.4,
+        "countText": "共 6 个标的",
+        "rowsAfter": 6
+      },
+      {
+        "input": "BTC",
+        "countChangedMs": 4.6,
+        "paintedMs": 24,
+        "countText": "共 2 个标的",
+        "rowsAfter": 2
+      },
+      {
+        "input": "",
+        "countChangedMs": 5.1,
+        "paintedMs": 28.4,
+        "countText": "共 549 个标的",
+        "rowsAfter": 7
+      }
+    ],
+    "expand": {
+      "tokenId": "binance:0GUSDT",
+      "ok": true,
+      "svgAppearedMs": 20.9,
+      "paintedMs": 42.4,
+      "domAfter": {
+        "totalElements": 714,
+        "rows": 7,
+        "tbodyRows": 9,
+        "svg": 47,
+        "polyline": 7,
+        "path": 77,
+        "circle": 11,
+        "line": 7,
+        "rect": 5,
+        "canvas": 0,
+        "buttons": 27,
+        "expandedCharts": 1,
+        "oiCharts": 1,
+        "spacerRows": 1,
+        "rowHeight": 284,
+        "scroller": {
+          "clientH": 294,
+          "scrollH": 156958,
+          "scrollTop": 0
+        },
+        "renderedFirstId": "binance:0GUSDT",
+        "renderedLastId": "binance:1000FLOKIUSDT",
+        "visibleRows": 1
+      }
+    },
+    "expandScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/改后-展开0G-1280x577.png",
+    "collapse": {
+      "tokenId": "binance:0GUSDT",
+      "ok": true,
+      "svgAppearedMs": 0.2,
+      "paintedMs": 20.1,
+      "domAfter": {
+        "totalElements": 555,
+        "rows": 7,
+        "tbodyRows": 8,
+        "svg": 40,
+        "polyline": 7,
+        "path": 61,
+        "circle": 8,
+        "line": 1,
+        "rect": 5,
+        "canvas": 0,
+        "buttons": 16,
+        "expandedCharts": 0,
+        "oiCharts": 0,
+        "spacerRows": 1,
+        "rowHeight": 284,
+        "scroller": {
+          "clientH": 294,
+          "scrollH": 156034,
+          "scrollTop": 0
+        },
+        "renderedFirstId": "binance:0GUSDT",
+        "renderedLastId": "binance:1000FLOKIUSDT",
+        "visibleRows": 1
+      }
+    },
+    "scroll": {
+      "frameCount": 268,
+      "avgMs": 16.64,
+      "p95Ms": 18.5,
+      "maxMs": 43.4,
+      "droppedOver50ms": 0,
+      "scrollRange": {
+        "max": 155740,
+        "reached": 0
+      },
+      "domAfterScroll": {
+        "totalElements": 555,
+        "rows": 7,
+        "tbodyRows": 8,
+        "svg": 40,
+        "polyline": 7,
+        "path": 61,
+        "circle": 8,
+        "line": 1,
+        "rect": 5,
+        "canvas": 0,
+        "buttons": 16,
+        "expandedCharts": 0,
+        "oiCharts": 0,
+        "spacerRows": 1,
+        "rowHeight": 284,
+        "scroller": {
+          "clientH": 294,
+          "scrollH": 156034,
+          "scrollTop": 0
+        },
+        "renderedFirstId": "binance:0GUSDT",
+        "renderedLastId": "binance:1000FLOKIUSDT",
+        "visibleRows": 1
+      }
+    },
+    "scrollScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/改后-滚动到底-1280x577.png",
+    "refreshCost": {
+      "profileSeconds": 12,
+      "samplingIntervalUs": 200,
+      "totalSamples": 37443,
+      "topFunctions": [
+        {
+          "fn": "(idle) @ ?:0",
+          "hits": 36523,
+          "pct": 97.54
+        },
+        {
+          "fn": "(program) @ ?:0",
+          "hits": 554,
+          "pct": 1.48
+        },
+        {
+          "fn": "exports.jsxDEV @ react_jsx-dev-runtime.js?v=e20618cb:192",
+          "hits": 110,
+          "pct": 0.29
+        },
+        {
+          "fn": "exports.createElement @ react.js?v=e20618cb:624",
+          "hits": 29,
+          "pct": 0.08
+        },
+        {
+          "fn": "(garbage collector) @ ?:0",
+          "hits": 27,
+          "pct": 0.07
+        },
+        {
+          "fn": "run @ ?:0",
+          "hits": 14,
+          "pct": 0.04
+        },
+        {
+          "fn": "addObjectDiffToProperties @ react-dom_client.js?v=e20618cb:2561",
+          "hits": 10,
+          "pct": 0.03
+        },
+        {
+          "fn": "exports.unstable_now @ react-dom_client.js?v=e20618cb:126",
+          "hits": 9,
+          "pct": 0.02
+        },
+        {
+          "fn": "ReactElement @ react_jsx-dev-runtime.js?v=e20618cb:105",
+          "hits": 9,
+          "pct": 0.02
+        },
+        {
+          "fn": "updateProperties @ react-dom_client.js?v=e20618cb:10695",
+          "hits": 9,
+          "pct": 0.02
+        },
+        {
+          "fn": "pull @ useMarketData.ts?t=1791378892599:278",
+          "hits": 9,
+          "pct": 0.02
+        },
+        {
+          "fn": "updateTime @ TopStatusBar.tsx?t=1791377428310:23",
+          "hits": 7,
+          "pct": 0.02
+        },
+        {
+          "fn": "createTask @ ?:0",
+          "hits": 7,
+          "pct": 0.02
+        },
+        {
+          "fn": "formatWanU @ formatters.ts?t=1791377428310:60",
+          "hits": 6,
+          "pct": 0.02
+        },
+        {
+          "fn": "updatedAncestorInfoDev @ react-dom_client.js?v=e20618cb:1744",
+          "hits": 6,
+          "pct": 0.02
+        },
+        {
+          "fn": "fetch @ ?:0",
+          "hits": 6,
+          "pct": 0.02
+        },
+        {
+          "fn": "validateProperty @ react-dom_client.js?v=e20618cb:1974",
+          "hits": 5,
+          "pct": 0.01
+        },
+        {
+          "fn": "(anonymous) @ TokenTable.tsx?t=1791379709999:618",
+          "hits": 5,
+          "pct": 0.01
+        }
+      ],
+      "longtasks": [],
+      "longtaskUnsupported": false,
+      "mutations": {
+        "attr": 0,
+        "child": 0,
+        "character": 29
+      },
+      "longtaskSummary": {
+        "count": 0,
+        "totalBlockingMs": 0,
+        "maxMs": 0
+      }
+    },
+    "refreshScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/改后-刷新窗口-1280x577.png",
+    "offscreenRemount": {
+      "targetId": "binance:0GUSDT",
+      "beforeAway": {
+        "rowRendered": true,
+        "chartMounted": true,
+        "chevronDown": true,
+        "renderedRows": 7,
+        "firstRenderedId": "binance:0GUSDT",
+        "scrollTop": 0,
+        "scrollH": 157037,
+        "clientH": 294
+      },
+      "atBottom": {
+        "rowRendered": false,
+        "chartMounted": false,
+        "chevronDown": false,
+        "renderedRows": 4,
+        "firstRenderedId": "okx:RAY-USDT-SWAP",
+        "scrollTop": 156743,
+        "scrollH": 157037,
+        "clientH": 294
+      },
+      "backTop": {
+        "rowRendered": true,
+        "chartMounted": true,
+        "chevronDown": true,
+        "renderedRows": 7,
+        "firstRenderedId": "binance:0GUSDT",
+        "scrollTop": 0,
+        "scrollH": 157037,
+        "clientH": 294
+      },
+      "chartUnmountedWhenOffscreen": true,
+      "chartRestoredAfterScrollBack": true,
+      "scrollReturnedToTop": true
+    },
+    "offscreenScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/改后-滚回顶部展开恢复-1280x577.png"
+  },
+  "endedAt": "2026-10-07T13:29:29.389Z"
+}

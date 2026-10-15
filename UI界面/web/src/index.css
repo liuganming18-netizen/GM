@@ -1,0 +1,401 @@
+@import "tailwindcss";
+
+/* ============================================================================
+ * 浅色清爽风 · 设计令牌层（Style Layer）
+ * ----------------------------------------------------------------------------
+ * 纪律（本次改版约束）：
+ *   · 不改页面布局、不改内容、不新增/删除任何 DOM 元素。
+ *   · 只改「风格」与「AI 特效」。所有特效一律用伪元素实现，不占节点。
+ *
+ * 实现方式：Tailwind v4 的调色板本身就是 CSS 变量（--color-*），工具类通过
+ * var() 引用。因此**只覆盖变量**即可把整套深色界面翻转为浅色，无需逐处改
+ * className。未分层（unlayered）的 :root 在级联层优先级上高于 Tailwind 的
+ * @layer theme，所以这里一定能覆盖，不依赖构建顺序。
+ *
+ * 中性色阶做的是「整体反转」：原色阶里越深的色值（页面底）现在越浅，
+ * 越浅的色值（正文）现在越深。所以 bg-neutral-950 仍是「页面画布」、
+ * text-neutral-100 仍是「一级正文」，语义位不动。
+ * ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* —— 中性色阶：深→浅反转（画布 / 卡片 / 描边 / 三级→一级文字） —— */
+  --color-neutral-950: #f2f5f9;
+  --color-neutral-900: #ffffff;
+  --color-neutral-850: #f7f9fc;
+  --color-neutral-800: #e7ecf3;
+  --color-neutral-700: #d4dbe6;
+  --color-neutral-600: #b4bfcf;
+  --color-neutral-500: #8491a5;
+  --color-neutral-400: #586880;
+  --color-neutral-300: #36445a;
+  --color-neutral-200: #1f2b3d;
+  --color-neutral-100: #0b1322;
+
+  /* —— 涨跌 / 多空语义色 ——
+   * 口径**沿用原版**（页脚与图表注释均写明「方向绿多红空、K线涨绿跌红」），
+   * 未改动语义方向，只把亮度调到浅底可读的对比度。
+   * 若要改为 A 股习惯的「涨红跌绿」，只需把 emerald-* 与 rose-* 两组色值互换。 */
+  --color-emerald-200: #b7e6d2;
+  --color-emerald-300: #12a06e;
+  --color-emerald-400: #0b8a5e;
+  --color-emerald-500: #0a7a54;
+  --color-emerald-600: #086b4a;
+  --color-emerald-700: #065e40;
+
+  --color-rose-200: #f6ccd4;
+  --color-rose-300: #e5556b;
+  --color-rose-400: #d92d48;
+  --color-rose-500: #c42240;
+  --color-rose-600: #a81b36;
+  --color-rose-700: #8d1630;
+
+  /* —— 告警 / 待确认 / 陈旧 —— */
+  --color-amber-200: #f2ddb4;
+  --color-amber-300: #c17600;
+  --color-amber-400: #ad6800;
+  --color-amber-500: #965900;
+  --color-amber-600: #7d4a00;
+
+  /* —— AI / 数据强调色（品牌蓝紫，用于信号、标记、AI 光效） —— */
+  --color-indigo-200: #d3d7f8;
+  --color-indigo-300: #6c79e8;
+  --color-indigo-400: #4f5bd5;
+  --color-indigo-500: #4f46e5;
+  --color-indigo-600: #4338ca;
+
+  /* ======================================================================
+   * AI 特效调色板（仅本文件内部使用，不参与 Tailwind 工具类）
+   * ==================================================================== */
+  --ai-1: #2b6bff;   /* 蓝 */
+  --ai-2: #6d5ef8;   /* 紫 */
+  --ai-3: #00b8d9;   /* 青 */
+  --ai-ring: 1px;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--color-neutral-950);
+  color: var(--color-neutral-100);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--ai-1) 22%, transparent);
+}
+
+/* ============================================================================
+ * AI 特效层
+ * 全部以 ::before / ::after 承载 —— 不新增任何 DOM 节点，不改变任何布局尺寸。
+ * ========================================================================== */
+
+@property --ai-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* 1) 清除极光流光霓虹特效 */
+.ai-aurora {
+  position: relative;
+}
+.ai-aurora::before {
+  display: none !important;
+}
+
+/* 2) 状态点：克制显示，清除呼吸光晕 */
+.ai-pulse {
+  position: relative;
+}
+.ai-pulse::after {
+  display: none !important;
+}
+
+/* 3) 扫光：清除扫光动画 */
+.ai-shimmer {
+  position: relative;
+}
+.ai-shimmer::after {
+  display: none !important;
+}
+
+/* 4) 渐变文字：恢复正常前景色 */
+.ai-gradient-text {
+  color: var(--color-neutral-100);
+}
+
+/* 5) 背景网格：清除漂移与网格特效 */
+.ai-grid {
+  background-image: none !important;
+  animation: none !important;
+}
+
+/* 6) 扫描线：清除扫描线特效 */
+.ai-scanline {
+  position: relative;
+}
+.ai-scanline::after {
+  display: none !important;
+}
+
+/* 7) 悬停：清除任何外发光霓虹阴影，只保留克制的平滑微调 */
+.ai-glow-hover {
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.ai-glow-hover:hover {
+  box-shadow: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-aurora::before,
+  .ai-pulse::after,
+  .ai-shimmer::after,
+  .ai-grid,
+  .ai-scanline::after {
+    animation: none;
+  }
+}
+
+/* ============================================================================
+ * 结构样式（原有，仅把写死的深色值换成浅色令牌）
+ * ========================================================================== */
+
+.workbench-columns {
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.workbench-columns > .workbench-signal-panel {
+  order: 2;
+  width: 100%;
+  flex: 0 0 auto;
+  border-right: 0;
+  border-top: 1px solid var(--color-neutral-800);
+}
+
+.workbench-columns > .workbench-market-panel {
+  order: 1;
+  width: 100%;
+  height: min(72vh, 760px);
+  min-height: 480px;
+  flex: 0 0 auto;
+  padding: 12px;
+}
+
+.workbench-columns > .workbench-position-panel {
+  order: 3;
+  width: 100%;
+  flex: 0 0 auto;
+  border-left: 0;
+  border-top: 1px solid var(--color-neutral-800);
+}
+
+.workbench-signal-content {
+  height: 360px;
+  flex: 0 0 auto;
+}
+
+.workbench-position-content {
+  max-height: 460px;
+  flex: 0 0 auto;
+}
+
+.market-table-scroll {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.workbench-market-table {
+  width: 100%;
+  min-width: 1210px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.workbench-market-table th,
+.workbench-market-table td {
+  white-space: nowrap;
+}
+
+.workbench-market-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.workbench-market-table thead th:first-child,
+.workbench-market-table tbody tr[data-token-id] > td:first-child {
+  position: sticky;
+  left: 0;
+  width: 40px;
+  min-width: 40px;
+  z-index: 10;
+}
+
+.workbench-market-table thead th:nth-child(2),
+.workbench-market-table tbody tr[data-token-id] > td:nth-child(2) {
+  position: sticky;
+  left: 40px;
+  width: 158px;
+  min-width: 158px;
+  z-index: 10;
+  /* 冻结列右缘投影：深底改浅底后由「黑色重影」改为「柔和灰影」 */
+  box-shadow: 8px 0 12px -10px rgba(15, 23, 42, 0.16);
+}
+
+.workbench-market-table thead th:first-child,
+.workbench-market-table thead th:nth-child(2) {
+  z-index: 30;
+  background: var(--color-neutral-900);
+}
+
+/**
+ * 冻结列底色必须**不透明**。
+ *
+ * 原实现给冻结 td 写的是 `background-color: inherit`，继承到的是行上的
+ * `bg-neutral-900/30` / `bg-neutral-850/90` —— 带透明度的色值。深色主题下
+ * rgba(23,23,23,.3) 压在 #0d0d0d 上几乎看不出差别；换成浅色后变成
+ * rgba(255,255,255,.3) 压在近白底上，横向滚动时下层单元格的深色文字会
+ * 直接透出来，冻结列与滚动内容糊在一起。
+ *
+ * 修法：把三种行状态（默认 / 悬停 / 展开）在行级换成**等价的实色**，
+ * 冻结 td 继续 inherit 即可自动拿到实色。不新增节点、不改结构，
+ * 三种状态的视觉层次与原版一一对应。
+ */
+.workbench-market-table tbody tr[data-token-id] {
+  background-color: #fbfcfe;
+}
+.workbench-market-table tbody tr[data-token-id]:hover {
+  background-color: #f4f7fc;
+}
+.workbench-market-table tbody tr[data-token-id].font-medium {
+  background-color: #f7f9fc;
+}
+
+.workbench-market-table tbody tr[data-token-id] > td:first-child,
+.workbench-market-table tbody tr[data-token-id] > td:nth-child(2) {
+  background-color: inherit;
+}
+
+/* 行悬停：左侧一条品牌色光带，替代原来的整行变色（更克制、更易跟行） */
+.workbench-market-table tbody tr[data-token-id] > td:first-child {
+  transition: box-shadow 0.18s ease;
+}
+.workbench-market-table tbody tr[data-token-id]:hover > td:first-child {
+  box-shadow: inset 2px 0 0 0 var(--ai-1);
+}
+
+/* 数据来源弹窗：深底 → 浅底毛玻璃 */
+.market-source-dialog {
+  width: min(42rem, calc(100vw - 1.5rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 1.25rem;
+  overflow: auto;
+  color: var(--color-neutral-200);
+  background: color-mix(in oklab, var(--color-neutral-900) 92%, transparent);
+  backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid var(--color-neutral-800);
+  border-radius: 1rem;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.06),
+    0 24px 60px -18px rgba(15, 23, 42, 0.28);
+}
+
+.market-source-dialog::backdrop {
+  background: rgba(15, 23, 42, 0.32);
+  backdrop-filter: blur(2px);
+}
+
+.market-source-dialog pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* 滚动条：浅色纤细样式，保持原 scrollbar-gutter 占位不变 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-700);
+  border: 3px solid transparent;
+  background-clip: content-box;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-600);
+  background-clip: content-box;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@media (max-width: 520px) {
+  .workbench-columns > .workbench-market-panel {
+    height: 72vh;
+    min-height: 440px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .workbench-columns {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .workbench-columns > .workbench-signal-panel {
+    order: initial;
+    width: 310px;
+    flex: 0 0 310px;
+    border-top: 0;
+    border-right: 1px solid var(--color-neutral-800);
+  }
+
+  .workbench-columns > .workbench-market-panel {
+    order: initial;
+    width: auto;
+    height: auto;
+    min-height: 0;
+    min-width: 0;
+    flex: 1 1 auto;
+    padding: 16px;
+  }
+
+  .workbench-columns > .workbench-position-panel {
+    order: initial;
+    width: 280px;
+    flex: 0 0 280px;
+    border-top: 0;
+    border-left: 1px solid var(--color-neutral-800);
+  }
+
+  .workbench-signal-content {
+    height: auto;
+    min-height: 0;
+    flex: 1 1 auto;
+  }
+
+  .workbench-position-content {
+    max-height: none;
+    min-height: 0;
+    flex: 1 1 auto;
+  }
+}

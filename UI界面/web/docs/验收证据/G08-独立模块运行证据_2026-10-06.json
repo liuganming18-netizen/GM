@@ -1,0 +1,340 @@
+{
+ "captured_at_utc": "2026-10-06T14:26:27Z",
+ "module": "后端实现/public_market_read.py",
+ "items": {
+  "binance:BTCUSDT": {
+   "available": true,
+   "exchange": "binance",
+   "market_id": "BTCUSDT",
+   "base": "BTC",
+   "as_of": "2026-10-06T14:26:27Z",
+   "is_supplement": false,
+   "identity_source": "symbol_pool（真实 exchangeInfo 快照）",
+   "source_urls": [
+    "https://fapi.binance.com/fapi/v1/openInterest?symbol=BTCUSDT",
+    "https://fapi.binance.com/futures/data/openInterestHist?symbol=BTCUSDT&period=5m",
+    "https://fapi.binance.com/futures/data/topLongShortPositionRatio?symbol=BTCUSDT",
+    "https://fapi.binance.com/futures/data/topLongShortAccountRatio?symbol=BTCUSDT",
+    "https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol=BTCUSDT",
+    "https://fapi.binance.com/futures/data/takerlongshortRatio?symbol=BTCUSDT",
+    "https://fapi.binance.com/fapi/v1/depth?symbol=BTCUSDT&limit=5"
+   ],
+   "missing_reason": null,
+   "open_interest": {
+    "available": true,
+    "amount": 94578.014,
+    "amount_event_time": "2026-10-06T14:26:25Z",
+    "usd": 8145237433.353527,
+    "usd_event_time": "2026-10-06T14:20:00Z",
+    "fetched_at": "2026-10-06T14:26:29Z",
+    "origin": "公共REST",
+    "source": "币安 fapi/v1/openInterest + /futures/data/openInterestHist",
+    "note": "**全市场总量**，无多空拆分、无身份；不是「聪明钱持仓额」"
+   },
+   "long_short": {
+    "period": "1h",
+    "top_position_long_short_ratio": {
+     "available": true,
+     "period": "1h",
+     "event_time": "2026-10-06T14:00:00Z",
+     "fetched_at": "2026-10-06T14:26:00Z",
+     "origin": "共享缓存",
+     "value": "1.7012",
+     "long_account": "0.6298",
+     "short_account": "0.3702"
+    },
+    "top_account_long_short_ratio": {
+     "available": true,
+     "period": "1h",
+     "event_time": "2026-10-06T14:00:00Z",
+     "fetched_at": "2026-10-06T14:26:01Z",
+     "origin": "共享缓存",
+     "value": "1.0333",
+     "long_account": "0.5082",
+     "short_account": "0.4918"
+    },
+    "global_account_long_short_ratio": {
+     "available": true,
+     "period": "1h",
+     "event_time": "2026-10-06T14:00:00Z",
+     "fetched_at": "2026-10-06T14:26:02Z",
+     "origin": "共享缓存",
+     "value": "0.9654",
+     "long_account": "0.4912",
+     "short_account": "0.5088"
+    },
+    "taker_buy_sell_ratio": {
+     "available": true,
+     "period": "1h",
+     "event_time": "2026-10-06T13:00:00Z",
+     "fetched_at": "2026-10-06T14:26:04Z",
+     "origin": "共享缓存",
+     "value": "1.1400",
+     "buy_vol": "4430.6320",
+     "sell_vol": "3886.4300"
+    },
+    "source": "币安 fapi /futures/data/*（官方公开，无需密钥）",
+    "note": "原始指标口径：**持仓量多空比** = topLongShortPositionRatio；**账户数多空比** = topLongShortAccountRatio；**全局账户多空比** = globalLongShortAccountRatio；**taker 买卖量比** = takerlongshortRatio。四者均为**聚合比率**，无身份/无金额/无均价，**不得**改名成「聪明钱金额/均价/身份」。"
+   },
+   "orderbook": {
+    "available": true,
+    "unit": "标的币",
+    "bids": [
+     [
+      "86006.40",
+      "4.926"
+     ],
+     [
+      "86006.30",
+      "0.060"
+     ],
+     [
+      "86006.20",
+      "0.052"
+     ],
+     [
+      "86006.00",
+      "0.002"
+     ],
+     [
+      "86005.80",
+      "0.001"
+     ]
+    ],
+    "asks": [
+     [
+      "86006.50",
+      "5.501"
+     ],
+     [
+      "86006.60",
+      "0.003"
+     ],
+     [
+      "86007.00",
+      "0.001"
+     ],
+     [
+      "86007.80",
+      "0.001"
+     ],
+     [
+      "86009.10",
+      "0.001"
+     ]
+    ],
+    "best_bid": [
+     "86006.40",
+     "4.926"
+    ],
+    "best_ask": [
+     "86006.50",
+     "5.501"
+    ],
+    "event_time": "2026-10-06T14:26:29Z",
+    "fetched_at": "2026-10-06T14:26:30Z",
+    "origin": "公共REST",
+    "source": "币安 fapi/v1/depth?limit=5",
+    "note": "只给原始档位；「订单簿流动性失衡」的档位数/加权/单位口径未定，不在此拍板"
+   },
+   "smart_money": {
+    "available": false,
+    "reason": "币安公开 API 无「聪明钱金额/均价/身份」字段：`/futures/data/*` 只给**大户持仓量多空比**与**账户数多空比**（聚合比率，无身份、无金额、无均价）；`/fapi/v1/openInterest` 只给**全市场总量**（无多空拆分）；`/fapi/v1/positionRisk` 需签名（公开 404）。按用户口径：不得用人数比或 taker 量冒充聪明钱金额/均价/身份，故保持缺失。"
+   },
+   "quality": {
+    "status": "ok",
+    "age_seconds": null,
+    "note": "币安公开 API 只读；不落库、不当作历史"
+   }
+  },
+  "binance:ETHUSDT": {
+   "available": true,
+   "exchange": "binance",
+   "market_id": "ETHUSDT",
+   "base": "ETH",
+   "as_of": "2026-10-06T14:26:30Z",
+   "is_supplement": false,
+   "identity_source": "symbol_pool（真实 exchangeInfo 快照）",
+   "source_urls": [
+    "https://fapi.binance.com/fapi/v1/openInterest?symbol=ETHUSDT",
+    "https://fapi.binance.com/futures/data/openInterestHist?symbol=ETHUSDT&period=5m",
+    "https://fapi.binance.com/futures/data/topLongShortPositionRatio?symbol=ETHUSDT",
+    "https://fapi.binance.com/futures/data/topLongShortAccountRatio?symbol=ETHUSDT",
+    "https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol=ETHUSDT",
+    "https://fapi.binance.com/futures/data/takerlongshortRatio?symbol=ETHUSDT",
+    "https://fapi.binance.com/fapi/v1/depth?symbol=ETHUSDT&limit=5"
+   ],
+   "missing_reason": null,
+   "open_interest": {
+    "available": true,
+    "amount": 2302262.376,
+    "amount_event_time": "2026-10-06T14:26:25Z",
+    "usd": 6239585412.608165,
+    "usd_event_time": "2026-10-06T14:20:00Z",
+    "fetched_at": "2026-10-06T14:26:31Z",
+    "origin": "公共REST",
+    "source": "币安 fapi/v1/openInterest + /futures/data/openInterestHist",
+    "note": "**全市场总量**，无多空拆分、无身份；不是「聪明钱持仓额」"
+   },
+   "long_short": {
+    "period": "1h",
+    "top_position_long_short_ratio": {
+     "available": true,
+     "period": "1h",
+     "event_time": "2026-10-06T14:00:00Z",
+     "fetched_at": "2026-10-06T14:26:33Z",
+     "origin": "公共REST",
+     "value": "1.5708",
+     "long_account": "0.6110",
+     "short_account": "0.3890"
+    },
+    "top_account_long_short_ratio": {
+     "available": true,
+     "period": "1h",
+     "event_time": "2026-10-06T14:00:00Z",
+     "fetched_at": "2026-10-06T14:26:33Z",
+     "origin": "公共REST",
+     "value": "1.3180",
+     "long_account": "0.5686",
+     "short_account": "0.4314"
+    },
+    "global_account_long_short_ratio": {
+     "available": true,
+     "period": "1h",
+     "event_time": "2026-10-06T14:00:00Z",
+     "fetched_at": "2026-10-06T14:26:35Z",
+     "origin": "公共REST",
+     "value": "2.4048",
+     "long_account": "0.7063",
+     "short_account": "0.2937"
+    },
+    "taker_buy_sell_ratio": {
+     "available": true,
+     "period": "1h",
+     "event_time": "2026-10-06T13:00:00Z",
+     "fetched_at": "2026-10-06T14:26:36Z",
+     "origin": "公共REST",
+     "value": "0.9523",
+     "buy_vol": "52210.6720",
+     "sell_vol": "54827.5220"
+    },
+    "source": "币安 fapi /futures/data/*（官方公开，无需密钥）",
+    "note": "原始指标口径：**持仓量多空比** = topLongShortPositionRatio；**账户数多空比** = topLongShortAccountRatio；**全局账户多空比** = globalLongShortAccountRatio；**taker 买卖量比** = takerlongshortRatio。四者均为**聚合比率**，无身份/无金额/无均价，**不得**改名成「聪明钱金额/均价/身份」。"
+   },
+   "orderbook": {
+    "available": true,
+    "unit": "标的币",
+    "bids": [
+     [
+      "2706.64",
+      "103.494"
+     ],
+     [
+      "2706.62",
+      "0.018"
+     ],
+     [
+      "2706.61",
+      "0.016"
+     ],
+     [
+      "2706.60",
+      "0.935"
+     ],
+     [
+      "2706.59",
+      "0.027"
+     ]
+    ],
+    "asks": [
+     [
+      "2706.65",
+      "108.958"
+     ],
+     [
+      "2706.66",
+      "0.244"
+     ],
+     [
+      "2706.69",
+      "0.009"
+     ],
+     [
+      "2706.70",
+      "1.478"
+     ],
+     [
+      "2706.71",
+      "1.664"
+     ]
+    ],
+    "best_bid": [
+     "2706.64",
+     "103.494"
+    ],
+    "best_ask": [
+     "2706.65",
+     "108.958"
+    ],
+    "event_time": "2026-10-06T14:26:37Z",
+    "fetched_at": "2026-10-06T14:26:37Z",
+    "origin": "公共REST",
+    "source": "币安 fapi/v1/depth?limit=5",
+    "note": "只给原始档位；「订单簿流动性失衡」的档位数/加权/单位口径未定，不在此拍板"
+   },
+   "smart_money": {
+    "available": false,
+    "reason": "币安公开 API 无「聪明钱金额/均价/身份」字段：`/futures/data/*` 只给**大户持仓量多空比**与**账户数多空比**（聚合比率，无身份、无金额、无均价）；`/fapi/v1/openInterest` 只给**全市场总量**（无多空拆分）；`/fapi/v1/positionRisk` 需签名（公开 404）。按用户口径：不得用人数比或 taker 量冒充聪明钱金额/均价/身份，故保持缺失。"
+   },
+   "quality": {
+    "status": "ok",
+    "age_seconds": null,
+    "note": "币安公开 API 只读；不落库、不当作历史"
+   }
+  },
+  "okx:BTC-USDT-SWAP": {
+   "available": false,
+   "exchange": "okx",
+   "market_id": "BTC-USDT-SWAP",
+   "as_of": "2026-10-06T14:26:37Z",
+   "missing_reason": "币安已有 BTC 的 USDT 永续 ⇒ 按口径只用币安，不切 OKX（历史缺口不构成切换理由）",
+   "quality": {
+    "status": "missing",
+    "age_seconds": null,
+    "note": "币安已有 BTC 的 USDT 永续 ⇒ 按口径只用币安，不切 OKX（历史缺口不构成切换理由）"
+   }
+  },
+  "okx:AEON-USDT-SWAP": {
+   "available": true,
+   "exchange": "okx",
+   "market_id": "AEON-USDT-SWAP",
+   "base": "AEON",
+   "as_of": "2026-10-06T14:26:37Z",
+   "is_supplement": true,
+   "identity_source": "symbol_pool（真实 exchangeInfo 快照）",
+   "source_urls": [],
+   "missing_reason": "OKX 为补充源；本模块的公开扩展字段当前只对币安实现，OKX 标的保持缺失（不跨所拼接）",
+   "quality": {
+    "status": "missing",
+    "age_seconds": null,
+    "note": "OKX 为补充源；本模块的公开扩展字段当前只对币安实现，OKX 标的保持缺失（不跨所拼接）"
+   },
+   "smart_money": {
+    "available": false,
+    "reason": "币安公开 API 无「聪明钱金额/均价/身份」字段：`/futures/data/*` 只给**大户持仓量多空比**与**账户数多空比**（聚合比率，无身份、无金额、无均价）；`/fapi/v1/openInterest` 只给**全市场总量**（无多空拆分）；`/fapi/v1/positionRisk` 需签名（公开 404）。按用户口径：不得用人数比或 taker 量冒充聪明钱金额/均价/身份，故保持缺失。"
+   }
+  },
+  "binance:NOTACOINZZZ": {
+   "available": false,
+   "exchange": "binance",
+   "market_id": "NOTACOINZZZ",
+   "as_of": "2026-10-06T14:26:37Z",
+   "missing_reason": "symbol_pool 中无 binance:NOTACOINZZZ —— 标的身份未确认，不对外取数",
+   "quality": {
+    "status": "missing",
+    "age_seconds": null,
+    "note": "symbol_pool 中无 binance:NOTACOINZZZ —— 标的身份未确认，不对外取数"
+   }
+  }
+ }
+}

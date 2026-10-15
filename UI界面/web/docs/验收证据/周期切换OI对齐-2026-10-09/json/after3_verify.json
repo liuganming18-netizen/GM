@@ -1,0 +1,1105 @@
+{
+  "prefix": "after3",
+  "errors": [],
+  "results": [
+    {
+      "sym": "BTCUSDT",
+      "id": "binance:BTCUSDT",
+      "isOkx": false,
+      "tfButtons": [
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "4h",
+        "8h",
+        "12h",
+        "1d"
+      ],
+      "steps": [
+        {
+          "tf": "1m",
+          "dom": {
+            "viewport": "2026-10-08T13:32:00Z–2026-10-08T18:29:00Z",
+            "closedLast": "2026-10-08T18:29:00Z",
+            "forming": "2026-10-08T18:29:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791466320,
+                  "to": 1791484140
+                },
+                "logical": {
+                  "from": 414.5716814159292,
+                  "to": 708
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.8175675675675675
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791466320,
+                  "to": 1791484140
+                },
+                "logical": {
+                  "from": 414.5716814159292,
+                  "to": 708
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.817567567567568
+              }
+            ],
+            "align": {
+              "n": 709,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "30m",
+          "dom": {
+            "viewport": "2026-10-06T00:35:42Z–2026-10-08T18:00:00Z",
+            "closedLast": "2026-10-08T18:00:00Z",
+            "forming": "2026-10-08T18:00:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791246942,
+                  "to": 1791482400
+                },
+                "logical": {
+                  "from": 438.5345132743363,
+                  "to": 725
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.9100346020761245
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791246942,
+                  "to": 1791482400
+                },
+                "logical": {
+                  "from": 438.5345132743363,
+                  "to": 725
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.9100346020761245
+              }
+            ],
+            "align": {
+              "n": 728,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "1h",
+          "dom": {
+            "viewport": "2026-10-05T09:35:47Z–2026-10-08T18:00:00Z",
+            "closedLast": "2026-10-08T17:00:00Z",
+            "forming": "2026-10-08T18:00:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791192947,
+                  "to": 1791482400
+                },
+                "logical": {
+                  "from": 439.56637168141594,
+                  "to": 732
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.830508474576271
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791192947,
+                  "to": 1791482400
+                },
+                "logical": {
+                  "from": 439.56637168141594,
+                  "to": 732
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.830508474576271
+              }
+            ],
+            "align": {
+              "n": 734,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "4h",
+          "dom": {
+            "viewport": "2026-09-27T08:00:00Z–2026-10-08T16:00:00Z",
+            "closedLast": "2026-10-08T12:00:00Z",
+            "forming": "2026-10-08T16:00:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1790496000,
+                  "to": 1791475200
+                },
+                "logical": {
+                  "from": 432.58761061946905,
+                  "to": 729
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.779264214046823
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1790496000,
+                  "to": 1791475200
+                },
+                "logical": {
+                  "from": 432.58761061946905,
+                  "to": 729
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.779264214046823
+              }
+            ],
+            "align": {
+              "n": 738,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "8h",
+          "dom": {
+            "viewport": "2026-09-16T00:00:00Z–2026-10-08T16:00:00Z",
+            "closedLast": "2026-10-08T08:00:00Z",
+            "forming": "2026-10-08T16:00:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1789516800,
+                  "to": 1791475200
+                },
+                "logical": {
+                  "from": 432.5929203539823,
+                  "to": 730
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.7666666666666666
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1789516800,
+                  "to": 1791475200
+                },
+                "logical": {
+                  "from": 432.5929203539823,
+                  "to": 730
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.766666666666667
+              }
+            ],
+            "align": {
+              "n": 739,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "1d",
+          "dom": {
+            "viewport": "2026-06-19T00:00:00Z–2026-10-08T00:00:00Z",
+            "closedLast": "2026-10-07T00:00:00Z",
+            "forming": "2026-10-08T00:00:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1781827200,
+                  "to": 1791417600
+                },
+                "logical": {
+                  "from": 389.5982300884956,
+                  "to": 688
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.7541528239202657
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1781827200,
+                  "to": 1791417600
+                },
+                "logical": {
+                  "from": 389.5982300884956,
+                  "to": 688
+                },
+                "paneW": 1124,
+                "psW": 84,
+                "barSpacing": 3.754152823920266
+              }
+            ],
+            "align": {
+              "n": 740,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        }
+      ],
+      "dataCheck": {
+        "lastTf": "1d",
+        "candle": {
+          "n": 501,
+          "match": 500,
+          "mismatch": 1,
+          "unknown": 0,
+          "dup": 0
+        },
+        "volume": {
+          "n": 501,
+          "match": 0,
+          "mismatch": 501,
+          "unknown": 0
+        },
+        "oi": {
+          "n": 240,
+          "match": 240,
+          "mismatch": 0,
+          "unknown": 0,
+          "dup": 0,
+          "apiRows": 240
+        }
+      },
+      "okx8h": {
+        "has8hButton": true
+      }
+    },
+    {
+      "sym": "ETHUSDT",
+      "id": "binance:ETHUSDT",
+      "isOkx": false,
+      "tfButtons": [
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "4h",
+        "8h",
+        "12h",
+        "1d"
+      ],
+      "steps": [
+        {
+          "tf": "1m",
+          "dom": {
+            "viewport": "2026-10-08T13:33:00Z–2026-10-08T18:30:00Z",
+            "closedLast": "2026-10-08T18:29:00Z",
+            "forming": "2026-10-08T18:30:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791466380,
+                  "to": 1791484200
+                },
+                "logical": {
+                  "from": 417.281694265847,
+                  "to": 711.000004125002
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.7866666666666666
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791466380,
+                  "to": 1791484200
+                },
+                "logical": {
+                  "from": 417.281694265847,
+                  "to": 711.000004125002
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.7866666666666666
+              }
+            ],
+            "align": {
+              "n": 711,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "30m",
+          "dom": {
+            "viewport": "2026-10-06T02:00:00Z–2026-10-08T18:30:00Z",
+            "closedLast": "2026-10-08T18:00:00Z",
+            "forming": "2026-10-08T18:30:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791252000,
+                  "to": 1791484200
+                },
+                "logical": {
+                  "from": 445.2464788732394,
+                  "to": 737
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.8120805369127515
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791252000,
+                  "to": 1791484200
+                },
+                "logical": {
+                  "from": 445.2464788732394,
+                  "to": 737
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.8120805369127515
+              }
+            ],
+            "align": {
+              "n": 737,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "1h",
+          "dom": {
+            "viewport": "2026-10-05T10:25:31Z–2026-10-08T18:00:00Z",
+            "closedLast": "2026-10-08T17:00:00Z",
+            "forming": "2026-10-08T18:00:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791195931,
+                  "to": 1791482400
+                },
+                "logical": {
+                  "from": 443.2992957746479,
+                  "to": 738
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.7740863787375414
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791195931,
+                  "to": 1791482400
+                },
+                "logical": {
+                  "from": 443.2992957746479,
+                  "to": 738
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.7740863787375414
+              }
+            ],
+            "align": {
+              "n": 740,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "4h",
+          "dom": {
+            "viewport": "2026-09-27T20:00:00Z–2026-10-08T16:00:00Z",
+            "closedLast": "2026-10-08T12:00:00Z",
+            "forming": "2026-10-08T16:00:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1790539200,
+                  "to": 1791475200
+                },
+                "logical": {
+                  "from": 435.3169014084507,
+                  "to": 731
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.76158940397351
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1790539200,
+                  "to": 1791475200
+                },
+                "logical": {
+                  "from": 435.3169014084507,
+                  "to": 731
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.7615894039735096
+              }
+            ],
+            "align": {
+              "n": 741,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "1d",
+          "dom": {
+            "viewport": "2026-06-19T00:00:00Z–2026-10-08T00:00:00Z",
+            "closedLast": "2026-10-07T00:00:00Z",
+            "forming": "2026-10-08T00:00:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1781827200,
+                  "to": 1791417600
+                },
+                "logical": {
+                  "from": 389.3521126760563,
+                  "to": 687
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.736842105263158
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1781827200,
+                  "to": 1791417600
+                },
+                "logical": {
+                  "from": 389.3521126760563,
+                  "to": 687
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.7368421052631575
+              }
+            ],
+            "align": {
+              "n": 743,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        }
+      ],
+      "dataCheck": {
+        "lastTf": "1d",
+        "candle": {
+          "n": 501,
+          "match": 501,
+          "mismatch": 0,
+          "unknown": 0,
+          "dup": 0
+        },
+        "volume": {
+          "n": 501,
+          "match": 0,
+          "mismatch": 501,
+          "unknown": 0
+        },
+        "oi": {
+          "n": 243,
+          "match": 243,
+          "mismatch": 0,
+          "unknown": 0,
+          "dup": 0,
+          "apiRows": 243
+        }
+      },
+      "okx8h": {
+        "has8hButton": true
+      }
+    },
+    {
+      "sym": "0GUSDT",
+      "id": "binance:0GUSDT",
+      "isOkx": false,
+      "tfButtons": [
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "4h",
+        "8h",
+        "12h",
+        "1d"
+      ],
+      "steps": [
+        {
+          "tf": "1m",
+          "dom": {
+            "viewport": "2026-10-08T13:38:00Z–2026-10-08T18:30:00Z",
+            "closedLast": "2026-10-08T18:29:00Z",
+            "forming": "2026-10-08T18:30:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791466680,
+                  "to": 1791484200
+                },
+                "logical": {
+                  "from": 419.2711267605634,
+                  "to": 706
+                },
+                "paneW": 1108,
+                "psW": 100,
+                "barSpacing": 3.8508474576271188
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791466680,
+                  "to": 1791484200
+                },
+                "logical": {
+                  "from": 419.2711267605634,
+                  "to": 706
+                },
+                "paneW": 1108,
+                "psW": 100,
+                "barSpacing": 3.8508474576271188
+              }
+            ],
+            "align": {
+              "n": 706,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "30m",
+          "dom": {
+            "viewport": "2026-10-06T02:30:00Z–2026-10-08T18:30:00Z",
+            "closedLast": "2026-10-08T18:00:00Z",
+            "forming": "2026-10-08T18:30:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791253800,
+                  "to": 1791484200
+                },
+                "logical": {
+                  "from": 447.19718309859155,
+                  "to": 731
+                },
+                "paneW": 1108,
+                "psW": 100,
+                "barSpacing": 3.8904109589041096
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791253800,
+                  "to": 1791484200
+                },
+                "logical": {
+                  "from": 447.19718309859155,
+                  "to": 731
+                },
+                "paneW": 1108,
+                "psW": 100,
+                "barSpacing": 3.8904109589041096
+              }
+            ],
+            "align": {
+              "n": 731,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "1h",
+          "dom": {
+            "viewport": "2026-10-05T11:04:44Z–2026-10-08T18:00:00Z",
+            "closedLast": "2026-10-08T17:00:00Z",
+            "forming": "2026-10-08T18:00:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791198284,
+                  "to": 1791482400
+                },
+                "logical": {
+                  "from": 445.2711267605634,
+                  "to": 732
+                },
+                "paneW": 1108,
+                "psW": 100,
+                "barSpacing": 3.8508474576271188
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791198284,
+                  "to": 1791482400
+                },
+                "logical": {
+                  "from": 445.2711267605634,
+                  "to": 732
+                },
+                "paneW": 1108,
+                "psW": 100,
+                "barSpacing": 3.8508474576271188
+              }
+            ],
+            "align": {
+              "n": 734,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "1d",
+          "dom": {
+            "viewport": "2026-06-24T00:00:00Z–2026-10-08T00:00:00Z",
+            "closedLast": "2026-10-07T00:00:00Z",
+            "forming": "2026-10-08T00:00:00Z",
+            "loaded": "386 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1782259200,
+                  "to": 1791417600
+                },
+                "logical": {
+                  "from": 280.36971830985914,
+                  "to": 571
+                },
+                "paneW": 1108,
+                "psW": 100,
+                "barSpacing": 3.79933110367893
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1782259200,
+                  "to": 1791417600
+                },
+                "logical": {
+                  "from": 280.36971830985914,
+                  "to": 571
+                },
+                "paneW": 1108,
+                "psW": 100,
+                "barSpacing": 3.7993311036789295
+              }
+            ],
+            "align": {
+              "n": 624,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        }
+      ],
+      "dataCheck": {
+        "lastTf": "1d",
+        "candle": {
+          "n": 387,
+          "match": 387,
+          "mismatch": 0,
+          "unknown": 0,
+          "dup": 0
+        },
+        "volume": {
+          "n": 387,
+          "match": 0,
+          "mismatch": 387,
+          "unknown": 0
+        },
+        "oi": {
+          "n": 238,
+          "match": 238,
+          "mismatch": 0,
+          "unknown": 0,
+          "dup": 0,
+          "apiRows": 238
+        }
+      },
+      "okx8h": {
+        "has8hButton": true
+      }
+    },
+    {
+      "sym": "AEON-USDT-SWAP",
+      "id": "okx:AEON-USDT-SWAP",
+      "isOkx": true,
+      "tfButtons": [
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "4h",
+        "12h",
+        "1d"
+      ],
+      "steps": [
+        {
+          "tf": "1m",
+          "dom": {
+            "viewport": "2026-10-07T22:52:00Z–2026-10-08T05:40:00Z",
+            "closedLast": "2026-10-08T05:39:00Z",
+            "forming": "2026-10-08T05:40:00Z",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791413520,
+                  "to": 1791438000
+                },
+                "logical": {
+                  "from": 399.387323943662,
+                  "to": 699
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.712418300653595
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791413520,
+                  "to": 1791438000
+                },
+                "logical": {
+                  "from": 399.387323943662,
+                  "to": 699
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.7124183006535953
+              }
+            ],
+            "align": {
+              "n": 745,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "30m",
+          "dom": {
+            "viewport": "2026-10-06T01:09:18Z–2026-10-08T17:30:00Z",
+            "closedLast": "2026-10-08T17:30:00Z",
+            "forming": "—",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791248958,
+                  "to": 1791480600
+                },
+                "logical": {
+                  "from": 441.36971830985914,
+                  "to": 740
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.724590163934426
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791248958,
+                  "to": 1791480600
+                },
+                "logical": {
+                  "from": 441.36971830985914,
+                  "to": 740
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.724590163934426
+              }
+            ],
+            "align": {
+              "n": 745,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "1h",
+          "dom": {
+            "viewport": "2026-10-05T09:52:16Z–2026-10-08T17:00:00Z",
+            "closedLast": "2026-10-08T17:00:00Z",
+            "forming": "—",
+            "loaded": "500 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1791193936,
+                  "to": 1791478800
+                },
+                "logical": {
+                  "from": 439.36971830985914,
+                  "to": 738
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.724590163934426
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1791193936,
+                  "to": 1791478800
+                },
+                "logical": {
+                  "from": 439.36971830985914,
+                  "to": 738
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.724590163934426
+              }
+            ],
+            "align": {
+              "n": 745,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "4h",
+          "dom": {
+            "viewport": "2026-09-25T12:00:00Z–2026-10-08T12:00:00Z",
+            "closedLast": "2026-10-08T12:00:00Z",
+            "forming": "—",
+            "loaded": "440 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1790337600,
+                  "to": 1791460800
+                },
+                "logical": {
+                  "from": 361.36971830985914,
+                  "to": 660
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.724590163934426
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1790337600,
+                  "to": 1791460800
+                },
+                "logical": {
+                  "from": 361.36971830985914,
+                  "to": 660
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.724590163934426
+              }
+            ],
+            "align": {
+              "n": 685,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        },
+        {
+          "tf": "1d",
+          "dom": {
+            "viewport": "2026-07-27T00:00:00Z–2026-10-08T00:00:00Z",
+            "closedLast": "2026-10-07T00:00:00Z",
+            "forming": "2026-10-08T00:00:00Z",
+            "loaded": "73 根"
+          },
+          "measure": {
+            "rows": [
+              {
+                "label": "lightweight-candles",
+                "range": {
+                  "from": 1785110400,
+                  "to": 1791417600
+                },
+                "logical": {
+                  "from": -35.61267605633799,
+                  "to": 264
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.712418300653595
+              },
+              {
+                "label": "lightweight-oi",
+                "range": {
+                  "from": 1785110400,
+                  "to": 1791417600
+                },
+                "logical": {
+                  "from": -35.61267605633799,
+                  "to": 264
+                },
+                "paneW": 1116,
+                "psW": 92,
+                "barSpacing": 3.7124183006535953
+              }
+            ],
+            "align": {
+              "n": 318,
+              "maxAbsDiff": 0,
+              "over1px": 0
+            }
+          }
+        }
+      ],
+      "dataCheck": {
+        "lastTf": "1d",
+        "candle": {
+          "n": 74,
+          "match": 74,
+          "mismatch": 0,
+          "unknown": 0,
+          "dup": 0
+        },
+        "volume": {
+          "n": 74,
+          "match": 0,
+          "mismatch": 74,
+          "unknown": 0
+        },
+        "oi": {
+          "n": 245,
+          "match": 245,
+          "mismatch": 0,
+          "unknown": 0,
+          "dup": 0,
+          "apiRows": 245
+        }
+      },
+      "okx8h": {
+        "has8hButton": false
+      }
+    }
+  ]
+}

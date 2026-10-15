@@ -1,0 +1,20 @@
+ M src/App.tsx
+ M src/components/BacktestReviewView.tsx
+ M src/components/DataCenterView.tsx
+ M src/components/InlineExpandedChart.tsx
+ M src/components/NavigationSidebar.tsx
+ M src/components/OIHeatmap.tsx
+ M src/components/PositionPanel.tsx
+ M src/components/SignalListPanel.tsx
+ M src/components/StrategyManagementView.tsx
+ M src/components/TokenTable.tsx
+ M src/components/TopStatusBar.tsx
+ M src/index.css
+ M src/mock/cryptoData.ts
+ M src/types/crypto.ts
+ M src/utils/formatters.ts
+ M vite.config.ts
+?? .baseline_lwc/
+?? docs/
+?? package-lock.json
+?? src/api/

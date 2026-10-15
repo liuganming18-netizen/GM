@@ -1,0 +1,1000 @@
+{
+  "errors": [],
+  "log": [
+    {
+      "mark": "initial-1m",
+      "calls": [
+        {
+          "t": 1559,
+          "kind": "call",
+          "label": "lightweight-candles",
+          "m": "fitContent",
+          "a": []
+        },
+        {
+          "t": 1562,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791297367,
+              "to": 1791483240
+            }
+          ]
+        },
+        {
+          "t": 1570,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791298780,
+              "to": 1791483240
+            }
+          ]
+        },
+        {
+          "t": 1570,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791174156,
+              "to": 1791483240
+            }
+          ]
+        },
+        {
+          "t": 1584,
+          "kind": "call",
+          "label": "lightweight-candles",
+          "m": "scrollToRealTime",
+          "a": []
+        },
+        {
+          "t": 1585,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791174156,
+              "to": 1791483240
+            }
+          ]
+        },
+        {
+          "t": 1587,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791175185,
+              "to": 1791483240
+            }
+          ]
+        }
+      ],
+      "ev": [
+        {
+          "t": 1558,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": -187.333,
+            "to": 1
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791175185
+          }
+        },
+        {
+          "t": 1559,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 107.667,
+            "to": 296
+          },
+          "vr": {
+            "from": 1791297367,
+            "to": 1791483240
+          }
+        },
+        {
+          "t": 1561,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": -187.333,
+            "to": 1
+          },
+          "vr": {
+            "from": 1791479640,
+            "to": 1791479700
+          }
+        },
+        {
+          "t": 1562,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 98.667,
+            "to": 287
+          },
+          "vr": {
+            "from": 1791275828,
+            "to": 1791482760
+          }
+        },
+        {
+          "t": 1570,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 108.667,
+            "to": 296
+          },
+          "vr": {
+            "from": 1791298780,
+            "to": 1791483240
+          }
+        },
+        {
+          "t": 1570,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 0,
+            "to": 295
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791483240
+          }
+        },
+        {
+          "t": 1578,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 100.667,
+            "to": 287
+          },
+          "vr": {
+            "from": 1791278508,
+            "to": 1791482760
+          }
+        },
+        {
+          "t": 1578,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 0,
+            "to": 295
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791483240
+          }
+        },
+        {
+          "t": 1587,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 1.572,
+            "to": 295
+          },
+          "vr": {
+            "from": 1791175185,
+            "to": 1791483240
+          }
+        },
+        {
+          "t": 1588,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 1,
+            "to": 295
+          },
+          "vr": {
+            "from": 1791175185,
+            "to": 1791483240
+          }
+        }
+      ]
+    },
+    {
+      "mark": "click-1m(load history)",
+      "calls": [
+        {
+          "t": 14036,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791174156,
+              "to": 1791483240
+            }
+          ]
+        },
+        {
+          "t": 14037,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791465420,
+              "to": 1791483240
+            }
+          ]
+        },
+        {
+          "t": 14037,
+          "kind": "call",
+          "label": "lightweight-candles",
+          "m": "scrollToRealTime",
+          "a": []
+        },
+        {
+          "t": 14038,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791175185,
+              "to": 1791483240
+            }
+          ]
+        }
+      ],
+      "ev": [
+        {
+          "t": 14036,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": -25.428,
+            "to": 268
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791483240
+          }
+        },
+        {
+          "t": 14037,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 414.572,
+            "to": 708
+          },
+          "vr": {
+            "from": 1791465420,
+            "to": 1791483240
+          }
+        },
+        {
+          "t": 14038,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 414,
+            "to": 708
+          },
+          "vr": {
+            "from": 1791465420,
+            "to": 1791483240
+          }
+        },
+        {
+          "t": 14049,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 1,
+            "to": 708
+          },
+          "vr": {
+            "from": 1791175185,
+            "to": 1791483240
+          }
+        }
+      ]
+    },
+    {
+      "mark": "click-30m",
+      "calls": [
+        {
+          "t": 15405,
+          "kind": "call",
+          "label": "lightweight-candles",
+          "m": "fitContent",
+          "a": []
+        },
+        {
+          "t": 15409,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791275828,
+              "to": 1791482700
+            }
+          ]
+        },
+        {
+          "t": 15412,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791277502,
+              "to": 1791482700
+            }
+          ]
+        },
+        {
+          "t": 15412,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791174156,
+              "to": 1791482400
+            }
+          ]
+        },
+        {
+          "t": 15667,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791174156,
+              "to": 1791482400
+            }
+          ]
+        },
+        {
+          "t": 15889,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791247949,
+              "to": 1791482400
+            }
+          ]
+        },
+        {
+          "t": 15890,
+          "kind": "call",
+          "label": "lightweight-candles",
+          "m": "scrollToRealTime",
+          "a": []
+        },
+        {
+          "t": 15891,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791174156,
+              "to": 1791482400
+            }
+          ]
+        }
+      ],
+      "ev": [
+        {
+          "t": 15405,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": -187.333,
+            "to": 1
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791175185
+          }
+        },
+        {
+          "t": 15405,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 98.667,
+            "to": 287
+          },
+          "vr": {
+            "from": 1791275828,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 15408,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": -187.333,
+            "to": 1
+          },
+          "vr": {
+            "from": 1791374400,
+            "to": 1791376200
+          }
+        },
+        {
+          "t": 15409,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 99.667,
+            "to": 288
+          },
+          "vr": {
+            "from": 1791277502,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 15412,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 99.667,
+            "to": 287
+          },
+          "vr": {
+            "from": 1791277502,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 15412,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": -1,
+            "to": 286
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 15418,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 101.667,
+            "to": 288
+          },
+          "vr": {
+            "from": 1791279517,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 15418,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 0,
+            "to": 286
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 15667,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 0.529,
+            "to": 286
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 15889,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 440.529,
+            "to": 726
+          },
+          "vr": {
+            "from": 1791247949,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 15891,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 440,
+            "to": 726
+          },
+          "vr": {
+            "from": 1791247949,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 15903,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 329,
+            "to": 726
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791482400
+          }
+        }
+      ]
+    },
+    {
+      "mark": "click-1h",
+      "calls": [
+        {
+          "t": 16925,
+          "kind": "call",
+          "label": "lightweight-candles",
+          "m": "fitContent",
+          "a": []
+        },
+        {
+          "t": 16927,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791278508,
+              "to": 1791482700
+            }
+          ]
+        },
+        {
+          "t": 16932,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791279517,
+              "to": 1791482700
+            }
+          ]
+        },
+        {
+          "t": 16932,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791174156,
+              "to": 1791482400
+            }
+          ]
+        },
+        {
+          "t": 16973,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791192947,
+              "to": 1791482400
+            }
+          ]
+        },
+        {
+          "t": 16973,
+          "kind": "call",
+          "label": "lightweight-candles",
+          "m": "scrollToRealTime",
+          "a": []
+        },
+        {
+          "t": 16974,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791174156,
+              "to": 1791482400
+            }
+          ]
+        },
+        {
+          "t": 16984,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791193930,
+              "to": 1791482400
+            }
+          ]
+        }
+      ],
+      "ev": [
+        {
+          "t": 16925,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": -187.333,
+            "to": 1
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791175185
+          }
+        },
+        {
+          "t": 16925,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 104.667,
+            "to": 293
+          },
+          "vr": {
+            "from": 1791278508,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 16926,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": -187.333,
+            "to": 1
+          },
+          "vr": {
+            "from": 1791266400,
+            "to": 1791270000
+          }
+        },
+        {
+          "t": 16927,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 105.667,
+            "to": 294
+          },
+          "vr": {
+            "from": 1791279517,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 16932,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 105.667,
+            "to": 293
+          },
+          "vr": {
+            "from": 1791279517,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 16932,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": -1,
+            "to": 292
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 16935,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 107.667,
+            "to": 294
+          },
+          "vr": {
+            "from": 1791280800,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 16935,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 0,
+            "to": 292
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 16973,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 439,
+            "to": 732
+          },
+          "vr": {
+            "from": 1791192947,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 16974,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 440,
+            "to": 732
+          },
+          "vr": {
+            "from": 1791193930,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 16984,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 440.561,
+            "to": 732
+          },
+          "vr": {
+            "from": 1791193930,
+            "to": 1791482400
+          }
+        }
+      ]
+    },
+    {
+      "mark": "click-30m-again",
+      "calls": [
+        {
+          "t": 18441,
+          "kind": "call",
+          "label": "lightweight-candles",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791247949,
+              "to": 1791482400
+            }
+          ]
+        },
+        {
+          "t": 18444,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791321365,
+              "to": 1791482700
+            }
+          ]
+        },
+        {
+          "t": 18449,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791322200,
+              "to": 1791482700
+            }
+          ]
+        },
+        {
+          "t": 18449,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791247949,
+              "to": 1791482400
+            }
+          ]
+        },
+        {
+          "t": 18698,
+          "kind": "call",
+          "label": "lightweight-oi",
+          "m": "setVisibleRange",
+          "a": [
+            {
+              "from": 1791248400,
+              "to": 1791482400
+            }
+          ]
+        }
+      ],
+      "ev": [
+        {
+          "t": 18440,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": -187.333,
+            "to": 1
+          },
+          "vr": {
+            "from": 1791174156,
+            "to": 1791175185
+          }
+        },
+        {
+          "t": 18441,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 538.667,
+            "to": 727
+          },
+          "vr": {
+            "from": 1791321365,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 18443,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": -187.333,
+            "to": 1
+          },
+          "vr": {
+            "from": 1790582400,
+            "to": 1790584200
+          }
+        },
+        {
+          "t": 18444,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 539.667,
+            "to": 728
+          },
+          "vr": {
+            "from": 1791322200,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 18449,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 539.667,
+            "to": 727
+          },
+          "vr": {
+            "from": 1791322200,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 18449,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 440,
+            "to": 726
+          },
+          "vr": {
+            "from": 1791247949,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 18452,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 541.667,
+            "to": 728
+          },
+          "vr": {
+            "from": 1791323388,
+            "to": 1791482700
+          }
+        },
+        {
+          "t": 18452,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 440,
+            "to": 726
+          },
+          "vr": {
+            "from": 1791247949,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 18698,
+          "kind": "rangeEvent",
+          "label": "lightweight-candles",
+          "lr": {
+            "from": 441.524,
+            "to": 726
+          },
+          "vr": {
+            "from": 1791248400,
+            "to": 1791482400
+          }
+        },
+        {
+          "t": 18699,
+          "kind": "rangeEvent",
+          "label": "lightweight-oi",
+          "lr": {
+            "from": 441,
+            "to": 726
+          },
+          "vr": {
+            "from": 1791248400,
+            "to": 1791482400
+          }
+        }
+      ]
+    }
+  ]
+}

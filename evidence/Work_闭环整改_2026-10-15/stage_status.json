@@ -1,0 +1,166 @@
+{
+  "stage": "A",
+  "stage_name": "立即阻断不合格新交易和假展示",
+  "contract": "docs/Codex_项目闭环复审与整改合同_2026-10-15.md",
+  "executor": "work",
+  "reviewer": "codex",
+  "generated_utc": "2026-10-15T06:05:00Z",
+  "status": "COMPLETED_PENDING_CODEX_REVIEW",
+  "loop_rounds": {
+    "rule_doc_done_not_equal_runtime_done": 2,
+    "causal_fill_vs_actual_execution_mismatch": 2,
+    "demo_signal_pollution": 1,
+    "note": "只记本轮可复现次数，不编造更早次数。因果成交本轮为「延迟参数被覆盖(0) + 方向丢失(short→long)」，与 2026-10-14「请求前成交」分开记录。"
+  },
+  "changed_files": [
+    {
+      "path": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/paper_engine.py",
+      "runtime_mirror": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/paper_engine.py",
+      "converged": true,
+      "sha256": "1681c63534c462d6f4985b05faeb2724c338a9bec0df95901ef941c5da74555d",
+      "diff": "evidence/Work_闭环整改_2026-10-15/diff/paper_engine.py.diff",
+      "what": "1) 删除 approved_params() 四处无授权 AI 覆盖(delay=0/short=true/max_positions=20/stop=2ATR)，改为逐字读冻结视图 v2.2；2) FALLBACK 改为冻结保守值；3) 新增 new_entry_gate() 服务端新开仓总闸(fail-closed)，接入 open_position()"
+    },
+    {
+      "path": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/live_api.py",
+      "runtime_mirror": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/live_api.py",
+      "converged": true,
+      "sha256": "69b47f6a63dc12d0c650a83382c68511f3d93488486155f151d8803621dd70b8",
+      "diff": "evidence/Work_闭环整改_2026-10-15/diff/live_api.py.diff",
+      "what": "新增只读 legacy_audit() 与 _legacy_index()；paper_positions 追加 verification_status/label/violations；paper_accounts 追加 new_entry_gate 与 legacy_ledger"
+    },
+    {
+      "path": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/adapter.py",
+      "runtime_mirror": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/adapter.py",
+      "converged": true,
+      "sha256": "47661657261b95525fa78f79abb6764dd37bca5b90d19a4a14cac38aca5bc601",
+      "diff": "evidence/Work_闭环整改_2026-10-15/diff/adapter.py.diff",
+      "what": "新增只读路由 GET /api/v1/paper/legacy-audit"
+    },
+    {
+      "path": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/live/paper_new_entry_gate.json",
+      "runtime_mirror": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/live/paper_new_entry_gate.json",
+      "converged": true,
+      "sha256": "0abf64ab0f0f9cabfa0c783558a6bf833d9e498658835cf99da5c41d56e808aa",
+      "what": "新开仓总闸控制文件：allow_new_entries=false（fail-closed）"
+    },
+    {
+      "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/src/components/SignalListPanel.tsx",
+      "sha256": "7f2991464ff05f7478a13c228560461b8ee9e5b4f0477ca883633fa3b312225f",
+      "diff": "evidence/Work_闭环整改_2026-10-15/diff/SignalListPanel.tsx.diff (含非本次历史改动，逐处记录见 03_前端假展示清理记录.md)",
+      "what": "删除 DEMO_ARKM_SIGNAL 演示卡与插入逻辑；删除 ARKM 硬编码价与推导价；入场价列改为现价；删除编造理由"
+    },
+    {
+      "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/src/components/InlineExpandedChart.tsx",
+      "sha256": "ff27c9479c4347d9ac5e9ffa8a8beb4d25cdbfcfb0082858cb24a2305804d88d",
+      "diff": "evidence/Work_闭环整改_2026-10-15/diff/InlineExpandedChart.tsx.diff (同上)",
+      "what": "删除 BTC 兜底价 67150/67200/66400/69000；不再用 currentPrice 冒充入场价，改标现价"
+    }
+  ],
+  "code_sha": {
+    "paper_engine.py": "1681c63534c462d6f4985b05faeb2724c338a9bec0df95901ef941c5da74555d",
+    "live_api.py": "69b47f6a63dc12d0c650a83382c68511f3d93488486155f151d8803621dd70b8",
+    "adapter.py": "47661657261b95525fa78f79abb6764dd37bca5b90d19a4a14cac38aca5bc601",
+    "SignalListPanel.tsx": "7f2991464ff05f7478a13c228560461b8ee9e5b4f0477ca883633fa3b312225f",
+    "InlineExpandedChart.tsx": "ff27c9479c4347d9ac5e9ffa8a8beb4d25cdbfcfb0082858cb24a2305804d88d",
+    "frozen_view_v2_2_sha256": "6d18d222d1991f99dd2ba0cdf80b35fbc57f4f482904c945f43d66ebb9df9501"
+  },
+  "actual_runtime": {
+    "backend": {
+      "pid": 86003,
+      "cwd": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现",
+      "port": 8787,
+      "started_by": "sh 后端实现/start.sh (受控重载，替换旧 pid 80640)",
+      "loaded_sha": {
+        "paper_engine.py": "1681c63534c462d6f4985b05faeb2724c338a9bec0df95901ef941c5da74555d",
+        "live_api.py": "69b47f6a63dc12d0c650a83382c68511f3d93488486155f151d8803621dd70b8",
+        "adapter.py": "47661657261b95525fa78f79abb6764dd37bca5b90d19a4a14cac38aca5bc601"
+      },
+      "market_db": "/Users/boos/Desktop/威科夫因子共振趋势/数据/市场数据/db/market_v2.sqlite3 (与旧进程同一份，经软链解析一致)"
+    },
+    "frontend": {
+      "pid": 80976,
+      "port": 3000,
+      "dir": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio",
+      "served_check": "GET :3000/src/components/SignalListPanel.tsx → DEMO_ARKM_SIGNAL=0 次；InlineExpandedChart 67150=0 次；出现「现价」标签"
+    },
+    "market_collector": {
+      "pid_file": "后端实现/logs/realtime.pid = 80657",
+      "preserved": true,
+      "note": "采集进程未被触碰；未批量杀进程；realtime.log 持续写入"
+    },
+    "live_worker": {
+      "pid_file_value": 15962,
+      "alive": false,
+      "note": "live_worker 未运行（与 Codex 观察一致）；新开仓阻断不依赖 worker 是否运行"
+    }
+  },
+  "verified_facts": [
+    "A1 无更新人类授权：三份近期人类文档(2026-10-14/2026-10-15)均与冻结视图一致或反向确认(只多/3ATR/10仓)，无任何授权改 delay=0/short/max_positions=20/2ATR。见 01_授权来源核对.md",
+    "A2 服务端总闸生效：POST /api/v1/paper/orders open → HTTP 409, reason=new_entry_blocked_pending_closure_review（自动/手工/挂单三路都经 open_position，同一闸）",
+    "A2 总闸作用域：new_entry_gate() 仅被 open_position() 调用；close_position/close_at_price/accrue_funding 无引用 ⇒ 退出/费用/资金费不受影响",
+    "A2 可回滚：false→true→false 三态验证通过(rollback_ok=true)，未产生任何成交/持仓",
+    "A2 pending 一致：闸在 _register_pending 之前返回，且对既有 pending 调 _resolve_pending(rejected)；当前 n_pending_orders=0",
+    "A3 演示信号已移除：源码与 dev server 服务内容均 0 处 DEMO_ARKM_SIGNAL/67150/1.425/1.575",
+    "A3 空态保留：无信号时显示「暂无符合规则的实时信号」+ 阻断提示，不使用任何兜底样本",
+    "A4 旧账本保留：25 笔持仓仍在，账户仍为 4 个独立账户(paper43_3a..3d)，未合并、未重置权益；原始记录未 UPDATE/DELETE",
+    "A4 违规审计(只读)：25 持仓中 17 笔 entry_delay_lt_15m；payload base_short 被写为 long = 20145 条（与 Codex 一致）；structural_kind=sc 共 20893 条",
+    "A4 审计旁表：live/paper_legacy_audit.sqlite3（追加式，位于原账本之外）",
+    "A4 页面标记：/api/v1/paper/positions 每笔带 label(旧版/未验收[/规则违规]) + excluded_from_official_strategy_performance=true",
+    "A4 审计端点：GET /api/v1/paper/legacy-audit → HTTP 200",
+    "A5 共享契约：approved_params() 与冻结视图逐项一致(contract_matches_frozen_view=true)；单账户 5000U/最多10仓/只多 已在契约中定义",
+    "A5 未创建/未启用新账户：prospective_shared_account.status=NOT_CREATED_NOT_ACTIVATED，不补开历史信号",
+    "参数还原实测：delay=15, short_enabled=false, max_positions=10, uniform_stop_atr_mult=3.0, risk=0.005, single=0.1, gross=0.8, cash=0.2, portfolio=0.03, participation=0.01, fee/slip=0.0005, view_sha256=6d18d222..."
+  ],
+  "ledger_write_disclosure": {
+    "note": "阶段A 对旧账本的**唯一**写入是「总闸拦截的拒单审计行」（追加式、幂等、可审计），历史记录零改动。",
+    "detail": {
+      "paper_3a.sqlite3": {
+        "appended_rows": [
+          "paper_blocked(id=2731, event_uid=manual:1792044056571, symbol=BTCUSDT, reason=new_entry_blocked_pending_closure_review)",
+          "paper_order(event_uid=manual:1792044056571, status=rejected, reject_reason=new_entry_blocked_pending_closure_review)"
+        ],
+        "unchanged_counts": {"paper_position": 50, "paper_fill": 88, "paper_funding": 25, "paper_equity": 330},
+        "no_position_fill_funding_equity_change": true,
+        "cause": "A2 手工开仓拦截验证（POST /api/v1/paper/orders）"
+      },
+      "paper_3b_3c_3d.sqlite3": {"mtime": "2026-10-15 11:08", "touched_by_stage_a": false}
+    },
+    "no_update_delete_on_original_rows": true,
+    "audit_side_table_created": "后端实现/live/paper_legacy_audit.sqlite3"
+  },
+  "blockers": [
+    "B1(阶段B)：short→long 方向丢失仍在 live_signal_engine.py:入库写死long / live_worker.py:184 开仓写死long，未修（属阶段B「方向逐层保留」）。本轮仅以总闸阻断其后果。",
+    "B2(阶段B)：入场时刻 >= max(event_time,available_at,真实first_request_ms)+15m 的强制门禁仍只靠 delay 参数；已还原为15但未加显式断言。",
+    "B3(阶段C)：/api/v1/live/health 仍返回 quality.status=ok，而 account_state 心跳停在 2026-10-15T03:08:49Z（明显过期）。未修。",
+    "B4(阶段C)：图表未完整消费同一事件链(adapter.annotations_for 查行情库signals表)；成交标记未由账本fill驱动。未修。",
+    "B5(阶段B)：回测调度仍引用旧研究目录/旧引擎路径；data_hygiene 准PIT/停牌函数只定义未调用，且有前视风险。未接通。",
+    "B6(环境)：前端 src/App.tsx:195 存在既有 TS 类型错误(非本次引入)，未修。",
+    "B7(确认项)：旧 25 笔持仓在总闸生效后不再新增，但**退出/资金费仍会按冻结规则继续处理**；Codex 需确认「旧持仓是否应一并冻结退出」——本轮按合同「保留退出」执行，未冻结。"
+  ],
+  "next": [
+    "等待 Codex 逐项审核阶段A（尤其：总闸是否满足『自动/手工/pending 一致』与『服务端门禁非UI』；审计口径是否认可）。",
+    "Codex 通过后进入阶段B：冻结唯一规则→接通同一策略核心（方向逐层保留、1h/4h与15m同源、事件时间顺序退出、M0–M4阶梯）。",
+    "阶段B前需确认 B7（旧持仓退出是否保留）。"
+  ],
+  "artifacts": [
+    "evidence/Work_闭环整改_2026-10-15/01_授权来源核对.md",
+    "evidence/Work_闭环整改_2026-10-15/03_前端假展示清理记录.md",
+    "evidence/Work_闭环整改_2026-10-15/old_ledger_violation_audit.json",
+    "evidence/Work_闭环整改_2026-10-15/shared_account_contract_and_isolation.json",
+    "evidence/Work_闭环整改_2026-10-15/diff/*.diff",
+    "evidence/Work_闭环整改_2026-10-15/pre_reload/*.json",
+    "evidence/Work_闭环整改_2026-10-15/post_reload/*.json",
+    "evidence/Work_闭环整改_2026-10-15/tools/*.py"
+  ],
+  "write_lock": {
+    "claimed_scope": [
+      "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/{paper_engine.py,live_api.py,adapter.py,live/paper_new_entry_gate.json}",
+      "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/{paper_engine.py,live_api.py,adapter.py,live/paper_new_entry_gate.json,live/paper_legacy_audit.sqlite3}",
+      "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/src/components/{SignalListPanel.tsx,InlineExpandedChart.tsx}",
+      "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_闭环整改_2026-10-15/"
+    ],
+    "concurrent_writers_detected": "none (近2h内除 pid/log/db 外无源码被写；codex worktree c83e 为空占位)",
+    "not_touched": ["行情库 market_v2.sqlite3", "四份旧纸面账本原表", "采集进程 realtime(80657)", "live_signal 表原行"]
+  }
+}

@@ -1,0 +1,284 @@
+{
+ "checked_at_utc": "2026-10-07T13:43Z~13:55Z",
+ "task": "聪明钱真实来源与可接入路径核查（原站真实 API 主机/路由/参数/六字段名称与统计定义；区分 404 与 401；币安当前实际字段对照）",
+ "discipline": {
+  "read_only": true,
+  "method": "GET",
+  "credentials": "omit（不发送、不读取、不输出任何 cookie/token/密钥）",
+  "follows_redirect": false,
+  "logs_in_or_registers": false,
+  "changes_account_or_permissions": false,
+  "pays_or_buys_data": false,
+  "uses_personal_trading_account": false,
+  "isolated_browser_session": "sm-audit（不触碰 127.0.0.1:3000 会话）"
+ },
+
+ "part1_api_host": {
+  "finding": "原产品所有分析接口都是**同源相对路径**，因此真实 API 主机 = 前端主机 = https://www.tradeflow.club",
+  "evidence": {
+   "helper_offset": 747823,
+   "helper_code": "async function xT(e,t,n,r){let i={method:e,headers:{\"Content-Type\":`application/json`}};(e===`POST`||e===`PUT`)&&n&&(i.body=JSON.stringify(n));let a=r?.params?`${t}?${new URLSearchParams(yT(r.params)).toString()}`:t,o=await fetch(a,i).then(e=>e.json());if(!o.success)throw Error(...);return o.data}",
+   "helper_facts": [
+    "只发相对路径（无 host、无 baseURL）",
+    "请求头只有 Content-Type，**没有 Authorization 头**",
+    "GET 的查询串由 params 经 URLSearchParams 拼到路径后",
+    "响应信封 {success, message, data, trace_id|requestId}，非 success 抛错",
+    "鉴权依赖**浏览器同源 cookie 会话**（fetch 默认 same-origin credentials）"
+   ]
+  }
+ },
+
+ "part2_301_vs_404_vs_401": {
+  "question": "上一份报告记录的『原站请求 301 → 404』是地址/入口错误，还是路由真的不存在？",
+  "answer": "**是地址/入口错误**（两处都错），不能据此判定原站来源不可得。",
+  "why": [
+   "301：请求写的是 `https://tradeflow.club`（漏了 www）。实测 apex 域对**整站任何路径**都 301 → www，属主机名归一化，与 API 无关。",
+   "404：请求路径写的是 `/api/analytics/smart-money-signal/BTCUSDT`，把 {symbol} 直接当成资源根。bundle 声明的真实路由是 /symbols、/{symbol}/kline、/rankings、/volatility-rankings、/{symbol}/active-signal —— 该写法**不在声明清单里**，故 404『Cannot GET』= 路径不存在。"
+  ],
+  "live_probe": {
+   "script": "docs/验收证据/probe_smartmoney_routes_2026-10-07.mjs",
+   "output": "docs/验收证据/聪明钱真实路由与状态码只读核查_2026-10-07.json",
+   "apex_without_www": { "http": 301, "location": "https://www.tradeflow.club/api/analytics/smart-money-signal/symbols" },
+   "previously_probed_wrong_path": {
+    "url": "https://www.tradeflow.club/api/analytics/smart-money-signal/BTCUSDT",
+    "http": 404,
+    "body": "{\"statusCode\":404,...,\"message\":\"Cannot GET /api/analytics/smart-money-signal/BTCUSDT\"}",
+    "reading": "Express 默认路由未命中文案 ⇒ **路由不存在**"
+   },
+   "all_11_declared_routes": {
+    "http": 401,
+    "body_sample": "{\"statusCode\":401,\"requestId\":\"3e6c02b7-...\",\"trace_id\":\"ba2f2a13...\",\"span_id\":\"2a96f714...\",\"timestamp\":\"2026-10-07T13:43:07.147Z\",\"message\":\"Unauthorized\"}",
+    "reading": "应用自身错误信封（带 requestId/trace_id/span_id）⇒ **路由存在且被应用处理，仅缺登录会话**"
+   },
+   "distinction": "404 = 路由不存在（我们路径写错）；401 = 路由存在、需登录（真实状态）"
+  }
+ },
+
+ "part3_runtime_evidence": {
+  "script": "docs/验收证据/probe_smartmoney_runtime_2026-10-07.mjs",
+  "output": "docs/验收证据/聪明钱原站运行时证据_2026-10-07.json",
+  "screenshot": "docs/验收截图/原站-聪明钱路由被登录守卫拦截-2026-10-07.png",
+  "observed": {
+   "opened": "https://www.tradeflow.club/analytics/smart-money-signal",
+   "final_url": "https://www.tradeflow.club/login",
+   "router_guard_redirected_to_login": true,
+   "api_requests_observed": ["GET /api/auth/me (Fetch) 200"],
+   "api_analytics_requests_observed": [],
+   "reading": "未登录访客打开聪明钱页时，SPA 先调 /api/auth/me（200，未登录），随即被客户端路由守卫 LT() 重定向到 /login，**不会**发出任何 /api/analytics/* 请求 ⇒ 路由真实存在，访问需已登录会话；与服务端 401 一致"
+  },
+  "login_page_text": "TradeFlow / 欢迎回来 / 登录 TradeFlow，继续查看市场动态。/ 邮箱 / 密码 / 登录 / 或 / 使用 Google 登录 / 还没有账号？注册账号",
+  "access_model": "邮箱+密码 或 Google 登录；页面有注册入口 ⇒ 属**账号制**（菜单上聪明钱明细标 User 角色、币种列表标 VIP 角色）",
+  "existing_logged_in_session_in_managed_browser": false,
+  "note": "托管浏览器内**未发现**任何已登录的原站会话（无已保存 state/storage 文件）；用户系统 Chrome profile 属个人数据，未读取。故本轮**未**取得任何登录后数据。"
+ },
+
+ "part4_declared_routes_full": [
+  { "service": "ST()",  "method": "GET", "path": "/api/analytics/smart-money-signal/symbols", "query_params": "无", "offset": 749236, "live_http": 401 },
+  { "service": "Sie()", "method": "GET", "path": "/api/analytics/smart-money-signal/{symbol}/kline", "query_params": "includeTopTraderRatios=true", "offset": 749362, "live_http": 401 },
+  { "service": "Aie()", "method": "GET", "path": "/api/analytics/smart-money-signal/rankings", "query_params": "无", "offset": 750079, "live_http": 401 },
+  { "service": "jie()", "method": "GET", "path": "/api/analytics/smart-money-signal/volatility-rankings", "query_params": "无", "offset": 750167, "live_http": 401 },
+  { "service": "Hie()", "method": "GET", "path": "/api/analytics/smart-money-signal/{symbol}/active-signal", "query_params": "无", "offset": 751398, "live_http": 401 },
+  { "service": "Mie()", "method": "GET", "path": "/api/analytics/coin-list", "query_params": "无", "offset": 750266, "live_http": 401 },
+  { "service": "Uie()", "method": "GET", "path": "/api/analytics/coin-list/{symbol}", "query_params": "无", "offset": 751459, "live_http": 401 },
+  { "service": "Nie()", "method": "GET", "path": "/api/analytics/funding-rates", "query_params": "无", "offset": 750336, "live_http": 401 },
+  { "service": "TT()",  "method": "GET", "path": "/api/analytics/feed", "query_params": "params 对象（事件 type/symbol 等）", "offset": 751090, "live_http": 401 },
+  { "service": "ET()",  "method": "GET", "path": "/api/analytics/signals", "query_params": "symbol,status,limit=20,cursor", "offset": 751166, "live_http": 401 },
+  { "service": "Vie()", "method": "GET", "path": "/api/analytics/signals/{id}", "query_params": "无", "offset": 751246, "live_http": 401 }
+ ],
+ "bundle_provenance": {
+  "url": "https://www.tradeflow.club/assets/index-27SKEJ8j.js",
+  "bytes": 2158821,
+  "sha256": "80dac5a26b62e83b86a822af8d6973c1c2342a6faca01181fab337de27cfa7d4",
+  "local_copy": "outputs/网站逆向研究/tradeflow_index-27SKEJ8j.js",
+  "runtime_reconfirmed": "本次浏览器实测页面加载的正是同一个 bundle（/assets/index-27SKEJ8j.js）"
+ },
+
+ "part5_six_fields_real_names_and_definitions": {
+  "note": "下表左侧是**我们前端六槽**（TokenTable 第4/5列：聪明钱多头/空头 × 持仓额/内部占比/均价）；右侧是原产品 bundle 中**实际存在的字段名与展示/统计口径**。定位偏移均为 tradeflow_index-27SKEJ8j.js 字符 offset。",
+  "important": "bundle 中检索『内部占比』命中 **0 处** ⇒ 该中文标签是**我们自造**的，原产品没有这个概念；原产品对应语义是『巨鲸持仓占多/空头持仓比例』（展示）与『聪明钱巨鲸多头占OI比例』（信号域 whaleOiShare）。",
+  "slots": [
+   {
+    "our_slot": "聪明钱多头 · 持仓额(USD)",
+    "original_field": "longPos",
+    "original_label": "多头持仓量",
+    "definition": "多头持仓量（**数量**，不是 USD 金额）；tooltip 源码：`多头持仓量：vT(e.longPos)（巨鲸：vT(e.longWhalePos)，${longWhalePos/longPos*100}%）`",
+    "evidence_offset": 1797452,
+    "usd_amount_available": false,
+    "binance_public_equivalent": "无（币安无按多/空拆分的持仓额）"
+   },
+   {
+    "our_slot": "聪明钱多头 · 内部占比(%)",
+    "original_field": "longWhalePos / longPos × 100%",
+    "original_label": "巨鲸多头持仓占多头持仓比例",
+    "definition": "展示口径：巨鲸多头持仓量 ÷ 多头持仓量 × 100%，保留 1 位小数（源码 `t=(e,t)=>t?`${_T(e/t*100,1)}%`:`--``）；信号域另有 `whaleOiShare` = 聪明钱巨鲸多头占OI比例（偏移 1833707）",
+    "evidence_offset": 1797452,
+    "usd_amount_available": false,
+    "binance_public_equivalent": "无（币安无巨鲸/队列概念）"
+   },
+   {
+    "our_slot": "聪明钱多头 · 均价",
+    "original_field": "longAvgPrice（巨鲸另为 longWhalesAvgPrice）",
+    "original_label": "多头/巨鲸均价",
+    "definition": "多头持仓均价；tooltip 源码：`多头/巨鲸均价：vT(e.longAvgPrice) / vT(e.longWhalesAvgPrice)`；信号域标签 `entryPrice` = 聪明钱多头平均持仓成本、`whaleEntryPrice` = 聪明钱巨鲸多头平均成本",
+    "evidence_offset": 1797452,
+    "usd_amount_available": false,
+    "binance_public_equivalent": "无（币安公开 API 无平均开仓价）"
+   },
+   {
+    "our_slot": "聪明钱空头 · 持仓额(USD)",
+    "original_field": "shortPos",
+    "original_label": "空头持仓量",
+    "definition": "空头持仓量（数量）",
+    "evidence_offset": 1797452,
+    "usd_amount_available": false,
+    "binance_public_equivalent": "无"
+   },
+   {
+    "our_slot": "聪明钱空头 · 内部占比(%)",
+    "original_field": "shortWhalePos / shortPos × 100%",
+    "original_label": "巨鲸空头持仓占空头持仓比例",
+    "definition": "展示口径同上，1 位小数",
+    "evidence_offset": 1797452,
+    "usd_amount_available": false,
+    "binance_public_equivalent": "无"
+   },
+   {
+    "our_slot": "聪明钱空头 · 均价",
+    "original_field": "shortAvgPrice（巨鲸另为 shortWhalesAvgPrice）",
+    "original_label": "空头/巨鲸均价",
+    "definition": "空头持仓均价",
+    "evidence_offset": 1797452,
+    "usd_amount_available": false,
+    "binance_public_equivalent": "无"
+   }
+  ],
+  "series_fields_kline_api": {
+   "endpoint": "GET /api/analytics/smart-money-signal/{symbol}/kline?includeTopTraderRatios=true",
+   "offset": 1800223,
+   "fields": ["longShortRatioArr", "topPositionLongShortRatioArr", "topAccountLongShortRatioArr", "topAveragePositionConcentrationArr", "longPosArr", "shortPosArr", "longWhalePosArr", "shortWhalePosArr", "longAvgPriceArr", "longWhalesAvgPriceArr", "shortAvgPriceArr", "shortgWhalesAvgPriceArr", "longTradersArr", "shortTradersArr", "longWhalesArr", "shortWhalesArr"],
+   "note": "源码里 `shortgWhalesAvgPriceArr` 是原站自身的拼写，如实照录"
+  },
+  "summary_card_fields": {
+   "component": "vme",
+   "offset": 1795867,
+   "columns": [
+    { "label": "价格", "field": "lastPrice" },
+    { "label": "24h 涨跌", "field": "priceChangePercent" },
+    { "label": "资金费率", "field": "fundingRate", "format": "(e*100).toFixed(4)+'%'" },
+    { "label": "总 OI(U)", "field": "openInterestValue" },
+    { "label": "聪明钱多空比", "field": "smartMoneyLongShortRatio", "format": "4 位小数" },
+    { "label": "多头 OI%", "field": "smartMoneyLongOiRatio", "format": "(e*100).toFixed(2)+'%'" },
+    { "label": "空头 OI%", "field": "smartMoneyShortOiRatio", "format": "(e*100).toFixed(2)+'%'" },
+    { "label": "大户持仓比", "field": "topPositionRatio", "format": "3 位小数" },
+    { "label": "多/空人数", "field": "smartMoneyLongTraders / smartMoneyShortTraders" }
+   ]
+  },
+  "coin_list_columns": {
+   "endpoint": "GET /api/analytics/coin-list",
+   "offset": 1820900,
+   "columns": [
+    { "label": "总OI(U)", "field": "openInterestValue" },
+    { "label": "多空比", "field": "smartMoneyLongShortRatio", "format": "4 位小数，默认降序" },
+    { "label": "多头OI%", "field": "smartMoneyLongOiRatio", "format": "×100，2 位小数" },
+    { "label": "空头OI%", "field": "smartMoneyShortOiRatio", "format": "×100，2 位小数" },
+    { "label": "多 / 空", "field": "smartMoneyLongTraders(+smartMoneyLongWhales🐋) / smartMoneyShortTraders(+smartMoneyShortWhales🐋)" },
+    { "label": "大户持仓集中度", "field": "topAveragePositionConcentration", "format": "4 位小数" },
+    { "label": "大户持仓比", "field": "topPositionRatio", "format": "3 位小数" },
+    { "label": "大户账户比", "field": "topAccountRatio", "format": "3 位小数" },
+    { "label": "账户比", "field": "globalAccountRatio", "format": "3 位小数" },
+    { "label": "数据时间", "field": "dataAt", "format": "N 分钟前" }
+   ]
+  },
+  "field_label_dictionary": {
+   "offset": 1835066,
+   "Ume": {
+    "smartMoney": "聪明钱数据",
+    "ratios": "大户多空比",
+    "positionRatio": "大户持仓比",
+    "accountRatio": "大户账户比",
+    "concentration": "大户多头持仓集中度",
+    "whaleQty": "聪明钱巨鲸多头持仓量",
+    "whaleCount": "聪明钱巨鲸人数",
+    "shortWhaleQty": "聪明钱巨鲸空头持仓量",
+    "entryPrice": "聪明钱多头平均持仓成本",
+    "whaleEntryPrice": "聪明钱巨鲸多头平均成本",
+    "smartMoneyRatio": "聪明钱多空比",
+    "whaleOiShare": "聪明钱巨鲸多头占OI比例",
+    "fundingIntervalHours": "资金结算周期",
+    "anchor": "行情时间"
+   }
+  },
+  "statistical_definition_status": {
+   "display_level": "已知（上式换算式均来自 bundle 源码）",
+   "queue_level": "**未知**：『聪明钱』入选账户范围、『巨鲸』阈值、统计窗口、OI 分母口径、去重与历史版本，**均不在前端 bundle 中**，只存在于原站服务端 ⇒ 即使拿到登录会话，队列定义仍需原站书面说明才能复刻"
+  }
+ },
+
+ "part6_binance_current_reality": {
+ "checked_at_utc": "2026-10-07T13:57Z",
+ "public_endpoints": [
+  { "url": "https://fapi.binance.com/futures/data/topLongShortPositionRatio?symbol=BTCUSDT&period=1h&limit=1", "http": 200, "sample": { "longAccount": "0.6285", "longShortRatio": "1.6919", "shortAccount": "0.3715", "timestamp": 1791378000000 }, "supports": "大户持仓量多空比（比率）", "has_amount": false, "has_avg_price": false },
+  { "url": "https://fapi.binance.com/futures/data/topLongShortAccountRatio?symbol=BTCUSDT&period=1h&limit=1", "http": 200, "sample": { "longAccount": "0.6119", "longShortRatio": "1.5767", "shortAccount": "0.3881", "timestamp": 1791378000000 }, "supports": "大户账户数多空比", "has_amount": false, "has_avg_price": false },
+  { "url": "https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol=BTCUSDT&period=1h&limit=1", "http": 200, "sample": { "longAccount": "0.5975", "longShortRatio": "1.4845", "shortAccount": "0.4025", "timestamp": 1791378000000 }, "supports": "全局账户数多空比", "has_amount": false, "has_avg_price": false },
+  { "url": "https://fapi.binance.com/futures/data/takerlongshortRatio?symbol=BTCUSDT&period=1h&limit=1", "http": 200, "sample": { "buySellRatio": "1.1549", "sellVol": "3744.6850", "buyVol": "4324.6780", "timestamp": 1791374400000 }, "supports": "taker 主动买卖量比", "has_amount": false, "has_avg_price": false },
+  { "url": "https://fapi.binance.com/futures/data/openInterestHist?symbol=BTCUSDT&period=5m&limit=1", "http": 200, "sample": { "sumOpenInterest": "96209.86500000", "sumOpenInterestValue": "7977130824.76352600", "CMCCirculatingSupply": "20094521.00000000" }, "supports": "总持仓量 + 总持仓名义额(USD)（全市场，无多空拆分）", "has_amount": "总量有，按多/空拆分无", "has_avg_price": false },
+  { "url": "https://fapi.binance.com/fapi/v1/openInterest?symbol=BTCUSDT", "http": 200, "sample": { "openInterest": "96072.611" }, "supports": "当前总持仓量（无多空拆分）", "has_amount": false, "has_avg_price": false },
+  { "url": "https://fapi.binance.com/fapi/v1/positionRisk?symbol=BTCUSDT", "http": 404, "note": "USER_DATA 签名端点，公开不可用；且只代表本授权账户，不是聪明钱队列" }
+ ],
+ "hypothetical_endpoints_checked": [
+  { "path": "futures/data/topLongShortPositionAmount", "http": 404 },
+  { "path": "futures/data/longShortPositionAmount", "http": 404 },
+  { "path": "futures/data/topTraderPositionAvgPrice", "http": 404 }
+ ],
+ "conclusion": "币安公开 API **只有比率类**指标（大户持仓量比/大户账户比/全局账户比/taker 量比）与**全市场**总量（总 OI 数量与名义额）。**没有** 按多/空拆分的持仓额(USD)、**没有** 巨鲸/队列概念、**没有** 平均开仓价。"
+ },
+
+ "part7_naming_correspondence_with_original": {
+  "note": "以下为**命名对应关系**（非直接连通）：原产品的这三个比率字段名与币安公开端点指标名一一对应，可作后续业务核对的锚点；但**都不属于我们六槽**。",
+  "map": [
+   { "original_field": "topPositionRatio", "original_label": "大户持仓比 / 大户持仓多空比", "binance": "topLongShortPositionRatio.longShortRatio" },
+   { "original_field": "topAccountRatio", "original_label": "大户账户比", "binance": "topLongShortAccountRatio.longShortRatio" },
+   { "original_field": "globalAccountRatio", "original_label": "账户比 / 全局账户多空比", "binance": "globalLongShortAccountRatio.longShortRatio" },
+   { "original_field": "longShortRatioArr / topPositionLongShortRatioArr / topAccountLongShortRatioArr", "original_label": "上述三者的时序", "binance": "同一端点的 period 序列（limit 可调）" }
+  ],
+  "cannot_map": ["smartMoneyLongShortRatio", "smartMoneyLongOiRatio", "smartMoneyShortOiRatio", "longPos/shortPos", "longWhalePos/shortWhalePos", "longAvgPrice/shortAvgPrice", "longWhalesAvgPrice/shortWhalesAvgPrice", "longTraders/shortTraders", "longWhales/shortWhales", "topAveragePositionConcentration"]
+ },
+
+ "part8_per_slot_verdict": [
+  { "slot": "聪明钱多头 · 持仓额", "missing": "按多/空拆分的持仓额(USD)", "binance": "缺", "original": "有字段(longPos)，但为持仓量非金额，且需登录", "fillable_now": false },
+  { "slot": "聪明钱多头 · 内部占比", "missing": "巨鲸多头持仓 / (多头持仓 或 OI) 的队列口径", "binance": "缺", "original": "有字段(longWhalePos/longPos 与 whaleOiShare)，需登录", "fillable_now": false },
+  { "slot": "聪明钱多头 · 均价", "missing": "多头持仓均价", "binance": "缺", "original": "有字段(longAvgPrice)，需登录", "fillable_now": false },
+  { "slot": "聪明钱空头 · 持仓额", "missing": "同上", "binance": "缺", "original": "有字段(shortPos)，需登录", "fillable_now": false },
+  { "slot": "聪明钱空头 · 内部占比", "missing": "同上", "binance": "缺", "original": "有字段(shortWhalePos/shortPos)，需登录", "fillable_now": false },
+  { "slot": "聪明钱空头 · 均价", "missing": "空头持仓均价", "binance": "缺", "original": "有字段(shortAvgPrice)，需登录", "fillable_now": false }
+ ],
+ "explicitly_not_substituted": [
+  "不用自有账户 entryPrice / VWAP 代替均价",
+  "不用总 OI × 大户比率 推算持仓额",
+  "不用大户/全局账户数比或 taker 量比冒充『聪明钱占比』"
+ ],
+
+ "part9_unknowns_stated_as_unknown": [
+  "原站『聪明钱』队列定义（入选账户范围、阈值、统计窗口、OI 分母、去重与历史版本）——前端 bundle 内不存在，**未知**",
+  "原站数据更新频率与覆盖币种——**未知**（需登录后观察 updatedAt / symbols 覆盖，或原站书面说明）",
+  "原站各指标的上游数据源（是否为币安/多交易所聚合）——bundle 只证明其**图表**走币安（fapi klines，偏移 1841870）与 TradingView `BINANCE:{sym}.P`，**不证明**指标数据源",
+  "原站账号所需等级（聪明钱明细菜单标 User、币种列表标 VIP）与是否付费——**未知**，本轮未登录、未付费"
+ ],
+
+ "part10_next_steps_with_estimate": {
+  "option_A_use_own_account_readonly": {
+   "what": "由用户提供**自己**在原站的合法登录会话（仅在用户自己的浏览器里保持登录），我只做只读页面观察，仍**不提取/不输出**任何 cookie/token/密钥",
+   "can_get": "六槽真实数值样例 + updatedAt 更新频率 + symbols 覆盖币种数 + 队列行为观察",
+   "cannot_get": "队列定义本身（服务端算法）",
+   "estimate": "会话就绪后约 1–2 小时（含样例取样、频率观测、字段核对）"
+  },
+  "option_B_keep_as_is": {
+   "what": "维持六槽空态，但把悬浮说明改为**准确表述**（当前说明里的『301→404 不可达』结论需更正）",
+   "estimate": "约 20 分钟（本轮已一并完成）"
+  },
+  "option_C_no_public_substitute": {
+   "what": "不接任何替代源（币安公开 API 结构上无法支撑六槽）",
+   "estimate": "—"
+  }
+ }
+}

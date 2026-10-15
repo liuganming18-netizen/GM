@@ -1,0 +1,928 @@
+{
+ "title": "币安公开聪明钱接口 真实响应与接入条件（只读核查）",
+ "checkedAt": "2026-10-07T15:40:22.058Z",
+ "host": "https://www.binance.bh",
+ "credentialPolicy": "不携带 cookie / Authorization / 交易密钥；不读取任何个人交易账户；不付费。仅 curl 默认头 + Accept: application/json。",
+ "routes": [
+  {
+   "name": "overview",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/overview?symbol={SYMBOL}&timeRange=ALL",
+   "required": [
+    "symbol"
+   ],
+   "optional": [
+    "timeRange"
+   ],
+   "note": "timeRange 缺省时口径与 ALL 不同（实测 longTraders 172 vs 168），必须显式传 ALL 才与 stats 自洽"
+  },
+  {
+   "name": "details/stats",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={SYMBOL}&timeRange=ALL",
+   "required": [
+    "symbol",
+    "timeRange"
+   ],
+   "optional": [],
+   "note": "缺 timeRange ⇒ HTTP 400 {\"code\":\"000002\",\"message\":\"illegal parameter\"}"
+  },
+  {
+   "name": "details/list",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={SYMBOL}&page=1&rows=10&timeRange=ALL&sortingField=TIME&sortingOrder=DESC",
+   "required": [
+    "symbol",
+    "timeRange"
+   ],
+   "optional": [
+    "page",
+    "rows",
+    "sortingField",
+    "sortingOrder"
+   ],
+   "note": "缺 page/rows/sortingField/sortingOrder 仍 200（有默认值）；缺 timeRange ⇒ 400"
+  }
+ ],
+ "paramTests": [
+  {
+   "label": "overview 缺 symbol",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/overview",
+   "httpStatus": 200,
+   "code": "000000",
+   "message": null,
+   "success": true,
+   "dataIsNull": true,
+   "dataKeys": null,
+   "longTraders": null
+  },
+  {
+   "label": "overview 无效 symbol=NOSUCHCOINUSDT",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/overview?symbol=NOSUCHCOINUSDT",
+   "httpStatus": 200,
+   "code": "000000",
+   "message": null,
+   "success": true,
+   "dataIsNull": true,
+   "dataKeys": null,
+   "longTraders": null
+  },
+  {
+   "label": "overview 缺 timeRange（默认口径）",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/overview?symbol=ARXUSDT",
+   "httpStatus": 200,
+   "code": "000000",
+   "message": null,
+   "success": true,
+   "dataIsNull": false,
+   "dataKeys": [
+    "symbol",
+    "totalPositions",
+    "totalTraders",
+    "longShortRatio",
+    "longTraders",
+    "longTradersQty",
+    "longTradersAvgEntryPrice",
+    "longWhales",
+    "longWhalesQty",
+    "longWhalesAvgEntryPrice",
+    "shortTraders",
+    "shortTradersQty",
+    "shortTradersAvgEntryPrice",
+    "shortWhales",
+    "shortWhalesQty",
+    "shortWhalesAvgEntryPrice",
+    "longProfitTraders",
+    "shortProfitTraders",
+    "longProfitWhales",
+    "shortProfitWhales",
+    "updateTime"
+   ],
+   "longTraders": 169
+  },
+  {
+   "label": "overview timeRange=ALL",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/overview?symbol=ARXUSDT&timeRange=ALL",
+   "httpStatus": 200,
+   "code": "000000",
+   "message": null,
+   "success": true,
+   "dataIsNull": false,
+   "dataKeys": [
+    "symbol",
+    "totalPositions",
+    "totalTraders",
+    "longShortRatio",
+    "longTraders",
+    "longTradersQty",
+    "longTradersAvgEntryPrice",
+    "longWhales",
+    "longWhalesQty",
+    "longWhalesAvgEntryPrice",
+    "shortTraders",
+    "shortTradersQty",
+    "shortTradersAvgEntryPrice",
+    "shortWhales",
+    "shortWhalesQty",
+    "shortWhalesAvgEntryPrice",
+    "longProfitTraders",
+    "shortProfitTraders",
+    "longProfitWhales",
+    "shortProfitWhales",
+    "updateTime"
+   ],
+   "longTraders": 169
+  },
+  {
+   "label": "details/stats 缺 timeRange",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol=ARXUSDT",
+   "httpStatus": 400,
+   "code": "000002",
+   "message": "illegal parameter",
+   "success": false,
+   "dataIsNull": true,
+   "dataKeys": null,
+   "longTraders": null
+  },
+  {
+   "label": "details/stats timeRange=ALL",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol=ARXUSDT&timeRange=ALL",
+   "httpStatus": 200,
+   "code": "000000",
+   "message": null,
+   "success": true,
+   "dataIsNull": false,
+   "dataKeys": [
+    "longTraders",
+    "longWhales",
+    "longPositions",
+    "longQty",
+    "longWhalePositions",
+    "longWhaleQty",
+    "shortTraders",
+    "shortWhales",
+    "shortPositions",
+    "shortQty",
+    "shortWhalePositions",
+    "shortWhaleQty"
+   ],
+   "longTraders": 169
+  },
+  {
+   "label": "details/list 缺 timeRange",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/details/list?symbol=ARXUSDT",
+   "httpStatus": 400,
+   "code": "000002",
+   "message": "illegal parameter",
+   "success": false,
+   "dataIsNull": true,
+   "dataKeys": null,
+   "longTraders": null
+  },
+  {
+   "label": "details/list 最小参数(symbol+timeRange)",
+   "url": "https://www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/details/list?symbol=ARXUSDT&timeRange=ALL",
+   "httpStatus": 200,
+   "code": "000000",
+   "message": null,
+   "success": true,
+   "dataIsNull": false,
+   "dataKeys": "array(4)",
+   "longTraders": null
+  }
+ ],
+ "samples": {
+  "ARXUSDT": {
+   "overview": {
+    "httpStatus": 200,
+    "code": "000000",
+    "data": {
+     "symbol": "ARXUSDT",
+     "totalPositions": 8957987.2376,
+     "totalTraders": 270,
+     "longShortRatio": 10.1314,
+     "longTraders": 169,
+     "longTradersQty": 30343275,
+     "longTradersAvgEntryPrice": 0.2303209,
+     "longWhales": 102,
+     "longWhalesQty": 30004417,
+     "longWhalesAvgEntryPrice": 0.22993993,
+     "shortTraders": 101,
+     "shortTradersQty": 2994973,
+     "shortTradersAvgEntryPrice": 0.25706929,
+     "shortWhales": 68,
+     "shortWhalesQty": 2528233,
+     "shortWhalesAvgEntryPrice": 0.25853704,
+     "longProfitTraders": 55,
+     "shortProfitTraders": 56,
+     "longProfitWhales": 30,
+     "shortProfitWhales": 40,
+     "updateTime": 1791353989563
+    }
+   },
+   "stats": {
+    "httpStatus": 200,
+    "code": "000000",
+    "data": {
+     "longTraders": 169,
+     "longWhales": 102,
+     "longPositions": 8176229.67218994,
+     "longQty": 30343758,
+     "longWhalePositions": 8084914.59929724,
+     "longWhaleQty": 30004868,
+     "shortTraders": 100,
+     "shortWhales": 67,
+     "shortPositions": 807278.43447855,
+     "shortQty": 2995985,
+     "shortWhalePositions": 681513.74056035,
+     "shortWhaleQty": 2529245
+    }
+   },
+   "list": {
+    "httpStatus": 200,
+    "code": "000000",
+    "rowCount": 4,
+    "rows": [
+     {
+      "side": "SELL",
+      "userType": 2,
+      "traders": 99,
+      "currentPositions": 807256.87820415,
+      "currentQty": 2995905,
+      "avgEntryPrice": 0.25707654,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 2,
+      "traders": 168,
+      "currentPositions": 8175911.71714254,
+      "currentQty": 30342578,
+      "avgEntryPrice": 0.23032387,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "SELL",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 21.5562744,
+      "currentQty": 80,
+      "avgEntryPrice": 0.1344,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 317.9550474,
+      "currentQty": 1180,
+      "avgEntryPrice": 0.16940678,
+      "timeRange": "ALL"
+     }
+    ]
+   }
+  },
+  "BTCUSDT": {
+   "overview": {
+    "httpStatus": 200,
+    "code": "000000",
+    "data": {
+     "symbol": "BTCUSDT",
+     "totalPositions": 2845822096.863205,
+     "totalTraders": 3133,
+     "longShortRatio": 2.6662,
+     "longTraders": 2361,
+     "longTradersQty": 24865.807,
+     "longTradersAvgEntryPrice": 82330.49752874,
+     "longWhales": 505,
+     "longWhalesQty": 22967.326,
+     "longWhalesAvgEntryPrice": 82351.79602629,
+     "shortTraders": 772,
+     "shortTradersQty": 9326.169,
+     "shortTradersAvgEntryPrice": 82349.91507687,
+     "shortWhales": 239,
+     "shortWhalesQty": 8941.581,
+     "shortWhalesAvgEntryPrice": 82340.20375276,
+     "longProfitTraders": 986,
+     "shortProfitTraders": 445,
+     "longProfitWhales": 204,
+     "shortProfitWhales": 117,
+     "updateTime": 1791353989563
+    }
+   },
+   "stats": {
+    "httpStatus": 200,
+    "code": "000000",
+    "data": {
+     "longTraders": 2361,
+     "longWhales": 505,
+     "longPositions": 2069598522.674905,
+     "longQty": 24865.807,
+     "longWhalePositions": 1911586620.1082015,
+     "longWhaleQty": 22967.326,
+     "shortTraders": 772,
+     "shortWhales": 239,
+     "shortPositions": 776223574.1883001,
+     "shortQty": 9326.169,
+     "shortWhalePositions": 744214045.7366999,
+     "shortWhaleQty": 8941.581
+    }
+   },
+   "list": {
+    "httpStatus": 200,
+    "code": "000000",
+    "rowCount": 10,
+    "rows": [
+     {
+      "side": "BUY",
+      "userType": 2,
+      "traders": 2244,
+      "currentPositions": 2050262699.3737051,
+      "currentQty": 24633.491,
+      "avgEntryPrice": 82349.41514269,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "SELL",
+      "userType": 2,
+      "traders": 745,
+      "currentPositions": 773930901.3261001,
+      "currentQty": 9298.623,
+      "avgEntryPrice": 82364.54378124,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 12567.8357,
+      "currentQty": 0.151,
+      "avgEntryPrice": 80980.90528039,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 16646.14,
+      "currentQty": 0.2,
+      "avgEntryPrice": 83188,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 1,
+      "traders": 1,
+      "currentPositions": 540916.3193,
+      "currentQty": 6.499,
+      "avgEntryPrice": 83843.87370877,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 16895.8321,
+      "currentQty": 0.203,
+      "avgEntryPrice": 84285.05244934,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "SELL",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 29963.052,
+      "currentQty": 0.36,
+      "avgEntryPrice": 82952.05,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 24969.21,
+      "currentQty": 0.3,
+      "avgEntryPrice": 82973.2,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "SELL",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 44112.271,
+      "currentQty": 0.53,
+      "avgEntryPrice": 83056.7,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 98295.4567,
+      "currentQty": 1.181,
+      "avgEntryPrice": 84643.36375953,
+      "timeRange": "ALL"
+     }
+    ]
+   }
+  },
+  "0GUSDT": {
+   "overview": {
+    "httpStatus": 200,
+    "code": "000000",
+    "data": {
+     "symbol": "0GUSDT",
+     "totalPositions": 5587129.7925088,
+     "totalTraders": 419,
+     "longShortRatio": 4.0791,
+     "longTraders": 236,
+     "longTradersQty": 14934368,
+     "longTradersAvgEntryPrice": 0.28474738,
+     "longWhales": 123,
+     "longWhalesQty": 12873845,
+     "longWhalesAvgEntryPrice": 0.28764752,
+     "shortTraders": 183,
+     "shortTradersQty": 3661152,
+     "shortTradersAvgEntryPrice": 0.30689408,
+     "shortWhales": 88,
+     "shortWhalesQty": 3061307,
+     "shortWhalesAvgEntryPrice": 0.30824917,
+     "longProfitTraders": 138,
+     "shortProfitTraders": 112,
+     "longProfitWhales": 74,
+     "shortProfitWhales": 50,
+     "updateTime": 1791353989563
+    }
+   },
+   "stats": {
+    "httpStatus": 200,
+    "code": "000000",
+    "data": {
+     "longTraders": 234,
+     "longWhales": 121,
+     "longPositions": 4486732.90446909,
+     "longQty": 14927379,
+     "longWhalePositions": 3867204.97299697,
+     "longWhaleQty": 12866207,
+     "shortTraders": 184,
+     "shortWhales": 89,
+     "shortPositions": 1099456.09725545,
+     "shortQty": 3657895,
+     "shortWhalePositions": 919195.42648857,
+     "shortWhaleQty": 3058167
+    }
+   },
+   "list": {
+    "httpStatus": 200,
+    "code": "000000",
+    "rowCount": 6,
+    "rows": [
+     {
+      "side": "BUY",
+      "userType": 2,
+      "traders": 230,
+      "currentPositions": 4470203.61941406,
+      "currentQty": 14872386,
+      "avgEntryPrice": 0.2846457,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "SELL",
+      "userType": 2,
+      "traders": 184,
+      "currentPositions": 1099456.09725545,
+      "currentQty": 3657895,
+      "avgEntryPrice": 0.30688623,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 11133.43966911,
+      "currentQty": 37041,
+      "avgEntryPrice": 0.3087656,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 902.61384213,
+      "currentQty": 3003,
+      "avgEntryPrice": 0.33031142,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 4198.07110657,
+      "currentQty": 13967,
+      "avgEntryPrice": 0.31746883,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 295.16043722,
+      "currentQty": 982,
+      "avgEntryPrice": 0.20356314,
+      "timeRange": "ALL"
+     }
+    ]
+   }
+  },
+  "ETHUSDT": {
+   "overview": {
+    "httpStatus": 200,
+    "code": "000000",
+    "data": {
+     "symbol": "ETHUSDT",
+     "totalPositions": 1642278373.4712474,
+     "totalTraders": 2918,
+     "longShortRatio": 2.3607,
+     "longTraders": 2175,
+     "longTradersQty": 449891.028,
+     "longTradersAvgEntryPrice": 2563.71593567,
+     "longWhales": 419,
+     "longWhalesQty": 408694.381,
+     "longWhalesAvgEntryPrice": 2560.27655534,
+     "shortTraders": 743,
+     "shortTradersQty": 190577.208,
+     "shortTradersAvgEntryPrice": 2592.88871259,
+     "shortWhales": 251,
+     "shortWhalesQty": 179315.231,
+     "shortWhalesAvgEntryPrice": 2597.35775124,
+     "longProfitTraders": 607,
+     "shortProfitTraders": 536,
+     "longProfitWhales": 129,
+     "shortProfitWhales": 190,
+     "updateTime": 1791353989563
+    }
+   },
+   "stats": {
+    "httpStatus": 200,
+    "code": "000000",
+    "data": {
+     "longTraders": 2175,
+     "longWhales": 419,
+     "longPositions": 1153603354.8167217,
+     "longQty": 449891.028,
+     "longWhalePositions": 1047967573.6417286,
+     "longWhaleQty": 408694.381,
+     "shortTraders": 743,
+     "shortWhales": 251,
+     "shortPositions": 488675018.6545257,
+     "shortQty": 190577.208,
+     "shortWhalePositions": 459797237.9465525,
+     "shortWhaleQty": 179315.231
+    }
+   },
+   "list": {
+    "httpStatus": 200,
+    "code": "000000",
+    "rowCount": 10,
+    "rows": [
+     {
+      "side": "BUY",
+      "userType": 2,
+      "traders": 2046,
+      "currentPositions": 1124728461.3798797,
+      "currentQty": 438630.177,
+      "avgEntryPrice": 2564.88914661,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "SELL",
+      "userType": 2,
+      "traders": 722,
+      "currentPositions": 487517997.3142962,
+      "currentQty": 190125.984,
+      "avgEntryPrice": 2592.71676399,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 141030.11744195,
+      "currentQty": 55,
+      "avgEntryPrice": 2630.66545455,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 256418.395349,
+      "currentQty": 100,
+      "avgEntryPrice": 2564.49,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "SELL",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 29988.13133607,
+      "currentQty": 11.695,
+      "avgEntryPrice": 2565,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 281473.03675855,
+      "currentQty": 109.771,
+      "avgEntryPrice": 2564.72272877,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 2564.18395349,
+      "currentQty": 1,
+      "avgEntryPrice": 2563.28,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "SELL",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 102567.3581396,
+      "currentQty": 40,
+      "avgEntryPrice": 2558.67,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 55294.06277306,
+      "currentQty": 21.564,
+      "avgEntryPrice": 2745.2194936,
+      "timeRange": "ALL"
+     },
+     {
+      "side": "BUY",
+      "userType": 0,
+      "traders": 1,
+      "currentPositions": 256418.395349,
+      "currentQty": 100,
+      "avgEntryPrice": 2562,
+      "timeRange": "ALL"
+     }
+    ]
+   }
+  }
+ },
+ "coverageSample": {
+  "poolBinanceCount": 526,
+  "poolOkxCount": 23,
+  "poolTotal": 549,
+  "sampled": 30,
+  "withData": 30,
+  "rows": [
+   {
+    "symbol": "0GUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 418,
+    "longTraders": 234,
+    "shortTraders": 184
+   },
+   {
+    "symbol": "AAVEUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 736,
+    "longTraders": 542,
+    "shortTraders": 194
+   },
+   {
+    "symbol": "AKTUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 267,
+    "longTraders": 175,
+    "shortTraders": 92
+   },
+   {
+    "symbol": "ARKUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 453,
+    "longTraders": 213,
+    "shortTraders": 240
+   },
+   {
+    "symbol": "AXLUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 254,
+    "longTraders": 176,
+    "shortTraders": 78
+   },
+   {
+    "symbol": "BEATUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 400,
+    "longTraders": 180,
+    "shortTraders": 220
+   },
+   {
+    "symbol": "BROCCOLI714USDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 337,
+    "longTraders": 225,
+    "shortTraders": 112
+   },
+   {
+    "symbol": "CELRUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 346,
+    "longTraders": 217,
+    "shortTraders": 129
+   },
+   {
+    "symbol": "COWUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 253,
+    "longTraders": 164,
+    "shortTraders": 89
+   },
+   {
+    "symbol": "DODOXUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 311,
+    "longTraders": 180,
+    "shortTraders": 131
+   },
+   {
+    "symbol": "ENAUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 908,
+    "longTraders": 631,
+    "shortTraders": 277
+   },
+   {
+    "symbol": "FHEUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 306,
+    "longTraders": 197,
+    "shortTraders": 109
+   },
+   {
+    "symbol": "GLMUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 246,
+    "longTraders": 155,
+    "shortTraders": 91
+   },
+   {
+    "symbol": "HBARUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 642,
+    "longTraders": 416,
+    "shortTraders": 226
+   },
+   {
+    "symbol": "IMXUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 302,
+    "longTraders": 201,
+    "shortTraders": 101
+   },
+   {
+    "symbol": "KAIAUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 233,
+    "longTraders": 150,
+    "shortTraders": 83
+   },
+   {
+    "symbol": "LINEAUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 269,
+    "longTraders": 169,
+    "shortTraders": 100
+   },
+   {
+    "symbol": "MASKUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 253,
+    "longTraders": 155,
+    "shortTraders": 98
+   },
+   {
+    "symbol": "MOODENGUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 290,
+    "longTraders": 166,
+    "shortTraders": 124
+   },
+   {
+    "symbol": "NOTUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 288,
+    "longTraders": 193,
+    "shortTraders": 95
+   },
+   {
+    "symbol": "PARTIUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 328,
+    "longTraders": 159,
+    "shortTraders": 169
+   },
+   {
+    "symbol": "PORTALUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 326,
+    "longTraders": 198,
+    "shortTraders": 128
+   },
+   {
+    "symbol": "RAYSOLUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 534,
+    "longTraders": 395,
+    "shortTraders": 139
+   },
+   {
+    "symbol": "SAFEUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 266,
+    "longTraders": 169,
+    "shortTraders": 97
+   },
+   {
+    "symbol": "SLPUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 216,
+    "longTraders": 149,
+    "shortTraders": 67
+   },
+   {
+    "symbol": "STARUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 289,
+    "longTraders": 179,
+    "shortTraders": 110
+   },
+   {
+    "symbol": "TAIKOUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 258,
+    "longTraders": 167,
+    "shortTraders": 91
+   },
+   {
+    "symbol": "TRUTHUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 270,
+    "longTraders": 179,
+    "shortTraders": 91
+   },
+   {
+    "symbol": "VANAUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 258,
+    "longTraders": 164,
+    "shortTraders": 94
+   },
+   {
+    "symbol": "XANUSDT",
+    "httpStatus": 200,
+    "hasData": true,
+    "totalTraders": 297,
+    "longTraders": 168,
+    "shortTraders": 129
+   }
+  ]
+ }
+}

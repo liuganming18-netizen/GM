@@ -1,0 +1,249 @@
+{
+ "captured_at_utc": "2026-10-06T14:24:08Z",
+ "items": {
+  "binance_top_position_ratio": {
+   "http": 200,
+   "ms": 1181,
+   "json": [
+    {
+     "symbol": "BTCUSDT",
+     "longAccount": "0.6293",
+     "longShortRatio": "1.6974",
+     "shortAccount": "0.3707",
+     "timestamp": 1791291600000
+    },
+    {
+     "symbol": "BTCUSDT",
+     "longAccount": "0.6298",
+     "longShortRatio": "1.7012",
+     "shortAccount": "0.3702",
+     "timestamp": 1791295200000
+    }
+   ],
+   "purpose": "可作明确原始指标：大户持仓多空比（按持仓额）",
+   "ts_utc": "2026-10-06T14:24:09Z"
+  },
+  "binance_top_account_ratio": {
+   "http": 200,
+   "ms": 868,
+   "json": [
+    {
+     "symbol": "BTCUSDT",
+     "longAccount": "0.5147",
+     "longShortRatio": "1.0606",
+     "shortAccount": "0.4853",
+     "timestamp": 1791291600000
+    },
+    {
+     "symbol": "BTCUSDT",
+     "longAccount": "0.5082",
+     "longShortRatio": "1.0333",
+     "shortAccount": "0.4918",
+     "timestamp": 1791295200000
+    }
+   ],
+   "purpose": "可作明确原始指标：大户账户多空比（按账户数）",
+   "ts_utc": "2026-10-06T14:24:10Z"
+  },
+  "binance_global_account_ratio": {
+   "http": 200,
+   "ms": 2691,
+   "json": [
+    {
+     "symbol": "BTCUSDT",
+     "longAccount": "0.4989",
+     "longShortRatio": "0.9956",
+     "shortAccount": "0.5011",
+     "timestamp": 1791291600000
+    },
+    {
+     "symbol": "BTCUSDT",
+     "longAccount": "0.4912",
+     "longShortRatio": "0.9654",
+     "shortAccount": "0.5088",
+     "timestamp": 1791295200000
+    }
+   ],
+   "purpose": "可作明确原始指标：全局账户多空比（全市场账户数）",
+   "ts_utc": "2026-10-06T14:24:13Z"
+  },
+  "binance_taker_ratio": {
+   "http": 200,
+   "ms": 1051,
+   "json": [
+    {
+     "buySellRatio": "0.9187",
+     "sellVol": "2511.1600",
+     "buyVol": "2306.9560",
+     "timestamp": 1791288000000
+    },
+    {
+     "buySellRatio": "1.1400",
+     "sellVol": "3886.4300",
+     "buyVol": "4430.6320",
+     "timestamp": 1791291600000
+    }
+   ],
+   "purpose": "可作明确原始指标：taker 主动买卖量比（**不得**当聪明钱持仓/金额/身份）",
+   "ts_utc": "2026-10-06T14:24:14Z"
+  },
+  "binance_open_interest": {
+   "http": 200,
+   "ms": 678,
+   "json": {
+    "symbol": "BTCUSDT",
+    "openInterest": "94598.720",
+    "time": 1791296652292
+   },
+   "purpose": "全市场总持仓量（**无多空拆分、无身份**）",
+   "ts_utc": "2026-10-06T14:24:15Z"
+  },
+  "probe_official": {
+   "long_short_position_split": {
+    "path": "/futures/data/openInterestHist",
+    "http": 200,
+    "sample": "[{\"symbol\": \"BTCUSDT\", \"sumOpenInterest\": \"94673.59000000\", \"sumOpenInterestValue\": \"8168077235.67754700\", \"CMCCirculatingSupply\": \"20094037.00000000\", \"timestamp\": 1791295200000}]"
+   },
+   "position_avg_price": {
+    "path": "/futures/data/topLongShortPositionRatio",
+    "http": 200,
+    "sample": "[{\"symbol\": \"BTCUSDT\", \"longAccount\": \"0.6298\", \"longShortRatio\": \"1.7012\", \"shortAccount\": \"0.3702\", \"timestamp\": 1791295200000}]"
+   },
+   "account_identity": {
+    "path": "/fapi/v1/positionRisk",
+    "http": 404,
+    "sample": "<!DOCTYPE html>\n<!-- saved from url=(0032)https://www.binance.com/en/error -->\n<html>\n\n<head>\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n\n  <meta name=\"format-detection\" content=\"telephone=no,email=no,address=no\">\n  <title>Binance</title>\n  <link rel=\"Shortcut Icon\" href=\""
+   },
+   "ts_utc": "2026-10-06T14:24:17Z"
+  },
+  "binance_depth": {
+   "http": 200,
+   "ms": 859,
+   "json": {
+    "lastUpdateId": 11748515649661,
+    "E": 1791296658513,
+    "T": 1791296658509,
+    "bids": [
+     [
+      "85993.70",
+      "7.776"
+     ],
+     [
+      "85993.60",
+      "0.003"
+     ],
+     [
+      "85993.50",
+      "0.003"
+     ],
+     [
+      "85992.80",
+      "0.024"
+     ],
+     [
+      "85992.70",
+      "0.001"
+     ]
+    ],
+    "asks": [
+     [
+      "85993.80",
+      "1.357"
+     ],
+     [
+      "85993.90",
+      "0.001"
+     ],
+     [
+      "85994.20",
+      "0.001"
+     ],
+     [
+      "85994.30",
+      "0.003"
+     ],
+     [
+      "85994.60",
+      "0.001"
+     ]
+    ]
+   },
+   "ts_utc": "2026-10-06T14:24:18Z"
+  },
+  "binance_aggTrades": {
+   "http": 200,
+   "ms": 1380,
+   "json": [
+    {
+     "a": 3476663854,
+     "p": "85987.30",
+     "q": "0.022",
+     "nq": "0.022",
+     "f": 8150090637,
+     "l": 8150090637,
+     "T": 1791296659656,
+     "m": true
+    },
+    {
+     "a": 3476663855,
+     "p": "85987.40",
+     "q": "0.001",
+     "nq": "0.001",
+     "f": 8150090638,
+     "l": 8150090638,
+     "T": 1791296659667,
+     "m": false
+    },
+    {
+     "a": 3476663856,
+     "p": "85987.30",
+     "q": "0.078",
+     "nq": "0.078",
+     "f": 8150090639,
+     "l": 8150090644,
+     "T": 1791296659725,
+     "m": true
+    }
+   ],
+   "ts_utc": "2026-10-06T14:24:19Z"
+  },
+  "binance_ticker24h": {
+   "http": 200,
+   "ms": 3912,
+   "json": {
+    "closeTime": 1791296659307,
+    "count": 2741107,
+    "firstId": 8147337397,
+    "highPrice": "86460.00",
+    "lastId": 8150090630,
+    "lastPrice": "85987.40",
+    "lastQty": "0.020",
+    "lowPrice": "84910.00",
+    "openPrice": "86302.30",
+    "openTime": 1791210240000,
+    "priceChange": "-314.90",
+    "priceChangePercent": "-0.365",
+    "quoteVolume": "10251281878.98",
+    "symbol": "BTCUSDT",
+    "volume": "119630.575",
+    "weightedAvgPrice": "85691.15"
+   },
+   "ts_utc": "2026-10-06T14:24:23Z"
+  },
+  "binance_premiumIndex": {
+   "http": 200,
+   "ms": 1426,
+   "json": {
+    "symbol": "BTCUSDT",
+    "markPrice": "85980.70000000",
+    "indexPrice": "86019.04347826",
+    "estimatedSettlePrice": "86234.61935725",
+    "lastFundingRate": "0.00002399",
+    "interestRate": "0.00010000",
+    "nextFundingTime": 1791302400000,
+    "time": 1791296665000
+   },
+   "ts_utc": "2026-10-06T14:24:25Z"
+  }
+ }
+}

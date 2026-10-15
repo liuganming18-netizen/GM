@@ -1,0 +1,129 @@
+{
+ "captured_at_utc": "2026-10-06T13:25:43Z",
+ "binance_topLongShortPositionRatio": {
+  "fields": [
+   "symbol",
+   "longAccount",
+   "longShortRatio",
+   "shortAccount",
+   "timestamp"
+  ],
+  "sample": {
+   "symbol": "BTCUSDT",
+   "longAccount": "0.6293",
+   "longShortRatio": "1.6974",
+   "shortAccount": "0.3707",
+   "timestamp": 1791291600000
+  },
+  "ts_utc": "2026-10-06T13:00:00Z"
+ },
+ "binance_takerlongshortRatio": {
+  "fields": [
+   "buySellRatio",
+   "sellVol",
+   "buyVol",
+   "timestamp"
+  ],
+  "sample": {
+   "buySellRatio": "0.9187",
+   "sellVol": "2511.1600",
+   "buyVol": "2306.9560",
+   "timestamp": 1791288000000
+  }
+ },
+ "okx_rubik_longShortAccountRatio": {
+  "shape": "[[ts,ratio],...]",
+  "sample": [
+   "1791291600000",
+   "1.06"
+  ],
+  "ts_utc": "2026-10-06T13:00:00Z"
+ },
+ "hyperliquid_clearinghouseState": {
+  "fields": [
+   "marginSummary",
+   "crossMarginSummary",
+   "crossMaintenanceMarginUsed",
+   "withdrawable",
+   "assetPositions",
+   "time"
+  ],
+  "accountValue": "155064638.7632069886",
+  "position_fields": [
+   "coin",
+   "szi",
+   "leverage",
+   "entryPx",
+   "positionValue",
+   "unrealizedPnl",
+   "returnOnEquity",
+   "liquidationPx",
+   "marginUsed",
+   "maxLeverage",
+   "cumFunding"
+  ],
+  "sample_positions": [
+   {
+    "coin": "BTC",
+    "szi": "-2788.13357",
+    "entryPx": "75949.4",
+    "positionValue": "239971868.2363300025",
+    "unrealizedPnl": "-28214795.6684710011"
+   },
+   {
+    "coin": "ETH",
+    "szi": "-104550.8054",
+    "entryPx": "2304.1",
+    "positionValue": "283573149.4864199758",
+    "unrealizedPnl": "-42677065.3006120026"
+   },
+   {
+    "coin": "SOL",
+    "szi": "-742153.46",
+    "entryPx": "94.3122",
+    "positionValue": "89307036.6090999991",
+    "unrealizedPnl": "-19312894.7944580019"
+   }
+  ],
+  "time_utc": "2026-10-06T13:25:47Z"
+ },
+ "binance_depth": {
+  "fields": [
+   "lastUpdateId",
+   "E",
+   "T",
+   "bids",
+   "asks"
+  ],
+  "bestBid": [
+   "86056.00",
+   "7.032"
+  ],
+  "bestAsk": [
+   "86056.10",
+   "5.796"
+  ],
+  "E_utc": "2026-10-06T13:25:49Z"
+ },
+ "okx_trades": {
+  "fields": [
+   "instId",
+   "tradeId",
+   "px",
+   "sz",
+   "side",
+   "ts",
+   "source"
+  ],
+  "sample": {
+   "instId": "BTC-USDT-SWAP",
+   "tradeId": "2976476923",
+   "px": "86056.6",
+   "sz": "0.07",
+   "side": "buy",
+   "ts": "1791293148451",
+   "source": "0"
+  },
+  "ts_utc": "2026-10-06T13:25:48Z"
+ }
+}

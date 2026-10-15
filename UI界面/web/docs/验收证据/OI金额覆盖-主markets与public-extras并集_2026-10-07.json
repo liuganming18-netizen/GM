@@ -1,0 +1,5006 @@
+{
+ "checkedAt": "2026-10-07T15:51:22.309Z",
+ "marketsAsOf": "2026-10-07T15:51:16Z",
+ "pool": {
+  "total": 549
+ },
+ "markets": {
+  "nonNull": 539,
+  "byExchange": {
+   "binance": {
+    "total": 526,
+    "usd": 516
+   },
+   "okx": {
+    "total": 23,
+    "usd": 23
+   }
+  },
+  "oiSourceHistogram": {
+   "binance.fapi.openInterestHist": 516,
+   "okx.v5": 23
+  }
+ },
+ "publicExtras": {
+  "queried": 549,
+  "withOiUsd": 60,
+  "byExchange": {
+   "binance": {
+    "total": 526,
+    "usd": 60
+   },
+   "okx": {
+    "total": 23,
+    "usd": 0
+   }
+  },
+  "rows": [
+   {
+    "id": "binance:1000000BOBUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1763034.48151974,
+    "oiAmount": 184191062,
+    "oiUsdEventTime": "2026-10-05T09:00:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000FLOKIUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 4298827.65245,
+    "oiAmount": 161065105,
+    "oiUsdEventTime": "2026-10-07T15:40:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000BONKUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 14953678.09199904,
+    "oiAmount": 4379643064,
+    "oiUsdEventTime": "2026-10-07T15:40:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000000MOGUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 755983.3445218,
+    "oiAmount": 6734142.7,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:0GUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 10985108.41441531,
+    "oiAmount": 36540511,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000CHEEMSUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1386537.6216865,
+    "oiAmount": 2677488890,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000LUNCUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 3983020.02,
+    "oiAmount": 79264080,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000CATUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1413526.049617,
+    "oiAmount": 665815379,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000PEPEUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 73534474.39065728,
+    "oiAmount": 18209174704,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000RATSUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 10152339.38156988,
+    "oiAmount": 266116506,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000SHIBUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 27264751.43539,
+    "oiAmount": 5064973330,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000SATSUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1956800.2715844,
+    "oiAmount": 168981025180,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1000XECUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1460895.249872,
+    "oiAmount": 193572976,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1INCHUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 2836624.3821,
+    "oiAmount": 28915641,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:1MBABYDOGEUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1498068.187343,
+    "oiAmount": 3873479476,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AAVEUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 77306948.86560357,
+    "oiAmount": 451136.3,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:4USDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 6718625.733876,
+    "oiAmount": 381285156,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:2ZUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 5244280.7472,
+    "oiAmount": 136144360,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ACEUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 5820559.81519315,
+    "oiAmount": 34977616.87,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ACHUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1481169.560913,
+    "oiAmount": 264164359,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ACTUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 2024198.90641174,
+    "oiAmount": 199112434,
+    "oiUsdEventTime": "2026-10-07T15:40:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AEROUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 40534763.4392,
+    "oiAmount": 50999954,
+    "oiUsdEventTime": "2026-10-07T15:40:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ADAUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 109178917.71869612,
+    "oiAmount": 428587391,
+    "oiUsdEventTime": "2026-10-07T15:40:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ACUUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 2424085.53548205,
+    "oiAmount": 20275365,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AIAUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 6802785.62262,
+    "oiAmount": 84265894,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AEVOUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1677229.16913809,
+    "oiAmount": 67904839.7,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AGLDUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1490842.3327,
+    "oiAmount": 7672889,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AGTUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 6680750.369142,
+    "oiAmount": 256813653,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AIGENSYNUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1753816.72188956,
+    "oiAmount": 86497687,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AINUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 13146365.60224031,
+    "oiAmount": 305081029,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AIOUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 3458228.4333,
+    "oiAmount": 83270610,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AIOTUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 2202297.19178,
+    "oiAmount": 47077751,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AIXBTUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 2199367.3668,
+    "oiAmount": 107025176,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AKTUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 2905861.30943466,
+    "oiAmount": 4116534,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:AKEUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 13574969.138448,
+    "oiAmount": 487816916,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ALGOUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 10188117.347934,
+    "oiAmount": 87843743.3,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ALCHUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 4563912.72285,
+    "oiAmount": 101759481,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ALPINEUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1525687.04696807,
+    "oiAmount": 4150942.6,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ALICEUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 3162445.76647,
+    "oiAmount": 18679537.9,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ALLOUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 8509048.20986975,
+    "oiAmount": 33950495,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ANKRUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1722555.3576,
+    "oiAmount": 374468556,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ALTUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 2463946.79454563,
+    "oiAmount": 338313421,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ANIMEUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1156791.444921,
+    "oiAmount": 376437177,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:API3USDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 5044306.57367835,
+    "oiAmount": 16478615,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:APEUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 5183222.35080968,
+    "oiAmount": 35326904,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:APRUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 4993635.30666695,
+    "oiAmount": 42932555,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:APTUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 24894597.8615452,
+    "oiAmount": 33273941.2,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ARKMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ARKMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ARBUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 53817797.61669776,
+    "oiAmount": 292706844.8,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:ARCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ARCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ARKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ARKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ARIAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ARIAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ARPAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ARPAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ARXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ARXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ARUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ARUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:ASTERUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ASTERUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:ATHUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ATHUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:AUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:AUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:ASTRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ASTRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ASRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ASRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ATOMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ATOMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ATUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ATUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:AUCTIONUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:AUCTIONUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:AVAAIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:AVAAIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:AWEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:AWEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:AXSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:AXSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:AVNTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:AVNTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:AVAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:AVAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:AZTECUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:AZTECUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:AXLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:AXLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:AVAXUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 114039972.732,
+    "oiAmount": 10265548,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:BARDUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BARDUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BANKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BANKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BANANAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BANANAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:BABYUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BABYUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:B2USDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:B2USDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:BANANAS31USDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BANANAS31USDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 "
+   },
+   {
+    "id": "binance:BANDUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BANDUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BANUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BANUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BASEDUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BASEDUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:BASUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BASUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BBUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BBUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:BCHUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BCHUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BATUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BATUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BEATUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BEATUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BEAMXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BEAMXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:BERAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BERAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BELUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BELUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BICOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BICOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BIGTIMEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BIGTIMEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:BILLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BILLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BLUAIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BLUAIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:BLESSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BLESSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:BIRBUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BIRBUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BIOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BIOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BLURUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BLURUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BNTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BNTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BMTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BMTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BNBUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 443892529.0128,
+    "oiAmount": 576903.37,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:BOMEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BOMEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BRETTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BRETTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:BREVUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BREVUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:BSBUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BSBUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BROCCOLIF3BUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BROCCOLIF3BUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 6"
+   },
+   {
+    "id": "binance:BROCCOLI714USDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BROCCOLI714USDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 6"
+   },
+   {
+    "id": "binance:BTRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BTRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BTWUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BTWUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BSVUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BSVUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:BTCUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 7977085729.209673,
+    "oiAmount": 95783.603,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:BULLAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BULLAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:C98USDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:C98USDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:BUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:BUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:CAKEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CAKEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:CATIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CATIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:CARVUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CARVUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:CAPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CAPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CELOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CELOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:CCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:CELRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CELRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:CFGUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CFGUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CETUSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CETUSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:CHIPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CHIPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:CGPTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CGPTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:CHILLGUYUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CHILLGUYUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个"
+   },
+   {
+    "id": "binance:CHRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CHRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CHZUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CHZUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CFXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CFXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CKBUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CKBUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CLANKERUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CLANKERUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:COLLECTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:COLLECTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:COAIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:COAIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:COOKIEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:COOKIEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:COMPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:COMPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:COTIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:COTIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:COWUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:COWUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CROSSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CROSSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:CLOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CLOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CRVUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CRVUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:CTSIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CTSIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:CTKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CTKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CTRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CTRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CVXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CVXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CVCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CVCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:CUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:CYBERUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CYBERUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:DASHUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DASHUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:CYSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:CYSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:DEEPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DEEPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:DATAIPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DATAIPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:DEXEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DEXEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:DODOXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DODOXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:DIAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DIAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:DOLOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DOLOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:DOGEUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 252829228.57404217,
+    "oiAmount": 2858362883,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:DOGSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DOGSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:DOSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DOSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:DOODUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DOODUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:DUSKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DUSKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:DYDXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DYDXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:DRIFTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DRIFTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:DOTUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 37514312.4678,
+    "oiAmount": 34134952.2,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:DYMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:DYMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:EDENUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:EDENUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:EDGEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:EDGEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ENSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ENSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ENJUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ENJUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ELSAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ELSAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:EDUUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:EDUUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ENAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ENAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:EIGENUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:EIGENUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:ENSOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ENSOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:EGLDUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:EGLDUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ERAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ERAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ETCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ETCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ETHFIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ETHFIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:ESPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ESPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ESPORTSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ESPORTSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:EPICUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:EPICUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ETHWUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ETHWUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ETHUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 6284606578.609079,
+    "oiAmount": 2450948.912,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:EULUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:EULUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:EVAAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:EVAAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:FFUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FFUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:FARTCOINUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FARTCOINUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个"
+   },
+   {
+    "id": "binance:FETUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FETUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:FIDAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FIDAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:FIGHTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FIGHTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:FHEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FHEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:FILUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FILUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:FLOCKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FLOCKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:FLOWUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FLOWUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:FLUIDUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FLUIDUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:FLUXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FLUXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:FRAXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FRAXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:FOLKSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FOLKSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:GALAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GALAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:FUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:FOGOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FOGOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:GASUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GASUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:FORMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:FORMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:GIGGLEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GIGGLEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:GENIUSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GENIUSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:GLMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GLMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:GMTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GMTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:GMXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GMXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:GRAMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GRAMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:GOATUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GOATUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:GPSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GPSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:GRIFFAINUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GRIFFAINUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个"
+   },
+   {
+    "id": "binance:GRTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GRTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:GRVTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GRVTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:GRASSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GRASSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:GTCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GTCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:GUNUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GUNUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:GUAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GUAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:GUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:HANAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HANAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:HAEDALUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HAEDALUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:GWEIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:GWEIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:HBARUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HBARUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:HEIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HEIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:HEMIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HEMIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:HIVEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HIVEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:HOLOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HOLOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:HMSTRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HMSTRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:HUMAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HUMAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:HYPERUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HYPERUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:HOMEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HOMEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:HUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:HYPEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HYPEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:HOTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:HOTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ICPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ICPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ICNTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ICNTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:IDOLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:IDOLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ILVUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ILVUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:IDUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:IDUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:INUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:INUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:INJUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:INJUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:INITUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:INITUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:IMXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:IMXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:INXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:INXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:IOSTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:IOSTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:JASMYUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:JASMYUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:IRYSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:IRYSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:IOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:IOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:JELLYJELLYUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:JELLYJELLYUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60"
+   },
+   {
+    "id": "binance:JCTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:JCTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:IOTXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:IOTXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:IOTAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:IOTAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:JUPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:JUPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:KAITOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KAITOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:KASUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KASUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:JTOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:JTOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:KAIAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KAIAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:JOEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:JOEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:JSTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:JSTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:KATUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KATUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:KSMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KSMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:KITEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KITEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:KAVAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KAVAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:KERNELUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KERNELUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:KOMAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KOMAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:KMNOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KMNOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:KNCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KNCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:KGENUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:KGENUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:LIGHTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LIGHTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:LAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:LINEAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LINEAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:LINKUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 121773434.97816,
+    "oiAmount": 9117507.86,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:LABUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LABUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:LAYERUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LAYERUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:LISTAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LISTAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:LDOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LDOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:LPTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LPTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:LITUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LITUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:LUNA2USDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LUNA2USDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:LSKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LSKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:LQTYUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LQTYUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:LUMIAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LUMIAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:LYNUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:LYNUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:LTCUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 90199178.65616,
+    "oiAmount": 1364999.677,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:MAGICUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MAGICUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:MAGMAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MAGMAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:MANAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MANAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:MANTAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MANTAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:MAVUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MAVUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:MASKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MASKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:MARSCOINUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MARSCOINUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个"
+   },
+   {
+    "id": "binance:MAVIAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MAVIAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:MANTRAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MANTRAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:MEGAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MEGAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:MELANIAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MELANIAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:MEMEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MEMEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:METUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:METUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:MEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:MERLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MERLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:METISUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:METISUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:MINAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MINAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:MITOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MITOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:MIRAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MIRAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:MEWUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MEWUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:MMTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MMTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:MOCAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MOCAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:MOVEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MOVEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:MORPHOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MORPHOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:MONUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MONUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:MTLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MTLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:MOODENGUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MOODENGUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:MUBARAKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MUBARAKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:MUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:MOVRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MOVRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:NAORISUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NAORISUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:MYXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:MYXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:NEOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NEOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:NMRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NMRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:NOMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NOMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:NILUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NILUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:NEIROUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NEIROUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:NIGHTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NIGHTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:NEWTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NEWTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:NEARUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NEARUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:NOTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NOTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:OGUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:OGUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:ONEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ONEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ONUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ONUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:ONTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ONTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:NXPCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:NXPCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ONDOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ONDOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:OGNUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:OGNUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ONGUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ONGUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:OPENUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:OPENUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:OPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:OPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:ORCAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ORCAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:OPGUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:OPGUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:OUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:OUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:PARTIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PARTIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:OPNUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:OPNUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ORDERUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ORDERUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:ORDIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ORDIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:PAXGUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PAXGUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:PEOPLEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PEOPLEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:PHAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PHAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:PIPPINUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PIPPINUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:PENDLEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PENDLEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:PENGUUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PENGUUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:PIEVERSEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PIEVERSEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个"
+   },
+   {
+    "id": "binance:PHAROSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PHAROSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:PIXELUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PIXELUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:PNUTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PNUTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:POLYXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:POLYXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:PLUMEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PLUMEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:PONSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PONSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:POLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:POLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:POPCATUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:POPCATUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:PORTALUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PORTALUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:PLAYUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PLAYUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:POWRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:POWRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:POWERUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:POWERUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:PRLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PRLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:PTBUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PTBUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:PROMPTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PROMPTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:PUMPBTCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PUMPBTCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:PROVEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PROVEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:PROMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PROMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:PUMPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PUMPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:PUNDIXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PUNDIXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:QNTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:QNTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:PYTHUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:PYTHUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:RAREUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RAREUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:RECALLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RECALLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:QTUMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:QTUMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:RAYSOLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RAYSOLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:QUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:QUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:RAVEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RAVEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:RENDERUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RENDERUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:REZUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:REZUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:RESOLVUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RESOLVUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:RIFUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RIFUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:RLCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RLCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:REUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:REUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:REDUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:REDUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:RIVERUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RIVERUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:ROBOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ROBOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:RUNEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RUNEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:RONINUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RONINUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:RVNUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RVNUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ROSEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ROSEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:RPLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RPLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:RSRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:RSRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SAGAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SAGAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SAFEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SAFEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SANDUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SANDUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SAHARAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SAHARAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:SANTOSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SANTOSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:SCRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SCRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SAPIENUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SAPIENUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:SFPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SFPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SIGNUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SIGNUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SKLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SKLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SEIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SEIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SENTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SENTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SKRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SKRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SHELLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SHELLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:SIRENUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SIRENUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:SKYAIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SKYAIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:SKYUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SKYUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SLPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SLPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SLXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SLXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SNXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SNXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SOLUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 1000204727.5442,
+    "oiAmount": 8584711.42,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:SOMIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SOMIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SONICUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SONICUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:SPACEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SPACEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:SOLVUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SOLVUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SOONUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SOONUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SPELLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SPELLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:SOPHUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SOPHUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SPXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SPXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SPORTFUNUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SPORTFUNUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个"
+   },
+   {
+    "id": "binance:SQDUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SQDUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SSVUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SSVUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:STARUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:STARUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:STABLEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:STABLEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:STBLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:STBLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SPKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SPKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:STEEMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:STEEMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:STXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:STXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SUNUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SUNUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:STOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:STOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:SUIUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 144172758.3575935,
+    "oiAmount": 128467395.7,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:SUPERUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SUPERUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:SUSHIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SUSHIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:STRKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:STRKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:SWARMSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SWARMSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:SXTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SXTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:TAOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TAOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:TAIKOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TAIKOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:TACUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TACUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:SYRUPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SYRUPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:SYNUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:SYNUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:TAKEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TAKEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:TAGUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TAGUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:TOWNSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TOWNSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:TNSRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TNSRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:THETAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:THETAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:TLMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TLMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:THEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:THEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:TOSHIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TOSHIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:TAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:TIAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TIAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:TRADOORUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TRADOORUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:TREEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TREEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:TRBUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TRBUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:TRIAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TRIAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:TRUSTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TRUSTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:TSTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TSTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:TURBOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TURBOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:TURTLEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TURTLEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:TRUMPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TRUMPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:TRUTHUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TRUTHUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:TUTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TUTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:TRXUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 102177177.684054,
+    "oiAmount": 305242494,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:TUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:UAIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:UAIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:TWTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:TWTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:USDCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:USDCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:UNIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:UNIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:UMAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:UMAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:UBUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:UBUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:USTCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:USTCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:USUALUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:USUALUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:USUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:USUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:USELESSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:USELESSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:VANAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:VANAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:VELODROMEUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:VELODROMEUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 "
+   },
+   {
+    "id": "binance:VELVETUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:VELVETUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "binance:VETUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:VETUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:VVVUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:VVVUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:WALUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:WALUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:VIRTUALUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:VIRTUALUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:VTHOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:VTHOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:WETUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:WETUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:WIFUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:WIFUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:WAXPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:WAXPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:WLDUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:WLDUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:WCTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:WCTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:WOOUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:WOOUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:WUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:WUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口**"
+   },
+   {
+    "id": "binance:WLFIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:WLFIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:XAUTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XAUTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:XNYUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XNYUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:XANUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XANUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:XPINUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XPINUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:XLMUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XLMUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:XAIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XAIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:XPLUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XPLUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:XMRUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XMRUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:XTZUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XTZUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:XVGUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XVGUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:YBUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:YBUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:XRPUSDT",
+    "status": 200,
+    "available": true,
+    "oiUsd": 459269323.1378052,
+    "oiAmount": 321067545,
+    "oiUsdEventTime": "2026-10-07T15:45:00Z",
+    "missingReason": ""
+   },
+   {
+    "id": "binance:XVSUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:XVSUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:YGGUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:YGGUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:YFIUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:YFIUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ZAMAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZAMAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ZEREBROUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZEREBROUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "binance:ZBTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZBTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ZENUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZENUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ZECUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZECUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ZETAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZETAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ZESTUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZESTUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ZILUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZILUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ZKPUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZKPUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ZKCUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZKCUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ZKUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZKUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:ZROUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZROUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:ZORAUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZORAUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:ZRXUSDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:ZRXUSDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:哈基米USDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:哈基米USDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口"
+   },
+   {
+    "id": "binance:币安人生USDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:币安人生USDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "binance:我踏马来了USDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:我踏马来了USDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "binance:龙虾USDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:龙虾USDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "binance:牛来USDT",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 binance:牛来USDT：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接口*"
+   },
+   {
+    "id": "okx:AI-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:AI-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "okx:AEON-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:AEON-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "okx:BLEND-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:BLEND-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "okx:CORE-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:CORE-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "okx:CASHCAT-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:CASHCAT-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 "
+   },
+   {
+    "id": "okx:DATA-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:DATA-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "okx:DGAI-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:DGAI-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "okx:CP-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:CP-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "okx:KII-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:KII-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "okx:CNPY-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:CNPY-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "okx:NES-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:NES-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "okx:CRO-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:CRO-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "okx:LUNA-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:LUNA-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "okx:OKB-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:OKB-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "okx:PI-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:PI-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "okx:OFC-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:OFC-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "okx:OL-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:OL-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "okx:QUANT-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:QUANT-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）"
+   },
+   {
+    "id": "okx:RAY-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:RAY-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "okx:UP-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:UP-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本接"
+   },
+   {
+    "id": "okx:RLS-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:RLS-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   },
+   {
+    "id": "okx:PROS-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:PROS-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；"
+   },
+   {
+    "id": "okx:XDP-USDT-SWAP",
+    "status": 200,
+    "available": false,
+    "oiUsd": null,
+    "oiAmount": null,
+    "oiUsdEventTime": null,
+    "missingReason": "本机快照未覆盖 okx:XDP-USDT-SWAP：采集器只按**页首有界集合**周期刷新（最近一轮目标 60 个）；本"
+   }
+  ]
+ },
+ "union": {
+  "coverage": 540,
+  "total": 549,
+  "byExchange": {
+   "binance": {
+    "total": 526,
+    "union": 517,
+    "markets": 516,
+    "extras": 60
+   },
+   "okx": {
+    "total": 23,
+    "union": 23,
+    "markets": 23,
+    "extras": 0
+   }
+  },
+  "onlyExtras": 1,
+  "onlyMarkets": 480
+ },
+ "freshness": {
+  "fresh": 192,
+  "stale": 348,
+  "unknown": 0
+ }
+}

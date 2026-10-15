@@ -1,0 +1,3940 @@
+{
+  "at_utc": "2026-10-15T05:46:03.173294+00:00",
+  "arms": {
+    "3a": {
+      "all_positions": 50,
+      "nonvoid": 45,
+      "open": 7,
+      "voided": 5,
+      "short_source_as_long": 25,
+      "delay_below15m": 28
+    },
+    "3b": {
+      "all_positions": 35,
+      "nonvoid": 34,
+      "open": 4,
+      "voided": 1,
+      "short_source_as_long": 16,
+      "delay_below15m": 19
+    },
+    "3c": {
+      "all_positions": 46,
+      "nonvoid": 41,
+      "open": 7,
+      "voided": 5,
+      "short_source_as_long": 24,
+      "delay_below15m": 25
+    },
+    "3d": {
+      "all_positions": 46,
+      "nonvoid": 41,
+      "open": 7,
+      "voided": 5,
+      "short_source_as_long": 24,
+      "delay_below15m": 25
+    }
+  },
+  "violations": [
+    {
+      "arm": "3a",
+      "flags": [
+        "delay_below15m"
+      ],
+      "source_masks": [],
+      "position": {
+        "position_id": 25,
+        "account_id": "paper43_3a",
+        "symbol": "BTCUSDT",
+        "qty": 0.009000000000000001,
+        "entry_price": 82895.8,
+        "entry_ts": 1791985500000,
+        "exit_ts": 1791985500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 82812.87285000001,
+        "entry_fee": 0.37303110000000006,
+        "exit_fee": 0.3726579278250001,
+        "funding_paid": 0.0,
+        "signal_uid": "manual:1791985499262",
+        "arm": "3a",
+        "stop_price": 83895.8,
+        "atr_at_entry": 500.0,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": null,
+        "available_at": null,
+        "requested_at": 1791985499262,
+        "earliest_fill_ms": 1791985499262,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "manual",
+        "first_request_ms": 1791985499262,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 26,
+        "account_id": "paper43_3a",
+        "symbol": "BTCUSDT",
+        "qty": 0.009000000000000001,
+        "entry_price": 82117.0,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1791990000000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 81885.33685,
+        "entry_fee": 0.36952650000000004,
+        "exit_fee": 0.36848401582500007,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:fb30d100468968ef3ab2|3a",
+        "arm": "3a",
+        "stop_price": 81209.8,
+        "atr_at_entry": 453.56558579190715,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791982799999,
+        "available_at": 1791982799999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 27,
+        "account_id": "paper43_3a",
+        "symbol": "ETHUSDT",
+        "qty": 0.311,
+        "entry_price": 2436.51,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 2396.5811100000005,
+        "entry_fee": 0.37887730500000005,
+        "exit_fee": 0.3726683626050001,
+        "funding_paid": -0.008037922883199999,
+        "signal_uid": "structure_prototype_39|sc|wx:418e2933b3d10f44f3b3|3a",
+        "arm": "3a",
+        "stop_price": 2397.78,
+        "atr_at_entry": 19.362130316118837,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791986399999,
+        "available_at": 1791986399999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base"
+      ],
+      "position": {
+        "position_id": 28,
+        "account_id": "paper43_3a",
+        "symbol": "ZECUSDT",
+        "qty": 0.333,
+        "entry_price": 1185.05,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1791992700000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1143.677875,
+        "entry_fee": 0.197310825,
+        "exit_fee": 0.19042236618750003,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|base|wx:72728e32efcb14dde8e7|3a",
+        "arm": "3a",
+        "stop_price": 1144.25,
+        "atr_at_entry": 20.39521838674156,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791939599999,
+        "available_at": 1791939599999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 29,
+        "account_id": "paper43_3a",
+        "symbol": "TURTLEUSDT",
+        "qty": 227.0,
+        "entry_price": 0.03853,
+        "entry_ts": 1791990000000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.03773112500000001,
+        "entry_fee": 0.004373155000000001,
+        "exit_fee": 0.004282482687500001,
+        "funding_paid": 0.000868516755,
+        "signal_uid": "structure_prototype_39|sc|wx:d501603a9dfd616be01b|3a",
+        "arm": "3a",
+        "stop_price": 0.037750000000000006,
+        "atr_at_entry": 0.00038525345463949983,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791982799999,
+        "available_at": 1791982799999,
+        "requested_at": 1791989305556,
+        "earliest_fill_ms": 1791989305556,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791989305556,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 30,
+        "account_id": "paper43_3a",
+        "symbol": "BTCUSDT",
+        "qty": 0.009000000000000001,
+        "entry_price": 81858.70000000001,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 80840.25965000002,
+        "entry_fee": 0.3683641500000001,
+        "exit_fee": 0.36378116842500013,
+        "funding_paid": -0.01313157108405147,
+        "signal_uid": "structure_prototype_39|sc|wx:2529fde07e32a410508f|3a",
+        "arm": "3a",
+        "stop_price": 80880.70000000001,
+        "atr_at_entry": 488.9856911558159,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 31,
+        "account_id": "paper43_3a",
+        "symbol": "ZECUSDT",
+        "qty": 0.65,
+        "entry_price": 1161.08,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1113.173135,
+        "entry_fee": 0.377351,
+        "exit_fee": 0.361781268875,
+        "funding_paid": 0.05095431523000001,
+        "signal_uid": "structure_prototype_39|sc|wx:687901fe38d28e00f843|3a",
+        "arm": "3a",
+        "stop_price": 1113.73,
+        "atr_at_entry": 23.67065877061683,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 32,
+        "account_id": "paper43_3a",
+        "symbol": "SOLUSDT",
+        "qty": 2.8000000000000003,
+        "entry_price": 103.98,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 101.67913500000002,
+        "entry_fee": 0.14557200000000003,
+        "exit_fee": 0.14235078900000006,
+        "funding_paid": -0.00053197368,
+        "signal_uid": "structure_prototype_39|sc|wx:720f03dac880cdc379ee|3a",
+        "arm": "3a",
+        "stop_price": 101.73,
+        "atr_at_entry": 1.1239365910073953,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 33,
+        "account_id": "paper43_3a",
+        "symbol": "XRPUSDT",
+        "qty": 32.7,
+        "entry_price": 1.3278,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1.3020486500000001,
+        "entry_fee": 0.021709530000000005,
+        "exit_fee": 0.0212884954275,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:0de1258d54102732911d|3a",
+        "arm": "3a",
+        "stop_price": 1.3027,
+        "atr_at_entry": 0.012539120590528042,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 34,
+        "account_id": "paper43_3a",
+        "symbol": "NEARUSDT",
+        "qty": 16.0,
+        "entry_price": 4.876,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792026000000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 4.833582000000001,
+        "entry_fee": 0.039008,
+        "exit_fee": 0.03866865600000001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:85a82a3088bb3aaa83a6|3a",
+        "arm": "3a",
+        "stop_price": 4.64,
+        "atr_at_entry": 0.11758949828922996,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 35,
+        "account_id": "paper43_3a",
+        "symbol": "PUMPUSDT",
+        "qty": 1102.0,
+        "entry_price": 0.0047079999999999995,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.004487755,
+        "entry_fee": 0.002594108,
+        "exit_fee": 0.0024727530050000003,
+        "funding_paid": 0.00026191509500000004,
+        "signal_uid": "structure_prototype_39|sc|wx:90c0afc8e886eda645fe|3a",
+        "arm": "3a",
+        "stop_price": 0.00449,
+        "atr_at_entry": 0.00010884767008389614,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 36,
+        "account_id": "paper43_3a",
+        "symbol": "BNBUSDT",
+        "qty": 0.02,
+        "entry_price": 729.22,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 721.089275,
+        "entry_fee": 0.0072922,
+        "exit_fee": 0.0072108927500000005,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:d8a76de26630d51561e7|3a",
+        "arm": "3a",
+        "stop_price": 721.45,
+        "atr_at_entry": 3.8804192070314523,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 37,
+        "account_id": "paper43_3a",
+        "symbol": "UNIUSDT",
+        "qty": 1.0,
+        "entry_price": 7.114,
+        "entry_ts": 1792005300000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 6.867564500000001,
+        "entry_fee": 0.003557,
+        "exit_fee": 0.0034337822500000005,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:b5db084ed5b1deb27279|3a",
+        "arm": "3a",
+        "stop_price": 6.871,
+        "atr_at_entry": 0.12148847289472417,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792004399999,
+        "available_at": 1792004399999,
+        "requested_at": 1792004474125,
+        "earliest_fill_ms": 1792004474125,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792004474125,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 38,
+        "account_id": "paper43_3a",
+        "symbol": "龙虾USDT",
+        "qty": 218.0,
+        "entry_price": 0.028990000000000002,
+        "entry_ts": 1792005300000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.00315991,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:1bc2bdda6cb3307c3dce|3a",
+        "arm": "3a",
+        "stop_price": 0.02364,
+        "atr_at_entry": 0.0026722708201901394,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792004399999,
+        "available_at": 1792004399999,
+        "requested_at": 1792004474125,
+        "earliest_fill_ms": 1792004474125,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792004474125,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 39,
+        "account_id": "paper43_3a",
+        "symbol": "INJUSDT",
+        "qty": 9.5,
+        "entry_price": 7.557,
+        "entry_ts": 1792012500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.03589575,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:b90796cb0eb0b5e0e66f|3a",
+        "arm": "3a",
+        "stop_price": 7.227,
+        "atr_at_entry": 0.16456495630740495,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792011599999,
+        "available_at": 1792011599999,
+        "requested_at": 1792011902617,
+        "earliest_fill_ms": 1792011902617,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792011902617,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 40,
+        "account_id": "paper43_3a",
+        "symbol": "牛来USDT",
+        "qty": 243.0,
+        "entry_price": 0.06881000000000001,
+        "entry_ts": 1792012500000,
+        "exit_ts": 1792022400000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 0.069595185,
+        "entry_fee": 0.008360415000000001,
+        "exit_fee": 0.008455814977500002,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:4eb0d09e6de49cb57ca6|3a",
+        "arm": "3a",
+        "stop_price": 0.06484000000000001,
+        "atr_at_entry": 0.00198165753242922,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792011599999,
+        "available_at": 1792011599999,
+        "requested_at": 1792011902617,
+        "earliest_fill_ms": 1792011902617,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792011902617,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 41,
+        "account_id": "paper43_3a",
+        "symbol": "AAVEUSDT",
+        "qty": 3.1,
+        "entry_price": 153.65,
+        "entry_ts": 1792016100000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 149.925,
+        "entry_fee": 0.23815750000000002,
+        "exit_fee": 0.23238375000000003,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:f9b38dfcd3a96fafdcd8|3a",
+        "arm": "3a",
+        "stop_price": 150.0,
+        "atr_at_entry": 1.8237294243359472,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792015199999,
+        "available_at": 1792015199999,
+        "requested_at": 1792015270801,
+        "earliest_fill_ms": 1792015270801,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792015270801,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base"
+      ],
+      "position": {
+        "position_id": 42,
+        "account_id": "paper43_3a",
+        "symbol": "AKEUSDT",
+        "qty": 537.0,
+        "entry_price": 0.028253999999999998,
+        "entry_ts": 1792016100000,
+        "exit_ts": 1792025100000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.026768609000000002,
+        "entry_fee": 0.007586199,
+        "exit_fee": 0.0071873715165000004,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|base|wx:a38287f5ed190cda1d29|3a",
+        "arm": "3a",
+        "stop_price": 0.026782,
+        "atr_at_entry": 0.0007355969244870515,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792015199999,
+        "available_at": 1792015199999,
+        "requested_at": 1792015270801,
+        "earliest_fill_ms": 1792015270801,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792015270801,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 43,
+        "account_id": "paper43_3a",
+        "symbol": "PONSUSDT",
+        "qty": 686.0,
+        "entry_price": 0.3095,
+        "entry_ts": 1792026900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.2854572,
+        "entry_fee": 0.1061585,
+        "exit_fee": 0.0979118196,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:c1e7a4fef6a1998053c5|3a",
+        "arm": "3a",
+        "stop_price": 0.2856,
+        "atr_at_entry": 0.011913594955874827,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792025999999,
+        "available_at": 1792025999999,
+        "requested_at": 1792026341787,
+        "earliest_fill_ms": 1792026341787,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792026341787,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 44,
+        "account_id": "paper43_3a",
+        "symbol": "PONSUSDT",
+        "qty": 2130.0,
+        "entry_price": 0.3106,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.28645670000000006,
+        "entry_fee": 0.330789,
+        "exit_fee": 0.3050763855000001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:cbb8649c6c8ed233b067|3a",
+        "arm": "3a",
+        "stop_price": 0.2866,
+        "atr_at_entry": 0.011977915206828393,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 45,
+        "account_id": "paper43_3a",
+        "symbol": "ONDOUSDT",
+        "qty": 1752.4,
+        "entry_price": 0.43560000000000004,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.42278850000000007,
+        "entry_fee": 0.3816727200000001,
+        "exit_fee": 0.3704472837000001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:fd5f6bfcc7a5cba02ab0|3a",
+        "arm": "3a",
+        "stop_price": 0.42300000000000004,
+        "atr_at_entry": 0.0062553453749895965,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 46,
+        "account_id": "paper43_3a",
+        "symbol": "XLMUSDT",
+        "qty": 4199.0,
+        "entry_price": 0.18122000000000002,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.17764113500000003,
+        "entry_fee": 0.3804713900000001,
+        "exit_fee": 0.3729575629325001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:8a311ccbf976d84e1888|3a",
+        "arm": "3a",
+        "stop_price": 0.17773000000000003,
+        "atr_at_entry": 0.0017433011591016466,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 47,
+        "account_id": "paper43_3a",
+        "symbol": "USUSDT",
+        "qty": 62135.0,
+        "entry_price": 0.006993,
+        "entry_ts": 1792030500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.2172550275,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:e86a8930eb9bc8d84795|3a",
+        "arm": "3a",
+        "stop_price": 0.006179,
+        "atr_at_entry": 0.0004066941962478288,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 48,
+        "account_id": "paper43_3a",
+        "symbol": "牛来USDT",
+        "qty": 11929.0,
+        "entry_price": 0.06349,
+        "entry_ts": 1792030500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.37868610500000005,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:3fa9637a95b860bf74d2|3a",
+        "arm": "3a",
+        "stop_price": 0.05929,
+        "atr_at_entry": 0.0020954201980904526,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 49,
+        "account_id": "paper43_3a",
+        "symbol": "VIRTUALUSDT",
+        "qty": 445.5,
+        "entry_price": 0.6622,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.6451772500000001,
+        "entry_fee": 0.14750505000000003,
+        "exit_fee": 0.14371323243750003,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:b1b2beaacff9bf66dd49|3a",
+        "arm": "3a",
+        "stop_price": 0.6455000000000001,
+        "atr_at_entry": 0.008325999817022405,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 50,
+        "account_id": "paper43_3a",
+        "symbol": "FARTCOINUSDT",
+        "qty": 4946.5,
+        "entry_price": 0.15130000000000002,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.14642675000000002,
+        "entry_fee": 0.37420272500000007,
+        "exit_fee": 0.36214995943750006,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:46b03e07b128774697b9|3a",
+        "arm": "3a",
+        "stop_price": 0.14650000000000002,
+        "atr_at_entry": 0.0023898993948894298,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 51,
+        "account_id": "paper43_3a",
+        "symbol": "NEARUSDT",
+        "qty": 157.0,
+        "entry_price": 4.729,
+        "entry_ts": 1792030500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.3712265,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:bfc99268d701f112a6b9|3a",
+        "arm": "3a",
+        "stop_price": 4.5120000000000005,
+        "atr_at_entry": 0.10831322224727348,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3a",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 52,
+        "account_id": "paper43_3a",
+        "symbol": "POLUSDT",
+        "qty": 7917.0,
+        "entry_price": 0.09400000000000001,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.09173411000000002,
+        "entry_fee": 0.37209900000000007,
+        "exit_fee": 0.3631294744350001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:07b590ffc286955e4535|3a",
+        "arm": "3a",
+        "stop_price": 0.09178000000000001,
+        "atr_at_entry": 0.0011069853329244105,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792030234877,
+        "earliest_fill_ms": 1792030234877,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792030234877,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 17,
+        "account_id": "paper43_3b",
+        "symbol": "BTCUSDT",
+        "qty": 0.009000000000000001,
+        "entry_price": 82117.0,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1791990000000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 81885.33685,
+        "entry_fee": 0.36952650000000004,
+        "exit_fee": 0.36848401582500007,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:cf595e2aa93a93aff467|3b",
+        "arm": "3b",
+        "stop_price": 81209.8,
+        "atr_at_entry": 453.56558579190715,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791982799999,
+        "available_at": 1791982799999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 18,
+        "account_id": "paper43_3b",
+        "symbol": "ETHUSDT",
+        "qty": 0.31,
+        "entry_price": 2436.51,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 2396.5811100000005,
+        "entry_fee": 0.37765905000000005,
+        "exit_fee": 0.37147007205000004,
+        "funding_paid": -0.008012077472,
+        "signal_uid": "structure_prototype_39|sc|wx:22ee2490fcb310a891d3|3b",
+        "arm": "3b",
+        "stop_price": 2397.78,
+        "atr_at_entry": 19.362130316118837,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791986399999,
+        "available_at": 1791986399999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base"
+      ],
+      "position": {
+        "position_id": 19,
+        "account_id": "paper43_3b",
+        "symbol": "ZECUSDT",
+        "qty": 0.121,
+        "entry_price": 1185.05,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1791992700000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1143.677875,
+        "entry_fee": 0.071695525,
+        "exit_fee": 0.0691925114375,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|base|wx:7a7943300e5716d06b79|3b",
+        "arm": "3b",
+        "stop_price": 1144.25,
+        "atr_at_entry": 20.39521838674156,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791939599999,
+        "available_at": 1791939599999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 20,
+        "account_id": "paper43_3b",
+        "symbol": "SOLUSDT",
+        "qty": 0.13,
+        "entry_price": 103.98,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 101.67913500000002,
+        "entry_fee": 0.0067587,
+        "exit_fee": 0.006609143775000001,
+        "funding_paid": -2.4698777999999998e-05,
+        "signal_uid": "structure_prototype_39|sc|wx:2a51efaa012a9036bbb3|3b",
+        "arm": "3b",
+        "stop_price": 101.73,
+        "atr_at_entry": 1.1239365910073953,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 21,
+        "account_id": "paper43_3b",
+        "symbol": "BTCUSDT",
+        "qty": 0.009000000000000001,
+        "entry_price": 81858.70000000001,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 80840.25965000002,
+        "entry_fee": 0.3683641500000001,
+        "exit_fee": 0.36378116842500013,
+        "funding_paid": -0.01313157108405147,
+        "signal_uid": "structure_prototype_39|sc|wx:8fe6c8ec978f990d2797|3b",
+        "arm": "3b",
+        "stop_price": 80880.70000000001,
+        "atr_at_entry": 488.9856911558159,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 22,
+        "account_id": "paper43_3b",
+        "symbol": "ZECUSDT",
+        "qty": 0.651,
+        "entry_price": 1161.08,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1113.173135,
+        "entry_fee": 0.37793154,
+        "exit_fee": 0.3623378554425,
+        "funding_paid": 0.05103270648420001,
+        "signal_uid": "structure_prototype_39|sc|wx:2a32fcce2033c394bae3|3b",
+        "arm": "3b",
+        "stop_price": 1113.73,
+        "atr_at_entry": 23.67065877061683,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 23,
+        "account_id": "paper43_3b",
+        "symbol": "XRPUSDT",
+        "qty": 74.3,
+        "entry_price": 1.3317,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1.3059467,
+        "entry_fee": 0.049472655000000004,
+        "exit_fee": 0.048515919904999996,
+        "funding_paid": 0.00201952926023121,
+        "signal_uid": "structure_prototype_39|sc|wx:401ea37e9e128fe73816|3b",
+        "arm": "3b",
+        "stop_price": 1.3066,
+        "atr_at_entry": 0.012514863777999978,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 24,
+        "account_id": "paper43_3b",
+        "symbol": "NEARUSDT",
+        "qty": 8.0,
+        "entry_price": 4.876,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792026000000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 4.833582000000001,
+        "entry_fee": 0.019504,
+        "exit_fee": 0.019334328000000005,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:8162541449aa47d1cfdc|3b",
+        "arm": "3b",
+        "stop_price": 4.64,
+        "atr_at_entry": 0.11758949828922996,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 25,
+        "account_id": "paper43_3b",
+        "symbol": "BNBUSDT",
+        "qty": 0.11,
+        "entry_price": 729.22,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 721.089275,
+        "entry_fee": 0.04010710000000001,
+        "exit_fee": 0.039659910125,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:5837484a3b3af2aa2c4f|3b",
+        "arm": "3b",
+        "stop_price": 721.45,
+        "atr_at_entry": 3.8804192070314523,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 26,
+        "account_id": "paper43_3b",
+        "symbol": "PUMPUSDT",
+        "qty": 1599.0,
+        "entry_price": 0.0047079999999999995,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.004487755,
+        "entry_fee": 0.0037640459999999996,
+        "exit_fee": 0.0035879601225000004,
+        "funding_paid": 0.0003800383275,
+        "signal_uid": "structure_prototype_39|sc|wx:e9408221ccc8a0ba071c|3b",
+        "arm": "3b",
+        "stop_price": 0.00449,
+        "atr_at_entry": 0.00010884767008389614,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 27,
+        "account_id": "paper43_3b",
+        "symbol": "XLMUSDT",
+        "qty": 101.0,
+        "entry_price": 0.18291000000000002,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792026000000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 0.18244873000000003,
+        "entry_fee": 0.009236955,
+        "exit_fee": 0.009213660865,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:fc573db43a97bf402156|3b",
+        "arm": "3b",
+        "stop_price": 0.17917000000000002,
+        "atr_at_entry": 0.0018692038699593624,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 28,
+        "account_id": "paper43_3b",
+        "symbol": "FETUSDT",
+        "qty": 57.0,
+        "entry_price": 0.199,
+        "entry_ts": 1792005300000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.19040475,
+        "entry_fee": 0.0056715,
+        "exit_fee": 0.005426535375,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:f0e78c7f778bb5436bd1|3b",
+        "arm": "3b",
+        "stop_price": 0.1905,
+        "atr_at_entry": 0.004200875236625395,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792004399999,
+        "available_at": 1792004399999,
+        "requested_at": 1792004474125,
+        "earliest_fill_ms": 1792004474125,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792004474125,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base"
+      ],
+      "position": {
+        "position_id": 29,
+        "account_id": "paper43_3b",
+        "symbol": "NILUSDT",
+        "qty": 778.9000000000001,
+        "entry_price": 0.09279000000000001,
+        "entry_ts": 1792012500000,
+        "exit_ts": 1792025100000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.08720637500000002,
+        "entry_fee": 0.03613706550000001,
+        "exit_fee": 0.03396252274375001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|base|wx:119906e36afa7878e7ad|3b",
+        "arm": "3b",
+        "stop_price": 0.08725000000000001,
+        "atr_at_entry": 0.002765405288803913,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792011599999,
+        "available_at": 1792011599999,
+        "requested_at": 1792011902617,
+        "earliest_fill_ms": 1792011902617,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792011902617,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base"
+      ],
+      "position": {
+        "position_id": 30,
+        "account_id": "paper43_3b",
+        "symbol": "PYTHUSDT",
+        "qty": 168.0,
+        "entry_price": 0.08517000000000001,
+        "entry_ts": 1792012500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.007154280000000001,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|base|wx:2e35618169766f81fb55|3b",
+        "arm": "3b",
+        "stop_price": 0.08028,
+        "atr_at_entry": 0.0024408651955753102,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792011599999,
+        "available_at": 1792011599999,
+        "requested_at": 1792011902617,
+        "earliest_fill_ms": 1792011902617,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792011902617,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 31,
+        "account_id": "paper43_3b",
+        "symbol": "LDOUSDT",
+        "qty": 1229.0,
+        "entry_price": 0.3997,
+        "entry_ts": 1792016100000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.38570705000000005,
+        "entry_fee": 0.24561565,
+        "exit_fee": 0.23701698222500003,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:7ed8dfd9fa575e1e2bb8|3b",
+        "arm": "3b",
+        "stop_price": 0.3859,
+        "atr_at_entry": 0.006879951621307081,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792015199999,
+        "available_at": 1792015199999,
+        "requested_at": 1792015270801,
+        "earliest_fill_ms": 1792015270801,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792015270801,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 32,
+        "account_id": "paper43_3b",
+        "symbol": "牛来USDT",
+        "qty": 411.0,
+        "entry_price": 0.06597,
+        "entry_ts": 1792026900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.06198899000000001,
+        "entry_fee": 0.013556835,
+        "exit_fee": 0.012738737445000002,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:caae17bd10f4619db6d4|3b",
+        "arm": "3b",
+        "stop_price": 0.062020000000000006,
+        "atr_at_entry": 0.0019714949457091237,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792025999999,
+        "available_at": 1792025999999,
+        "requested_at": 1792026341787,
+        "earliest_fill_ms": 1792026341787,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792026341787,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 33,
+        "account_id": "paper43_3b",
+        "symbol": "JTOUSDT",
+        "qty": 807.0,
+        "entry_price": 0.4822,
+        "entry_ts": 1792026900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.46436770000000005,
+        "entry_fee": 0.1945677,
+        "exit_fee": 0.18737236695,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:5fcd26e2eb96f031785e|3b",
+        "arm": "3b",
+        "stop_price": 0.4646,
+        "atr_at_entry": 0.008771810699978747,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792025999999,
+        "available_at": 1792025999999,
+        "requested_at": 1792026341787,
+        "earliest_fill_ms": 1792026341787,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792026341787,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 34,
+        "account_id": "paper43_3b",
+        "symbol": "牛来USDT",
+        "qty": 12081.0,
+        "entry_price": 0.06349,
+        "entry_ts": 1792030500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.383511345,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:b42f2005e89a4df40acc|3b",
+        "arm": "3b",
+        "stop_price": 0.05929,
+        "atr_at_entry": 0.0020954201980904526,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3b",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 35,
+        "account_id": "paper43_3b",
+        "symbol": "GRAMUSDT",
+        "qty": 570.4,
+        "entry_price": 1.34,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1.317341,
+        "entry_fee": 0.382168,
+        "exit_fee": 0.37570565320000004,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:8c101ff90da18f599899|3b",
+        "arm": "3b",
+        "stop_price": 1.318,
+        "atr_at_entry": 0.01091645175790579,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 35,
+        "account_id": "paper43_3c",
+        "symbol": "BTCUSDT",
+        "qty": 0.009000000000000001,
+        "entry_price": 82117.0,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1791990000000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 81885.33685,
+        "entry_fee": 0.36952650000000004,
+        "exit_fee": 0.36848401582500007,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:506146e6ecf2a6422e5e|3c",
+        "arm": "3c",
+        "stop_price": 81209.8,
+        "atr_at_entry": 453.56558579190715,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791982799999,
+        "available_at": 1791982799999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 36,
+        "account_id": "paper43_3c",
+        "symbol": "ETHUSDT",
+        "qty": 0.311,
+        "entry_price": 2436.51,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 2396.5811100000005,
+        "entry_fee": 0.37887730500000005,
+        "exit_fee": 0.3726683626050001,
+        "funding_paid": -0.008037922883199999,
+        "signal_uid": "structure_prototype_39|sc|wx:380360f60703af35eb62|3c",
+        "arm": "3c",
+        "stop_price": 2397.78,
+        "atr_at_entry": 19.362130316118837,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791986399999,
+        "available_at": 1791986399999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base"
+      ],
+      "position": {
+        "position_id": 37,
+        "account_id": "paper43_3c",
+        "symbol": "ZECUSDT",
+        "qty": 0.335,
+        "entry_price": 1185.05,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1791992700000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1143.677875,
+        "entry_fee": 0.19849587500000002,
+        "exit_fee": 0.19156604406250002,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|base|wx:72043f8d9d38502d84d2|3c",
+        "arm": "3c",
+        "stop_price": 1144.25,
+        "atr_at_entry": 20.39521838674156,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791939599999,
+        "available_at": 1791939599999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 38,
+        "account_id": "paper43_3c",
+        "symbol": "OGUSDT",
+        "qty": 3.2,
+        "entry_price": 2.6350000000000002,
+        "entry_ts": 1791990000000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 2.5947020000000003,
+        "entry_fee": 0.004216,
+        "exit_fee": 0.004151523200000001,
+        "funding_paid": -0.000108643104,
+        "signal_uid": "structure_prototype_39|sc|wx:e472b36b8133c3b5a2f6|3c",
+        "arm": "3c",
+        "stop_price": 2.596,
+        "atr_at_entry": 0.01915740130311292,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791975599999,
+        "available_at": 1791975599999,
+        "requested_at": 1791989305556,
+        "earliest_fill_ms": 1791989305556,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791989305556,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 39,
+        "account_id": "paper43_3c",
+        "symbol": "BTCUSDT",
+        "qty": 0.009000000000000001,
+        "entry_price": 81858.70000000001,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 80840.25965000002,
+        "entry_fee": 0.3683641500000001,
+        "exit_fee": 0.36378116842500013,
+        "funding_paid": -0.01313157108405147,
+        "signal_uid": "structure_prototype_39|sc|wx:101c2f52675ba7dcf625|3c",
+        "arm": "3c",
+        "stop_price": 80880.70000000001,
+        "atr_at_entry": 488.9856911558159,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 40,
+        "account_id": "paper43_3c",
+        "symbol": "ZECUSDT",
+        "qty": 0.651,
+        "entry_price": 1161.08,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1113.173135,
+        "entry_fee": 0.37793154,
+        "exit_fee": 0.3623378554425,
+        "funding_paid": 0.05103270648420001,
+        "signal_uid": "structure_prototype_39|sc|wx:5786cb55c998e2ee6f82|3c",
+        "arm": "3c",
+        "stop_price": 1113.73,
+        "atr_at_entry": 23.67065877061683,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 41,
+        "account_id": "paper43_3c",
+        "symbol": "SOLUSDT",
+        "qty": 2.82,
+        "entry_price": 103.98,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 101.67913500000002,
+        "entry_fee": 0.1466118,
+        "exit_fee": 0.14336758035000002,
+        "funding_paid": -0.0005357734919999999,
+        "signal_uid": "structure_prototype_39|sc|wx:8c4c5e0f8708a7b23232|3c",
+        "arm": "3c",
+        "stop_price": 101.73,
+        "atr_at_entry": 1.1239365910073953,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 42,
+        "account_id": "paper43_3c",
+        "symbol": "XRPUSDT",
+        "qty": 32.2,
+        "entry_price": 1.3278,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1.3020486500000001,
+        "entry_fee": 0.021377580000000004,
+        "exit_fee": 0.020962983265000006,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:8a73c1edff9ecfdef2a8|3c",
+        "arm": "3c",
+        "stop_price": 1.3027,
+        "atr_at_entry": 0.012539120590528042,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 43,
+        "account_id": "paper43_3c",
+        "symbol": "NEARUSDT",
+        "qty": 16.0,
+        "entry_price": 4.876,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792026000000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 4.833582000000001,
+        "entry_fee": 0.039008,
+        "exit_fee": 0.03866865600000001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:42fd35e7a56f69c5845d|3c",
+        "arm": "3c",
+        "stop_price": 4.64,
+        "atr_at_entry": 0.11758949828922996,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 44,
+        "account_id": "paper43_3c",
+        "symbol": "PUMPUSDT",
+        "qty": 1103.0,
+        "entry_price": 0.0047079999999999995,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.004487755,
+        "entry_fee": 0.002596462,
+        "exit_fee": 0.0024749968825000003,
+        "funding_paid": 0.00026215276750000006,
+        "signal_uid": "structure_prototype_39|sc|wx:0c5c736393c1b2fa7cb7|3c",
+        "arm": "3c",
+        "stop_price": 0.00449,
+        "atr_at_entry": 0.00010884767008389614,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 45,
+        "account_id": "paper43_3c",
+        "symbol": "BNBUSDT",
+        "qty": 0.02,
+        "entry_price": 729.22,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 721.089275,
+        "entry_fee": 0.0072922,
+        "exit_fee": 0.0072108927500000005,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:ef2cf79e2245b3e6245e|3c",
+        "arm": "3c",
+        "stop_price": 721.45,
+        "atr_at_entry": 3.8804192070314523,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 46,
+        "account_id": "paper43_3c",
+        "symbol": "UNIUSDT",
+        "qty": 1.0,
+        "entry_price": 7.114,
+        "entry_ts": 1792005300000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 6.867564500000001,
+        "entry_fee": 0.003557,
+        "exit_fee": 0.0034337822500000005,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:a04affc1cf3f2884a281|3c",
+        "arm": "3c",
+        "stop_price": 6.871,
+        "atr_at_entry": 0.12148847289472417,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792004399999,
+        "available_at": 1792004399999,
+        "requested_at": 1792004474125,
+        "earliest_fill_ms": 1792004474125,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792004474125,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 47,
+        "account_id": "paper43_3c",
+        "symbol": "龙虾USDT",
+        "qty": 220.0,
+        "entry_price": 0.028990000000000002,
+        "entry_ts": 1792005300000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.0031889,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:520cd3c0b0cd05436bb6|3c",
+        "arm": "3c",
+        "stop_price": 0.02364,
+        "atr_at_entry": 0.0026722708201901394,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792004399999,
+        "available_at": 1792004399999,
+        "requested_at": 1792004474125,
+        "earliest_fill_ms": 1792004474125,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792004474125,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 48,
+        "account_id": "paper43_3c",
+        "symbol": "INJUSDT",
+        "qty": 9.5,
+        "entry_price": 7.557,
+        "entry_ts": 1792012500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.03589575,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:db3bce37dbd21c210136|3c",
+        "arm": "3c",
+        "stop_price": 7.227,
+        "atr_at_entry": 0.16456495630740495,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792011599999,
+        "available_at": 1792011599999,
+        "requested_at": 1792011902617,
+        "earliest_fill_ms": 1792011902617,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792011902617,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 49,
+        "account_id": "paper43_3c",
+        "symbol": "牛来USDT",
+        "qty": 243.0,
+        "entry_price": 0.06881000000000001,
+        "entry_ts": 1792012500000,
+        "exit_ts": 1792022400000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 0.069595185,
+        "entry_fee": 0.008360415000000001,
+        "exit_fee": 0.008455814977500002,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:d82cbd6e262e5c6baea1|3c",
+        "arm": "3c",
+        "stop_price": 0.06484000000000001,
+        "atr_at_entry": 0.00198165753242922,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792011599999,
+        "available_at": 1792011599999,
+        "requested_at": 1792011902617,
+        "earliest_fill_ms": 1792011902617,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792011902617,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 50,
+        "account_id": "paper43_3c",
+        "symbol": "AAVEUSDT",
+        "qty": 3.2,
+        "entry_price": 153.65,
+        "entry_ts": 1792016100000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 149.925,
+        "entry_fee": 0.24584000000000003,
+        "exit_fee": 0.23988000000000004,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:c12eb0a9f7f52caadcdb|3c",
+        "arm": "3c",
+        "stop_price": 150.0,
+        "atr_at_entry": 1.8237294243359472,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792015199999,
+        "available_at": 1792015199999,
+        "requested_at": 1792015270801,
+        "earliest_fill_ms": 1792015270801,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792015270801,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 51,
+        "account_id": "paper43_3c",
+        "symbol": "PONSUSDT",
+        "qty": 640.0,
+        "entry_price": 0.3095,
+        "entry_ts": 1792026900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.2854572,
+        "entry_fee": 0.09903999999999999,
+        "exit_fee": 0.091346304,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:e0a52fe4733b35d125a8|3c",
+        "arm": "3c",
+        "stop_price": 0.2856,
+        "atr_at_entry": 0.011913594955874827,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792025999999,
+        "available_at": 1792025999999,
+        "requested_at": 1792026341787,
+        "earliest_fill_ms": 1792026341787,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792026341787,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 52,
+        "account_id": "paper43_3c",
+        "symbol": "PONSUSDT",
+        "qty": 2132.0,
+        "entry_price": 0.3106,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.28645670000000006,
+        "entry_fee": 0.3310996,
+        "exit_fee": 0.30536284220000004,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:f33d48154df6e1affd8e|3c",
+        "arm": "3c",
+        "stop_price": 0.2866,
+        "atr_at_entry": 0.011977915206828393,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 53,
+        "account_id": "paper43_3c",
+        "symbol": "ONDOUSDT",
+        "qty": 1754.0,
+        "entry_price": 0.43560000000000004,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.42278850000000007,
+        "entry_fee": 0.3820212,
+        "exit_fee": 0.3707855145,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:c6cf2d16d2f267d60e21|3c",
+        "arm": "3c",
+        "stop_price": 0.42300000000000004,
+        "atr_at_entry": 0.0062553453749895965,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 54,
+        "account_id": "paper43_3c",
+        "symbol": "XLMUSDT",
+        "qty": 4203.0,
+        "entry_price": 0.18122000000000002,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.17764113500000003,
+        "entry_fee": 0.38083383000000004,
+        "exit_fee": 0.3733128452025001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:62fadb5d55daf829fe00|3c",
+        "arm": "3c",
+        "stop_price": 0.17773000000000003,
+        "atr_at_entry": 0.0017433011591016466,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 55,
+        "account_id": "paper43_3c",
+        "symbol": "USUSDT",
+        "qty": 62192.0,
+        "entry_price": 0.006993,
+        "entry_ts": 1792030500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.217454328,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:592ea85c774e2ca2d781|3c",
+        "arm": "3c",
+        "stop_price": 0.006179,
+        "atr_at_entry": 0.0004066941962478288,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 56,
+        "account_id": "paper43_3c",
+        "symbol": "牛来USDT",
+        "qty": 11940.0,
+        "entry_price": 0.06349,
+        "entry_ts": 1792030500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.3790353,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:3b7a4b6be5e0eadd366c|3c",
+        "arm": "3c",
+        "stop_price": 0.05929,
+        "atr_at_entry": 0.0020954201980904526,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 57,
+        "account_id": "paper43_3c",
+        "symbol": "VIRTUALUSDT",
+        "qty": 446.5,
+        "entry_price": 0.6622,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.6451772500000001,
+        "entry_fee": 0.14783615,
+        "exit_fee": 0.1440358210625,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:3ee6f4ca7bf25aa0627a|3c",
+        "arm": "3c",
+        "stop_price": 0.6455000000000001,
+        "atr_at_entry": 0.008325999817022405,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 58,
+        "account_id": "paper43_3c",
+        "symbol": "FARTCOINUSDT",
+        "qty": 4951.0,
+        "entry_price": 0.15130000000000002,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.14642675000000002,
+        "entry_fee": 0.37454315000000005,
+        "exit_fee": 0.3624794196250001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:d9441e8f16ba7352586c|3c",
+        "arm": "3c",
+        "stop_price": 0.14650000000000002,
+        "atr_at_entry": 0.0023898993948894298,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3c",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 59,
+        "account_id": "paper43_3c",
+        "symbol": "NEARUSDT",
+        "qty": 157.0,
+        "entry_price": 4.729,
+        "entry_ts": 1792030500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.3712265,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:5cf328cfc996e1b242d5|3c",
+        "arm": "3c",
+        "stop_price": 4.5120000000000005,
+        "atr_at_entry": 0.10831322224727348,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 40,
+        "account_id": "paper43_3d",
+        "symbol": "BTCUSDT",
+        "qty": 0.009000000000000001,
+        "entry_price": 82117.0,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1791990000000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 81885.33685,
+        "entry_fee": 0.36952650000000004,
+        "exit_fee": 0.36848401582500007,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:163ec942acdf459f3cf4|3d",
+        "arm": "3d",
+        "stop_price": 81209.8,
+        "atr_at_entry": 453.56558579190715,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791982799999,
+        "available_at": 1791982799999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 41,
+        "account_id": "paper43_3d",
+        "symbol": "ETHUSDT",
+        "qty": 0.311,
+        "entry_price": 2436.51,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 2396.5811100000005,
+        "entry_fee": 0.37887730500000005,
+        "exit_fee": 0.3726683626050001,
+        "funding_paid": -0.008037922883199999,
+        "signal_uid": "structure_prototype_39|sc|wx:a230ef1dd44c9cba985e|3d",
+        "arm": "3d",
+        "stop_price": 2397.78,
+        "atr_at_entry": 19.362130316118837,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791986399999,
+        "available_at": 1791986399999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base"
+      ],
+      "position": {
+        "position_id": 42,
+        "account_id": "paper43_3d",
+        "symbol": "ZECUSDT",
+        "qty": 0.335,
+        "entry_price": 1185.05,
+        "entry_ts": 1791987300000,
+        "exit_ts": 1791992700000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1143.677875,
+        "entry_fee": 0.19849587500000002,
+        "exit_fee": 0.19156604406250002,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|base|wx:e46a40d629fb2607501c|3d",
+        "arm": "3d",
+        "stop_price": 1144.25,
+        "atr_at_entry": 20.39521838674156,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791939599999,
+        "available_at": 1791939599999,
+        "requested_at": 1791986749253,
+        "earliest_fill_ms": 1791986749253,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791986749253,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 43,
+        "account_id": "paper43_3d",
+        "symbol": "1000CATUSDT",
+        "qty": 4525.0,
+        "entry_price": 0.001875,
+        "entry_ts": 1791990000000,
+        "exit_ts": 1792026000000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 0.0018600695000000002,
+        "entry_fee": 0.0042421875,
+        "exit_fee": 0.00420840724375,
+        "funding_paid": -0.00026313055999999986,
+        "signal_uid": "structure_prototype_39|sc|wx:73a28bdd874a83a393b9|3d",
+        "arm": "3d",
+        "stop_price": 0.001839,
+        "atr_at_entry": 1.7676897035229027e-05,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791986399999,
+        "available_at": 1791986399999,
+        "requested_at": 1791989305556,
+        "earliest_fill_ms": 1791989305556,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791989305556,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 44,
+        "account_id": "paper43_3d",
+        "symbol": "BTCUSDT",
+        "qty": 0.009000000000000001,
+        "entry_price": 81858.70000000001,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 80840.25965000002,
+        "entry_fee": 0.3683641500000001,
+        "exit_fee": 0.36378116842500013,
+        "funding_paid": -0.01313157108405147,
+        "signal_uid": "structure_prototype_39|sc|wx:eaa03ac51c919b38023b|3d",
+        "arm": "3d",
+        "stop_price": 80880.70000000001,
+        "atr_at_entry": 488.9856911558159,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 45,
+        "account_id": "paper43_3d",
+        "symbol": "ZECUSDT",
+        "qty": 0.651,
+        "entry_price": 1161.08,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1113.173135,
+        "entry_fee": 0.37793154,
+        "exit_fee": 0.3623378554425,
+        "funding_paid": 0.05103270648420001,
+        "signal_uid": "structure_prototype_39|sc|wx:b88d6e389ca2074c657d|3d",
+        "arm": "3d",
+        "stop_price": 1113.73,
+        "atr_at_entry": 23.67065877061683,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 46,
+        "account_id": "paper43_3d",
+        "symbol": "SOLUSDT",
+        "qty": 2.82,
+        "entry_price": 103.98,
+        "entry_ts": 1791990900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 101.67913500000002,
+        "entry_fee": 0.1466118,
+        "exit_fee": 0.14336758035000002,
+        "funding_paid": -0.0005357734919999999,
+        "signal_uid": "structure_prototype_39|sc|wx:729d180bd1133e57b149|3d",
+        "arm": "3d",
+        "stop_price": 101.73,
+        "atr_at_entry": 1.1239365910073953,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791989999999,
+        "available_at": 1791989999999,
+        "requested_at": 1791990314168,
+        "earliest_fill_ms": 1791990314168,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791990314168,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 47,
+        "account_id": "paper43_3d",
+        "symbol": "XRPUSDT",
+        "qty": 32.1,
+        "entry_price": 1.3278,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 1.3020486500000001,
+        "entry_fee": 0.021311190000000004,
+        "exit_fee": 0.020897880832500004,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:9596dfdd9f73f554c906|3d",
+        "arm": "3d",
+        "stop_price": 1.3027,
+        "atr_at_entry": 0.012539120590528042,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 48,
+        "account_id": "paper43_3d",
+        "symbol": "NEARUSDT",
+        "qty": 16.0,
+        "entry_price": 4.876,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792026000000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 4.833582000000001,
+        "entry_fee": 0.039008,
+        "exit_fee": 0.03866865600000001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:7a935781f4fe59664643|3d",
+        "arm": "3d",
+        "stop_price": 4.64,
+        "atr_at_entry": 0.11758949828922996,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 49,
+        "account_id": "paper43_3d",
+        "symbol": "PUMPUSDT",
+        "qty": 1119.0,
+        "entry_price": 0.0047079999999999995,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.004487755,
+        "entry_fee": 0.0026341259999999997,
+        "exit_fee": 0.0025108989225,
+        "funding_paid": 0.0002659555275,
+        "signal_uid": "structure_prototype_39|sc|wx:c9bc9fe46291c91fc790|3d",
+        "arm": "3d",
+        "stop_price": 0.00449,
+        "atr_at_entry": 0.00010884767008389614,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 50,
+        "account_id": "paper43_3d",
+        "symbol": "BNBUSDT",
+        "qty": 0.02,
+        "entry_price": 729.22,
+        "entry_ts": 1791994500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 721.089275,
+        "entry_fee": 0.0072922,
+        "exit_fee": 0.0072108927500000005,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:833370985368a020a7ff|3d",
+        "arm": "3d",
+        "stop_price": 721.45,
+        "atr_at_entry": 3.8804192070314523,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1791993599999,
+        "available_at": 1791993599999,
+        "requested_at": 1791993874538,
+        "earliest_fill_ms": 1791993874538,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1791993874538,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 51,
+        "account_id": "paper43_3d",
+        "symbol": "UNIUSDT",
+        "qty": 1.0,
+        "entry_price": 7.114,
+        "entry_ts": 1792005300000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 6.867564500000001,
+        "entry_fee": 0.003557,
+        "exit_fee": 0.0034337822500000005,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:19e6db3f020586b23055|3d",
+        "arm": "3d",
+        "stop_price": 6.871,
+        "atr_at_entry": 0.12148847289472417,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792004399999,
+        "available_at": 1792004399999,
+        "requested_at": 1792004474125,
+        "earliest_fill_ms": 1792004474125,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792004474125,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 52,
+        "account_id": "paper43_3d",
+        "symbol": "龙虾USDT",
+        "qty": 219.0,
+        "entry_price": 0.028990000000000002,
+        "entry_ts": 1792005300000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.0031744050000000004,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:092d3f7972a92f4f1910|3d",
+        "arm": "3d",
+        "stop_price": 0.02364,
+        "atr_at_entry": 0.0026722708201901394,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792004399999,
+        "available_at": 1792004399999,
+        "requested_at": 1792004474125,
+        "earliest_fill_ms": 1792004474125,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792004474125,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 53,
+        "account_id": "paper43_3d",
+        "symbol": "INJUSDT",
+        "qty": 9.5,
+        "entry_price": 7.557,
+        "entry_ts": 1792012500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.03589575,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:816a8301c41b59a0c8df|3d",
+        "arm": "3d",
+        "stop_price": 7.227,
+        "atr_at_entry": 0.16456495630740495,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792011599999,
+        "available_at": 1792011599999,
+        "requested_at": 1792011902617,
+        "earliest_fill_ms": 1792011902617,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792011902617,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 54,
+        "account_id": "paper43_3d",
+        "symbol": "牛来USDT",
+        "qty": 243.0,
+        "entry_price": 0.06881000000000001,
+        "entry_ts": 1792012500000,
+        "exit_ts": 1792022400000,
+        "exit_reason": "signal_exit_donchian",
+        "status": "closed",
+        "exit_price": 0.069595185,
+        "entry_fee": 0.008360415000000001,
+        "exit_fee": 0.008455814977500002,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:3f5fb09e9d86857f4115|3d",
+        "arm": "3d",
+        "stop_price": 0.06484000000000001,
+        "atr_at_entry": 0.00198165753242922,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792011599999,
+        "available_at": 1792011599999,
+        "requested_at": 1792011902617,
+        "earliest_fill_ms": 1792011902617,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792011902617,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 55,
+        "account_id": "paper43_3d",
+        "symbol": "AAVEUSDT",
+        "qty": 3.2,
+        "entry_price": 153.65,
+        "entry_ts": 1792016100000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 149.925,
+        "entry_fee": 0.24584000000000003,
+        "exit_fee": 0.23988000000000004,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:ed302293cf9d578002b6|3d",
+        "arm": "3d",
+        "stop_price": 150.0,
+        "atr_at_entry": 1.8237294243359472,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792015199999,
+        "available_at": 1792015199999,
+        "requested_at": 1792015270801,
+        "earliest_fill_ms": 1792015270801,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792015270801,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 56,
+        "account_id": "paper43_3d",
+        "symbol": "PONSUSDT",
+        "qty": 667.0,
+        "entry_price": 0.3095,
+        "entry_ts": 1792026900000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.2854572,
+        "entry_fee": 0.10321825,
+        "exit_fee": 0.09519997620000001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:b37b63ed1efab294a740|3d",
+        "arm": "3d",
+        "stop_price": 0.2856,
+        "atr_at_entry": 0.011913594955874827,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792025999999,
+        "available_at": 1792025999999,
+        "requested_at": 1792026341787,
+        "earliest_fill_ms": 1792026341787,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792026341787,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 57,
+        "account_id": "paper43_3d",
+        "symbol": "PONSUSDT",
+        "qty": 2132.0,
+        "entry_price": 0.3106,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.28645670000000006,
+        "entry_fee": 0.3310996,
+        "exit_fee": 0.30536284220000004,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:19d05cc87865015537de|3d",
+        "arm": "3d",
+        "stop_price": 0.2866,
+        "atr_at_entry": 0.011977915206828393,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 58,
+        "account_id": "paper43_3d",
+        "symbol": "ONDOUSDT",
+        "qty": 1753.8000000000002,
+        "entry_price": 0.43560000000000004,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.42278850000000007,
+        "entry_fee": 0.38197764000000006,
+        "exit_fee": 0.3707432356500001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:6ead727206f59f1b9f3b|3d",
+        "arm": "3d",
+        "stop_price": 0.42300000000000004,
+        "atr_at_entry": 0.0062553453749895965,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 59,
+        "account_id": "paper43_3d",
+        "symbol": "XLMUSDT",
+        "qty": 4202.0,
+        "entry_price": 0.18122000000000002,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.17764113500000003,
+        "entry_fee": 0.38074322000000005,
+        "exit_fee": 0.3732240246350001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:ee00389a96a8b73d5e4f|3d",
+        "arm": "3d",
+        "stop_price": 0.17773000000000003,
+        "atr_at_entry": 0.0017433011591016466,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 60,
+        "account_id": "paper43_3d",
+        "symbol": "USUSDT",
+        "qty": 62184.0,
+        "entry_price": 0.006993,
+        "entry_ts": 1792030500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.21742635600000002,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:4c4783d30602bd562701|3d",
+        "arm": "3d",
+        "stop_price": 0.006179,
+        "atr_at_entry": 0.0004066941962478288,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 61,
+        "account_id": "paper43_3d",
+        "symbol": "牛来USDT",
+        "qty": 11938.0,
+        "entry_price": 0.06349,
+        "entry_ts": 1792030500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.37897181,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:425df05fc50e2e906ca1|3d",
+        "arm": "3d",
+        "stop_price": 0.05929,
+        "atr_at_entry": 0.0020954201980904526,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 62,
+        "account_id": "paper43_3d",
+        "symbol": "VIRTUALUSDT",
+        "qty": 446.40000000000003,
+        "entry_price": 0.6622,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.6451772500000001,
+        "entry_fee": 0.14780304000000002,
+        "exit_fee": 0.14400356220000005,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:ba9191d8e7a3e976499f|3d",
+        "arm": "3d",
+        "stop_price": 0.6455000000000001,
+        "atr_at_entry": 0.008325999817022405,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 63,
+        "account_id": "paper43_3d",
+        "symbol": "FARTCOINUSDT",
+        "qty": 4950.400000000001,
+        "entry_price": 0.15130000000000002,
+        "entry_ts": 1792030500000,
+        "exit_ts": 1792030500000,
+        "exit_reason": "stop_loss",
+        "status": "closed",
+        "exit_price": 0.14642675000000002,
+        "entry_fee": 0.37449776000000007,
+        "exit_fee": 0.3624354916000001,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:32867c81887dc37dde7e|3d",
+        "arm": "3d",
+        "stop_price": 0.14650000000000002,
+        "atr_at_entry": 0.0023898993948894298,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    },
+    {
+      "arm": "3d",
+      "flags": [
+        "short_source_recorded_long",
+        "delay_below15m"
+      ],
+      "source_masks": [
+        "base_short"
+      ],
+      "position": {
+        "position_id": 64,
+        "account_id": "paper43_3d",
+        "symbol": "NEARUSDT",
+        "qty": 157.0,
+        "entry_price": 4.729,
+        "entry_ts": 1792030500000,
+        "exit_ts": null,
+        "exit_reason": null,
+        "status": "open",
+        "exit_price": null,
+        "entry_fee": 0.3712265,
+        "exit_fee": null,
+        "funding_paid": 0.0,
+        "signal_uid": "structure_prototype_39|sc|wx:8b5b609dc46b039a6dac|3d",
+        "arm": "3d",
+        "stop_price": 4.5120000000000005,
+        "atr_at_entry": 0.10831322224727348,
+        "model_version": "paper_exec_v1_derived_from_effective_view_20261013",
+        "event_time": 1792029599999,
+        "available_at": 1792029599999,
+        "requested_at": 1792029903710,
+        "earliest_fill_ms": 1792029903710,
+        "market_source": "binance.um.candles_15m.is_closed.open",
+        "origin": "live",
+        "first_request_ms": 1792029903710,
+        "epoch_ms": 1791939600000,
+        "voided": 0,
+        "void_reason": null
+      }
+    }
+  ],
+  "source_sha": {
+    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/paper_engine.py": {
+      "sha256": "c1a67cf7a3935bbc9327d7d06bacaf771f9aebe631b00e20f438bdb774e1d285",
+      "mtime_ns": 1791986685470028418
+    },
+    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/live_signal_engine.py": {
+      "sha256": "d2266784b421c8845a7397ae1098fbb6528485eea3e0dee8eff0bacf210605b5",
+      "mtime_ns": 1791937375431187639
+    },
+    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/live_worker.py": {
+      "sha256": "ef6c4d85b1cc483ca8d3a489aa4c98a7df6d3a25d94ec7bd7ec0ca16d8564b05",
+      "mtime_ns": 1791985313142355346
+    },
+    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/strategies/wx_donchian_wyckoff.py": {
+      "sha256": "b3f445af1087ef1099e5865d9a14399ab67885b8eb08ee4cfb52fd48d347164e",
+      "mtime_ns": 1791985288679080203
+    },
+    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/src/components/SignalListPanel.tsx": {
+      "sha256": "4c4f9086005bb8b9b63ff00fd88b1b52adc7cb4c51e73625389ba120e9ef9f0a",
+      "mtime_ns": 1791978611387046240
+    },
+    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/src/components/InlineExpandedChart.tsx": {
+      "sha256": "27d22129c631819014881cc3be61d6ed74e4de57521d5226f3f112a0bf40ab5e",
+      "mtime_ns": 1791979494189323921
+    }
+  },
+  "totals": {
+    "nonvoid_positions": 161,
+    "short_source_as_long": 89,
+    "delay_below15m": 97
+  }
+}

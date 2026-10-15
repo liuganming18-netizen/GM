@@ -1,0 +1,228 @@
+{
+ "startedAt": "2026-10-07T15:59:44.525Z",
+ "emulatedViewport": "1800x1180",
+ "label": "聪明钱接线-文案更正后",
+ "sections": {
+  "listSmartMoney": [
+   {
+    "id": "binance:0GUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000000BOBUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000000MOGUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000BONKUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000CATUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000CHEEMSUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000FLOKIUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000LUNCUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000PEPEUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000RATSUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000SATSUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   },
+   {
+    "id": "binance:1000SHIBUSDT",
+    "tdCount": 10,
+    "smartMoneyCellCount": 2,
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "shortText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据",
+    "longTitle": "来源：币安公开无鉴权聪明钱接口（路径含 /public/，无 cookie/Authorization 即 200，timeRange 必填）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/overview?symbol={S}&timeRange=ALL\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol={S}&timeRange=ALL\n  页面 https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL} 渲染同一组数据，自述每 60 秒更新。\n六槽口径（全部真实字段，无推算）：\n  持仓额 = stats.longPositions / shortPositions（已是 USDT 金额）；\n  巨鲸占比 = stats.longWhalePositions ÷ stats.longPositions（同源同一响应）；\n  均价 = overview.longTradersAvgEntryPrice / shortTradersAvgEntryPrice。\n来源另提供：交易员人数(longTraders/shortTraders)、巨鲸人数(longWhales/shortWhales)、\n  巨鲸均价(longWhalesAvgEntryPrice/shortWhalesAvgEntryPrice)、总持仓 totalPositions、\n  交易者总数 totalTraders、名义多空比 longShortRatio。\n新鲜度（2026-10-07 实测更正）：overview.updateTime **不随数据推进**——间隔 73s 两次采样，\n  业务字段全变而 updateTime 恒为 1791353989563（age ≈ 9.6h）。故本表**不用 updateTime 判新鲜**；\n  真实新鲜度字段是 details/list[].lastTradeTime（同刻实测 age ≈ 59s，与页面自述 60 秒更新吻合）。\n  · GET /bapi/futures/v1/public/future/smart-money/signal/details/list?symbol={S}&timeRange=ALL\n当前状态：列表列显示列表接口透传值；未采集到的行显示「暂无数据」，\n  展开该行时会按需直接取该合约（取到即填）。币安接口只覆盖币安 USD-M 合约，\n  故 OKX 行没有对应来源，保持空态。\n纪律：不用 OI / VWAP / 人数比 / taker 量推算任何一槽；缺值保留空，不填 0。"
+   }
+  ],
+  "listLabelAudit": {
+   "mentionsWrongLabel内部占比": false,
+   "mentionsWrongLabel无公开源": false,
+   "mentions巨鲸占比": true,
+   "mentions暂无数据": true,
+   "titleMentionsBinanceBapi": true,
+   "titleMentions60sUpdate": true
+  },
+  "listScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/聪明钱接线-文案更正后-列表聪明钱列-1800x1180.png",
+  "expandedTarget": "binance:0GUSDT",
+  "expandedSmartMoney": {
+   "ratioLine": "巨鲸占多/空持仓比: 86.3% / 83.6%",
+   "avgLine": "多空均价: $0.28472598 / $0.30685787",
+   "panelExcerpt": "0G / USDT (0G) | 来源交易所: Binance 1m 5m 15m 30m 1h 4h 8h 12h 1d 开: 0.3025 高: 0.3025 低: 0.3024 收: 0.3024 量: 1440.00 币 区间边界 / 突破 / 独立回踩 / 止损目标标注；点击真实信号触发点 → 查看规则条件 1分钟滚动10天｜5分钟导入1年｜15分钟导入2年｜30分钟及以上全部可得历史 0G OI（持仓量）逐小时变化率热力图 近24小时 • 总OI快照变化 仅按本机已有总OI快照计算逐小时变化率；变化代表全市场未平仓总量变化，不标识多空方向或账户身份。 最大单时增仓: +0.41% (04:00) 最大单时减仓: -1.27% (00:00) 24h总OI净变: -2.61%(-97.95万 单位待核验) 00:00 -1.27% -47.44万 单位待核验 01:00 -0.41% -15.21万 单位待核验 02:00 +0.28% 10.24万 单位待核验 03:00 +0.03% 1.03万 单位待核验 04:00 +0.41% 15.14万 单位待核验 05:00 +0.19% 6.97万 单位待核验 06:00 +0.03% 1.28万 单位待核验 07:00 +0.25% 9.26万 单位待核验 08:00 -0.41% -15.34万 单位待核验 09:00 -0.79% -29.16万 单位待核验 10:00 -0.19% -7.03万 单位待核验 11:00 +0.08% 2.98万 单位待核验 12:00 +0.31% 11.53万 单位待核验 ",
+   "ratioTitleHasBapiRoute": true,
+   "ratioTitleHas60sUpdate": true,
+   "ratioTitleStillClaimsNoPublicSource": false,
+   "ratioTitleHasDisciplineLine": true,
+   "avgTitleHasPerSideRealValues": true,
+   "avgTitleHasBapiRoute": true,
+   "ratioShowsRealPercent": true,
+   "avgShowsRealPrice": true
+  },
+  "expandedScreenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/聪明钱接线-文案更正后-展开聪明钱-1800x1180.png",
+  "sameInstantReference": {
+   "via": "同源 /bapi（经 vite dev proxy → https://www.binance.bh，credentials:omit）",
+   "overviewHttpStatus": 200,
+   "statsHttpStatus": 200,
+   "longPositionsUsd": 4508591.79466773,
+   "shortPositionsUsd": 1105963.88591367,
+   "longWhaleSharePercent": 86.3,
+   "shortWhaleSharePercent": 83.6,
+   "longAvgEntryPrice": 0.28472598,
+   "shortAvgEntryPrice": 0.30685787,
+   "longTraders": 232,
+   "shortTraders": 186
+  },
+  "crossCheck": {
+   "ratioLineNumbers": [
+    86.3,
+    83.6
+   ],
+   "avgLineNumbers": [
+    0.28472598,
+    0.30685787
+   ],
+   "ratioMatchesReference": true,
+   "avgMatchesReferenceApprox": true,
+   "note": "页面值取自展开那一刻的请求；参考值取自随后同源再取一次，价格/占比会小幅漂移，故均价用 2% 相对容差、占比用精确匹配（占比在小数点后 1 位稳定）。"
+  },
+  "okxRow": {
+   "targetId": "okx:XDP-USDT-SWAP",
+   "foundOkxRow": true,
+   "cellText": {
+    "id": "okx:XDP-USDT-SWAP",
+    "longText": "持仓额: 暂无数据 巨鲸占比: — 均价: 暂无数据"
+   },
+   "smartMoneyRequestsAfterOkxExpand": [],
+   "noRequestForOkx": true,
+   "screenshot": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/前端实现-AIStudio/docs/验收截图/聪明钱接线-文案更正后-OKX行无聪明钱请求-1800x1180.png"
+  },
+  "network": {
+   "note": "页面自身发出的聪明钱请求（含 Cookie/Authorization 头探测，用于证明未携带凭据）。取自 allNetLog，不因 §5 清空 netLog 而丢失。",
+   "requests": [
+    {
+     "method": "GET",
+     "url": "http://127.0.0.1:3000/api/v1/smart-money/binance/BTCUSDT",
+     "status": 404,
+     "hasCookieHeader": false,
+     "hasAuthorizationHeader": false
+    },
+    {
+     "method": "GET",
+     "url": "http://127.0.0.1:3000/bapi/futures/v1/public/future/smart-money/signal/overview?symbol=BTCUSDT&timeRange=ALL",
+     "status": 200,
+     "hasCookieHeader": false,
+     "hasAuthorizationHeader": false
+    },
+    {
+     "method": "GET",
+     "url": "http://127.0.0.1:3000/bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol=BTCUSDT&timeRange=ALL",
+     "status": 200,
+     "hasCookieHeader": false,
+     "hasAuthorizationHeader": false
+    },
+    {
+     "method": "GET",
+     "url": "http://127.0.0.1:3000/api/v1/smart-money/binance/0GUSDT",
+     "status": 404,
+     "hasCookieHeader": false,
+     "hasAuthorizationHeader": false
+    },
+    {
+     "method": "GET",
+     "url": "http://127.0.0.1:3000/bapi/futures/v1/public/future/smart-money/signal/overview?symbol=0GUSDT&timeRange=ALL",
+     "status": 200,
+     "hasCookieHeader": false,
+     "hasAuthorizationHeader": false
+    },
+    {
+     "method": "GET",
+     "url": "http://127.0.0.1:3000/bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol=0GUSDT&timeRange=ALL",
+     "status": 200,
+     "hasCookieHeader": false,
+     "hasAuthorizationHeader": false
+    },
+    {
+     "method": "GET",
+     "url": "http://127.0.0.1:3000/bapi/futures/v1/public/future/smart-money/signal/overview?symbol=0GUSDT&timeRange=ALL",
+     "status": 200,
+     "hasCookieHeader": false,
+     "hasAuthorizationHeader": false
+    },
+    {
+     "method": "GET",
+     "url": "http://127.0.0.1:3000/bapi/futures/v1/public/future/smart-money/signal/details/stats?symbol=0GUSDT&timeRange=ALL",
+     "status": 200,
+     "hasCookieHeader": false,
+     "hasAuthorizationHeader": false
+    }
+   ]
+  }
+ },
+ "endedAt": "2026-10-07T16:00:06.425Z"
+}

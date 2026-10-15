@@ -1,0 +1,114 @@
+{
+  "证据主题": "BTCUSDT 1m 官方归档补录与「按 UTC 日对齐」核验",
+  "生成时间_UTC": "2026-10-09T18:23:35Z",
+  "标的": {
+    "exchange": "binance",
+    "market": "um",
+    "symbol": "BTCUSDT",
+    "timeframe": "1m"
+  },
+  "唯一行情库": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+  "补录前": {
+    "rows": 18604,
+    "first_open": "2026-09-26T09:14:00Z",
+    "last_open": "2026-10-09T18:11:00Z",
+    "gap_segments": 11,
+    "missing_bars": 654,
+    "最大缺口": "2026-10-07T16:56Z -> 2026-10-08T01:35Z 缺 518 根（8.65h）"
+  },
+  "补录动作": {
+    "入口": "后端实现/历史下载/batch_download.py --phases 1m --symbols BTCUSDT",
+    "run_id": 25,
+    "窗口": "onboard_day(2019-09-08) .. last_closed_utc_day(2026-10-08)（window_start 返回 onboard_day，非 10 天短窗）",
+    "下载": [
+      "data/futures/um/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-07.zip（61,331 B）",
+      "data/futures/um/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-08.zip（62,476 B）"
+    ],
+    "新增导入归档数": 90,
+    "失败数": 0,
+    "逐文件校验": "官方 .CHECKSUM sha256 逐文件比对，失配即拒绝入库",
+    "幂等": "同 (exchange,market,symbol,timeframe,sha256) 命中返回「新增版本数 0」",
+    "耗时秒": 248.0
+  },
+  "补录后": {
+    "rows": 3563658,
+    "first_open": "2019-12-31T00:00:00Z",
+    "last_open": "2026-10-09T18:20:00Z",
+    "gap_segments": 3,
+    "missing_bars": 3,
+    "缺口明细": [
+      {
+        "from": "2026-10-09T01:46:00Z",
+        "to": "2026-10-09T01:48:00Z",
+        "missing": 1
+      },
+      {
+        "from": "2026-10-09T02:54:00Z",
+        "to": "2026-10-09T02:56:00Z",
+        "missing": 1
+      },
+      {
+        "from": "2026-10-09T07:26:00Z",
+        "to": "2026-10-09T07:28:00Z",
+        "missing": 1
+      }
+    ],
+    "coverage_cache": {
+      "rows": 3563658,
+      "expected": 3563661,
+      "missing": 3,
+      "last_close": "2026-10-09T18:20:59Z"
+    }
+  },
+  "按UTC日对齐核验": {
+    "口径": "每个已收盘 UTC 日应恰有 1440 根 1m；起点应落在 UTC 日边界 00:00",
+    "覆盖_utc_日数": 2475,
+    "完整整日_1440根": 2474,
+    "非整日": [
+      {
+        "utc_day": "2026-10-09",
+        "rows": 1098
+      }
+    ],
+    "结论": "2474/2475 个 UTC 日为完整整日；唯一非整日为尚未收盘的 2026-10-09（归档次日才发布）",
+    "起点落在日边界": true
+  },
+  "接口核验": {
+    "首屏": {
+      "url": "/api/v1/markets/binance/BTCUSDT/candles?timeframe=1m&limit=1500&history_only=1",
+      "bars": 1500,
+      "has_more": true
+    },
+    "最老一页": {
+      "bars": 1441,
+      "has_more": false,
+      "first": "2019-12-31T00:00:00Z",
+      "last": "2020-01-01T00:00:00Z"
+    },
+    "原大洞窗口": {
+      "范围": "2026-10-07T05:01Z -> 2026-10-08T06:00Z",
+      "bars": 1500,
+      "gap_segments": 0
+    },
+    "原次大洞窗口": {
+      "范围": "2026-10-08T00:46Z -> 2026-10-08T05:45Z",
+      "bars": 300,
+      "gap_segments": 0
+    }
+  },
+  "界面核验": {
+    "首屏": {
+      "本地已载入": 1500,
+      "UI上报缺口": "闭合段缺口 3 处（最多缺 1 根）"
+    },
+    "点击加载更早历史": {
+      "本地已载入": 3000,
+      "请求": "timeframe=1m&limit=1500&history_only=1&before=1791479940000"
+    }
+  },
+  "残留": {
+    "未补齐": "2026-10-09 的 3 根（01:46 / 02:54 / 07:26 各缺 1 根）",
+    "原因": "10-09 为当日未收盘，官方日归档于次日（10-10）才发布；当日缺口由实时采集器偶发漏分钟造成",
+    "补齐方式": "10-10 后重跑同一命令即可续传补齐"
+  }
+}

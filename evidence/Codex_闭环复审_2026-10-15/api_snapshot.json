@@ -1,0 +1,20 @@
+{
+  "at_utc": "2026-10-15T05:40:10.604718+00:00",
+  "responses": {
+    "/api/health": {
+      "error": "Remote end closed connection without response"
+    },
+    "/api/v1/live/health": {
+      "error": "Remote end closed connection without response"
+    },
+    "/api/v1/paper/accounts": {
+      "error": "Remote end closed connection without response"
+    },
+    "/api/v1/paper/positions": {
+      "error": "Remote end closed connection without response"
+    },
+    "/api/v1/signals?scope=current&limit=10": {
+      "error": "Remote end closed connection without response"
+    }
+  }
+}

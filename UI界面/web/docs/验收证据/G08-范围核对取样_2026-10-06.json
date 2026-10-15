@@ -1,0 +1,554 @@
+{
+ "captured_at_utc": "2026-10-06T13:31:39Z",
+ "items": {
+  "binance_depth": {
+   "http": 200,
+   "ms": 1426,
+   "json": {
+    "lastUpdateId": 11748018797798,
+    "E": 1791293501127,
+    "T": 1791293501124,
+    "bids": [
+     [
+      "86049.40",
+      "2.723"
+     ],
+     [
+      "86049.30",
+      "0.003"
+     ],
+     [
+      "86049.20",
+      "0.021"
+     ],
+     [
+      "86049.00",
+      "0.008"
+     ],
+     [
+      "86048.70",
+      "0.001"
+     ]
+    ],
+    "asks": [
+     [
+      "86049.50",
+      "8.856"
+     ],
+     [
+      "86049.60",
+      "0.006"
+     ],
+     [
+      "86049.70",
+      "0.023"
+     ],
+     [
+      "86049.80",
+      "0.001"
+     ],
+     [
+      "86049.90",
+      "0.406"
+     ]
+    ]
+   },
+   "purpose": "公开盘口（买/卖前5档）；无原版模块，唯一可消费位=展开图『订单簿流动性失衡』",
+   "ts_utc": "2026-10-06T13:31:41Z"
+  },
+  "binance_aggTrades": {
+   "http": 200,
+   "ms": 695,
+   "json": [
+    {
+     "a": 3476570422,
+     "p": "86061.90",
+     "q": "0.001",
+     "nq": "0.001",
+     "f": 8149826183,
+     "l": 8149826183,
+     "T": 1791293501807,
+     "m": false
+    },
+    {
+     "a": 3476570423,
+     "p": "86062.10",
+     "q": "0.001",
+     "nq": "0.001",
+     "f": 8149826184,
+     "l": 8149826184,
+     "T": 1791293501807,
+     "m": false
+    },
+    {
+     "a": 3476570424,
+     "p": "86062.20",
+     "q": "0.063",
+     "nq": "0.063",
+     "f": 8149826185,
+     "l": 8149826193,
+     "T": 1791293501813,
+     "m": false
+    }
+   ],
+   "purpose": "公开逐笔成交；原版无逐笔模块",
+   "ts_utc": "2026-10-06T13:31:41Z"
+  },
+  "binance_ticker24h": {
+   "http": 200,
+   "ms": 1309,
+   "json": {
+    "closeTime": 1791293499175,
+    "count": 2794988,
+    "firstId": 8147018703,
+    "highPrice": "86683.90",
+    "lastId": 8149825914,
+    "lastPrice": "86052.40",
+    "lastQty": "0.001",
+    "lowPrice": "84910.00",
+    "openPrice": "85786.80",
+    "openTime": 1791207060000,
+    "priceChange": "265.60",
+    "priceChangePercent": "0.310",
+    "quoteVolume": "10625240807.76",
+    "symbol": "BTCUSDT",
+    "volume": "123955.747",
+    "weightedAvgPrice": "85718.02"
+   },
+   "purpose": "公开行情：lastPrice/quoteVolume/priceChangePercent → 原版 现价/24h量/涨跌幅",
+   "ts_utc": "2026-10-06T13:31:43Z"
+  },
+  "binance_premiumIndex": {
+   "http": 200,
+   "ms": 1234,
+   "json": {
+    "symbol": "BTCUSDT",
+    "markPrice": "86077.60000000",
+    "indexPrice": "86105.53804348",
+    "estimatedSettlePrice": "86098.61754263",
+    "lastFundingRate": "0.00001281",
+    "interestRate": "0.00010000",
+    "nextFundingTime": 1791302400000,
+    "time": 1791293504000
+   },
+   "purpose": "公开费率：markPrice/lastFundingRate/nextFundingTime → 原版 费率/下次结算",
+   "ts_utc": "2026-10-06T13:31:44Z"
+  },
+  "binance_openInterest": {
+   "http": 200,
+   "ms": 971,
+   "json": {
+    "symbol": "BTCUSDT",
+    "openInterest": "94303.963",
+    "time": 1791293498781
+   },
+   "purpose": "公开 OI：openInterest → 原版 OI",
+   "ts_utc": "2026-10-06T13:31:45Z"
+  },
+  "okx_books": {
+   "http": 200,
+   "ms": 821,
+   "json": {
+    "code": "0",
+    "msg": "",
+    "data": [
+     {
+      "asks": [
+       [
+        "86100",
+        "579.89",
+        "0",
+        "20"
+       ],
+       [
+        "86100.1",
+        "1.28",
+        "0",
+        "3"
+       ],
+       [
+        "86100.2",
+        "0.07",
+        "0",
+        "1"
+       ],
+       [
+        "86100.3",
+        "0.01",
+        "0",
+        "1"
+       ],
+       [
+        "86100.7",
+        "0.01",
+        "0",
+        "1"
+       ]
+      ],
+      "bids": [
+       [
+        "86099.9",
+        "691.35",
+        "0",
+        "28"
+       ],
+       [
+        "86099.8",
+        "0.94",
+        "0",
+        "3"
+       ],
+       [
+        "86099.7",
+        "0.09",
+        "0",
+        "2"
+       ],
+       [
+        "86099.6",
+        "0.74",
+        "0",
+        "2"
+       ],
+       [
+        "86098.9",
+        "0.75",
+        "0",
+        "3"
+       ]
+      ],
+      "ts": "1791293506158",
+      "seqId": 344239111295
+     }
+    ]
+   },
+   "purpose": "OKX 公开盘口（补充源，仅在币安无该合约时使用）",
+   "ts_utc": "2026-10-06T13:31:46Z"
+  },
+  "okx_trades": {
+   "http": 200,
+   "ms": 1226,
+   "json": {
+    "code": "0",
+    "data": [
+     {
+      "instId": "BTC-USDT-SWAP",
+      "tradeId": "2976486538",
+      "px": "86110.8",
+      "sz": "0.01",
+      "side": "buy",
+      "ts": "1791293506948",
+      "source": "0"
+     },
+     {
+      "instId": "BTC-USDT-SWAP",
+      "tradeId": "2976486537",
+      "px": "86110.8",
+      "sz": "0.16",
+      "side": "buy",
+      "ts": "1791293506948",
+      "source": "0"
+     },
+     {
+      "instId": "BTC-USDT-SWAP",
+      "tradeId": "2976486536",
+      "px": "86110.7",
+      "sz": "0.01",
+      "side": "buy",
+      "ts": "1791293506948",
+      "source": "0"
+     }
+    ],
+    "msg": ""
+   },
+   "purpose": "OKX 公开逐笔（补充源）",
+   "ts_utc": "2026-10-06T13:31:47Z"
+  },
+  "hl_leaderboard": {
+   "http": 200,
+   "ms": 13483,
+   "json": null,
+   "rows": 47446,
+   "purpose": "聪明钱候选账户池（公开榜单，无需密钥）",
+   "ts_utc": "2026-10-06T13:32:01Z",
+   "row_fields": [
+    "accountValue",
+    "displayName",
+    "ethAddress",
+    "prize",
+    "windowPerformances"
+   ],
+   "sample_rows": [
+    {
+     "ethAddress": "0x85ecf584f25db6f146718b86d493e33c5af72052",
+     "accountValue": "63234080.0014240071",
+     "windowPerformances": [
+      [
+       "day",
+       {
+        "pnl": "-12024.986102",
+        "roi": "-0.000148321",
+        "vlm": "934899902.9200000763"
+       }
+      ],
+      [
+       "week",
+       {
+        "pnl": "2492486.0238039996",
+        "roi": "0.0312159242",
+        "vlm": "8001865500.3699998856"
+       }
+      ],
+      [
+       "month",
+       {
+        "pnl": "33111.0516299997",
+        "roi": "0.0004129972",
+        "vlm": "39942455235.4200057983"
+       }
+      ],
+      [
+       "allTime",
+       {
+        "pnl": "6282078.5717310002",
+        "roi": "0.0489643984",
+        "vlm": "222893135767.140045166"
+       }
+      ]
+     ],
+     "prize": 0,
+     "displayName": null
+    },
+    {
+     "ethAddress": "0xf5d81a135f756ca16544e53c20fc20643ec3ad53",
+     "accountValue": "69876100.9923079908",
+     "windowPerformances": [
+      [
+       "day",
+       {
+        "pnl": "-849370.8552300001",
+        "roi": "-0.0120245236",
+        "vlm": "979572654.2100000381"
+       }
+      ],
+      [
+       "week",
+       {
+        "pnl": "-2976340.2448800001",
+        "roi": "-0.040850943",
+        "vlm": "5821638325.0499992371"
+       }
+      ],
+      [
+       "month",
+       {
+        "pnl": "-4588249.1526070004",
+        "roi": "-0.0591854878",
+        "vlm": "24780765791.7000045776"
+       }
+      ],
+      [
+       "allTime",
+       {
+        "pnl": "-9829567.9276919998",
+        "roi": "-0.0912292862",
+        "vlm": "171955585919.8000183105"
+       }
+      ]
+     ],
+     "prize": 0,
+     "displayName": null
+    }
+   ]
+  },
+  "hl_clearinghouseState": {
+   "http": 200,
+   "ms": 1439,
+   "json": null,
+   "purpose": "聪明钱身份(地址)+持仓名义额(positionValue)+均价(entryPx)",
+   "ts_utc": "2026-10-06T13:32:02Z",
+   "position_fields": [
+    "coin",
+    "cumFunding",
+    "entryPx",
+    "leverage",
+    "liquidationPx",
+    "marginUsed",
+    "maxLeverage",
+    "positionValue",
+    "returnOnEquity",
+    "szi",
+    "unrealizedPnl"
+   ],
+   "accountValue": "154601316.0213940144",
+   "snapshot_time": 1791293521603,
+   "sample_positions": [
+    {
+     "coin": "BTC",
+     "szi": "-2788.13357",
+     "entryPx": "75949.4",
+     "positionValue": "240063876.6441400051",
+     "unrealizedPnl": "-28306804.0762809999"
+    },
+    {
+     "coin": "ETH",
+     "szi": "-104550.8054",
+     "entryPx": "2304.1",
+     "positionValue": "283677700.2918199897",
+     "unrealizedPnl": "-42781616.1060120016"
+    },
+    {
+     "coin": "SOL",
+     "szi": "-742153.46",
+     "entryPx": "94.3122",
+     "positionValue": "89370119.6532000005",
+     "unrealizedPnl": "-19375977.8385579996"
+    },
+    {
+     "coin": "BNB",
+     "szi": "-1182.326",
+     "entryPx": "780.108",
+     "positionValue": "928894.4219",
+     "unrealizedPnl": "-6551.40585"
+    }
+   ]
+  },
+  "hl_meta": {
+   "http": 200,
+   "ms": 1028,
+   "json": null,
+   "universe_size": 234,
+   "purpose": "聪明钱可查询永续币种域（与币安/OKX 标的域不对齐）",
+   "ts_utc": "2026-10-06T13:32:03Z"
+  },
+  "forbidden_binance_topLongShortPositionRatio": {
+   "http": 200,
+   "ms": 842,
+   "json": [
+    {
+     "symbol": "BTCUSDT",
+     "longAccount": "0.6293",
+     "longShortRatio": "1.6974",
+     "shortAccount": "0.3707",
+     "timestamp": 1791291600000
+    }
+   ],
+   "purpose": "❌禁止：仅账户占比，无身份/金额/均价",
+   "ts_utc": "2026-10-06T13:32:04Z"
+  },
+  "forbidden_binance_takerlongshortRatio": {
+   "http": 200,
+   "ms": 675,
+   "json": [
+    {
+     "buySellRatio": "0.9187",
+     "sellVol": "2511.1600",
+     "buyVol": "2306.9560",
+     "timestamp": 1791288000000
+    }
+   ],
+   "purpose": "❌禁止：taker 买卖量比，非持仓/身份",
+   "ts_utc": "2026-10-06T13:32:05Z"
+  },
+  "forbidden_okx_longShortAccountRatio": {
+   "http": 200,
+   "ms": 1055,
+   "json": null,
+   "purpose": "❌禁止：交易所账户数比",
+   "ts_utc": "2026-10-06T13:32:06Z",
+   "sample": [
+    [
+     "1791291600000",
+     "1.06"
+    ],
+    [
+     "1791288000000",
+     "1.08"
+    ]
+   ]
+  },
+  "tradeflow_symbols": {
+   "http": 401,
+   "ms": 1625,
+   "body": "{\"statusCode\":401,\"requestId\":\"395f408b-c920-4a69-8208-159453b03d51\",\"trace_id\":\"a9cc4962e670bbe7bb0fa7e9bb2c4dcc\",\"span_id\":\"a4d5c036bc2a26bd\",\"trace_flags\":\"01\",\"timestamp\":\"2026-10-06T13:32:07.570Z\",\"message\":\"Unauthorized\"}",
+   "error": "HTTPError",
+   "purpose": "参考产品私有后端：确认无凭据不可用",
+   "ts_utc": "2026-10-06T13:32:07Z"
+  },
+  "sameorigin_candles_btc_1m": {
+   "http": 200,
+   "ms": 58,
+   "json": null,
+   "purpose": "同源链路：闭合K线 + forming_bar + realtime 块（已是公开实盘的既有落点）",
+   "ts_utc": "2026-10-06T13:32:07Z",
+   "keys": [
+    "account_id",
+    "annotations",
+    "as_of",
+    "bars",
+    "data_version",
+    "evidence_level",
+    "exchange",
+    "forming_bar",
+    "has_more",
+    "is_native",
+    "market_id",
+    "missing_reason",
+    "mode",
+    "next_cursor",
+    "param_hash",
+    "quality",
+    "realtime",
+    "rule_version",
+    "run_id",
+    "source_url",
+    "strategy_version",
+    "time",
+    "timeframe",
+    "timezone"
+   ],
+   "realtime": {
+    "source": "binance.fstream/ws",
+    "transport": "ws",
+    "event_time": "2026-10-06T13:30:30Z",
+    "received_at": "2026-10-06T13:30:32Z",
+    "age_seconds": 95.8,
+    "stale": false,
+    "origin": "realtime_klines（统一采集进程原生 WS K 线流）"
+   },
+   "forming_bar_is_closed": false,
+   "closed_last_open_time": "2026-10-06T13:20:00Z"
+  },
+  "sameorigin_market_btc": {
+   "http": 200,
+   "ms": 75,
+   "json": null,
+   "purpose": "同源：原版 现价/24h量/费率/OI 字段 + smart_money 空态(reason)",
+   "ts_utc": "2026-10-06T13:32:07Z",
+   "smart_money": {
+    "available": false,
+    "reason": "无真实来源：不使用交易所人数多空比或 taker 买量冒充「聪明钱多空金额/内部占比/均价」"
+   },
+   "has_depth_route": false
+  },
+  "backend_route_probe": {
+   "/api/v1/markets/binance/BTCUSDT/depth": {
+    "http": 404,
+    "body": "{\"错误\": \"接口不存在\"}"
+   },
+   "/api/v1/markets/binance/BTCUSDT/orderbook": {
+    "http": 404,
+    "body": "{\"错误\": \"接口不存在\"}"
+   },
+   "/api/v1/markets/binance/BTCUSDT/trades": {
+    "http": 404,
+    "body": "{\"错误\": \"接口不存在\"}"
+   },
+   "/api/v1/smart-money": {
+    "http": 404,
+    "body": "{\"错误\": \"接口不存在\"}"
+   },
+   "ts_utc": "2026-10-06T13:32:07Z"
+  }
+ }
+}

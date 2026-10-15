@@ -1,0 +1,63 @@
+{
+  "live_rows": 42514,
+  "short_mask_as_long": 20145,
+  "versions": [
+    {
+      "strategy_version": "F_WX_v2.2_project_closure_user_5000_shared",
+      "n": 42514
+    }
+  ],
+  "run_state": [
+    {
+      "key": "signal_engine_state",
+      "updated_at": 1792033724703,
+      "value": {
+        "T_utc": "2026-10-15T03:08:43Z",
+        "assembly_lookback_hours": 240,
+        "admission_min_bars": 26,
+        "window_hours": 168,
+        "symbols_run": 0,
+        "symbols_skipped": 526,
+        "pool_source": "scope_crypto_v1",
+        "pool_n": 526,
+        "pool_rule_identity": "pool:scope_crypto_v1_per_indicator_min_history:97ce8d9d95af878963fd60761164e81a",
+        "pool_missing": {},
+        "data_version": "live:369e7ff81d1a9760a7397470edbb2be6",
+        "daily_list_version": "live:20569137a8787a2fd28c9f9d179bc17b",
+        "updated_real_utc": "2026-10-15T03:08:44Z"
+      }
+    },
+    {
+      "key": "account_state",
+      "updated_at": 1792033729230,
+      "value": {
+        "real_utc": "2026-10-15T03:08:49Z",
+        "elapsed_s": 5.5,
+        "signals": {
+          "new": 0,
+          "updated": 0,
+          "total_written": 0
+        },
+        "symbols_total": 526,
+        "pool_source": "scope_crypto_v1",
+        "pool_n": 526,
+        "admission_min_bars": 26,
+        "assembly_lookback_hours": 240,
+        "n_opened": 0,
+        "n_exits": 0,
+        "n_pending": 0,
+        "funding_events_this_cycle": 0
+      }
+    },
+    {
+      "key": "live_start_ms",
+      "updated_at": 1791893179856,
+      "value": 1791893179848
+    },
+    {
+      "key": "paper_epoch_ms",
+      "updated_at": 1791940572475,
+      "value": 1791939600000
+    }
+  ]
+}

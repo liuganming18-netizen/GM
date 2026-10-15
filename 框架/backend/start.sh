@@ -15,7 +15,8 @@
 set -eu
 
 HERE="$(cd "$(dirname "$0")" && pwd -P)"
-PROJ="${DATA_HUB_PROJECT:-/Users/boos/WorkBuddy AI/加密货币趋势判断系统}"
+PROJECT_ROOT="$(cd "$HERE/../.." && pwd -P)"
+PROJ="${DATA_HUB_PROJECT:-$PROJECT_ROOT}"
 # P3 切流（2026-10-13）关键修复：冷层读取需要 **duckdb + pyarrow**。
 # 生产解释器 `versions/3.13.12` **不含** duckdb ⇒ 用它启动时，所有走冷档的端点
 # （/api/v1/markets/*/oi、/funding、长历史 candles）会直接 `ModuleNotFoundError`
@@ -78,11 +79,17 @@ fi
 # 避免在只读的数据层包内写 __pycache__
 export PYTHONDONTWRITEBYTECODE=1
 export DATA_HUB_PROJECT="$PROJ"
-# P3 切流（2026-10-13）：默认库改为**新热库** market_v2.sqlite3。
-# 旧 market.sqlite3 已退役，不能再作默认回落目标（SQLite 会静默重建空库）。
-export MARKET_DB="${MARKET_DB:-$PROJ/data/market_v2.sqlite3}"
-# 冷档 Parquet 根（有值才启用 SQLite+DuckDB 统一读路由；为空则退回纯 SQLite 读）
-export MARKET_ARCHIVE="${MARKET_ARCHIVE:-$PROJ/data/archive/parquet}"
+export PYTHONPATH="$PROJECT_ROOT/框架:$HERE:$PROJECT_ROOT:${PYTHONPATH:-}"
+# 桌面工程默认数据路径与冷档 Parquet 根
+if [ -f "$PROJECT_ROOT/数据/市场数据/db/market_v2.sqlite3" ]; then
+  DEFAULT_DB="$PROJECT_ROOT/数据/市场数据/db/market_v2.sqlite3"
+elif [ -f "$PROJ/data/market_v2.sqlite3" ]; then
+  DEFAULT_DB="$PROJ/data/market_v2.sqlite3"
+else
+  DEFAULT_DB="$HERE/data/market_v2.sqlite3"
+fi
+export MARKET_DB="${MARKET_DB:-$DEFAULT_DB}"
+export MARKET_ARCHIVE="${MARKET_ARCHIVE:-$PROJECT_ROOT/数据/市场数据/parquet}"
 # 冷档「已对账归档」固定水位（毫秒）。**不再写死**：读侧以归档
 # `archive/parquet/_state.json` 的 `watermark_ms` 为单一事实源（由归档器校验
 # 通过后推进）；此处只在状态文件缺失时兜底，避免「读侧旧水位 / 归档器新水位」

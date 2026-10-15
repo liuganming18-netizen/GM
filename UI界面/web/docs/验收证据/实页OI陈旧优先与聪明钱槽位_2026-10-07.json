@@ -1,0 +1,15 @@
+{
+ "captured_at_utc": "2026-10-07T12:52Z",
+ "page": "http://127.0.0.1:3000 （既有 3000 开发服务，未重启）",
+ "token": "binance:0GUSDT",
+ "oi_cell_text": "数量: 3680.06万 单位待核验时效内 7分\n名义额: 1099.18万 USD陈旧 41分",
+ "oi_cell_title": "合约：Binance/0G（binance:0GUSDT）\n数量：36800597 单位待核验；来源 列表行 /api/v1/markets；指标时点 2026-10-07T12:39:10Z；年龄 7分；状态 时效内\n名义额：10991811.537 USD；来源 public-extras 快照（独立时点）；指标时点 2026-10-07T12:05:00Z；年龄 41分；状态 陈旧\n来源：binance.fapi（数量）+ 币安 /futures/data/openInterestHist（同一行给总量与名义额）（名义额）\n列表来源 API：/api/v1/markets；数量按该响应 oi_time 展示，不与其他时间点拼接。\n陈旧优先已阻止：本机快照的数量/名义额指标时点 2026-10-07T12:05:00Z 早于列表行 OI 时点 2026-10-07T12:39:10Z，故**数量取较新的列表值**；快照名义额仅按自身时点独立展示，未与数量拼接、未倒填。\n注意：数量的指标时点（2026-10-07T12:39:10Z）与名义额的指标时点（2026-10-07T12:05:00Z）不同源不同时，二者未作拼接或换算。\n快照写入时点：2026-10-07T12:09:38Z；当前年龄 36分；快照状态 陈旧\n现有单位字段不是逐合约已核验单位；缺少可用的合约单位/倍率元数据，数量保持原值，不作换算。\n口径一致性核对（2026-10-07，只读）：币安 openInterestHist 的 sumOpenInterestValue / sumOpenInterest 与合约最新价一致（0G −0.17% / BTC +0.20% / ETH +0.19% / 1000PEPE +0.18% / 1000BONK +0.66%），支持「数量以合约标的币计（含 1000 等倍数前缀）」。这是口径一致性核对，不是官方逐合约 ctVal/ctMult 文档级确认，故仍显示「单位待核验」且不做张↔币换算。\n**快照已过期**：2026-10-07T12:09:38Z 写入（2157s 前，阈值 900s）；持仓量多空比数据时点 2026-10-07T12:00:00Z；总持仓名义额数据时点 2026-10-07T12:05:00Z；采集器未按周期刷新到该标的，数值仅供参照",
+ "smart_money_cell_text": "持仓额: 无公开源\n内部占比: —\n均价: 无公开源",
+ "smart_money_cell_title": "缺源原因：原站（参考产品）的聪明钱数据来自其自有鉴权后端 /api/analytics/smart-money-signal/*；2026-10-07 复核该路由返回 HTTP 404「Cannot GET」（未授权路由不可达），与此前记录的 401 结论一致——不可公开取得；且其「聪明钱队列」定义（账户范围/阈值/分母）未公开，不可复刻。\n公开端点只读核对（2026-10-07）：\n· 币安 fapi /futures/data/topLongShortPositionRatio → 仅 longShortRatio / longAccount / shortAccount / timestamp（聚合比率，无金额、无身份、无均价）\n· 币安 fapi /futures/data/topLongShortAccountRatio、/globalLongShortAccountRatio → 账户数比率，同样无金额 / 无均价\n· 币安 fapi /futures/data/takerlongshortRatio → taker 主动买卖量比，非持仓、非身份\n· 币安 fapi /futures/data/openInterestHist → sumOpenInterest / sumOpenInterestValue（全市场总量，无多空拆分）\n· 币安 fapi /fapi/v1/positionRisk → 需 USER_DATA 签名，公开调用不可用；且只代表本授权账户仓位，不是聪明钱队列\n· OKX /api/v5/account/positions → 需鉴权，同为个人账户仓位；OKX 仅在币安无该币时作补充源\n接入条件（三者齐备才可接线，缺一不可）：\n1) 字段：来源须同时提供 多空各自的 持仓额(USD) / 队列内占比(%) / 持仓均价；\n2) 权限：若用原站自有后端，需其公开 API 或用户提供的只读凭据（当前该路由不可达 401/404）；不接受个人交易账户密钥；\n3) 定义：须书面给出「聪明钱队列」定义（入选账户范围、阈值、统计窗口、OI 分母口径）。\n在此之前：不使用交易所人数比、taker 量、总 OI，或自有账户 entryPrice / VWAP 推算任何一槽。",
+ "verdict": {
+  "amount_from": "列表行 /api/v1/markets（较新，12:39:10Z）",
+  "usd_from": "public-extras 快照（独立时点，12:05:00Z，状态 陈旧）",
+  "stale_priority_blocked": true,
+  "smart_money_slots": "六槽仍为空（持仓额/均价显示「无公开源」），未用比率或总OI推算"
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "checked_at_utc": "2026-10-07T12:42Z",
+ "purpose": "聪明钱多空「金额/内部占比/均价」六槽与 OI 数量单位的公开来源只读核对（币安为主源，OKX 仅补币安无的币；未接个人账户、未购来源）",
+ "binance_public_endpoints": {
+  "topLongShortPositionRatio": {
+   "http": 200,
+   "body": [
+    {
+     "symbol": "0GUSDT",
+     "longAccount": "0.6275",
+     "longShortRatio": "1.6844",
+     "shortAccount": "0.3725",
+     "timestamp": 1791374400000
+    }
+   ],
+   "url": "https://fapi.binance.com/futures/data/topLongShortPositionRatio?symbol=0GUSDT&period=1h&limit=1"
+  },
+  "topLongShortAccountRatio": {
+   "http": 200,
+   "body": [
+    {
+     "symbol": "0GUSDT",
+     "longAccount": "0.5633",
+     "longShortRatio": "1.2899",
+     "shortAccount": "0.4367",
+     "timestamp": 1791374400000
+    }
+   ],
+   "url": "https://fapi.binance.com/futures/data/topLongShortAccountRatio?symbol=0GUSDT&period=1h&limit=1"
+  },
+  "globalLongShortAccountRatio": {
+   "http": 200,
+   "body": [
+    {
+     "symbol": "0GUSDT",
+     "longAccount": "0.4908",
+     "longShortRatio": "0.9639",
+     "shortAccount": "0.5092",
+     "timestamp": 1791374400000
+    }
+   ],
+   "url": "https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol=0GUSDT&period=1h&limit=1"
+  },
+  "takerlongshortRatio": {
+   "http": 200,
+   "body": [
+    {
+     "buySellRatio": "0.4878",
+     "sellVol": "1569067.0000",
+     "buyVol": "765313.0000",
+     "timestamp": 1791370800000
+    }
+   ],
+   "url": "https://fapi.binance.com/futures/data/takerlongshortRatio?symbol=0GUSDT&period=1h&limit=1"
+  },
+  "openInterestHist": {
+   "http": 200,
+   "body": [
+    {
+     "symbol": "0GUSDT",
+     "sumOpenInterest": "36817831.00000000",
+     "sumOpenInterestValue": "10980113.99432096",
+     "CMCCirculatingSupply": "593814580.00000000",
+     "timestamp": 1791376500000
+    }
+   ],
+   "url": "https://fapi.binance.com/futures/data/openInterestHist?symbol=0GUSDT&period=1h&limit=1"
+  },
+  "positionRisk_USER_DATA": {
+   "http": 404,
+   "url": "https://fapi.binance.com/fapi/v1/positionRisk?symbol=0GUSDT",
+   "note": "需 USER_DATA 签名；未带签名的公开调用不可用（返回 Binance 错误页）。即使可用也只代表本授权账户仓位，不是聪明钱队列。"
+  }
+ },
+ "reference_product": {
+  "url_https_tradeflow_club": "https://tradeflow.club/api/analytics/smart-money-signal/BTCUSDT",
+  "result": "HTTP 301（cloudflare 跳转）",
+  "url_www": "https://www.tradeflow.club/api/analytics/smart-money-signal/BTCUSDT",
+  "result_www": "HTTP 404 application/json：{\"message\":\"Cannot GET /api/analytics/smart-money-signal/BTCUSDT\"}",
+  "conclusion": "原站聪明钱端点不可公开取得（此前记录为 401，本次复核为 404 路由不可达）；其队列定义未公开，不可复刻。",
+  "correction_2026-10-07T13_43Z": {
+   "superseded_by": "docs/聪明钱真实来源核查报告-2026-10-07.md + docs/验收证据/聪明钱真实路由与状态码只读核查_2026-10-07.json",
+   "why_wrong": "上面的 301 是请求漏写 www 导致的主机名归一化（整站任何路径都 301），与 API 无关；404 是因为 /api/analytics/smart-money-signal/BTCUSDT 不在 bundle 声明路由里（把 {symbol} 当成了资源根）。",
+   "correct_result": "bundle 实际声明的 11 条路由（/symbols、/{symbol}/kline?includeTopTraderRatios=true、/rankings、/volatility-rankings、/{symbol}/active-signal、/coin-list、/coin-list/{symbol}、/funding-rates、/feed、/signals、/signals/{id}）匿名实测**全部 HTTP 401**（应用自身错误信封，带 requestId/trace_id/span_id）⇒ 路由真实存在，仅需已登录会话。",
+   "conclusion_now": "原站字段存在且可达，缺的是登录会话；队列定义仍未知。不能用 404 判定『来源不可得』。"
+  },
+  "timestamp": "2026-10-07T12:42:03.293Z"
+ },
+ "oi_unit_consistency": {
+  "method": "对同一 openInterestHist 行取 sumOpenInterestValue / sumOpenInterest，与合约最新价比对",
+  "samples": [
+   {
+    "symbol": "0GUSDT",
+    "sumOpenInterest": 36806477.0,
+    "sumOpenInterestValue": 10975691.4414,
+    "usd_per_unit": 0.2982,
+    "local_last_price": 0.2987,
+    "rel_diff_pct": -0.1674,
+    "ts": 1791377100000
+   },
+   {
+    "symbol": "BTCUSDT",
+    "sumOpenInterest": 97189.836,
+    "sumOpenInterestValue": 8125332702.1572,
+    "usd_per_unit": 83602.7,
+    "local_last_price": 83439.9,
+    "rel_diff_pct": 0.1951,
+    "ts": 1791376800000
+   },
+   {
+    "symbol": "ETHUSDT",
+    "sumOpenInterest": 2435198.066,
+    "sumOpenInterestValue": 6272704938.3061,
+    "usd_per_unit": 2575.85,
+    "local_last_price": 2570.87,
+    "rel_diff_pct": 0.1937,
+    "ts": 1791376800000
+   },
+   {
+    "symbol": "1000PEPEUSDT",
+    "sumOpenInterest": 18426714507.0,
+    "sumOpenInterestValue": 75016628.89515756,
+    "usd_per_unit": 0.00407108,
+    "local_last_price": 0.0040638,
+    "rel_diff_pct": 0.1791,
+    "ts": 1791376800000
+   },
+   {
+    "symbol": "1000BONKUSDT",
+    "sumOpenInterest": 4344139556.0,
+    "sumOpenInterestValue": 15054963.16248248,
+    "usd_per_unit": 0.00346558,
+    "local_last_price": 0.003443,
+    "rel_diff_pct": 0.6558,
+    "ts": 1791376800000
+   }
+  ],
+  "conclusion": "5/5 样本相对偏差 ≤0.66%，支持「币安 USDⓈ-M openInterestHist 的数量以合约标的币计（含 1000 等倍数前缀）」。此为口径一致性核对，非官方逐合约 ctVal/ctMult 文档级确认，故前端仍显示「单位待核验」且不换算。"
+ }
+}
