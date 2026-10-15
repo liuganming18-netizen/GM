@@ -44,7 +44,11 @@ from pathlib import Path
 from urllib.parse import quote as _urlquote
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE))
+FRAMEWORK_DIR = HERE.parent
+if str(FRAMEWORK_DIR) not in sys.path:
+    sys.path.insert(0, str(FRAMEWORK_DIR))
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
 PROJECT = os.environ.get("DATA_HUB_PROJECT", str(HERE.parent.parent))
 # P3 切流（2026-10-13）：默认写库 = 新热库 market_v2.sqlite3（旧 market.sqlite3 已退役）
 DEFAULT_MARKET_DB = str(HERE.parent.parent / "数据" / "市场数据" / "db" / "market_v2.sqlite3")
