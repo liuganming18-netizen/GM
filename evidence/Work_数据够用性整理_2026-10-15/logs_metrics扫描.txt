@@ -1,0 +1,41 @@
+symbols=526
+  50/526  286s
+  100/526  486s
+  150/526  642s
+  200/526  794s
+  250/526  953s
+  300/526  1113s
+  350/526  1212s
+  400/526  1308s
+  450/526  1399s
+  500/526  1495s
+{
+ "scanned_at_utc": "2026-10-14T18:47:18Z",
+ "elapsed_s": 1536.9,
+ "symbols": 526,
+ "zip_files": 441575,
+ "rows_total": 127004399,
+ "uniq_ts_total": 126929144,
+ "dup_rows_total": 75255,
+ "date_min": "2020-09-01",
+ "date_max": "2026-10-07",
+ "empty_by_column": {
+  "sum_open_interest": 0,
+  "sum_open_interest_value": 0,
+  "count_toptrader_long_short_ratio": 9189745,
+  "sum_toptrader_long_short_ratio": 9165621,
+  "count_long_short_ratio": 540263,
+  "sum_taker_long_short_vol_ratio": 3561059
+ },
+ "nonnum_by_column": {
+  "sum_open_interest": 0,
+  "sum_open_interest_value": 0,
+  "count_toptrader_long_short_ratio": 0,
+  "sum_toptrader_long_short_ratio": 0,
+  "count_long_short_ratio": 0,
+  "sum_taker_long_short_vol_ratio": 0
+ },
+ "symbols_with_any_empty_ratio": 500,
+ "per_symbol_min_date": "2020-09-01",
+ "symbols_starting_2020_09_01": 1
+}

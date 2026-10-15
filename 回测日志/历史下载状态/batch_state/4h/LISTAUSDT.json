@@ -1,0 +1,607 @@
+{
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-07.zip",
+  "bytes": 9427,
+  "sha256": "a694f62c5b50e6f536cd4bd4fc99129676ab138d063576ae386fd68f8176fdfd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65338,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65338,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-06.zip",
+  "bytes": 3557,
+  "sha256": "0f8b0832b8105ccc94644de6947496dfed4c8e1cd5fd27867bd83cd08719635b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65337,
+   "新增版本数": 63,
+   "状态": "已入库"
+  },
+  "source_id": 65337,
+  "rows": 63
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-09.zip",
+  "bytes": 8730,
+  "sha256": "ceeafa589f14747c0e7370ecd4efcfbf9b3e58f5098eaf6f0a8eb542d499ffd0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65340,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 65340,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-08.zip",
+  "bytes": 9297,
+  "sha256": "e7688a0a2bbac3d7212d9f5ab774c24c3c4f248cbfbff0f0320aabbad1c8e422",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65339,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65339,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-10.zip",
+  "bytes": 8960,
+  "sha256": "2d3b6496f12e3628e4d7baaf44c812215b45ca9eff8c8783a3eb4f6540bd615d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65341,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65341,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-11.zip",
+  "bytes": 8920,
+  "sha256": "b2b3ed79fd3690a656a912a9141b9db82fa2f7583fb08c00217f65e85d78546b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65342,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 65342,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2024-12.zip",
+  "bytes": 9124,
+  "sha256": "eb76e9cae95c228632d77fec86005b123a9222cfe943fd709b53e6cd36a88c28",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65343,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65343,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-01.zip",
+  "bytes": 8861,
+  "sha256": "8b78a0cebee44fd42b841e4256eda54d719f3afb60b80b568aa207b1683ab827",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65344,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65344,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-02.zip",
+  "bytes": 8288,
+  "sha256": "2daefbbe51ff1409f6f100501387c2a2844337024502c1bb5a93ee6e9f645761",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65345,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 65345,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-03.zip",
+  "bytes": 8717,
+  "sha256": "f90b674f4dfd06adf880356e15b0e2f216e6dfb639aeeb1215c40b2a3c8764ec",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65346,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65346,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-04.zip",
+  "bytes": 8614,
+  "sha256": "cbf9e3720f4f77b9f4df60d23485db2f8aa0e92c027aa151bf487edd6a5dfa41",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65347,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 65347,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-06.zip",
+  "bytes": 8675,
+  "sha256": "93ac35c566e9e1baa9fccb4e10989eec8b77d187ec972eced4bb1ffd788514d8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65349,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 65349,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-05.zip",
+  "bytes": 9030,
+  "sha256": "e7882a9c8328d525e609d81f2ccecf0b989e95aa1ce6ba3baf3953da86557ccd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65348,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65348,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-07.zip",
+  "bytes": 8916,
+  "sha256": "364bc9405ccb38d29a4359429521c21bf3372ddfa79227a29bef26a1126be979",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65350,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65350,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-08.zip",
+  "bytes": 8853,
+  "sha256": "d769b66a19c96c261b9d32ffecb7a8ec4a00edaf74b1154c739d85185f69e965",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65351,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65351,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-09.zip",
+  "bytes": 8603,
+  "sha256": "66d55b1a7ecd1ddd6e0956c701c7c79487ae40bb23fecd6c525887a7fb48d26b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65352,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 65352,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-11.zip",
+  "bytes": 8392,
+  "sha256": "0de1911d66b27c1fa827de90442db3a3b2e46e2a7743facdc965b6eb3b612cdb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65354,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 65354,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-10.zip",
+  "bytes": 9103,
+  "sha256": "ea9748c70010b0fc45a3e00b4c2252ca056e07d08979b643d22e7745661a6fcf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65353,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65353,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2025-12.zip",
+  "bytes": 8366,
+  "sha256": "60a141fdb394fb1f71412104385d2aa2b8663e70a00f33d69d8491633970dee2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65355,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65355,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-01.zip",
+  "bytes": 8357,
+  "sha256": "70bd6c3e4f51f10350956e8a6eed1c685f82052289b02b4ae31df60f78dff722",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65356,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65356,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-02.zip",
+  "bytes": 7538,
+  "sha256": "5cb6182d29ea73881f2eb16cc341c1069c912471249e3c08acde18f441efc3f7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65357,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 65357,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-03.zip",
+  "bytes": 8771,
+  "sha256": "a027519b368880e703c5ce85d956fef65a9d3d4429868af64ac272b866a75c1b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65358,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65358,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-04.zip",
+  "bytes": 8757,
+  "sha256": "3aeb97cb2459db85d67e501ab91b126b566bc5bbbe75ccebd22c77e6a2016c72",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65359,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 65359,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-05.zip",
+  "bytes": 8940,
+  "sha256": "58c22436317999aea0a3fe9b622a3e06401e91b72e5078decb63a5d39df59555",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65360,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65360,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-06.zip",
+  "bytes": 8603,
+  "sha256": "8a5a770643fa9b8dd52d0f3b67d055993d263c0cc26357656e2101518e994cfb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65361,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 65361,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-07.zip",
+  "bytes": 8755,
+  "sha256": "2be91ef51f316538566c42818b0afe1bb6c8962042205ab2cb671a811ac8c987",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65362,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65362,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-08.zip",
+  "bytes": 8962,
+  "sha256": "13b5fdc16a5b35f5ceeecf4cf6de57e980bca7cf7445c2f60efec4a1b5e7a28b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65363,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 65363,
+  "rows": 186
+ },
+ "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-01.zip",
+  "bytes": 574,
+  "sha256": "dc8f672408443f91ead00863d1d8d29887c3832369277355371fd53f86bffda0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65333,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 65333,
+  "rows": 6
+ },
+ "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-09.zip",
+  "bytes": 8654,
+  "sha256": "9c7b6e45350cea9d2a13f572ef89fdc17798e4f9cb785bc1b913b27bf818c736",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65364,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 65364,
+  "rows": 180
+ },
+ "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-03.zip",
+  "bytes": 570,
+  "sha256": "fc845b323f467bd06cf407ae0960fe1ef80ef353b70e610234d31aee0a73a5a9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65335,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 65335,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-02.zip",
+  "bytes": 585,
+  "sha256": "00eb65e113f4e6ab463885725f49744eefbc036e98c3b1c9bda4fe3d6e7950f4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65334,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 65334,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-04.zip",
+  "bytes": 583,
+  "sha256": "38edbe5719298cf46a0a58b715ee5bbe865714d8c0255aac250e0ef676fd6da9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 65336,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 65336,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-05.zip",
+  "bytes": 578,
+  "sha256": "0c10abd462211db461597e77ed908df39fe4e51d2966893cffbf53243605baf7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 312461,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 312461,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-06.zip",
+  "bytes": 573,
+  "sha256": "02bf8f1c1d3661b313e63ce89d802d8bd3da9517ae56e21077c4b388f1dae9ad",
+  "checksum_ok": true,
+  "size_bytes": 573,
+  "fetched_at": "2026-10-07T19:33:19Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/LISTAUSDT/LISTAUSDT-4h-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836394,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836394,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:36Z"
+ },
+ "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-07.zip",
+  "bytes": 574,
+  "sha256": "5994e87bcc0cad7b1568af2f498b09d2563763889dc22a24ab7ebfa5b4d7ec93",
+  "checksum_ok": true,
+  "size_bytes": 574,
+  "fetched_at": "2026-10-08T08:12:09Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/LISTAUSDT/LISTAUSDT-4h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/LISTAUSDT/4h/LISTAUSDT-4h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836395,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836395,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:36Z"
+ }
+}

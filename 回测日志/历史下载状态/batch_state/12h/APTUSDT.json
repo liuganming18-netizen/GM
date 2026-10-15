@@ -1,0 +1,942 @@
+{
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2022-10.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2022-10.zip",
+  "kind": "monthly",
+  "period": "2022-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2022-10.zip",
+  "bytes": 1719,
+  "sha256": "81b2edbe159dc80bac1ebbd3ad7d538f14808c55e6f5958bfb93833ec445e58b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25044,
+   "新增版本数": 26,
+   "状态": "已入库"
+  },
+  "source_id": 25044,
+  "rows": 26
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2022-11.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2022-11.zip",
+  "kind": "monthly",
+  "period": "2022-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2022-11.zip",
+  "bytes": 3556,
+  "sha256": "4be0401241c32be38bd4e1dffeb5b1b58b9186ef4b7aa78790a93c630558fa20",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25045,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25045,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2022-12.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2022-12.zip",
+  "kind": "monthly",
+  "period": "2022-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2022-12.zip",
+  "bytes": 3608,
+  "sha256": "50a2c6ba1dfbec0d4004a51168bbb48664c1b04cdeef2c0716a3d6aee728db67",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25046,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25046,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-01.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-01.zip",
+  "kind": "monthly",
+  "period": "2023-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-01.zip",
+  "bytes": 3822,
+  "sha256": "6382af6c7c4ce6d0f0ff2083b87a79ca2bbe077d512877ce04d5a0098e7c8777",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25047,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25047,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-02.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-02.zip",
+  "kind": "monthly",
+  "period": "2023-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-02.zip",
+  "bytes": 3428,
+  "sha256": "8fa823a34d5d40f01f469636729c55e97335c91715eb6fe077f80967bc1f47b1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25048,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 25048,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-03.zip",
+  "bytes": 3698,
+  "sha256": "3c2a77bc338a05691d20db8f2431e300459bd5129776b2fda9615aff8751cd57",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25049,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25049,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-04.zip",
+  "bytes": 3510,
+  "sha256": "0a4d9a002d83360415ca85495825b8ef6e309dddd31e4f65025b744c75a88264",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25050,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25050,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-05.zip",
+  "bytes": 3519,
+  "sha256": "1a1f873981cb9882aa9ba7379b67b68f2a839463aef3cefd887f098e173e24ff",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25051,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25051,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-06.zip",
+  "bytes": 3430,
+  "sha256": "c2dcbde6e83354889e428cc7ae43d397866fac37e150852fa854c97e76274594",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25052,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25052,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-07.zip",
+  "bytes": 3484,
+  "sha256": "58ef0a9c6a505a493e3b04b00ead9ce472112293a3c8579c7db6323f01685c02",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25053,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25053,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-08.zip",
+  "bytes": 3413,
+  "sha256": "8cd77f3e82c1bc661dd33ae9bed2d6579c9d77eec76722718f91f89afeb4c2ec",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25054,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25054,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-09.zip",
+  "bytes": 3270,
+  "sha256": "4f20d6da4f4fad844e8221d808fc2e69097de8fcbca57a6e8b12c3a4d4ea2fe1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25055,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25055,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-10.zip",
+  "bytes": 3443,
+  "sha256": "2eefe6896d9b49a7cd7643cac0e0539121b51dedd0cf525b6f09cac5a6418798",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25056,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25056,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-11.zip",
+  "bytes": 3347,
+  "sha256": "e9ae01bb7576c42a5109f5a27a12910762bf432450098a6c21fffaaa44be6562",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25057,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25057,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2023-12.zip",
+  "bytes": 3518,
+  "sha256": "8cf6de80a0df52c0682f64362c918f5b838a586849a641902a3f39060dcf8eec",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25058,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25058,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-01.zip",
+  "bytes": 3515,
+  "sha256": "5f08e63911eeb37bec271a242a313debe52eae5a82fddc61fbb20ddbed1f4c90",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25059,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25059,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-02.zip",
+  "bytes": 3290,
+  "sha256": "99903b4c3f93bd32b7e10c39bce8edcd4fe1ee3d2c1d6c90fd79943e8c774830",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25060,
+   "新增版本数": 58,
+   "状态": "已入库"
+  },
+  "source_id": 25060,
+  "rows": 58
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-03.zip",
+  "bytes": 3604,
+  "sha256": "698a9c75d269faabae3de1f21319b5e5d8eda9cce82d54316f60e5be8d613ed8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25061,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25061,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-04.zip",
+  "bytes": 3425,
+  "sha256": "e33cbd71051fb5b15221bd98c89d1f7e20f8e79caed4ff6729877ff61203aa9d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25062,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25062,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-05.zip",
+  "bytes": 3449,
+  "sha256": "bac843f2d0ec288f3faddad843347caeec7f1053ddc72970a45dea7c34f55bad",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25063,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25063,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-06.zip",
+  "bytes": 3323,
+  "sha256": "3d786dbb36b2e5c95e4f2af794f65a77bddf0db869a8c47e8efc52606b0a6efc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25064,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25064,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-07.zip",
+  "bytes": 3412,
+  "sha256": "8d68ccd60efbceba52ac9c6704c672cc64ce542c6d1fce25b702b53f221a054b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25065,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25065,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-08.zip",
+  "bytes": 3474,
+  "sha256": "2723086c551b0d9fd8988ac43b2013a759cdf0f0589c122a047f5a8ee48d1d95",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25066,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25066,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-09.zip",
+  "bytes": 3433,
+  "sha256": "34f57ae14dac662d177c014476ba66419d78a7c218be01139968d1d4b860c19a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25067,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25067,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-11.zip",
+  "bytes": 3664,
+  "sha256": "e910f0018596e6f99f1595cec3e6f6e89616dd4f3ba1dea618350d643516fbb2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25069,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25069,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-10.zip",
+  "bytes": 3719,
+  "sha256": "d05b19af3f325d22251ce3a9ec7fe18fca56b8a3768db14cd22126008e13e9a3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25068,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25068,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-01.zip",
+  "bytes": 3665,
+  "sha256": "b6efdb4d5a3faa9fc5851b0136c3ef2044c313e3ec8b8791e115ce90a46f0b2e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25071,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25071,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2024-12.zip",
+  "bytes": 3739,
+  "sha256": "84c8827689a78e3bf76f679bfb597eeb34952ae59ef03424803e3b6954fb52f0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25070,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25070,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-03.zip",
+  "bytes": 3608,
+  "sha256": "76a72679bdfbf2497b2cd4d9c005990c984ccb99e1ffd15ee13bb2552235fd53",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25073,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25073,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-02.zip",
+  "bytes": 3322,
+  "sha256": "d63c5bf6de5ff0b0fe2ddf2535c8c815b419cae4695cf916ae5447595a623f1f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25072,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 25072,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-04.zip",
+  "bytes": 3484,
+  "sha256": "bc1db6ac69d1b3e8c4161217b787e4c16b8aa6131f7193652c12497991f13d9e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25074,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25074,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-05.zip",
+  "bytes": 3599,
+  "sha256": "249e708621ebdcefe17513d9b1026cc116d877539a34af31876cf736fef4f6e0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25075,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25075,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-06.zip",
+  "bytes": 3492,
+  "sha256": "fdad3bd9063f609e324cbb3bf67f63986ce61b4bf100bab1e0944070e70cf68e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25076,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25076,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-07.zip",
+  "bytes": 3632,
+  "sha256": "0b543e17dcb03721105676e5503fa2d1abf47cb2c414ad76061aa331528025a3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25077,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25077,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-08.zip",
+  "bytes": 3620,
+  "sha256": "0361b7c5e3d739c56204bb45051cde530da0ca14a5b20ff7568bc9d5fb681182",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25078,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25078,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-09.zip",
+  "bytes": 3477,
+  "sha256": "193508b903f9e58d7af9e19cd28b7e3720ce0f5cf70c87b973d596fbbf36e171",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25079,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25079,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-10.zip",
+  "bytes": 3650,
+  "sha256": "3ebd439b3ca92f53d4db1de280f3d9283e30fab783871d8f368679f7fb0a7af9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25080,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25080,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-11.zip",
+  "bytes": 3509,
+  "sha256": "e4589919367d16e1a872db6a4441b1db1c3018ecffb2e7e965435559e6ac585c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25081,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25081,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-01.zip",
+  "bytes": 3545,
+  "sha256": "6dc1abb220615fb262eca8270484c759bd55c55c1e83accf2de998372b49b646",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25083,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25083,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2025-12.zip",
+  "bytes": 3557,
+  "sha256": "ddd61a1fc379d26bf46cd49f0282a4a5fe9587c64a4f61fc80f2df0c1df1a256",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25082,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25082,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-02.zip",
+  "bytes": 3232,
+  "sha256": "35acd023a8602d9c8320342fd3a676821e84c09199699b903deb731ac6f882fa",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25084,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 25084,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-03.zip",
+  "bytes": 3520,
+  "sha256": "953f6d0d89bbbd608702f21956af30b400cda500c07151dff64811c125cee159",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25085,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25085,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-04.zip",
+  "bytes": 3389,
+  "sha256": "a7148524aacc35a35b4ad649995170ed4045c684c179ab7b3256560cb7ea8007",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25086,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25086,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-05.zip",
+  "bytes": 3522,
+  "sha256": "de6cfbf65b1de50cf0d12ef521baa11e7c1228b683bedca1b57bb49838301941",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25087,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25087,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-06.zip",
+  "bytes": 3407,
+  "sha256": "168cafea5d4fd70446c50d1ec8fd4790a061fef975cdf40d588e941476f0a1a7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25088,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25088,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-07.zip",
+  "bytes": 3435,
+  "sha256": "176a6eca402888bd139be943aa88c199edcec73e3553dfb02fb932a186b11546",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25089,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25089,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-08.zip",
+  "bytes": 3445,
+  "sha256": "6135222776a530da7282167a5d752d305eeb9e05d86451bd791fac67e10435a9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25090,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 25090,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/APTUSDT/12h/APTUSDT-12h-2026-09.zip",
+  "bytes": 3460,
+  "sha256": "cfd0c95f21b52ef4dbd61cedef7c4c4b462741c0f6dd3568c227e44ba9be78ec",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25091,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 25091,
+  "rows": 60
+ },
+ "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-01.zip",
+  "bytes": 401,
+  "sha256": "0c776c0773f3690a88c9dd1bd15da4b4ff358163dfc876c6bfdc6c4acb4ac4d8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25041,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 25041,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-02.zip",
+  "bytes": 407,
+  "sha256": "5bfadc6c5aa055fe5a31e3a92f38f149714aa7c055f649f748acbc1c248666d6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25042,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 25042,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-03.zip",
+  "bytes": 406,
+  "sha256": "6e0a2ffcfea69ff84e08f57ac572791a891bef3e6e991b4897d66a0e1ea0cb75",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 25043,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 25043,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-04.zip",
+  "bytes": 405,
+  "sha256": "fc18da3f8b9df322528f515258ca01882247aaadc99d79f89ce721359d661102",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 51288,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 51288,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-05.zip",
+  "bytes": 410,
+  "sha256": "c33d3f957bc1c6bb62088d99c5be5142ec1c972233867506596a50693dd5219d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 271423,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 271423,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-06.zip",
+  "bytes": 406,
+  "sha256": "f1641abfee8b360d7eacf914bbb175d7e3cc8c13eeae807f5a9ae189f09f12bb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1607099,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1607099,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-07.zip",
+  "bytes": 407,
+  "sha256": "5a481427e0866a5f9d7836c106c8b0fb3a72a387951967cd57242feaad22eeb7",
+  "checksum_ok": true,
+  "size_bytes": 407,
+  "fetched_at": "2026-10-08T07:24:14Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/12h/APTUSDT/APTUSDT-12h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/APTUSDT/12h/APTUSDT-12h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1798948,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1798948,
+  "rows": 2,
+  "imported_at": "2026-10-08T07:27:57Z"
+ }
+}

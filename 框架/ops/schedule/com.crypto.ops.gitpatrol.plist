@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 代码保全 · Git 巡检（北京时间 00:30，仅检查候选/验收 SHA，未审核不 push/main）
+     ⚠ 未启用：须先过前置门禁（见 ops/schedule/README.md）。 -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.crypto.ops.gitpatrol</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/sh</string>
+    <string>/Users/boos/WorkBuddy AI/加密货币趋势判断系统/ops/schedule/run_git_patrol.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>30</integer></dict>
+  </array>
+  <key>StandardOutPath</key><string>/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/logs/gitpatrol.out.log</string>
+  <key>StandardErrorPath</key><string>/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/logs/gitpatrol.err.log</string>
+  <key>RunAtLoad</key><false/>
+</dict>
+</plist>

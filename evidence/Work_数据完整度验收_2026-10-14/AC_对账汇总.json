@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-10-14T20:46:54.096417+08:00",
+  "pool": 549,
+  "A1_shards": 5669,
+  "A2_rows": 3843,
+  "oldyear_shards": 184,
+  "oldyear_by_exchange": {
+    "binance": 97,
+    "okx": 87
+  },
+  "oldyear_lost_rows": {
+    "binance": 45453,
+    "okx": 403595
+  },
+  "main_gap_segments": 195,
+  "funding_segments": 426,
+  "oi_segments": 8399,
+  "oi_status": {
+    "source_zip_has_no_event_in_gap": 7869,
+    "no_surviving_day_zip": 530
+  },
+  "rows_02": 9794,
+  "rows02_by_type": {
+    "K线头分片": 184,
+    "K线内部网格缺槽": 195,
+    "K线已证漏恢复": 1,
+    "K线缺口无原件见证": 187,
+    "资金费已证漏恢复": 420,
+    "OI候选缺槽": 8399,
+    "上市前端覆盖候选缺口": 408
+  }
+}

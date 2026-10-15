@@ -1,0 +1,77 @@
+# 操作系统与临时文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+*~
+
+# Python 缓存与虚拟环境
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Node / Web
+node_modules/
+**/node_modules/
+dist/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 数据库与日志（绝不入库）
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
+*.db
+*.log
+logs/
+**/logs/
+*.pid
+
+# 压缩包与二进制/列式数据（绝不入库）
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.parquet
+**/*.parquet
+**/*.zip
+**/*.tar.gz
+**/*.gz
+
+# 重型数据仓库目录（本地保存，不上传 GitHub）
+数据/
+!数据/市场数据/MANIFEST.md
+!数据/研究输入/WyckoffMaster_v31/pool.json
+!数据/研究输入/WyckoffMaster_v31/schema.json
+
+# 临时下载、缓存与重型恢复目录
+_dl/
+**/_dl/
+_state/
+**/_state/
+_backup/
+**/_backup/
+**/isolated_restore/
+**/_旧取消运行_勿引用/
+
+# 超过 5MB 的离线清单
+**/迁移_逐文件清单.csv
+**/逐文件迁移编号.csv
+**/逐文件库存.csv

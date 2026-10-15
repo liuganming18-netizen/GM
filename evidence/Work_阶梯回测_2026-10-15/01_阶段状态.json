@@ -1,0 +1,62 @@
+{
+  "schema": "wyckoffmaster_phase_status/v2_v31",
+  "window": "回测窗口（唯一回测调度窗口）",
+  "generated_utc": "2026-10-15T02:20:00Z",
+  "spec_version": "WyckoffMaster_v3.1",
+  "phase": "V31_PREPARED_WAITING_INPUT",
+  "phase_zh": "v3.1 准备与自核验完成 / 等待两个 v3.1 就绪交付",
+  "started_backtest": false,
+  "started_holdout": false,
+  "read_holdout_interval": false,
+  "runs_executed": 0,
+  "honest_note": "收到 v3.1 开工令不等于已开始回测；本轮只完成 v3.1 配置改造、隔离守卫与自核验，未启动任何回测进程，未读取 Holdout 区间逐行行情。",
+  "supersedes": "上一版冻结候选（IS 2020-12-15 / Val 2024-04-11 / Holdout 2026-04-09）已作废",
+  "frozen_segments_v31": {
+    "IS": ["2022-01-01T00:00:00Z", "2025-01-01T00:00:00Z"],
+    "Val": ["2025-01-01T00:00:00Z", "2026-04-15T00:00:00Z"],
+    "Holdout": ["2026-04-15T00:00:00Z", "2026-10-15T00:00:00Z"],
+    "per_segment": "5000 USDT / 零仓 / 零挂单；段界重置 cash/orders/positions/execution_state/equity_peak",
+    "segment_end": "本段最后 15m 收盘强平（+不利滑点/费用/应结资金费），不用下一段开盘"
+  },
+  "v31_prep_verify": {
+    "n_checks": 36,
+    "n_fail": 1,
+    "verdict": "FAIL_PENDING_DATA_WINDOW",
+    "only_failure": "research_input_physical_isolation（数据窗研究输入尚无 IS/Val 与 Holdout 物理分区）"
+  },
+  "prepared_v31": {
+    "frozen_segments": "config/frozen_segments.json (status=FROZEN_V31)",
+    "ladder": "config/ladder.json (v2_v31；本轮 M0–M4 + 条件 M2b；M5/M6 前向)",
+    "m2_rejection": "config/m2_rejection.json（拒单分母 / M2b 触发 / entry_below_struct_low）",
+    "holdout_guard": "adapters/holdout_guard.py（窗口交集即拒；holdout 阶段需 winner_lock）",
+    "segment_end_adapter": "adapters/segment_end_liquidation.py（最后 15m 收盘，不改生产引擎）",
+    "isolation_bridge": "adapters/ra_bridge.py（已接入红线守卫 + 资金费模型守卫 + 写目标守卫）",
+    "gate_verifier": "scripts/verify_gates.py（v3.1 版本绑定 + 深度 SHA + 备份/隔离恢复 + 物理分区）",
+    "prep_verifier": "scripts/verify_v31_prep.py（36 项自核验）",
+    "scheduler": "scripts/run_ladder.py（v3.1；先红线后门禁，未过即拒绝）"
+  },
+  "engine_difference_found": {
+    "item": "段末清算价格来源",
+    "engine": "wx_execution.run_arm 用最后一根 15m 开盘（price_rule=last_executable_open）",
+    "v31_requires": "本段最后 15m 收盘",
+    "handling": "写局部适配 segment_end_liquidation.py，在独立账本副本上定点替换并留逐笔差异；生产引擎未改",
+    "evidence": "evidence/Work_阶梯回测_2026-10-15/13_段末强平引擎差异核验.json"
+  },
+  "gate": {
+    "strategy_ready": {"published": false, "verdict": "NOT_READY", "must_bind": "v3.1"},
+    "data_ready": {"published": false, "verdict": "NOT_READY", "must_bind": "v3.1"},
+    "overall": "WAITING_INPUT"
+  },
+  "blocked_by": [
+    "evidence/Work_策略优化_2026-10-15/strategy_ready.json（未发布；须绑定 v3.1）",
+    "evidence/Work_策略数据_2026-10-15/data_ready.json（未发布；须绑定 v3.1）",
+    "数据窗研究输入缺 IS/Val 与 Holdout 物理分区"
+  ],
+  "next_step": "两份 v3.1 就绪交付发布 → 独立核查 PASS → 按授权跑 IS/Val 选型 → 锁唯一模型与 SHA → Holdout 截止(北京时间 2026-10-15 08:00)后数据闭合 → 仅一次 Holdout",
+  "boundaries_respected": [
+    "未读 Holdout 逐行行情；未跑该段；未算该段表现",
+    "未新增触及 Holdout 的全池扫描",
+    "未改他窗产物、生产库、真实账本、3000/8787",
+    "只写 回测日志/WyckoffMaster/ 与 evidence/Work_阶梯回测_2026-10-15/"
+  ]
+}

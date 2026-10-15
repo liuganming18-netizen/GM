@@ -1,0 +1,62 @@
+{
+ "generated_utc": "2026-10-07T12:49Z",
+ "reason": "12h UTC 一致性修复需加载到既有常驻进程；仅重载与故障相关的既有后端(8787)与统一采集进程",
+ "pre_reload": {
+  "backend_pid": 37285,
+  "backend_cwd": "后端实现/",
+  "backend_health": "200",
+  "collector_pid": 38857,
+  "collector_health": "新鲜(心跳1s前)",
+  "frontend_3000_pid": 65309,
+  "realtime_klines_rows": 6995,
+  "realtime_klines_max_received": "2026-10-07T12:45:57Z",
+  "note": "3000前端未停；未新开端口/进程；未动无关任务"
+ },
+ "reload_steps": [
+  "kill 37285(SIGTERM) → 端口释放确认 → sh start.sh（复用既有启动入口，身份校验通过）",
+  "kill 38857(SIGTERM) → 旧进程退出确认 → sh collector.sh（复用既有启动入口）"
+ ],
+ "post_reload": {
+  "backend_pid": 88702,
+  "backend_port": 8787,
+  "backend_health": "200 可用/本机只读",
+  "collector_pid": 88759,
+  "collector_health": "健康 心跳5s前 REST通道正常",
+  "frontend_3000_pid": 65309,
+  "frontend_untouched": true
+ },
+ "realtime_recovery_evidence": {
+  "realtime_klines_max_received": "2026-10-07T12:48:09Z",
+  "okx_12h_forming_aligned": 23,
+  "okx_12h_forming_aligned_recv_range": "2026-10-07T12:46:26Z → 2026-10-07T12:47:30Z（重载后）",
+  "okx_12h_forming_offboundary": 263,
+  "okx_12h_forming_offboundary_recv_range": "2026-10-06T12:32:01Z → 2026-10-06T12:39:21Z（均为重载前旧行）",
+  "conclusion": "重载后新写入的 OKX 12h 未收盘临时层全部 UTC 00:00/12:00 对齐；无新的非对齐行产生"
+ },
+ "api_read_side_evidence": {
+  "url": "http://127.0.0.1:8787/api/v1/markets/okx/CRO-USDT-SWAP/candles?timeframe=12h&limit=8",
+  "http": 200,
+  "bars_returned": 8,
+  "all_bars_utc_aligned": true,
+  "quality_note": "读侧已隔离 17 根非UTC边界旧行（OKX 12h 旧 candle12H 混边界；**库内原行保留、不删除**），本序列只含 UTC 00:00/12:00 对齐行",
+  "forming_bar": {
+   "open_time": "2026-10-07T12:00:00Z",
+   "source": "okx.ws/ws",
+   "age_seconds": 52.8,
+   "stale": false
+  },
+  "raw_file": "验收证据/P10c_api_okx_CRO_12h_读侧隔离_2026-10-07.json"
+ },
+ "no_state_mutation": {
+  "pool_restfill_state/12h.json": {
+   "sha256_before": "877a890b1c6219f544dee53e2ac53b117b42466406d1d6fe36da4d8fd4f1163a",
+   "sha256_after": "877a890b1c6219f544dee53e2ac53b117b42466406d1d6fe36da4d8fd4f1163a",
+   "unchanged": true
+  },
+  "pool_range_cache_12h.json": {
+   "sha256_before": "99fffd811c569c83a79ee61b3ff659fba60b8417d1f15b490b8a82c7530178a8",
+   "sha256_after": "99fffd811c569c83a79ee61b3ff659fba60b8417d1f15b490b8a82c7530178a8",
+   "unchanged": true
+  }
+ }
+}

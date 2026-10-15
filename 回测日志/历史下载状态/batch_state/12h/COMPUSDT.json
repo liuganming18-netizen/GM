@@ -1,0 +1,1423 @@
+{
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-06.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-06.zip",
+  "kind": "monthly",
+  "period": "2020-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-06.zip",
+  "bytes": 321,
+  "sha256": "7678f4e39c96ad815be9b80a43a96b850b15afa0251e3da4f42e9fe27ed17c6f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19988,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 19988,
+  "rows": 2
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-07.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-07.zip",
+  "kind": "monthly",
+  "period": "2020-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-07.zip",
+  "bytes": 3328,
+  "sha256": "e6e5300d00cdd8a8944ffa0b8dbd7e8f73d6465fca526004fb169bf869e5ee94",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19989,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 19989,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-09.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-09.zip",
+  "kind": "monthly",
+  "period": "2020-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-09.zip",
+  "bytes": 3294,
+  "sha256": "bc105c7fe1f64ae1f4ab8fc82a648e64966868accc59edc34305d3dab6dcf3c2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19991,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 19991,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-08.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-08.zip",
+  "kind": "monthly",
+  "period": "2020-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-08.zip",
+  "bytes": 3412,
+  "sha256": "cd9ed706642a38f2fcea23156e68ae809c5c4135e9279c29bf6b4103fbcdcb74",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19990,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 19990,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-10.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-10.zip",
+  "kind": "monthly",
+  "period": "2020-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-10.zip",
+  "bytes": 3344,
+  "sha256": "5ac8ca21a9b7364dcd7df7ee8a8f91fa8face9e603308f498dcd71a1c3f91b07",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19992,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 19992,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-11.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-11.zip",
+  "kind": "monthly",
+  "period": "2020-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-11.zip",
+  "bytes": 3284,
+  "sha256": "e692fc222d4b0ba676f701038f83462cfc1f61cff0dfc90fc3eb74e8a6960196",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19993,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 19993,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-12.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-12.zip",
+  "kind": "monthly",
+  "period": "2020-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2020-12.zip",
+  "bytes": 3405,
+  "sha256": "b537b5f66d4fd7b4831d8a928fa425863dcdedde939ce6f152a09b783e89f90d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19994,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 19994,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-01.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-01.zip",
+  "kind": "monthly",
+  "period": "2021-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-01.zip",
+  "bytes": 3454,
+  "sha256": "1977e9ce95e8955b4781554bbf68347317b85bc79933ac35dc0bab2e2b747123",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19995,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 19995,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-02.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-02.zip",
+  "kind": "monthly",
+  "period": "2021-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-02.zip",
+  "bytes": 3161,
+  "sha256": "70b9350cb30decc1c6b919f67a2dbff41f1a0c750547fe2bea20e06092bb4174",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19996,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 19996,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-03.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-03.zip",
+  "kind": "monthly",
+  "period": "2021-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-03.zip",
+  "bytes": 3395,
+  "sha256": "c8655900ee6d49b469a6560a6b14928dd3ffff5a92604302cf707f08fcc10a82",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19997,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 19997,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-04.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-04.zip",
+  "kind": "monthly",
+  "period": "2021-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-04.zip",
+  "bytes": 3410,
+  "sha256": "96c747bc071026f2776781bb1ae90e5df7e9cac9a4d1afcee0a524a13a1e2e6a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19998,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 19998,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-05.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-05.zip",
+  "kind": "monthly",
+  "period": "2021-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-05.zip",
+  "bytes": 3521,
+  "sha256": "1ad59696bc1b75def2290bdce8a8a68f899e26bdc32396c98a190badf7763c73",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19999,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 19999,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-06.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-06.zip",
+  "kind": "monthly",
+  "period": "2021-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-06.zip",
+  "bytes": 3338,
+  "sha256": "1d27b0947078f7f14274eb71a3edab3b60214d604fab9f0ffd8309e950427b48",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20000,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20000,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-07.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-07.zip",
+  "kind": "monthly",
+  "period": "2021-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-07.zip",
+  "bytes": 3525,
+  "sha256": "fda5e5879ebb869e52aff94309c350fe22f527602321fdca07627e862b88ac3c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20001,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20001,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-08.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-08.zip",
+  "kind": "monthly",
+  "period": "2021-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-08.zip",
+  "bytes": 3507,
+  "sha256": "5236095c37c3cddd9a913899bdc33af3f0c13376e6369216861a1054d2b29357",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20002,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20002,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-09.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-09.zip",
+  "kind": "monthly",
+  "period": "2021-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-09.zip",
+  "bytes": 3417,
+  "sha256": "a98a9d12ad715d521f8b6117d8873640f795ead15678f33e966286f3f41f7ac1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20003,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20003,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-10.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-10.zip",
+  "kind": "monthly",
+  "period": "2021-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-10.zip",
+  "bytes": 3477,
+  "sha256": "87ec9a06c90295c7033a3028b2cc1280f02acfdf0ec384065031651cf34b409c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20004,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20004,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-11.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-11.zip",
+  "kind": "monthly",
+  "period": "2021-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-11.zip",
+  "bytes": 3360,
+  "sha256": "2782bf35fa8121a4629faa2b9aea232f6fb0c5a5e7f42a76bed921e235a2b9ff",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20005,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20005,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-12.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-12.zip",
+  "kind": "monthly",
+  "period": "2021-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2021-12.zip",
+  "bytes": 3462,
+  "sha256": "7731b88ad0bb542971cf23a0afe3c51ff933757cf076b0019cafd0eb7e4c1374",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20006,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20006,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-01.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-01.zip",
+  "kind": "monthly",
+  "period": "2022-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-01.zip",
+  "bytes": 3516,
+  "sha256": "83ba995ee5e0d958bba072059251ca8bb50bf11ad9aaa3c8831be018a271131b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20007,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20007,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-02.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-02.zip",
+  "kind": "monthly",
+  "period": "2022-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-02.zip",
+  "bytes": 3181,
+  "sha256": "246963fa4f51aa7e32fc27df28379689e6c6229408b14a820390b27e02e582c7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20008,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 20008,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-03.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-03.zip",
+  "kind": "monthly",
+  "period": "2022-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-03.zip",
+  "bytes": 3483,
+  "sha256": "8227e081613700c9a75fa3abb66122e9b4a84082d1c8afb4ebc4bd40cf40143c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20009,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20009,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-04.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-04.zip",
+  "kind": "monthly",
+  "period": "2022-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-04.zip",
+  "bytes": 3435,
+  "sha256": "1fa080157f26f7677e7a6015b0e2a247b7cfddc69ef94573c6e0c2a7a394aa35",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20010,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20010,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-05.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-05.zip",
+  "kind": "monthly",
+  "period": "2022-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-05.zip",
+  "bytes": 3470,
+  "sha256": "22eea07f2bd6099c83d3224e0d608f3829298cebbda2ae77fc461b2b495ecdca",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20011,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20011,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-06.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-06.zip",
+  "kind": "monthly",
+  "period": "2022-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-06.zip",
+  "bytes": 3406,
+  "sha256": "0bb4a79ad8f2796973652d9df2fabf1eda2fab6da925fa61d422065d8e1aa88e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20012,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20012,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-07.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-07.zip",
+  "kind": "monthly",
+  "period": "2022-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-07.zip",
+  "bytes": 3484,
+  "sha256": "0763aca6ae80fd79d6fae63d829488b76e8ff1627667ce74f9ca2321ee168120",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20013,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20013,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-08.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-08.zip",
+  "kind": "monthly",
+  "period": "2022-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-08.zip",
+  "bytes": 3442,
+  "sha256": "75b5cb67dc7b8a0d9fc1e231173ccbe09d68d5f9a5f1177546a20c561716e6b5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20014,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20014,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-09.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-09.zip",
+  "kind": "monthly",
+  "period": "2022-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-09.zip",
+  "bytes": 3369,
+  "sha256": "3a694f49533ffc5a0b5a104ef0538ce97d2a0bded1f53baa41693158f08d79f8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20015,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20015,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-10.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-10.zip",
+  "kind": "monthly",
+  "period": "2022-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-10.zip",
+  "bytes": 3402,
+  "sha256": "b2327b32513e789be74057337698a1fd6eed914c598f1ee3161664490e90ee43",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20016,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20016,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-11.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-11.zip",
+  "kind": "monthly",
+  "period": "2022-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-11.zip",
+  "bytes": 3297,
+  "sha256": "f086b2017ed9d18c20d8115ce3d5629aafd50309685be45564937a5ab9067259",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20017,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20017,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-12.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-12.zip",
+  "kind": "monthly",
+  "period": "2022-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2022-12.zip",
+  "bytes": 3345,
+  "sha256": "4645e3ce511b43f6bc7f7cb5e03d81d1257f1bf8582e1f9007b73ba7a9a183d1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20018,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20018,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-01.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-01.zip",
+  "kind": "monthly",
+  "period": "2023-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-01.zip",
+  "bytes": 3455,
+  "sha256": "8f90b3dcd8c7deaa9557f26a7c3d284eba000052eace06666efcc0d0b450d116",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20019,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20019,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-02.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-02.zip",
+  "kind": "monthly",
+  "period": "2023-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-02.zip",
+  "bytes": 3131,
+  "sha256": "f80ae9e24781346353615de14cec2edf3510736ad92603789f53283c5b42fe41",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20020,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 20020,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-03.zip",
+  "bytes": 3425,
+  "sha256": "a6dcb9ff63799413b8d29745efcd3d7657c866319cb6038e5e11072362b468d8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20021,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20021,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-04.zip",
+  "bytes": 3246,
+  "sha256": "d6dca4f9176587b2114abe7f97271a1be66877c5c60452c1e95d5f2b9f31b8ee",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20022,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20022,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-05.zip",
+  "bytes": 3314,
+  "sha256": "71931266658e0e8b926ec1a6227315ee1782f2ed439c77c7e1899969b630f785",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20023,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20023,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-06.zip",
+  "bytes": 3327,
+  "sha256": "a381f59eeec6c1ec4947c2db7cb84e5049ba1a8bdda0e0375cad1d9852d44d0c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20024,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20024,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-07.zip",
+  "bytes": 3638,
+  "sha256": "b87ff038052fd7f5a46aca8da7a9499791017eff27998e3ae55bae74490062ef",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20025,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20025,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-08.zip",
+  "bytes": 3486,
+  "sha256": "7779fc5a21a1ecb5af520d87e041895467665e651137c70e7ddd229614a7bc18",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20026,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20026,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-09.zip",
+  "bytes": 3326,
+  "sha256": "8efdb1c33c0034d77b227e7785396a898d686c449af3ee528c191c542e100140",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20027,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20027,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-10.zip",
+  "bytes": 3432,
+  "sha256": "e8a1067851d5f42f0518bdf337355391cfa2595850eba03643fdb7c62ec5ff90",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20028,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20028,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-11.zip",
+  "bytes": 3342,
+  "sha256": "2a40626d46e2a5d4a560e0c802e2b2ba673468de19f9f2f2be43e5920569ce9a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20029,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20029,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2023-12.zip",
+  "bytes": 3450,
+  "sha256": "81ebb95869cf4b05dfa9654d0bcf2372e9a1e3dcee37c301951ac949687f19c1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20030,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20030,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-01.zip",
+  "bytes": 3425,
+  "sha256": "762fcb69d0bb4792cf70cd23ea257e8b54393baad1137ae67444bd2db676c1fc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20031,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20031,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-02.zip",
+  "bytes": 3215,
+  "sha256": "f23691f96ff55683d9b19040402882202d25f32daf6908607618dcfd28b810de",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20032,
+   "新增版本数": 58,
+   "状态": "已入库"
+  },
+  "source_id": 20032,
+  "rows": 58
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-03.zip",
+  "bytes": 3485,
+  "sha256": "a0224f7be71b107baee52b6fef65b3db0e17e126f59ecd64a00ca3b3efa07c16",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20033,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20033,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-04.zip",
+  "bytes": 3322,
+  "sha256": "c94a741308247b7719e3a5854f6a8b5bc54bfbcf3f92fa3c41a5143ffd4703c1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20034,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20034,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-05.zip",
+  "bytes": 3348,
+  "sha256": "9f03d7bb04747d0dab447d9ad854a073182e5508b9d985d575c9be1689dabc3a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20035,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20035,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-06.zip",
+  "bytes": 3229,
+  "sha256": "479edfc885f39422308e326793ffb848c737fa6be44743ee3058ef9ad43abe81",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20036,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20036,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-07.zip",
+  "bytes": 3326,
+  "sha256": "25f7f5f813c06d1899e0c6931308be8d51dca81ef0fd78aac2802506260cb997",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20037,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20037,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-08.zip",
+  "bytes": 3403,
+  "sha256": "740dc6143943366dabb1d6ad6ea501a93c107f85566dd7ce6943c8cf3bb185ea",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20038,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20038,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-09.zip",
+  "bytes": 3241,
+  "sha256": "8f6e44f4e1bdcae659f9bd08a66afcd8ab75d325f58aaec21f21ec68f3f6093d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20039,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20039,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-10.zip",
+  "bytes": 3314,
+  "sha256": "ef868c9984745d28b95f1f4174a3ea35d0102fbdd55e1c4069dc4de91390245c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20040,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20040,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-11.zip",
+  "bytes": 3332,
+  "sha256": "b4a2ce98ec671dac16819fe28e5778e8eef89d0e1c91ff12588dfb36a43cac86",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20041,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20041,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2024-12.zip",
+  "bytes": 3538,
+  "sha256": "5f6b0c5ef644e0a17b6b6eb9dba8d213a88ea195d255489509d8c03b21cb3ad0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20042,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20042,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-01.zip",
+  "bytes": 3451,
+  "sha256": "4f81734c23cf5eaacdb3f6bcd67ed9d2a1628f73f77cd54874e1e15462c82320",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20043,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20043,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-02.zip",
+  "bytes": 3121,
+  "sha256": "68f27e35b9232cb3dfaf199267abd71045bdb161117c1cdb2073fdaa1e1d1938",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20044,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 20044,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-03.zip",
+  "bytes": 3347,
+  "sha256": "b9f0e7c1918defac655f5ebfe9c67cf9985a8fb7c43b8bb1ed69ead702bfcfdd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20045,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20045,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-04.zip",
+  "bytes": 3303,
+  "sha256": "5ec24c8597721d59ca70abb111802ebb46076f0ef083287b2698add5631b3925",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20046,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20046,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-05.zip",
+  "bytes": 3369,
+  "sha256": "ddc4a87d6931f973464bea078acb0a40f915868204c5df4ebee65173e80da846",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20047,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20047,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-06.zip",
+  "bytes": 3372,
+  "sha256": "c346b68fc4b16b30bbc0dcf7eadc4354dbeeddeaf1ff9e664a39cc3295912d82",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20048,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20048,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-07.zip",
+  "bytes": 3418,
+  "sha256": "279ed79785f715565dec90c4ac80df6abc7b7cec5364e0190dc5449590c19a4c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20049,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20049,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-08.zip",
+  "bytes": 3405,
+  "sha256": "6025b1820047e905c28a5d7a9089df96b209fe9d260cfc05693148d1fe6d977e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20050,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20050,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-09.zip",
+  "bytes": 3247,
+  "sha256": "06934a15ccbadf45af3ac4fa170f1a1f40bf30992fa2f0babcab2f7c3a427f6d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20051,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20051,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-10.zip",
+  "bytes": 3365,
+  "sha256": "3caec9728aabdccd4f978d73da9dbd8863bd8038710a18fc2f0aab8d487175b8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20052,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20052,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-11.zip",
+  "bytes": 3245,
+  "sha256": "f2e95da6709e668ada8cdfcb76f0c016d6c45957d21d5b437cb13ffe816a7d4d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20053,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20053,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2025-12.zip",
+  "bytes": 3372,
+  "sha256": "4bb6c41a7cf3dd0ec6e07bd44efb0b66993da088cea9f3d7d7619232fba295e1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20054,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20054,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-02.zip",
+  "bytes": 3037,
+  "sha256": "0942388861758e404323e1350701e4fff2ea8ff75d8eaefd0fa6157c2c5326fe",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20056,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 20056,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-01.zip",
+  "bytes": 3288,
+  "sha256": "df9255db80957bfce012e0e4d957d041ea6d498ebbe233b6bed1ea44cf88e6e7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20055,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20055,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-03.zip",
+  "bytes": 3236,
+  "sha256": "b76a8d0b84790e32c35f0689815b86ca59e573b00c36315a25fd7b5ee74c378a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20057,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20057,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-04.zip",
+  "bytes": 3239,
+  "sha256": "a4b9d767ff95fdec23d1cad4d092448d59c3cfb241752ac8fbc1c7142e8a1384",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20058,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20058,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-05.zip",
+  "bytes": 3312,
+  "sha256": "24b15a8a484f0e895d3ecb9bf8530052bc06bcef4b192b8f1916e1efd54a9a7a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20059,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20059,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-06.zip",
+  "bytes": 3150,
+  "sha256": "a38fe1b8f851edaf065b0fae664881c40b7a6d76b88a21fc05f176c5ae0bb887",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20060,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20060,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-07.zip",
+  "bytes": 3168,
+  "sha256": "ef1d2c4253f2c105a084e411c866767f97ec81f55a90d9bd884739c197b09eab",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20061,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20061,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-08.zip",
+  "bytes": 3214,
+  "sha256": "e053291df63b5cff57c570e2d092b1e9b804641096d48bb03daf902aa708cf6f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20062,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 20062,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/COMPUSDT/12h/COMPUSDT-12h-2026-09.zip",
+  "bytes": 3185,
+  "sha256": "8b890e0d2353a68deb646f2d84a850c76580cba53056233dd80457189e79d1c2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 20063,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 20063,
+  "rows": 60
+ },
+ "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-01.zip",
+  "bytes": 398,
+  "sha256": "8c2881bcef7ce8c2c5867a4e256a55d99b366ecb3986ecad8b6f393d10d872ee",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19985,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 19985,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-02.zip",
+  "bytes": 402,
+  "sha256": "c9e5349b23ef6dcc81b1ee714f10635bdcbc8c3cb1dc6c8aeace3495afb64195",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19986,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 19986,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-04.zip",
+  "bytes": 397,
+  "sha256": "e2a55810a0b5311488cf113cfcb7b02757321671c28dbb65f746219dc9b16d4d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 51218,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 51218,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-03.zip",
+  "bytes": 398,
+  "sha256": "19c36ad076b2223cae53d95c84cf9fd322ead81a947bfec2555cd512c2b72244",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 19987,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 19987,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-05.zip",
+  "bytes": 398,
+  "sha256": "cf910949feacfae908c5d7fb94686fd22a2b4ab5d07bba1718ddac8c7f7ff55d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 265652,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 265652,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-06.zip",
+  "bytes": 396,
+  "sha256": "a5e679c6c5df6e252186c473c48f32839c21b62dae70ef679306d8cc5a576ef2",
+  "checksum_ok": true,
+  "size_bytes": 396,
+  "fetched_at": "2026-10-07T19:24:42Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/12h/COMPUSDT/COMPUSDT-12h-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1775763,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1775763,
+  "rows": 2,
+  "imported_at": "2026-10-08T06:55:10Z"
+ },
+ "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-07.zip",
+  "bytes": 402,
+  "sha256": "38c048c06f217079ffde984604c33517eddfd37f4e340b5598bb48b31cec962f",
+  "checksum_ok": true,
+  "size_bytes": 402,
+  "fetched_at": "2026-10-08T07:23:33Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/12h/COMPUSDT/COMPUSDT-12h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/COMPUSDT/12h/COMPUSDT-12h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1798892,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1798892,
+  "rows": 2,
+  "imported_at": "2026-10-08T07:27:55Z"
+ }
+}

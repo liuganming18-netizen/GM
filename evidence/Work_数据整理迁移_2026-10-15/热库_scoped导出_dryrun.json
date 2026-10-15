@@ -1,0 +1,128 @@
+{
+ "模式": "dry-run(schema-only)",
+ "目标": "/tmp/_scoped_dryrun.sqlite3",
+ "读取起": "2026-10-15T01:16:15.933789+00:00",
+ "读取止": "2026-10-15T01:16:35.251263+00:00",
+ "源WAL字节": 294715992,
+ "目标表": [
+  "api_scope_state",
+  "candle_field_notes",
+  "candle_heads",
+  "candle_versions",
+  "coverage_cache",
+  "kline_stream_state",
+  "oi_history",
+  "realtime_klines",
+  "sources",
+  "symbol_classification",
+  "symbol_pool",
+  "symbol_supply"
+ ],
+ "目标视图": [
+  "candles"
+ ],
+ "目标显式索引": [
+  {
+   "表": "candle_field_notes",
+   "索引": "candle_field_notes_by_field",
+   "SQL": "CREATE INDEX \"candle_field_notes_by_field\"\n    ON \"candle_field_notes\"(exchange, field)"
+  },
+  {
+   "表": "coverage_cache",
+   "索引": "coverage_cache_by_symbol",
+   "SQL": "CREATE INDEX \"coverage_cache_by_symbol\" ON \"coverage_cache\"(exchange, symbol, timeframe)"
+  },
+  {
+   "表": "oi_history",
+   "索引": "ix_oi_hist_snapshot",
+   "SQL": "CREATE INDEX \"ix_oi_hist_snapshot\" ON \"oi_history\"(exchange,market,symbol,ts) WHERE period='snapshot'"
+  },
+  {
+   "表": "oi_history",
+   "索引": "ix_oi_hist_sym_period_ts",
+   "SQL": "CREATE INDEX \"ix_oi_hist_sym_period_ts\" ON \"oi_history\"(exchange,symbol,period,ts)"
+  },
+  {
+   "表": "realtime_klines",
+   "索引": "realtime_klines_lookup",
+   "SQL": "CREATE INDEX \"realtime_klines_lookup\"\n    ON \"realtime_klines\"(exchange, symbol, timeframe)"
+  },
+  {
+   "表": "symbol_classification",
+   "索引": "symbol_classification_by_cat",
+   "SQL": "CREATE INDEX \"symbol_classification_by_cat\"\n    ON \"symbol_classification\"(exchange, in_active_range, instrument_category)"
+  },
+  {
+   "表": "symbol_supply",
+   "索引": "symbol_supply_base",
+   "SQL": "CREATE INDEX \"symbol_supply_base\" ON \"symbol_supply\"(base)"
+  }
+ ],
+ "源在范围显式索引": {
+  "oi_history": [
+   "ix_oi_hist_snapshot",
+   "ix_oi_hist_sym_period_ts"
+  ],
+  "symbol_supply": [
+   "symbol_supply_base"
+  ],
+  "realtime_klines": [
+   "realtime_klines_lookup"
+  ],
+  "candle_field_notes": [
+   "candle_field_notes_by_field"
+  ],
+  "coverage_cache": [
+   "coverage_cache_by_symbol"
+  ],
+  "symbol_classification": [
+   "symbol_classification_by_cat"
+  ]
+ },
+ "缺失索引": {},
+ "非法ON_o索引": [],
+ "ATTACH写验证_api_scope_state行数": 5,
+ "索引建立结果": {
+  "oi_history": [
+   [
+    "ix_oi_hist_snapshot",
+    "已建"
+   ],
+   [
+    "ix_oi_hist_sym_period_ts",
+    "已建"
+   ]
+  ],
+  "symbol_supply": [
+   [
+    "symbol_supply_base",
+    "已建"
+   ]
+  ],
+  "realtime_klines": [
+   [
+    "realtime_klines_lookup",
+    "已建"
+   ]
+  ],
+  "candle_field_notes": [
+   [
+    "candle_field_notes_by_field",
+    "已建"
+   ]
+  ],
+  "coverage_cache": [
+   [
+    "coverage_cache_by_symbol",
+    "已建"
+   ]
+  ],
+  "symbol_classification": [
+   [
+    "symbol_classification_by_cat",
+    "已建"
+   ]
+  ]
+ },
+ "结论": "PASS"
+}

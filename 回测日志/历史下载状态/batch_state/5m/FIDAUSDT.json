@@ -1,0 +1,951 @@
+{
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-11.zip",
+  "bytes": 328156,
+  "sha256": "f70996dd163a3276f15271dcbd534a62f4daa1cd1f7ca3dc673cec5f4fb30680",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421999,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 421999,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-12.zip",
+  "bytes": 326571,
+  "sha256": "b269ec399749e31f0ff7edd317fc2e7417d6e007cbf6d6aa5e7ffe979b333273",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422000,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422000,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-01.zip",
+  "bytes": 327259,
+  "sha256": "397463e1c177a5c08328d4c5ee284817e9dfa8c346abc58946e963b7263d4e99",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422001,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422001,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-02.zip",
+  "bytes": 291629,
+  "sha256": "a500989afa7bb8f407025f2a7f1ed9a7b4d21d6bbecad288f28aa06eb47c0eea",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422002,
+   "新增版本数": 8064,
+   "状态": "已入库"
+  },
+  "source_id": 422002,
+  "rows": 8064
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-03.zip",
+  "bytes": 311186,
+  "sha256": "bab81fdfb462cff874fd094155634a5397fca9365bfd068653b5a5b57c0c4c03",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422003,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422003,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-04.zip",
+  "bytes": 318781,
+  "sha256": "e45957db96648f9d2ad83c73e134c4fc8e67a441cbcd10186684588b598478c6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422004,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 422004,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-05.zip",
+  "bytes": 343075,
+  "sha256": "546e646d67904fa4a6b00ef366ab8804d1dc92d1f6391ce50b3a6b30aa455021",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422005,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422005,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-06.zip",
+  "bytes": 334184,
+  "sha256": "92a079ddc776f55c6e57843f3526ebfdda8e2712be74e8c22f881df5f1c3eccf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422006,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 422006,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-07.zip",
+  "bytes": 309492,
+  "sha256": "e153b41229b58ae5fe754f929374ff56981e8fcace58e6b762a88af4733b0ee0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422007,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422007,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-08.zip",
+  "bytes": 313429,
+  "sha256": "e31e3f864f6901a7b4c56cf352f5f15bee512cdefcfd25e2653e4ddcd4c1f391",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422008,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422008,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-09.zip",
+  "bytes": 306882,
+  "sha256": "769f4a66f90012085088bf1b86dd547aa543c56e59452e1de66e9071249da0f1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422009,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 422009,
+  "rows": 8640
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-05.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-05.zip",
+  "kind": "daily",
+  "period": "2025-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-05.zip",
+  "bytes": 11503,
+  "sha256": "c1950a9fc56dd30cfba5e19c8c950549afe9d9916837058fe35d0d5c8b3405fd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421967,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421967,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-06.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-06.zip",
+  "kind": "daily",
+  "period": "2025-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-06.zip",
+  "bytes": 11505,
+  "sha256": "20cada6b0de421e0f4e3d18ca55b1cde88c9b2f7ca1c3608ea0ba6102d8e7f39",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421968,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421968,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-07.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-07.zip",
+  "kind": "daily",
+  "period": "2025-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-07.zip",
+  "bytes": 11576,
+  "sha256": "d464518285959d6e80a1d3a41ab3b3b44baa1290c342a6d7e161069788a0d6f4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421969,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421969,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-08.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-08.zip",
+  "kind": "daily",
+  "period": "2025-10-08",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-08.zip",
+  "bytes": 11413,
+  "sha256": "2c1e04f8ff464376464252b4632e00d2fe1007d4c61efdac94a0bd5e1c0eff13",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421970,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421970,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-10.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-10.zip",
+  "kind": "daily",
+  "period": "2025-10-10",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-10.zip",
+  "bytes": 11821,
+  "sha256": "548ca0cdc395168962f55c055b04c65b1b8d66f8101176a1d5f0c43b5dc34902",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421972,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421972,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-09.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-09.zip",
+  "kind": "daily",
+  "period": "2025-10-09",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-09.zip",
+  "bytes": 11500,
+  "sha256": "07d126ffb2e2e998274513774c47e630b8ac467bee35cfeea542ebf29c3f5c64",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421971,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421971,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-11.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-11.zip",
+  "kind": "daily",
+  "period": "2025-10-11",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-11.zip",
+  "bytes": 11859,
+  "sha256": "d47204e64a3881970f5f73e0125fce9ccbf30d8486b20764af197c4594cc9841",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421973,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421973,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-12.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-12.zip",
+  "kind": "daily",
+  "period": "2025-10-12",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-12.zip",
+  "bytes": 11648,
+  "sha256": "bbd030640daa24d4bf86ddf8247bd4cce3deb7f04330a366a868cb058a1ff6e0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421974,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421974,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-14.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-14.zip",
+  "kind": "daily",
+  "period": "2025-10-14",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-14.zip",
+  "bytes": 11696,
+  "sha256": "c0a5c7b42370c8ebd26be5d992140369a9f8e7e4179bab12e594400902b37e67",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421976,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421976,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-13.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-13.zip",
+  "kind": "daily",
+  "period": "2025-10-13",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-13.zip",
+  "bytes": 11593,
+  "sha256": "49b9a26c1aaad3e220fda474488d03b0fad00a0f7f12f8d1fc314e2611d79a9e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421975,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421975,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-15.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-15.zip",
+  "kind": "daily",
+  "period": "2025-10-15",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-15.zip",
+  "bytes": 11444,
+  "sha256": "9037ff5d8cf03a454f61b19542fce52f52300c5dfbb9447339a97d4123fd4fcf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421977,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421977,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-16.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-16.zip",
+  "kind": "daily",
+  "period": "2025-10-16",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-16.zip",
+  "bytes": 11493,
+  "sha256": "2b8564b919edd342189df07ee110d673e9ebae13065c2a7482a1e7426e6a2de6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421978,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421978,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-17.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-17.zip",
+  "kind": "daily",
+  "period": "2025-10-17",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-17.zip",
+  "bytes": 11472,
+  "sha256": "aa4eaaea988f6a401abb83d856bacb1ef96a89f2610c4c341dba18d7c897996b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421979,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421979,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-18.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-18.zip",
+  "kind": "daily",
+  "period": "2025-10-18",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-18.zip",
+  "bytes": 11105,
+  "sha256": "35660eae9588b0128c744b6ab4db0b04a4f9ddb3dd4b25ac6ac7707aa73435ad",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421980,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421980,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-19.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-19.zip",
+  "kind": "daily",
+  "period": "2025-10-19",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-19.zip",
+  "bytes": 11074,
+  "sha256": "eaedf08b208305afd25f167cc3158283230c74134c686c4c0b4c6030fd632a41",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421981,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421981,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-20.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-20.zip",
+  "kind": "daily",
+  "period": "2025-10-20",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-20.zip",
+  "bytes": 11269,
+  "sha256": "5e4b236dc6eb2a35f8355305a92535e2ec8bfedb9189e4346181dc4bc8dea289",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421982,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421982,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-21.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-21.zip",
+  "kind": "daily",
+  "period": "2025-10-21",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-21.zip",
+  "bytes": 11390,
+  "sha256": "1da810519b9db5ace83d2a968a6da87ed52afa527e729a06238eef85246a110c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421983,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421983,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-22.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-22.zip",
+  "kind": "daily",
+  "period": "2025-10-22",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-22.zip",
+  "bytes": 11295,
+  "sha256": "9206cde11f760f813f940cbbd135f42a4d2a0a042aaf4abfa7e92894e71e8a4b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421984,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421984,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-23.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-23.zip",
+  "kind": "daily",
+  "period": "2025-10-23",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-23.zip",
+  "bytes": 10954,
+  "sha256": "d2c25255a5f90745045392fdff8a12e658177dec19b653513b33e8d8698849d9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421985,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421985,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-24.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-24.zip",
+  "kind": "daily",
+  "period": "2025-10-24",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-24.zip",
+  "bytes": 10863,
+  "sha256": "50588c5f30418bdfccc02ae2217f8b1f235c3110b9458766326beeece439df57",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421986,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421986,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-25.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-25.zip",
+  "kind": "daily",
+  "period": "2025-10-25",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-25.zip",
+  "bytes": 11296,
+  "sha256": "d135bc87aed02a6548beaa6403f508d8a5ebec5e88372327c93ff47322615893",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421987,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421987,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-26.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-26.zip",
+  "kind": "daily",
+  "period": "2025-10-26",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-26.zip",
+  "bytes": 11301,
+  "sha256": "5b7fdf33eef8d4440b5eed83012445ad024b5e7854b45c505ec6687a443d64e0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421988,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421988,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-27.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-27.zip",
+  "kind": "daily",
+  "period": "2025-10-27",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-27.zip",
+  "bytes": 11414,
+  "sha256": "70ecd536d51da5391ee03f758089464ac16f71261564ca5a45b58a3c53c797fc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421989,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421989,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-29.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-29.zip",
+  "kind": "daily",
+  "period": "2025-10-29",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-29.zip",
+  "bytes": 11101,
+  "sha256": "8839542c2a82a5813f1f0b4e347566f1032e853e575a28f52c2e7d46999add4d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421991,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421991,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-28.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-28.zip",
+  "kind": "daily",
+  "period": "2025-10-28",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-28.zip",
+  "bytes": 11215,
+  "sha256": "40072cd8a9b91d132a4417f5ca56417b36e508b8311448d119deb2bd3d51a4ec",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421990,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421990,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-30.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-30.zip",
+  "kind": "daily",
+  "period": "2025-10-30",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-30.zip",
+  "bytes": 11505,
+  "sha256": "3bab5b0a5c95399089d2ccfa24e847adc840b7882309afcc1a490c5ff78ca164",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421992,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421992,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-31.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-31.zip",
+  "kind": "daily",
+  "period": "2025-10-31",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10-31.zip",
+  "bytes": 11196,
+  "sha256": "5d8d95b8dbef1c334b965f618fb540256124f1c98a3a3e7a385262713ef8c0ea",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421993,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421993,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-01.zip",
+  "bytes": 10561,
+  "sha256": "722fbd2319f61f0fb25dde3f0cd23f717c8f081ed3cabf2dc7e3d90f0c400bb0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421994,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421994,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-02.zip",
+  "bytes": 10876,
+  "sha256": "e6ed1f88f9b4f2c4787092f1e96c38396847ace0cfee53f1d87867057c6adf5f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421995,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421995,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-04.zip",
+  "bytes": 11039,
+  "sha256": "bb96134b77627cb42056678b52cde771eafa61f328002a6b406e695887d018fc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421997,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421997,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-03.zip",
+  "bytes": 10652,
+  "sha256": "4615f54584f32f1b388c87a7f40535556185d1c9c7ec97b7e83a25da22f920ae",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421996,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421996,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-05.zip",
+  "bytes": 10745,
+  "sha256": "565393cdd100db7dce50d46953254e94b8c92be340152d4b47f9ae2c81cb4002",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 421998,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 421998,
+  "rows": 288
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-09.zip",
+  "bytes": 130058,
+  "sha256": "78fa54428017780664eb4170a340c3116ed2a8ff747ae000fdc946c0afd1e197",
+  "checksum_ok": true,
+  "size_bytes": 130058,
+  "fetched_at": "2026-10-07T21:46:41Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2024-09.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-09.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-10.zip",
+  "bytes": 332123,
+  "sha256": "b4ae7ddad10528b45ae81a6e1ce1aaf74079d6faff395aa64a3dc94a12fa2efd",
+  "checksum_ok": true,
+  "size_bytes": 332123,
+  "fetched_at": "2026-10-07T21:46:41Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2024-10.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-10.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-11.zip",
+  "bytes": 330562,
+  "sha256": "bf530599b464f665ad27077d2e30ed35710fd409c829b20211f045361e4ad26f",
+  "checksum_ok": true,
+  "size_bytes": 330562,
+  "fetched_at": "2026-10-07T21:46:42Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2024-11.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-11.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-12.zip",
+  "bytes": 369683,
+  "sha256": "fcad91bad6325a80a04b868937a855c716dc907cae695067d10241914d7a9964",
+  "checksum_ok": true,
+  "size_bytes": 369683,
+  "fetched_at": "2026-10-07T21:46:42Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2024-12.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2024-12.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-01.zip",
+  "bytes": 361186,
+  "sha256": "743d3801c7a1e86272af712b915a4e2b4f094e6d6e6bd4444f5dfd4818c34000",
+  "checksum_ok": true,
+  "size_bytes": 361186,
+  "fetched_at": "2026-10-07T21:46:43Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2025-01.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-01.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-02.zip",
+  "bytes": 322140,
+  "sha256": "e58415453b69f3995e093a8ef07900c2fcc3ed09a97ba1de3cb88bea45cb9abd",
+  "checksum_ok": true,
+  "size_bytes": 322140,
+  "fetched_at": "2026-10-07T21:46:43Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2025-02.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-02.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-03.zip",
+  "bytes": 348374,
+  "sha256": "1dc5a5e5620b3107c74751a0c9030ffb5fbb402c59047870ec5196ceeffa1526",
+  "checksum_ok": true,
+  "size_bytes": 348374,
+  "fetched_at": "2026-10-07T21:46:44Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2025-03.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-03.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-04.zip",
+  "bytes": 334338,
+  "sha256": "6abceb3ee1323a14c92f4570f2f6d72b544043c4fbf288914c7d1ab0f79a2351",
+  "checksum_ok": true,
+  "size_bytes": 334338,
+  "fetched_at": "2026-10-07T21:46:44Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2025-04.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-04.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-05.zip",
+  "bytes": 356134,
+  "sha256": "70c421fa5220e3d43acb798e3748a5ff48df26a95a27223cf31961472f30793d",
+  "checksum_ok": true,
+  "size_bytes": 356134,
+  "fetched_at": "2026-10-07T21:46:45Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2025-05.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-05.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-06.zip",
+  "bytes": 333759,
+  "sha256": "54f5700dea38f32f96ea4f94f8f4d92b0f16a777e4bc4a8ea09ef4478050f562",
+  "checksum_ok": true,
+  "size_bytes": 333759,
+  "fetched_at": "2026-10-07T21:46:45Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2025-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-06.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-07.zip",
+  "bytes": 360859,
+  "sha256": "8611aa3b05f2f6056d37f6f8ca131de317db1772588b5d31a0bfebfb97d05966",
+  "checksum_ok": true,
+  "size_bytes": 360859,
+  "fetched_at": "2026-10-07T21:46:46Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2025-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-07.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-08.zip",
+  "bytes": 352754,
+  "sha256": "6a6e11844d186f2df6e39addaeaa58068264ebcac32e168597cc1d8ff885efc5",
+  "checksum_ok": true,
+  "size_bytes": 352754,
+  "fetched_at": "2026-10-07T21:46:46Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2025-08.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-08.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-09.zip",
+  "bytes": 331749,
+  "sha256": "c1941ab262385d8a737ad85f462af927e1e569ef59d87dea7b28b48b4d6151bc",
+  "checksum_ok": true,
+  "size_bytes": 331749,
+  "fetched_at": "2026-10-07T21:46:47Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2025-09.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-09.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10.zip",
+  "bytes": 338298,
+  "sha256": "ba2d09a1ca23f8391e03238700b9b298a0c70df3a0ef4e85562bb1c3c6a20446",
+  "checksum_ok": true,
+  "size_bytes": 338298,
+  "fetched_at": "2026-10-07T21:46:47Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2025-10.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FIDAUSDT/5m/FIDAUSDT-5m-2025-10.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-06.zip",
+  "bytes": 10832,
+  "sha256": "5235c69a70d8b124681311bd4fc4a1f65f06a542109d9ed49946a730298c99fd",
+  "checksum_ok": true,
+  "size_bytes": 10832,
+  "fetched_at": "2026-10-07T21:46:48Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/FIDAUSDT/FIDAUSDT-5m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-06.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FIDAUSDT/5m/FIDAUSDT-5m-2026-10-07.zip",
+  "status": "missing_in_archive",
+  "note": "官方归档或 CHECKSUM 不存在（日度按需探测，404 即缺失）；不计为完成"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "generated_at_utc": "2026-10-14T18:31:26.799948+00:00",
+ "discipline": "全程只读；只用本地已有 REST 采样与本地归档，不发起任何下载",
+ "C_K线时标控制": {
+  "对象": "binance/um/BTCUSDT/4h，REST 采样 vs 热库",
+  "结论": "热库 open_time = 桶起点；close_time = 起点+4h-1ms"
+ },
+ "A_OI端点与归档": {
+  "对象": "binance openInterestHist(period=4h) vs raw_oi_metrics 5m 行",
+  "结论": "归档 create_time = REST 标签 - 300s（桶起点）；OI 值逐位相等",
+  "精确命中数": 10,
+  "总点数": 10
+ },
+ "B_taker端点与K线": {
+  "对象": "binance takerlongshortRatio(period=4h) vs 热库 5m K线 taker 字段窗口求和",
+  "结论": "同币同窗口买卖比可由 K线 taker_buy_volume/volume 复算；该端点标签 = 窗口起点（与 K线 open_time 同为桶起点，10 点窗口均满 48 根 5m）；但两个官方端点不保证逐位相同：10 点中 6 点买量逐位相等，最大相对残差 0.114% ⇒ 只能称『可复算/近似』",
+  "买量逐位相等点数": 5,
+  "比值4位相等点数": 7,
+  "总点数": 10
+ },
+ "D_多空比端点与归档": {
+  "对象": "binance topLongShortAccountRatio(period=4h) vs 归档 5m count_toptrader_long_short_ratio",
+  "结论": "数值最接近 -300s 边界（即桶起点口径），但 10 点中仅 3 点在 4 位小数上相等；REST 4h 是窗口口径，与归档 5m 口径不逐位相等 ⇒ 不得直接等同",
+  "4位相等点数": 3,
+  "总点数": 10
+ },
+ "E_5m桶taker近似": {
+  "对象": "BTCUSDT 2026-09-10 归档 sum_taker_long_short_vol_ratio vs 冷档 5m K线",
+  "结论": "同桶（偏移 0）对齐成立；数值近似而非逐位相等"
+ },
+ "F_OKX_taker可用性": {
+  "对象": "热库 candle_versions taker 列空值率",
+  "结论": "币安 0% 空（可复算）；OKX 100% 空（OKX K线响应无该字段，candle_field_notes 已记录） ⇒ 币安结论不得外推 OKX"
+ }
+}

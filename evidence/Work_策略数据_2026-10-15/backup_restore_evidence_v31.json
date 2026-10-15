@@ -1,0 +1,180 @@
+{
+ "generated_at": "20261014T210421Z",
+ "backup_dir": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster_v31/_backup/20261014T210421Z",
+ "policy": {
+  "full_datasets": [
+   "funding",
+   "mark1h",
+   "instruments",
+   "schema",
+   "pool",
+   "manifest"
+  ],
+  "sampled_datasets": [
+   "ohlcv",
+   "oi_metrics"
+  ],
+  "sample_n_per_tf": 3,
+  "reason": "保持 12GiB 空闲约束；完整性由 manifest_v31.json 全文件 SHA256 覆盖"
+ },
+ "n_full": 1541,
+ "n_sample": 24,
+ "n_meta": 4,
+ "reconcile": {
+  "match": 1569,
+  "mismatch": []
+ },
+ "restore": {
+  "checked": 28,
+  "ok": 28,
+  "bad": []
+ },
+ "restore_sample": [
+  {
+   "path": "is/ohlcv/1h/1000000MOGUSDT.parquet",
+   "sha_match": true,
+   "rows": 1308
+  },
+  {
+   "path": "is/ohlcv/1h/1000BONKUSDT.parquet",
+   "sha_match": true,
+   "rows": 9730
+  },
+  {
+   "path": "is/ohlcv/1h/1000CATUSDT.parquet",
+   "sha_match": true,
+   "rows": 1716
+  },
+  {
+   "path": "is/ohlcv/4h/1000000MOGUSDT.parquet",
+   "sha_match": true,
+   "rows": 327
+  },
+  {
+   "path": "is/ohlcv/4h/1000BONKUSDT.parquet",
+   "sha_match": true,
+   "rows": 2433
+  },
+  {
+   "path": "is/ohlcv/4h/1000CATUSDT.parquet",
+   "sha_match": true,
+   "rows": 429
+  },
+  {
+   "path": "is/ohlcv/15m/1000000MOGUSDT.parquet",
+   "sha_match": true,
+   "rows": 5230
+  },
+  {
+   "path": "is/ohlcv/15m/1000BONKUSDT.parquet",
+   "sha_match": true,
+   "rows": 38920
+  },
+  {
+   "path": "is/ohlcv/15m/1000CATUSDT.parquet",
+   "sha_match": true,
+   "rows": 6862
+  },
+  {
+   "path": "is/oi_metrics/1000000MOGUSDT.parquet",
+   "sha_match": true,
+   "rows": 15690
+  },
+  {
+   "path": "is/oi_metrics/1000BONKUSDT.parquet",
+   "sha_match": true,
+   "rows": 116611
+  },
+  {
+   "path": "is/oi_metrics/1000CATUSDT.parquet",
+   "sha_match": true,
+   "rows": 20584
+  },
+  {
+   "path": "val/ohlcv/1h/0GUSDT.parquet",
+   "sha_match": true,
+   "rows": 5025
+  },
+  {
+   "path": "val/ohlcv/1h/1000000BOBUSDT.parquet",
+   "sha_match": true,
+   "rows": 7528
+  },
+  {
+   "path": "val/ohlcv/1h/1000000MOGUSDT.parquet",
+   "sha_match": true,
+   "rows": 12564
+  },
+  {
+   "path": "val/ohlcv/4h/0GUSDT.parquet",
+   "sha_match": true,
+   "rows": 1257
+  },
+  {
+   "path": "val/ohlcv/4h/1000000BOBUSDT.parquet",
+   "sha_match": true,
+   "rows": 1882
+  },
+  {
+   "path": "val/ohlcv/4h/1000000MOGUSDT.parquet",
+   "sha_match": true,
+   "rows": 3141
+  },
+  {
+   "path": "val/ohlcv/15m/0GUSDT.parquet",
+   "sha_match": true,
+   "rows": 20097
+  },
+  {
+   "path": "val/ohlcv/15m/1000000BOBUSDT.parquet",
+   "sha_match": true,
+   "rows": 30110
+  },
+  {
+   "path": "val/ohlcv/15m/1000000MOGUSDT.parquet",
+   "sha_match": true,
+   "rows": 50254
+  },
+  {
+   "path": "val/oi_metrics/0GUSDT.parquet",
+   "sha_match": true,
+   "rows": 60291
+  },
+  {
+   "path": "val/oi_metrics/1000000BOBUSDT.parquet",
+   "sha_match": true,
+   "rows": 90277
+  },
+  {
+   "path": "val/oi_metrics/1000000MOGUSDT.parquet",
+   "sha_match": true,
+   "rows": 150615
+  },
+  {
+   "path": "instruments.parquet",
+   "sha_match": true,
+   "rows": 526
+  },
+  {
+   "path": "schema.json",
+   "sha_match": true,
+   "rows": "ERR Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file."
+  },
+  {
+   "path": "pool.json",
+   "sha_match": true,
+   "rows": "ERR Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file."
+  },
+  {
+   "path": "manifest_v31.json",
+   "sha_match": true,
+   "rows": "ERR Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file."
+  }
+ ],
+ "existing_prod_backup": {
+  "path": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/hot/20261014T131200Z/market_v2.sqlite3",
+  "exists": true,
+  "bytes": 4695580672,
+  "note": "上一轮已复算 SHA256 与记录一致且 quick_check=ok；本窗只读引用，不重算大文件"
+ }
+}

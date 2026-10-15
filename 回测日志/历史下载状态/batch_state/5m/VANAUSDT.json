@@ -1,0 +1,909 @@
+{
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-11.zip",
+  "bytes": 325567,
+  "sha256": "37bbfc34c3e83f475a0c670e32545dfb38fa678226391cf6ee47aca0d231482f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429451,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 429451,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-12.zip",
+  "bytes": 319439,
+  "sha256": "a0e5d54c7ecf7ff57e94a960ba0ad0aed6bc380e94802b9ef57c43d9be1e9912",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429452,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 429452,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-02.zip",
+  "bytes": 301320,
+  "sha256": "18ddf221ba78f34ffd395c918d2a7d5d5ea1607a1cdf86f3f75262aae2bb81fe",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429454,
+   "新增版本数": 8064,
+   "状态": "已入库"
+  },
+  "source_id": 429454,
+  "rows": 8064
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-01.zip",
+  "bytes": 321003,
+  "sha256": "4157150c0d363cb57607a99da500924342ac147221ecb8014d91a3b9a5ebe569",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429453,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 429453,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-03.zip",
+  "bytes": 313579,
+  "sha256": "de0ef09391509d7e487c8f8abd8f90ba959935fb0215a0c893402b9f629a512a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429455,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 429455,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-04.zip",
+  "bytes": 305386,
+  "sha256": "72282fed637252bc87564648d1502702cbfb32fb96ac900c42ee5c9fd92b1e22",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429456,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 429456,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-05.zip",
+  "bytes": 317637,
+  "sha256": "7584c6bc88a3ceec0b2d750c6a52f68196d651650805b8610e01cf09f7066051",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429457,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 429457,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-06.zip",
+  "bytes": 299552,
+  "sha256": "333e20105a7f78acccfe9b359836094d93a7403a11235e55c24ba47aa5c8d64f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429458,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 429458,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-07.zip",
+  "bytes": 317709,
+  "sha256": "5c29982c6632b4b644a949286c7e872787c53eab4d969be368cec99f0ddd4388",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429459,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 429459,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-08.zip",
+  "bytes": 340491,
+  "sha256": "a96d52efbcfee90819d6e0ca857fca8f4f8c48be300688c06182ca239ccb48b7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429461,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 429461,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2026-09.zip",
+  "bytes": 339102,
+  "sha256": "eaf536f56866fe5e01d5a90a7ce70f953aa365c7f09ba792cfbe29ad40aa31d2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429462,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 429462,
+  "rows": 8640
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-05.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-05.zip",
+  "kind": "daily",
+  "period": "2025-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-05.zip",
+  "bytes": 11485,
+  "sha256": "60857df7ce0901c0ea84c79182610ba8419433e66cc461473134268321c0d34e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429418,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429418,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-06.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-06.zip",
+  "kind": "daily",
+  "period": "2025-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-06.zip",
+  "bytes": 11406,
+  "sha256": "4bc10d32d52fef4e589df891eb0fc2c071c37ddc6df2d0f1e2ff6aa211b9e727",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429419,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429419,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-07.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-07.zip",
+  "kind": "daily",
+  "period": "2025-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-07.zip",
+  "bytes": 11515,
+  "sha256": "7d5ea2ff1d2b032ff5ad61d2f7958daccf1bd5b476e336e63edda01cfbd6a6d2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429420,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429420,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-08.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-08.zip",
+  "kind": "daily",
+  "period": "2025-10-08",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-08.zip",
+  "bytes": 11433,
+  "sha256": "6486ebf5d2ef8e5b3bca532f245f59d3399758dcfb15062ab0aa1da5dba9b5fe",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429421,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429421,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-09.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-09.zip",
+  "kind": "daily",
+  "period": "2025-10-09",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-09.zip",
+  "bytes": 11608,
+  "sha256": "0a4bcfd5e37c1fd81007c9830f6b8e5fbcc3d90fbd30e418fe6d31cd67a0d415",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429422,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429422,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-10.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-10.zip",
+  "kind": "daily",
+  "period": "2025-10-10",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-10.zip",
+  "bytes": 11929,
+  "sha256": "8362a4df355c670e8cf41eeb4e0611e38eba44bf03b225f540f23269b58a2cf5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429423,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429423,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-11.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-11.zip",
+  "kind": "daily",
+  "period": "2025-10-11",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-11.zip",
+  "bytes": 12025,
+  "sha256": "83ee21723f2cab3f8e7cb81450f811820b7c3a83fa31421f2bc36f6641dca17e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429424,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429424,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-12.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-12.zip",
+  "kind": "daily",
+  "period": "2025-10-12",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-12.zip",
+  "bytes": 11606,
+  "sha256": "3b4ba482aad7fb7bf55f02aa7fd78a63ab43611aa3e13624660d0d0d3829e778",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429425,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429425,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-14.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-14.zip",
+  "kind": "daily",
+  "period": "2025-10-14",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-14.zip",
+  "bytes": 11815,
+  "sha256": "08d35959d750f7523af0ec457040a18d3092e6e6ac19d5580e0bd057f701bdba",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429427,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429427,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-13.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-13.zip",
+  "kind": "daily",
+  "period": "2025-10-13",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-13.zip",
+  "bytes": 11662,
+  "sha256": "02c6cd07b1ebad320f8e0806960e7a2758babb2c1ceb588caa92d1215542876f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429426,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429426,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-15.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-15.zip",
+  "kind": "daily",
+  "period": "2025-10-15",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-15.zip",
+  "bytes": 11691,
+  "sha256": "f05337bb03b40c77500f704821644f5daeba4d83eb96f1d17505b7d0570681dd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429428,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429428,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-16.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-16.zip",
+  "kind": "daily",
+  "period": "2025-10-16",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-16.zip",
+  "bytes": 11712,
+  "sha256": "33d69f1d8420bd218caafdd99d6f40726c796a470bd08dd3ff1cb8e2ea78062f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429429,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429429,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-17.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-17.zip",
+  "kind": "daily",
+  "period": "2025-10-17",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-17.zip",
+  "bytes": 11593,
+  "sha256": "85850a2de13b93b9a64642a57c03cdd91ad656e67c0fd9708dd579fee1db5382",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429430,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429430,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-18.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-18.zip",
+  "kind": "daily",
+  "period": "2025-10-18",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-18.zip",
+  "bytes": 10996,
+  "sha256": "4345d3f77e1bf9d3dbdce314adb9e0f144d200dca765d5c9f5109f16580c74d8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429431,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429431,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-19.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-19.zip",
+  "kind": "daily",
+  "period": "2025-10-19",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-19.zip",
+  "bytes": 11045,
+  "sha256": "49ac7f579ccdc86e0c05bb7849d9da1a8c66daba1dfe7880dc2bc3558ab0ba27",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429432,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429432,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-20.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-20.zip",
+  "kind": "daily",
+  "period": "2025-10-20",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-20.zip",
+  "bytes": 11449,
+  "sha256": "b36260c02b3883a7aca11f4e30425de5b03f43b0603a59a76058abd39de2ae2d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429433,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429433,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-21.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-21.zip",
+  "kind": "daily",
+  "period": "2025-10-21",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-21.zip",
+  "bytes": 11708,
+  "sha256": "b6d1d28d12695d6bcb3133b94d6f373f31c25540508bd7b1ba166dae301846eb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429434,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429434,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-22.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-22.zip",
+  "kind": "daily",
+  "period": "2025-10-22",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-22.zip",
+  "bytes": 11429,
+  "sha256": "f828b3663f95114842a506bd3cb1be3676b4a6e570d3e35e4daea442d3a4581e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429435,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429435,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-23.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-23.zip",
+  "kind": "daily",
+  "period": "2025-10-23",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-23.zip",
+  "bytes": 11027,
+  "sha256": "d8e3fea39d2257466bdc04f0f0a464c78afc26ca745c9617a3cb34b43a8a751e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429436,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429436,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-24.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-24.zip",
+  "kind": "daily",
+  "period": "2025-10-24",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-24.zip",
+  "bytes": 10956,
+  "sha256": "f836f8a0320655e6c92c593fb9d675840405cfe5bb34baa0625bb186783b7252",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429437,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429437,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-25.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-25.zip",
+  "kind": "daily",
+  "period": "2025-10-25",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-25.zip",
+  "bytes": 10907,
+  "sha256": "3ec2dbd76b452e825b6e53f5177244b8bf1671b8e7aa010b4e079ea66b6bdcb0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429438,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429438,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-26.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-26.zip",
+  "kind": "daily",
+  "period": "2025-10-26",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-26.zip",
+  "bytes": 11052,
+  "sha256": "e21a97b8c5ed388f162d840dbb9c95395d081883d9642920d743b2029567f961",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429439,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429439,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-27.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-27.zip",
+  "kind": "daily",
+  "period": "2025-10-27",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-27.zip",
+  "bytes": 12923,
+  "sha256": "af015dd0668fa3261b92db5e8700b7366a490610ffc910186d8de2e9a11b4b6f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429440,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429440,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-28.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-28.zip",
+  "kind": "daily",
+  "period": "2025-10-28",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-28.zip",
+  "bytes": 11922,
+  "sha256": "2de0705ce660eadd2f280de60921a974b32e99538d186ab3242947401d787c00",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429442,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429442,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-29.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-29.zip",
+  "kind": "daily",
+  "period": "2025-10-29",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-29.zip",
+  "bytes": 11803,
+  "sha256": "3794102341ddc8f5a836dda7df6c8f0a84f07e78b1fc5fa1d6f51fa349073584",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429443,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429443,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-31.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-31.zip",
+  "kind": "daily",
+  "period": "2025-10-31",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-31.zip",
+  "bytes": 12024,
+  "sha256": "f3254059ad9cbb3e9aa2cbafbf4f370229a78a6c441fa64df84566a8200a71f1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429445,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429445,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-30.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-30.zip",
+  "kind": "daily",
+  "period": "2025-10-30",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10-30.zip",
+  "bytes": 12517,
+  "sha256": "c46e5235385157d57b359c1c35499168324d0cb040bc74750e609c698c1a7927",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429444,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429444,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-01.zip",
+  "bytes": 11752,
+  "sha256": "52c75dd2f949c259dfef9fa480b5c5498992c37ba9408ea53cec8872c0e210ec",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429446,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429446,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-02.zip",
+  "bytes": 11978,
+  "sha256": "34278764dbb82f09081215445a4bbf3d6101695506d46c6a69b1c2874ce04b77",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429447,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429447,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-04.zip",
+  "bytes": 11662,
+  "sha256": "7a590baa474befb65d53ff6c839fdcd0023e313f52cbbb8d084daabaa8a0f191",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429449,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429449,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-03.zip",
+  "bytes": 11415,
+  "sha256": "79d77c9aa81bc6c2e43854a650ed7e55b3a99211a3c93194c42d2e463d66644d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429448,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429448,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-05.zip",
+  "bytes": 11611,
+  "sha256": "051f7f1a5813ec3bcb7feea51551e0bedfb44e91d79754fd69d154612ad1b446",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 429450,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 429450,
+  "rows": 288
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2024-12.zip",
+  "bytes": 201585,
+  "sha256": "b4cb158de49ab5397bb084aa500cbce9ae40f2a1bc416902138ff09963a17308",
+  "checksum_ok": true,
+  "size_bytes": 201585,
+  "fetched_at": "2026-10-07T21:49:12Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2024-12.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2024-12.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-01.zip",
+  "bytes": 382041,
+  "sha256": "b4b61d7339f1b7c0c3fbc2dd5daf9719c369986deeff01d5e642d83c819b8507",
+  "checksum_ok": true,
+  "size_bytes": 382041,
+  "fetched_at": "2026-10-07T21:49:12Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2025-01.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-01.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-02.zip",
+  "bytes": 335284,
+  "sha256": "8e21e335a1f19625f6434655bfa3c45ac9a27dbcd12bec1ac4b382a2d78b9971",
+  "checksum_ok": true,
+  "size_bytes": 335284,
+  "fetched_at": "2026-10-07T21:49:13Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2025-02.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-02.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-03.zip",
+  "bytes": 376804,
+  "sha256": "4d05bc895a0f3c85365f63842dc91bd6240416089488a0b0ef27d6104fb03b5b",
+  "checksum_ok": true,
+  "size_bytes": 376804,
+  "fetched_at": "2026-10-07T21:49:13Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2025-03.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-03.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-04.zip",
+  "bytes": 347085,
+  "sha256": "a7d1a74bd9d6bfabc149381b9a142bca75d160209dff1a465c80486424d70f3c",
+  "checksum_ok": true,
+  "size_bytes": 347085,
+  "fetched_at": "2026-10-07T21:49:14Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2025-04.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-04.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-05.zip",
+  "bytes": 360319,
+  "sha256": "c520e6d5d19591adc012535e84787c3cdffafc4288877f4483fc213f9c11325e",
+  "checksum_ok": true,
+  "size_bytes": 360319,
+  "fetched_at": "2026-10-07T21:49:14Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2025-05.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-05.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-06.zip",
+  "bytes": 343011,
+  "sha256": "5f2d3b28417077e196edb6ca67bf07153a6a0b3ca55135f42ef8193eb43e8944",
+  "checksum_ok": true,
+  "size_bytes": 343011,
+  "fetched_at": "2026-10-07T21:49:15Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2025-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-06.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-07.zip",
+  "bytes": 344711,
+  "sha256": "4914b2e59c52290f84f53fca95c1fa057a8c957027cd44d870cf34c475cb5c33",
+  "checksum_ok": true,
+  "size_bytes": 344711,
+  "fetched_at": "2026-10-07T21:49:15Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2025-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-07.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-08.zip",
+  "bytes": 335421,
+  "sha256": "0a0ee3c4681b3d8f1cc98ca8e1589643eb5e940c7d34861f03cdb93eedf8f305",
+  "checksum_ok": true,
+  "size_bytes": 335421,
+  "fetched_at": "2026-10-07T21:49:16Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2025-08.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-08.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-09.zip",
+  "bytes": 335289,
+  "sha256": "eabbe86a9b9d48385c6da0648f036a4e50f02f13aca965fac2af84364efe2d5f",
+  "checksum_ok": true,
+  "size_bytes": 335289,
+  "fetched_at": "2026-10-07T21:49:16Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2025-09.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-09.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-06.zip",
+  "bytes": 11714,
+  "sha256": "1c05553eb68e3395e53a57efacfc3cfd3bf3c18cd6633c816d7bdc5c008a6ffe",
+  "checksum_ok": true,
+  "size_bytes": 11714,
+  "fetched_at": "2026-10-07T21:49:17Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-06.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10.zip",
+  "bytes": 342398,
+  "sha256": "b3be8a68a7b4be5c7d45394648f61146c8cfbfc0d3c4da0cb1e5db27c2287124",
+  "checksum_ok": true,
+  "size_bytes": 342398,
+  "fetched_at": "2026-10-07T21:49:17Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/VANAUSDT/VANAUSDT-5m-2025-10.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/VANAUSDT/5m/VANAUSDT-5m-2025-10.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/VANAUSDT/5m/VANAUSDT-5m-2026-10-07.zip",
+  "status": "missing_in_archive",
+  "note": "官方归档或 CHECKSUM 不存在（日度按需探测，404 即缺失）；不计为完成"
+ }
+}

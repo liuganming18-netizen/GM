@@ -1,0 +1,92 @@
+{
+  "purpose": "脱敏网站页面样例和实际证据数量；不包含账号信息、认证数据或后台请求",
+  "research_scope": {
+    "site": "https://www.tradeflow.club/",
+    "source_inputs": [
+      "网站研究协作范围.md",
+      "输入资料/网站当前数据样例.json",
+      "输入资料/网站数据可读取性核验.md",
+      "输入资料/网站策略与数据获取边界.md",
+      "输入资料/网站分析功能完整盘点.md",
+      "输入资料/网站类目筛选与拆分顺序.md",
+      "输入资料/网站未展开内容核查.md"
+    ],
+    "new_live_fetch_this_pass": false,
+    "reason": "范围要求不重复抓登录页；本轮无 agent-browser / playwright-cli 可执行命令，且禁止安装工具。"
+  },
+  "observed_counts": {
+    "navigation_categories_in_prior_normal_session_notes": 8,
+    "core_research_cards_in_scope": 6,
+    "core_cards_with_prior_page_level_observation": 6,
+    "core_cards_with_visible_data_or_signal_fields": 5,
+    "trading_data_chart_successful_rows": 0,
+    "equity_labels_on_pricing_text": 2,
+    "equity_labels_with_independent_route_or_link_confirmed": 0,
+    "public_javascript_css_resource_urls_inspected_this_pass": 0,
+    "public_js_css_files_downloaded_this_pass": 0,
+    "source_maps_inspected_this_pass": 0,
+    "network_endpoint_urls_or_response_bodies_captured_this_pass": 0,
+    "frontend_calculation_functions_confirmed": 0,
+    "funding_table_rows_visible_in_prior_notes": 20,
+    "funding_static_rows_saved_in_existing_input": 3,
+    "coin_list_dom_data_rows_observed_in_prior_notes": 610,
+    "coin_list_full_rows_saved": 0,
+    "coin_list_virtual_list_count_text": 611,
+    "smart_money_coverage_claimed_by_page": 528,
+    "confluence_named_symbol_examples_in_prior_notes": 3,
+    "confluence_older_load_more_event_examples": 1,
+    "website_historical_database_rows_read": 0
+  },
+  "funding_rate_page_snapshot": {
+    "source_page": "https://www.tradeflow.club/analytics/funding-rates",
+    "capture_time_beijing": "2026-10-03 04:32",
+    "page_updated_text": "2026-10-03 04:30:13",
+    "page_updated_timezone": "unknown",
+    "filter_text": "费率绝对值 ≥ 0.05%",
+    "display_count_text": "20 / 923",
+    "saved_examples": [
+      {
+        "symbol": "GTCUSDT",
+        "funding_rate_text": "-1.0785%",
+        "settlement_interval_text": "8 h"
+      },
+      {
+        "symbol": "ENJUSDT",
+        "funding_rate_text": "-0.4285%",
+        "settlement_interval_text": "4 h"
+      },
+      {
+        "symbol": "OKLOUSDT",
+        "funding_rate_text": "+0.0504%",
+        "settlement_interval_text": "8 h"
+      }
+    ],
+    "known_columns_from_prior_page_dom": [
+      "交易对",
+      "费率",
+      "结算频率",
+      "标记价格",
+      "下次结算",
+      "数据时间"
+    ],
+    "unknown": [
+      "费率是预测值还是已结算值",
+      "交易所归属及底层数据源",
+      "页面时间时区",
+      "历史回看/导出范围",
+      "923的统计对象口径"
+    ],
+    "interpretation_limit": "页面静态样例，不是历史数据库、持续采集、交易所响应或已结算真实性验证。"
+  },
+  "known_route_observations": [
+    "/analytics/smart-money-signal",
+    "/analytics/confluence-signals",
+    "/analytics/coin-list",
+    "/analytics/favorite-symbols",
+    "/analytics/smart-money-volatility",
+    "/analytics/trading-data",
+    "/analytics/funding-rates",
+    "/analytics/market-feed"
+  ],
+  "route_evidence_limit": "以上路径来自既有正常菜单/页面观察记录，不是本轮从JS router提取的路径。"
+}

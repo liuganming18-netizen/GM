@@ -1,0 +1,84 @@
+{
+  "schema": "wyckoffmaster_dependencies/v2_v31",
+  "spec_version": "WyckoffMaster_v3.1",
+  "generated_utc": "2026-10-15T02:20:00Z",
+  "overall": "WAITING_INPUT",
+  "blocking_dependencies": [
+    {
+      "id": "DEP-1",
+      "name": "strategy_ready.json",
+      "owner_window": "策略优化窗口",
+      "path": "evidence/Work_策略优化_2026-10-15/strategy_ready.json",
+      "status": "NOT_PUBLISHED",
+      "must_bind_version": "v3.1",
+      "required_content": [
+        "ready=true（必要条件，非充分）",
+        "版本绑定 v3.1",
+        "engine_sha256 = 0ede9ce19c7cec9d18398572e393ef65ef4c04a6aa5ff2b41f8ad022c83dbcf1",
+        "config_view_sha256 = 6d18d222d1991f99dd2ba0cdf80b35fbc57f4f482904c945f43d66ebb9df9501",
+        "levels[M0..M4] -> {arm, signal_module, config_sha256, signal_sha256}",
+        "test_no_lookahead（截断无前视）",
+        "锚点不覆盖与单次确认消费",
+        "最小止损 / 3.5ATR拒单 / M2b自然缩仓 / entry_below_struct_low 穿底拒单",
+        "台阶下一根单调上移不回填",
+        "blocking_items = []"
+      ],
+      "consumer": "scripts/run_ladder.py（层级→臂绑定）"
+    },
+    {
+      "id": "DEP-2",
+      "name": "data_ready.json",
+      "owner_window": "策略数据窗口",
+      "path": "evidence/Work_策略数据_2026-10-15/data_ready.json",
+      "status": "NOT_PUBLISHED",
+      "must_bind_version": "v3.1",
+      "required_content": [
+        "ready=true（必要条件，非充分）",
+        "版本绑定 v3.1",
+        "不可变 manifest：文件 SHA / 来源 / 时点 / 范围 / 缺失 / 研究假设",
+        "逐字段覆盖：1h/4h/15m OHLCV+quote_volume、30日成交额、真实 funding 结算时刻/rate/mark、合约身份与价格数量精度、M4 OI 数量与金额同源同事件",
+        "**物理隔离的 IS/Val 研究输入**（与 Holdout 物理区分；跨界月包不得整文件解析后过滤）",
+        "未能证明的历史 PIT 限制如实标注",
+        "实际备份 / 隔离恢复证据（路径须实际存在）",
+        "M5/M6 前向队列只单列准备，不偷读 Holdout 补历史",
+        "blocking_items = []"
+      ],
+      "consumer": "scripts/verify_gates.py（含备份与隔离恢复 + 物理分区核查）"
+    }
+  ],
+  "unverified_dependency_finding": {
+    "id": "DEP-2-FINDING",
+    "item": "研究输入物理分区",
+    "observed": "数据/研究输入/WyckoffMaster 当前为 flat_or_unknown（ohlcv/1h/BTCUSDT.parquet 等跨全时段文件）",
+    "requirement": "v3.1：研究输入必须物理区分 IS/Val 与 Holdout",
+    "verdict": "FAIL",
+    "source": "回测窗口 scripts/verify_v31_prep.py 自核验项 E.research_input_physical_isolation"
+  },
+  "non_blocking_dependencies": [
+    {"id": "DEP-3", "name": "已验证 InputStore（真实历史日包）",
+     "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/perp_datadir_real/data",
+     "status": "AVAILABLE",
+     "note": "3248 文件 / 2.18GB / cutoff 2026-10-10T07:00:00Z；四臂等价比对 EQUIVALENT。注意 cutoff 在 Holdout 内，选型阶段取窗口必须被红线守卫裁到 IS/Val"},
+    {"id": "DEP-4", "name": "日度池文档 daily_549_DEV.json",
+     "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/全池真实费用回测_2026-10-13/inputs/daily_549_DEV.json",
+     "status": "AVAILABLE",
+     "note": "含人类已确认日历；其 overall 末端 2026-10-09 落在 Holdout 内，属已披露的既往读取（见 10_此前Holdout区间读取披露）"},
+    {"id": "DEP-5", "name": "资金费周期元数据侧车",
+     "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/周期元数据表修复与5m冷备_2026-10-13/周期元数据表/funding_interval_meta.sqlite3",
+     "status": "AVAILABLE_READONLY",
+     "note": "仅用于周期元数据核验；真实历史资金费一律用 historical_events 结算事件，禁用 norm4h/ext1h/补0/普通close冒充"}
+  ],
+  "environment_checks": {
+    "disk_avail_gib": 53,
+    "disk_reserve_gib_required": 12,
+    "disk_ok": true,
+    "interpreter": "/Users/boos/.workbuddy-ai/binaries/python/envs/freqtrade/bin/python (pyarrow 26.0.0 / psutil 7.2.2 / numpy 2.5.3 / pandas 3.0.6)",
+    "spawn_detached": "后端实现/spawn_detached.py sha=090e24dd4258c4a1a42aea6d01c492c070dbc12b3c260228d02db3fe037484c6"
+  },
+  "holdout_cutoff": {
+    "utc": "2026-10-15T00:00:00Z",
+    "beijing": "2026-10-15 08:00 (+08)",
+    "at_handover": "未到（交接核对时北京时间 01:57）",
+    "rule": "终验须等截止后该段全部 bar 闭合、事件材料通过；不得按交接时刻截断冒充完整区间"
+  }
+}

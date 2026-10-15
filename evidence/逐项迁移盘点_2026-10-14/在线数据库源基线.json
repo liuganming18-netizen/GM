@@ -1,0 +1,673 @@
+[
+  {
+    "source": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
+    "query_started_at_ms": 1791960419889,
+    "exists": true,
+    "read_only": true,
+    "tables": [
+      {
+        "type": "table",
+        "name": "api_cache",
+        "sql": "CREATE TABLE api_cache (\n    request_key TEXT PRIMARY KEY, call_id INTEGER NOT NULL REFERENCES api_calls(id),\n    expires_at INTEGER NOT NULL\n)",
+        "rows": 116280
+      },
+      {
+        "type": "table",
+        "name": "api_calls",
+        "sql": "CREATE TABLE api_calls (\n    id INTEGER PRIMARY KEY, request_key TEXT NOT NULL, endpoint TEXT NOT NULL,\n    scope TEXT NOT NULL, params_json TEXT NOT NULL, started_at INTEGER NOT NULL,\n    finished_at INTEGER, status TEXT NOT NULL, http_status INTEGER, business_code TEXT,\n    response_json TEXT, response_sha256 TEXT, response_headers_json TEXT,\n    reason TEXT\n, response_bytes INTEGER)",
+        "rows": 1109667
+      },
+      {
+        "type": "table",
+        "name": "api_leases",
+        "sql": "CREATE TABLE api_leases (\n    request_key TEXT PRIMARY KEY, owner TEXT NOT NULL, until_at INTEGER NOT NULL\n)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "api_scope_state",
+        "sql": "CREATE TABLE api_scope_state (\n    scope TEXT PRIMARY KEY, cooldown_until INTEGER NOT NULL DEFAULT 0,\n    blocked INTEGER NOT NULL DEFAULT 0, reason TEXT\n)",
+        "rows": 5
+      },
+      {
+        "type": "table",
+        "name": "candle_field_notes",
+        "sql": "CREATE TABLE candle_field_notes (\n    exchange    TEXT NOT NULL,\n    market      TEXT NOT NULL,\n    symbol      TEXT NOT NULL,\n    timeframe   TEXT NOT NULL,\n    field       TEXT NOT NULL,      -- 缺失字段名，如 taker_buy_volume\n    stored_as   TEXT NOT NULL,      -- 实际落库表示（'' 空串 / NULL）\n    reason      TEXT NOT NULL,      -- 缺失原因\n    impact      TEXT,               -- 对下游的影响，如「B 策略数据不足」\n    source      TEXT,\n    updated_at  INTEGER NOT NULL,\n    PRIMARY KEY(exchange, market, symbol, timeframe, field)\n)",
+        "rows": 3225
+      },
+      {
+        "type": "table",
+        "name": "candle_heads",
+        "sql": "CREATE TABLE \"candle_heads\" (\n    exchange TEXT NOT NULL, market TEXT NOT NULL, symbol TEXT NOT NULL,\n    timeframe TEXT NOT NULL, open_time INTEGER NOT NULL, source_id INTEGER NOT NULL,\n    PRIMARY KEY(exchange, market, symbol, timeframe, open_time),\n    FOREIGN KEY(exchange, market, symbol, timeframe, open_time, source_id)\n      REFERENCES candle_versions(exchange, market, symbol, timeframe, open_time, source_id)\n) WITHOUT ROWID",
+        "rows": 5798747
+      },
+      {
+        "type": "table",
+        "name": "candle_versions",
+        "sql": "CREATE TABLE candle_versions (\n    exchange TEXT NOT NULL, market TEXT NOT NULL, symbol TEXT NOT NULL,\n    timeframe TEXT NOT NULL, open_time INTEGER NOT NULL, close_time INTEGER NOT NULL,\n    open TEXT NOT NULL, high TEXT NOT NULL, low TEXT NOT NULL, close TEXT NOT NULL,\n    volume TEXT NOT NULL, quote_volume TEXT NOT NULL, trade_count INTEGER NOT NULL,\n    taker_buy_volume TEXT NOT NULL, taker_buy_quote_volume TEXT NOT NULL,\n    source_id INTEGER NOT NULL REFERENCES sources(id),\n    available_at INTEGER, is_closed INTEGER NOT NULL CHECK(is_closed = 1),\n    PRIMARY KEY(exchange, market, symbol, timeframe, open_time, source_id)\n)",
+        "rows": 6042667
+      },
+      {
+        "type": "table",
+        "name": "collector_rounds",
+        "sql": "CREATE TABLE collector_rounds (\n    id               INTEGER PRIMARY KEY,\n    kind             TEXT NOT NULL,     -- ticker_rest / mark_rest / oi_sweep / funding_history / ws_snapshot\n    exchange         TEXT,\n    market           TEXT,\n    started_at       INTEGER NOT NULL,\n    finished_at      INTEGER,\n    symbols_total    INTEGER,\n    symbols_ok       INTEGER,\n    symbols_failed   INTEGER,\n    newest_event_time INTEGER,\n    oldest_event_time INTEGER,\n    detail           TEXT\n)",
+        "rows": 13827
+      },
+      {
+        "type": "table",
+        "name": "collector_state",
+        "sql": "CREATE TABLE collector_state (\n    name          TEXT PRIMARY KEY,\n    pid           INTEGER,\n    started_at    INTEGER,\n    heartbeat_at  INTEGER,\n    status        TEXT,                -- running / paused_no_space / stopped / error\n    detail        TEXT,\n    counters_json TEXT,\n    updated_at    INTEGER NOT NULL\n)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "coverage_cache",
+        "sql": "CREATE TABLE coverage_cache (\n    exchange    TEXT NOT NULL,\n    market      TEXT NOT NULL,\n    symbol      TEXT NOT NULL,\n    timeframe   TEXT NOT NULL,\n    rows        INTEGER NOT NULL,\n    first_open  INTEGER,\n    last_close  INTEGER,\n    expected    INTEGER,\n    missing     INTEGER,\n    source_count INTEGER NOT NULL DEFAULT 0,\n    updated_at  INTEGER NOT NULL,\n    PRIMARY KEY(exchange, market, symbol, timeframe)\n)",
+        "rows": 4087
+      },
+      {
+        "type": "table",
+        "name": "download_runs",
+        "sql": "CREATE TABLE download_runs (\n    id          INTEGER PRIMARY KEY,\n    kind        TEXT NOT NULL,          -- pool_snapshot / batch / verify\n    phase       TEXT,                   -- 周期，如 1d；整体运行为 NULL\n    started_at  INTEGER NOT NULL,\n    finished_at INTEGER,\n    status      TEXT NOT NULL,          -- running / done / paused_no_space / refused / failed\n    note        TEXT,\n    meta_json   TEXT\n)",
+        "rows": 30
+      },
+      {
+        "type": "table",
+        "name": "download_tasks",
+        "sql": "CREATE TABLE download_tasks (\n    exchange       TEXT NOT NULL,\n    market         TEXT NOT NULL,\n    symbol         TEXT NOT NULL,\n    timeframe      TEXT NOT NULL,\n    status         TEXT NOT NULL,       -- done / missing_only / partial / failed / skipped_no_window\n    planned_files  INTEGER NOT NULL DEFAULT 0,\n    imported_files INTEGER NOT NULL DEFAULT 0,\n    cached_files   INTEGER NOT NULL DEFAULT 0,\n    missing_files  INTEGER NOT NULL DEFAULT 0,\n    failed_files   INTEGER NOT NULL DEFAULT 0,\n    rows           INTEGER NOT NULL DEFAULT 0,\n    first_open     INTEGER,\n    last_close     INTEGER,\n    gaps           INTEGER,\n    started_at     INTEGER,\n    finished_at    INTEGER,\n    note           TEXT,\n    updated_at     INTEGER NOT NULL,\n    PRIMARY KEY(exchange, market, symbol, timeframe)\n)",
+        "rows": 3926
+      },
+      {
+        "type": "table",
+        "name": "funding_history",
+        "sql": "CREATE TABLE funding_history (\n    exchange     TEXT NOT NULL,\n    market       TEXT NOT NULL,\n    symbol       TEXT NOT NULL,\n    funding_time INTEGER NOT NULL,\n    funding_rate TEXT,\n    mark_price   TEXT,\n    rate_type    TEXT,\n    source       TEXT,\n    fetched_at   INTEGER,\n    PRIMARY KEY(exchange, market, symbol, funding_time)\n)",
+        "rows": 119905
+      },
+      {
+        "type": "table",
+        "name": "kline_stream_state",
+        "sql": "CREATE TABLE kline_stream_state (\n    exchange              TEXT    NOT NULL,\n    market                TEXT    NOT NULL,\n    timeframe             TEXT    NOT NULL,\n    symbols_planned       INTEGER,\n    symbols_seen          INTEGER,\n    last_msg_at           INTEGER,   -- 最近一条真实 WS 消息的本机接收时间\n    last_closed_open_time INTEGER,   -- 最近一根**已收盘** bar 的 open_time\n    last_closed_written_at INTEGER,  -- 该闭合 bar 的入库时间\n    last_forming_open_time INTEGER,  -- 当前未收盘 bar 的 open_time\n    closed_written        INTEGER,   -- 累计闭合入库根数\n    gapfill_calls         INTEGER,   -- 断线后经统一网关补缺的 REST 调用数\n    gapfill_filled        INTEGER,   -- 补缺成功写入的根数\n    gapfill_skipped       INTEGER,   -- 因预算上限被跳过的 (标的,周期) 数（诚实留证）\n    reconnects            INTEGER,\n    backoff_s             INTEGER,   -- 当前/最近一次退避秒数\n    status                TEXT,      -- ok / no_messages / reconnect_backoff / native_absent\n    detail                TEXT,\n    updated_at            INTEGER NOT NULL,\n    PRIMARY KEY(exchange, market, timeframe)\n)",
+        "rows": 15
+      },
+      {
+        "type": "table",
+        "name": "oi_history",
+        "sql": "CREATE TABLE oi_history (\n    exchange            TEXT NOT NULL,\n    market              TEXT NOT NULL,\n    symbol              TEXT NOT NULL,\n    period              TEXT NOT NULL,\n    ts                  INTEGER NOT NULL,\n    open_interest       TEXT,\n    open_interest_value TEXT,\n    oi_ccy              TEXT,\n    oi_usd              TEXT,\n    source              TEXT,\n    fetched_at          INTEGER,\n    PRIMARY KEY(exchange, market, symbol, period, ts)\n)",
+        "rows": 5241358
+      },
+      {
+        "type": "table",
+        "name": "realtime_klines",
+        "sql": "CREATE TABLE realtime_klines (\n    exchange               TEXT    NOT NULL,\n    market                 TEXT    NOT NULL,\n    symbol                 TEXT    NOT NULL,\n    timeframe              TEXT    NOT NULL,\n    open_time              INTEGER NOT NULL,\n    close_time             INTEGER,\n    open                   TEXT,\n    high                   TEXT,\n    low                    TEXT,\n    close                  TEXT,\n    volume                 TEXT,\n    quote_volume           TEXT,\n    trade_count            INTEGER,\n    taker_buy_volume       TEXT,\n    taker_buy_quote_volume TEXT,\n    is_closed              INTEGER NOT NULL DEFAULT 0,\n    event_time             INTEGER,\n    received_at            INTEGER,\n    source                 TEXT,\n    transport              TEXT,\n    updated_at             INTEGER NOT NULL,\n    PRIMARY KEY(exchange, market, symbol, timeframe)\n)",
+        "rows": 6200
+      },
+      {
+        "type": "table",
+        "name": "realtime_quotes",
+        "sql": "CREATE TABLE realtime_quotes (\n    exchange             TEXT NOT NULL,\n    market               TEXT NOT NULL,\n    symbol               TEXT NOT NULL,\n    last_price           TEXT,\n    price_change_pct_24h TEXT,\n    quote_volume_24h     TEXT,     -- 计价（USDT）24h 成交额；**不是**滚动 5m 成交量\n    high_24h             TEXT,\n    low_24h              TEXT,\n    mark_price           TEXT,\n    funding_rate         TEXT,     -- 当前费率（非结算事件，结算事件另存 funding_history）\n    next_funding_time    INTEGER,\n    event_time           INTEGER,  -- 交易所事件时间\n    received_at          INTEGER,  -- 本机接收时间\n    fetched_at           INTEGER,  -- 本机请求完成时间\n    source               TEXT,     -- binance.fapi / okx.v5\n    transport            TEXT,     -- ws / rest\n    unit_note            TEXT,\n    updated_at           INTEGER NOT NULL, price_event_time INTEGER, price_received_at INTEGER, price_source TEXT, price_transport TEXT, mark_event_time INTEGER, mark_source TEXT, funding_event_time INTEGER, funding_source TEXT, volume_24h_base TEXT, volume_24h_contract TEXT, volume_source TEXT, open24h TEXT,\n    PRIMARY KEY(exchange, market, symbol)\n)",
+        "rows": 814
+      },
+      {
+        "type": "table",
+        "name": "schema_migrations",
+        "sql": "CREATE TABLE schema_migrations (\n    version    INTEGER PRIMARY KEY,\n    name       TEXT NOT NULL,\n    applied_at INTEGER NOT NULL\n)",
+        "rows": 9
+      },
+      {
+        "type": "table",
+        "name": "schema_versions",
+        "sql": "CREATE TABLE schema_versions (\n    version INTEGER PRIMARY KEY, applied_at INTEGER NOT NULL\n)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "signal_conditions",
+        "sql": "CREATE TABLE \"signal_conditions\" (\n    id        INTEGER PRIMARY KEY,\n    signal_id INTEGER NOT NULL,\n    name      TEXT NOT NULL,\n    actual    TEXT,\n    threshold TEXT,\n    unit      TEXT,\n    satisfied INTEGER,\n    note      TEXT\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "signals",
+        "sql": "CREATE TABLE \"signals\" (\n    id               INTEGER PRIMARY KEY,\n    strategy_key     TEXT NOT NULL,\n    strategy_version TEXT NOT NULL,\n    config_hash      TEXT NOT NULL,\n    exchange         TEXT NOT NULL,\n    market           TEXT NOT NULL,\n    symbol           TEXT NOT NULL,\n    timeframe        TEXT NOT NULL,\n    status           TEXT NOT NULL,\n    direction        TEXT,\n    event_time       INTEGER,\n    confirmed_at     INTEGER NOT NULL,\n    data_version     TEXT,\n    source_id        INTEGER,\n    evidence_json    TEXT,\n    created_at       INTEGER NOT NULL,\n    missing_reason   TEXT,\n    UNIQUE(strategy_key, strategy_version, config_hash, exchange, market, symbol,\n           timeframe, confirmed_at, data_version)\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "sources",
+        "sql": "CREATE TABLE sources (\n    id INTEGER PRIMARY KEY, exchange TEXT NOT NULL, market TEXT NOT NULL,\n    symbol TEXT NOT NULL, timeframe TEXT NOT NULL,\n    source_url TEXT NOT NULL, file_path TEXT NOT NULL, sha256 TEXT NOT NULL,\n    imported_at INTEGER NOT NULL, downloaded_at INTEGER,\n    first_open INTEGER NOT NULL, last_close INTEGER NOT NULL, row_count INTEGER NOT NULL,\n    UNIQUE(exchange, market, symbol, timeframe, sha256)\n)",
+        "rows": 2044682
+      },
+      {
+        "type": "table",
+        "name": "strategy_configs",
+        "sql": "CREATE TABLE strategy_configs (\n    strategy_key TEXT NOT NULL,\n    version      TEXT NOT NULL,\n    config_json  TEXT NOT NULL,\n    config_hash  TEXT NOT NULL,\n    frozen       INTEGER NOT NULL DEFAULT 0 CHECK(frozen IN (0,1)),\n    note         TEXT,\n    created_at   INTEGER NOT NULL,\n    PRIMARY KEY (strategy_key, version)\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "symbol_classification",
+        "sql": "CREATE TABLE symbol_classification (\n    exchange        TEXT NOT NULL,\n    market          TEXT NOT NULL,\n    symbol          TEXT NOT NULL,\n    instrument_category TEXT,          -- COIN / INDEX / EQUITY / ... ；欧易为 1/3/4/5/6\n    category_name   TEXT,              -- Crypto / Stocks / Commodities / Forex / Bonds\n    category_field  TEXT,              -- 依据字段名（underlyingType / instCategory）\n    contract_type   TEXT,\n    in_active_range INTEGER NOT NULL DEFAULT 0,   -- 1=加密币活动范围\n    excluded_reason TEXT,\n    raw_json        TEXT,              -- 该标的的原始字段（取证）\n    snapshot_utc    INTEGER NOT NULL,\n    source_call_id  INTEGER,\n    updated_at      INTEGER NOT NULL,\n    PRIMARY KEY(exchange, market, symbol)\n)",
+        "rows": 1420
+      },
+      {
+        "type": "table",
+        "name": "symbol_pool",
+        "sql": "CREATE TABLE symbol_pool (\n    exchange          TEXT NOT NULL,\n    market            TEXT NOT NULL,\n    symbol            TEXT NOT NULL,\n    contract_type     TEXT,\n    quote_asset       TEXT,\n    margin_asset      TEXT,\n    status            TEXT,\n    onboard_time      INTEGER,\n    base_asset        TEXT,\n    spot_symbol       TEXT,\n    spot_status       TEXT,\n    spot_match_method TEXT,\n    priority_hint     TEXT,\n    snapshot_utc      INTEGER NOT NULL,\n    source_call_id    INTEGER,\n    updated_at        INTEGER NOT NULL,\n    PRIMARY KEY(exchange, market, symbol)\n)",
+        "rows": 814
+      },
+      {
+        "type": "table",
+        "name": "symbol_supply",
+        "sql": "CREATE TABLE symbol_supply (\n    exchange            TEXT    NOT NULL,\n    market              TEXT    NOT NULL,\n    symbol              TEXT    NOT NULL,\n    base                TEXT,              -- 合约标的币（如 BTC / 1000PEPE），供跨所按币回退匹配\n    circulating_supply  TEXT,              -- 官方原值（字符串保精度），单位见 unit_note\n    unit_note           TEXT,              -- 单位说明（写明「以合约标的币为单位」）\n    source              TEXT,              -- 例如 binance.fapi.openInterestHist\n    supply_event_time   INTEGER,           -- 该行在交易所侧的 5m 桶时间（毫秒）\n    fetched_at          INTEGER,           -- 本机取到该行的时间\n    updated_at          INTEGER NOT NULL,\n    PRIMARY KEY(exchange, market, symbol)\n)",
+        "rows": 528
+      },
+      {
+        "type": "view",
+        "name": "candles",
+        "sql": "CREATE VIEW candles AS\nSELECT v.* FROM candle_versions v JOIN candle_heads h\nUSING(exchange, market, symbol, timeframe, open_time, source_id)"
+      }
+    ],
+    "main_file_bytes": 4746690560,
+    "query_finished_at_ms": 1791960449118
+  },
+  {
+    "source": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3a.sqlite3",
+    "query_started_at_ms": 1791960449118,
+    "exists": true,
+    "read_only": true,
+    "tables": [
+      {
+        "type": "table",
+        "name": "paper_account",
+        "sql": "CREATE TABLE paper_account(\n        account_id TEXT PRIMARY KEY, arm TEXT, initial_equity REAL, cash REAL,\n        leverage REAL, dry_run INTEGER, created_at INTEGER)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "paper_blocked",
+        "sql": "CREATE TABLE paper_blocked(\n        id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, event_uid TEXT,\n        symbol TEXT, reason TEXT, ts INTEGER)",
+        "rows": 94
+      },
+      {
+        "type": "table",
+        "name": "paper_command",
+        "sql": "CREATE TABLE paper_command(\n  cmd_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id TEXT NOT NULL,\n  action     TEXT NOT NULL,\n  symbol     TEXT,\n  payload    TEXT,\n  result     TEXT,\n  ok         INTEGER,\n  ts         INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_correction",
+        "sql": "CREATE TABLE paper_correction(\n  id            INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id    TEXT NOT NULL,\n  kind          TEXT NOT NULL,          -- position|pending|order|fill|state\n  ref_id        INTEGER,                -- position_id / pending_id / order_id / fill_id\n  symbol        TEXT,\n  field         TEXT,                   -- cash|fees_paid|funding_paid|realized_pnl|voided\n  delta         REAL,\n  reason        TEXT,\n  detail        TEXT,\n  recorded_at   INTEGER NOT NULL\n)",
+        "rows": 16
+      },
+      {
+        "type": "table",
+        "name": "paper_equity",
+        "sql": "CREATE TABLE paper_equity(\n        ts INTEGER PRIMARY KEY, account_id TEXT, cash REAL, unrealized REAL, equity REAL, voided INTEGER DEFAULT 0)",
+        "rows": 44
+      },
+      {
+        "type": "table",
+        "name": "paper_fill",
+        "sql": "CREATE TABLE paper_fill(\n  fill_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  order_id    INTEGER,\n  position_id INTEGER,\n  signal_uid  TEXT,\n  symbol      TEXT NOT NULL,\n  action      TEXT NOT NULL,            -- open|close\n  qty         REAL NOT NULL,\n  raw_price   REAL NOT NULL,            -- 已闭合 15m bar 开盘价（未含滑点）\n  fill_price  REAL NOT NULL,            -- 含滑点后的模拟成交价\n  notional    REAL NOT NULL,\n  fee         REAL NOT NULL,\n  slippage_cost REAL NOT NULL,\n  bar_open_time INTEGER,\n  bar_close_time INTEGER,\n  fill_ts     INTEGER NOT NULL,\n  model_version TEXT\n, event_time INTEGER, available_at INTEGER, requested_at INTEGER, market_source TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 18
+      },
+      {
+        "type": "table",
+        "name": "paper_funding",
+        "sql": "CREATE TABLE paper_funding(\n        id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, position_id INTEGER,\n        funding_time INTEGER, rate REAL, mark REAL, amount REAL, source TEXT, late_backfill INTEGER DEFAULT 0, recorded_at INTEGER)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_funding_correction",
+        "sql": "CREATE TABLE paper_funding_correction(\n  id            INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id    TEXT NOT NULL,\n  position_id   INTEGER,\n  symbol        TEXT,\n  funding_time  INTEGER,          -- 经济结算时间（源事件 funding_time）\n  rate          REAL,\n  mark          REAL,\n  qty           REAL,\n  amount        REAL,             -- 支出口径（>0 支付、<0 收取）\n  cash_delta    REAL,             -- = -amount\n  realized_delta REAL,            -- 对已实现净盈亏的修正量（= -amount）\n  late          INTEGER NOT NULL DEFAULT 1,\n  reason        TEXT,\n  recorded_at   INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_funding_gap",
+        "sql": "CREATE TABLE paper_funding_gap(\n  id          INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  position_id INTEGER,\n  funding_time INTEGER,\n  reason      TEXT NOT NULL,\n  detected_at INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_order",
+        "sql": "CREATE TABLE paper_order(\n        order_id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, event_uid TEXT UNIQUE,\n        symbol TEXT, side TEXT, qty REAL, price REAL, fee REAL, ts INTEGER,\n        status TEXT, reject_reason TEXT, fill_price REAL, notional REAL, bar_open_time INTEGER, model_version TEXT, event_time INTEGER, requested_at INTEGER, market_source TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 93
+      },
+      {
+        "type": "table",
+        "name": "paper_pending",
+        "sql": "CREATE TABLE paper_pending(\n  pending_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id     TEXT NOT NULL,\n  arm            TEXT NOT NULL,\n  symbol         TEXT NOT NULL,\n  direction      TEXT NOT NULL DEFAULT 'long',\n  signal_uid     TEXT,\n  origin         TEXT,                    -- signal | manual\n  atr            REAL,\n  stop_price     REAL,\n  event_time     INTEGER,                 -- 信号经济时刻（确认 bar 收盘）\n  available_at   INTEGER,                 -- 信号可用时刻\n  requested_at   INTEGER NOT NULL,        -- 真实请求时刻（挂钟）\n  earliest_fill_ms INTEGER NOT NULL,      -- 允许成交的最早 bar open_time 下界\n  status         TEXT NOT NULL,           -- pending|filled|rejected|expired\n  reason         TEXT,\n  created_at     INTEGER NOT NULL,\n  resolved_at    INTEGER,\n  fill_position_id INTEGER,\n  market_source  TEXT\n, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 36
+      },
+      {
+        "type": "table",
+        "name": "paper_position",
+        "sql": "CREATE TABLE paper_position(\n        position_id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, symbol TEXT,\n        qty REAL, entry_price REAL, entry_ts INTEGER, exit_ts INTEGER, exit_reason TEXT,\n        status TEXT, exit_price REAL, entry_fee REAL, exit_fee REAL, funding_paid REAL DEFAULT 0, signal_uid TEXT, arm TEXT, stop_price REAL, atr_at_entry REAL, model_version TEXT, event_time INTEGER, available_at INTEGER, requested_at INTEGER, earliest_fill_ms INTEGER, market_source TEXT, origin TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0, void_reason TEXT)",
+        "rows": 16
+      },
+      {
+        "type": "table",
+        "name": "paper_processed",
+        "sql": "CREATE TABLE paper_processed(\n  signal_uid  TEXT PRIMARY KEY,\n  arm         TEXT NOT NULL,\n  action      TEXT NOT NULL,\n  detail      TEXT,\n  ts          INTEGER NOT NULL\n)",
+        "rows": 16
+      },
+      {
+        "type": "table",
+        "name": "paper_prompt",
+        "sql": "CREATE TABLE paper_prompt(\n        event_uid TEXT PRIMARY KEY, arm TEXT, symbol TEXT, kind TEXT,\n        confirm_close_ms INTEGER, payload TEXT, ingested_at INTEGER)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_realized",
+        "sql": "CREATE TABLE paper_realized(\n  id          INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  position_id INTEGER,\n  symbol      TEXT NOT NULL,\n  qty         REAL NOT NULL,\n  entry_price REAL NOT NULL,\n  exit_price  REAL NOT NULL,\n  gross_pnl   REAL NOT NULL,\n  entry_fee   REAL NOT NULL,\n  exit_fee    REAL NOT NULL,\n  funding_paid REAL NOT NULL DEFAULT 0,\n  net_pnl     REAL NOT NULL,\n  entry_ts    INTEGER, exit_ts INTEGER,\n  exit_reason TEXT,\n  ts          INTEGER NOT NULL\n)",
+        "rows": 2
+      },
+      {
+        "type": "table",
+        "name": "paper_request_anchor",
+        "sql": "CREATE TABLE paper_request_anchor(\n  account_id       TEXT NOT NULL,\n  event_uid        TEXT NOT NULL,        -- = signal_uid\n  first_request_ms INTEGER NOT NULL,\n  created_at       INTEGER NOT NULL,\n  PRIMARY KEY(account_id, event_uid)\n)",
+        "rows": 37
+      },
+      {
+        "type": "table",
+        "name": "paper_state",
+        "sql": "CREATE TABLE paper_state(\n  account_id  TEXT PRIMARY KEY,\n  cash        REAL NOT NULL,\n  realized_pnl REAL NOT NULL DEFAULT 0,\n  fees_paid   REAL NOT NULL DEFAULT 0,\n  funding_paid REAL NOT NULL DEFAULT 0,\n  updated_at  INTEGER NOT NULL\n)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "sqlite_sequence",
+        "sql": "CREATE TABLE sqlite_sequence(name,seq)",
+        "rows": 7
+      }
+    ],
+    "main_file_bytes": 225280,
+    "query_finished_at_ms": 1791960449124
+  },
+  {
+    "source": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3b.sqlite3",
+    "query_started_at_ms": 1791960449124,
+    "exists": true,
+    "read_only": true,
+    "tables": [
+      {
+        "type": "table",
+        "name": "paper_account",
+        "sql": "CREATE TABLE paper_account(\n        account_id TEXT PRIMARY KEY, arm TEXT, initial_equity REAL, cash REAL,\n        leverage REAL, dry_run INTEGER, created_at INTEGER)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "paper_blocked",
+        "sql": "CREATE TABLE paper_blocked(\n        id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, event_uid TEXT,\n        symbol TEXT, reason TEXT, ts INTEGER)",
+        "rows": 51
+      },
+      {
+        "type": "table",
+        "name": "paper_command",
+        "sql": "CREATE TABLE paper_command(\n  cmd_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id TEXT NOT NULL,\n  action     TEXT NOT NULL,\n  symbol     TEXT,\n  payload    TEXT,\n  result     TEXT,\n  ok         INTEGER,\n  ts         INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_correction",
+        "sql": "CREATE TABLE paper_correction(\n  id            INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id    TEXT NOT NULL,\n  kind          TEXT NOT NULL,          -- position|pending|order|fill|state\n  ref_id        INTEGER,                -- position_id / pending_id / order_id / fill_id\n  symbol        TEXT,\n  field         TEXT,                   -- cash|fees_paid|funding_paid|realized_pnl|voided\n  delta         REAL,\n  reason        TEXT,\n  detail        TEXT,\n  recorded_at   INTEGER NOT NULL\n)",
+        "rows": 4
+      },
+      {
+        "type": "table",
+        "name": "paper_equity",
+        "sql": "CREATE TABLE paper_equity(\n        ts INTEGER PRIMARY KEY, account_id TEXT, cash REAL, unrealized REAL, equity REAL, voided INTEGER DEFAULT 0)",
+        "rows": 34
+      },
+      {
+        "type": "table",
+        "name": "paper_fill",
+        "sql": "CREATE TABLE paper_fill(\n  fill_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  order_id    INTEGER,\n  position_id INTEGER,\n  signal_uid  TEXT,\n  symbol      TEXT NOT NULL,\n  action      TEXT NOT NULL,            -- open|close\n  qty         REAL NOT NULL,\n  raw_price   REAL NOT NULL,            -- 已闭合 15m bar 开盘价（未含滑点）\n  fill_price  REAL NOT NULL,            -- 含滑点后的模拟成交价\n  notional    REAL NOT NULL,\n  fee         REAL NOT NULL,\n  slippage_cost REAL NOT NULL,\n  bar_open_time INTEGER,\n  bar_close_time INTEGER,\n  fill_ts     INTEGER NOT NULL,\n  model_version TEXT\n, event_time INTEGER, available_at INTEGER, requested_at INTEGER, market_source TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 9
+      },
+      {
+        "type": "table",
+        "name": "paper_funding",
+        "sql": "CREATE TABLE paper_funding(\n        id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, position_id INTEGER,\n        funding_time INTEGER, rate REAL, mark REAL, amount REAL, source TEXT, late_backfill INTEGER DEFAULT 0, recorded_at INTEGER)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_funding_correction",
+        "sql": "CREATE TABLE paper_funding_correction(\n  id            INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id    TEXT NOT NULL,\n  position_id   INTEGER,\n  symbol        TEXT,\n  funding_time  INTEGER,          -- 经济结算时间（源事件 funding_time）\n  rate          REAL,\n  mark          REAL,\n  qty           REAL,\n  amount        REAL,             -- 支出口径（>0 支付、<0 收取）\n  cash_delta    REAL,             -- = -amount\n  realized_delta REAL,            -- 对已实现净盈亏的修正量（= -amount）\n  late          INTEGER NOT NULL DEFAULT 1,\n  reason        TEXT,\n  recorded_at   INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_funding_gap",
+        "sql": "CREATE TABLE paper_funding_gap(\n  id          INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  position_id INTEGER,\n  funding_time INTEGER,\n  reason      TEXT NOT NULL,\n  detected_at INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_order",
+        "sql": "CREATE TABLE paper_order(\n        order_id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, event_uid TEXT UNIQUE,\n        symbol TEXT, side TEXT, qty REAL, price REAL, fee REAL, ts INTEGER,\n        status TEXT, reject_reason TEXT, fill_price REAL, notional REAL, bar_open_time INTEGER, model_version TEXT, event_time INTEGER, requested_at INTEGER, market_source TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 54
+      },
+      {
+        "type": "table",
+        "name": "paper_pending",
+        "sql": "CREATE TABLE paper_pending(\n  pending_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id     TEXT NOT NULL,\n  arm            TEXT NOT NULL,\n  symbol         TEXT NOT NULL,\n  direction      TEXT NOT NULL DEFAULT 'long',\n  signal_uid     TEXT,\n  origin         TEXT,                    -- signal | manual\n  atr            REAL,\n  stop_price     REAL,\n  event_time     INTEGER,                 -- 信号经济时刻（确认 bar 收盘）\n  available_at   INTEGER,                 -- 信号可用时刻\n  requested_at   INTEGER NOT NULL,        -- 真实请求时刻（挂钟）\n  earliest_fill_ms INTEGER NOT NULL,      -- 允许成交的最早 bar open_time 下界\n  status         TEXT NOT NULL,           -- pending|filled|rejected|expired\n  reason         TEXT,\n  created_at     INTEGER NOT NULL,\n  resolved_at    INTEGER,\n  fill_position_id INTEGER,\n  market_source  TEXT\n, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 18
+      },
+      {
+        "type": "table",
+        "name": "paper_position",
+        "sql": "CREATE TABLE paper_position(\n        position_id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, symbol TEXT,\n        qty REAL, entry_price REAL, entry_ts INTEGER, exit_ts INTEGER, exit_reason TEXT,\n        status TEXT, exit_price REAL, entry_fee REAL, exit_fee REAL, funding_paid REAL DEFAULT 0, signal_uid TEXT, arm TEXT, stop_price REAL, atr_at_entry REAL, model_version TEXT, event_time INTEGER, available_at INTEGER, requested_at INTEGER, earliest_fill_ms INTEGER, market_source TEXT, origin TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0, void_reason TEXT)",
+        "rows": 9
+      },
+      {
+        "type": "table",
+        "name": "paper_processed",
+        "sql": "CREATE TABLE paper_processed(\n  signal_uid  TEXT PRIMARY KEY,\n  arm         TEXT NOT NULL,\n  action      TEXT NOT NULL,\n  detail      TEXT,\n  ts          INTEGER NOT NULL\n)",
+        "rows": 9
+      },
+      {
+        "type": "table",
+        "name": "paper_prompt",
+        "sql": "CREATE TABLE paper_prompt(\n        event_uid TEXT PRIMARY KEY, arm TEXT, symbol TEXT, kind TEXT,\n        confirm_close_ms INTEGER, payload TEXT, ingested_at INTEGER)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_realized",
+        "sql": "CREATE TABLE paper_realized(\n  id          INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  position_id INTEGER,\n  symbol      TEXT NOT NULL,\n  qty         REAL NOT NULL,\n  entry_price REAL NOT NULL,\n  exit_price  REAL NOT NULL,\n  gross_pnl   REAL NOT NULL,\n  entry_fee   REAL NOT NULL,\n  exit_fee    REAL NOT NULL,\n  funding_paid REAL NOT NULL DEFAULT 0,\n  net_pnl     REAL NOT NULL,\n  entry_ts    INTEGER, exit_ts INTEGER,\n  exit_reason TEXT,\n  ts          INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_request_anchor",
+        "sql": "CREATE TABLE paper_request_anchor(\n  account_id       TEXT NOT NULL,\n  event_uid        TEXT NOT NULL,        -- = signal_uid\n  first_request_ms INTEGER NOT NULL,\n  created_at       INTEGER NOT NULL,\n  PRIMARY KEY(account_id, event_uid)\n)",
+        "rows": 20
+      },
+      {
+        "type": "table",
+        "name": "paper_state",
+        "sql": "CREATE TABLE paper_state(\n  account_id  TEXT PRIMARY KEY,\n  cash        REAL NOT NULL,\n  realized_pnl REAL NOT NULL DEFAULT 0,\n  fees_paid   REAL NOT NULL DEFAULT 0,\n  funding_paid REAL NOT NULL DEFAULT 0,\n  updated_at  INTEGER NOT NULL\n)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "sqlite_sequence",
+        "sql": "CREATE TABLE sqlite_sequence(name,seq)",
+        "rows": 6
+      }
+    ],
+    "main_file_bytes": 180224,
+    "query_finished_at_ms": 1791960449128
+  },
+  {
+    "source": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3c.sqlite3",
+    "query_started_at_ms": 1791960449128,
+    "exists": true,
+    "read_only": true,
+    "tables": [
+      {
+        "type": "table",
+        "name": "paper_account",
+        "sql": "CREATE TABLE paper_account(\n        account_id TEXT PRIMARY KEY, arm TEXT, initial_equity REAL, cash REAL,\n        leverage REAL, dry_run INTEGER, created_at INTEGER)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "paper_blocked",
+        "sql": "CREATE TABLE paper_blocked(\n        id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, event_uid TEXT,\n        symbol TEXT, reason TEXT, ts INTEGER)",
+        "rows": 94
+      },
+      {
+        "type": "table",
+        "name": "paper_command",
+        "sql": "CREATE TABLE paper_command(\n  cmd_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id TEXT NOT NULL,\n  action     TEXT NOT NULL,\n  symbol     TEXT,\n  payload    TEXT,\n  result     TEXT,\n  ok         INTEGER,\n  ts         INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_correction",
+        "sql": "CREATE TABLE paper_correction(\n  id            INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id    TEXT NOT NULL,\n  kind          TEXT NOT NULL,          -- position|pending|order|fill|state\n  ref_id        INTEGER,                -- position_id / pending_id / order_id / fill_id\n  symbol        TEXT,\n  field         TEXT,                   -- cash|fees_paid|funding_paid|realized_pnl|voided\n  delta         REAL,\n  reason        TEXT,\n  detail        TEXT,\n  recorded_at   INTEGER NOT NULL\n)",
+        "rows": 16
+      },
+      {
+        "type": "table",
+        "name": "paper_equity",
+        "sql": "CREATE TABLE paper_equity(\n        ts INTEGER PRIMARY KEY, account_id TEXT, cash REAL, unrealized REAL, equity REAL, voided INTEGER DEFAULT 0)",
+        "rows": 41
+      },
+      {
+        "type": "table",
+        "name": "paper_fill",
+        "sql": "CREATE TABLE paper_fill(\n  fill_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  order_id    INTEGER,\n  position_id INTEGER,\n  signal_uid  TEXT,\n  symbol      TEXT NOT NULL,\n  action      TEXT NOT NULL,            -- open|close\n  qty         REAL NOT NULL,\n  raw_price   REAL NOT NULL,            -- 已闭合 15m bar 开盘价（未含滑点）\n  fill_price  REAL NOT NULL,            -- 含滑点后的模拟成交价\n  notional    REAL NOT NULL,\n  fee         REAL NOT NULL,\n  slippage_cost REAL NOT NULL,\n  bar_open_time INTEGER,\n  bar_close_time INTEGER,\n  fill_ts     INTEGER NOT NULL,\n  model_version TEXT\n, event_time INTEGER, available_at INTEGER, requested_at INTEGER, market_source TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 16
+      },
+      {
+        "type": "table",
+        "name": "paper_funding",
+        "sql": "CREATE TABLE paper_funding(\n        id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, position_id INTEGER,\n        funding_time INTEGER, rate REAL, mark REAL, amount REAL, source TEXT, late_backfill INTEGER DEFAULT 0, recorded_at INTEGER)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_funding_correction",
+        "sql": "CREATE TABLE paper_funding_correction(\n  id            INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id    TEXT NOT NULL,\n  position_id   INTEGER,\n  symbol        TEXT,\n  funding_time  INTEGER,          -- 经济结算时间（源事件 funding_time）\n  rate          REAL,\n  mark          REAL,\n  qty           REAL,\n  amount        REAL,             -- 支出口径（>0 支付、<0 收取）\n  cash_delta    REAL,             -- = -amount\n  realized_delta REAL,            -- 对已实现净盈亏的修正量（= -amount）\n  late          INTEGER NOT NULL DEFAULT 1,\n  reason        TEXT,\n  recorded_at   INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_funding_gap",
+        "sql": "CREATE TABLE paper_funding_gap(\n  id          INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  position_id INTEGER,\n  funding_time INTEGER,\n  reason      TEXT NOT NULL,\n  detected_at INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_order",
+        "sql": "CREATE TABLE paper_order(\n        order_id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, event_uid TEXT UNIQUE,\n        symbol TEXT, side TEXT, qty REAL, price REAL, fee REAL, ts INTEGER,\n        status TEXT, reject_reason TEXT, fill_price REAL, notional REAL, bar_open_time INTEGER, model_version TEXT, event_time INTEGER, requested_at INTEGER, market_source TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 92
+      },
+      {
+        "type": "table",
+        "name": "paper_pending",
+        "sql": "CREATE TABLE paper_pending(\n  pending_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id     TEXT NOT NULL,\n  arm            TEXT NOT NULL,\n  symbol         TEXT NOT NULL,\n  direction      TEXT NOT NULL DEFAULT 'long',\n  signal_uid     TEXT,\n  origin         TEXT,                    -- signal | manual\n  atr            REAL,\n  stop_price     REAL,\n  event_time     INTEGER,                 -- 信号经济时刻（确认 bar 收盘）\n  available_at   INTEGER,                 -- 信号可用时刻\n  requested_at   INTEGER NOT NULL,        -- 真实请求时刻（挂钟）\n  earliest_fill_ms INTEGER NOT NULL,      -- 允许成交的最早 bar open_time 下界\n  status         TEXT NOT NULL,           -- pending|filled|rejected|expired\n  reason         TEXT,\n  created_at     INTEGER NOT NULL,\n  resolved_at    INTEGER,\n  fill_position_id INTEGER,\n  market_source  TEXT\n, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 35
+      },
+      {
+        "type": "table",
+        "name": "paper_position",
+        "sql": "CREATE TABLE paper_position(\n        position_id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, symbol TEXT,\n        qty REAL, entry_price REAL, entry_ts INTEGER, exit_ts INTEGER, exit_reason TEXT,\n        status TEXT, exit_price REAL, entry_fee REAL, exit_fee REAL, funding_paid REAL DEFAULT 0, signal_uid TEXT, arm TEXT, stop_price REAL, atr_at_entry REAL, model_version TEXT, event_time INTEGER, available_at INTEGER, requested_at INTEGER, earliest_fill_ms INTEGER, market_source TEXT, origin TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0, void_reason TEXT)",
+        "rows": 15
+      },
+      {
+        "type": "table",
+        "name": "paper_processed",
+        "sql": "CREATE TABLE paper_processed(\n  signal_uid  TEXT PRIMARY KEY,\n  arm         TEXT NOT NULL,\n  action      TEXT NOT NULL,\n  detail      TEXT,\n  ts          INTEGER NOT NULL\n)",
+        "rows": 15
+      },
+      {
+        "type": "table",
+        "name": "paper_prompt",
+        "sql": "CREATE TABLE paper_prompt(\n        event_uid TEXT PRIMARY KEY, arm TEXT, symbol TEXT, kind TEXT,\n        confirm_close_ms INTEGER, payload TEXT, ingested_at INTEGER)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_realized",
+        "sql": "CREATE TABLE paper_realized(\n  id          INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  position_id INTEGER,\n  symbol      TEXT NOT NULL,\n  qty         REAL NOT NULL,\n  entry_price REAL NOT NULL,\n  exit_price  REAL NOT NULL,\n  gross_pnl   REAL NOT NULL,\n  entry_fee   REAL NOT NULL,\n  exit_fee    REAL NOT NULL,\n  funding_paid REAL NOT NULL DEFAULT 0,\n  net_pnl     REAL NOT NULL,\n  entry_ts    INTEGER, exit_ts INTEGER,\n  exit_reason TEXT,\n  ts          INTEGER NOT NULL\n)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "paper_request_anchor",
+        "sql": "CREATE TABLE paper_request_anchor(\n  account_id       TEXT NOT NULL,\n  event_uid        TEXT NOT NULL,        -- = signal_uid\n  first_request_ms INTEGER NOT NULL,\n  created_at       INTEGER NOT NULL,\n  PRIMARY KEY(account_id, event_uid)\n)",
+        "rows": 37
+      },
+      {
+        "type": "table",
+        "name": "paper_state",
+        "sql": "CREATE TABLE paper_state(\n  account_id  TEXT PRIMARY KEY,\n  cash        REAL NOT NULL,\n  realized_pnl REAL NOT NULL DEFAULT 0,\n  fees_paid   REAL NOT NULL DEFAULT 0,\n  funding_paid REAL NOT NULL DEFAULT 0,\n  updated_at  INTEGER NOT NULL\n)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "sqlite_sequence",
+        "sql": "CREATE TABLE sqlite_sequence(name,seq)",
+        "rows": 7
+      }
+    ],
+    "main_file_bytes": 225280,
+    "query_finished_at_ms": 1791960449134
+  },
+  {
+    "source": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3d.sqlite3",
+    "query_started_at_ms": 1791960449134,
+    "exists": true,
+    "read_only": true,
+    "tables": [
+      {
+        "type": "table",
+        "name": "paper_account",
+        "sql": "CREATE TABLE paper_account(\n        account_id TEXT PRIMARY KEY, arm TEXT, initial_equity REAL, cash REAL,\n        leverage REAL, dry_run INTEGER, created_at INTEGER)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "paper_blocked",
+        "sql": "CREATE TABLE paper_blocked(\n        id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, event_uid TEXT,\n        symbol TEXT, reason TEXT, ts INTEGER)",
+        "rows": 94
+      },
+      {
+        "type": "table",
+        "name": "paper_command",
+        "sql": "CREATE TABLE paper_command(\n  cmd_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id TEXT NOT NULL,\n  action     TEXT NOT NULL,\n  symbol     TEXT,\n  payload    TEXT,\n  result     TEXT,\n  ok         INTEGER,\n  ts         INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_correction",
+        "sql": "CREATE TABLE paper_correction(\n  id            INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id    TEXT NOT NULL,\n  kind          TEXT NOT NULL,          -- position|pending|order|fill|state\n  ref_id        INTEGER,                -- position_id / pending_id / order_id / fill_id\n  symbol        TEXT,\n  field         TEXT,                   -- cash|fees_paid|funding_paid|realized_pnl|voided\n  delta         REAL,\n  reason        TEXT,\n  detail        TEXT,\n  recorded_at   INTEGER NOT NULL\n)",
+        "rows": 16
+      },
+      {
+        "type": "table",
+        "name": "paper_equity",
+        "sql": "CREATE TABLE paper_equity(\n        ts INTEGER PRIMARY KEY, account_id TEXT, cash REAL, unrealized REAL, equity REAL, voided INTEGER DEFAULT 0)",
+        "rows": 41
+      },
+      {
+        "type": "table",
+        "name": "paper_fill",
+        "sql": "CREATE TABLE paper_fill(\n  fill_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  order_id    INTEGER,\n  position_id INTEGER,\n  signal_uid  TEXT,\n  symbol      TEXT NOT NULL,\n  action      TEXT NOT NULL,            -- open|close\n  qty         REAL NOT NULL,\n  raw_price   REAL NOT NULL,            -- 已闭合 15m bar 开盘价（未含滑点）\n  fill_price  REAL NOT NULL,            -- 含滑点后的模拟成交价\n  notional    REAL NOT NULL,\n  fee         REAL NOT NULL,\n  slippage_cost REAL NOT NULL,\n  bar_open_time INTEGER,\n  bar_close_time INTEGER,\n  fill_ts     INTEGER NOT NULL,\n  model_version TEXT\n, event_time INTEGER, available_at INTEGER, requested_at INTEGER, market_source TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 16
+      },
+      {
+        "type": "table",
+        "name": "paper_funding",
+        "sql": "CREATE TABLE paper_funding(\n        id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, position_id INTEGER,\n        funding_time INTEGER, rate REAL, mark REAL, amount REAL, source TEXT, late_backfill INTEGER DEFAULT 0, recorded_at INTEGER)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_funding_correction",
+        "sql": "CREATE TABLE paper_funding_correction(\n  id            INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id    TEXT NOT NULL,\n  position_id   INTEGER,\n  symbol        TEXT,\n  funding_time  INTEGER,          -- 经济结算时间（源事件 funding_time）\n  rate          REAL,\n  mark          REAL,\n  qty           REAL,\n  amount        REAL,             -- 支出口径（>0 支付、<0 收取）\n  cash_delta    REAL,             -- = -amount\n  realized_delta REAL,            -- 对已实现净盈亏的修正量（= -amount）\n  late          INTEGER NOT NULL DEFAULT 1,\n  reason        TEXT,\n  recorded_at   INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_funding_gap",
+        "sql": "CREATE TABLE paper_funding_gap(\n  id          INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  position_id INTEGER,\n  funding_time INTEGER,\n  reason      TEXT NOT NULL,\n  detected_at INTEGER NOT NULL\n)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_order",
+        "sql": "CREATE TABLE paper_order(\n        order_id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, event_uid TEXT UNIQUE,\n        symbol TEXT, side TEXT, qty REAL, price REAL, fee REAL, ts INTEGER,\n        status TEXT, reject_reason TEXT, fill_price REAL, notional REAL, bar_open_time INTEGER, model_version TEXT, event_time INTEGER, requested_at INTEGER, market_source TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 92
+      },
+      {
+        "type": "table",
+        "name": "paper_pending",
+        "sql": "CREATE TABLE paper_pending(\n  pending_id     INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id     TEXT NOT NULL,\n  arm            TEXT NOT NULL,\n  symbol         TEXT NOT NULL,\n  direction      TEXT NOT NULL DEFAULT 'long',\n  signal_uid     TEXT,\n  origin         TEXT,                    -- signal | manual\n  atr            REAL,\n  stop_price     REAL,\n  event_time     INTEGER,                 -- 信号经济时刻（确认 bar 收盘）\n  available_at   INTEGER,                 -- 信号可用时刻\n  requested_at   INTEGER NOT NULL,        -- 真实请求时刻（挂钟）\n  earliest_fill_ms INTEGER NOT NULL,      -- 允许成交的最早 bar open_time 下界\n  status         TEXT NOT NULL,           -- pending|filled|rejected|expired\n  reason         TEXT,\n  created_at     INTEGER NOT NULL,\n  resolved_at    INTEGER,\n  fill_position_id INTEGER,\n  market_source  TEXT\n, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0)",
+        "rows": 35
+      },
+      {
+        "type": "table",
+        "name": "paper_position",
+        "sql": "CREATE TABLE paper_position(\n        position_id INTEGER PRIMARY KEY AUTOINCREMENT, account_id TEXT, symbol TEXT,\n        qty REAL, entry_price REAL, entry_ts INTEGER, exit_ts INTEGER, exit_reason TEXT,\n        status TEXT, exit_price REAL, entry_fee REAL, exit_fee REAL, funding_paid REAL DEFAULT 0, signal_uid TEXT, arm TEXT, stop_price REAL, atr_at_entry REAL, model_version TEXT, event_time INTEGER, available_at INTEGER, requested_at INTEGER, earliest_fill_ms INTEGER, market_source TEXT, origin TEXT, first_request_ms INTEGER, epoch_ms INTEGER, voided INTEGER DEFAULT 0, void_reason TEXT)",
+        "rows": 15
+      },
+      {
+        "type": "table",
+        "name": "paper_processed",
+        "sql": "CREATE TABLE paper_processed(\n  signal_uid  TEXT PRIMARY KEY,\n  arm         TEXT NOT NULL,\n  action      TEXT NOT NULL,\n  detail      TEXT,\n  ts          INTEGER NOT NULL\n)",
+        "rows": 15
+      },
+      {
+        "type": "table",
+        "name": "paper_prompt",
+        "sql": "CREATE TABLE paper_prompt(\n        event_uid TEXT PRIMARY KEY, arm TEXT, symbol TEXT, kind TEXT,\n        confirm_close_ms INTEGER, payload TEXT, ingested_at INTEGER)",
+        "rows": 0
+      },
+      {
+        "type": "table",
+        "name": "paper_realized",
+        "sql": "CREATE TABLE paper_realized(\n  id          INTEGER PRIMARY KEY AUTOINCREMENT,\n  account_id  TEXT NOT NULL,\n  position_id INTEGER,\n  symbol      TEXT NOT NULL,\n  qty         REAL NOT NULL,\n  entry_price REAL NOT NULL,\n  exit_price  REAL NOT NULL,\n  gross_pnl   REAL NOT NULL,\n  entry_fee   REAL NOT NULL,\n  exit_fee    REAL NOT NULL,\n  funding_paid REAL NOT NULL DEFAULT 0,\n  net_pnl     REAL NOT NULL,\n  entry_ts    INTEGER, exit_ts INTEGER,\n  exit_reason TEXT,\n  ts          INTEGER NOT NULL\n)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "paper_request_anchor",
+        "sql": "CREATE TABLE paper_request_anchor(\n  account_id       TEXT NOT NULL,\n  event_uid        TEXT NOT NULL,        -- = signal_uid\n  first_request_ms INTEGER NOT NULL,\n  created_at       INTEGER NOT NULL,\n  PRIMARY KEY(account_id, event_uid)\n)",
+        "rows": 37
+      },
+      {
+        "type": "table",
+        "name": "paper_state",
+        "sql": "CREATE TABLE paper_state(\n  account_id  TEXT PRIMARY KEY,\n  cash        REAL NOT NULL,\n  realized_pnl REAL NOT NULL DEFAULT 0,\n  fees_paid   REAL NOT NULL DEFAULT 0,\n  funding_paid REAL NOT NULL DEFAULT 0,\n  updated_at  INTEGER NOT NULL\n)",
+        "rows": 1
+      },
+      {
+        "type": "table",
+        "name": "sqlite_sequence",
+        "sql": "CREATE TABLE sqlite_sequence(name,seq)",
+        "rows": 7
+      }
+    ],
+    "main_file_bytes": 225280,
+    "query_finished_at_ms": 1791960449142
+  },
+  {
+    "source": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/live/live_signals.sqlite3",
+    "query_started_at_ms": 1791960449142,
+    "exists": true,
+    "read_only": true,
+    "tables": [
+      {
+        "type": "table",
+        "name": "live_account_snapshot",
+        "sql": "CREATE TABLE live_account_snapshot(\n  exchange       TEXT NOT NULL,\n  account_label  TEXT NOT NULL,\n  read_at        INTEGER NOT NULL,\n  status         TEXT NOT NULL,\n  detail         TEXT,\n  error_class    TEXT,\n  equity_usd     REAL,\n  available_usd  REAL,\n  used_margin_usd REAL,\n  positions_json TEXT,\n  source         TEXT,\n  PRIMARY KEY(exchange, account_label)\n)",
+        "rows": 2
+      },
+      {
+        "type": "table",
+        "name": "live_run",
+        "sql": "CREATE TABLE live_run(\n  key        TEXT PRIMARY KEY,\n  value_json TEXT,\n  updated_at INTEGER\n)",
+        "rows": 4
+      },
+      {
+        "type": "table",
+        "name": "live_signal",
+        "sql": "CREATE TABLE live_signal(\n  signal_uid        TEXT PRIMARY KEY,\n  source            TEXT NOT NULL,\n  origin            TEXT NOT NULL,\n  exchange          TEXT NOT NULL,\n  market            TEXT NOT NULL,\n  symbol            TEXT NOT NULL,\n  timeframe         TEXT NOT NULL,\n  strategy_key      TEXT,\n  strategy_version  TEXT,\n  config_hash       TEXT,\n  data_version      TEXT,\n  structural_kind   TEXT,\n  direction         TEXT,\n  event_time        INTEGER,\n  confirmed_at      INTEGER,\n  available_at      INTEGER,\n  bar_open_time     INTEGER,\n  bar_close_time    INTEGER,\n  detection_low     REAL,\n  detection_atr     REAL,\n  display_state     TEXT NOT NULL DEFAULT 'displayable',\n  executable_state  TEXT NOT NULL DEFAULT 'undecided',\n  executable_reason TEXT,\n  admission         INTEGER,\n  rank              REAL,\n  daily_list_version TEXT,\n  payload_json      TEXT,\n  first_seen_at     INTEGER NOT NULL,\n  updated_at        INTEGER NOT NULL\n)",
+        "rows": 11366
+      }
+    ],
+    "main_file_bytes": 24965120,
+    "query_finished_at_ms": 1791960449144
+  }
+]

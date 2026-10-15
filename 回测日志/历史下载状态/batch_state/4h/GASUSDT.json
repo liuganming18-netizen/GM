@@ -1,0 +1,743 @@
+{
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2023-10.zip",
+  "bytes": 2465,
+  "sha256": "c7a39bfb406f1af23b54ed3e47610a4db2040930bb591e719501eda6564a0ec4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63542,
+   "新增版本数": 42,
+   "状态": "已入库"
+  },
+  "source_id": 63542,
+  "rows": 42
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2023-11.zip",
+  "bytes": 9633,
+  "sha256": "e304b6312ebba8acfef65504935ecd3a583f2b45e627319224920f561cdcef70",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63543,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63543,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2023-12.zip",
+  "bytes": 9258,
+  "sha256": "9ba30a2b5efbcc2597ad997d231c52d2666976b53b493cbf53c3c8bebeee620e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63544,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63544,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-01.zip",
+  "bytes": 9295,
+  "sha256": "d3f9b5c397e9fe7a450bb1af17ddbdc61e6303d6c9174f7529661644297a06e0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63545,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63545,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-02.zip",
+  "bytes": 8472,
+  "sha256": "787900110de1fc68a0f97b1266031e27af0b2b6bb6e13e7fb66f1770e5b88b4f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63546,
+   "新增版本数": 174,
+   "状态": "已入库"
+  },
+  "source_id": 63546,
+  "rows": 174
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-03.zip",
+  "bytes": 9241,
+  "sha256": "d8c8dab8d668558dfb8228e9270f5380dce9b8004a4a16e0c7ce632ede983bc8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63547,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63547,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-04.zip",
+  "bytes": 8890,
+  "sha256": "e041a365bb58cb20ae2a56510fd1f51340045109d5b1d31bd9c6066551297e11",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63548,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63548,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-05.zip",
+  "bytes": 8807,
+  "sha256": "761b8f3b9b32e3595f30fba7d3e341ed86815e20dda217c6f9ca93694e89aa6b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63549,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63549,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-06.zip",
+  "bytes": 8580,
+  "sha256": "10e5083ef31fbc5774610ccae1aeed38befa091e6d3861c26187e5bb65dc2e7b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63550,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63550,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-07.zip",
+  "bytes": 8716,
+  "sha256": "28a0b411302a520d73cd3c25a31bca5282d032df49ae6fd452564bd3b17beb79",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63551,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63551,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-08.zip",
+  "bytes": 8795,
+  "sha256": "f8c39dd29ceb03118cda543a9759036e571d93c19bab59c95f035b49108956cc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63552,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63552,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-09.zip",
+  "bytes": 8496,
+  "sha256": "afdfcf79c2ad4cda40ffc650c651cd5c9e9f4157a66884e4ea2a548c3462b7bb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63553,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63553,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-11.zip",
+  "bytes": 8755,
+  "sha256": "77130ea3fbf0294cc734d2bd198bf853b80eeda3aa0767185073ae6935cab128",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63555,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63555,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-10.zip",
+  "bytes": 8943,
+  "sha256": "f3c8a633be6270d37aab1013435b748dc04583ec070fa300ece91c2e42519a82",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63554,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63554,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2024-12.zip",
+  "bytes": 9099,
+  "sha256": "8f24a91b0002e3630384d885eb42753161e73a8ba5242b7648d5733ebb348bca",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63556,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63556,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-01.zip",
+  "bytes": 9063,
+  "sha256": "b21cd1d757f9f216f44fd3d191a7d3e62158eb69619a7f16d0407fb4bf21ef43",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63557,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63557,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-02.zip",
+  "bytes": 7960,
+  "sha256": "5e996ebf6cc2adc54bf23764b0edeb0e34fba753a5da273247e33335694a5cee",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63558,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 63558,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-03.zip",
+  "bytes": 8634,
+  "sha256": "f1531fe805313d6fb8a1f5d12acb1d9490dcdd2ec323199cd13c82fda7d05f3e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63559,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63559,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-05.zip",
+  "bytes": 8796,
+  "sha256": "d46b85e4e9ad72ad69db923cf2f23427e97edf84d323c62dd6e1e8940d751d8d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63561,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63561,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-04.zip",
+  "bytes": 8956,
+  "sha256": "df5f43741f524b845bc2cf75ee23aa33fdf51cd7112104d4bef1e70be8a103d4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63560,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63560,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-06.zip",
+  "bytes": 8300,
+  "sha256": "0d356283742da5df436c71fba92e02ac0745142c83e81b22e9010836b1dd4c7b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63562,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63562,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-07.zip",
+  "bytes": 8740,
+  "sha256": "05f17389bcfe06b62021ce26cf32f550fb54a10fa15dad3867b9a495ab74fbc3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63563,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63563,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-09.zip",
+  "bytes": 8135,
+  "sha256": "9cdd9292d5a4e0a026f04070962648bee3cc7dc8227ba69d7878bde88733b24b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63565,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63565,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-08.zip",
+  "bytes": 8855,
+  "sha256": "1fff5661e22df6c9f1a25a4e17c739200a515cd78a35e6c4ae093d39a2f160f2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63564,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63564,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-10.zip",
+  "bytes": 8444,
+  "sha256": "1e0614cf7c3e1a3112120fe86ea32f59a7041f75f23d5f5f94fd46012a665f15",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63566,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63566,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-11.zip",
+  "bytes": 8192,
+  "sha256": "deafc92d2e8b59df36266ad7a88d166fdbb4e51f65d9da863504f66fd73e20f6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63567,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63567,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2025-12.zip",
+  "bytes": 8358,
+  "sha256": "52d6e4c8fece0781ccf517160fc67508837a184ad95321ccb9c74b8ef3b542f9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63568,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63568,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-01.zip",
+  "bytes": 8427,
+  "sha256": "dca0b85b7875864ebf96b567857cd4277ba754050a1b7f67347669d85f6e64a7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63569,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63569,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-02.zip",
+  "bytes": 7775,
+  "sha256": "2c9f03d129cce2f0f8e6dfe5a8a5f510d065a9c0017ac41b5da56d878d23b0fd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63570,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 63570,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-03.zip",
+  "bytes": 8337,
+  "sha256": "e04225d2682c1ee70680acea75b6c434b177b4066d8bf109e0b3571a33420ac3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63571,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63571,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-04.zip",
+  "bytes": 8139,
+  "sha256": "ca29dc62ef52f9c6331fcef2694c4fd0bee325e3f40ed0bb3e28e019eb0309b2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63572,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63572,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-05.zip",
+  "bytes": 8215,
+  "sha256": "327fd7d6bafc797a4c440371bea1ca75bd03d394ef2876d8b7c51ad41bb3ada8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63573,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63573,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-07.zip",
+  "bytes": 8079,
+  "sha256": "d257ba5cf6597fcb3bb7588c4aeafd93d2ddb79d40faa155ef7e0e7dcf6d836f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63575,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63575,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-06.zip",
+  "bytes": 8022,
+  "sha256": "6b4a68d420c3083a16511d8b522ece474f6e7924bccee49c4ba1db20623d616f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63574,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63574,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-08.zip",
+  "bytes": 8200,
+  "sha256": "f1880dd42f51a96a2438c5a62d76d9752fb80a7d43d0cf27819191590038c5fc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63576,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 63576,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GASUSDT/4h/GASUSDT-4h-2026-09.zip",
+  "bytes": 8046,
+  "sha256": "41aa8db975cd88f8c285897ecbee60d5187705e725a8061ca3f5d49aedb3e735",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63577,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 63577,
+  "rows": 180
+ },
+ "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-01.zip",
+  "bytes": 562,
+  "sha256": "5e6631a998004a1a178c0f7eb3806493ae62563ff5b4350086af7effed64d9ec",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63538,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 63538,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-02.zip",
+  "bytes": 564,
+  "sha256": "7ee899836622066786a94c200e4ae71bf56e29c5def05cbb0eee8025e2f1a667",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63539,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 63539,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-03.zip",
+  "bytes": 551,
+  "sha256": "d183dda53b890fd32e95c262c7f34781c4a9ca6aa3c87457ef3f50e3a4a2ca90",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63540,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 63540,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-04.zip",
+  "bytes": 551,
+  "sha256": "842a67e9b4b47071f1f62232f1031c26340d741bdd162ce945f86d0f4b5b0ab8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 63541,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 63541,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-05.zip",
+  "bytes": 553,
+  "sha256": "4152001ea724007a6a1ba38d55ebb560d4263bd29c2b9bbbd48f22998125d32d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 310785,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 310785,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-06.zip",
+  "bytes": 559,
+  "sha256": "55b8c3855897f71363a26a1ac358bd7a323328589dd3046ea663e8285c17529a",
+  "checksum_ok": true,
+  "size_bytes": 559,
+  "fetched_at": "2026-10-07T19:32:30Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/GASUSDT/GASUSDT-4h-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836300,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836300,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:33Z"
+ },
+ "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-07.zip",
+  "bytes": 559,
+  "sha256": "ef893cbdee59865f79f8a28756778139a596cc1a3c17b5da3c8bab0aa4f24612",
+  "checksum_ok": true,
+  "size_bytes": 559,
+  "fetched_at": "2026-10-08T08:11:40Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/GASUSDT/GASUSDT-4h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/GASUSDT/4h/GASUSDT-4h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836301,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836301,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:33Z"
+ }
+}

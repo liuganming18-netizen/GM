@@ -1,0 +1,68 @@
+{
+ "summary": {
+  "1d": {
+   "pending_files": 0,
+   "est_rows": 0
+  },
+  "12h": {
+   "pending_files": 10,
+   "sample_n": 10,
+   "avg_rows": 3.0,
+   "est_rows": 30,
+   "sample_missing": 0
+  },
+  "8h": {
+   "pending_files": 236,
+   "sample_n": 14,
+   "avg_rows": 4.0,
+   "est_rows": 944,
+   "sample_missing": 0
+  },
+  "4h": {
+   "pending_files": 528,
+   "sample_n": 14,
+   "avg_rows": 7.0,
+   "est_rows": 3696,
+   "sample_missing": 0
+  },
+  "1h": {
+   "pending_files": 528,
+   "sample_n": 14,
+   "avg_rows": 25.0,
+   "est_rows": 13200,
+   "sample_missing": 0
+  },
+  "30m": {
+   "pending_files": 528,
+   "sample_n": 14,
+   "avg_rows": 49.0,
+   "est_rows": 25872,
+   "sample_missing": 0
+  },
+  "15m": {
+   "pending_files": 6676,
+   "sample_n": 14,
+   "avg_rows": 2614.6,
+   "est_rows": 17454878,
+   "sample_missing": 0
+  },
+  "5m": {
+   "pending_files": 15243,
+   "sample_n": 14,
+   "avg_rows": 6316.4,
+   "est_rows": 96281320,
+   "sample_missing": 0
+  },
+  "1m": {
+   "pending_files": 18922,
+   "sample_n": 14,
+   "avg_rows": 36140.1,
+   "est_rows": 683842431,
+   "sample_missing": 0
+  }
+ },
+ "total_pending_files": 42671,
+ "est_total_rows": 797622373,
+ "bytes_per_row": 253,
+ "est_gb": 187.93946169795734
+}

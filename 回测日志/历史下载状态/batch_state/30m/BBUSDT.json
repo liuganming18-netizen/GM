@@ -1,0 +1,624 @@
+{
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-06.zip",
+  "bytes": 65179,
+  "sha256": "76d8b7f8c08bd38d1e14776e3fbc5553dd36ce5abb66e3746c03b9799a0dd0fd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100833,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 100833,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-05.zip",
+  "bytes": 41078,
+  "sha256": "5a2d70ed57811201cc8b8f5fb3a9a5964fea457f328b7c55d91089dd00590a0d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100832,
+   "新增版本数": 887,
+   "状态": "已入库"
+  },
+  "source_id": 100832,
+  "rows": 887
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-07.zip",
+  "bytes": 65199,
+  "sha256": "01192e6a198015221fee74e68523841e71890409af6380fd5c6b356a3963821b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100834,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100834,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-08.zip",
+  "bytes": 64213,
+  "sha256": "2ed2ba78c9ba02ceb464bd86bf2b57a9270345a56159e4c0684088b46756deab",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100835,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100835,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-09.zip",
+  "bytes": 61338,
+  "sha256": "134b3f643e4cf899a6706be4a021e3e5ee7f62ca60a21d09581c58a15413e4da",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100836,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 100836,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-10.zip",
+  "bytes": 61969,
+  "sha256": "f52fa47bbb760368dc3b916454d56796d10247d52bc31fb66df52f6cd584b01f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100837,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100837,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-11.zip",
+  "bytes": 61822,
+  "sha256": "ad20781d5450b7c9319719f923f9c892f61acb8e6e4f56f1ff0d1badd2f93ae7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100838,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 100838,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2024-12.zip",
+  "bytes": 69807,
+  "sha256": "d1079aaa7014dd16c6b460cda3b3b35cb95de49403760ea558feab89aab11918",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100839,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100839,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-01.zip",
+  "bytes": 67419,
+  "sha256": "9ddf9445e9f534b3030780c983430acfe748675fc2b4824b3b06d31c5a0ab92c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100840,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100840,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-02.zip",
+  "bytes": 60140,
+  "sha256": "1011e8287e71e8bfc920f381dc8595349704d3656a2aba0ba65f368eea3715b8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100841,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 100841,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-03.zip",
+  "bytes": 65993,
+  "sha256": "aa8686128f45e8230067a324f141d9a84763726a9a97e1cb47fc6e7988c93e47",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100842,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100842,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-04.zip",
+  "bytes": 62861,
+  "sha256": "ad88b6dcabaf9b7bdfb0f8f89e64af08172c666dc12ff5811b12e5b3b09f7f89",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100843,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 100843,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-05.zip",
+  "bytes": 66059,
+  "sha256": "2a0906d967b812eb98d8c467b973382c8e115acc469ac5fe8125ee1c9f636ad5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100844,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100844,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-06.zip",
+  "bytes": 62204,
+  "sha256": "8bad52ee9e477e488080b8e7e8e6359a1af5d40ee20fe708f0526044c63d4114",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100845,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 100845,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-07.zip",
+  "bytes": 65907,
+  "sha256": "2af4adb7edebbafc94de272ff4bf025a5dca727fa1ad5df9e75cc1c831b0985c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100846,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100846,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-08.zip",
+  "bytes": 67474,
+  "sha256": "3ebe7908b543b7f30b8e7b47c1ca7554134b6f779d9fc199157a20d5667ee8bb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100847,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100847,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-09.zip",
+  "bytes": 66197,
+  "sha256": "9cb429235e568a29cf012d23b856a60fa6c66ffa67037b4e0feddd4dc5258f8c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100848,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 100848,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-10.zip",
+  "bytes": 67149,
+  "sha256": "2e83f97efb92d09ab959fbc33fb3e77129bc5d3c3484a5699886b06916e8a375",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100849,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100849,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-11.zip",
+  "bytes": 63401,
+  "sha256": "535c1e0b528e2418eeb686aaf5feb45f9ebb8fd5f4f8e7f9d795c86647c1d738",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100850,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 100850,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2025-12.zip",
+  "bytes": 64056,
+  "sha256": "1c325a07c119ad02e570e4baeb6b2549274994060f8626ff3ee32749601fcd35",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100851,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100851,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-01.zip",
+  "bytes": 64113,
+  "sha256": "6af1d80143a96254b21d789476185a910e1d43db90b44b1e9535bb48bf5b3b48",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100852,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100852,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-02.zip",
+  "bytes": 56194,
+  "sha256": "733ca0eff48fba0e8b11813a95a12ed1ffa8771bf2f66069c18b2550526d0392",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100853,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 100853,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-03.zip",
+  "bytes": 61144,
+  "sha256": "fa50082a6558362e41271c95e813d5033ab128c552257da58310d1f0c017f9d3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100854,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100854,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-04.zip",
+  "bytes": 60456,
+  "sha256": "ef771e69f7140848fec5df0e9854fb156b3e908111c87e893567a6166bf5b404",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100855,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 100855,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-05.zip",
+  "bytes": 63313,
+  "sha256": "1377ffff59e0c308e25055165d91db11d317e8ddc48e6e79c1596f950b6c7fe2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100856,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100856,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-06.zip",
+  "bytes": 58951,
+  "sha256": "6e8bae5b1ec5ec47c6da7ab9223098aed0e33da9d562a7d2be84a34dac88ade2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100857,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 100857,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-07.zip",
+  "bytes": 58538,
+  "sha256": "5a32ed805e3143695df54abbb310e1442bcaddc705fdb5b1d13bb703818145e9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100858,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100858,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-08.zip",
+  "bytes": 61701,
+  "sha256": "4bd10c3bf82e0f348e94c1a3926629d6fb9de7c83ba2093152acc6e7f5eab4a4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100859,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 100859,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BBUSDT/30m/BBUSDT-30m-2026-09.zip",
+  "bytes": 61843,
+  "sha256": "7b29fd461e553c477ed3336aa2b2d2798d7d2ad62b53dc1ca937c603b90eadd5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100860,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 100860,
+  "rows": 1440
+ },
+ "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-01.zip",
+  "bytes": 2479,
+  "sha256": "de014d522725dfced7f4bc677a3f080ab3c12689831769ec9f71d5392d014146",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100828,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 100828,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-02.zip",
+  "bytes": 2494,
+  "sha256": "445b51e7f64110888d0b723370e825a70f3dfe317f916c9c4c47c160243f717e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100829,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 100829,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-03.zip",
+  "bytes": 2420,
+  "sha256": "bdb2e79d1153b824b5d941b1884ffad41bde720a13cd3b3e613e2e27753023c8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100830,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 100830,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-04.zip",
+  "bytes": 2422,
+  "sha256": "84b77fe39e23edc0b54c69c2ece9db73fa1ba3577b275dc75f7f235cbb2952f3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 100831,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 100831,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-05.zip",
+  "bytes": 2468,
+  "sha256": "b3db46030f4115de6f498cbc20a41970f23069f7c15846c15aa7e594cdc472e9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 346065,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 346065,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-06.zip",
+  "bytes": 2424,
+  "sha256": "3b3e15fcad41464a3ecc813f988bf080edc18d09b1deb61d16c9db9989dc6785",
+  "checksum_ok": true,
+  "size_bytes": 2424,
+  "fetched_at": "2026-10-07T19:50:57Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/BBUSDT/BBUSDT-30m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940893,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940893,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:22Z"
+ },
+ "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-07.zip",
+  "bytes": 2476,
+  "sha256": "26f2a7a61a8ff3a12e9e639fcab56bffe2ebf8098bd77f959c7e08ae1e61812b",
+  "checksum_ok": true,
+  "size_bytes": 2476,
+  "fetched_at": "2026-10-08T10:36:38Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/BBUSDT/BBUSDT-30m-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/BBUSDT/30m/BBUSDT-30m-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940894,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940894,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:22Z"
+ }
+}

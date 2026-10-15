@@ -1,0 +1,17 @@
+{
+ "generated_utc": "2026-10-08T06:21:59Z",
+ "endpoint": "binance.instruments (fapi.binance.com/fapi/v1/exchangeInfo)",
+ "request_id": 239724,
+ "source": "公共REST",
+ "pool_snapshot_utc_old": "2026-10-05T01:55:12Z",
+ "old_count": 528,
+ "current_count": 525,
+ "added": [],
+ "removed": [
+  "1000000BOBUSDT",
+  "PROMPTUSDT",
+  "PUMPBTCUSDT"
+ ],
+ "unchanged": 525,
+ "note": "current = 当前 TRADING 的 USDT 线性加密永续（与 symbol_pool.py 同口径）；old = 本轮下载使用的标的池快照。added 需补历史，removed 不作删除处置。"
+}

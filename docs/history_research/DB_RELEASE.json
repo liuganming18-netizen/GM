@@ -1,0 +1,274 @@
+{
+  "artifact": "DB_RELEASE",
+  "purpose": "向审核/终验窗口声明：生产库当前可按**有界只读**方式核验；并列出已核验项，避免重复巨表扫描",
+  "issued_at": "2026-10-11T11:18:00Z",
+  "issued_at_local": "2026-10-11 19:18 (+08:00)",
+  "issued_by": "1m 清理窗口（adapter.py 唯一写者）",
+
+  "release_decision": {
+    "released": true,
+    "scope": "bounded read-only（有界只读）",
+    "allowed": [
+      "以只读方式打开数据库并执行**短事务**查询",
+      "读取 /api/v1 只读端点",
+      "读取本项目 outputs 下的 JSON/文本证据文件"
+    ],
+    "forbidden": [
+      "任何写操作（INSERT/UPDATE/DELETE/DDL）",
+      "VACUUM（用户明确不回收空间；且磁盘余量不足）",
+      "长事务 / 长时间持有读游标（会阻塞 WAL 截断，见 wal_hazard）",
+      "修改 adapter.py（唯一写者为本窗口）",
+      "重跑巨表全表 COUNT 扫描（见 already_verified）"
+    ],
+    "read_only_recipe": {
+      "python": "sqlite3.connect('file:<DB>?mode=ro', uri=True) 后立即 PRAGMA query_only=1",
+      "cli": "sqlite3 'file:<DB>?mode=ro&immutable=0' 并以只读账号/只读文件权限访问",
+      "note": "mode=ro + query_only=1 双重保险；不要用可写方式打开后再靠纪律约束"
+    }
+  },
+
+  "db_identity": {
+    "path": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+    "bytes": 77310898176,
+    "gib": 72.0,
+    "page_size": 4096,
+    "page_count": 18874731,
+    "freelist_pages": 1080417,
+    "freelist_gib": 4.12,
+    "journal_mode": "wal",
+    "db_mtime_utc": "2026-10-11T15:08:00Z",
+    "wal_bytes": 568774272,
+    "shm_bytes": 1114112,
+    "vacuum_performed": false,
+    "note": "freelist 为 1m 删除释放的内部空闲页，未回收给文件系统；文件大小自删除后基本未变。freelist 由 1,129,596 → 1,080,417：OI 5m 回补复用了空闲页"
+  },
+
+  "current_holders": {
+    "observed_at": "2026-10-11T15:12:00Z",
+    "holders": [
+      {"pid": 27207, "role": "后端只读 API :8787", "access": "read-only (mode=ro + query_only=1)", "cwd_verified": "后端实现", "note": "2026-10-11 22:51:29 由 pid 5641 受控重载而来（adapter.py 变更），身份与监听不变"},
+      {"pid": 27235, "role": "实时采集器 realtime_collector.py", "access": "read/write，按需开连接，非常驻持锁", "note": "2026-10-11 22:51:36 受控重启（加载新代码：5m 已收盘桶落库 + 流通量刷新）"}
+    ],
+    "write_lock": "当前无人持写锁（SQLite 单写者瞬时锁）",
+    "stale_read_marks": "无"
+  },
+
+  "wal_hazard": {
+    "severity": "高（可重现）",
+    "symptom": "wal_checkpoint(TRUNCATE) 返回 busy=1 且 log=-1，WAL 文件无法截断并持续增长",
+    "observed_incident": "1m 清理期间 WAL 涨到 6.30 GiB，可用磁盘 24 GiB → 17.7 GiB（约 1 GB/分钟），根因是两个长驻读者持有陈旧读标记",
+    "guidance_for_reviewer": [
+      "每个查询用独立短连接，查完立刻 close，不要长期持有游标",
+      "若发现 WAL 文件快速增长，先确认自己的读事务已结束再继续",
+      "不要以写方式打开数据库做『只读』查询（会引入写锁与 checkpoint 竞争）"
+    ]
+  },
+
+  "already_verified_do_not_repeat": {
+    "reason": "这些是巨表全索引扫描（单次 76~113 秒），已由本窗口完成并留证；重复执行只会加重 WAL 与 IO 压力",
+    "items": [
+      {
+        "check": "candle_heads 中 timeframe='1m' 残留",
+        "result": 0,
+        "cost_secs": 76.1,
+        "evidence": "1m彻底删除_2026-10-11/02_残留核验_只读.json"
+      },
+      {
+        "check": "candle_versions 中 timeframe='1m' 残留",
+        "result": 0,
+        "cost_secs": 113.0,
+        "evidence": "1m彻底删除_2026-10-11/02_残留核验_只读.json"
+      },
+      {
+        "check": "sources 中 timeframe='1m' 残留",
+        "result": 0,
+        "cost_secs": 4.5,
+        "evidence": "1m彻底删除_2026-10-11/02_残留核验_只读.json"
+      },
+      {
+        "check": "signals / download_tasks / coverage_cache / candle_field_notes / realtime_klines / kline_stream_state 中 1m 残留",
+        "result": "全部 0（补删 1,332 行后复检）",
+        "evidence": "1m彻底删除_2026-10-11/03_小表补删记录.json"
+      },
+      {
+        "check": "9 张含 timeframe 列的表清单",
+        "result": ["sources","candle_versions","candle_heads","signals","download_tasks","coverage_cache","candle_field_notes","realtime_klines","kline_stream_state"],
+        "note": "旧记录 01_删除执行记录.json 的 tables_with_timeframe=[] 是脚本缺陷痕迹，**不可作为依据**，以 02 为准"
+      },
+      {
+        "check": "活接口口径（/api/v1/markets、/api/v1/data/import-plan）",
+        "result": "均不含 \"1m\" 与 one_minute；available_timeframes 含 1m 的标的数 0/549",
+        "evidence": "1m彻底删除_2026-10-11/04_交接_服务恢复与DB释放.json 第 6/8 节"
+      },
+      {
+        "check": "后端测试套件",
+        "result": "152 tests, 0 failures（test_business 109 / test_12h_utc_boundary 17 / test_okx_volume_fix_rectification 26）",
+        "evidence": "同上 第 8 节"
+      }
+    ]
+  },
+
+  "bounded_verification_recipe": {
+    "principle": "只用**小表**与**接口**做复核，不触发巨表全表扫描",
+    "step_1_db_small_tables": {
+      "cost": "< 1s",
+      "sql": "SELECT (SELECT COUNT(*) FROM realtime_klines WHERE timeframe='1m') AS rt, (SELECT COUNT(*) FROM coverage_cache WHERE timeframe='1m') AS cc, (SELECT COUNT(*) FROM download_tasks WHERE timeframe='1m') AS dt, (SELECT COUNT(*) FROM kline_stream_state WHERE timeframe='1m') AS ks, (SELECT COUNT(*) FROM candle_field_notes WHERE timeframe='1m') AS fn, (SELECT COUNT(*) FROM signals WHERE timeframe='1m') AS sg;",
+      "expected": "全部 0"
+    },
+    "step_2_giant_tables_bounded_sampling": {
+      "cost": "每个标的毫秒级（走 PK 前缀，不做全表扫描）",
+      "sql": "SELECT COUNT(*) FROM candle_heads WHERE exchange=? AND market=? AND symbol=? AND timeframe='1m';  -- 对若干抽样标的执行，含 BTCUSDT / 0GUSDT 及随机 3 个",
+      "expected": "全部 0",
+      "note": "**不要**执行不带标的条件的 WHERE timeframe='1m' 全表计数（会全索引扫描 76~113s）"
+    },
+    "step_3_api": {
+      "cost": "< 1s",
+      "checks": [
+        "GET /api/health → 200",
+        "GET /api/v1/data/import-plan → plan.order == ['1d','12h','8h','4h','1h','30m','15m','5m']",
+        "GET /api/v1/markets → 响应体内不含 \"1m\" 与 one_minute",
+        "GET /api/v1/strategies/registered → registered_count == 18，capital.initial_equity_USDT == 5000"
+      ]
+    },
+    "step_4_services": {
+      "cost": "< 1s",
+      "checks": [
+        "lsof -nP -iTCP:8787 -sTCP:LISTEN -t → 单进程（pid 27207；历史：5641 ← 293）",
+        "lsof -nP -iTCP:3000 -sTCP:LISTEN -t → 单进程（pid 45948）",
+        "采集器心跳新鲜：python3 后端实现/realtime_collector.py --health（pid 27235）"
+      ]
+    }
+  },
+
+  "service_state": {
+    "backend_api": {"port": 8787, "pid": 27207, "health_http": 200, "duplicate_listeners": 0, "previous_pid": 5641, "cold_start_first_request_secs": 133.8, "warm_second_request_secs": 0.079},
+    "realtime_collector": {"pid": 27235, "started_local": "2026-10-11 22:51:36", "health": "心跳新鲜，REST 通道正常（成功 1492/失败 1）；binance.oi_hist ok=544/fail=0/deferred=213"},
+    "frontend": {"port": 3000, "pid": 45948, "http": 200, "note": "全程未被停止"},
+    "note": "三个服务均已恢复且各只有一个实例；API 曾因 adapter.py 变更重载、采集器因新代码受控重启，均属代码热替换而非重复拉起"
+  },
+
+  "capital_patch_status": {
+    "patch": "最新唐奇安威科夫接通与收尾_2026-10-11/5000U收尾与回测条件终验6/prepared_patches/adapter.py.5000.diff",
+    "merged": true,
+    "merge_method": "手工逐处合入（补丁基线为 18:07:53 的旧 adapter.py，晚于其后的 1m 口径改动，故未用 patch 直接打）",
+    "merged_sites": [
+      "adapter.py:2165 文档字符串 共享 10000 → 5000 USDT 资金模型",
+      "adapter.py:2191 capital.initial_equity_USDT 兜底默认值 10000 → 5000",
+      "adapter.py:2194 capital.note 文案 10000 → 5000 USDT"
+    ],
+    "live_verified": {
+      "capital": {"initial_equity_USDT": 5000, "shared_across_exchanges": ["binance", "okx"], "per_arm_independent_replay": true, "note": "跨所共用一个 5000 USDT 虚拟研究账户；各研究臂独立回放同一本金，不叠加"}
+    },
+    "not_touched": "PRAGMA busy_timeout=10000（两处，与资本无关）",
+    "1m_changes_intact": {
+      "TF_ORDER": ["1d", "12h", "8h", "4h", "1h", "30m", "15m", "5m"],
+      "TF_SET": "= set(TF_ORDER)",
+      "IMPORT_PLAN.order": ["1d", "12h", "8h", "4h", "1h", "30m", "15m", "5m"],
+      "one_minute_field": "已摘除（仅剩 1 处说明性注释）"
+    }
+  },
+
+  "gate_status": {
+    "G01_G05": "pending（未放行）",
+    "all_pass": false,
+    "reason": "运行绑定台账不存在：/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/接线路整改3/运行绑定_G01_G05.json（视为 G01–G05 全 pending，不放行）",
+    "identity": {"registered_count": 18, "identity_ok": true, "problems": []},
+    "capital_isolation_four_entries": "由 5000U 窗口独立复跑，子 rc 全 0（本窗口未参与、未改动其入口）",
+    "note": "本窗口未触碰任何门禁台账与资金数值；仅按受控补丁改文案与兜底默认值"
+  },
+
+  "self_check_of_this_recipe": {
+    "run_at": "2026-10-11T11:19:00Z",
+    "run_by": "1m 清理窗口（发件方自检，供审核窗口比对）",
+    "total_db_query_secs": 0.02,
+    "step_1_small_tables": {"values": {"realtime_klines": 0, "coverage_cache": 0, "download_tasks": 0, "kline_stream_state": 0, "candle_field_notes": 0, "signals": 0}, "pass": true},
+    "step_2_giant_tables_sampled": {
+      "symbols": ["binance/um/BTCUSDT", "binance/um/0GUSDT", "binance/um/1000PEPEUSDT", "okx/swap/CRO-USDT-SWAP", "okx/swap/BTC-USDT-SWAP"],
+      "heads_versions_sources_all_zero": true,
+      "note": "走 PK 前缀，0.02s 完成；未做任何全表扫描"
+    },
+    "step_3_api": {
+      "health": 200,
+      "import_plan_order": ["1d", "12h", "8h", "4h", "1h", "30m", "15m", "5m"],
+      "markets_contains_1m": false,
+      "markets_contains_one_minute": false,
+      "registered_count": 18,
+      "initial_equity_USDT": 5000,
+      "pass": true
+    },
+    "step_4_services": {"backend_listeners": 1, "frontend_listeners": 1, "collector_heartbeat_fresh": true, "pass": true}
+  },
+
+  "file_ownership": {
+    "adapter_py": {
+      "owner": "OI 与界面三处接通窗口（唯一写者）",
+      "sha256_now": "dcc21f0b93708eb817932cc90004be923dff172905d452a75d0d33176c0eb34e",
+      "sha256_history": [
+        "bd297b70f6477b3d05645f1cb49fcb19e20e573daaa3eba32e311b2ea58524d2（1m 清理后）",
+        "acd37ad3bddff90f7a166a8ab22488c4e2f59a904407be0df5dfb73b796d65de（/oi period=auto 加性新增后）",
+        "dcc21f0b93708eb817932cc90004be923dff172905d452a75d0d33176c0eb34e（本轮：市值/滚动成交额接线 + 近端档 6 天 + _oi_auto 预算顺序）"
+      ],
+      "rule": "其他窗口不得并发修改；如需变更请提交 prepared_patches 并由本窗口合入"
+    },
+    "related_evidence": [
+      "1m彻底删除_2026-10-11/00_索引.md",
+      "1m彻底删除_2026-10-11/01_删除执行记录.json",
+      "1m彻底删除_2026-10-11/02_残留核验_只读.json",
+      "1m彻底删除_2026-10-11/03_小表补删记录.json",
+      "1m彻底删除_2026-10-11/04_交接_服务恢复与DB释放.json",
+      "OI与界面三处接通_2026-10-11/04_交接.json"
+    ]
+  },
+
+  "amendment_2026-10-11T12_25Z": {
+    "by": "同一窗口（OI 历史与界面任务；本窗口仍是 adapter.py 唯一写者）",
+    "reason": "用户任务「OI总持仓量就几天，全部导入」",
+    "db_writes": "零（本轮全部只读访问）",
+    "adapter_py_sha256_now": "acd37ad3bddff90f7a166a8ab22488c4e2f59a904407be0de5dfb73b796d65de",
+    "adapter_py_change": "加性新增 /oi 的 period=auto（5m 自适应金字塔 + snapshot 近端）与 limit/from/to/bucket_ms/spread；不带 period 时行为逐字不变",
+    "api_reload": "pid 293 → 5641（受控重载；adapter.py 变更需重载才生效）",
+    "db_holders_now": [
+      {"pid": 5641, "role": "只读 API :8787"},
+      {"pid": 67510, "role": "实时采集器（写）"}
+    ],
+    "wal_now_bytes": 23871312,
+    "wal_checkpoint_passive_now": [0, 1885, 1172],
+    "freelist_pages_now": 1121696,
+    "disk_free_gib_now": 21,
+    "conclusion": "DB 仍对审核窗口开放有界只读核验；1m 删除结果与全部数据完好，未 VACUUM、未删文件",
+    "evidence_dir": "OI历史与界面修复_2026-10-11/"
+  },
+
+  "amendment_2026-10-11T15_12Z": {
+    "by": "同一窗口（OI 与界面三处接通；本窗口仍是 adapter.py 唯一写者）",
+    "reason": "用户任务：「oi总持仓柱形图是不是有缺失？流动市值还没有接通。24小时成交额跟周期滚动成交额也没有接通。」",
+    "user_decision": "全池真5m —— 528 标的按 5m 落库 + 一次性回补 10-09 → 今天",
+    "db_writes": "有：迁移 v9(symbol_supply) + 回补 350,356 行 5m + 流通量 525 条 + 采集器持续写入",
+    "schema_change": {"migration": "v9", "table": "symbol_supply", "applied_local": "2026-10-11 21:57:12"},
+    "adapter_py_sha256_now": "dcc21f0b93708eb817932cc90004be923dff172905d452a75d0d33176c0eb34e",
+    "realtime_collector_py_sha256_now": "fb2ea5ce1c88f7aecc42e205c65f48c3dddaadb2298a9ca766d8b1385cfba975",
+    "gateway_ext_py_sha256_now": "0b031d35d0db5e5cb5572af9ae3b6ee4e9406e9e120a6f6fec29af21a01ac1c8",
+    "api_reload": "pid 5641 → 27207（受控重载）",
+    "collector_restart": "pid 67510 → 27235（2026-10-11 22:51:36 受控重启，加载 5m 落库新代码）",
+    "db_holders_now": [
+      {"pid": 27207, "role": "只读 API :8787"},
+      {"pid": 27235, "role": "实时采集器（写）"}
+    ],
+    "wal_now_bytes": 568774272,
+    "freelist_pages_now": 1080417,
+    "disk_free_gib_now": 17,
+    "disk_capacity": "92%",
+    "newly_verified_do_not_repeat": [
+      {"check": "oi_history period='5m' 全局计数", "note": "无 period 前导索引，全表扫描会挂死 >2 分钟；改按 (exchange,symbol,period,ts) 走 ix_oi_hist_sym_period_ts 抽样"},
+      {"check": "sources 表行数", "result": 1389782, "cost_secs": 0.1},
+      {"check": "sources GROUP BY exchange,market,symbol,timeframe + MAX(imported_at)", "result": "5700 组", "cost_secs": "34.6 ~ 48.9（空闲态；写压力下 sources_index 冷算可达 381.1s）", "note": "sources_index() 冷启动的根因；已记录现成索引修法但未执行"},
+      {"check": "schema_migrations 已应用版本", "result": [1,2,3,4,5,6,7,8,9], "cost_secs": 0.02},
+      {"check": "symbol_supply 行数", "result": 528, "cost_secs": 0.01},
+      {"check": "528 标的 × 近 6 小时 5m 内部空洞扫描（区分尾部连续缺失与内部缺失）", "result": "2 / 528 有内部空洞（B2USDT / MELANIAUSDT 各缺 22:20 一根，采集器重启接缝）；另 3 个标的整段为空系上游停发", "cost_secs": 1.8, "note": "走 ix_oi_hist_sym_period_ts 主键前缀；证据 73_5m内部空洞扫描_近6小时.json + 71_上游OI端点边界探针.json"},
+      {"check": "sweep3 零失败后复扫 5m 内部空洞", "result": "仍 2 / 528；sweep2 失败的 MORPHOUSDT/CHILLGUYUSDT/BIOUSDT 已全部补齐 ⇒ 自愈机制验证通过", "cost_secs": 1.8, "note": "证据 74_5m内部空洞终验_sweep3后.json"},
+      {"check": "上游 openInterestHist 边界探针（1000000BOBUSDT/PROMPTUSDT/PUMPBTCUSDT）", "result": "末点恒为 2026-10-05 09:00 UTC（limit 12/500/1000 一致；startTime=10-07 返回空）⇒ 上游停发", "cost_secs": 6, "note": "网络只读，不碰 DB"}
+    ],
+    "conclusion": "DB 仍对审核窗口开放有界只读核验；1m 删除结果、已恢复服务与全部数据完好，未 VACUUM、未删文件、未扩展删除范围",
+    "evidence_dir": "OI与界面三处接通_2026-10-11/"
+  }
+}

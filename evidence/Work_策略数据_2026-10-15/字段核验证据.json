@@ -1,0 +1,223 @@
+{
+ "generated_utc": "2026-10-14T19:20:14Z",
+ "A_oi_same_source_event": {
+  "checked": 14,
+  "all_match": true,
+  "probed": 14,
+  "detail": [
+   {
+    "symbol": "0GUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 36576689.0,
+    "hot": 36576689.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "ALTUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 335914234.0,
+    "hot": 335914234.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "BASUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 93295962.0,
+    "hot": 93295962.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "CETUSUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 49472426.0,
+    "hot": 49472426.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "DRIFTUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 123904225.0,
+    "hot": 123904225.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "GALAUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 2526504584.0,
+    "hot": 2526504584.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "INJUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 3722856.6,
+    "hot": 3722856.6,
+    "common_n": 7488
+   },
+   {
+    "symbol": "LUMIAUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 57901717.8,
+    "hot": 57901717.8,
+    "common_n": 7488
+   },
+   {
+    "symbol": "NILUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 82279887.2,
+    "hot": 82279887.2,
+    "common_n": 7488
+   },
+   {
+    "symbol": "PRLUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 19202513.0,
+    "hot": 19202513.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "SFPUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 12357344.0,
+    "hot": 12357344.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "TACUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 1799811450.0,
+    "hot": 1799811450.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "VIRTUALUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 20465875.7,
+    "hot": 20465875.7,
+    "common_n": 7488
+   },
+   {
+    "symbol": "ZRXUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 14767733.6,
+    "hot": 14767733.6,
+    "common_n": 7488
+   }
+  ]
+ },
+ "C_coverage": {
+  "symbols": 526,
+  "ohlcv_1h": {
+   "symbols_have": 526,
+   "symbols_missing": 0,
+   "rows": 11428115,
+   "dup_keys": 0,
+   "global_first": 1577750400000,
+   "global_last": 1791997200000,
+   "global_first_utc": "2019-12-31T00:00:00Z",
+   "global_last_utc": "2026-10-14T17:00:00Z",
+   "missing_symbols": []
+  },
+  "ohlcv_4h": {
+   "symbols_have": 526,
+   "symbols_missing": 0,
+   "rows": 2856965,
+   "dup_keys": 0,
+   "global_first": 1577750400000,
+   "global_last": 1791979200000,
+   "global_first_utc": "2019-12-31T00:00:00Z",
+   "global_last_utc": "2026-10-14T12:00:00Z",
+   "missing_symbols": []
+  },
+  "ohlcv_15m": {
+   "symbols_have": 526,
+   "symbols_missing": 0,
+   "rows": 45694006,
+   "dup_keys": 0,
+   "global_first": 1577750400000,
+   "global_last": 1792001700000,
+   "global_first_utc": "2019-12-31T00:00:00Z",
+   "global_last_utc": "2026-10-14T18:15:00Z",
+   "missing_symbols": []
+  },
+  "funding": {
+   "symbols_have": 526,
+   "symbols_missing": 0,
+   "rows": 2189855,
+   "dup_keys": 0,
+   "global_first": 1577836800000,
+   "global_last": 1791979200000,
+   "global_first_utc": "2020-01-01T00:00:00Z",
+   "global_last_utc": "2026-10-14T12:00:00Z",
+   "missing_symbols": []
+  },
+  "oi_metrics": {
+   "symbols_have": 526,
+   "symbols_missing": 0,
+   "rows": 118703466,
+   "dup_keys": 0,
+   "global_first": 1598918400000,
+   "global_last": 1792002300000,
+   "global_first_utc": "2020-09-01T00:00:00Z",
+   "global_last_utc": "2026-10-14T18:25:00Z",
+   "missing_symbols": []
+  },
+  "mark1h": {
+   "symbols_have": 521,
+   "symbols_missing": 5,
+   "rows": 11526345,
+   "dup_keys": 0,
+   "global_first": 1577836800000,
+   "global_last": 1791673200000,
+   "global_first_utc": "2020-01-01T00:00:00Z",
+   "global_last_utc": "2026-10-10T23:00:00Z",
+   "missing_symbols": [
+    "哈基米USDT",
+    "币安人生USDT",
+    "我踏马来了USDT",
+    "牛来USDT",
+    "龙虾USDT"
+   ]
+  }
+ },
+ "D_ratio_nonnull_total": {
+  "count_long_short_ratio": 117684291,
+  "sum_toptrader_long_short_ratio": 117684291,
+  "count_toptrader_long_short_ratio": 117684291,
+  "sum_taker_long_short_vol_ratio": 117684291
+ },
+ "B_grid": {
+  "BTCUSDT": {
+   "ohlcv_1h": {
+    "rows": 59514,
+    "off_grid": 0
+   },
+   "ohlcv_4h": {
+    "rows": 14878,
+    "off_grid": 0
+   },
+   "ohlcv_15m": {
+    "rows": 238056,
+    "off_grid": 0
+   },
+   "oi_metrics": {
+    "rows": 550700,
+    "off_grid": 0
+   }
+  }
+ }
+}

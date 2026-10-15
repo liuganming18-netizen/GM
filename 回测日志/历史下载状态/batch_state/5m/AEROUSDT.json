@@ -1,0 +1,909 @@
+{
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-12.zip",
+  "bytes": 347020,
+  "sha256": "212786ab3f2ff7fb7b93d6b4ad25bb1a693ed04d41851c2b2f2f7ecc7b09f637",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426267,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 426267,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-11.zip",
+  "bytes": 356651,
+  "sha256": "979a265b37d1d47730b94e529f374fa549305a4e2292666959fdb74b28d3f1c5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426266,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 426266,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-01.zip",
+  "bytes": 349693,
+  "sha256": "0f455d6433cf3a754569ef0d5b2d37c6bd04ce058c91a98312407d383ca8ce5b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426268,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 426268,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-02.zip",
+  "bytes": 313043,
+  "sha256": "88ac42e089e57c8643cab67beec081ead336595e4520a50d27cb7a2689c7e5ed",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426269,
+   "新增版本数": 8064,
+   "状态": "已入库"
+  },
+  "source_id": 426269,
+  "rows": 8064
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-04.zip",
+  "bytes": 330084,
+  "sha256": "cfa7f03b17e880693978e8ca4834d4673430af401128700ee63e82589877527b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426271,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 426271,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-03.zip",
+  "bytes": 335959,
+  "sha256": "44a8f1dbbc28027eaba32ad7e1cb89bf5946f8f9d0a1de31149aff642344376b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426270,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 426270,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-06.zip",
+  "bytes": 342289,
+  "sha256": "c7dc79d30fa1d5c5e79d55f5e72103e151deb4133b0327a59fc195ede733a346",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426273,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 426273,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-05.zip",
+  "bytes": 346122,
+  "sha256": "476b4b62639156408adcab7c88ed9a52a25368e96a5013322450dc0f69beb14b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426272,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 426272,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-07.zip",
+  "bytes": 354464,
+  "sha256": "d3b05da3a5e9faaefcfd56e2db3a7b4690f7b45fc3f6665562a414d631da73ca",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426274,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 426274,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-08.zip",
+  "bytes": 343918,
+  "sha256": "e21303359f9861218c7ddb95babe79f05b4605812cf0a3c84162a613d2f4dab4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426275,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 426275,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2026-09.zip",
+  "bytes": 351282,
+  "sha256": "eb456239c22a598f01c5118e9013cbbe29c69fb0f2baf9ede56710df0a2ec600",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426276,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 426276,
+  "rows": 8640
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-05.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-05.zip",
+  "kind": "daily",
+  "period": "2025-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-05.zip",
+  "bytes": 12183,
+  "sha256": "73372c80383cb38fb8287b9919310118fd7e84069fa9331c4d86f613750218f9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426234,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426234,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-06.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-06.zip",
+  "kind": "daily",
+  "period": "2025-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-06.zip",
+  "bytes": 12286,
+  "sha256": "32979886060fcd25a7c48d087b3f215102d4dc74c9c5954d12206dce8e6934d5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426235,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426235,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-07.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-07.zip",
+  "kind": "daily",
+  "period": "2025-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-07.zip",
+  "bytes": 12377,
+  "sha256": "de7a4eb682ab06d20e31ac2b903f8e083901f0baf9352a4246df6f6d4c38bd43",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426236,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426236,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-08.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-08.zip",
+  "kind": "daily",
+  "period": "2025-10-08",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-08.zip",
+  "bytes": 12136,
+  "sha256": "4b2aa62dc95d561f0ccfad72ee475cf4d46065ffe99c87d77371e8f2ff4d0d6a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426237,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426237,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-09.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-09.zip",
+  "kind": "daily",
+  "period": "2025-10-09",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-09.zip",
+  "bytes": 12220,
+  "sha256": "0d0c11ddd97cb49a203b69272e7e998a62928114ef92a08b0440c6f4cb87f905",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426238,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426238,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-10.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-10.zip",
+  "kind": "daily",
+  "period": "2025-10-10",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-10.zip",
+  "bytes": 12625,
+  "sha256": "fcd0e4b9092616ce08921241a941090b28833bc87a5d6a334ec5371ac027731f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426239,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426239,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-11.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-11.zip",
+  "kind": "daily",
+  "period": "2025-10-11",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-11.zip",
+  "bytes": 12767,
+  "sha256": "65efdf452fdbb1172d69afe2d414ca721dbb7b1b48b0201070ed3e1263c161a8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426240,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426240,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-13.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-13.zip",
+  "kind": "daily",
+  "period": "2025-10-13",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-13.zip",
+  "bytes": 12514,
+  "sha256": "1053da20442b68d667e57d4d87b4b9537d87765ad854bcc89af67dfcbd5e864c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426242,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426242,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-12.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-12.zip",
+  "kind": "daily",
+  "period": "2025-10-12",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-12.zip",
+  "bytes": 12645,
+  "sha256": "0daaf596c4224f0d1487bba65160cd30ba7b75bf14181d5c8269594ae6e3dac3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426241,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426241,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-14.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-14.zip",
+  "kind": "daily",
+  "period": "2025-10-14",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-14.zip",
+  "bytes": 12606,
+  "sha256": "58ccc892d39aea0eb23e86cf6af8968633c0f3fbae3969b9d152ff627d61276b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426243,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426243,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-16.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-16.zip",
+  "kind": "daily",
+  "period": "2025-10-16",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-16.zip",
+  "bytes": 12295,
+  "sha256": "ab2ffad48290fffbcc1ff29cc5806c45a8c0f8569e29ed17a700594633015db0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426245,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426245,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-15.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-15.zip",
+  "kind": "daily",
+  "period": "2025-10-15",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-15.zip",
+  "bytes": 12382,
+  "sha256": "6b692ed3f045e9142c2c22d0e6c31277f3a95d066791798c1d05e0624fd1a583",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426244,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426244,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-17.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-17.zip",
+  "kind": "daily",
+  "period": "2025-10-17",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-17.zip",
+  "bytes": 12482,
+  "sha256": "b594ee07bf2379662e24e697ca0b0e5d61f58d17b2b7991cc48d246b5260c234",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426246,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426246,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-18.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-18.zip",
+  "kind": "daily",
+  "period": "2025-10-18",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-18.zip",
+  "bytes": 11891,
+  "sha256": "3c71abdde70bd21118715fb0f45c9beea6409b8151fecf5a8280fd03ac1d5da8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426247,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426247,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-19.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-19.zip",
+  "kind": "daily",
+  "period": "2025-10-19",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-19.zip",
+  "bytes": 12066,
+  "sha256": "576599a63f12b2297707529c49d8b8782eefd4da92b6e8a764b04a07d509058d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426248,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426248,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-21.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-21.zip",
+  "kind": "daily",
+  "period": "2025-10-21",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-21.zip",
+  "bytes": 12247,
+  "sha256": "c6c55f3bcf8ad396a83b7b5c44c88aa3974405e2d90e008be440ce4286cf6740",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426250,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426250,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-20.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-20.zip",
+  "kind": "daily",
+  "period": "2025-10-20",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-20.zip",
+  "bytes": 12088,
+  "sha256": "5bd0be3cce1078c37fddcd5f5676f7fdb841bfbcde86018842be52e27437a589",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426249,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426249,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-22.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-22.zip",
+  "kind": "daily",
+  "period": "2025-10-22",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-22.zip",
+  "bytes": 12023,
+  "sha256": "be1da91659d168211c02701c7f9e0ec118f3ca59c725a88e80e3eb606e9f8d0f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426251,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426251,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-23.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-23.zip",
+  "kind": "daily",
+  "period": "2025-10-23",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-23.zip",
+  "bytes": 11872,
+  "sha256": "516abe1840ff80050f52cd57bef901a0acf7a157bcdeb6a4be86048d01ed9b16",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426252,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426252,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-24.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-24.zip",
+  "kind": "daily",
+  "period": "2025-10-24",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-24.zip",
+  "bytes": 11851,
+  "sha256": "b5a46e09827c0ffe1f1228ca3b24ae1502c946310c7fa6085a13ed52b831761f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426253,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426253,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-25.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-25.zip",
+  "kind": "daily",
+  "period": "2025-10-25",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-25.zip",
+  "bytes": 12300,
+  "sha256": "4f592ff9b765a6eb1c51dcc32b6ee9d05f0d42e0fd72f3a3223b1b78af50c95b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426254,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426254,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-26.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-26.zip",
+  "kind": "daily",
+  "period": "2025-10-26",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-26.zip",
+  "bytes": 12276,
+  "sha256": "93c2d563a427fa7a5f8c5c97ac1e16b6cb4ef825d554e476e41724d4570dd004",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426255,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426255,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-27.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-27.zip",
+  "kind": "daily",
+  "period": "2025-10-27",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-27.zip",
+  "bytes": 12310,
+  "sha256": "021dc53eb168d37a83e6b73d20d1c6c8ef2ebdce56c9140b5ea06e7b9b47076e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426256,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426256,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-28.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-28.zip",
+  "kind": "daily",
+  "period": "2025-10-28",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-28.zip",
+  "bytes": 12345,
+  "sha256": "66367f1bbb607bdf42904dd017078e7c9ad79fafc2d0afcb3541b7a75ad80c4f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426257,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426257,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-29.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-29.zip",
+  "kind": "daily",
+  "period": "2025-10-29",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-29.zip",
+  "bytes": 12513,
+  "sha256": "c02795e6d7c7f6ca56d8ddd49a6df08b2f893943bcf7e269e64e81337bb5e014",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426258,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426258,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-30.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-30.zip",
+  "kind": "daily",
+  "period": "2025-10-30",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-30.zip",
+  "bytes": 12948,
+  "sha256": "49e7919491408c986f88388ece99158ac2c941cda7f9cb892f6642e915e20be1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426259,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426259,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-31.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-31.zip",
+  "kind": "daily",
+  "period": "2025-10-31",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10-31.zip",
+  "bytes": 12672,
+  "sha256": "27dc28b1796fa48d991eb223ef70fa2e598d05842306bc9dff4ed37212730745",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426260,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426260,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-01.zip",
+  "bytes": 12489,
+  "sha256": "70f36a393af8b11f5278924a219dccb4eb42e3583de4dd30c2f08a2f08689516",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426261,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426261,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-02.zip",
+  "bytes": 12362,
+  "sha256": "9dfd58e31bfd239e1c6c32c5cc6ecc02ce7d8a99f090c0907c1300a31f84e2a7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426262,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426262,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-03.zip",
+  "bytes": 12265,
+  "sha256": "5004debd703ada17b6b0d7893b650d2a6a6412b3ee9812fded2e7222fd8b47d6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426263,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426263,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-04.zip",
+  "bytes": 12350,
+  "sha256": "6ddea1a802a39519803d6b99f04db5662ce2b3296e6f964617996c1440b23028",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426264,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426264,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-05.zip",
+  "bytes": 12281,
+  "sha256": "ccd672ddbd294132594f0b40458040af034d3c265eaf354ccf6ec3adba6ce5c1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 426265,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 426265,
+  "rows": 288
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2024-12.zip",
+  "bytes": 323348,
+  "sha256": "020ba62dceb5d606ba9f86860e8fdc999b5680a56b59f1d5810321d5a3c8fb83",
+  "checksum_ok": true,
+  "size_bytes": 323348,
+  "fetched_at": "2026-10-07T21:48:31Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2024-12.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2024-12.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-01.zip",
+  "bytes": 364626,
+  "sha256": "aa2a5b2708e5f40c00d506929fcf160e9731b2625b9c4bf296564c400effc4b4",
+  "checksum_ok": true,
+  "size_bytes": 364626,
+  "fetched_at": "2026-10-07T21:48:31Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2025-01.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-01.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-02.zip",
+  "bytes": 321555,
+  "sha256": "3b3c2d96bf9959fd1428fa097ed5fcfcb73d71e77a5117125b5bef23343a7e8b",
+  "checksum_ok": true,
+  "size_bytes": 321555,
+  "fetched_at": "2026-10-07T21:48:32Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2025-02.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-02.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-03.zip",
+  "bytes": 342565,
+  "sha256": "aea63f759e1dcc50373e1bf91ae1cf2b5dd2947ed8c9116514560a46772dfa97",
+  "checksum_ok": true,
+  "size_bytes": 342565,
+  "fetched_at": "2026-10-07T21:48:32Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2025-03.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-03.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-04.zip",
+  "bytes": 337901,
+  "sha256": "1d293dc639abaa6ac893007d96e5b96ca69b0224a67dcaaa89a4338d42cf1c2b",
+  "checksum_ok": true,
+  "size_bytes": 337901,
+  "fetched_at": "2026-10-07T21:48:33Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2025-04.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-04.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-05.zip",
+  "bytes": 349402,
+  "sha256": "2742194f30938981ea4b12622f5adf08c52ba531e254e1ed24d6403bc7789369",
+  "checksum_ok": true,
+  "size_bytes": 349402,
+  "fetched_at": "2026-10-07T21:48:33Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2025-05.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-05.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-06.zip",
+  "bytes": 351152,
+  "sha256": "cb8fce53f7bcafdac3cbd779d915f7ce30d0135f8c39d1b78d8d3fb5907451a8",
+  "checksum_ok": true,
+  "size_bytes": 351152,
+  "fetched_at": "2026-10-07T21:48:34Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2025-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-06.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-07.zip",
+  "bytes": 360479,
+  "sha256": "92449d4a17f7765c9ccf8db0f43855ec503cf311ad4cdb66c24804cfc7e142a1",
+  "checksum_ok": true,
+  "size_bytes": 360479,
+  "fetched_at": "2026-10-07T21:48:34Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2025-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-07.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-08.zip",
+  "bytes": 371182,
+  "sha256": "a7d7d9c6e82d0c96f7f27258f8957c01651dcb8be610b09cb9021316212ae811",
+  "checksum_ok": true,
+  "size_bytes": 371182,
+  "fetched_at": "2026-10-07T21:48:35Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2025-08.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-08.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-09.zip",
+  "bytes": 353239,
+  "sha256": "f2fb8d2efd4f98fd916524a3606850a57f77f37d3b6a89604b7d4a0c08aea4e8",
+  "checksum_ok": true,
+  "size_bytes": 353239,
+  "fetched_at": "2026-10-07T21:48:35Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2025-09.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-09.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-06.zip",
+  "bytes": 12325,
+  "sha256": "0167407c42654499533d8876b01ef2e4c8e3b8e8d70e795175fd8b4e4acbc8a0",
+  "checksum_ok": true,
+  "size_bytes": 12325,
+  "fetched_at": "2026-10-07T21:48:35Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-06.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10.zip",
+  "bytes": 364935,
+  "sha256": "4fa64f8c4cefffd8813b7d4dee65ae5ac4045d393aa703a019f326c3972edf01",
+  "checksum_ok": true,
+  "size_bytes": 364935,
+  "fetched_at": "2026-10-07T21:48:35Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/AEROUSDT/AEROUSDT-5m-2025-10.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AEROUSDT/5m/AEROUSDT-5m-2025-10.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AEROUSDT/5m/AEROUSDT-5m-2026-10-07.zip",
+  "status": "missing_in_archive",
+  "note": "官方归档或 CHECKSUM 不存在（日度按需探测，404 即缺失）；不计为完成"
+ }
+}

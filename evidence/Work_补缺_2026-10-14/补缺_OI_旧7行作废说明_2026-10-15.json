@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-10-15T00:44:22.374745+08:00",
+  "verdict": "DEPRECATED（作废，不得导入）",
+  "file": "补缺_OI_import.csv",
+  "rows": 7,
+  "reason": "标签口径错位一格：该文件用归档 create_time（桶起点）作 ts，但库内 2026-10-08 起的 5m 行全部来自采集器 binance.fapi.openInterestHist，其 ts 是桶终点。直接导入会把「归档[t]」放到「库内标签 t」上，而该位置正确值应为「归档[t-5min]」；同时归档[t] 的值在库内 t+5min 已经存在 ⇒ 既错位又重复。",
+  "evidence": [
+    "BSVUSDT 2026-10-10 19:00：旧值 104008.5 = 归档[19:00]，而库内 19:05 已是 104008.5；库内 19:00 的正确值应为 归档[18:55] = 0（归档该行确为 0E-16）",
+    "KNCUSDT 2026-10-10 09:30：旧值 11266184 = 归档[09:30]，库内 09:35 已是 11266184",
+    "CVXUSDT 2026-10-13 22:00：旧值 951710.5 = 归档[22:00]，库内 22:05 已是 951710.5"
+  ],
+  "replacement": "补缺_OI_1008_1013_官方归档_import.csv（31 行，已按「归档 ts + 5min」对齐库内采集器口径）",
+  "per_row": [
+    {
+      "symbol": "B2USDT",
+      "old_label_utc": "2026-10-11 14:20:00",
+      "old_value": "16078309.0000000000000000",
+      "same_slot_filled_by_new_patch": true,
+      "new_patch_correct_value": "16077981.0000000000000000"
+    },
+    {
+      "symbol": "BSVUSDT",
+      "old_label_utc": "2026-10-10 19:00:00",
+      "old_value": "104008.5000000000000000",
+      "same_slot_filled_by_new_patch": true,
+      "new_patch_correct_value": "0E-16"
+    },
+    {
+      "symbol": "CVXUSDT",
+      "old_label_utc": "2026-10-13 22:00:00",
+      "old_value": "951710.5000000000000000",
+      "same_slot_filled_by_new_patch": false,
+      "new_patch_correct_value": "（归档该格本身没有数据，不可补）"
+    },
+    {
+      "symbol": "GASUSDT",
+      "old_label_utc": "2026-10-12 20:25:00",
+      "old_value": "1194751.9000000000000000",
+      "same_slot_filled_by_new_patch": true,
+      "new_patch_correct_value": "0E-16"
+    },
+    {
+      "symbol": "KNCUSDT",
+      "old_label_utc": "2026-10-10 09:30:00",
+      "old_value": "11266184.0000000000000000",
+      "same_slot_filled_by_new_patch": false,
+      "new_patch_correct_value": "（归档该格本身没有数据，不可补）"
+    },
+    {
+      "symbol": "MELANIAUSDT",
+      "old_label_utc": "2026-10-11 14:20:00",
+      "old_value": "25030459.6300000000000000",
+      "same_slot_filled_by_new_patch": true,
+      "new_patch_correct_value": "25039504.1400000000000000"
+    },
+    {
+      "symbol": "SUNUSDT",
+      "old_label_utc": "2026-10-10 06:15:00",
+      "old_value": "100892101.0000000000000000",
+      "same_slot_filled_by_new_patch": true,
+      "new_patch_correct_value": "0E-16"
+    }
+  ],
+  "summary": {
+    "same_slot_covered": 5,
+    "not_fillable": 2
+  }
+}

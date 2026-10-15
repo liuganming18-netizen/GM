@@ -1,0 +1,903 @@
+{
+ "generated_utc": "2026-10-08T01:37:57Z",
+ "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "pool_count": 528,
+ "last_closed_utc_day": "2026-10-07",
+ "scope": "按当前计划口径（plan_files：月归档优先 + 窗口首尾日归档）",
+ "phases": {
+  "1d": {
+   "missing_in_archive": 203,
+   "missing__head_uncovered": 198,
+   "imported": 18606,
+   "NOT_PLANNED": 528,
+   "missing__true_gap": 5,
+   "already_imported": 318,
+   "stale_entries_not_in_plan": 370,
+   "unplanned_pre_archive_days_lower_bound": 157
+  },
+  "12h": {
+   "imported": 18872,
+   "missing_in_archive": 201,
+   "missing__head_uncovered": 198,
+   "NOT_PLANNED": 528,
+   "downloaded": 10,
+   "already_imported": 44,
+   "missing__true_gap": 3,
+   "stale_entries_not_in_plan": 0,
+   "unplanned_pre_archive_days_lower_bound": 157
+  },
+  "8h": {
+   "imported": 18641,
+   "missing_in_archive": 206,
+   "missing__head_uncovered": 198,
+   "NOT_PLANNED": 528,
+   "downloaded": 236,
+   "missing__true_gap": 8,
+   "already_imported": 44,
+   "stale_entries_not_in_plan": 0,
+   "unplanned_pre_archive_days_lower_bound": 157
+  },
+  "4h": {
+   "imported": 18349,
+   "missing_in_archive": 206,
+   "missing__head_uncovered": 198,
+   "downloaded": 528,
+   "NOT_PLANNED": 528,
+   "missing__true_gap": 8,
+   "already_imported": 44,
+   "stale_entries_not_in_plan": 0,
+   "unplanned_pre_archive_days_lower_bound": 157
+  },
+  "1h": {
+   "imported": 18351,
+   "missing_in_archive": 204,
+   "missing__head_uncovered": 198,
+   "NOT_PLANNED": 528,
+   "downloaded": 528,
+   "missing__true_gap": 6,
+   "already_imported": 44,
+   "stale_entries_not_in_plan": 0,
+   "unplanned_pre_archive_days_lower_bound": 157
+  },
+  "30m": {
+   "imported": 18349,
+   "missing_in_archive": 206,
+   "missing__head_uncovered": 198,
+   "NOT_PLANNED": 528,
+   "downloaded": 528,
+   "missing__true_gap": 8,
+   "already_imported": 44,
+   "stale_entries_not_in_plan": 0,
+   "unplanned_pre_archive_days_lower_bound": 157
+  },
+  "15m": {
+   "imported": 12225,
+   "downloaded": 6676,
+   "missing_in_archive": 200,
+   "missing__head_uncovered": 198,
+   "NOT_PLANNED": 528,
+   "already_imported": 26,
+   "missing__true_gap": 2,
+   "stale_entries_not_in_plan": 6244,
+   "unplanned_pre_archive_days_lower_bound": 157
+  },
+  "5m": {
+   "downloaded": 15227,
+   "missing_in_archive": 206,
+   "missing__head_uncovered": 198,
+   "NOT_PLANNED": 528,
+   "imported": 3664,
+   "missing__true_gap": 8,
+   "already_imported": 14,
+   "downloaded_cached": 16,
+   "stale_entries_not_in_plan": 6210,
+   "unplanned_pre_archive_days_lower_bound": 157
+  },
+  "1m": {
+   "downloaded": 18919,
+   "missing_in_archive": 205,
+   "missing__head_uncovered": 198,
+   "NOT_PLANNED": 528,
+   "missing__true_gap": 7,
+   "downloaded_cached": 3,
+   "stale_entries_not_in_plan": 0,
+   "unplanned_pre_archive_days_lower_bound": 157
+  }
+ },
+ "grand_total": {
+  "missing_in_archive": 1837,
+  "missing__head_uncovered": 1782,
+  "imported": 127057,
+  "NOT_PLANNED": 4752,
+  "missing__true_gap": 55,
+  "already_imported": 578,
+  "stale_entries_not_in_plan": 12824,
+  "unplanned_pre_archive_days_lower_bound": 1413,
+  "downloaded": 42652,
+  "downloaded_cached": 19
+ },
+ "head_uncovered": [
+  {
+   "tf": "12h",
+   "symbol": "GTCUSDT",
+   "n": 45,
+   "from": "2021-04-17",
+   "to": "2021-05-31"
+  },
+  {
+   "tf": "15m",
+   "symbol": "GTCUSDT",
+   "n": 45,
+   "from": "2021-04-17",
+   "to": "2021-05-31"
+  },
+  {
+   "tf": "1d",
+   "symbol": "GTCUSDT",
+   "n": 45,
+   "from": "2021-04-17",
+   "to": "2021-05-31"
+  },
+  {
+   "tf": "1h",
+   "symbol": "GTCUSDT",
+   "n": 45,
+   "from": "2021-04-17",
+   "to": "2021-05-31"
+  },
+  {
+   "tf": "1m",
+   "symbol": "GTCUSDT",
+   "n": 45,
+   "from": "2021-04-17",
+   "to": "2021-05-31"
+  },
+  {
+   "tf": "30m",
+   "symbol": "GTCUSDT",
+   "n": 45,
+   "from": "2021-04-17",
+   "to": "2021-05-31"
+  },
+  {
+   "tf": "4h",
+   "symbol": "GTCUSDT",
+   "n": 45,
+   "from": "2021-04-17",
+   "to": "2021-05-31"
+  },
+  {
+   "tf": "5m",
+   "symbol": "GTCUSDT",
+   "n": 45,
+   "from": "2021-04-17",
+   "to": "2021-05-31"
+  },
+  {
+   "tf": "8h",
+   "symbol": "GTCUSDT",
+   "n": 45,
+   "from": "2021-04-17",
+   "to": "2021-05-31"
+  },
+  {
+   "tf": "12h",
+   "symbol": "SKLUSDT",
+   "n": 45,
+   "from": "2020-10-17",
+   "to": "2020-11-30"
+  },
+  {
+   "tf": "15m",
+   "symbol": "SKLUSDT",
+   "n": 45,
+   "from": "2020-10-17",
+   "to": "2020-11-30"
+  },
+  {
+   "tf": "1d",
+   "symbol": "SKLUSDT",
+   "n": 45,
+   "from": "2020-10-17",
+   "to": "2020-11-30"
+  },
+  {
+   "tf": "1h",
+   "symbol": "SKLUSDT",
+   "n": 45,
+   "from": "2020-10-17",
+   "to": "2020-11-30"
+  },
+  {
+   "tf": "1m",
+   "symbol": "SKLUSDT",
+   "n": 45,
+   "from": "2020-10-17",
+   "to": "2020-11-30"
+  },
+  {
+   "tf": "30m",
+   "symbol": "SKLUSDT",
+   "n": 45,
+   "from": "2020-10-17",
+   "to": "2020-11-30"
+  },
+  {
+   "tf": "4h",
+   "symbol": "SKLUSDT",
+   "n": 45,
+   "from": "2020-10-17",
+   "to": "2020-11-30"
+  },
+  {
+   "tf": "5m",
+   "symbol": "SKLUSDT",
+   "n": 45,
+   "from": "2020-10-17",
+   "to": "2020-11-30"
+  },
+  {
+   "tf": "8h",
+   "symbol": "SKLUSDT",
+   "n": 45,
+   "from": "2020-10-17",
+   "to": "2020-11-30"
+  },
+  {
+   "tf": "12h",
+   "symbol": "BTCUSDT",
+   "n": 44,
+   "from": "2019-11-17",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "15m",
+   "symbol": "BTCUSDT",
+   "n": 44,
+   "from": "2019-11-17",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "1d",
+   "symbol": "BTCUSDT",
+   "n": 44,
+   "from": "2019-11-17",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "1h",
+   "symbol": "BTCUSDT",
+   "n": 44,
+   "from": "2019-11-17",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "1m",
+   "symbol": "BTCUSDT",
+   "n": 44,
+   "from": "2019-11-17",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "30m",
+   "symbol": "BTCUSDT",
+   "n": 44,
+   "from": "2019-11-17",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "4h",
+   "symbol": "BTCUSDT",
+   "n": 44,
+   "from": "2019-11-17",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "5m",
+   "symbol": "BTCUSDT",
+   "n": 44,
+   "from": "2019-11-17",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "8h",
+   "symbol": "BTCUSDT",
+   "n": 44,
+   "from": "2019-11-17",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "12h",
+   "symbol": "ETHUSDT",
+   "n": 34,
+   "from": "2019-11-27",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "15m",
+   "symbol": "ETHUSDT",
+   "n": 34,
+   "from": "2019-11-27",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "1d",
+   "symbol": "ETHUSDT",
+   "n": 34,
+   "from": "2019-11-27",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "1h",
+   "symbol": "ETHUSDT",
+   "n": 34,
+   "from": "2019-11-27",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "1m",
+   "symbol": "ETHUSDT",
+   "n": 34,
+   "from": "2019-11-27",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "30m",
+   "symbol": "ETHUSDT",
+   "n": 34,
+   "from": "2019-11-27",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "4h",
+   "symbol": "ETHUSDT",
+   "n": 34,
+   "from": "2019-11-27",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "5m",
+   "symbol": "ETHUSDT",
+   "n": 34,
+   "from": "2019-11-27",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "8h",
+   "symbol": "ETHUSDT",
+   "n": 34,
+   "from": "2019-11-27",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "12h",
+   "symbol": "MASKUSDT",
+   "n": 16,
+   "from": "2021-07-16",
+   "to": "2021-07-31"
+  },
+  {
+   "tf": "15m",
+   "symbol": "MASKUSDT",
+   "n": 16,
+   "from": "2021-07-16",
+   "to": "2021-07-31"
+  },
+  {
+   "tf": "1d",
+   "symbol": "MASKUSDT",
+   "n": 16,
+   "from": "2021-07-16",
+   "to": "2021-07-31"
+  },
+  {
+   "tf": "1h",
+   "symbol": "MASKUSDT",
+   "n": 16,
+   "from": "2021-07-16",
+   "to": "2021-07-31"
+  },
+  {
+   "tf": "1m",
+   "symbol": "MASKUSDT",
+   "n": 16,
+   "from": "2021-07-16",
+   "to": "2021-07-31"
+  },
+  {
+   "tf": "30m",
+   "symbol": "MASKUSDT",
+   "n": 16,
+   "from": "2021-07-16",
+   "to": "2021-07-31"
+  },
+  {
+   "tf": "4h",
+   "symbol": "MASKUSDT",
+   "n": 16,
+   "from": "2021-07-16",
+   "to": "2021-07-31"
+  },
+  {
+   "tf": "5m",
+   "symbol": "MASKUSDT",
+   "n": 16,
+   "from": "2021-07-16",
+   "to": "2021-07-31"
+  },
+  {
+   "tf": "8h",
+   "symbol": "MASKUSDT",
+   "n": 16,
+   "from": "2021-07-16",
+   "to": "2021-07-31"
+  },
+  {
+   "tf": "12h",
+   "symbol": "BCHUSDT",
+   "n": 12,
+   "from": "2019-12-19",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "15m",
+   "symbol": "BCHUSDT",
+   "n": 12,
+   "from": "2019-12-19",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "1d",
+   "symbol": "BCHUSDT",
+   "n": 12,
+   "from": "2019-12-19",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "1h",
+   "symbol": "BCHUSDT",
+   "n": 12,
+   "from": "2019-12-19",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "1m",
+   "symbol": "BCHUSDT",
+   "n": 12,
+   "from": "2019-12-19",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "30m",
+   "symbol": "BCHUSDT",
+   "n": 12,
+   "from": "2019-12-19",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "4h",
+   "symbol": "BCHUSDT",
+   "n": 12,
+   "from": "2019-12-19",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "5m",
+   "symbol": "BCHUSDT",
+   "n": 12,
+   "from": "2019-12-19",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "8h",
+   "symbol": "BCHUSDT",
+   "n": 12,
+   "from": "2019-12-19",
+   "to": "2019-12-30"
+  },
+  {
+   "tf": "12h",
+   "symbol": "OGNUSDT",
+   "n": 1,
+   "from": "2021-03-31",
+   "to": "2021-03-31"
+  },
+  {
+   "tf": "15m",
+   "symbol": "OGNUSDT",
+   "n": 1,
+   "from": "2021-03-31",
+   "to": "2021-03-31"
+  },
+  {
+   "tf": "1d",
+   "symbol": "OGNUSDT",
+   "n": 1,
+   "from": "2021-03-31",
+   "to": "2021-03-31"
+  },
+  {
+   "tf": "1h",
+   "symbol": "OGNUSDT",
+   "n": 1,
+   "from": "2021-03-31",
+   "to": "2021-03-31"
+  },
+  {
+   "tf": "1m",
+   "symbol": "OGNUSDT",
+   "n": 1,
+   "from": "2021-03-31",
+   "to": "2021-03-31"
+  },
+  {
+   "tf": "30m",
+   "symbol": "OGNUSDT",
+   "n": 1,
+   "from": "2021-03-31",
+   "to": "2021-03-31"
+  },
+  {
+   "tf": "4h",
+   "symbol": "OGNUSDT",
+   "n": 1,
+   "from": "2021-03-31",
+   "to": "2021-03-31"
+  },
+  {
+   "tf": "5m",
+   "symbol": "OGNUSDT",
+   "n": 1,
+   "from": "2021-03-31",
+   "to": "2021-03-31"
+  },
+  {
+   "tf": "8h",
+   "symbol": "OGNUSDT",
+   "n": 1,
+   "from": "2021-03-31",
+   "to": "2021-03-31"
+  },
+  {
+   "tf": "12h",
+   "symbol": "TUSDT",
+   "n": 1,
+   "from": "2023-01-31",
+   "to": "2023-01-31"
+  },
+  {
+   "tf": "15m",
+   "symbol": "TUSDT",
+   "n": 1,
+   "from": "2023-01-31",
+   "to": "2023-01-31"
+  },
+  {
+   "tf": "1d",
+   "symbol": "TUSDT",
+   "n": 1,
+   "from": "2023-01-31",
+   "to": "2023-01-31"
+  },
+  {
+   "tf": "1h",
+   "symbol": "TUSDT",
+   "n": 1,
+   "from": "2023-01-31",
+   "to": "2023-01-31"
+  },
+  {
+   "tf": "1m",
+   "symbol": "TUSDT",
+   "n": 1,
+   "from": "2023-01-31",
+   "to": "2023-01-31"
+  },
+  {
+   "tf": "30m",
+   "symbol": "TUSDT",
+   "n": 1,
+   "from": "2023-01-31",
+   "to": "2023-01-31"
+  },
+  {
+   "tf": "4h",
+   "symbol": "TUSDT",
+   "n": 1,
+   "from": "2023-01-31",
+   "to": "2023-01-31"
+  },
+  {
+   "tf": "5m",
+   "symbol": "TUSDT",
+   "n": 1,
+   "from": "2023-01-31",
+   "to": "2023-01-31"
+  },
+  {
+   "tf": "8h",
+   "symbol": "TUSDT",
+   "n": 1,
+   "from": "2023-01-31",
+   "to": "2023-01-31"
+  }
+ ],
+ "true_gap": [
+  {
+   "tf": "1d",
+   "symbol": "IOTAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1d",
+   "symbol": "GRTUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1d",
+   "symbol": "MERLUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1d",
+   "symbol": "HANAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1d",
+   "symbol": "LABUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "12h",
+   "symbol": "MERLUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "12h",
+   "symbol": "HANAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "12h",
+   "symbol": "LABUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "8h",
+   "symbol": "IOTAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "8h",
+   "symbol": "ILVUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "8h",
+   "symbol": "KASUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "8h",
+   "symbol": "MERLUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "8h",
+   "symbol": "HOMEUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "8h",
+   "symbol": "HANAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "8h",
+   "symbol": "LABUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "8h",
+   "symbol": "JCTUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "4h",
+   "symbol": "IOTAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "4h",
+   "symbol": "ILVUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "4h",
+   "symbol": "KASUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "4h",
+   "symbol": "MERLUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "4h",
+   "symbol": "HOMEUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "4h",
+   "symbol": "HANAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "4h",
+   "symbol": "LABUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "4h",
+   "symbol": "JCTUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1h",
+   "symbol": "IOTAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1h",
+   "symbol": "GRTUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1h",
+   "symbol": "ILVUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1h",
+   "symbol": "MERLUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1h",
+   "symbol": "HANAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1h",
+   "symbol": "LABUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "30m",
+   "symbol": "IOTAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "30m",
+   "symbol": "ILVUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "30m",
+   "symbol": "KASUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "30m",
+   "symbol": "MERLUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "30m",
+   "symbol": "HOMEUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "30m",
+   "symbol": "HANAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "30m",
+   "symbol": "LABUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "30m",
+   "symbol": "JCTUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "15m",
+   "symbol": "MERLUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "15m",
+   "symbol": "LABUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "5m",
+   "symbol": "IOTAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "5m",
+   "symbol": "ILVUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "5m",
+   "symbol": "KASUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "5m",
+   "symbol": "MERLUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "5m",
+   "symbol": "HOMEUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "5m",
+   "symbol": "HANAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "5m",
+   "symbol": "LABUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "5m",
+   "symbol": "JCTUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1m",
+   "symbol": "IOTAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1m",
+   "symbol": "ILVUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1m",
+   "symbol": "MERLUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1m",
+   "symbol": "HOMEUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1m",
+   "symbol": "HANAUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1m",
+   "symbol": "LABUSDT",
+   "period": "2026-10-05"
+  },
+  {
+   "tf": "1m",
+   "symbol": "JCTUSDT",
+   "period": "2026-10-05"
+  }
+ ],
+ "note": "missing__head_uncovered = 计划内但**早于该标的该周期首个官方月归档**的探测（官方从未发布该期归档，数据可由 REST 补）；missing__true_gap = 官方月归档已覆盖区间内的缺期（真缺口，须 REST 或官方证据）；unplanned_pre_archive_days_lower_bound = plan 主动放弃探测的头段天数（下界）。"
+}

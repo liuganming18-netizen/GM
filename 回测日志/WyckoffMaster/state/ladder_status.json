@@ -1,0 +1,9 @@
+{
+  "schema": "wyckoffmaster_run_ladder/v2_v31",
+  "generated_utc": "2026-10-14T18:12:13Z",
+  "status": "REFUSED_NOT_READY",
+  "reason": "选型未锁定（缺 winner_lock.json）⇒ 禁止运行 Holdout 段。必须先在 IS/Val 上锁定唯一模型并写 winner_lock。",
+  "dependencies": [
+    "state/winner_lock.json（IS/Val 选型锁定后写入）"
+  ]
+}

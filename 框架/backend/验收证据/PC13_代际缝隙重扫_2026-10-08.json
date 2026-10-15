@@ -1,0 +1,466 @@
+{
+ "generated_utc": "2026-10-08T13:09:07Z",
+ "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "criterion": "内部洞满足「洞终点 + 周期步长 == 官方REST最早(rest_first)」⇒ 判为**代际缝隙**（新合约上市前无合约窗口）。不设日期过滤。",
+ "timeframes": {
+  "1d": {
+   "symbols_with_gaps": 1,
+   "candidates": [
+    {
+     "key": "binance:ICPUSDT",
+     "tf": "1d",
+     "gap": [
+      "2022-09-22T00:00:00Z",
+      "2022-09-26T00:00:00Z"
+     ],
+     "gap_bars": 5,
+     "rest_first": "2022-09-27T00:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    }
+   ]
+  },
+  "12h": {
+   "symbols_with_gaps": 3,
+   "candidates": [
+    {
+     "key": "binance:ICPUSDT",
+     "tf": "12h",
+     "gap": [
+      "2022-09-22T00:00:00Z",
+      "2022-09-26T12:00:00Z"
+     ],
+     "gap_bars": 10,
+     "rest_first": "2022-09-27T00:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:LITUSDT",
+     "tf": "12h",
+     "gap": [
+      "2025-12-23T00:00:00Z",
+      "2025-12-23T00:00:00Z"
+     ],
+     "gap_bars": 1,
+     "rest_first": "2025-12-23T12:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:MAVIAUSDT",
+     "tf": "12h",
+     "gap": [
+      "2025-03-26T00:00:00Z",
+      "2025-03-26T00:00:00Z"
+     ],
+     "gap_bars": 1,
+     "rest_first": "2025-03-26T12:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    }
+   ]
+  },
+  "8h": {
+   "symbols_with_gaps": 8,
+   "candidates": [
+    {
+     "key": "binance:AIAUSDT",
+     "tf": "8h",
+     "gap": [
+      "2026-01-20T00:00:00Z",
+      "2026-01-20T00:00:00Z"
+     ],
+     "gap_bars": 1,
+     "rest_first": "2026-01-20T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CTKUSDT",
+     "tf": "8h",
+     "gap": [
+      "2025-04-30T00:00:00Z",
+      "2025-04-30T00:00:00Z"
+     ],
+     "gap_bars": 1,
+     "rest_first": "2025-04-30T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CVCUSDT",
+     "tf": "8h",
+     "gap": [
+      "2025-05-16T00:00:00Z",
+      "2025-05-16T00:00:00Z"
+     ],
+     "gap_bars": 1,
+     "rest_first": "2025-05-16T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CVXUSDT",
+     "tf": "8h",
+     "gap": [
+      "2025-07-23T00:00:00Z",
+      "2025-07-23T00:00:00Z"
+     ],
+     "gap_bars": 1,
+     "rest_first": "2025-07-23T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:ICPUSDT",
+     "tf": "8h",
+     "gap": [
+      "2022-09-22T00:00:00Z",
+      "2022-09-26T16:00:00Z"
+     ],
+     "gap_bars": 15,
+     "rest_first": "2022-09-27T00:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:LITUSDT",
+     "tf": "8h",
+     "gap": [
+      "2025-12-23T00:00:00Z",
+      "2025-12-23T08:00:00Z"
+     ],
+     "gap_bars": 2,
+     "rest_first": "2025-12-23T16:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:MAVIAUSDT",
+     "tf": "8h",
+     "gap": [
+      "2025-03-26T00:00:00Z",
+      "2025-03-26T08:00:00Z"
+     ],
+     "gap_bars": 2,
+     "rest_first": "2025-03-26T16:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:SLPUSDT",
+     "tf": "8h",
+     "gap": [
+      "2025-07-23T00:00:00Z",
+      "2025-07-23T00:00:00Z"
+     ],
+     "gap_bars": 1,
+     "rest_first": "2025-07-23T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    }
+   ]
+  },
+  "4h": {
+   "symbols_with_gaps": 9,
+   "candidates": [
+    {
+     "key": "binance:AIAUSDT",
+     "tf": "4h",
+     "gap": [
+      "2026-01-20T00:00:00Z",
+      "2026-01-20T04:00:00Z"
+     ],
+     "gap_bars": 2,
+     "rest_first": "2026-01-20T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CTKUSDT",
+     "tf": "4h",
+     "gap": [
+      "2025-04-30T00:00:00Z",
+      "2025-04-30T04:00:00Z"
+     ],
+     "gap_bars": 2,
+     "rest_first": "2025-04-30T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CVCUSDT",
+     "tf": "4h",
+     "gap": [
+      "2025-05-16T00:00:00Z",
+      "2025-05-16T04:00:00Z"
+     ],
+     "gap_bars": 2,
+     "rest_first": "2025-05-16T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CVXUSDT",
+     "tf": "4h",
+     "gap": [
+      "2025-07-23T00:00:00Z",
+      "2025-07-23T04:00:00Z"
+     ],
+     "gap_bars": 2,
+     "rest_first": "2025-07-23T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:ICPUSDT",
+     "tf": "4h",
+     "gap": [
+      "2022-09-22T00:00:00Z",
+      "2022-09-26T20:00:00Z"
+     ],
+     "gap_bars": 30,
+     "rest_first": "2022-09-27T00:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:LITUSDT",
+     "tf": "4h",
+     "gap": [
+      "2025-12-23T00:00:00Z",
+      "2025-12-23T12:00:00Z"
+     ],
+     "gap_bars": 4,
+     "rest_first": "2025-12-23T16:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:MAVIAUSDT",
+     "tf": "4h",
+     "gap": [
+      "2025-03-26T00:00:00Z",
+      "2025-03-26T12:00:00Z"
+     ],
+     "gap_bars": 4,
+     "rest_first": "2025-03-26T16:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:PUMPUSDT",
+     "tf": "4h",
+     "gap": [
+      "2025-07-10T00:00:00Z",
+      "2025-07-10T00:00:00Z"
+     ],
+     "gap_bars": 1,
+     "rest_first": "2025-07-10T04:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:SLPUSDT",
+     "tf": "4h",
+     "gap": [
+      "2025-07-23T00:00:00Z",
+      "2025-07-23T04:00:00Z"
+     ],
+     "gap_bars": 2,
+     "rest_first": "2025-07-23T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    }
+   ]
+  },
+  "1h": {
+   "symbols_with_gaps": 9,
+   "candidates": [
+    {
+     "key": "binance:AIAUSDT",
+     "tf": "1h",
+     "gap": [
+      "2026-01-20T00:00:00Z",
+      "2026-01-20T10:00:00Z"
+     ],
+     "gap_bars": 11,
+     "rest_first": "2026-01-20T11:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CTKUSDT",
+     "tf": "1h",
+     "gap": [
+      "2025-04-30T00:00:00Z",
+      "2025-04-30T09:00:00Z"
+     ],
+     "gap_bars": 10,
+     "rest_first": "2025-04-30T10:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CVCUSDT",
+     "tf": "1h",
+     "gap": [
+      "2025-05-16T00:00:00Z",
+      "2025-05-16T07:00:00Z"
+     ],
+     "gap_bars": 8,
+     "rest_first": "2025-05-16T08:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CVXUSDT",
+     "tf": "1h",
+     "gap": [
+      "2025-07-23T00:00:00Z",
+      "2025-07-23T10:00:00Z"
+     ],
+     "gap_bars": 11,
+     "rest_first": "2025-07-23T11:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:ICPUSDT",
+     "tf": "1h",
+     "gap": [
+      "2022-09-22T00:00:00Z",
+      "2022-09-27T01:00:00Z"
+     ],
+     "gap_bars": 122,
+     "rest_first": "2022-09-27T02:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:LITUSDT",
+     "tf": "1h",
+     "gap": [
+      "2025-12-23T00:00:00Z",
+      "2025-12-23T16:00:00Z"
+     ],
+     "gap_bars": 17,
+     "rest_first": "2025-12-23T17:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:MAVIAUSDT",
+     "tf": "1h",
+     "gap": [
+      "2025-03-26T00:00:00Z",
+      "2025-03-26T16:00:00Z"
+     ],
+     "gap_bars": 17,
+     "rest_first": "2025-03-26T17:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:PUMPUSDT",
+     "tf": "1h",
+     "gap": [
+      "2025-07-10T00:00:00Z",
+      "2025-07-10T06:00:00Z"
+     ],
+     "gap_bars": 7,
+     "rest_first": "2025-07-10T07:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:SLPUSDT",
+     "tf": "1h",
+     "gap": [
+      "2025-07-23T00:00:00Z",
+      "2025-07-23T10:00:00Z"
+     ],
+     "gap_bars": 11,
+     "rest_first": "2025-07-23T11:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    }
+   ]
+  },
+  "30m": {
+   "symbols_with_gaps": 9,
+   "candidates": [
+    {
+     "key": "binance:AIAUSDT",
+     "tf": "30m",
+     "gap": [
+      "2026-01-20T00:00:00Z",
+      "2026-01-20T10:30:00Z"
+     ],
+     "gap_bars": 22,
+     "rest_first": "2026-01-20T11:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CTKUSDT",
+     "tf": "30m",
+     "gap": [
+      "2025-04-30T00:00:00Z",
+      "2025-04-30T09:30:00Z"
+     ],
+     "gap_bars": 20,
+     "rest_first": "2025-04-30T10:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CVCUSDT",
+     "tf": "30m",
+     "gap": [
+      "2025-05-16T00:00:00Z",
+      "2025-05-16T08:00:00Z"
+     ],
+     "gap_bars": 17,
+     "rest_first": "2025-05-16T08:30:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:CVXUSDT",
+     "tf": "30m",
+     "gap": [
+      "2025-07-23T00:00:00Z",
+      "2025-07-23T11:00:00Z"
+     ],
+     "gap_bars": 23,
+     "rest_first": "2025-07-23T11:30:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:ICPUSDT",
+     "tf": "30m",
+     "gap": [
+      "2022-09-22T00:00:00Z",
+      "2022-09-27T02:00:00Z"
+     ],
+     "gap_bars": 245,
+     "rest_first": "2022-09-27T02:30:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:LITUSDT",
+     "tf": "30m",
+     "gap": [
+      "2025-12-23T00:00:00Z",
+      "2025-12-23T17:00:00Z"
+     ],
+     "gap_bars": 35,
+     "rest_first": "2025-12-23T17:30:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:MAVIAUSDT",
+     "tf": "30m",
+     "gap": [
+      "2025-03-26T00:00:00Z",
+      "2025-03-26T16:30:00Z"
+     ],
+     "gap_bars": 34,
+     "rest_first": "2025-03-26T17:00:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:PUMPUSDT",
+     "tf": "30m",
+     "gap": [
+      "2025-07-10T00:00:00Z",
+      "2025-07-10T07:00:00Z"
+     ],
+     "gap_bars": 15,
+     "rest_first": "2025-07-10T07:30:00Z",
+     "why": "洞终点+步长==rest_first"
+    },
+    {
+     "key": "binance:SLPUSDT",
+     "tf": "30m",
+     "gap": [
+      "2025-07-23T00:00:00Z",
+      "2025-07-23T11:00:00Z"
+     ],
+     "gap_bars": 23,
+     "rest_first": "2025-07-23T11:30:00Z",
+     "why": "洞终点+步长==rest_first"
+    }
+   ]
+  }
+ }
+}

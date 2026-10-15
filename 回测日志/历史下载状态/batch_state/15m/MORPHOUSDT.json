@@ -1,0 +1,544 @@
+{
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2024-11.zip",
+  "bytes": 15943,
+  "sha256": "1b3b043a7619708882b96931276ff7c019ea9783e43382c2bb523a98e1fd3060",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119590,
+   "新增版本数": 326,
+   "状态": "已入库"
+  },
+  "source_id": 119590,
+  "rows": 326
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2024-12.zip",
+  "bytes": 139010,
+  "sha256": "ee560971d9055c2a258932cba154c5e55bdcbda04df31f30843148617ba5507c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119591,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119591,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-02.zip",
+  "bytes": 119894,
+  "sha256": "47e3ed703b7cb1397d7945d61990b56b224b9f79c6bc11d25059ad8aa6e97cfc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119593,
+   "新增版本数": 2688,
+   "状态": "已入库"
+  },
+  "source_id": 119593,
+  "rows": 2688
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-01.zip",
+  "bytes": 136742,
+  "sha256": "d2df31e6534967adffc3619296688ea77b3a08ecd8018a21dd60e3c0b2576a2a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119592,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119592,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-03.zip",
+  "bytes": 126595,
+  "sha256": "9d5f780e8e0d4b60d42457ca11bb288b9f8007bce5b9620afe8c151aad620a8d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119594,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119594,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-04.zip",
+  "bytes": 121394,
+  "sha256": "fa417a23d6dd945a4d21830ef6053c27b288af2c0696741f84e655c861195259",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119595,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 119595,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-05.zip",
+  "bytes": 125747,
+  "sha256": "d2f9715a38951b84567c17da99fff19a37cdcfad5bff73e9826ff4835b1e02cc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119596,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119596,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-06.zip",
+  "bytes": 119569,
+  "sha256": "1ba3add2b007c24286a115ce583c00feac7cc853840c2ab33414430abf552bfb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119597,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 119597,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-07.zip",
+  "bytes": 126196,
+  "sha256": "4301179d3ff167b02506a9c7545b014473c711671de4559bfa0c1ebaabce2fcd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119598,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119598,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-08.zip",
+  "bytes": 128039,
+  "sha256": "2a6677f53fe5945f60006d86ab71d24c6d0e608d767922b58b116fe0ceabce98",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119599,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119599,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-09.zip",
+  "bytes": 122641,
+  "sha256": "bbad61f0d5eee26a0a7fceb6cd3d0cd46b146be4ddda6a4c6ee42f69fd9dca2e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119600,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 119600,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-10.zip",
+  "bytes": 131356,
+  "sha256": "296725a33d008fbcbcad728b94ea843c82e9ae818b8ebaf1db9ed290467a9d68",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119601,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119601,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-12.zip",
+  "bytes": 123562,
+  "sha256": "448f0f4f143f629960d706ce0d8a1923572419fbf052ed39eff91fa2cd472228",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119603,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119603,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2025-11.zip",
+  "bytes": 122955,
+  "sha256": "4a7173341fc06c9a6fdfacd24e0a4c6794d5ac9ab3af5ba78de71bcb05bb183f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119602,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 119602,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-01.zip",
+  "bytes": 122852,
+  "sha256": "d6cb81eac0539899f863fc2ac6511537d32b0f8c5ca0e6ad220365d308e447f0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119604,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119604,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-02.zip",
+  "bytes": 116533,
+  "sha256": "d4aea87c76f95858a0d18ecbc91e50dde02a2d761ecfa43d4cd880e4320f9a31",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119605,
+   "新增版本数": 2688,
+   "状态": "已入库"
+  },
+  "source_id": 119605,
+  "rows": 2688
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-03.zip",
+  "bytes": 127414,
+  "sha256": "6a59e5eafc8763b7202a011af3fcd2c3eb227f35e9ea156cf13d710e03f94dd9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119606,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119606,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-04.zip",
+  "bytes": 122140,
+  "sha256": "e8394f96ea722167fd5a3fd5957f4b7779bd2d6bde75badc89f0c4c3581a15be",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119607,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 119607,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-05.zip",
+  "bytes": 126811,
+  "sha256": "3171a7d6795ecb6795d12ac53c5d5736cc186d550a8da103a56916244757a708",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119608,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119608,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-06.zip",
+  "bytes": 123096,
+  "sha256": "01b62b746fc8334b895752b14aa9c4eeb5c55f4e9b3e5f8dccc146da3e510494",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119609,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 119609,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-07.zip",
+  "bytes": 127585,
+  "sha256": "179bd58e307976596aa2d214b0ebd00f2b22b6ddf2d4668a7935d31f90b88b73",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119610,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119610,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-08.zip",
+  "bytes": 126148,
+  "sha256": "a136246a64ef1f32143928d84501bd45b5b952971b869ebd7b91bd695ac834ab",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119611,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 119611,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-09.zip",
+  "bytes": 125424,
+  "sha256": "f6d088fac984777c37b7562c80515beb2488c6466930680a3c53e421bf18ccf8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119612,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 119612,
+  "rows": 2880
+ },
+ "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-01.zip",
+  "bytes": 4585,
+  "sha256": "5a4a061a3e0072fad894c4953c02416d596355b0de1646b2c021a35bec5fa549",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119586,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 119586,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-02.zip",
+  "bytes": 4602,
+  "sha256": "00c5a7ce25f61ac10b94c703bb89fac7e6adecd1321be11b8ebef63ee7bf3180",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119587,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 119587,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-03.zip",
+  "bytes": 4556,
+  "sha256": "ac193d2900dec2393a80bb358dedd6f0633e7c7c52d648b4d3176e86d29f32f1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119588,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 119588,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-04.zip",
+  "bytes": 4528,
+  "sha256": "e8098dfe3e58b71f1132675113304081f534be23778a3cb5e1afa0eee5979cbd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 119589,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 119589,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-05.zip",
+  "bytes": 4533,
+  "sha256": "fdf0d26d3f5deeb2268bc7b79612942646c551799dfd49a28d8883cce03a5d21",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 362902,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 362902,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-06.zip",
+  "bytes": 4526,
+  "sha256": "53a18071dd3b2e1f4cb6dddd4e732b8a4b4da95744b57f70d11f2b6c6ba76544",
+  "checksum_ok": true,
+  "size_bytes": 4526,
+  "fetched_at": "2026-10-07T20:37:48Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/15m/MORPHOUSDT/MORPHOUSDT-15m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 4073150,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 4073150,
+  "rows": 96,
+  "imported_at": "2026-10-10T14:36:38Z"
+ },
+ "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-07.zip",
+  "bytes": 4522,
+  "sha256": "a5f5ca4156b38c009542abf45c483f680e1b17b2e5ff0ea4a81ae372f9a6f98b",
+  "checksum_ok": true,
+  "size_bytes": 4522,
+  "fetched_at": "2026-10-09T14:44:10Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/15m/MORPHOUSDT/MORPHOUSDT-15m-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 4073151,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 4073151,
+  "rows": 96,
+  "imported_at": "2026-10-10T14:36:38Z"
+ },
+ "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-08.zip": {
+  "key": "data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-08.zip",
+  "kind": "daily",
+  "period": "2026-10-08",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-08.zip",
+  "bytes": 4566,
+  "sha256": "c8ee654154de185bf6c4953eb986193451d1db4110ef2e88c0c06d648b55bb25",
+  "checksum_ok": true,
+  "size_bytes": 4566,
+  "fetched_at": "2026-10-09T14:44:11Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/15m/MORPHOUSDT/MORPHOUSDT-15m-2026-10-08.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/MORPHOUSDT/15m/MORPHOUSDT-15m-2026-10-08.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 4073152,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 4073152,
+  "rows": 96,
+  "imported_at": "2026-10-10T14:36:38Z"
+ }
+}

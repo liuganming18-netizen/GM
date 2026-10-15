@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-14T20:20:04.548753+08:00",
+  "catalog_files": 32785,
+  "disk_files": 32785,
+  "missing": [],
+  "extra": [],
+  "footer_or_byte_mismatches": [],
+  "actual": {
+    "candle_heads": {
+      "files": 12457,
+      "rows": 107792528,
+      "bytes": 577042628
+    },
+    "candles": {
+      "files": 12457,
+      "rows": 108389667,
+      "bytes": 5379298145
+    },
+    "funding": {
+      "files": 525,
+      "rows": 2102859,
+      "bytes": 17987220
+    },
+    "oi": {
+      "files": 1646,
+      "rows": 123422671,
+      "bytes": 4257043629
+    },
+    "sources": {
+      "files": 5700,
+      "rows": 2072958,
+      "bytes": 148659725
+    }
+  },
+  "sha_recomputed": false
+}

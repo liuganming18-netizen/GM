@@ -1,0 +1,721 @@
+{
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2023-11.zip",
+  "bytes": 1740,
+  "sha256": "43feabade1003ebe2f4f40c4fe29c96ff1f4b7d02063cb0ff3133ec1bf5f411a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27266,
+   "新增版本数": 27,
+   "状态": "已入库"
+  },
+  "source_id": 27266,
+  "rows": 27
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2023-12.zip",
+  "bytes": 3786,
+  "sha256": "24e2a77da12006c8e28dd690fe695917bce65957095fef0e1fb23c65bf780a3a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27267,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27267,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-01.zip",
+  "bytes": 3712,
+  "sha256": "980448a3421c87b0d15205ee7868d9420ce7125034b1046485bed52fd068ec41",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27268,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27268,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-02.zip",
+  "bytes": 3493,
+  "sha256": "186153d3bf4f8b5c26a14d3da6cef2508b2c17a909841ff25c427055954de048",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27269,
+   "新增版本数": 58,
+   "状态": "已入库"
+  },
+  "source_id": 27269,
+  "rows": 58
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-04.zip",
+  "bytes": 3582,
+  "sha256": "a408f8eeda0333d6ba9032edf384eb570866c45e8e8a2d73b96604853f3444b4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27271,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27271,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-03.zip",
+  "bytes": 3724,
+  "sha256": "d9f07023db42082b306959fb0f885ad12395a7bdb7503d152cbcd6644edee91d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27270,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27270,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-06.zip",
+  "bytes": 3521,
+  "sha256": "ee4c998374a4673b94d3596f0bcb5775d4cdb7c64aa138388ae8dac50094f188",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27273,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27273,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-05.zip",
+  "bytes": 3637,
+  "sha256": "32fccb2dcb5490867d23a9f4c9d1dbc06873f62994ce3e00c3597ed078b9e063",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27272,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27272,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-07.zip",
+  "bytes": 3630,
+  "sha256": "5824a2b45dbc886aa592d7b998f1f019217f33e1d36f37c4adee4b60ea1ac520",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27274,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27274,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-08.zip",
+  "bytes": 3639,
+  "sha256": "55ac0b12fe60b2a760e201783f808bf2ec8409328eeb72b08f86ae512bd0e57d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27275,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27275,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-09.zip",
+  "bytes": 3532,
+  "sha256": "423cad62269847425917e5e86df0e00acf3b5276df0493f6de82d2c6cbcf21af",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27276,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27276,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-10.zip",
+  "bytes": 3663,
+  "sha256": "ed1f7b8b173c5b6e56aec351860b2a110b6b7d99f19bf47b6c50f1fe72ce2e96",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27277,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27277,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-11.zip",
+  "bytes": 3581,
+  "sha256": "1aab67cdc2faf2cdea7c24e0973173df4c51a35696e2ecfa70a738fc1e095af9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27278,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27278,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2024-12.zip",
+  "bytes": 3718,
+  "sha256": "1739cd50760104d3192ae1f2629405dc38e62c5b252d4a37430e19c632fd31f9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27279,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27279,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-01.zip",
+  "bytes": 3657,
+  "sha256": "9d5c5f091ab1cb2862c72c9a272156ee06782e944a54f8dd0d2abe264d73e4ea",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27280,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27280,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-02.zip",
+  "bytes": 3321,
+  "sha256": "531fa070a3b790deedd88e36f6773853acec958d98a146b6ab58de5551879dfe",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27281,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 27281,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-04.zip",
+  "bytes": 3482,
+  "sha256": "f1c4e8089f1d50c93d4b5de5d27c75824138999679a0da7aafb0c7c12aef6095",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27283,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27283,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-03.zip",
+  "bytes": 3645,
+  "sha256": "17a6d3f24f2b824667f37c6b44d0a5d677625de0f01cc5d99793b6958b3088c3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27282,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27282,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-06.zip",
+  "bytes": 3402,
+  "sha256": "f4d1a02304ab595c6aeebf0d7fdd4ac1da5b9497859e62b25fae777faa55c472",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27285,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27285,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-05.zip",
+  "bytes": 3607,
+  "sha256": "0f311ecfefd285e9e167ed72828311915f312c32bc153f196898e890911ed642",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27284,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27284,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-07.zip",
+  "bytes": 3584,
+  "sha256": "231de2b6aa85f5032a143fc23508659711661739e52c0a6c253f83c029b295fe",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27286,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27286,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-08.zip",
+  "bytes": 3547,
+  "sha256": "633f7282478d582ebf56e81456913faadc9c315a35c92fd12bbf69a0aa2db0f3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27287,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27287,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-09.zip",
+  "bytes": 3445,
+  "sha256": "5fa7bbc0088132022c7eb9f0e3beb5024781b86b5c85bc5a24b5f48649eed14e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27288,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27288,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-10.zip",
+  "bytes": 3556,
+  "sha256": "c8b3dac38b50110de58787b9ed80e6f46a9eeb3bba280b057b6d106bc1986ed6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27289,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27289,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-11.zip",
+  "bytes": 3439,
+  "sha256": "6b4532bb753bc957e0e8437fe5f09aa10964ce26be81c157ea7df9ba5c1fee58",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27290,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27290,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2025-12.zip",
+  "bytes": 3417,
+  "sha256": "016c64eeecb292e5063b13e26f0bbb323eefb2d640a04bd09609eb4506569493",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27291,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27291,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-01.zip",
+  "bytes": 3443,
+  "sha256": "05aa2012178319161231b822fd35d7edec5fbbe9236f952935f4da835d2b4925",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27292,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27292,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-02.zip",
+  "bytes": 3114,
+  "sha256": "cb201163621cbd7c8af67a6de6cf5c8f4bcf9f92233911c7a67b9917963d1538",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27293,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 27293,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-03.zip",
+  "bytes": 3428,
+  "sha256": "17eef758bfef14940c1dbcccf883291c9efc73f4279c7585673b7b37b7af3572",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27294,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27294,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-04.zip",
+  "bytes": 3261,
+  "sha256": "103d45786f8c48ba061efce738951d52f1a8aa60ae231799970052bfdad6b5ab",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27295,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27295,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-05.zip",
+  "bytes": 3390,
+  "sha256": "9d30619922dcbc2a6cd62ca8b7207958c4e25866963cbcbb6044dac5d8b9355a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27296,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27296,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-06.zip",
+  "bytes": 3267,
+  "sha256": "e194d061fa092373361eb4ace6bb8b4980cc7e8682eb99f95ecc59b3b901582d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27297,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27297,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-08.zip",
+  "bytes": 3361,
+  "sha256": "17211ba787f3c8dac53f13d5268952ff933cfca682a36340a9e4fd5ec2ef3aba",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27299,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27299,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-07.zip",
+  "bytes": 3349,
+  "sha256": "6fc54a86c3fce1507b9f43591d85b2c5a35bdefc078d3ac5c646852e0e04dd1f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27298,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27298,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-09.zip",
+  "bytes": 3327,
+  "sha256": "4b22b4cec892c0f7c50ec4d96b0739934262c73e17cd3ff31864225d85a0a55a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27300,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27300,
+  "rows": 60
+ },
+ "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-01.zip",
+  "bytes": 405,
+  "sha256": "157c0fe1ad01e5124ce9559ec7c5cd743dccde1147476f1b6b398bc3103038f9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27263,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 27263,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-02.zip",
+  "bytes": 410,
+  "sha256": "e6b487860016c1cca3b55a03a6fb261e208b31befd526be71739f114266a9b82",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27264,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 27264,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-03.zip",
+  "bytes": 408,
+  "sha256": "24e18c08e57a98188726dad18739e0451f0fcbbccf103c14925f4aad7e18a264",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27265,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 27265,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-04.zip",
+  "bytes": 417,
+  "sha256": "75592e7d2b2c95d3431e4ac582c5e2763d83af6b5f6fd29237351228641a5941",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 51338,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 51338,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-05.zip",
+  "bytes": 415,
+  "sha256": "96fc716b358bfa22b34397628b103946a4a6bd563e797b2e1e8ffd1ad1784a06",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 273103,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 273103,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-06.zip",
+  "bytes": 407,
+  "sha256": "55c170ad23d1f6e1b9bad8d3837d2d743d073b9e4b39922f2917562ad60690dc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1607274,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1607274,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-07.zip",
+  "bytes": 412,
+  "sha256": "71ec8b70ae7c40e136c2418d9a7712f49eaedf80a96966f8eec1e3a95f215988",
+  "checksum_ok": true,
+  "size_bytes": 412,
+  "fetched_at": "2026-10-08T07:24:41Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/12h/BEAMXUSDT/BEAMXUSDT-12h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/BEAMXUSDT/12h/BEAMXUSDT-12h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1798982,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1798982,
+  "rows": 2,
+  "imported_at": "2026-10-08T07:27:58Z"
+ }
+}

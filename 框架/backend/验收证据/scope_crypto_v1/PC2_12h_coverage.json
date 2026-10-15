@@ -1,0 +1,76 @@
+{
+ "generated_utc": "2026-10-08T13:47:07Z",
+ "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "pool_binance_um": 526,
+ "pool_okx_supplement": 23,
+ "scope_version": "crypto_only_v1",
+ "scope_source": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/标的池/scope_crypto.json",
+ "excluded_indices": [
+  "BTCDOMUSDT",
+  "ALLUSDT"
+ ],
+ "okx_supplement_symbols": [
+  "AEON-USDT-SWAP",
+  "AI-USDT-SWAP",
+  "BLEND-USDT-SWAP",
+  "CASHCAT-USDT-SWAP",
+  "CNPY-USDT-SWAP",
+  "CORE-USDT-SWAP",
+  "CP-USDT-SWAP",
+  "CRO-USDT-SWAP",
+  "DATA-USDT-SWAP",
+  "DGAI-USDT-SWAP",
+  "KII-USDT-SWAP",
+  "LUNA-USDT-SWAP",
+  "NES-USDT-SWAP",
+  "OFC-USDT-SWAP",
+  "OKB-USDT-SWAP",
+  "OL-USDT-SWAP",
+  "PI-USDT-SWAP",
+  "PROS-USDT-SWAP",
+  "QUANT-USDT-SWAP",
+  "RAY-USDT-SWAP",
+  "RLS-USDT-SWAP",
+  "UP-USDT-SWAP",
+  "XDP-USDT-SWAP"
+ ],
+ "gate_source": "logs/_pool_gate.py（与 _final_acceptance_6tf.py 同源）",
+ "scope_note": "head_gap 只表示「上市到库内首根」的距离（onboard 仅线索）；通过判据见 _pool_gate：头段=官方可得最早边界+身份核验；内部=逐段且仅周期绑定证据豁免；尾段=最后已收盘 bar。",
+ "timeframes": {
+  "12h": {
+   "timeframe": "12h",
+   "last_closed_open": "2026-10-08T00:00:00Z",
+   "range_cache": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/logs/pool_range_cache_12h.json",
+   "aggregate": {
+    "symbols": 549,
+    "rows": 963965,
+    "head_residual_bars": 0,
+    "internal_residual_bars": 0,
+    "tail_residual_bars": 0,
+    "head_resolved": 549,
+    "internal_documented": 12,
+    "pass": 549,
+    "no_range_evidence": 0,
+    "empty": 0,
+    "identity_unverified": 0,
+    "structural_absent": 0,
+    "off_boundary_symbols": 23,
+    "off_boundary_rows": 386
+   },
+   "status": "pass",
+   "not_passing_count": 0,
+   "not_passing": [],
+   "boundary_contamination": {
+    "symbols": 23,
+    "rows": 386,
+    "blocking": false,
+    "note": "异边界行（如 OKX 12h 旧 UTC+8 锚点）**不参与** UTC 对齐序列的完整性判定，**显式单列**不隐藏；其物理清理按既有处置方案（验收证据/P02_OKX12h旧边界_处置方案_2026-10-07.md）需**另行提交并经用户确认**，本门禁不做物理删除。"
+   },
+   "onboard_clue": {}
+  }
+ },
+ "gate": {
+  "status": "pass",
+  "failed_timeframes": []
+ }
+}

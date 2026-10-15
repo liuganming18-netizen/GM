@@ -1,0 +1,111 @@
+{
+ "pool_meta": {
+  "pool_source": "scope_crypto_v1",
+  "n": 526,
+  "scope_meta": {
+   "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/标的池/scope_crypto.json",
+   "scope_version": "crypto_only_v1",
+   "generated_utc": "2026-10-08T09:09:36Z",
+   "counts": {
+    "binance": 526,
+    "okx": 23,
+    "total": 549
+   },
+   "excluded_indices": {
+    "symbols": [
+     "BTCDOMUSDT",
+     "ALLUSDT"
+    ],
+    "reason": "币安官方 underlyingType=INDEX（加密指数，非单一加密币）；用户 2026-10-08 指令排除",
+    "underlying_type": "INDEX"
+   }
+  },
+  "scope_sha256": "7d08bdaa8f58a6e09f3ffcd315c86da8395fc1e856a0039ced5feb3421ebbc93",
+  "rule_identity": "pool:scope_crypto_v1_per_indicator_min_history:97ce8d9d95af878963fd60761164e81a"
+ },
+ "missing_summary": {},
+ "admission_min_bars": 26,
+ "indicator_min_history": {
+  "donchian_entry_channel": 21,
+  "volume_baseline": 21,
+  "atr_ewm": 20,
+  "atr_previous_bar_anchor": 21,
+  "donchian_exit_channel": 11,
+  "spring_box": 21,
+  "spring_confirm_window": 24,
+  "sc_box": 21,
+  "sc_leg": 11,
+  "sc_close_mean_incl_current": 20,
+  "sc_confirm_window": 26
+ },
+ "indicator_min_history_detail": {
+  "donchian_entry_channel": {
+   "param": "don_entry_bars",
+   "prior_bars": 20,
+   "min_bars": 21
+  },
+  "volume_baseline": {
+   "param": "vol_n",
+   "prior_bars": 20,
+   "min_bars": 21
+  },
+  "atr_ewm": {
+   "param": "atr_n",
+   "prior_bars": 19,
+   "min_bars": 20
+  },
+  "atr_previous_bar_anchor": {
+   "param": "atr_n",
+   "prior_bars": 20,
+   "min_bars": 21
+  },
+  "donchian_exit_channel": {
+   "param": "don_exit_bars",
+   "prior_bars": 10,
+   "min_bars": 11
+  },
+  "spring_box": {
+   "param": "don_entry_bars",
+   "prior_bars": 20,
+   "min_bars": 21
+  },
+  "spring_confirm_window": {
+   "param": "spring_confirm_bars",
+   "prior_bars": 20,
+   "extra_bars": 3,
+   "min_bars": 24
+  },
+  "sc_box": {
+   "param": "don_entry_bars",
+   "prior_bars": 20,
+   "min_bars": 21
+  },
+  "sc_leg": {
+   "param": "sc_leg_bars",
+   "prior_bars": 10,
+   "min_bars": 11
+  },
+  "sc_close_mean_incl_current": {
+   "param": "vol_n",
+   "prior_bars": 19,
+   "min_bars": 20
+  },
+  "sc_confirm_window": {
+   "param": "sc_confirm_bars",
+   "prior_bars": 20,
+   "extra_bars": 5,
+   "min_bars": 26
+  }
+ },
+ "uniform_240h_gate_removed": true,
+ "strategy_self_gate": {
+  "note": "冻结策略 wx_donchian_wyckoff.run() 内部参数；`len(seg) <= warmup_contiguous_bars` 的段不产生任何事件。属冻结策略自带行为（sha 即已注册 run 身份），**本层准入不使用它**，仅用于解释「更短段为何不产生事件」与决定喂给策略的数据装配长度。",
+  "param": "warmup_contiguous_bars",
+  "value": 240,
+  "used_for_admission": false
+ },
+ "assembly_lookback_hours": 240,
+ "T_utc": "2026-10-15T03:08:43Z",
+ "per_symbol": {},
+ "generated_real_utc": "2026-10-15T03:08:44Z"
+}

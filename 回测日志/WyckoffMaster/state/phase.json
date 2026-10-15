@@ -1,0 +1,57 @@
+{
+  "schema": "wyckoffmaster_phase/v2_v31",
+  "window": "回测窗口（唯一回测调度窗口）",
+  "generated_utc": "2026-10-15T02:25:00Z",
+  "spec_version": "WyckoffMaster_v3.1",
+  "phase": "V31_PREPARED_WAITING_INPUT",
+  "phase_zh": "v3.1 准备与自核验完成 / 等待两个 v3.1 就绪交付（未开始回测）",
+  "authorization": {
+    "isolated_backtest_this_round": true,
+    "note": "用户 2026-10-15 v3.1 正式开工令：立即执行 Step0→Step1→Step2，覆盖上一版冲突配置",
+    "not_authorized": ["生产发布", "入库/切流", "实盘", "合并旧账本", "前端发布", "Git 推送"]
+  },
+  "frozen_segments_v31": {
+    "IS": ["2022-01-01T00:00:00Z", "2025-01-01T00:00:00Z"],
+    "Val": ["2025-01-01T00:00:00Z", "2026-04-15T00:00:00Z"],
+    "Holdout": ["2026-04-15T00:00:00Z", "2026-10-15T00:00:00Z"],
+    "segment_end": "本段最后 15m 收盘强平（+不利滑点/费用/应结资金费），不用下一段开盘",
+    "per_segment": "5000 USDT / 零仓 / 零挂单；段界重置 cash/orders/positions/execution_state/equity_peak"
+  },
+  "gate": {
+    "strategy_ready": {"published": false, "verdict": "NOT_READY", "must_bind": "v3.1"},
+    "data_ready": {"published": false, "verdict": "NOT_READY", "must_bind": "v3.1"},
+    "overall": "WAITING_INPUT",
+    "rule": "两个 v3.1 门禁均须独立核查实际 PASS，且健康服务/12GiB 储备持续成立；不信 ready=true"
+  },
+  "v31_prep_verify": {"n_checks": 36, "n_fail": 1, "verdict": "FAIL_PENDING_DATA_WINDOW",
+                      "only_failure": "research_input_physical_isolation"},
+  "prepared": {
+    "frozen_segments": "config/frozen_segments.json (FROZEN_V31)",
+    "ladder": "config/ladder.json (v2_v31；本轮 M0–M4 + 条件 M2b；M5/M6 前向)",
+    "m2_rejection": "config/m2_rejection.json",
+    "holdout_guard": "adapters/holdout_guard.py",
+    "segment_end_adapter": "adapters/segment_end_liquidation.py",
+    "isolation_bridge": "adapters/ra_bridge.py",
+    "launcher": "adapters/launch_isolated.sh",
+    "gate_verifier": "scripts/verify_gates.py",
+    "prep_verifier": "scripts/verify_v31_prep.py",
+    "gate_probe": "scripts/check_gates_once.py",
+    "scheduler": "scripts/run_ladder.py"
+  },
+  "verified_facts": {
+    "wx_execution_sha256": "0ede9ce19c7cec9d18398572e393ef65ef4c04a6aa5ff2b41f8ad022c83dbcf1",
+    "config_view_sha256": "6d18d222d1991f99dd2ba0cdf80b35fbc57f4f482904c945f43d66ebb9df9501",
+    "ra_equiv_vs_wx_execution": "EQUIVALENT (11 表 tol=0, 四臂)",
+    "engine_segment_end_difference": "引擎用最后一根15m开盘；v3.1要求最后15m收盘 → 已写局部适配并留差异",
+    "disk_avail_gib": 53
+  },
+  "not_started": {"backtest_runs": 0, "holdout_runs": 0, "holdout_interval_read": false,
+                  "reason": "两个 v3.1 门禁未发布；按开工令先准备与核验，不空转、不跑假回测"},
+  "next_actions": [
+    "等待 strategy_ready.json 与 data_ready.json（均须绑定 v3.1）发布",
+    "发布后：scripts/verify_gates.py 独立核查（v3.1 + SHA + 覆盖 + 备份 + IS/Val/Holdout 物理分区）",
+    "核查通过：launch_isolated.sh 脱离会话跑 IS/Val 的 M0→M1→M2(+M2b)→M3_BE/M3_Step，再 M4",
+    "锁定唯一模型与 SHA → 写 state/winner_lock.json",
+    "Holdout 截止(北京时间 2026-10-15 08:00)且数据闭合通过 → 仅一次 Holdout"
+  ]
+}

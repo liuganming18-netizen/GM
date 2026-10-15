@@ -1,0 +1,95 @@
+{
+  "acceptance": {
+    "task": "数据完整度验收与全部缺失清单",
+    "mode": "read_only",
+    "status": "等待Codex审核/等待用户审核",
+    "fixed_now_ms": 1791980404548,
+    "fixed_now_utc": "2026-10-14T12:20:04.548000+00:00",
+    "pool_total": 549,
+    "pool_binance": 526,
+    "pool_okx": 23,
+    "excluded": [
+      "ALLUSDT",
+      "BTCDOMUSDT",
+      "DEFIUSDT"
+    ]
+  },
+  "current_files_readable": {
+    "catalog_files": 32785,
+    "disk_files": 32785,
+    "footer_byte_mismatch": 0,
+    "result": "PASS"
+  },
+  "recovery_completeness": {
+    "result": "FAIL",
+    "oldyear_candle_shards": 184,
+    "oldyear_lost_rows": {
+      "binance": 45453,
+      "okx": 403595
+    },
+    "oldyear_by_exchange": {
+      "binance": 97,
+      "okx": 87
+    },
+    "mainline_internal_gap_segments": 195,
+    "funding_proven_missing_events": 11773,
+    "funding_proven_missing_symbols": 420,
+    "candle_proven_missing_events": 93,
+    "candle_proven_missing_symbols": 1
+  },
+  "listing_full_history": {
+    "result": "FAIL_OR_UNKNOWN",
+    "front_end_candidates": 408,
+    "oi_candidate_segments": 8399,
+    "oi_status": {
+      "source_zip_has_no_event_in_gap": 7869,
+      "no_surviving_day_zip": 530
+    },
+    "okx_oi_earliest": "2026-10-05",
+    "okx_funding_earliest": "2026-09-02"
+  },
+  "funding_event_diff": {
+    "source_events": 2150856,
+    "proven_missing_events": 11773,
+    "conflicts": 0,
+    "same_second_ms_shift": 0,
+    "extra_in_coldhot": 38999,
+    "checksum_mismatch": 0,
+    "checksum_absent": 0,
+    "window": "2026-09-14T08:00:00Z ~ 2026-09-30T23:00:00Z",
+    "symbols_missing_26": 410,
+    "symbols_deeper": 10,
+    "deepest": 232,
+    "symbol_without_source_zip": [
+      "CTUSDT"
+    ]
+  },
+  "repeated_issues": {
+    "this_round_file_exists_not_restored": 421,
+    "breakdown": {
+      "candle_VETUSDT_8h": 1,
+      "funding_symbols": 420
+    },
+    "prior_total": "unknown"
+  },
+  "denominator_limits": [
+    "wb_plan_resume.py 排除来源不存在的ZIP出分母，并放宽2026边界年份；不能据此判全量通过",
+    "恢复前清单仅有行数：184分片/-449,048行是清单差，不等于逐时刻证明的删除事件",
+    "OI 690,426是网格候选槽，不是删除数量；7,869段源包自身无空档内事件",
+    "extra_in_coldhot 38,999为源件未覆盖的2026-10月事件，不是丢失",
+    "OKX无本地资金费/OI原件，不能记入币安同口径分母"
+  ],
+  "artifacts": {
+    "01_验收报告.md": "7cfea78dac40c26f0ba0d020a888f74300291966bee8da09b07ce8bba6d58d3e",
+    "02_全部缺失项目.csv": "818814215ccdd5895eb296320e4bb06033ace61d0b0f32e057978563a47da440",
+    "资金费逐事件缺失.csv": "feae43abaa8f4d412afd80f5f06a0b84fb15fdf2be308d567fc95accc46acf96",
+    "资金费时间与率冲突.csv": "654a4976da77282d6decde39dedd45c72c09923257a90fa0dc43216f1b488a7b",
+    "资金费逐币差集汇总.csv": "bf59bc4d6fa00b1e356a8c13484412db2d304f9b8c59f7dff9578b6d00b61716",
+    "资金费事件差集汇总.json": "09ac5427ac369f71f0557e1b43b07040be5f24f592224ff6abf16f7fa09ecd18",
+    "A_恢复前后_逐分片.csv": "3ba6faa0bd02fe9127d1e7fd1812d8172cea7e21bbb70f026f6c5fd63b709993",
+    "A_恢复前后_按币周期.csv": "40e83a370fdcea306252bfcbf350856bd9bc5a526e7151ac0848f07b1d37c7b6",
+    "C_OI缺槽分类复核.csv": "97f065231983eff927af96ea56f113602b8a015a4301db7e4598de2f1c2236dd",
+    "03_范围与网格明细.csv": "f7c42e62d512a83f97786ea0c9e17378347bd0041d59588a47d8001dc639f5f0",
+    "AC_对账汇总.json": "97a3dec38224165d54f1b3db646eb9357f2f3c03938cb5b032b28a80a935ff40"
+  }
+}

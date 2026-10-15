@@ -1,0 +1,86 @@
+{
+ "generated_utc": "2026-10-08T01:43:43Z",
+ "db_path": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "db_bytes_now": 31230795776,
+ "db_gb_now": 29.09,
+ "volume": {
+  "capacity_gb": 228.3,
+  "free_gb": 76.4,
+  "used_gb": 151.8
+ },
+ "measured_bytes_per_candle": 253.2,
+ "measurement": {
+  "method": "临时库导入 40 个 1m 月度归档（1,744,710 根）前后文件字节差",
+  "temp_db": "/tmp/_cap_test/cap.sqlite3",
+  "tables": "candle_versions + candle_heads + 索引",
+  "candles": 1744710,
+  "bytes_delta": 441647104,
+  "import_rate_files_per_s": 2.64
+ },
+ "pending_import": {
+  "1d": {
+   "files": 0,
+   "est_rows": 0,
+   "est_gb": 0.0
+  },
+  "12h": {
+   "files": 10,
+   "est_rows": 30,
+   "est_gb": 0.0
+  },
+  "8h": {
+   "files": 236,
+   "est_rows": 944,
+   "est_gb": 0.0
+  },
+  "4h": {
+   "files": 528,
+   "est_rows": 3696,
+   "est_gb": 0.0
+  },
+  "1h": {
+   "files": 528,
+   "est_rows": 13200,
+   "est_gb": 0.0
+  },
+  "30m": {
+   "files": 528,
+   "est_rows": 25872,
+   "est_gb": 0.01
+  },
+  "15m": {
+   "files": 6676,
+   "est_rows": 17454878,
+   "est_gb": 4.12
+  },
+  "5m": {
+   "files": 15243,
+   "est_rows": 96281320,
+   "est_gb": 22.7
+  },
+  "1m": {
+   "files": 18922,
+   "est_rows": 683842431,
+   "est_gb": 161.26
+  }
+ },
+ "verdict": {
+  "1d_to_5m_est_gb": 26.83,
+  "1m_est_gb": 161.26,
+  "free_gb": 76.4,
+  "1d_to_5m_fits": true,
+  "1m_fits": false,
+  "1m_shortfall_gb": 84.8,
+  "conclusion": "1d→5m 可在既有空间保护（min-free-gb=30）内完整导入；1m 全历史约需 161GB，而当前仅剩 76GB，且卷容量 228GB（已用 152GB）⇒ 在本卷上**物理不可容纳**，须扩容（外置卷/更大磁盘）或另行决策；本系统**不关闭空间保护、不删旧行情、不合成、不改锚点**。",
+  "note_new_bytes": {
+   "this_round_new_bytes": 28138780801,
+   "this_round_new_gb": 26.21,
+   "explain": "42,671 = 42,652 新抓取(downloaded) + 19 本地校验复用(downloaded_cached)"
+  }
+ },
+ "pending_import_total": {
+  "files": 42671,
+  "est_rows": 797622371,
+  "est_gb": 188.09
+ }
+}

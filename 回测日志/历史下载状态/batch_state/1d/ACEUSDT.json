@@ -1,0 +1,690 @@
+{
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2023-12.zip",
+  "bytes": 1127,
+  "sha256": "5cde1b8f2c984c95745688465da703efb2139a8f243d6feba1f35079fb3b7697",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10151,
+   "新增版本数": 14,
+   "状态": "已入库"
+  },
+  "source_id": 10151,
+  "rows": 14
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-01.zip",
+  "bytes": 2114,
+  "sha256": "eb30d5e42c98d55d7e3bfd26380668cf36857b73bf35c265853cf23b59eb08d4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10152,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10152,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-02.zip",
+  "bytes": 1986,
+  "sha256": "f35d7caf96971736ec8f8b06ab708ec1b69a49928330e5d72ee06ff4c4bc1b77",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10153,
+   "新增版本数": 29,
+   "状态": "已入库"
+  },
+  "source_id": 10153,
+  "rows": 29
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-03.zip",
+  "bytes": 2118,
+  "sha256": "a078e014fc1c26a62f32a994a8ccb0eb29d1da61e8ae1f0e4e78ab4eadfdac48",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10154,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10154,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-04.zip",
+  "bytes": 2029,
+  "sha256": "49df4bb4a44768e5d275ae3eb1fdde1b0da8defa74b30dfff8a52fde417844a1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10155,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10155,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-05.zip",
+  "bytes": 2059,
+  "sha256": "fb191f56e627e2d4afd7d36b0fd6af13d256dd81fec94664193dce0b5b51c100",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10156,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10156,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-06.zip",
+  "bytes": 2003,
+  "sha256": "05b0b75901342bc94d07f62358776be8cd48ee8032c8ba735e8bc94c7defa34b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10157,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10157,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-07.zip",
+  "bytes": 2064,
+  "sha256": "27b4cfe6cf5d7a081c22d0ebcb9ee8f4b9c7ab5b9d61e69086053df5f9164766",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10158,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10158,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-09.zip",
+  "bytes": 1978,
+  "sha256": "da321d7b9f8745391594380d76c0e8b4a14f129523de2ff915911d5bd9cb4591",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10160,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10160,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-08.zip",
+  "bytes": 2073,
+  "sha256": "90a168d422828f6a62ebb2c11eb4fb49342b0d17579c200f6dd0c5693210ff0d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10159,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10159,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-10.zip",
+  "bytes": 2030,
+  "sha256": "d66de6fdcff03ca7c13d131aecff5f4a3a6ed314a591ced7bebba48c1dc4b167",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10161,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10161,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-11.zip",
+  "bytes": 2002,
+  "sha256": "6b4d81d92f9ea2a9b6395f16da44d305a9e88d3dde59d5808b64a88898c84149",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10162,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10162,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-01.zip",
+  "bytes": 2025,
+  "sha256": "07175f879e945968c2812343bf7c4372b049fee1c178878abb08f8bf15396107",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10164,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10164,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2024-12.zip",
+  "bytes": 2033,
+  "sha256": "ff393cedcb52ed09dac43414a77f36ca8fa228554af3b0d57ac60f0041270649",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10163,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10163,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-02.zip",
+  "bytes": 1842,
+  "sha256": "0ee66b224d74055ad62ee471602f3bc84220097b9ae37fc5cba2f7e12e17c896",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10165,
+   "新增版本数": 28,
+   "状态": "已入库"
+  },
+  "source_id": 10165,
+  "rows": 28
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-03.zip",
+  "bytes": 1974,
+  "sha256": "9a65a106c68443c52c95a4a85d53bfc5e4106b66f250e5aa8213df2b98cb2dca",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10166,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10166,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-05.zip",
+  "bytes": 1987,
+  "sha256": "cb2bd2a9f13a307140fe2909a0521adcc363db4e600fd06de6ebdaa3395aadc1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10168,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10168,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-04.zip",
+  "bytes": 1943,
+  "sha256": "a3bf387cfeb0d5757f09d64fc86363d2d02f95ac09111e14bfcc2be6e3a8e1ae",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10167,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10167,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-06.zip",
+  "bytes": 1901,
+  "sha256": "10e4af326386c5b55b565d85ec9c56c91c53cca620769fdcbe118b4a8fc8021d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10169,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10169,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-07.zip",
+  "bytes": 1994,
+  "sha256": "2361b2ebc088f9044f36ee398b1d1bb6cc2155b9fcd7f18ce133e50e1c691b15",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10170,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10170,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-08.zip",
+  "bytes": 1948,
+  "sha256": "b2923f1ac5d8f517530784e8a8d1124d6445ebc08ac41f2cc990d1f839464584",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10171,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10171,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-09.zip",
+  "bytes": 1937,
+  "sha256": "84b5700bf06c1218ea76e6f9eda5d52a97a3cd96006ed3d0e898ad1d0418ef0c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10172,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10172,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-10.zip",
+  "bytes": 1975,
+  "sha256": "b2eec8a43402345fcea4dc0ddeab46b03c8a57e482e49e6a627de60707481682",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10173,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10173,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-11.zip",
+  "bytes": 1919,
+  "sha256": "0c6f13010edc61d7b6020d9ef2f7862875ef387b977de32224087f874818e5db",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10174,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10174,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2025-12.zip",
+  "bytes": 2019,
+  "sha256": "53fd3f97486e205115d109914bdc37a95d9230e1e6776ecd86c5d77b652e0877",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10175,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10175,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-01.zip",
+  "bytes": 1975,
+  "sha256": "4b72515065aabf443034d306639b0e6e0d0b5902b4e028ae93de8cb79545d8a6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10176,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10176,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-02.zip",
+  "bytes": 1801,
+  "sha256": "6e97a8c14aabc0f30d90242de3d1ddae299cd0f75c9ff9ba751c04a984789fd8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10177,
+   "新增版本数": 28,
+   "状态": "已入库"
+  },
+  "source_id": 10177,
+  "rows": 28
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-03.zip",
+  "bytes": 1915,
+  "sha256": "f7c854fee1840bc747e33513e61ba8ff70da31b270a84359ffebdb66ba64b5c3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10178,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10178,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-04.zip",
+  "bytes": 1862,
+  "sha256": "9c03c61aa3d5e512ba4a0b7cf5113d3fe63888cbab70cc0276d67a95d4d9a27c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10179,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10179,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-05.zip",
+  "bytes": 1955,
+  "sha256": "c9b3004ba75a6b487db6855b504e3af817929bcbbc39d0730e286e46da9af68e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10180,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10180,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-06.zip",
+  "bytes": 1949,
+  "sha256": "faf4e215dc670642a054a7840822ab49de258d0ee7c8d5bd96135990b81129bb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10181,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10181,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-07.zip",
+  "bytes": 2053,
+  "sha256": "26f301f7731bb6336285a322de5a79d473b67cecf3f40c900173579a3041e2f2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10182,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10182,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-08.zip",
+  "bytes": 2195,
+  "sha256": "27902ce2f353c6ba92330ae3c2cbf8f5fea8dd0114a9446cbc549aec076ace45",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10183,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 10183,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACEUSDT/1d/ACEUSDT-1d-2026-09.zip",
+  "bytes": 2067,
+  "sha256": "1a96a9ee0199c64a0825a4f46cec39d5ccf714a57dd09117a9c1063e747d9e66",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10184,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 10184,
+  "rows": 30
+ },
+ "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-01.zip",
+  "bytes": 354,
+  "sha256": "aefabc5fb3881e5251fed0bdd5472e23da74af68f8efd761fd2afdc5d41ec480",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10148,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 10148,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-02.zip",
+  "bytes": 353,
+  "sha256": "3f489e563c64c068145562359eb42b881e3a76ef625d5d5ef26b54664caf8410",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10149,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 10149,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-04.zip",
+  "bytes": 351,
+  "sha256": "f34d52f2ba07f68b81023ab613e30fd8306a701ac842d66427f4b4519cfbe9c0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 50847,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 50847,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-03.zip",
+  "bytes": 352,
+  "sha256": "9dc086a84236539be9656033809c356e1501fe2be7a43ae3f6db0422217eb4bb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 10150,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 10150,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-05.zip",
+  "bytes": 354,
+  "sha256": "ec85cdd96f18d8ef191f0cb24bb4c796afa5cafea3fe2c02f811c7e4877f6d70",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 247352,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 247352,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-06.zip",
+  "bytes": 354,
+  "sha256": "70ae087ad5a4f723a056ca48690563a8f574c9ce347c42324ceb14771ada9eb9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1590309,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 1590309,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACEUSDT/1d/ACEUSDT-1d-2026-10-07.zip",
+  "status": "missing_in_archive",
+  "note": "官方归档或 CHECKSUM 不存在（日度按需探测，404 即缺失）；不计为完成"
+ }
+}

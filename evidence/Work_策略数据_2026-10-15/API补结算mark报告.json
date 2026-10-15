@@ -1,0 +1,382 @@
+{
+ "generated_utc": "2026-10-14T19:19:22Z",
+ "api_filled_mark_total": 7663,
+ "symbols_queried": 519,
+ "symbols_still_missing": {
+  "1000LUNCUSDT": {
+   "missing": 6
+  },
+  "1000SHIBUSDT": {
+   "missing": 6
+  },
+  "1000XECUSDT": {
+   "missing": 9
+  },
+  "1INCHUSDT": {
+   "missing": 6
+  },
+  "AAVEUSDT": {
+   "missing": 6
+  },
+  "ACHUSDT": {
+   "missing": 3
+  },
+  "ADAUSDT": {
+   "missing": 6
+  },
+  "ALGOUSDT": {
+   "missing": 6
+  },
+  "ALICEUSDT": {
+   "missing": 6
+  },
+  "ANKRUSDT": {
+   "missing": 24
+  },
+  "APEUSDT": {
+   "missing": 6
+  },
+  "API3USDT": {
+   "missing": 9
+  },
+  "APTUSDT": {
+   "missing": 5
+  },
+  "ARBUSDT": {
+   "missing": 1
+  },
+  "ARPAUSDT": {
+   "missing": 6
+  },
+  "ARUSDT": {
+   "missing": 9
+  },
+  "ASTRUSDT": {
+   "missing": 3
+  },
+  "ATOMUSDT": {
+   "missing": 6
+  },
+  "AVAXUSDT": {
+   "missing": 24
+  },
+  "AXSUSDT": {
+   "missing": 24
+  },
+  "BANDUSDT": {
+   "missing": 24
+  },
+  "BATUSDT": {
+   "missing": 6
+  },
+  "BCHUSDT": {
+   "missing": 6
+  },
+  "BELUSDT": {
+   "missing": 6
+  },
+  "BNBUSDT": {
+   "missing": 24
+  },
+  "BNTUSDT": {
+   "missing": 352
+  },
+  "BTCUSDT": {
+   "missing": 24
+  },
+  "C98USDT": {
+   "missing": 6
+  },
+  "CELOUSDT": {
+   "missing": 6
+  },
+  "CELRUSDT": {
+   "missing": 6
+  },
+  "CFXUSDT": {
+   "missing": 3
+  },
+  "CHRUSDT": {
+   "missing": 24
+  },
+  "CHZUSDT": {
+   "missing": 6
+  },
+  "COMPUSDT": {
+   "missing": 24
+  },
+  "COTIUSDT": {
+   "missing": 24
+  },
+  "CRVUSDT": {
+   "missing": 24
+  },
+  "CTKUSDT": {
+   "missing": 24
+  },
+  "CTSIUSDT": {
+   "missing": 9
+  },
+  "CVCUSDT": {
+   "missing": 6
+  },
+  "CVXUSDT": {
+   "missing": 6
+  },
+  "CYBERUSDT": {
+   "missing": 13
+  },
+  "DASHUSDT": {
+   "missing": 6
+  },
+  "DODOXUSDT": {
+   "missing": 1
+  },
+  "DOGEUSDT": {
+   "missing": 6
+  },
+  "DOTUSDT": {
+   "missing": 24
+  },
+  "DUSKUSDT": {
+   "missing": 6
+  },
+  "DYDXUSDT": {
+   "missing": 6
+  },
+  "EGLDUSDT": {
+   "missing": 6
+  },
+  "ENJUSDT": {
+   "missing": 24
+  },
+  "ENSUSDT": {
+   "missing": 6
+  },
+  "ETCUSDT": {
+   "missing": 6
+  },
+  "ETHUSDT": {
+   "missing": 6
+  },
+  "FETUSDT": {
+   "missing": 3
+  },
+  "FILUSDT": {
+   "missing": 6
+  },
+  "FLOWUSDT": {
+   "missing": 6
+  },
+  "GALAUSDT": {
+   "missing": 9
+  },
+  "GMTUSDT": {
+   "missing": 6
+  },
+  "GMXUSDT": {
+   "missing": 3
+  },
+  "GRTUSDT": {
+   "missing": 6
+  },
+  "GTCUSDT": {
+   "missing": 6
+  },
+  "HBARUSDT": {
+   "missing": 6
+  },
+  "HOTUSDT": {
+   "missing": 6
+  },
+  "ICPUSDT": {
+   "missing": 6
+  },
+  "IMXUSDT": {
+   "missing": 6
+  },
+  "INJUSDT": {
+   "missing": 6
+  },
+  "IOSTUSDT": {
+   "missing": 24
+  },
+  "IOTAUSDT": {
+   "missing": 6
+  },
+  "IOTXUSDT": {
+   "missing": 9
+  },
+  "JASMYUSDT": {
+   "missing": 9
+  },
+  "KAVAUSDT": {
+   "missing": 24
+  },
+  "KNCUSDT": {
+   "missing": 6
+  },
+  "KSMUSDT": {
+   "missing": 6
+  },
+  "LDOUSDT": {
+   "missing": 6
+  },
+  "LINKUSDT": {
+   "missing": 24
+  },
+  "LITUSDT": {
+   "missing": 6
+  },
+  "LPTUSDT": {
+   "missing": 9
+  },
+  "LTCUSDT": {
+   "missing": 6
+  },
+  "LUNA2USDT": {
+   "missing": 6
+  },
+  "MAGICUSDT": {
+   "missing": 3
+  },
+  "MANAUSDT": {
+   "missing": 6
+  },
+  "MASKUSDT": {
+   "missing": 6
+  },
+  "MINAUSDT": {
+   "missing": 3
+  },
+  "MTLUSDT": {
+   "missing": 24
+  },
+  "NEARUSDT": {
+   "missing": 21
+  },
+  "NEOUSDT": {
+   "missing": 24
+  },
+  "OGNUSDT": {
+   "missing": 21
+  },
+  "ONEUSDT": {
+   "missing": 21
+  },
+  "ONTUSDT": {
+   "missing": 24
+  },
+  "OPUSDT": {
+   "missing": 6
+  },
+  "PENDLEUSDT": {
+   "missing": 4
+  },
+  "PEOPLEUSDT": {
+   "missing": 6
+  },
+  "QNTUSDT": {
+   "missing": 3
+  },
+  "QTUMUSDT": {
+   "missing": 24
+  },
+  "RLCUSDT": {
+   "missing": 21
+  },
+  "ROSEUSDT": {
+   "missing": 6
+  },
+  "RSRUSDT": {
+   "missing": 21
+  },
+  "RUNEUSDT": {
+   "missing": 24
+  },
+  "RVNUSDT": {
+   "missing": 21
+  },
+  "SANDUSDT": {
+   "missing": 21
+  },
+  "SFPUSDT": {
+   "missing": 21
+  },
+  "SKLUSDT": {
+   "missing": 21
+  },
+  "SNXUSDT": {
+   "missing": 21
+  },
+  "SOLUSDT": {
+   "missing": 21
+  },
+  "SPELLUSDT": {
+   "missing": 6
+  },
+  "SSVUSDT": {
+   "missing": 3
+  },
+  "STXUSDT": {
+   "missing": 3
+  },
+  "SUSHIUSDT": {
+   "missing": 21
+  },
+  "THETAUSDT": {
+   "missing": 21
+  },
+  "TRBUSDT": {
+   "missing": 21
+  },
+  "TRXUSDT": {
+   "missing": 21
+  },
+  "TUSDT": {
+   "missing": 3
+  },
+  "UNIUSDT": {
+   "missing": 21
+  },
+  "VETUSDT": {
+   "missing": 21
+  },
+  "WOOUSDT": {
+   "missing": 6
+  },
+  "XLMUSDT": {
+   "missing": 21
+  },
+  "XMRUSDT": {
+   "missing": 21
+  },
+  "XRPUSDT": {
+   "missing": 21
+  },
+  "XTZUSDT": {
+   "missing": 21
+  },
+  "XVGUSDT": {
+   "missing": 1
+  },
+  "YFIUSDT": {
+   "missing": 21
+  },
+  "ZECUSDT": {
+   "missing": 21
+  },
+  "ZENUSDT": {
+   "missing": 21
+  },
+  "ZILUSDT": {
+   "missing": 21
+  },
+  "ZRXUSDT": {
+   "missing": 21
+  }
+ },
+ "n_symbols_still_missing": 124,
+ "total_still_missing": 1838,
+ "elapsed_s": 833.5
+}

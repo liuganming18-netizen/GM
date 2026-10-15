@@ -1,0 +1,94 @@
+{
+  "version": "R2",
+  "generated_utc": "2026-10-03T10:45:00Z",
+  "scope": "只使用协作范围文件、本任务既有公开产物、输入资料及指定的公开JS静态内容；没有写入memory。未执行JS，未请求JS声明的任何API。",
+  "public_js_resource": {
+    "url": "https://www.tradeflow.club/assets/index-27SKEJ8j.js",
+    "request_record": "tradeflow_public_js_request.json",
+    "http_status": 200,
+    "content_type": "text/javascript; charset=utf-8",
+    "bytes": 2158821,
+    "sha256": "80dac5a26b62e83b86a822af8d6973c1c2342a6faca01181fab337de27cfa7d4",
+    "saved_source": "tradeflow_index-27SKEJ8j.js",
+    "auth_or_cookie_headers_sent": false,
+    "executed": false
+  },
+  "dom_declared_resources_from_input": {
+    "pages_with_same_resource_set": 3,
+    "first_party_js_urls": 1,
+    "third_party_js_urls": 1,
+    "first_party_css_urls": 1,
+    "extension_injected_js_excluded": true,
+    "requested_in_this_pass": {
+      "first_party_js": 1,
+      "css": 0,
+      "third_party_js": 0,
+      "extension_js": 0
+    }
+  },
+  "routes_and_cards": {
+    "sidebar_analytics_categories_in_js": 8,
+    "core_research_cards": 6,
+    "core_cards_with_client_fetch_or_service_declaration": 6,
+    "sidebar_menu_entries_for_smart_money_rankings": 0,
+    "client_router_entries_for_smart_money_rankings": 1,
+    "normal_page_visits_to_rank_route_this_pass": 0,
+    "membership_claims_for_index_monitoring": 1,
+    "dedicated_index_monitor_route_strings": 0,
+    "feed_index_adjust_event_renderer": 1
+  },
+  "code_evidence_counts": {
+    "core_analytics_relative_get_templates": 11,
+    "additional_copy_trading_analytics_get_templates_excluded_from_core": 2,
+    "direct_binance_market_kline_fetch_function": 1,
+    "relative_analytics_api_paths_actually_requested_this_pass": 0,
+    "api_response_bodies_obtained_this_pass": 0,
+    "field_display_or_filter_formulas_identified": 4,
+    "server_calculation_algorithms_confirmed": 0,
+    "client_route_to_index_monitor_confirmed": 0,
+    "client_cvd_custom_calculation_found": 0
+  },
+  "normal_page_sample_counts_from_authorized_inputs": {
+    "pages_with_visible_market_fields": 5,
+    "trading_data_chart_values_visible": 0,
+    "coin_list_dom_data_row_nodes": 610,
+    "coin_list_header_counter": "610/610",
+    "coin_list_virtual_list_counter": "0-500 / 611",
+    "volatility_title_counter": 728,
+    "volatility_virtual_list_counter": 729,
+    "funding_snapshot_title_counter": "13/923",
+    "funding_example_rows_in_newest_field_sample_file": 1,
+    "smart_money_page_coin_count_claim": 528,
+    "smart_money_claim_independently_validated": false,
+    "confluence_named_symbol_examples_across_input_snapshots": ["WLDUSDT", "VELVETUSDT", "VETUSDT", "ONEUSDT"],
+    "full_tradeflow_history_rows_read": 0
+  },
+  "page_indicator_relationship_checks_from_authorized_inputs": {
+    "smart_money_ratio_sample_0GUSDT": {
+      "long_oi_percent": 36.70,
+      "short_oi_percent": 16.37,
+      "displayed_ratio": 2.2419,
+      "ratio_of_displayed_percent_values": 2.2419,
+      "result": "displayed values closely agree; this supports a relationship hypothesis, not the server formula or denominator"
+    },
+    "smart_money_ratio_sample_AWEUSDT": {
+      "long_oi_percent": 57.93,
+      "short_oi_percent": 1.74,
+      "displayed_ratio": 33.3592,
+      "ratio_of_displayed_percent_values": 33.2931,
+      "result": "displayed values do not exactly agree; rounding, stale sample times or a different denominator remain unresolved"
+    },
+    "volatility_change_sample_KNCUSDT": {
+      "current_ratio": 1.655,
+      "change_2m_absolute": 0.0591,
+      "change_2m_percent": 3.70,
+      "change_30m_absolute": 0.0747,
+      "change_30m_percent": 4.73,
+      "change_4h_absolute": 0.1852,
+      "change_4h_percent": 12.60,
+      "candidate_old_value_denominator_percent": [3.7032, 4.7276, 12.6004],
+      "result": "candidate delta/(current-delta) denominator agrees after display rounding, but the source implementation is not confirmed"
+    }
+  },
+  "important_boundary": "Endpoints found in public client code are only static declarations and are not called. Fields rendered from API responses do not establish upstream source, exact unit, server calculation, historical coverage, or access conditions. Index-adjustment feed events do not prove a separate index-monitor screen. A code-declared rankings route without a sidebar link is not counted as normally accessed functionality."
+}

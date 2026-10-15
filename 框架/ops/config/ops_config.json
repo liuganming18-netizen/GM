@@ -1,0 +1,70 @@
+{
+  "version": "ops-2026-10-14",
+  "note": "数据保全与进程保活 · 安全根运维接线配置。只读源库，写目标仅限 backups/ 与 ops/。",
+  "safe_root": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统",
+  "backend_dir": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现",
+  "spawn_detached": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/spawn_detached.py",
+  "python": "/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3",
+  "hot_db": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
+  "paper_dir": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43",
+  "paper_arms": ["3a", "3b", "3c", "3d"],
+  "backups_root": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/hot",
+  "manifests_root": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/manifests",
+  "reserve_bytes": 12884901888,
+  "retention_days": 14,
+  "watermarks": {
+    "market_v2.sqlite3": [
+      {"table": "candle_versions", "column": "close_time", "label": "最新闭合K线右端(ms)"},
+      {"table": "candle_heads", "column": "open_time", "label": "candle_heads最新open_time(ms)"},
+      {"table": "oi_history", "column": "ts", "label": "OI最新ts(ms)"},
+      {"table": "funding_history", "column": "funding_time", "label": "资金费最新结算时刻(ms)"},
+      {"table": "realtime_klines", "column": "close_time", "label": "实时层最新闭合(ms)"},
+      {"table": "signals", "column": "confirmed_at", "label": "信号最新确认(ms)"}
+    ],
+    "paper_3a.sqlite3": [{"table": "paper_state", "column": "updated_at", "label": "账本更新时间(ms)"}],
+    "paper_3b.sqlite3": [{"table": "paper_state", "column": "updated_at", "label": "账本更新时间(ms)"}],
+    "paper_3c.sqlite3": [{"table": "paper_state", "column": "updated_at", "label": "账本更新时间(ms)"}],
+    "paper_3d.sqlite3": [{"table": "paper_state", "column": "updated_at", "label": "账本更新时间(ms)"}]
+  },
+  "processes": [
+    {
+      "name": "adapter",
+      "pattern": "后端实现/adapter.py",
+      "log": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/logs/backend.log",
+      "pidfile": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/backend.pid",
+      "expect_path": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
+      "max_log_age_s": 86400,
+      "role": "只读API(:8787)"
+    },
+    {
+      "name": "realtime_collector",
+      "pattern": "后端实现/realtime_collector.py",
+      "log": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/logs/realtime.log",
+      "pidfile": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/logs/realtime.pid",
+      "expect_path": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
+      "max_log_age_s": 240,
+      "role": "实时采集"
+    },
+    {
+      "name": "live_worker",
+      "pattern": "live_worker.py --loop",
+      "log": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/模拟实盘生产接通_2026-10-14/logs/live_worker_prod.log",
+      "pidfile": null,
+      "expect_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/live/live_signals.sqlite3",
+      "max_log_age_s": 900,
+      "role": "模拟实盘worker"
+    }
+  ],
+  "cloud": {
+    "tool": "rclone",
+    "candidate_remotes": ["gdrive"],
+    "forbidden_verbs": ["sync", "delete", "purge", "move"],
+    "allowed_verbs": ["copy", "lsjson", "lsd", "about", "check", "size"]
+  },
+  "schedule_asia_shanghai": {
+    "hot_snapshot": ["00:20", "08:20", "16:20"],
+    "parquet": ["01:30"],
+    "raw_verify": ["03:00-sunday"],
+    "git_patrol": ["00:30"]
+  }
+}

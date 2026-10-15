@@ -1,0 +1,27 @@
+{
+  "inst_id": "CP-USDT-SWAP",
+  "bar": "1h",
+  "status": "done",
+  "rows": 781,
+  "pages": 8,
+  "errors": 0,
+  "window": [
+    "2026-09-02T15:40:00Z",
+    "2026-10-05T04:58:23Z"
+  ],
+  "source_id": 22641,
+  "api_call_ids": [
+    6502,
+    6503,
+    6504,
+    6505,
+    6506,
+    6507,
+    6509,
+    6510
+  ],
+  "raw_path": "raw/okx/1h/CP-USDT-SWAP.json",
+  "taker_buy": "空串（欧易无 taker 字段，B 策略数据不足）",
+  "trade_count": "0 占位（欧易无该字段，非真值）",
+  "updated_utc": "2026-10-05T05:18:47Z"
+}

@@ -1,0 +1,342 @@
+{
+ "gate": "data_ready",
+ "window": "evidence/Work_策略数据_2026-10-15",
+ "generated_utc": "2026-10-14T19:23:27Z",
+ "universe": {
+  "exchange": "binance",
+  "market": "um",
+  "n_symbols": 526,
+  "scope": "加密币(COIN)活动范围 USDT 线性永续",
+  "pool_snapshot_utc": "2026-10-05T04:53Z",
+  "note": "526 为当前活动池，作库存范围，不冒充完整历史 PIT 池"
+ },
+ "manifest": {
+  "path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster/manifest.json",
+  "sha256": "6838a05e53b4e15dae759de5e3461b61f2f926c72b087fccb1ef6d1500e3cfb9",
+  "n_files": 3152,
+  "total_bytes": 9462636530
+ },
+ "schema": {
+  "path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster/schema.json",
+  "sha256": "e43356654676ccd895e17ed62a512129e307dacd908e5834a581cfc1c44827b9"
+ },
+ "datasets": {
+  "funding": {
+   "files": 526,
+   "rows": 2189855,
+   "bytes": 40134797,
+   "first_utc": "2020-01-01T00:00:00Z",
+   "last_utc": "2026-10-14T12:00:00Z"
+  },
+  "instruments": {
+   "files": 1,
+   "rows": 526,
+   "bytes": 12866,
+   "first_utc": null,
+   "last_utc": null
+  },
+  "mark1h": {
+   "files": 521,
+   "rows": 11526345,
+   "bytes": 153687514,
+   "first_utc": "2020-01-01T00:00:00Z",
+   "last_utc": "2026-10-10T23:00:00Z"
+  },
+  "ohlcv": {
+   "files": 1578,
+   "rows": 59979086,
+   "bytes": 3364587820,
+   "first_utc": null,
+   "last_utc": null
+  },
+  "oi_metrics": {
+   "files": 526,
+   "rows": 118703466,
+   "bytes": 5904213533,
+   "first_utc": "2020-09-01T00:00:00Z",
+   "last_utc": "2026-10-14T18:25:00Z"
+  }
+ },
+ "field_coverage": {
+  "ohlcv_1h": {
+   "symbols_have": 526,
+   "symbols_missing": 0,
+   "rows": 11428115,
+   "dup_keys": 0,
+   "global_first_utc": "2019-12-31T00:00:00Z",
+   "global_last_utc": "2026-10-14T17:00:00Z"
+  },
+  "ohlcv_4h": {
+   "symbols_have": 526,
+   "symbols_missing": 0,
+   "rows": 2856965,
+   "dup_keys": 0,
+   "global_first_utc": "2019-12-31T00:00:00Z",
+   "global_last_utc": "2026-10-14T12:00:00Z"
+  },
+  "ohlcv_15m": {
+   "symbols_have": 526,
+   "symbols_missing": 0,
+   "rows": 45694006,
+   "dup_keys": 0,
+   "global_first_utc": "2019-12-31T00:00:00Z",
+   "global_last_utc": "2026-10-14T18:15:00Z"
+  },
+  "funding": {
+   "symbols_have": 526,
+   "symbols_missing": 0,
+   "rows": 2189855,
+   "dup_keys": 0,
+   "global_first_utc": "2020-01-01T00:00:00Z",
+   "global_last_utc": "2026-10-14T12:00:00Z"
+  },
+  "oi_metrics": {
+   "symbols_have": 526,
+   "symbols_missing": 0,
+   "rows": 118703466,
+   "dup_keys": 0,
+   "global_first_utc": "2020-09-01T00:00:00Z",
+   "global_last_utc": "2026-10-14T18:25:00Z"
+  },
+  "mark1h": {
+   "symbols_have": 521,
+   "symbols_missing": 5,
+   "rows": 11526345,
+   "dup_keys": 0,
+   "global_first_utc": "2020-01-01T00:00:00Z",
+   "global_last_utc": "2026-10-10T23:00:00Z"
+  }
+ },
+ "field_verification": {
+  "oi_ts_equals_metrics_create_time": true,
+  "oi_value_matches_hot_db": true,
+  "oi_sample": [
+   {
+    "symbol": "0GUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 36576689.0,
+    "hot": 36576689.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "ALTUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 335914234.0,
+    "hot": 335914234.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "BASUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 93295962.0,
+    "hot": 93295962.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "CETUSUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 49472426.0,
+    "hot": 49472426.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "DRIFTUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 123904225.0,
+    "hot": 123904225.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "GALAUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 2526504584.0,
+    "hot": 2526504584.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "INJUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 3722856.6,
+    "hot": 3722856.6,
+    "common_n": 7488
+   },
+   {
+    "symbol": "LUMIAUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 57901717.8,
+    "hot": 57901717.8,
+    "common_n": 7488
+   },
+   {
+    "symbol": "NILUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 82279887.2,
+    "hot": 82279887.2,
+    "common_n": 7488
+   },
+   {
+    "symbol": "PRLUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 19202513.0,
+    "hot": 19202513.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "SFPUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 12357344.0,
+    "hot": 12357344.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "TACUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 1799811450.0,
+    "hot": 1799811450.0,
+    "common_n": 7488
+   },
+   {
+    "symbol": "VIRTUALUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 20465875.7,
+    "hot": 20465875.7,
+    "common_n": 7488
+   },
+   {
+    "symbol": "ZRXUSDT",
+    "probe": 1791417300000,
+    "match": true,
+    "archive": 14767733.6,
+    "hot": 14767733.6,
+    "common_n": 7488
+   }
+  ],
+  "grid": {
+   "BTCUSDT": {
+    "ohlcv_1h": {
+     "rows": 59514,
+     "off_grid": 0
+    },
+    "ohlcv_4h": {
+     "rows": 14878,
+     "off_grid": 0
+    },
+    "ohlcv_15m": {
+     "rows": 238056,
+     "off_grid": 0
+    },
+    "oi_metrics": {
+     "rows": 550700,
+     "off_grid": 0
+    }
+   }
+  },
+  "ratio_nonnull_total": {
+   "count_long_short_ratio": 117684291,
+   "sum_toptrader_long_short_ratio": 117684291,
+   "count_toptrader_long_short_ratio": 117684291,
+   "sum_taker_long_short_vol_ratio": 117684291
+  },
+  "funding_rate_cold_vs_archive_mismatch": 0,
+  "funding_interval": "8h 网格（00/08/16 UTC），毫秒抖动 ≤4ms",
+  "metrics_source": "binance.vision.metrics.daily（OI 与 4 比率同源同事件）"
+ },
+ "funding_mark": {
+  "funding_events": 2189855,
+  "mark_null": 1838,
+  "coverage_pct": 99.9161,
+  "filled_from_mark1h": 2101247,
+  "filled_from_api": 7663
+ },
+ "backup_restore": {
+  "evidence": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_策略数据_2026-10-15/backup_restore_evidence.json",
+  "n_files_backed_up": 3155,
+  "backup_bytes": 9463433746,
+  "backup_dir": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster/_backup/20261014T192054Z",
+  "isolated_restore_dir": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_策略数据_2026-10-15/isolated_restore/20261014T192054Z",
+  "isolated_restore_scope": "bounded_sample（每数据集≤3文件 + 全部 schema/manifest/pool）",
+  "restore_verified_ok": 16,
+  "restore_failures": [],
+  "backup_sha_mismatches": [],
+  "existing_hot_backup_verified": {
+   "path": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/hot/20261014T131200Z/market_v2.sqlite3",
+   "recorded_sha256": "20f60475ed06f771fa5adfd034c8759c8e281bdfd1be4adf980e5a0d91224cc0",
+   "recomputed_sha256": "20f60475ed06f771fa5adfd034c8759c8e281bdfd1be4adf980e5a0d91224cc0",
+   "quick_check": "ok",
+   "match": true
+  }
+ },
+ "blocking_items": [
+  {
+   "item": "funding 结算 mark 仍有缺（官方不可得）",
+   "count": 1838,
+   "pct_of_funding": 0.0839,
+   "reason": "mark1h 月包官方空洞（如 BTCUSDT 2021-07-01 整天）+ 5 个中文名符号无 mark1h 归档；API markPrice 仅 ≥2024 有值，<2024 返回空串",
+   "impact": "受影响 (symbol, funding_time) 的正式资金费记账需列为不通过，或按 §门禁 阻断该持仓正式结果"
+  },
+  {
+   "item": "mark1h 存在无文件币",
+   "count": 5,
+   "symbols": [
+    "哈基米USDT",
+    "币安人生USDT",
+    "我踏马来了USDT",
+    "牛来USDT",
+    "龙虾USDT"
+   ]
+  }
+ ],
+ "scope_limits": [
+  {
+   "id": "funding_mark_missing",
+   "count": 1838,
+   "rule": "受影响 (symbol, funding_time) 的正式资金费记账列不通过；该持仓正式结果阻断（合同「无法补则阻断该持仓正式结果/将范围列不通过」）"
+  },
+  {
+   "id": "mark1h_missing_symbols",
+   "symbols": [
+    "哈基米USDT",
+    "币安人生USDT",
+    "我踏马来了USDT",
+    "牛来USDT",
+    "龙虾USDT"
+   ],
+   "rule": "该 5 币无 mark1h 数据集；其结算 mark 仅由官方 API（≥2024）覆盖"
+  },
+  {
+   "id": "oi_source_no_event_segments",
+   "rule": "M4 须按逐币可用窗口收窄样本，不得用全市场平均覆盖代替"
+  },
+  {
+   "id": "contract_halt_holes",
+   "rule": "K 线合约停牌空洞（官方已证无事件）显式处理，不插值、不用现货补"
+  },
+  {
+   "id": "pit_pool",
+   "rule": "526 为当前活动池，非完整历史 PIT 池；上市/下架身份以各币实际首末条为准，幸存者偏差限制已知"
+  }
+ ],
+ "ready": true,
+ "ready_semantics": "ready=true 表示：核心字段（K线/资金费/OI/比率）齐备、同源同事件与桶口径已实测核验、备份与隔离恢复已通过；scope_limits 内条目为已知不通过范围，回测须显式排除或按范围列不通过。",
+ "notes": [
+  "决策特征使用 event_time；可得时间假设：历史归档 K 线按 close_time 后可得，未保存真实公布时刻，属研究可得时间假设，不谎称真实采集 PIT。",
+  "Taker（sum_taker_long_short_vol_ratio）与大户账户比仅作独立观察列收集，未添加任何策略筛选条件。",
+  "bapi 巨鲸均价未用于本轮。",
+  "未使用现货或 OKX 数据补币安永续缺口；未插值/补 0。",
+  "本窗只读源（热库 mode=ro/query_only），未改生产库/分片/WAL；未移动或删除任何原件。",
+  "资金费结算 mark 为 mark1h 归档 open 或官方 API markPrice；非当前收盘价替代。"
+ ]
+}

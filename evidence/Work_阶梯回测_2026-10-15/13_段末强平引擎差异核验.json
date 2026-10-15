@@ -1,0 +1,33 @@
+{
+  "schema": "wyckoffmaster_segment_end_v31/v1",
+  "src_ledger": "/var/folders/nc/4wrvcr3j62v6gvf995mx198w0000gn/T/tmp_r_hkft1/raw.sqlite3",
+  "dst_ledger": "/var/folders/nc/4wrvcr3j62v6gvf995mx198w0000gn/T/tmp_r_hkft1/fin.sqlite3",
+  "n_terminal_liquidations": 1,
+  "cash_delta": 1.9475257500000098,
+  "differs": [
+    {
+      "position_id": "p1",
+      "exchange": "binance",
+      "symbol": "BTCUSDT",
+      "quantity": 1.0,
+      "engine_rule": "last_executable_open",
+      "engine_exit_price": 101.0,
+      "engine_exit_fee": 0.0505,
+      "engine_gross_pnl": 1.0,
+      "v31_rule": "last_15m_close",
+      "v31_bar_ts": 1000,
+      "v31_close": 103.0,
+      "v31_exit_price": 102.94850000000001,
+      "v31_exit_fee": 0.051474250000000006,
+      "v31_slip_cost": 0.05149999999999011,
+      "v31_gross_pnl": 2.94850000000001,
+      "price_delta": 1.94850000000001,
+      "verdict": "REWRITTEN"
+    }
+  ],
+  "skipped": [],
+  "note": "期末清算是整段最后时点，其后无新交易/新资金费 ⇒ 改动不外溢到更早权益路径；生产引擎未修改，差异在此单独留证。",
+  "engine_source_sha256": "0ede9ce19c7cec9d18398572e393ef65ef4c04a6aa5ff2b41f8ad022c83dbcf1",
+  "production_engine_modified": false,
+  "synthetic_test": true
+}

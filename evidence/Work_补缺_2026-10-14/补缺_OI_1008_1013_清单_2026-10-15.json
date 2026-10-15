@@ -1,0 +1,4753 @@
+{
+  "generated_at": "2026-10-15T00:40:08.247201+08:00",
+  "policy": "只读源；写本目录；不写生产库",
+  "source": "binance.vision.metrics.daily",
+  "window_utc": "2026-10-08T00:00 ~ 2026-10-13T23:55",
+  "symbols": 526,
+  "downloads": 3156,
+  "download_ok": 3126,
+  "download_404": 0,
+  "archive_rows_total": 895128,
+  "db_rows_total": 903215,
+  "missing_total": 31,
+  "unique": 31,
+  "duplicates": 0,
+  "symbols_with_missing": 8,
+  "normalization_note": "归档[t] ≡ 采集器[t+5min]；期望槽已按归档 ts+5min 对齐库内采集器口径",
+  "per_symbol": [
+    {
+      "symbol": "0GUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000000BOBUSDT",
+      "archive_rows": 9,
+      "db_rows": 0,
+      "missing_vs_archive": 9,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000000MOGUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000BONKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000CATUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000CHEEMSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000FLOKIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000LUNCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000PEPEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000RATSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000SATSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000SHIBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1000XECUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1INCHUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "1MBABYDOGEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "2ZUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "4USDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ACEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ACHUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ACTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ACUUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ADAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AEROUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AEVOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AGLDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AGTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AIAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AIGENSYNUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AINUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AIOTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AIOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AIXBTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AKEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AKTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ALCHUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ALICEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ALLOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ALPINEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ALTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ANIMEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ANKRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "APEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "API3USDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "APRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "APTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ARBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ARCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ARIAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ARKMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ARKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ARPAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ARUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ARXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ASRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ASTRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ATHUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ATUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AVAAIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AVAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AVNTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AWEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AXLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AXSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "AZTECUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "B2USDT",
+      "archive_rows": 1728,
+      "db_rows": 1726,
+      "missing_vs_archive": 1,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BABYUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BANANAS31USDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BANANAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BANDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BANKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BANUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BARDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BASEDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BASUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BATUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BCHUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BEAMXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BEATUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BELUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BERAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BICOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BIGTIMEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BILLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BIOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BIRBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BLESSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BLUAIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BLURUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BMTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BNBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BNTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BOMEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BRETTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BREVUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BROCCOLI714USDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BROCCOLIF3BUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BSBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BSVUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1726,
+      "missing_vs_archive": 1,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BTCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1728,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 1,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BTRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BTWUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BULLAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "BUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "C98USDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CAPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CARVUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CATIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CELOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CELRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CETUSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CFGUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CFXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CGPTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CHILLGUYUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CHRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CHZUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CKBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CLANKERUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CLOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "COAIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "COLLECTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "COMPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "COOKIEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "COTIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "COWUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CROSSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CRVUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CTKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CTRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CTSIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CVCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CVXUSDT",
+      "archive_rows": 1727,
+      "db_rows": 1726,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CYBERUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "CYSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DASHUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DATAIPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DEEPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DIAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DODOXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DOGSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DOLOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DOODUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DOSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DOTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DRIFTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DUSKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "DYMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "EDENUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "EDGEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "EDUUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "EGLDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "EIGENUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ELSAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ENAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ENJUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ENSOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ENSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "EPICUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ERAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ESPORTSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ESPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ETCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ETHUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ETHWUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "EULUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "EVAAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FARTCOINUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FETUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FFUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FHEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FIDAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FIGHTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FILUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FLOCKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FLOWUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FLUIDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FLUXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FOGOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FOLKSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FORMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FRAXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "FUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GALAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GASUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1726,
+      "missing_vs_archive": 1,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GENIUSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GLMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GMTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GMXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GOATUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GPSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GRASSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GRIFFAINUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GRTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GRVTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GTCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GUAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GUNUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HAEDALUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HANAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HBARUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HEIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HEMIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HIVEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HMSTRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HOLOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HOTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HUMAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HYPERUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "HYPEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ICNTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ICPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "IDOLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "IDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ILVUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "IMXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "INITUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "INJUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "INUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "INXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "IOSTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "IOTAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "IOTXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "IOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "IRYSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "JASMYUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "JCTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "JELLYJELLYUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "JOEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "JSTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "JTOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "JUPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KAIAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KASUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KATUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KAVAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KERNELUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KGENUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KITEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KMNOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KNCUSDT",
+      "archive_rows": 1727,
+      "db_rows": 1726,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KOMAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "KSMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LABUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LAYERUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LDOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LIGHTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LINEAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LINKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LISTAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LITUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LPTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LQTYUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LSKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LTCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LUMIAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LUNA2USDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "LYNUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MAGICUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MAGMAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MANAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MANTAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MANTRAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MARSCOINUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MASKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MAVIAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MAVUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MEGAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MELANIAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1726,
+      "missing_vs_archive": 1,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MEMEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MERLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "METISUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "METUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MEWUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MINAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MITOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MMTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MOCAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MONUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MOODENGUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MOVEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MOVRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MTLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "MYXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NAORISUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NEARUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NEIROUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NEOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NEWTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NIGHTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NILUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NMRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NOMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NOTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "NXPCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "OGNUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "OGUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ONEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ONGUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ONTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ONUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "OPENUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "OPGUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "OPNUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "OPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ORCAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ORDERUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "OUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PARTIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PENDLEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PEOPLEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PHAROSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PHAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PIEVERSEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PIPPINUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PIXELUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PLAYUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PLUMEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PNUTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "POLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "POLYXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PONSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "POPCATUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PORTALUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "POWERUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "POWRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PRLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PROMPTUSDT",
+      "archive_rows": 8,
+      "db_rows": 0,
+      "missing_vs_archive": 8,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PROMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PROVEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PTBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PUMPBTCUSDT",
+      "archive_rows": 9,
+      "db_rows": 0,
+      "missing_vs_archive": 9,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PUNDIXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "QNTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "QTUMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "QUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RAREUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RAVEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RAYSOLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RECALLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "REDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RESOLVUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "REUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "REZUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RIFUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RIVERUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RLCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ROBOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RONINUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ROSEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RPLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RSRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "RVNUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SAFEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SAGAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SAHARAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SANDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SANTOSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SAPIENUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SCRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SEIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SENTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SFPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SHELLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SIGNUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SIRENUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SKLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SKRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SKYAIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SKYUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SLPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SLXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SNXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SOLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SOLVUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SOMIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SONICUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SOONUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SOPHUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SPACEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SPELLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SPKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SPORTFUNUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SPXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SQDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SSVUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "STABLEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "STARUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "STBLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "STEEMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "STOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "STRKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "STXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SUIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SUNUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1726,
+      "missing_vs_archive": 1,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SUPERUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SUSHIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SWARMSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SXTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SYNUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "SYRUPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TACUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TAGUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TAIKOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TAKEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TAOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "THETAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "THEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TIAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TLMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TNSRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TOSHIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TOWNSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TRADOORUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TRBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TREEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TRIAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TRUSTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TRUTHUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TRXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TSTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TURBOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TURTLEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TUTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "TWTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "UAIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "UBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "UMAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "UNIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "USDCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "USELESSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "USTCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "USUALUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "USUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "VANAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "VELODROMEUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "VELVETUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "VETUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "VTHOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "VVVUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "WALUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "WAXPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "WCTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "WETUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "WIFUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "WLDUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "WOOUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "WUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XAIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XANUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XLMUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XMRUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XNYUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XPINUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XPLUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XRPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XTZUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XVGUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "XVSUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "YBUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "YFIUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "YGGUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZECUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZENUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZEREBROUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZESTUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZETAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZILUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZKCUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZKPUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZKUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZORAUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZROUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "ZRXUSDT",
+      "archive_rows": 1728,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 0,
+      "archive_days_ok": 6,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "哈基米USDT",
+      "archive_rows": 0,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 1727,
+      "archive_days_ok": 0,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "币安人生USDT",
+      "archive_rows": 0,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 1727,
+      "archive_days_ok": 0,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "我踏马来了USDT",
+      "archive_rows": 0,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 1727,
+      "archive_days_ok": 0,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "牛来USDT",
+      "archive_rows": 0,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 1727,
+      "archive_days_ok": 0,
+      "archive_days_404": 0
+    },
+    {
+      "symbol": "龙虾USDT",
+      "archive_rows": 0,
+      "db_rows": 1727,
+      "missing_vs_archive": 0,
+      "db_extra_vs_archive": 1727,
+      "archive_days_ok": 0,
+      "archive_days_404": 0
+    }
+  ]
+}

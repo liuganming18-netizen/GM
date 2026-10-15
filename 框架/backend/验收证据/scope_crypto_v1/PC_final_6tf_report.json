@@ -1,0 +1,65 @@
+{
+ "generated_utc": "2026-10-08T14:04:31Z",
+ "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "scope_tag": "scope_crypto_v1",
+ "scope": {
+  "scope_version": "crypto_only_v1",
+  "counts": {
+   "binance": 526,
+   "okx": 23,
+   "total": 549
+  },
+  "excluded_indices": [
+   "BTCDOMUSDT",
+   "ALLUSDT"
+  ],
+  "source": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/标的池/scope_crypto.json"
+ },
+ "criterion": "身份=唯一验收器 _pool_verify._audit_identity（applies_to 区间 + 官方归档原件 path/url/sha256/rows）；覆盖/门禁=logs/_pool_gate.py。",
+ "results": {
+  "1d": {
+   "identity_exit": 0,
+   "coverage_exit": 0,
+   "acceptance_exit": 0,
+   "pass": true,
+   "restfill_retried": false
+  },
+  "12h": {
+   "identity_exit": 0,
+   "coverage_exit": 0,
+   "acceptance_exit": 0,
+   "pass": true,
+   "restfill_retried": false
+  },
+  "8h": {
+   "identity_exit": 0,
+   "coverage_exit": 0,
+   "acceptance_exit": 0,
+   "pass": true,
+   "restfill_retried": false
+  },
+  "4h": {
+   "identity_exit": 0,
+   "coverage_exit": 0,
+   "acceptance_exit": 0,
+   "pass": true,
+   "restfill_retried": false
+  },
+  "1h": {
+   "identity_exit": 0,
+   "coverage_exit": 0,
+   "acceptance_exit": 0,
+   "pass": true,
+   "restfill_retried": false
+  },
+  "30m": {
+   "identity_exit": 0,
+   "coverage_exit": 0,
+   "acceptance_exit": 0,
+   "pass": true,
+   "restfill_retried": true
+  }
+ },
+ "all_pass": true,
+ "failed": []
+}

@@ -1,0 +1,31 @@
+{
+  "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+  "mode": "read_only",
+  "checks": [
+    {
+      "name": "okx_swap_CRO-USDT-SWAP_12h",
+      "raised_error": null,
+      "raw_rows_in_db": 4033,
+      "raw_rows_after_read": 4033,
+      "db_unchanged": true,
+      "total_reported": 4033,
+      "bars_returned": 4016,
+      "excluded_non_utc_12h": 17,
+      "returned_non_utc_rows": 0,
+      "taker_buy_volume_is_none": 4016,
+      "taker_buy_volume_present": 0,
+      "lifecycle_note": "读侧隔离 OKX 12h 非 UTC 边界旧行 17 根（旧 candle12H 混边界；库内原行保留）",
+      "pass": true
+    },
+    {
+      "name": "binance_um_1000PEPEUSDT_12h",
+      "raised_error": null,
+      "bars_returned": 2502,
+      "total_reported": 2502,
+      "excluded_non_utc_12h": 0,
+      "note": "币安不受 OKX 12h 隔离影响（excluded_non_utc_12h 应为 0）",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

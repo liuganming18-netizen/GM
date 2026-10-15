@@ -1,0 +1,88 @@
+{
+ "steps": [
+  {
+   "样本": "A-small-rest_gap",
+   "src": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_rest_gap/1d/BTCUSDT/BTCUSDT-1d-1567900800000.meta.json",
+   "dst": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据整理迁移_2026-10-15/_clone_test/A.meta.json",
+   "clonefile_rc": 0,
+   "errno": 0,
+   "msg": "OK",
+   "src_info": {
+    "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_rest_gap/1d/BTCUSDT/BTCUSDT-1d-1567900800000.meta.json",
+    "inode": 12890990,
+    "links": 1,
+    "size": 639,
+    "blocks": 8
+   },
+   "dst_info": {
+    "path": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据整理迁移_2026-10-15/_clone_test/A.meta.json",
+    "inode": 36294826,
+    "links": 1,
+    "size": 639,
+    "blocks": 8
+   },
+   "sha_src": "0a04beab7ee132f0bd853eee51986ace5f2694be5443b786edb25aabd96aaa61",
+   "sha_dst": "0a04beab7ee132f0bd853eee51986ace5f2694be5443b786edb25aabd96aaa61",
+   "inode_diff": true,
+   "dst_links": 1,
+   "sha_equal": true
+  },
+  {
+   "样本": "B-large",
+   "src": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/1h/0GUSDT/0GUSDT-1h-2025-09.zip",
+   "dst": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据整理迁移_2026-10-15/_clone_test/B.0GUSDT-1h-2025-09.zip",
+   "src_size": 16093,
+   "clonefile_rc": 0,
+   "errno": 0,
+   "msg": "OK",
+   "src_info": {
+    "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/1h/0GUSDT/0GUSDT-1h-2025-09.zip",
+    "inode": 10486248,
+    "links": 1,
+    "size": 16093,
+    "blocks": 32
+   },
+   "dst_info": {
+    "path": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据整理迁移_2026-10-15/_clone_test/B.0GUSDT-1h-2025-09.zip",
+    "inode": 36294835,
+    "links": 1,
+    "size": 16093,
+    "blocks": 32
+   },
+   "sha_src": "aca5e0e9552002f96f6cadd6dd2334dd3981686ce163aca723129a0aee716692",
+   "sha_dst": "aca5e0e9552002f96f6cadd6dd2334dd3981686ce163aca723129a0aee716692",
+   "inode_diff": true,
+   "dst_links": 1,
+   "sha_equal": true
+  }
+ ],
+ "df_before": {
+  "avail_KiB": 25508844,
+  "avail_GiB": 24.3271
+ },
+ "df_after": {
+  "avail_KiB": 25508836,
+  "avail_GiB": 24.3271,
+  "delta_KiB": 8,
+  "delta_MiB": 0.008
+ },
+ "cow_test": {
+  "src_unchanged": true,
+  "dst_changed": true,
+  "src_sha_before": "aca5e0e9552002f96f6cadd6dd2334dd3981686ce163aca723129a0aee716692",
+  "src_sha_after": "aca5e0e9552002f96f6cadd6dd2334dd3981686ce163aca723129a0aee716692"
+ },
+ "bin_cp_c": {
+  "rc": 0,
+  "stderr": "",
+  "exists": true,
+  "sha_equal": true,
+  "inode_diff": true,
+  "links": 1
+ },
+ "df_final_after_cleanup": {
+  "avail_KiB": 25508836,
+  "avail_GiB": 24.3271
+ },
+ "tmp_removed": true
+}

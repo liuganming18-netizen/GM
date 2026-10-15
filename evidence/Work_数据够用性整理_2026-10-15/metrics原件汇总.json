@@ -1,0 +1,33 @@
+{
+ "source_state_dir": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/oi_state",
+ "symbols": 526,
+ "zip_files_total": 441575,
+ "verified": 441575,
+ "imported_flags": 440543,
+ "raw_rows": 127004399,
+ "uniq_rows": 126915340,
+ "dup_same_rows": 75255,
+ "conflict_labels": 0,
+ "invalid_rows": 13804,
+ "date_min": "2020-09-01",
+ "date_max": "2026-10-07",
+ "symbols_with_internal_missing_days": 35,
+ "internal_missing_days_total": 2707,
+ "import_db_paths": {
+  "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3": 441575
+ },
+ "columns_in_original_csv": [
+  "create_time",
+  "symbol",
+  "sum_open_interest",
+  "sum_open_interest_value",
+  "count_toptrader_long_short_ratio",
+  "sum_toptrader_long_short_ratio",
+  "count_long_short_ratio",
+  "sum_taker_long_short_vol_ratio"
+ ],
+ "importer_takes_only": [
+  "sum_open_interest",
+  "sum_open_interest_value"
+ ]
+}

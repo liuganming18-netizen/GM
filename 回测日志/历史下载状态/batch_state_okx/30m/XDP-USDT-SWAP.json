@@ -1,0 +1,24 @@
+{
+  "inst_id": "XDP-USDT-SWAP",
+  "bar": "30m",
+  "status": "done",
+  "rows": 318,
+  "pages": 5,
+  "errors": 0,
+  "window": [
+    "2026-09-28T14:00:00Z",
+    "2026-10-05T04:58:23Z"
+  ],
+  "source_id": 31945,
+  "api_call_ids": [
+    13348,
+    13349,
+    13351,
+    13352,
+    13353
+  ],
+  "raw_path": "raw/okx/30m/XDP-USDT-SWAP.json",
+  "taker_buy": "空串（欧易无 taker 字段，B 策略数据不足）",
+  "trade_count": "0 占位（欧易无该字段，非真值）",
+  "updated_utc": "2026-10-05T06:20:37Z"
+}

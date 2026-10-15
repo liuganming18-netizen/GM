@@ -1,0 +1,61 @@
+{
+ "format": "pc9_8h_pass_evidence",
+ "version": 1,
+ "generated_utc": "2026-10-08T08:11:00Z",
+ "verdict": "8h 全池验收通过（门禁 exit=0）",
+ "rest_fill_gate": {
+  "status": "pass",
+  "blocking": [],
+  "empty_ranges_covered_by_exemption": 8,
+  "unresolved_empty_ranges": [],
+  "unresolved_rest_empty": []
+ },
+ "rest_fill_totals": {
+  "symbols_ok": 12,
+  "failed": 0,
+  "range_empty": 8,
+  "unavailable": 0,
+  "structural_absent": 23,
+  "skipped_local_complete": 516,
+  "range_probes": 4,
+  "rows_added": 0,
+  "remaining": 0,
+  "gate_status": "pass"
+ },
+ "final_acceptance": {
+  "aggregate": {
+   "symbols": 551,
+   "rows": 1426196,
+   "head_residual_bars": 0,
+   "internal_residual_bars": 0,
+   "tail_residual_bars": 0,
+   "head_resolved": 528,
+   "internal_documented": 24,
+   "pass": 551,
+   "no_range_evidence": 0,
+   "empty": 0,
+   "identity_unverified": 0,
+   "structural_absent": 23,
+   "off_boundary_symbols": 0,
+   "off_boundary_rows": 0
+  },
+  "status": "pass",
+  "gate": {
+   "status": "pass",
+   "failed_timeframes": []
+  }
+ },
+ "resolved_blockers": {
+  "failed_4": "ONT/PARTI/PENDLE/T 限频重试成功 ⇒ failed=0",
+  "unresolved_empty_ranges_8": "8 币 24 根代际缝隙经周期绑定豁免覆盖 ⇒ 计入官方缺失(计)=24",
+  "unresolved_rest_empty_23": "OKX 8h 结构性不可得单列 ⇒ structural_absent=23，不再计 rest_empty"
+ },
+ "files": {
+  "PC1_8h_restfill.json": "6710ff9991a214fc21f2ee24e71173dbbbcb76b3b0f062b32ec8c2a9d7707148",
+  "PC6_8h_acceptance.json": "1e6fc098f0acd95bc04a2ffbf627cfcb18631013e3b4a40f363e07718dbbeb5c",
+  "PC2_8h_coverage.json": "dcfc629da1c8ed8ea8023f5c11864f58eda27ab18dd5d14e37dd2dbee6a98bb3",
+  "pool_exemptions.json": "39635ca71192f84ee238b095e315f70c4753bf363ccbd8f1ed0727a312e2e872"
+ },
+ "isolation_tests": "tests/test_pool_gate.py 22 项全通过（含新增 4 项 8h 代际缝隙：有豁免通过/无豁免阻塞/错周期不覆盖/身份未核阻塞）",
+ "note": "完成状态由真实全池门禁结果决定，不由退出 0 或文件生成决定。"
+}

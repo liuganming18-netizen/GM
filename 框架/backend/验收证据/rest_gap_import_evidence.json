@@ -1,0 +1,175 @@
+{
+ "links": [
+  {
+   "source_id": 1804627,
+   "exchange": "binance",
+   "symbol": "BTCUSDT",
+   "tf": "8h",
+   "first_open": "2019-09-08T16:00:00Z",
+   "last_open": "2019-12-30T16:00:00Z",
+   "rows_added": 340,
+   "open_times_n": 340,
+   "open_times_digest": "8c0f9c181c410e40fbc0516415775344ce84c5775c4618addc801c079bf1bbf4",
+   "open_times_sample": [
+    "2019-09-08T16:00:00Z",
+    "2019-09-09T00:00:00Z",
+    "2019-09-09T08:00:00Z",
+    "2019-09-09T16:00:00Z",
+    "2019-09-10T00:00:00Z"
+   ],
+   "evidence_n": 1,
+   "evidence": [
+    {
+     "url": "https://fapi.binance.com/fapi/v1/klines",
+     "host": null,
+     "http_code": null,
+     "body_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_rest_gap/8h/BTCUSDT/BTCUSDT-8h-1567900800000.rows.json",
+     "body_bytes": null,
+     "body_sha256": "c923e10dd33722d5589f20a2ade6031d25137a6db3d6cd368520943b63df20db",
+     "sha_kind": "REST原始正文SHA256（覆盖正文，可独立复算）",
+     "fetched_at": "2026-10-08T02:39:18Z",
+     "phase": null
+    }
+   ],
+   "sha_kind": "HTTP原始字节SHA256（正文）",
+   "linked_at": "2026-10-08T07:34:25Z"
+  },
+  {
+   "source_id": 1836042,
+   "exchange": "binance",
+   "symbol": "BTCUSDT",
+   "tf": "4h",
+   "first_open": "2019-09-08T16:00:00Z",
+   "last_open": "2019-12-30T20:00:00Z",
+   "rows_added": 680,
+   "open_times_n": 680,
+   "open_times_digest": "8c5bc8c7397e9cffdf107cf8a13fd2ec9668c4fceaeb25866321eb1917346f41",
+   "open_times_sample": [
+    "2019-09-08T16:00:00Z",
+    "2019-09-08T20:00:00Z",
+    "2019-09-09T00:00:00Z",
+    "2019-09-09T04:00:00Z",
+    "2019-09-09T08:00:00Z"
+   ],
+   "evidence_n": 1,
+   "evidence": [
+    {
+     "url": "https://fapi.binance.com/fapi/v1/klines",
+     "host": null,
+     "http_code": null,
+     "body_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_rest_gap/4h/BTCUSDT/BTCUSDT-4h-1567900800000.rows.json",
+     "body_bytes": null,
+     "body_sha256": "b332e3ed4ed0ae0e9495aefa3f788293df586b9e7db533bfbec2d10fb5a45a6f",
+     "sha_kind": "REST原始正文SHA256（覆盖正文，可独立复算）",
+     "fetched_at": "2026-10-08T02:39:19Z",
+     "phase": null
+    }
+   ],
+   "sha_kind": "HTTP原始字节SHA256（正文）",
+   "linked_at": "2026-10-08T08:15:20Z"
+  },
+  {
+   "source_id": 1871067,
+   "exchange": "binance",
+   "symbol": "BTCUSDT",
+   "tf": "1h",
+   "first_open": "2019-09-08T17:00:00Z",
+   "last_open": "2019-12-30T23:00:00Z",
+   "rows_added": 2719,
+   "open_times_n": 2719,
+   "open_times_digest": "ce7a42a46292e4b91710f81e0bf5218afd9d0c25b5b002f477727daf38c10af1",
+   "open_times_sample": [
+    "2019-09-08T17:00:00Z",
+    "2019-09-08T18:00:00Z",
+    "2019-09-08T19:00:00Z",
+    "2019-09-08T20:00:00Z",
+    "2019-09-08T21:00:00Z"
+   ],
+   "evidence_n": 1,
+   "evidence": [
+    {
+     "url": "https://fapi.binance.com/fapi/v1/klines",
+     "host": null,
+     "http_code": null,
+     "body_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_rest_gap/1h/BTCUSDT/BTCUSDT-1h-1567900800000.rows.json",
+     "body_bytes": null,
+     "body_sha256": "25a9b8f278461c30771e584166857021fe67eb93930ef8852d3ab392658c257c",
+     "sha_kind": "REST原始正文SHA256（覆盖正文，可独立复算）",
+     "fetched_at": "2026-10-08T02:39:22Z",
+     "phase": null
+    }
+   ],
+   "sha_kind": "HTTP原始字节SHA256（正文）",
+   "linked_at": "2026-10-08T09:04:01Z"
+  },
+  {
+   "source_id": 1939464,
+   "exchange": "binance",
+   "symbol": "BTCUSDT",
+   "tf": "30m",
+   "first_open": "2019-09-08T17:30:00Z",
+   "last_open": "2019-12-30T23:30:00Z",
+   "rows_added": 5437,
+   "open_times_n": 5437,
+   "open_times_digest": "6576cde1ec471fa50759b6a43bed9f86571501a1d001fd57592324e01a2e32c5",
+   "open_times_sample": [
+    "2019-09-08T17:30:00Z",
+    "2019-09-08T18:00:00Z",
+    "2019-09-08T18:30:00Z",
+    "2019-09-08T19:00:00Z",
+    "2019-09-08T19:30:00Z"
+   ],
+   "evidence_n": 1,
+   "evidence": [
+    {
+     "url": "https://fapi.binance.com/fapi/v1/klines",
+     "host": null,
+     "http_code": null,
+     "body_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_rest_gap/30m/BTCUSDT/BTCUSDT-30m-1567900800000.rows.json",
+     "body_bytes": null,
+     "body_sha256": "937942ad3db546470eef1ca38577019dde0ff7ecbb0e31ee109d752cf1e66ae7",
+     "sha_kind": "REST原始正文SHA256（覆盖正文，可独立复算）",
+     "fetched_at": "2026-10-08T02:39:26Z",
+     "phase": null
+    }
+   ],
+   "sha_kind": "HTTP原始字节SHA256（正文）",
+   "linked_at": "2026-10-08T10:39:37Z"
+  },
+  {
+   "source_id": 4064366,
+   "exchange": "binance",
+   "symbol": "BTCUSDT",
+   "tf": "15m",
+   "first_open": "2019-09-08T17:45:00Z",
+   "last_open": "2019-12-30T23:45:00Z",
+   "rows_added": 10873,
+   "open_times_n": 10873,
+   "open_times_digest": "9a20b3dc9af5b1f0e2e15099cc9de847337a01aa3a9cf0b0738c76c257f94a16",
+   "open_times_sample": [
+    "2019-09-08T17:45:00Z",
+    "2019-09-08T18:00:00Z",
+    "2019-09-08T18:15:00Z",
+    "2019-09-08T18:30:00Z",
+    "2019-09-08T18:45:00Z"
+   ],
+   "evidence_n": 1,
+   "evidence": [
+    {
+     "url": "https://fapi.binance.com/fapi/v1/klines",
+     "host": null,
+     "http_code": null,
+     "body_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_rest_gap/15m/BTCUSDT/BTCUSDT-15m-1567900800000.rows.json",
+     "body_bytes": null,
+     "body_sha256": "ec528b86b00496fb44d72ca1dcfca08087e3df8d65ea1f8a0d75a87c37e418dd",
+     "sha_kind": "REST原始正文SHA256（覆盖正文，可独立复算）",
+     "fetched_at": "2026-10-08T02:39:36Z",
+     "phase": null
+    }
+   ],
+   "sha_kind": "HTTP原始字节SHA256（正文）",
+   "linked_at": "2026-10-10T14:29:31Z"
+  }
+ ],
+ "updated_utc": "2026-10-10T14:29:31Z"
+}

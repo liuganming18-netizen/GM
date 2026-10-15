@@ -1,0 +1,200 @@
+{
+ "captured_at": "2026-10-07T19:50:59Z",
+ "host": "www.binance.bh",
+ "probes": [
+  {
+   "path": "overview",
+   "params": {
+    "symbol": "ARXUSDT",
+    "timeRange": "ALL"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(5 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "overview",
+   "params": {
+    "symbol": "ARXUSDT"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(5 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "details/stats",
+   "params": {
+    "symbol": "ARXUSDT",
+    "timeRange": "ALL"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(5 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "ARXUSDT",
+    "timeRange": "ALL",
+    "page": 1,
+    "rows": 10,
+    "sortingField": "TIME",
+    "sortingOrder": "DESC"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(6 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "list",
+   "params": {
+    "symbol": "ARXUSDT",
+    "timeRange": "ALL"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(5 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "overview",
+   "params": {
+    "symbol": "哈基米USDT",
+    "timeRange": "ALL"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(5 keys)",
+   "origin": "共享缓存"
+  },
+  {
+   "path": "overview",
+   "params": {
+    "symbol": "ZZZNOTREAL999",
+    "timeRange": "ALL"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(5 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "1H"
+   },
+   "business_code": "RejectedRequest",
+   "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+   "origin": null
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "4H"
+   },
+   "business_code": "RejectedRequest",
+   "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+   "origin": null
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "12H"
+   },
+   "business_code": "RejectedRequest",
+   "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+   "origin": null
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "1D"
+   },
+   "business_code": "RejectedRequest",
+   "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+   "origin": null
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "3D"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(6 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "7D"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(6 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "14D"
+   },
+   "business_code": "RejectedRequest",
+   "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+   "origin": null
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "30D"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(6 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "90D"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(6 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "ALL"
+   },
+   "business_code": "000000",
+   "data_shape": "dict(6 keys)",
+   "origin": "公共REST"
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "1W"
+   },
+   "business_code": "RejectedRequest",
+   "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+   "origin": null
+  },
+  {
+   "path": "details/list",
+   "params": {
+    "symbol": "BTCUSDT",
+    "timeRange": "1M"
+   },
+   "business_code": "RejectedRequest",
+   "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+   "origin": null
+  }
+ ],
+ "note": "参数域：timeRange 仅 ALL/7D/3D/30D/90D 通过，其余 code=000002；details/* 缺 timeRange ⇒ code=000002；未覆盖合约 ⇒ data:null"
+}

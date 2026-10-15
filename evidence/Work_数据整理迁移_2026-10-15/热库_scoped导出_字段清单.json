@@ -1,0 +1,303 @@
+{
+ "源活动库路径": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
+ "源活动库当前字节": 5352857600,
+ "目标scoped库路径": "/Users/boos/Desktop/威科夫因子共振趋势/数据/hot/market_v2_scoped_kline_oi.sqlite3",
+ "目标scoped库字节": 3411607552,
+ "目标scoped库SHA256": "ec6df2d13ccdfaf7521be10a1929d4774165c80fac70c82d5ffbce84200997a9",
+ "目标含表": [
+  "api_scope_state",
+  "candle_field_notes",
+  "candle_heads",
+  "candle_versions",
+  "coverage_cache",
+  "kline_stream_state",
+  "oi_history",
+  "realtime_klines",
+  "sources",
+  "symbol_classification",
+  "symbol_pool",
+  "symbol_supply"
+ ],
+ "目标含视图": [
+  "candles"
+ ],
+ "范围外表是否混入": [],
+ "整库拷贝证据": {
+  "目标是否存在与源同尺寸文件": false,
+  "说明": "目标仅有 scoped 库；源以 mode=ro + ATTACH + BEGIN 一致读事务按表白名单+币种白名单导出，非文件拷贝"
+ },
+ "逐表": [
+  {
+   "表": "api_scope_state",
+   "列数": 4,
+   "列名": [
+    "scope",
+    "cooldown_until",
+    "blocked",
+    "reason"
+   ],
+   "行数": 5,
+   "索引": [
+    "sqlite_autoindex_api_scope_state_1"
+   ]
+  },
+  {
+   "表": "candle_field_notes",
+   "列数": 10,
+   "列名": [
+    "exchange",
+    "market",
+    "symbol",
+    "timeframe",
+    "field",
+    "stored_as",
+    "reason",
+    "impact",
+    "source",
+    "updated_at"
+   ],
+   "行数": 595,
+   "索引": [
+    "sqlite_autoindex_candle_field_notes_1"
+   ]
+  },
+  {
+   "表": "candle_heads",
+   "列数": 6,
+   "列名": [
+    "exchange",
+    "market",
+    "symbol",
+    "timeframe",
+    "open_time",
+    "source_id"
+   ],
+   "行数": 5986971,
+   "索引": []
+  },
+  {
+   "表": "candle_versions",
+   "列数": 18,
+   "列名": [
+    "exchange",
+    "market",
+    "symbol",
+    "timeframe",
+    "open_time",
+    "close_time",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "quote_volume",
+    "trade_count",
+    "taker_buy_volume",
+    "taker_buy_quote_volume",
+    "source_id",
+    "available_at",
+    "is_closed"
+   ],
+   "行数": 6230761,
+   "索引": [
+    "sqlite_autoindex_candle_versions_1"
+   ]
+  },
+  {
+   "表": "coverage_cache",
+   "列数": 11,
+   "列名": [
+    "exchange",
+    "market",
+    "symbol",
+    "timeframe",
+    "rows",
+    "first_open",
+    "last_close",
+    "expected",
+    "missing",
+    "source_count",
+    "updated_at"
+   ],
+   "行数": 4073,
+   "索引": [
+    "sqlite_autoindex_coverage_cache_1"
+   ]
+  },
+  {
+   "表": "kline_stream_state",
+   "列数": 18,
+   "列名": [
+    "exchange",
+    "market",
+    "timeframe",
+    "symbols_planned",
+    "symbols_seen",
+    "last_msg_at",
+    "last_closed_open_time",
+    "last_closed_written_at",
+    "last_forming_open_time",
+    "closed_written",
+    "gapfill_calls",
+    "gapfill_filled",
+    "gapfill_skipped",
+    "reconnects",
+    "backoff_s",
+    "status",
+    "detail",
+    "updated_at"
+   ],
+   "行数": 15,
+   "索引": [
+    "sqlite_autoindex_kline_stream_state_1"
+   ]
+  },
+  {
+   "表": "oi_history",
+   "列数": 11,
+   "列名": [
+    "exchange",
+    "market",
+    "symbol",
+    "period",
+    "ts",
+    "open_interest",
+    "open_interest_value",
+    "oi_ccy",
+    "oi_usd",
+    "source",
+    "fetched_at"
+   ],
+   "行数": 5364772,
+   "索引": [
+    "sqlite_autoindex_oi_history_1"
+   ]
+  },
+  {
+   "表": "realtime_klines",
+   "列数": 21,
+   "列名": [
+    "exchange",
+    "market",
+    "symbol",
+    "timeframe",
+    "open_time",
+    "close_time",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "quote_volume",
+    "trade_count",
+    "taker_buy_volume",
+    "taker_buy_quote_volume",
+    "is_closed",
+    "event_time",
+    "received_at",
+    "source",
+    "transport",
+    "updated_at"
+   ],
+   "行数": 4286,
+   "索引": [
+    "sqlite_autoindex_realtime_klines_1"
+   ]
+  },
+  {
+   "表": "sources",
+   "列数": 13,
+   "列名": [
+    "id",
+    "exchange",
+    "market",
+    "symbol",
+    "timeframe",
+    "source_url",
+    "file_path",
+    "sha256",
+    "imported_at",
+    "downloaded_at",
+    "first_open",
+    "last_close",
+    "row_count"
+   ],
+   "行数": 2203879,
+   "索引": [
+    "sqlite_autoindex_sources_1"
+   ]
+  },
+  {
+   "表": "symbol_classification",
+   "列数": 13,
+   "列名": [
+    "exchange",
+    "market",
+    "symbol",
+    "instrument_category",
+    "category_name",
+    "category_field",
+    "contract_type",
+    "in_active_range",
+    "excluded_reason",
+    "raw_json",
+    "snapshot_utc",
+    "source_call_id",
+    "updated_at"
+   ],
+   "行数": 1420,
+   "索引": [
+    "sqlite_autoindex_symbol_classification_1"
+   ]
+  },
+  {
+   "表": "symbol_pool",
+   "列数": 16,
+   "列名": [
+    "exchange",
+    "market",
+    "symbol",
+    "contract_type",
+    "quote_asset",
+    "margin_asset",
+    "status",
+    "onboard_time",
+    "base_asset",
+    "spot_symbol",
+    "spot_status",
+    "spot_match_method",
+    "priority_hint",
+    "snapshot_utc",
+    "source_call_id",
+    "updated_at"
+   ],
+   "行数": 549,
+   "索引": [
+    "sqlite_autoindex_symbol_pool_1"
+   ]
+  },
+  {
+   "表": "symbol_supply",
+   "列数": 10,
+   "列名": [
+    "exchange",
+    "market",
+    "symbol",
+    "base",
+    "circulating_supply",
+    "unit_note",
+    "source",
+    "supply_event_time",
+    "fetched_at",
+    "updated_at"
+   ],
+   "行数": 526,
+   "索引": [
+    "sqlite_autoindex_symbol_supply_1"
+   ]
+  }
+ ],
+ "视图SQL": {
+  "candles": "CREATE VIEW \"candles\" AS\nSELECT v.* FROM candle_versions v JOIN candle_heads h\nUSING(exchange, market, symbol, timeframe, open_time, source_id)"
+ }
+}

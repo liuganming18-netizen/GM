@@ -1,0 +1,724 @@
+{
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2023-10.zip",
+  "bytes": 343,
+  "sha256": "b841bf8a1e1b25f4cde79a2d2daca6e87b4de6eaf270c20e2bc83dfb7d5017a6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26997,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 26997,
+  "rows": 1
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2023-11.zip",
+  "bytes": 3521,
+  "sha256": "c6b202baef6d9cd5a14707d454629b9419ef92c5f06f1f4f78944f95411c01bf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26998,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26998,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-01.zip",
+  "bytes": 3632,
+  "sha256": "6c555eb9f923e4ffe9758d1b2e0a849c51de417c388e6caca9b46f4bf8c23a67",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27000,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27000,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2023-12.zip",
+  "bytes": 3673,
+  "sha256": "90e8117445b1a2c1ca475ead8f77a17772f903b36b626efa5d6027ed948ce8a0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26999,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26999,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-02.zip",
+  "bytes": 3386,
+  "sha256": "38ec1022f65badc0f51fa6fce3fc93b9c78768e93234ce708e2849f4e50fb229",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27001,
+   "新增版本数": 58,
+   "状态": "已入库"
+  },
+  "source_id": 27001,
+  "rows": 58
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-03.zip",
+  "bytes": 3607,
+  "sha256": "c2c4810dd773300d940e877ca852de5c866a256285170a6d7d6289403adafe83",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27002,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27002,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-04.zip",
+  "bytes": 3489,
+  "sha256": "982df57444dd76f5baeae20e1ddb9b09c08051d4d9701b44424417273a206572",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27003,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27003,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-05.zip",
+  "bytes": 3540,
+  "sha256": "4efb73307c5c912befd26028d23dfdac2da8548279a2776678ed9493d0f89e76",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27004,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27004,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-06.zip",
+  "bytes": 3417,
+  "sha256": "4569c9b52acfbfb924e145a5d520444f49ac355c3990e3beff83b3cf0f3c3194",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27005,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27005,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-07.zip",
+  "bytes": 3575,
+  "sha256": "86da5505cf9ef3b158d772a48050137a5b951c9492b4ab802c3c9e46708a154e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27006,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27006,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-08.zip",
+  "bytes": 3566,
+  "sha256": "aef20445f2cebf4ba57f2ebb599c241c34da4a3c612a54377ad57266024339b2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27007,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27007,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-09.zip",
+  "bytes": 3493,
+  "sha256": "208ecfb96a6d100e9a08b4ce518c88287cac723c148ed5d6a7027622e79ac7e9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27008,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27008,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-10.zip",
+  "bytes": 3593,
+  "sha256": "921641634cf8780887feaaedb705329f0c29dae2618f09b0e64d41e695f4cd9a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27009,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27009,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-11.zip",
+  "bytes": 3503,
+  "sha256": "a4387143c275daee3ce563ee8dffc7f593a3ebd25a581cc49523d9c25a4c8fd5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27010,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27010,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2024-12.zip",
+  "bytes": 3585,
+  "sha256": "ccf1d06ecdce65095876e8155fb85c3aea1d581a75e4f1774cbe4bd757200f21",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27011,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27011,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-02.zip",
+  "bytes": 3234,
+  "sha256": "699b355b8efd9501550544b7cb53f916e218f810f9401d9620ac2f24a15c4dd9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27013,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 27013,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-01.zip",
+  "bytes": 3544,
+  "sha256": "ea99d7beb4806dc5ac6a2da9aadfee34f93569caeb509c9823f46052ec96e571",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27012,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27012,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-03.zip",
+  "bytes": 3517,
+  "sha256": "c7b967e53b40474727b503e06f6a4e59da86559cd04b06015138c775f541278e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27014,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27014,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-04.zip",
+  "bytes": 3399,
+  "sha256": "007fc80ab0fa4f82da2ebcda7093159ff2e4caa298dbb469253dabb263e69bd7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27015,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27015,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-05.zip",
+  "bytes": 3518,
+  "sha256": "f99fa5a9fc49e90b0292eae0ec20e8feef51ec77ba6208da7bd6950bb0c24235",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27016,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27016,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-06.zip",
+  "bytes": 3408,
+  "sha256": "00986d02c88ac39b5986d09b840d39f87ea13882105301c92fb27f32197d2bd7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27017,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27017,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-07.zip",
+  "bytes": 3551,
+  "sha256": "209d08b80fd43faacbee3027b7af628c837563a37a7ab2709f6803956e1ae7a4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27018,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27018,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-08.zip",
+  "bytes": 3497,
+  "sha256": "9bd960d93a23d5e1c3f83b8ff370d64726a85ff29325a829cb07c257373cb68d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27019,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27019,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-09.zip",
+  "bytes": 3371,
+  "sha256": "c9209b3d79563d60d9033424d01e81d05af8bee7b05969480ea596374875f595",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27020,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27020,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-10.zip",
+  "bytes": 3500,
+  "sha256": "d9ca3c84ca1f440df4cb8e342e95caee7865a82704c055d5e865d445ca8f3e47",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27021,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27021,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-11.zip",
+  "bytes": 3392,
+  "sha256": "cf3c051cc72e19f5dcb87abf5f724310530d09cbf9545993ed7b5ef870aa4850",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27022,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27022,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2025-12.zip",
+  "bytes": 3443,
+  "sha256": "4c3658fcda179e07edcfb43d47b149a28918a2609b40b0638df5f2476fec9e92",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27023,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27023,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-01.zip",
+  "bytes": 3432,
+  "sha256": "31e61eee0efd23a3ae345b7a9ae071a9f1535687da3ff961c8ab22e166859293",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27024,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27024,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-02.zip",
+  "bytes": 3071,
+  "sha256": "b0b7b642be2098614543c82cf4e84b5ca8865cc6a7317d4756fdccd0b12d0ab9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27025,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 27025,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-03.zip",
+  "bytes": 3330,
+  "sha256": "65878c63c7f7ecfb322866b4ef2ddad6fc58e2c9304fbfda40e11dd4af6e5f2e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27026,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27026,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-04.zip",
+  "bytes": 3234,
+  "sha256": "74fa281401daa42fa78970a3df5a92896187a67687028beff94cb449df299452",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27027,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27027,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-05.zip",
+  "bytes": 3399,
+  "sha256": "31dbf1f45d43a2f39644a94f0f7b8cf9a27960bdfff7d911b09131bec27c6784",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27028,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27028,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-06.zip",
+  "bytes": 3272,
+  "sha256": "9ca97171ef713ee3515521c109fdc003cd9885746a18147bff9c92266c3cf9c8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27029,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27029,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-07.zip",
+  "bytes": 3348,
+  "sha256": "c8463311d78a57ac3e8c46ceb7a29551bc6e05ad2d45f691fc6d86be3a511edd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27030,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27030,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-08.zip",
+  "bytes": 3305,
+  "sha256": "0993a8febb626f2cf6adba067aeed7d1ad4511174a171b6b26ed900ddb384169",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27031,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 27031,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/TIAUSDT/12h/TIAUSDT-12h-2026-09.zip",
+  "bytes": 3328,
+  "sha256": "8b1bcdeb4dbbbad78547b6d11a09bc853b96f5bb5982ca7dd1472e698b360f91",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 27032,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 27032,
+  "rows": 60
+ },
+ "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-01.zip",
+  "bytes": 397,
+  "sha256": "af601ed767a5b87d3f737834892338a4d656a1f20534f0f84096eccb37b86d48",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26994,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 26994,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-02.zip",
+  "bytes": 405,
+  "sha256": "80f9c98ed6d7047f9832f8f171dfc85e0a365b33d794c32014743fc00afb2ebb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26995,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 26995,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-04.zip",
+  "bytes": 397,
+  "sha256": "53924ded9cbe641878dec627f6119290df3098586ee98b1f5fe57ecfd8cc1f64",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 51331,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 51331,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-03.zip",
+  "bytes": 400,
+  "sha256": "a5b5ce9c0d9a7d43fb17ffc89fb310871395971bf5d2c82cddcd6c5169e4c931",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26996,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 26996,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-05.zip",
+  "bytes": 397,
+  "sha256": "554f3d4c2d1332eef06c62b9cb21489386881740bd39c8a7089597ec44f8b6e3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 272282,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 272282,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-06.zip",
+  "bytes": 395,
+  "sha256": "e33f0c0f34becafcd1d90452e6c0336b760f8525ac3fa87a61d548c787ce157b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1607244,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1607244,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/TIAUSDT/12h/TIAUSDT-12h-2026-10-07.zip",
+  "status": "missing_in_archive",
+  "note": "官方归档或 CHECKSUM 不存在（日度按需探测，404 即缺失）；不计为完成"
+ }
+}

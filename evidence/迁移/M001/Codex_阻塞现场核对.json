@@ -1,0 +1,16 @@
+{
+  "checked_at_ms": 1791961439165,
+  "observer": "Codex",
+  "task_title": "执行M001行情热库迁移",
+  "ui_blocker": "你的可用积分已耗尽，升级会员或邀请好友即可继续使用。",
+  "ui_action": "仅暂停本新任务，不操作旧恢复/采集/API/live_worker",
+  "target": "/Users/boos/Desktop/威科夫因子共振趋势/数据/hot/market_v2.sqlite3",
+  "target_exists": false,
+  "work_receipt_exists": false,
+  "state": "blocked_work_credits_exhausted",
+  "final_approver": "用户",
+  "approved_next_item": false,
+  "known_occurrences_this_task": 1,
+  "prior_occurrences": "unknown",
+  "remaining_disk_bytes": 68487987200
+}

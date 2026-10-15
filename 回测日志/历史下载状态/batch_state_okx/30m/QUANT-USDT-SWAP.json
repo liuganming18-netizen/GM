@@ -1,0 +1,22 @@
+{
+  "inst_id": "QUANT-USDT-SWAP",
+  "bar": "30m",
+  "status": "done",
+  "rows": 186,
+  "pages": 3,
+  "errors": 0,
+  "window": [
+    "2026-10-01T08:00:00Z",
+    "2026-10-05T04:58:23Z"
+  ],
+  "source_id": 31959,
+  "api_call_ids": [
+    13354,
+    13355,
+    13356
+  ],
+  "raw_path": "raw/okx/30m/QUANT-USDT-SWAP.json",
+  "taker_buy": "空串（欧易无 taker 字段，B 策略数据不足）",
+  "trade_count": "0 占位（欧易无该字段，非真值）",
+  "updated_utc": "2026-10-05T06:20:40Z"
+}

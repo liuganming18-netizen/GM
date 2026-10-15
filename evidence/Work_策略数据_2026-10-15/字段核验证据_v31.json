@@ -1,0 +1,178 @@
+{
+ "generated_at": "2026-10-14T21:01:20Z",
+ "holdout_start_utc": "2026-04-15T00:00:00Z",
+ "windows": {
+  "is": {
+   "boundary_violations": [],
+   "grid_off": {
+    "ohlcv/1h": {
+     "symbols": 264,
+     "rows": 4004576,
+     "off_grid": 0
+    },
+    "ohlcv/4h": {
+     "symbols": 264,
+     "rows": 1001211,
+     "off_grid": 0
+    },
+    "ohlcv/15m": {
+     "symbols": 264,
+     "rows": 15999558,
+     "off_grid": 0
+    },
+    "oi_metrics": {
+     "symbols": 270,
+     "rows": 38346580,
+     "off_grid": 7537
+    }
+   },
+   "ratio_null": {
+    "oi_metrics": {
+     "rows": 38346580,
+     "null_cells": 0,
+     "null_frac": 0.0
+    }
+   },
+   "funding": {
+    "symbols": 270,
+    "rows": 603116,
+    "mark_null": 24,
+    "mark_null_frac": 4e-05
+   }
+  },
+  "val": {
+   "boundary_violations": [],
+   "grid_off": {
+    "ohlcv/1h": {
+     "symbols": 502,
+     "rows": 4946855,
+     "off_grid": 0
+    },
+    "ohlcv/4h": {
+     "symbols": 502,
+     "rows": 1236814,
+     "off_grid": 0
+    },
+    "ohlcv/15m": {
+     "symbols": 502,
+     "rows": 19787052,
+     "off_grid": 0
+    },
+    "oi_metrics": {
+     "symbols": 502,
+     "rows": 59405616,
+     "off_grid": 1866
+    }
+   },
+   "ratio_null": {
+    "oi_metrics": {
+     "rows": 59405616,
+     "null_cells": 0,
+     "null_frac": 0.0
+    }
+   },
+   "funding": {
+    "symbols": 502,
+    "rows": 1075571,
+    "mark_null": 0,
+    "mark_null_frac": 0.0
+   }
+  }
+ },
+ "A_oi_same_event_vs_archive": {
+  "is:BTCUSDT": {
+   "common": 249764,
+   "match": 249764,
+   "diff": 0
+  },
+  "val:BTCUSDT": {
+   "common": 131554,
+   "match": 131554,
+   "diff": 0
+  },
+  "is:ETHUSDT": {
+   "common": 232256,
+   "match": 232256,
+   "diff": 0
+  },
+  "val:ETHUSDT": {
+   "common": 131553,
+   "match": 131553,
+   "diff": 0
+  },
+  "is:SOLUSDT": {
+   "common": 232236,
+   "match": 232236,
+   "diff": 0
+  },
+  "val:SOLUSDT": {
+   "common": 131554,
+   "match": 131554,
+   "diff": 0
+  },
+  "is:BNBUSDT": {
+   "common": 232253,
+   "match": 232253,
+   "diff": 0
+  },
+  "val:BNBUSDT": {
+   "common": 131555,
+   "match": 131555,
+   "diff": 0
+  }
+ },
+ "C_coverage": {
+  "is": {
+   "ohlcv/1h": {
+    "have": 264,
+    "missing": 262
+   },
+   "ohlcv/4h": {
+    "have": 264,
+    "missing": 262
+   },
+   "ohlcv/15m": {
+    "have": 264,
+    "missing": 262
+   },
+   "oi_metrics": {
+    "have": 270,
+    "missing": 256
+   },
+   "funding": {
+    "have": 270,
+    "missing": 256
+   },
+   "mark1h": {
+    "have": 270,
+    "missing": 256
+   }
+  },
+  "val": {
+   "ohlcv/1h": {
+    "have": 502,
+    "missing": 24
+   },
+   "ohlcv/4h": {
+    "have": 502,
+    "missing": 24
+   },
+   "ohlcv/15m": {
+    "have": 502,
+    "missing": 24
+   },
+   "oi_metrics": {
+    "have": 502,
+    "missing": 24
+   },
+   "funding": {
+    "have": 502,
+    "missing": 24
+   },
+   "mark1h": {
+    "have": 499,
+    "missing": 27
+   }
+  }
+ }
+}

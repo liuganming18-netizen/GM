@@ -1,0 +1,14 @@
+{
+ "round_started_utc": "2026-10-08T08:06:30Z",
+ "round_deadline_utc": "2026-10-08T19:21:30Z",
+ "round_deadline_min": 675,
+ "tfs": [
+  "8h",
+  "4h",
+  "1h",
+  "30m"
+ ],
+ "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "pid": 49005,
+ "note": "本轮**固定**截止时点（不随步骤 now 变化）；实时采集健康另列，不属于本 run。"
+}

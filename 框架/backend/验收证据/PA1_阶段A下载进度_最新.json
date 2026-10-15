@@ -1,0 +1,180 @@
+{
+ "generated_utc": "2026-10-07T19:31:56Z",
+ "pid": 20421,
+ "pid_alive": true,
+ "log": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/logs/phaseA_run.log",
+ "pool_total": 528,
+ "phases": {
+  "1d": {
+   "symbols": 528,
+   "planned_files": 19127,
+   "reused_files": 18924,
+   "downloaded_files": 0,
+   "missing_files": 203,
+   "failed_files": 0,
+   "status": {
+    "missing_only": 13,
+    "done": 515
+   },
+   "pending_files": 0,
+   "on_disk_zips": 19414,
+   "new_files_since_launch": 0,
+   "new_bytes_since_launch": 0,
+   "disk_bytes": 30434323
+  },
+  "12h": {
+   "symbols": 528,
+   "planned_files": 19127,
+   "reused_files": 18916,
+   "downloaded_files": 10,
+   "missing_files": 201,
+   "failed_files": 0,
+   "status": {
+    "missing_only": 11,
+    "done": 517
+   },
+   "pending_files": 0,
+   "on_disk_zips": 18949,
+   "new_files_since_launch": 10,
+   "new_bytes_since_launch": 4004,
+   "disk_bytes": 53162086
+  },
+  "8h": {
+   "symbols": 528,
+   "planned_files": 19127,
+   "reused_files": 18685,
+   "downloaded_files": 236,
+   "missing_files": 206,
+   "failed_files": 0,
+   "status": {
+    "missing_only": 16,
+    "done": 512
+   },
+   "pending_files": 0,
+   "on_disk_zips": 19121,
+   "new_files_since_launch": 236,
+   "new_bytes_since_launch": 105124,
+   "disk_bytes": 75742919
+  },
+  "4h": {
+   "symbols": 528,
+   "planned_files": 18719,
+   "reused_files": 18393,
+   "downloaded_files": 120,
+   "missing_files": 206,
+   "failed_files": 0,
+   "status": {
+    "missing_only": 16,
+    "done": 512
+   },
+   "pending_files": 0,
+   "on_disk_zips": 18717,
+   "new_files_since_launch": 123,
+   "new_bytes_since_launch": 72173,
+   "disk_bytes": 141619237
+  },
+  "1h": {
+   "symbols": 528,
+   "planned_files": 18599,
+   "reused_files": 18395,
+   "downloaded_files": 0,
+   "missing_files": 204,
+   "failed_files": 0,
+   "status": {
+    "missing_only": 14,
+    "done": 514
+   },
+   "pending_files": 0,
+   "on_disk_zips": 18597,
+   "new_files_since_launch": 0,
+   "new_bytes_since_launch": 0,
+   "disk_bytes": 506006297
+  },
+  "30m": {
+   "symbols": 528,
+   "planned_files": 18599,
+   "reused_files": 18393,
+   "downloaded_files": 0,
+   "missing_files": 206,
+   "failed_files": 0,
+   "status": {
+    "missing_only": 16,
+    "done": 512
+   },
+   "pending_files": 0,
+   "on_disk_zips": 18596,
+   "new_files_since_launch": 0,
+   "new_bytes_since_launch": 0,
+   "disk_bytes": 971568847
+  },
+  "15m": {
+   "symbols": 528,
+   "planned_files": 18274,
+   "reused_files": 18272,
+   "downloaded_files": 0,
+   "missing_files": 2,
+   "failed_files": 0,
+   "status": {
+    "done": 526,
+    "missing_only": 2
+   },
+   "pending_files": 0,
+   "on_disk_zips": 18495,
+   "new_files_since_launch": 0,
+   "new_bytes_since_launch": 0,
+   "disk_bytes": 1166663059
+  },
+  "5m": {
+   "symbols": 230,
+   "planned_files": 9890,
+   "reused_files": 9879,
+   "downloaded_files": 0,
+   "missing_files": 11,
+   "failed_files": 0,
+   "status": {
+    "done": 219,
+    "missing_only": 11
+   },
+   "pending_files": 0,
+   "on_disk_zips": 9923,
+   "new_files_since_launch": 0,
+   "new_bytes_since_launch": 0,
+   "disk_bytes": 899441220
+  },
+  "1m": {
+   "symbols": 0,
+   "planned_files": 0,
+   "reused_files": 0,
+   "downloaded_files": 0,
+   "missing_files": 0,
+   "failed_files": 0,
+   "status": {},
+   "pending_files": 0,
+   "on_disk_zips": 10,
+   "new_files_since_launch": 0,
+   "new_bytes_since_launch": 0,
+   "disk_bytes": 643959
+  }
+ },
+ "not_yet_downloaded": {
+  "1d": [],
+  "12h": [],
+  "8h": [],
+  "4h": [],
+  "1h": [],
+  "30m": [],
+  "15m": [],
+  "5m": [],
+  "1m": []
+ },
+ "failures": [],
+ "launch_utc": "2026-10-07T19:24:12Z",
+ "total_new_files_since_launch": 369,
+ "total_new_bytes_since_launch": 181301,
+ "elapsed_s": 463.4,
+ "rate_files_per_s": 0.796,
+ "pending_files_total": 0,
+ "eta_s": 0.0,
+ "eta_utc": "2026-10-07T19:31:56Z",
+ "free_gb": 104.0
+}

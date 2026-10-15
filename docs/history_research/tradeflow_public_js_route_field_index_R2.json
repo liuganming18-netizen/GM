@@ -1,0 +1,1331 @@
+{
+  "asset_url": "https://www.tradeflow.club/assets/index-27SKEJ8j.js",
+  "asset_bytes": 2158821,
+  "asset_sha256": "80dac5a26b62e83b86a822af8d6973c1c2342a6faca01181fab337de27cfa7d4",
+  "inspected_utc": "2026-10-03T10:40:30.583779+00:00",
+  "note": "Static text/regex parsing only. Bundle was not executed; API endpoint strings below are cited as client-code declarations and were NOT requested.",
+  "service_functions": {
+    "match_count_capped": 12,
+    "items": [
+      {
+        "offset": 747625,
+        "text": "async function xT",
+        "context": ";return Object.keys(e).forEach(n=>{let r=e[n];r!==void 0&&(t[n]=r)}),t}function bT(e){return _re(e)}async function xT(e,t,n,r){let i={method:e,headers:{\"Content-Type\":`application/json`}};(e===`POST`||e===`PUT`)&&n&&(i.body=JSON.stringify(n));let a=r?.params?`${t}?${new URLSearchParams(yT(r.param"
+      },
+      {
+        "offset": 749001,
+        "text": "async function ST",
+        "context": "(`/api/auth/me`,{method:`GET`,headers:{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function ST(){return xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${e}/kline?includeTopTraderRatios=true"
+      },
+      {
+        "offset": 749087,
+        "text": "async function Sie",
+        "context": "json())).data}async function ST(){return xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${e}/kline?includeTopTraderRatios=true`,null)}async function Cie(e){return xT(`GET`,`/api/console/users`,null,{params:e})}asy"
+      },
+      {
+        "offset": 749843,
+        "text": "async function Aie",
+        "context": "tation-info`,null)}async function kie(e){return xT(`GET`,`/api/my/billing-records`,null,{params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async funct"
+      },
+      {
+        "offset": 749931,
+        "text": "async function jie",
+        "context": "{params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return x"
+      },
+      {
+        "offset": 750030,
+        "text": "async function Mie",
+        "context": "}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/f"
+      },
+      {
+        "offset": 750100,
+        "text": "async function Nie",
+        "context": "al/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async function Pie(e){return xT(`GET`"
+      },
+      {
+        "offset": 750854,
+        "text": "async function TT",
+        "context": "ds:e})}async function Bie(e){return xT(`POST`,`/api/arbitrage/funding/force-close`,{positionIds:e})}async function TT(e){return xT(`GET`,`/api/analytics/feed`,null,{params:e})}async function ET(e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/ap"
+      },
+      {
+        "offset": 750930,
+        "text": "async function ET",
+        "context": "close`,{positionIds:e})}async function TT(e){return xT(`GET`,`/api/analytics/feed`,null,{params:e})}async function ET(e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){re"
+      },
+      {
+        "offset": 751009,
+        "text": "async function Vie",
+        "context": "ed`,null,{params:e})}async function ET(e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${encodeURIComponent(e)}/active"
+      },
+      {
+        "offset": 751103,
+        "text": "async function Hie",
+        "context": "s:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analytics/coin-list/${e}`,null)}asy"
+      },
+      {
+        "offset": 751222,
+        "text": "async function Uie",
+        "context": "e){return xT(`GET`,`/api/analytics/smart-money-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analytics/coin-list/${e}`,null)}async function Wie(){return xT(`GET`,`/api/console/system-configs`,null)}async function Gie(e,t){return xT(`PUT`,`/api/con"
+      }
+    ]
+  },
+  "api_path_templates": {
+    "match_count_capped": 73,
+    "items": [
+      {
+        "offset": 748067,
+        "text": "/api/auth/signin",
+        "context": ".message}（请求编号：${o.requestId}）`:o.message);return o.data}async function _ie(e,t){let n=await fetch(`/api/auth/signin`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify({code:e,invitationCode:t})}).then(e=>e.json());if(!n.success)throw Error(n.message||`Login failed`)"
+      },
+      {
+        "offset": 748305,
+        "text": "/api/auth/signup/password",
+        "context": "on());if(!n.success)throw Error(n.message||`Login failed`)}async function vie(e){let t=await fetch(`/api/auth/signup/password`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify(e)}).then(e=>e.json());if(!t.success)throw Error(t.message||`Registration failed`)}async function y"
+      },
+      {
+        "offset": 748535,
+        "text": "/api/auth/signin/password",
+        "context": "f(!t.success)throw Error(t.message||`Registration failed`)}async function yie(e){let t=await fetch(`/api/auth/signin/password`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify(e)}).then(e=>e.json());if(!t.success)throw Error(t.message||`Login failed`)}async function bie(){re"
+      },
+      {
+        "offset": 748758,
+        "text": "/api/auth/signout",
+        "context": "on());if(!t.success)throw Error(t.message||`Login failed`)}async function bie(){return(await fetch(`/api/auth/signout`,{method:`POST`,headers:{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function xie(){return(await fetch(`/api/auth/me`,{method:`GET`,headers:{\"Content-Type\":"
+      },
+      {
+        "offset": 748903,
+        "text": "/api/auth/me",
+        "context": "ontent-Type\":`application/json`}}).then(e=>e.json())).data}async function xie(){return(await fetch(`/api/auth/me`,{method:`GET`,headers:{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function ST(){return xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async fu"
+      },
+      {
+        "offset": 749038,
+        "text": "/api/analytics/smart-money-signal/symbols",
+        "context": ":{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function ST(){return xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${e}/kline?includeTopTraderRatios=true`,null)}async function Cie(e){return xT(`GET`,`/api/console/u"
+      },
+      {
+        "offset": 749126,
+        "text": "/api/analytics/smart-money-signal/${e}/kline",
+        "context": "n xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${e}/kline?includeTopTraderRatios=true`,null)}async function Cie(e){return xT(`GET`,`/api/console/users`,null,{params:e})}async function wie(e,t){return xT(`PUT`,`/api/console/users/${e}`,t)"
+      },
+      {
+        "offset": 749245,
+        "text": "/api/console/users",
+        "context": "t-money-signal/${e}/kline?includeTopTraderRatios=true`,null)}async function Cie(e){return xT(`GET`,`/api/console/users`,null,{params:e})}async function wie(e,t){return xT(`PUT`,`/api/console/users/${e}`,t)}async function Tie(e,t,n){return xT(`POST`,`/api/console/users/${e}/recharge`,{amount:t,rema"
+      },
+      {
+        "offset": 749323,
+        "text": "/api/console/users/${e}",
+        "context": "e(e){return xT(`GET`,`/api/console/users`,null,{params:e})}async function wie(e,t){return xT(`PUT`,`/api/console/users/${e}`,t)}async function Tie(e,t,n){return xT(`POST`,`/api/console/users/${e}/recharge`,{amount:t,remark:n})}async function Eie(e,t,n){return xT(`POST`,`/api/console/users/${e}/extend-v"
+      },
+      {
+        "offset": 749395,
+        "text": "/api/console/users/${e}/recharge",
+        "context": "n wie(e,t){return xT(`PUT`,`/api/console/users/${e}`,t)}async function Tie(e,t,n){return xT(`POST`,`/api/console/users/${e}/recharge`,{amount:t,remark:n})}async function Eie(e,t,n){return xT(`POST`,`/api/console/users/${e}/extend-vip`,{days:t,remark:n})}async function Die(e){return xT(`POST`,`/api/console/users"
+      },
+      {
+        "offset": 749494,
+        "text": "/api/console/users/${e}/extend-vip",
+        "context": "`/api/console/users/${e}/recharge`,{amount:t,remark:n})}async function Eie(e,t,n){return xT(`POST`,`/api/console/users/${e}/extend-vip`,{days:t,remark:n})}async function Die(e){return xT(`POST`,`/api/console/users/${e}/reset-password`,{})}async function CT(){return xT(`GET`,`/api/my/profile`,null)}async function "
+      },
+      {
+        "offset": 749589,
+        "text": "/api/console/users/${e}/reset-password",
+        "context": "ST`,`/api/console/users/${e}/extend-vip`,{days:t,remark:n})}async function Die(e){return xT(`POST`,`/api/console/users/${e}/reset-password`,{})}async function CT(){return xT(`GET`,`/api/my/profile`,null)}async function Oie(){return xT(`GET`,`/api/my/invitation-info`,null)}async function kie(e){return xT(`GET`,`/api/m"
+      },
+      {
+        "offset": 749670,
+        "text": "/api/my/profile",
+        "context": "{return xT(`POST`,`/api/console/users/${e}/reset-password`,{})}async function CT(){return xT(`GET`,`/api/my/profile`,null)}async function Oie(){return xT(`GET`,`/api/my/invitation-info`,null)}async function kie(e){return xT(`GET`,`/api/my/billing-records`,null,{params:e})}async function Aie(){r"
+      },
+      {
+        "offset": 749731,
+        "text": "/api/my/invitation-info",
+        "context": ")}async function CT(){return xT(`GET`,`/api/my/profile`,null)}async function Oie(){return xT(`GET`,`/api/my/invitation-info`,null)}async function kie(e){return xT(`GET`,`/api/my/billing-records`,null,{params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}asy"
+      },
+      {
+        "offset": 749801,
+        "text": "/api/my/billing-records",
+        "context": "nction Oie(){return xT(`GET`,`/api/my/invitation-info`,null)}async function kie(e){return xT(`GET`,`/api/my/billing-records`,null,{params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/v"
+      },
+      {
+        "offset": 749881,
+        "text": "/api/analytics/smart-money-signal/rankings",
+        "context": "e){return xT(`GET`,`/api/my/billing-records`,null,{params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}asy"
+      },
+      {
+        "offset": 749969,
+        "text": "/api/analytics/smart-money-signal/volatility-rankings",
+        "context": "n xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return "
+      },
+      {
+        "offset": 750068,
+        "text": "/api/analytics/coin-list",
+        "context": "`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async funct"
+      },
+      {
+        "offset": 750138,
+        "text": "/api/analytics/funding-rates",
+        "context": "nction Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async function Pie(e){return xT(`GET`,`/api/arbitrage/funding/opportunities`,null,{pa"
+      },
+      {
+        "offset": 750212,
+        "text": "/api/arbitrage/funding/markets",
+        "context": "on Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async function Pie(e){return xT(`GET`,`/api/arbitrage/funding/opportunities`,null,{params:e})}async function Fie(e){return xT(`POST`,`/api/arbitrage/funding/manu"
+      },
+      {
+        "offset": 750300,
+        "text": "/api/arbitrage/funding/opportunities",
+        "context": "n xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async function Pie(e){return xT(`GET`,`/api/arbitrage/funding/opportunities`,null,{params:e})}async function Fie(e){return xT(`POST`,`/api/arbitrage/funding/manual-order`,e)}async function Iie(){return xT(`GET`,`/api/arbitrage/funding/positions`,null)}asy"
+      },
+      {
+        "offset": 750395,
+        "text": "/api/arbitrage/funding/manual-order",
+        "context": "ET`,`/api/arbitrage/funding/opportunities`,null,{params:e})}async function Fie(e){return xT(`POST`,`/api/arbitrage/funding/manual-order`,e)}async function Iie(){return xT(`GET`,`/api/arbitrage/funding/positions`,null)}async function Lie(){return xT(`GET`,`/api/arbitrage/funding/history`,null)}async function Rie(e)"
+      },
+      {
+        "offset": 750473,
+        "text": "/api/arbitrage/funding/positions",
+        "context": "(e){return xT(`POST`,`/api/arbitrage/funding/manual-order`,e)}async function Iie(){return xT(`GET`,`/api/arbitrage/funding/positions`,null)}async function Lie(){return xT(`GET`,`/api/arbitrage/funding/history`,null)}async function Rie(e){return xT(`POST`,`/api/arbitrage/funding/compensate`,e)}async function zie"
+      },
+      {
+        "offset": 750551,
+        "text": "/api/arbitrage/funding/history",
+        "context": "ie(){return xT(`GET`,`/api/arbitrage/funding/positions`,null)}async function Lie(){return xT(`GET`,`/api/arbitrage/funding/history`,null)}async function Rie(e){return xT(`POST`,`/api/arbitrage/funding/compensate`,e)}async function zie(e){return xT(`POST`,`/api/arbitrage/funding/manual-close`,{positionIds:e})}"
+      },
+      {
+        "offset": 750629,
+        "text": "/api/arbitrage/funding/compensate",
+        "context": "ie(){return xT(`GET`,`/api/arbitrage/funding/history`,null)}async function Rie(e){return xT(`POST`,`/api/arbitrage/funding/compensate`,e)}async function zie(e){return xT(`POST`,`/api/arbitrage/funding/manual-close`,{positionIds:e})}async function Bie(e){return xT(`POST`,`/api/arbitrage/funding/force-close`,{posi"
+      },
+      {
+        "offset": 750707,
+        "text": "/api/arbitrage/funding/manual-close",
+        "context": "(e){return xT(`POST`,`/api/arbitrage/funding/compensate`,e)}async function zie(e){return xT(`POST`,`/api/arbitrage/funding/manual-close`,{positionIds:e})}async function Bie(e){return xT(`POST`,`/api/arbitrage/funding/force-close`,{positionIds:e})}async function TT(e){return xT(`GET`,`/api/analytics/feed`,null,{par"
+      },
+      {
+        "offset": 750801,
+        "text": "/api/arbitrage/funding/force-close",
+        "context": "OST`,`/api/arbitrage/funding/manual-close`,{positionIds:e})}async function Bie(e){return xT(`POST`,`/api/arbitrage/funding/force-close`,{positionIds:e})}async function TT(e){return xT(`GET`,`/api/analytics/feed`,null,{params:e})}async function ET(e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async "
+      },
+      {
+        "offset": 750892,
+        "text": "/api/analytics/feed",
+        "context": "(`POST`,`/api/arbitrage/funding/force-close`,{positionIds:e})}async function TT(e){return xT(`GET`,`/api/analytics/feed`,null,{params:e})}async function ET(e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent"
+      },
+      {
+        "offset": 750968,
+        "text": "/api/analytics/signals",
+        "context": " TT(e){return xT(`GET`,`/api/analytics/feed`,null,{params:e})}async function ET(e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-s"
+      },
+      {
+        "offset": 751048,
+        "text": "/api/analytics/signals/${encodeURIComponent",
+        "context": "e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analy"
+      },
+      {
+        "offset": 751142,
+        "text": "/api/analytics/smart-money-signal/${encodeURIComponent",
+        "context": "GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analytics/coin-list/${e}`,null)}async function Wie(){return xT(`GET`,`/api/console/system-configs`,null)}async"
+      },
+      {
+        "offset": 751261,
+        "text": "/api/analytics/coin-list/${e}",
+        "context": "t-money-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analytics/coin-list/${e}`,null)}async function Wie(){return xT(`GET`,`/api/console/system-configs`,null)}async function Gie(e,t){return xT(`PUT`,`/api/console/system-configs/${e}`,t)}async function Kie(){"
+      },
+      {
+        "offset": 751336,
+        "text": "/api/console/system-configs",
+        "context": " Uie(e){return xT(`GET`,`/api/analytics/coin-list/${e}`,null)}async function Wie(){return xT(`GET`,`/api/console/system-configs`,null)}async function Gie(e,t){return xT(`PUT`,`/api/console/system-configs/${e}`,t)}async function Kie(){return xT(`GET`,`/api/my/favorite-symbols`,null)}async function qie(){ret"
+      },
+      {
+        "offset": 751412,
+        "text": "/api/console/system-configs/${e}",
+        "context": " Wie(){return xT(`GET`,`/api/console/system-configs`,null)}async function Gie(e,t){return xT(`PUT`,`/api/console/system-configs/${e}`,t)}async function Kie(){return xT(`GET`,`/api/my/favorite-symbols`,null)}async function qie(){return xT(`GET`,`/api/my/favorite-symbol-names`,null)}async function DT(e){return xT"
+      },
+      {
+        "offset": 751487,
+        "text": "/api/my/favorite-symbols",
+        "context": "ie(e,t){return xT(`PUT`,`/api/console/system-configs/${e}`,t)}async function Kie(){return xT(`GET`,`/api/my/favorite-symbols`,null)}async function qie(){return xT(`GET`,`/api/my/favorite-symbol-names`,null)}async function DT(e){return xT(`POST`,`/api/my/favorite-symbols`,{symbol:e})}async function OT(e)"
+      },
+      {
+        "offset": 751557,
+        "text": "/api/my/favorite-symbol-names",
+        "context": "nction Kie(){return xT(`GET`,`/api/my/favorite-symbols`,null)}async function qie(){return xT(`GET`,`/api/my/favorite-symbol-names`,null)}async function DT(e){return xT(`POST`,`/api/my/favorite-symbols`,{symbol:e})}async function OT(e){return xT(`DELETE`,`/api/my/favorite-symbols`,null,{params:{symbol:e}})}as"
+      },
+      {
+        "offset": 751633,
+        "text": "/api/my/favorite-symbols",
+        "context": " qie(){return xT(`GET`,`/api/my/favorite-symbol-names`,null)}async function DT(e){return xT(`POST`,`/api/my/favorite-symbols`,{symbol:e})}async function OT(e){return xT(`DELETE`,`/api/my/favorite-symbols`,null,{params:{symbol:e}})}async function kT(e){return xT(`POST`,`/api/my/purchase-vip`,{level:e})}a"
+      },
+      {
+        "offset": 751712,
+        "text": "/api/my/favorite-symbols",
+        "context": "e){return xT(`POST`,`/api/my/favorite-symbols`,{symbol:e})}async function OT(e){return xT(`DELETE`,`/api/my/favorite-symbols`,null,{params:{symbol:e}})}async function kT(e){return xT(`POST`,`/api/my/purchase-vip`,{level:e})}async function Jie(e){return xT(`POST`,`/api/my/change-password`,e)}async functi"
+      },
+      {
+        "offset": 751803,
+        "text": "/api/my/purchase-vip",
+        "context": "DELETE`,`/api/my/favorite-symbols`,null,{params:{symbol:e}})}async function kT(e){return xT(`POST`,`/api/my/purchase-vip`,{level:e})}async function Jie(e){return xT(`POST`,`/api/my/change-password`,e)}async function Yie(){return xT(`GET`,`/api/analytics/copy-trading/positions`,null)}async function X"
+      },
+      {
+        "offset": 751876,
+        "text": "/api/my/change-password",
+        "context": "on kT(e){return xT(`POST`,`/api/my/purchase-vip`,{level:e})}async function Jie(e){return xT(`POST`,`/api/my/change-password`,e)}async function Yie(){return xT(`GET`,`/api/analytics/copy-trading/positions`,null)}async function Xie(){return xT(`GET`,`/api/analytics/copy-trading/open-orders`,null)}async f"
+      },
+      {
+        "offset": 751942,
+        "text": "/api/analytics/copy-trading/positions",
+        "context": "function Jie(e){return xT(`POST`,`/api/my/change-password`,e)}async function Yie(){return xT(`GET`,`/api/analytics/copy-trading/positions`,null)}async function Xie(){return xT(`GET`,`/api/analytics/copy-trading/open-orders`,null)}async function Zie(e){return xT(`POST`,`/api/arbitrage/funding/manual-order/preview`,e)"
+      },
+      {
+        "offset": 752025,
+        "text": "/api/analytics/copy-trading/open-orders",
+        "context": "return xT(`GET`,`/api/analytics/copy-trading/positions`,null)}async function Xie(){return xT(`GET`,`/api/analytics/copy-trading/open-orders`,null)}async function Zie(e){return xT(`POST`,`/api/arbitrage/funding/manual-order/preview`,e)}var AT=`tradeflow_invitation_code`,Qie=6048e5;function $ie(e){let t={code:e,expiresA"
+      },
+      {
+        "offset": 752112,
+        "text": "/api/arbitrage/funding/manual-order/preview",
+        "context": "rn xT(`GET`,`/api/analytics/copy-trading/open-orders`,null)}async function Zie(e){return xT(`POST`,`/api/arbitrage/funding/manual-order/preview`,e)}var AT=`tradeflow_invitation_code`,Qie=6048e5;function $ie(e){let t={code:e,expiresAt:Date.now()+Qie};localStorage.setItem(AT,JSON.stringify(t))}function jT(){let e=localStora"
+      },
+      {
+        "offset": 1975769,
+        "text": "/api/auto-trading/exchange-keys",
+        "context": "=>e.json());if(!o.success)throw Error(o.message);return o.data}async function k9(){return O9(`GET`,`/api/auto-trading/exchange-keys`)}async function Vge(e){return O9(`POST`,`/api/auto-trading/exchange-keys`,e)}async function Hge(e,t=`read-only`){return O9(`POST`,`/api/auto-trading/exchange-keys/${t===`read-wri"
+      },
+      {
+        "offset": 1975843,
+        "text": "/api/auto-trading/exchange-keys",
+        "context": "ion k9(){return O9(`GET`,`/api/auto-trading/exchange-keys`)}async function Vge(e){return O9(`POST`,`/api/auto-trading/exchange-keys`,e)}async function Hge(e,t=`read-only`){return O9(`POST`,`/api/auto-trading/exchange-keys/${t===`read-write`?`verify-write`:`verify`}`,e)}async function Uge(e,t=`read-only`){retur"
+      },
+      {
+        "offset": 1975933,
+        "text": "/api/auto-trading/exchange-keys/${t",
+        "context": "9(`POST`,`/api/auto-trading/exchange-keys`,e)}async function Hge(e,t=`read-only`){return O9(`POST`,`/api/auto-trading/exchange-keys/${t===`read-write`?`verify-write`:`verify`}`,e)}async function Uge(e,t=`read-only`){return O9(`POST`,`/api/auto-trading/exchange-keys/${e}/${t===`read-write`?`verify-write`:`verify`}`"
+      },
+      {
+        "offset": 1976067,
+        "text": "/api/auto-trading/exchange-keys/${e}/${t",
+        "context": "t===`read-write`?`verify-write`:`verify`}`,e)}async function Uge(e,t=`read-only`){return O9(`POST`,`/api/auto-trading/exchange-keys/${e}/${t===`read-write`?`verify-write`:`verify`}`)}async function Wge(e){return O9(`POST`,`/api/auto-trading/exchange-keys/${e}/delete`)}async function Gge(){return O9(`GET`,`/api/auto-tra"
+      },
+      {
+        "offset": 1976190,
+        "text": "/api/auto-trading/exchange-keys/${e}/delete",
+        "context": "nge-keys/${e}/${t===`read-write`?`verify-write`:`verify`}`)}async function Wge(e){return O9(`POST`,`/api/auto-trading/exchange-keys/${e}/delete`)}async function Gge(){return O9(`GET`,`/api/auto-trading/exchange-keys/active-rw`)}async function Kge(){return O9(`GET`,`/api/auto-trading/llm-providers/defs`)}async function A9("
+      },
+      {
+        "offset": 1976274,
+        "text": "/api/auto-trading/exchange-keys/active-rw",
+        "context": "turn O9(`POST`,`/api/auto-trading/exchange-keys/${e}/delete`)}async function Gge(){return O9(`GET`,`/api/auto-trading/exchange-keys/active-rw`)}async function Kge(){return O9(`GET`,`/api/auto-trading/llm-providers/defs`)}async function A9(){return O9(`GET`,`/api/auto-trading/llm-providers`)}async function qge(e){return "
+      },
+      {
+        "offset": 1976356,
+        "text": "/api/auto-trading/llm-providers/defs",
+        "context": "{return O9(`GET`,`/api/auto-trading/exchange-keys/active-rw`)}async function Kge(){return O9(`GET`,`/api/auto-trading/llm-providers/defs`)}async function A9(){return O9(`GET`,`/api/auto-trading/llm-providers`)}async function qge(e){return O9(`POST`,`/api/auto-trading/llm-providers`,e)}async function Jge(e,t){return"
+      },
+      {
+        "offset": 1976432,
+        "text": "/api/auto-trading/llm-providers",
+        "context": " Kge(){return O9(`GET`,`/api/auto-trading/llm-providers/defs`)}async function A9(){return O9(`GET`,`/api/auto-trading/llm-providers`)}async function qge(e){return O9(`POST`,`/api/auto-trading/llm-providers`,e)}async function Jge(e,t){return O9(`PUT`,`/api/auto-trading/llm-providers/${e}`,t)}async function Yge("
+      },
+      {
+        "offset": 1976506,
+        "text": "/api/auto-trading/llm-providers",
+        "context": "ion A9(){return O9(`GET`,`/api/auto-trading/llm-providers`)}async function qge(e){return O9(`POST`,`/api/auto-trading/llm-providers`,e)}async function Jge(e,t){return O9(`PUT`,`/api/auto-trading/llm-providers/${e}`,t)}async function Yge(e){return O9(`POST`,`/api/auto-trading/llm-providers/${e}/delete`)}async f"
+      },
+      {
+        "offset": 1976583,
+        "text": "/api/auto-trading/llm-providers/${e}",
+        "context": "e(e){return O9(`POST`,`/api/auto-trading/llm-providers`,e)}async function Jge(e,t){return O9(`PUT`,`/api/auto-trading/llm-providers/${e}`,t)}async function Yge(e){return O9(`POST`,`/api/auto-trading/llm-providers/${e}/delete`)}async function j9(e,t){return O9(`POST`,`/api/auto-trading/llm-providers/${e}/verify`,t)}"
+      },
+      {
+        "offset": 1976664,
+        "text": "/api/auto-trading/llm-providers/${e}/delete",
+        "context": "){return O9(`PUT`,`/api/auto-trading/llm-providers/${e}`,t)}async function Yge(e){return O9(`POST`,`/api/auto-trading/llm-providers/${e}/delete`)}async function j9(e,t){return O9(`POST`,`/api/auto-trading/llm-providers/${e}/verify`,t)}async function Xge(e){return O9(`POST`,`/api/auto-trading/llm-providers/verify`,e)}async"
+      },
+      {
+        "offset": 1976751,
+        "text": "/api/auto-trading/llm-providers/${e}/verify",
+        "context": "n O9(`POST`,`/api/auto-trading/llm-providers/${e}/delete`)}async function j9(e,t){return O9(`POST`,`/api/auto-trading/llm-providers/${e}/verify`,t)}async function Xge(e){return O9(`POST`,`/api/auto-trading/llm-providers/verify`,e)}async function Zge(){return O9(`GET`,`/api/auto-trading/llm-providers/active`)}async functio"
+      },
+      {
+        "offset": 1976839,
+        "text": "/api/auto-trading/llm-providers/verify",
+        "context": " O9(`POST`,`/api/auto-trading/llm-providers/${e}/verify`,t)}async function Xge(e){return O9(`POST`,`/api/auto-trading/llm-providers/verify`,e)}async function Zge(){return O9(`GET`,`/api/auto-trading/llm-providers/active`)}async function Qge(){return O9(`GET`,`/api/auto-trading/strategy-defs`)}async function $ge(){ret"
+      },
+      {
+        "offset": 1976920,
+        "text": "/api/auto-trading/llm-providers/active",
+        "context": "{return O9(`POST`,`/api/auto-trading/llm-providers/verify`,e)}async function Zge(){return O9(`GET`,`/api/auto-trading/llm-providers/active`)}async function Qge(){return O9(`GET`,`/api/auto-trading/strategy-defs`)}async function $ge(){return O9(`GET`,`/api/auto-trading/bots`)}async function M9(e){return O9(`GET`,`/api"
+      },
+      {
+        "offset": 1976999,
+        "text": "/api/auto-trading/strategy-defs",
+        "context": "e(){return O9(`GET`,`/api/auto-trading/llm-providers/active`)}async function Qge(){return O9(`GET`,`/api/auto-trading/strategy-defs`)}async function $ge(){return O9(`GET`,`/api/auto-trading/bots`)}async function M9(e){return O9(`GET`,`/api/auto-trading/bots/${e}`)}async function e_e(e){return O9(`POST`,`/api/a"
+      },
+      {
+        "offset": 1977071,
+        "text": "/api/auto-trading/bots",
+        "context": "tion Qge(){return O9(`GET`,`/api/auto-trading/strategy-defs`)}async function $ge(){return O9(`GET`,`/api/auto-trading/bots`)}async function M9(e){return O9(`GET`,`/api/auto-trading/bots/${e}`)}async function e_e(e){return O9(`POST`,`/api/auto-trading/bots`,e)}async function t_e(e,t){return O9(`PUT`,`/"
+      },
+      {
+        "offset": 1977134,
+        "text": "/api/auto-trading/bots/${e}",
+        "context": "sync function $ge(){return O9(`GET`,`/api/auto-trading/bots`)}async function M9(e){return O9(`GET`,`/api/auto-trading/bots/${e}`)}async function e_e(e){return O9(`POST`,`/api/auto-trading/bots`,e)}async function t_e(e,t){return O9(`PUT`,`/api/auto-trading/bots/${e}`,t)}async function n_e(e){return O9(`POST"
+      },
+      {
+        "offset": 1977204,
+        "text": "/api/auto-trading/bots",
+        "context": "nction M9(e){return O9(`GET`,`/api/auto-trading/bots/${e}`)}async function e_e(e){return O9(`POST`,`/api/auto-trading/bots`,e)}async function t_e(e,t){return O9(`PUT`,`/api/auto-trading/bots/${e}`,t)}async function n_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/start`)}async function r_e(e){retu"
+      },
+      {
+        "offset": 1977272,
+        "text": "/api/auto-trading/bots/${e}",
+        "context": "nction e_e(e){return O9(`POST`,`/api/auto-trading/bots`,e)}async function t_e(e,t){return O9(`PUT`,`/api/auto-trading/bots/${e}`,t)}async function n_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/start`)}async function r_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/stop`)}async function i_e(e){re"
+      },
+      {
+        "offset": 1977344,
+        "text": "/api/auto-trading/bots/${e}/start",
+        "context": "n t_e(e,t){return O9(`PUT`,`/api/auto-trading/bots/${e}`,t)}async function n_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/start`)}async function r_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/stop`)}async function i_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/delete`)}async function a_e(e){ret"
+      },
+      {
+        "offset": 1977420,
+        "text": "/api/auto-trading/bots/${e}/stop",
+        "context": "_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/start`)}async function r_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/stop`)}async function i_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/delete`)}async function a_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/dry-run`)}async function o_e(e,t"
+      },
+      {
+        "offset": 1977495,
+        "text": "/api/auto-trading/bots/${e}/delete",
+        "context": "r_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/stop`)}async function i_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/delete`)}async function a_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/dry-run`)}async function o_e(e,t=0){return O9(`GET`,`/api/auto-trading/bots/${e}/runs`,void 0,{params:{offset"
+      },
+      {
+        "offset": 1977572,
+        "text": "/api/auto-trading/bots/${e}/dry-run",
+        "context": "e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/delete`)}async function a_e(e){return O9(`POST`,`/api/auto-trading/bots/${e}/dry-run`)}async function o_e(e,t=0){return O9(`GET`,`/api/auto-trading/bots/${e}/runs`,void 0,{params:{offset:String(t)}})}async function s_e(e){return O9(`GET`,`/api/auto-trading/bots/${"
+      },
+      {
+        "offset": 1977653,
+        "text": "/api/auto-trading/bots/${e}/runs",
+        "context": "{return O9(`POST`,`/api/auto-trading/bots/${e}/dry-run`)}async function o_e(e,t=0){return O9(`GET`,`/api/auto-trading/bots/${e}/runs`,void 0,{params:{offset:String(t)}})}async function s_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/positions`)}async function c_e(e){return O9(`GET`,`/api/auto-trading/bots/$"
+      },
+      {
+        "offset": 1977762,
+        "text": "/api/auto-trading/bots/${e}/positions",
+        "context": "-trading/bots/${e}/runs`,void 0,{params:{offset:String(t)}})}async function s_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/positions`)}async function c_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/balance`)}async function l_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/orders`)}async function u_e(e){re"
+      },
+      {
+        "offset": 1977841,
+        "text": "/api/auto-trading/bots/${e}/balance",
+        "context": "(e){return O9(`GET`,`/api/auto-trading/bots/${e}/positions`)}async function c_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/balance`)}async function l_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/orders`)}async function u_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/trades`)}async function d_e(e){ret"
+      },
+      {
+        "offset": 1977918,
+        "text": "/api/auto-trading/bots/${e}/orders",
+        "context": "_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/balance`)}async function l_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/orders`)}async function u_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/trades`)}async function d_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/order-history`)}function f_e(e,t){"
+      },
+      {
+        "offset": 1977994,
+        "text": "/api/auto-trading/bots/${e}/trades",
+        "context": "l_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/orders`)}async function u_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/trades`)}async function d_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/order-history`)}function f_e(e,t){return O9(`POST`,`/api/auto-trading/bots/${e}/positions/close`,t)}var p_e=cl"
+      },
+      {
+        "offset": 1978070,
+        "text": "/api/auto-trading/bots/${e}/order-history",
+        "context": "u_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/trades`)}async function d_e(e){return O9(`GET`,`/api/auto-trading/bots/${e}/order-history`)}function f_e(e,t){return O9(`POST`,`/api/auto-trading/bots/${e}/positions/close`,t)}var p_e=class extends bE{$data(){return{bot:void 0,runtimeError:null,loading:!0,error:null,bu"
+      },
+      {
+        "offset": 1978150,
+        "text": "/api/auto-trading/bots/${e}/positions/close",
+        "context": "e){return O9(`GET`,`/api/auto-trading/bots/${e}/order-history`)}function f_e(e,t){return O9(`POST`,`/api/auto-trading/bots/${e}/positions/close`,t)}var p_e=class extends bE{$data(){return{bot:void 0,runtimeError:null,loading:!0,error:null,busy:``,editing:!1,keys:[],providers:[],tab:`positions`,positions:null,balance:null,"
+      }
+    ]
+  },
+  "page_routes": {
+    "match_count_capped": 36,
+    "items": [
+      {
+        "offset": 749042,
+        "text": "/analytics/smart-money-signal/symbols",
+        "context": "ontent-Type\":`application/json`}}).then(e=>e.json())).data}async function ST(){return xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${e}/kline?includeTopTraderRatios=true`,null)}async function Cie(e){return xT(`GET`,`/api/console/u"
+      },
+      {
+        "offset": 749130,
+        "text": "/analytics/smart-money-signal/${e}/kline",
+        "context": "(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${e}/kline?includeTopTraderRatios=true`,null)}async function Cie(e){return xT(`GET`,`/api/console/users`,null,{params:e})}async function wie(e,t){return xT(`PUT`,`/api/console/users/${e}`,t)"
+      },
+      {
+        "offset": 749885,
+        "text": "/analytics/smart-money-signal/rankings",
+        "context": "eturn xT(`GET`,`/api/my/billing-records`,null,{params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}asy"
+      },
+      {
+        "offset": 749973,
+        "text": "/analytics/smart-money-signal/volatility-rankings",
+        "context": "(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return "
+      },
+      {
+        "offset": 750072,
+        "text": "/analytics/coin-list",
+        "context": "i/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async funct"
+      },
+      {
+        "offset": 750142,
+        "text": "/analytics/funding-rates",
+        "context": "on Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async function Pie(e){return xT(`GET`,`/api/arbitrage/funding/opportunities`,null,{pa"
+      },
+      {
+        "offset": 750896,
+        "text": "/analytics/feed",
+        "context": "ST`,`/api/arbitrage/funding/force-close`,{positionIds:e})}async function TT(e){return xT(`GET`,`/api/analytics/feed`,null,{params:e})}async function ET(e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent"
+      },
+      {
+        "offset": 750972,
+        "text": "/analytics/signals",
+        "context": "e){return xT(`GET`,`/api/analytics/feed`,null,{params:e})}async function ET(e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-s"
+      },
+      {
+        "offset": 751052,
+        "text": "/analytics/signals/${encodeURIComponent",
+        "context": "eturn xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analy"
+      },
+      {
+        "offset": 751146,
+        "text": "/analytics/smart-money-signal/${encodeURIComponent",
+        "context": ",`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analytics/coin-list/${e}`,null)}async function Wie(){return xT(`GET`,`/api/console/system-configs`,null)}async"
+      },
+      {
+        "offset": 751265,
+        "text": "/analytics/coin-list/${e}",
+        "context": "ney-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analytics/coin-list/${e}`,null)}async function Wie(){return xT(`GET`,`/api/console/system-configs`,null)}async function Gie(e,t){return xT(`PUT`,`/api/console/system-configs/${e}`,t)}async function Kie(){"
+      },
+      {
+        "offset": 751946,
+        "text": "/analytics/copy-trading/positions",
+        "context": "tion Jie(e){return xT(`POST`,`/api/my/change-password`,e)}async function Yie(){return xT(`GET`,`/api/analytics/copy-trading/positions`,null)}async function Xie(){return xT(`GET`,`/api/analytics/copy-trading/open-orders`,null)}async function Zie(e){return xT(`POST`,`/api/arbitrage/funding/manual-order/preview`,e)"
+      },
+      {
+        "offset": 752029,
+        "text": "/analytics/copy-trading/open-orders",
+        "context": "rn xT(`GET`,`/api/analytics/copy-trading/positions`,null)}async function Xie(){return xT(`GET`,`/api/analytics/copy-trading/open-orders`,null)}async function Zie(e){return xT(`POST`,`/api/arbitrage/funding/manual-order/preview`,e)}var AT=`tradeflow_invitation_code`,Qie=6048e5;function $ie(e){let t={code:e,expiresA"
+      },
+      {
+        "offset": 753867,
+        "text": "/analytics/smart-money-signal",
+        "context": "T={menus:[{title:`欢迎`,url:`/`,icon:ma,role:PT.User},{title:`聪明钱`,icon:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbol"
+      },
+      {
+        "offset": 753933,
+        "text": "/analytics/confluence-signals",
+        "context": "con:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volat"
+      },
+      {
+        "offset": 753996,
+        "text": "/analytics/coin-list",
+        "context": "`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{t"
+      },
+      {
+        "offset": 754050,
+        "text": "/analytics/favorite-symbols",
+        "context": "ence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{titl"
+      },
+      {
+        "offset": 754114,
+        "text": "/analytics/smart-money-volatility",
+        "context": "st`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`,url:"
+      },
+      {
+        "offset": 754213,
+        "text": "/analytics/trading-data",
+        "context": "`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`,url:`/analytics/market-feed`,role:PT.User}]},{title:`套利`,icon:gi,items:[{title:`跨所资金费套利`,url:"
+      },
+      {
+        "offset": 754271,
+        "text": "/analytics/funding-rates",
+        "context": ":`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`,url:`/analytics/market-feed`,role:PT.User}]},{title:`套利`,icon:gi,items:[{title:`跨所资金费套利`,url:`/arbitrage/funding`,role:PT.Owner},{title:`实时套利分析`,url:`/a"
+      },
+      {
+        "offset": 754328,
+        "text": "/analytics/market-feed",
+        "context": "ing-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`,url:`/analytics/market-feed`,role:PT.User}]},{title:`套利`,icon:gi,items:[{title:`跨所资金费套利`,url:`/arbitrage/funding`,role:PT.Owner},{title:`实时套利分析`,url:`/arbitrage/realtime`,role:PT.Owner},{title:`跨所套利持仓`,url:`"
+      },
+      {
+        "offset": 759058,
+        "text": "/analytics/smart-money-signal",
+        "context": "ted-foreground`,children:a})]})})]})}var HT={聪明钱:`观察多空持仓、平均成本与持仓变化。`,数据看板:`查看市场指标、资金费率与最新事件。`},UT={\"/analytics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-mone"
+      },
+      {
+        "offset": 759112,
+        "text": "/analytics/confluence-signals",
+        "context": "持仓、平均成本与持仓变化。`,数据看板:`查看市场指标、资金费率与最新事件。`},UT={\"/analytics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-dat"
+      },
+      {
+        "offset": 759165,
+        "text": "/analytics/coin-list",
+        "context": "ics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\""
+      },
+      {
+        "offset": 759203,
+        "text": "/analytics/favorite-symbols",
+        "context": " 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场"
+      },
+      {
+        "offset": 759246,
+        "text": "/analytics/smart-money-volatility",
+        "context": "状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapsh"
+      },
+      {
+        "offset": 759299,
+        "text": "/analytics/trading-data",
+        "context": "览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t<"
+      },
+      {
+        "offset": 759340,
+        "text": "/analytics/funding-rates",
+        "context": "的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t<12?`上午好`:t<18?`下午好`:`晚上好`,r=RT(zT.menus,e?"
+      },
+      {
+        "offset": 759381,
+        "text": "/analytics/market-feed",
+        "context": "`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t<12?`上午好`:t<18?`下午好`:`晚上好`,r=RT(zT.menus,e?.role??``).filter(e=>[`聪明钱`,`数据看板`].inc"
+      },
+      {
+        "offset": 759661,
+        "text": "/analytics/smart-money-signal",
+        "context": "(e=>[`聪明钱`,`数据看板`].includes(e.title)&&e.items?.length),i=r.flatMap(e=>e.items??[]).find(e=>e.url===`/analytics/smart-money-signal`);return(0,X.jsx)(VT,{title:`欢迎`,children:(0,X.jsxs)(`div`,{className:`space-y-section`,children:[(0,X.jsxs)(`section`,{className:`flex flex-wrap items-end justify-between gap-4 p"
+      },
+      {
+        "offset": 1810310,
+        "text": "/analytics/smart-money-signal",
+        "context": "`text-green-600`,o=t===`bullish`?`bg-red-50 border-red-200`:`bg-green-50 border-green-200`,s=e=>{r(`/analytics/smart-money-signal?symbol=${e}`)};return(0,X.jsx)(`div`,{className:`flex-1`,children:(0,X.jsxs)(`div`,{className:`rounded-lg border ${o}`,children:[(0,X.jsxs)(`div`,{className:`flex items-center gap"
+      },
+      {
+        "offset": 1820409,
+        "text": "/analytics/smart-money-signal",
+        "context": ",X.jsx)(`span`,{className:`text-blue-600 font-medium cursor-pointer hover:underline`,onClick:()=>t(`/analytics/smart-money-signal?symbol=${e}`),children:e})},{title:`价格`,dataIndex:`lastPrice`,width:100,align:`right`,sorter:(e,t)=>(e.lastPrice??0)-(t.lastPrice??0),render:e=>Ome(e)},{title:`24h涨跌`,dataIndex:`p"
+      },
+      {
+        "offset": 1839720,
+        "text": "/analytics/${e.signalId",
+        "context": ",children:n?.label??e.type}),(0,X.jsxs)(QK,{type:`link`,className:`!p-0 font-medium`,onClick:()=>t(`/analytics/${e.signalId?`confluence-signals`:`smart-money-signal`}?${new URLSearchParams({symbol:e.symbol,...e.signalId?{signalId:e.signalId}:{}})}`),children:[e.symbol,e.signalId?` · 查看信号`:``]}),(0,X.js"
+      },
+      {
+        "offset": 1863678,
+        "text": "/analytics/smart-money-signal",
+        "context": "ase font-semibold`,children:l}),(0,X.jsx)(Yr,{className:`text-sm text-blue-600 hover:underline`,to:`/analytics/smart-money-signal?symbol=${encodeURIComponent(l)}`,children:`查看聪明钱明细`})]}),(0,X.jsx)(rhe,{store:e}),(0,X.jsx)(gY,{size:`small`,title:`1分钟K线与信号触发点`,className:`shrink-0`,children:u?(0,X.jsx)(the,{sym"
+      },
+      {
+        "offset": 1864787,
+        "text": "/analytics/smart-money-signal",
+        "context": "};function she(){let e=e3(ohe),t=On(),{loading:n,favorites:r,updatedAt:i}=e.$useSnapshot(),a=e=>{t(`/analytics/smart-money-signal?symbol=${e}`)};return(0,X.jsxs)(VT,{loading:n,title:(0,X.jsxs)(`div`,{children:[`自选币种`,i&&(0,X.jsxs)(`span`,{className:`text-xs text-gray-500 font-normal pl-2`,children:[`最后更新:`,`"
+      },
+      {
+        "offset": 1974924,
+        "text": "/analytics/smart-money-signal",
+        "context": "?(0,X.jsx)(QK,{size:`large`,block:!0,disabled:!0,children:`敬请期待`}):(0,X.jsxs)(Yr,{to:e.id===`user`?`/analytics/smart-money-signal`:`/personal/profile`,className:`inline-flex min-h-10 items-center justify-center gap-2 rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visib"
+      }
+    ]
+  },
+  "page_fields": {
+    "match_count_capped": 122,
+    "items": [
+      {
+        "offset": 1291574,
+        "text": "dataAt",
+        "context": "dOnly:f,focused:p,triggerFocus:m,allowClear:h,value:g,handleReset:v,hidden:y,classes:b,classNames:x,dataAttrs:S,styles:C,components:w,onClear:T}=e,E=r??n,D=w?.affixWrapper||`span`,O=w?.groupWrapper||`span`,k=w?.wrapper||`span`,A=w?.groupAddon||`span`,j=(0,_.useRef)(null),M=e=>{j.curren"
+      },
+      {
+        "offset": 1338398,
+        "text": "dataAt",
+        "context": "isabled:h,focused:j,className:Z(p,W&&`${u}-out-of-range`),style:{...m,...P&&!ce?{height:`auto`}:{}},dataAttrs:{affixWrapper:{\"data-count\":typeof oe==`string`?oe:void 0}},hidden:g,readOnly:C,onClear:x},_.createElement(TQ,EQ({},E,{autoSize:w,maxLength:o,onKeyDown:J,onChange:q,onFocus:re,"
+      },
+      {
+        "offset": 1792800,
+        "text": "topPositionLongShortRatio",
+        "context": " Sie(e),n={longPosArr:[],shortPosArr:[],longWhalePosArr:[],shortWhalePosArr:[],longShortRatioArr:[],topPositionLongShortRatioArr:[],topAccountLongShortRatioArr:[],topAveragePositionConcentrationArr:[],longAvgPriceArr:[],longWhalesAvgPriceArr:[],shortAvgPriceArr:[],shortgWhalesAvgPriceArr:[],longTradersAr"
+      },
+      {
+        "offset": 1792832,
+        "text": "topAccountLongShortRatio",
+        "context": "sArr:[],longWhalePosArr:[],shortWhalePosArr:[],longShortRatioArr:[],topPositionLongShortRatioArr:[],topAccountLongShortRatioArr:[],topAveragePositionConcentrationArr:[],longAvgPriceArr:[],longWhalesAvgPriceArr:[],shortAvgPriceArr:[],shortgWhalesAvgPriceArr:[],longTradersArr:[],longWhalesArr:[],shortTrad"
+      },
+      {
+        "offset": 1792901,
+        "text": "longAvgPrice",
+        "context": "opPositionLongShortRatioArr:[],topAccountLongShortRatioArr:[],topAveragePositionConcentrationArr:[],longAvgPriceArr:[],longWhalesAvgPriceArr:[],shortAvgPriceArr:[],shortgWhalesAvgPriceArr:[],longTradersArr:[],longWhalesArr:[],shortTradersArr:[],shortWhalesArr:[]};t.forEach(e=>{let t=new Date"
+      },
+      {
+        "offset": 1792945,
+        "text": "shortAvgPrice",
+        "context": "gShortRatioArr:[],topAveragePositionConcentrationArr:[],longAvgPriceArr:[],longWhalesAvgPriceArr:[],shortAvgPriceArr:[],shortgWhalesAvgPriceArr:[],longTradersArr:[],longWhalesArr:[],shortTradersArr:[],shortWhalesArr:[]};t.forEach(e=>{let t=new Date(e.periodStart).getTime()/1e3,r=Number(e.shor"
+      },
+      {
+        "offset": 1793445,
+        "text": "topPositionLongShortRatio",
+        "context": "lue:-Number(e.shortWhalesQty)}),n.longShortRatioArr.push({time:t,value:Number(e.longShortRatio)}),e.topPositionLongShortRatio!=null&&n.topPositionLongShortRatioArr.push({time:t,value:e.topPositionLongShortRatio}),e.topAccountLongShortRatio!=null&&n.topAccountLongShortRatioArr.push({time:t,value:e.topAcco"
+      },
+      {
+        "offset": 1793480,
+        "text": "topPositionLongShortRatio",
+        "context": "ongShortRatioArr.push({time:t,value:Number(e.longShortRatio)}),e.topPositionLongShortRatio!=null&&n.topPositionLongShortRatioArr.push({time:t,value:e.topPositionLongShortRatio}),e.topAccountLongShortRatio!=null&&n.topAccountLongShortRatioArr.push({time:t,value:e.topAccountLongShortRatio}),e.topAveragePos"
+      },
+      {
+        "offset": 1793530,
+        "text": "topPositionLongShortRatio",
+        "context": "hortRatio)}),e.topPositionLongShortRatio!=null&&n.topPositionLongShortRatioArr.push({time:t,value:e.topPositionLongShortRatio}),e.topAccountLongShortRatio!=null&&n.topAccountLongShortRatioArr.push({time:t,value:e.topAccountLongShortRatio}),e.topAveragePositionConcentration!=null&&n.topAveragePositionConc"
+      },
+      {
+        "offset": 1793560,
+        "text": "topAccountLongShortRatio",
+        "context": "ShortRatio!=null&&n.topPositionLongShortRatioArr.push({time:t,value:e.topPositionLongShortRatio}),e.topAccountLongShortRatio!=null&&n.topAccountLongShortRatioArr.push({time:t,value:e.topAccountLongShortRatio}),e.topAveragePositionConcentration!=null&&n.topAveragePositionConcentrationArr.push({time:t,val"
+      },
+      {
+        "offset": 1793594,
+        "text": "topAccountLongShortRatio",
+        "context": "gShortRatioArr.push({time:t,value:e.topPositionLongShortRatio}),e.topAccountLongShortRatio!=null&&n.topAccountLongShortRatioArr.push({time:t,value:e.topAccountLongShortRatio}),e.topAveragePositionConcentration!=null&&n.topAveragePositionConcentrationArr.push({time:t,value:e.topAveragePositionConcentrati"
+      },
+      {
+        "offset": 1793643,
+        "text": "topAccountLongShortRatio",
+        "context": "ngShortRatio}),e.topAccountLongShortRatio!=null&&n.topAccountLongShortRatioArr.push({time:t,value:e.topAccountLongShortRatio}),e.topAveragePositionConcentration!=null&&n.topAveragePositionConcentrationArr.push({time:t,value:e.topAveragePositionConcentration}),n.longAvgPriceArr.push({time:t,value:Number("
+      },
+      {
+        "offset": 1793805,
+        "text": "longAvgPrice",
+        "context": "null&&n.topAveragePositionConcentrationArr.push({time:t,value:e.topAveragePositionConcentration}),n.longAvgPriceArr.push({time:t,value:Number(e.longTradersAvgEntryPrice)}),n.longWhalesAvgPriceArr.push({time:t,value:Number(e.longWhalesAvgEntryPrice)}),n.shortAvgPriceArr.push({time:t,value:Num"
+      },
+      {
+        "offset": 1793958,
+        "text": "shortAvgPrice",
+        "context": "rsAvgEntryPrice)}),n.longWhalesAvgPriceArr.push({time:t,value:Number(e.longWhalesAvgEntryPrice)}),n.shortAvgPriceArr.push({time:t,value:Number(e.shortTradersAvgEntryPrice)}),n.shortgWhalesAvgPriceArr.push({time:t,value:Number(e.shortWhalesAvgEntryPrice)}),n.longTradersArr.push({time:t,value:e"
+      },
+      {
+        "offset": 1796104,
+        "text": "fundingRate",
+        "context": "e(e.priceChangePercent),className:M5(e.priceChangePercent)}),(0,X.jsx)(F5,{label:`资金费率`,value:gme(e.fundingRate),className:M5(e.fundingRate)}),(0,X.jsx)(F5,{label:`总 OI(U)`,value:_me(e.openInterestValue)}),(0,X.jsx)(F5,{label:`聪明钱多空比`,value:_T(e.smartMoneyLongShortRatio,4),className:N5(e.sm"
+      },
+      {
+        "offset": 1796132,
+        "text": "fundingRate",
+        "context": "sName:M5(e.priceChangePercent)}),(0,X.jsx)(F5,{label:`资金费率`,value:gme(e.fundingRate),className:M5(e.fundingRate)}),(0,X.jsx)(F5,{label:`总 OI(U)`,value:_me(e.openInterestValue)}),(0,X.jsx)(F5,{label:`聪明钱多空比`,value:_T(e.smartMoneyLongShortRatio,4),className:N5(e.smartMoneyLongShortRatio)}),(0"
+      },
+      {
+        "offset": 1796189,
+        "text": "openInterestValue",
+        "context": "率`,value:gme(e.fundingRate),className:M5(e.fundingRate)}),(0,X.jsx)(F5,{label:`总 OI(U)`,value:_me(e.openInterestValue)}),(0,X.jsx)(F5,{label:`聪明钱多空比`,value:_T(e.smartMoneyLongShortRatio,4),className:N5(e.smartMoneyLongShortRatio)}),(0,X.jsx)(F5,{label:`多头 OI%`,value:P5(e.smartMoneyLongOiRatio),cl"
+      },
+      {
+        "offset": 1796250,
+        "text": "smartMoneyLongShortRatio",
+        "context": "X.jsx)(F5,{label:`总 OI(U)`,value:_me(e.openInterestValue)}),(0,X.jsx)(F5,{label:`聪明钱多空比`,value:_T(e.smartMoneyLongShortRatio,4),className:N5(e.smartMoneyLongShortRatio)}),(0,X.jsx)(F5,{label:`多头 OI%`,value:P5(e.smartMoneyLongOiRatio),className:`text-red-600`}),(0,X.jsx)(F5,{label:`空头 OI%`,value:P5(e.sma"
+      },
+      {
+        "offset": 1796293,
+        "text": "smartMoneyLongShortRatio",
+        "context": "InterestValue)}),(0,X.jsx)(F5,{label:`聪明钱多空比`,value:_T(e.smartMoneyLongShortRatio,4),className:N5(e.smartMoneyLongShortRatio)}),(0,X.jsx)(F5,{label:`多头 OI%`,value:P5(e.smartMoneyLongOiRatio),className:`text-red-600`}),(0,X.jsx)(F5,{label:`空头 OI%`,value:P5(e.smartMoneyShortOiRatio),className:`text-green-"
+      },
+      {
+        "offset": 1796361,
+        "text": "smartMoneyLongOiRatio",
+        "context": "ongShortRatio,4),className:N5(e.smartMoneyLongShortRatio)}),(0,X.jsx)(F5,{label:`多头 OI%`,value:P5(e.smartMoneyLongOiRatio),className:`text-red-600`}),(0,X.jsx)(F5,{label:`空头 OI%`,value:P5(e.smartMoneyShortOiRatio),className:`text-green-600`}),(0,X.jsx)(F5,{label:`大户持仓比`,value:_T(e.topPositionRatio,3)"
+      },
+      {
+        "offset": 1796451,
+        "text": "smartMoneyShortOiRatio",
+        "context": "alue:P5(e.smartMoneyLongOiRatio),className:`text-red-600`}),(0,X.jsx)(F5,{label:`空头 OI%`,value:P5(e.smartMoneyShortOiRatio),className:`text-green-600`}),(0,X.jsx)(F5,{label:`大户持仓比`,value:_T(e.topPositionRatio,3),className:N5(e.topPositionRatio)}),(0,X.jsx)(F5,{label:`多/空人数`,value:(0,X.jsxs)(`span`,{ch"
+      },
+      {
+        "offset": 1796543,
+        "text": "topPositionRatio",
+        "context": "ue:P5(e.smartMoneyShortOiRatio),className:`text-green-600`}),(0,X.jsx)(F5,{label:`大户持仓比`,value:_T(e.topPositionRatio,3),className:N5(e.topPositionRatio)}),(0,X.jsx)(F5,{label:`多/空人数`,value:(0,X.jsxs)(`span`,{children:[(0,X.jsx)(`span`,{className:`text-red-600`,children:e.smartMoneyLongTraders??`"
+      },
+      {
+        "offset": 1796578,
+        "text": "topPositionRatio",
+        "context": "ssName:`text-green-600`}),(0,X.jsx)(F5,{label:`大户持仓比`,value:_T(e.topPositionRatio,3),className:N5(e.topPositionRatio)}),(0,X.jsx)(F5,{label:`多/空人数`,value:(0,X.jsxs)(`span`,{children:[(0,X.jsx)(`span`,{className:`text-red-600`,children:e.smartMoneyLongTraders??`—`}),(0,X.jsx)(`span`,{className:`t"
+      },
+      {
+        "offset": 1796715,
+        "text": "smartMoneyLongTraders",
+        "context": "el:`多/空人数`,value:(0,X.jsxs)(`span`,{children:[(0,X.jsx)(`span`,{className:`text-red-600`,children:e.smartMoneyLongTraders??`—`}),(0,X.jsx)(`span`,{className:`text-gray-400`,children:` / `}),(0,X.jsx)(`span`,{className:`text-green-600`,children:e.smartMoneyShortTraders??`—`})]})})]})})}var I5={type:`c"
+      },
+      {
+        "offset": 1796861,
+        "text": "smartMoneyShortTraders",
+        "context": "{className:`text-gray-400`,children:` / `}),(0,X.jsx)(`span`,{className:`text-green-600`,children:e.smartMoneyShortTraders??`—`})]})})]})})}var I5={type:`custom`,formatter:vT},L5={type:`custom`,formatter:e=>vT(e,4)},R5={Long:`#E34D5A`,LongWhale:`#E9717B`,Short:`#52A277`,ShortWhale:`#75B592`,TopPositio"
+      },
+      {
+        "offset": 1797886,
+        "text": "longAvgPrice",
+        "context": "ortWhalePos,e.shortPos),`）`]})]}),(0,X.jsxs)(`div`,{style:{color:R5.Long},children:[`多头/巨鲸均价：`,vT(e.longAvgPrice),` /`,` `,(0,X.jsx)(`span`,{style:{color:R5.LongWhale},children:vT(e.longWhalesAvgPrice)})]}),(0,X.jsxs)(`div`,{style:{color:R5.Short},children:[`空头/巨鲸均价：`,vT(e.shortAvgPrice),` /"
+      },
+      {
+        "offset": 1798060,
+        "text": "shortAvgPrice",
+        "context": "en:vT(e.longWhalesAvgPrice)})]}),(0,X.jsxs)(`div`,{style:{color:R5.Short},children:[`空头/巨鲸均价：`,vT(e.shortAvgPrice),` /`,` `,(0,X.jsx)(`span`,{style:{color:R5.ShortWhale},children:vT(e.shortWhalesAvgPrice)})]}),(0,X.jsxs)(`div`,{className:`flex min-w-0 items-center gap-1 whitespace-nowrap text"
+      },
+      {
+        "offset": 1799079,
+        "text": "topPositionLongShortRatio",
+        "context": "(`div`,{className:`break-all font-medium leading-4`,style:{color:R5.TopPositionRatio},children:vT(e.topPositionLongShortRatio)})]}),(0,X.jsxs)(`div`,{className:`min-w-0`,children:[(0,X.jsx)(`div`,{className:`truncate text-[10px] leading-4 text-muted-foreground sm:text-[11px]`,children:`账户数多空比`}),(0,X.jsx"
+      },
+      {
+        "offset": 1799384,
+        "text": "topAccountLongShortRatio",
+        "context": ")(`div`,{className:`break-all font-medium leading-4`,style:{color:R5.TopAccountRatio},children:vT(e.topAccountLongShortRatio)})]}),(0,X.jsxs)(`div`,{className:`min-w-0`,children:[(0,X.jsx)(`div`,{className:`truncate text-[10px] font-medium leading-4 text-foreground sm:text-[11px]`,children:`持仓集中度`}),(0,"
+      },
+      {
+        "offset": 1800090,
+        "text": "topPositionLongShortRatio",
+        "context": "${hT(i)}.P`,h=(0,_.useMemo)(()=>l?{longShortRatioArr:l.longShortRatioArr?bT(l.longShortRatioArr):[],topPositionLongShortRatioArr:l.topPositionLongShortRatioArr?bT(l.topPositionLongShortRatioArr):[],topAccountLongShortRatioArr:l.topAccountLongShortRatioArr?bT(l.topAccountLongShortRatioArr):[],topAveragePo"
+      },
+      {
+        "offset": 1800121,
+        "text": "topPositionLongShortRatio",
+        "context": ">l?{longShortRatioArr:l.longShortRatioArr?bT(l.longShortRatioArr):[],topPositionLongShortRatioArr:l.topPositionLongShortRatioArr?bT(l.topPositionLongShortRatioArr):[],topAccountLongShortRatioArr:l.topAccountLongShortRatioArr?bT(l.topAccountLongShortRatioArr):[],topAveragePositionConcentrationArr:l.topAve"
+      },
+      {
+        "offset": 1800155,
+        "text": "topPositionLongShortRatio",
+        "context": "atioArr?bT(l.longShortRatioArr):[],topPositionLongShortRatioArr:l.topPositionLongShortRatioArr?bT(l.topPositionLongShortRatioArr):[],topAccountLongShortRatioArr:l.topAccountLongShortRatioArr?bT(l.topAccountLongShortRatioArr):[],topAveragePositionConcentrationArr:l.topAveragePositionConcentrationArr?bT(l."
+      },
+      {
+        "offset": 1800188,
+        "text": "topAccountLongShortRatio",
+        "context": "],topPositionLongShortRatioArr:l.topPositionLongShortRatioArr?bT(l.topPositionLongShortRatioArr):[],topAccountLongShortRatioArr:l.topAccountLongShortRatioArr?bT(l.topAccountLongShortRatioArr):[],topAveragePositionConcentrationArr:l.topAveragePositionConcentrationArr?bT(l.topAveragePositionConcentrationA"
+      },
+      {
+        "offset": 1800218,
+        "text": "topAccountLongShortRatio",
+        "context": ":l.topPositionLongShortRatioArr?bT(l.topPositionLongShortRatioArr):[],topAccountLongShortRatioArr:l.topAccountLongShortRatioArr?bT(l.topAccountLongShortRatioArr):[],topAveragePositionConcentrationArr:l.topAveragePositionConcentrationArr?bT(l.topAveragePositionConcentrationArr):[],longPosArr:l.longPosArr"
+      },
+      {
+        "offset": 1800251,
+        "text": "topAccountLongShortRatio",
+        "context": "T(l.topPositionLongShortRatioArr):[],topAccountLongShortRatioArr:l.topAccountLongShortRatioArr?bT(l.topAccountLongShortRatioArr):[],topAveragePositionConcentrationArr:l.topAveragePositionConcentrationArr?bT(l.topAveragePositionConcentrationArr):[],longPosArr:l.longPosArr?bT(l.longPosArr):[],shortPosArr:"
+      },
+      {
+        "offset": 1800611,
+        "text": "longAvgPrice",
+        "context": "gWhalePosArr?bT(l.longWhalePosArr):[],shortWhalePosArr:l.shortWhalePosArr?bT(l.shortWhalePosArr):[],longAvgPriceArr:l.longAvgPriceArr?bT(l.longAvgPriceArr):[],longWhalesAvgPriceArr:l.longWhalesAvgPriceArr?bT(l.longWhalesAvgPriceArr):[],shortAvgPriceArr:l.shortAvgPriceArr?bT(l.shortAvgPriceAr"
+      },
+      {
+        "offset": 1800629,
+        "text": "longAvgPrice",
+        "context": "longWhalePosArr):[],shortWhalePosArr:l.shortWhalePosArr?bT(l.shortWhalePosArr):[],longAvgPriceArr:l.longAvgPriceArr?bT(l.longAvgPriceArr):[],longWhalesAvgPriceArr:l.longWhalesAvgPriceArr?bT(l.longWhalesAvgPriceArr):[],shortAvgPriceArr:l.shortAvgPriceArr?bT(l.shortAvgPriceArr):[],shortgWhales"
+      },
+      {
+        "offset": 1800650,
+        "text": "longAvgPrice",
+        "context": "hortWhalePosArr:l.shortWhalePosArr?bT(l.shortWhalePosArr):[],longAvgPriceArr:l.longAvgPriceArr?bT(l.longAvgPriceArr):[],longWhalesAvgPriceArr:l.longWhalesAvgPriceArr?bT(l.longWhalesAvgPriceArr):[],shortAvgPriceArr:l.shortAvgPriceArr?bT(l.shortAvgPriceArr):[],shortgWhalesAvgPriceArr:l.shortgW"
+      },
+      {
+        "offset": 1800747,
+        "text": "shortAvgPrice",
+        "context": "(l.longAvgPriceArr):[],longWhalesAvgPriceArr:l.longWhalesAvgPriceArr?bT(l.longWhalesAvgPriceArr):[],shortAvgPriceArr:l.shortAvgPriceArr?bT(l.shortAvgPriceArr):[],shortgWhalesAvgPriceArr:l.shortgWhalesAvgPriceArr?bT(l.shortgWhalesAvgPriceArr):[],longTradersArr:l.longTradersArr?bT(l.longTraders"
+      },
+      {
+        "offset": 1800766,
+        "text": "shortAvgPrice",
+        "context": ":[],longWhalesAvgPriceArr:l.longWhalesAvgPriceArr?bT(l.longWhalesAvgPriceArr):[],shortAvgPriceArr:l.shortAvgPriceArr?bT(l.shortAvgPriceArr):[],shortgWhalesAvgPriceArr:l.shortgWhalesAvgPriceArr?bT(l.shortgWhalesAvgPriceArr):[],longTradersArr:l.longTradersArr?bT(l.longTradersArr):[],shortTrader"
+      },
+      {
+        "offset": 1800788,
+        "text": "shortAvgPrice",
+        "context": "Arr:l.longWhalesAvgPriceArr?bT(l.longWhalesAvgPriceArr):[],shortAvgPriceArr:l.shortAvgPriceArr?bT(l.shortAvgPriceArr):[],shortgWhalesAvgPriceArr:l.shortgWhalesAvgPriceArr?bT(l.shortgWhalesAvgPriceArr):[],longTradersArr:l.longTradersArr?bT(l.longTradersArr):[],shortTradersArr:l.shortTradersArr"
+      },
+      {
+        "offset": 1801831,
+        "text": "topPositionLongShortRatio",
+        "context": "?.value||0,o=i(l.shortWhalePosArr)?.value||0;n={time:r,longShortRatio:i(l.longShortRatioArr)?.value,topPositionLongShortRatio:i(l.topPositionLongShortRatioArr)?.value,topAccountLongShortRatio:i(l.topAccountLongShortRatioArr)?.value,topAveragePositionConcentration:i(l.topAveragePositionConcentrationArr)?."
+      },
+      {
+        "offset": 1801861,
+        "text": "topPositionLongShortRatio",
+        "context": "Arr)?.value||0;n={time:r,longShortRatio:i(l.longShortRatioArr)?.value,topPositionLongShortRatio:i(l.topPositionLongShortRatioArr)?.value,topAccountLongShortRatio:i(l.topAccountLongShortRatioArr)?.value,topAveragePositionConcentration:i(l.topAveragePositionConcentrationArr)?.value,longPos:i(l.longPosArr)?"
+      },
+      {
+        "offset": 1801898,
+        "text": "topAccountLongShortRatio",
+        "context": "io:i(l.longShortRatioArr)?.value,topPositionLongShortRatio:i(l.topPositionLongShortRatioArr)?.value,topAccountLongShortRatio:i(l.topAccountLongShortRatioArr)?.value,topAveragePositionConcentration:i(l.topAveragePositionConcentrationArr)?.value,longPos:i(l.longPosArr)?.value||0,shortPos:Math.abs(a),longW"
+      },
+      {
+        "offset": 1801927,
+        "text": "topAccountLongShortRatio",
+        "context": "lue,topPositionLongShortRatio:i(l.topPositionLongShortRatioArr)?.value,topAccountLongShortRatio:i(l.topAccountLongShortRatioArr)?.value,topAveragePositionConcentration:i(l.topAveragePositionConcentrationArr)?.value,longPos:i(l.longPosArr)?.value||0,shortPos:Math.abs(a),longWhalePos:i(l.longWhalePosArr)?"
+      },
+      {
+        "offset": 1802164,
+        "text": "longAvgPrice",
+        "context": ")?.value||0,shortPos:Math.abs(a),longWhalePos:i(l.longWhalePosArr)?.value,shortWhalePos:Math.abs(o),longAvgPrice:i(l.longAvgPriceArr)?.value,longWhalesAvgPrice:i(l.longWhalesAvgPriceArr)?.value,shortAvgPrice:i(l.shortAvgPriceArr)?.value,shortWhalesAvgPrice:i(l.shortgWhalesAvgPriceArr)?.value"
+      },
+      {
+        "offset": 1802181,
+        "text": "longAvgPrice",
+        "context": "Pos:Math.abs(a),longWhalePos:i(l.longWhalePosArr)?.value,shortWhalePos:Math.abs(o),longAvgPrice:i(l.longAvgPriceArr)?.value,longWhalesAvgPrice:i(l.longWhalesAvgPriceArr)?.value,shortAvgPrice:i(l.shortAvgPriceArr)?.value,shortWhalesAvgPrice:i(l.shortgWhalesAvgPriceArr)?.value,longTraders:i(l."
+      },
+      {
+        "offset": 1802258,
+        "text": "shortAvgPrice",
+        "context": "bs(o),longAvgPrice:i(l.longAvgPriceArr)?.value,longWhalesAvgPrice:i(l.longWhalesAvgPriceArr)?.value,shortAvgPrice:i(l.shortAvgPriceArr)?.value,shortWhalesAvgPrice:i(l.shortgWhalesAvgPriceArr)?.value,longTraders:i(l.longTradersArr)?.value,shortTraders:i(l.shortTradersArr)?.value,longWhales:i(l"
+      },
+      {
+        "offset": 1802276,
+        "text": "shortAvgPrice",
+        "context": ":i(l.longAvgPriceArr)?.value,longWhalesAvgPrice:i(l.longWhalesAvgPriceArr)?.value,shortAvgPrice:i(l.shortAvgPriceArr)?.value,shortWhalesAvgPrice:i(l.shortgWhalesAvgPriceArr)?.value,longTraders:i(l.longTradersArr)?.value,shortTraders:i(l.shortTradersArr)?.value,longWhales:i(l.longWhalesArr)?.v"
+      },
+      {
+        "offset": 1807366,
+        "text": "topPositionLongShortRatio",
+        "context": "]}),(0,X.jsxs)(A5,{stretchFactor:.8,children:[(0,X.jsx)(z5,{title:`大户持仓集中度`}),(0,X.jsx)(w5,{data:h?.topPositionLongShortRatioArr||[],options:{priceFormat:L5,color:R5.TopPositionRatio,lineWidth:1,title:`持仓量多空比`}}),(0,X.jsx)(w5,{data:h?.topAccountLongShortRatioArr||[],options:{priceFormat:L5,color:R5.TopAc"
+      },
+      {
+        "offset": 1807501,
+        "text": "topAccountLongShortRatio",
+        "context": "tions:{priceFormat:L5,color:R5.TopPositionRatio,lineWidth:1,title:`持仓量多空比`}}),(0,X.jsx)(w5,{data:h?.topAccountLongShortRatioArr||[],options:{priceFormat:L5,color:R5.TopAccountRatio,lineWidth:1,title:`账户数多空比`}}),(0,X.jsx)(w5,{data:h?.topAveragePositionConcentrationArr||[],options:{priceFormat:L5,color:R5"
+      },
+      {
+        "offset": 1808536,
+        "text": "longAvgPrice",
+        "context": "e,title:`巨鲸空头`}})]}),(0,X.jsxs)(A5,{children:[(0,X.jsx)(z5,{title:`多头平均开仓价`}),(0,X.jsx)(w5,{data:h?.longAvgPriceArr||[],options:{priceFormat:I5,color:R5.Long,lineWidth:1,title:`多头`}}),(0,X.jsx)(w5,{data:h?.longWhalesAvgPriceArr||[],options:{priceFormat:I5,color:R5.LongWhale,lineWidth:1,title"
+      },
+      {
+        "offset": 1808821,
+        "text": "shortAvgPrice",
+        "context": "1,title:`巨鲸多头`}})]}),(0,X.jsxs)(A5,{children:[(0,X.jsx)(z5,{title:`空头平均开仓价`}),(0,X.jsx)(w5,{data:h?.shortAvgPriceArr||[],options:{priceFormat:I5,color:R5.Short,lineWidth:1,title:`空头`}}),(0,X.jsx)(w5,{data:h?.shortgWhalesAvgPriceArr||[],options:{priceFormat:I5,color:R5.ShortWhale,lineWidth:1,t"
+      },
+      {
+        "offset": 1820870,
+        "text": "fundingRate",
+        "context": "ll?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:Dme(e)})},{title:`资金费率`,dataIndex:`fundingRate`,width:95,align:`right`,sorter:(e,t)=>(e.fundingRate??0)-(t.fundingRate??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,chi"
+      },
+      {
+        "offset": 1820923,
+        "text": "fundingRate",
+        "context": "0`,children:Dme(e)})},{title:`资金费率`,dataIndex:`fundingRate`,width:95,align:`right`,sorter:(e,t)=>(e.fundingRate??0)-(t.fundingRate??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:e===null?`—`:(e*100).toFixed(4)+`%`})},{title:`"
+      },
+      {
+        "offset": 1820942,
+        "text": "fundingRate",
+        "context": ")},{title:`资金费率`,dataIndex:`fundingRate`,width:95,align:`right`,sorter:(e,t)=>(e.fundingRate??0)-(t.fundingRate??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:e===null?`—`:(e*100).toFixed(4)+`%`})},{title:`总OI(U)`,dataIndex:`"
+      },
+      {
+        "offset": 1821133,
+        "text": "openInterestValue",
+        "context": "ed-600`:`text-green-600`,children:e===null?`—`:(e*100).toFixed(4)+`%`})},{title:`总OI(U)`,dataIndex:`openInterestValue`,width:95,align:`right`,sorter:(e,t)=>(e.openInterestValue??0)-(t.openInterestValue??0),render:e=>Eme(e)},{title:K5(`多空比`),dataIndex:`smartMoneyLongShortRatio`,width:95,align:`rig"
+      },
+      {
+        "offset": 1821192,
+        "text": "openInterestValue",
+        "context": "xed(4)+`%`})},{title:`总OI(U)`,dataIndex:`openInterestValue`,width:95,align:`right`,sorter:(e,t)=>(e.openInterestValue??0)-(t.openInterestValue??0),render:e=>Eme(e)},{title:K5(`多空比`),dataIndex:`smartMoneyLongShortRatio`,width:95,align:`right`,defaultSortOrder:`descend`,sorter:(e,t)=>(e.smartMoneyL"
+      },
+      {
+        "offset": 1821217,
+        "text": "openInterestValue",
+        "context": "(U)`,dataIndex:`openInterestValue`,width:95,align:`right`,sorter:(e,t)=>(e.openInterestValue??0)-(t.openInterestValue??0),render:e=>Eme(e)},{title:K5(`多空比`),dataIndex:`smartMoneyLongShortRatio`,width:95,align:`right`,defaultSortOrder:`descend`,sorter:(e,t)=>(e.smartMoneyLongShortRatio??0)-(t.smar"
+      },
+      {
+        "offset": 1821285,
+        "text": "smartMoneyLongShortRatio",
+        "context": "t)=>(e.openInterestValue??0)-(t.openInterestValue??0),render:e=>Eme(e)},{title:K5(`多空比`),dataIndex:`smartMoneyLongShortRatio`,width:95,align:`right`,defaultSortOrder:`descend`,sorter:(e,t)=>(e.smartMoneyLongShortRatio??0)-(t.smartMoneyLongShortRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),childr"
+      },
+      {
+        "offset": 1821378,
+        "text": "smartMoneyLongShortRatio",
+        "context": "Index:`smartMoneyLongShortRatio`,width:95,align:`right`,defaultSortOrder:`descend`,sorter:(e,t)=>(e.smartMoneyLongShortRatio??0)-(t.smartMoneyLongShortRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,4)})},{title:K5(`多头OI%`),dataIndex:`smartMoneyLongOiRatio`,width:100,ali"
+      },
+      {
+        "offset": 1821410,
+        "text": "smartMoneyLongShortRatio",
+        "context": ",width:95,align:`right`,defaultSortOrder:`descend`,sorter:(e,t)=>(e.smartMoneyLongShortRatio??0)-(t.smartMoneyLongShortRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,4)})},{title:K5(`多头OI%`),dataIndex:`smartMoneyLongOiRatio`,width:100,align:`right`,sorter:(e,t)=>(e.smar"
+      },
+      {
+        "offset": 1821546,
+        "text": "smartMoneyLongOiRatio",
+        "context": "e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,4)})},{title:K5(`多头OI%`),dataIndex:`smartMoneyLongOiRatio`,width:100,align:`right`,sorter:(e,t)=>(e.smartMoneyLongOiRatio??0)-(t.smartMoneyLongOiRatio??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=.05?`text-red-60"
+      },
+      {
+        "offset": 1821610,
+        "text": "smartMoneyLongOiRatio",
+        "context": "4)})},{title:K5(`多头OI%`),dataIndex:`smartMoneyLongOiRatio`,width:100,align:`right`,sorter:(e,t)=>(e.smartMoneyLongOiRatio??0)-(t.smartMoneyLongOiRatio??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=.05?`text-red-600 font-semibold`:`text-red-500`,children:W5(e,2)})},{title:K5(`空"
+      },
+      {
+        "offset": 1821639,
+        "text": "smartMoneyLongOiRatio",
+        "context": "Index:`smartMoneyLongOiRatio`,width:100,align:`right`,sorter:(e,t)=>(e.smartMoneyLongOiRatio??0)-(t.smartMoneyLongOiRatio??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=.05?`text-red-600 font-semibold`:`text-red-500`,children:W5(e,2)})},{title:K5(`空头OI%`),dataIndex:`smartMoneyS"
+      },
+      {
+        "offset": 1821829,
+        "text": "smartMoneyShortOiRatio",
+        "context": ">=.05?`text-red-600 font-semibold`:`text-red-500`,children:W5(e,2)})},{title:K5(`空头OI%`),dataIndex:`smartMoneyShortOiRatio`,width:100,align:`right`,sorter:(e,t)=>(e.smartMoneyShortOiRatio??0)-(t.smartMoneyShortOiRatio??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=.05?`text-gree"
+      },
+      {
+        "offset": 1821894,
+        "text": "smartMoneyShortOiRatio",
+        "context": ")})},{title:K5(`空头OI%`),dataIndex:`smartMoneyShortOiRatio`,width:100,align:`right`,sorter:(e,t)=>(e.smartMoneyShortOiRatio??0)-(t.smartMoneyShortOiRatio??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=.05?`text-green-600 font-semibold`:`text-green-500`,children:W5(e,2)})},{title:"
+      },
+      {
+        "offset": 1821924,
+        "text": "smartMoneyShortOiRatio",
+        "context": "dex:`smartMoneyShortOiRatio`,width:100,align:`right`,sorter:(e,t)=>(e.smartMoneyShortOiRatio??0)-(t.smartMoneyShortOiRatio??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=.05?`text-green-600 font-semibold`:`text-green-500`,children:W5(e,2)})},{title:K5(`多 / 空`),width:170,render:("
+      },
+      {
+        "offset": 1822252,
+        "text": "smartMoneyLongTraders",
+        "context": "assName:`text-xs whitespace-nowrap`,children:[(0,X.jsx)(`span`,{className:`text-red-600`,children:t.smartMoneyLongTraders??`—`}),t.smartMoneyLongWhales!=null&&t.smartMoneyLongWhales>0&&(0,X.jsxs)(`span`,{className:`ml-0.5`,children:[`(`,t.smartMoneyLongWhales,`🐋)`]}),(0,X.jsx)(`span`,{className:`mx-1"
+      },
+      {
+        "offset": 1822283,
+        "text": "smartMoneyLongWhales",
+        "context": "rap`,children:[(0,X.jsx)(`span`,{className:`text-red-600`,children:t.smartMoneyLongTraders??`—`}),t.smartMoneyLongWhales!=null&&t.smartMoneyLongWhales>0&&(0,X.jsxs)(`span`,{className:`ml-0.5`,children:[`(`,t.smartMoneyLongWhales,`🐋)`]}),(0,X.jsx)(`span`,{className:`mx-1 text-gray-400`,children:`/`})"
+      },
+      {
+        "offset": 1822313,
+        "text": "smartMoneyLongWhales",
+        "context": "`,{className:`text-red-600`,children:t.smartMoneyLongTraders??`—`}),t.smartMoneyLongWhales!=null&&t.smartMoneyLongWhales>0&&(0,X.jsxs)(`span`,{className:`ml-0.5`,children:[`(`,t.smartMoneyLongWhales,`🐋)`]}),(0,X.jsx)(`span`,{className:`mx-1 text-gray-400`,children:`/`}),(0,X.jsx)(`span`,{className:`"
+      },
+      {
+        "offset": 1822391,
+        "text": "smartMoneyLongWhales",
+        "context": "eyLongWhales!=null&&t.smartMoneyLongWhales>0&&(0,X.jsxs)(`span`,{className:`ml-0.5`,children:[`(`,t.smartMoneyLongWhales,`🐋)`]}),(0,X.jsx)(`span`,{className:`mx-1 text-gray-400`,children:`/`}),(0,X.jsx)(`span`,{className:`text-green-600`,children:t.smartMoneyShortTraders??`—`}),t.smartMoneyShortWhal"
+      },
+      {
+        "offset": 1822540,
+        "text": "smartMoneyShortTraders",
+        "context": "assName:`mx-1 text-gray-400`,children:`/`}),(0,X.jsx)(`span`,{className:`text-green-600`,children:t.smartMoneyShortTraders??`—`}),t.smartMoneyShortWhales!=null&&t.smartMoneyShortWhales>0&&(0,X.jsxs)(`span`,{className:`ml-0.5`,children:[`(`,t.smartMoneyShortWhales,`🐋)`]})]})},{title:(0,X.jsxs)(`span`,{"
+      },
+      {
+        "offset": 1822572,
+        "text": "smartMoneyShortWhales",
+        "context": "ldren:`/`}),(0,X.jsx)(`span`,{className:`text-green-600`,children:t.smartMoneyShortTraders??`—`}),t.smartMoneyShortWhales!=null&&t.smartMoneyShortWhales>0&&(0,X.jsxs)(`span`,{className:`ml-0.5`,children:[`(`,t.smartMoneyShortWhales,`🐋)`]})]})},{title:(0,X.jsxs)(`span`,{children:[`大户持仓`,(0,X.jsx)(`br`"
+      },
+      {
+        "offset": 1822603,
+        "text": "smartMoneyShortWhales",
+        "context": "lassName:`text-green-600`,children:t.smartMoneyShortTraders??`—`}),t.smartMoneyShortWhales!=null&&t.smartMoneyShortWhales>0&&(0,X.jsxs)(`span`,{className:`ml-0.5`,children:[`(`,t.smartMoneyShortWhales,`🐋)`]})]})},{title:(0,X.jsxs)(`span`,{children:[`大户持仓`,(0,X.jsx)(`br`,{}),`集中度`]}),dataIndex:`topAve"
+      },
+      {
+        "offset": 1822682,
+        "text": "smartMoneyShortWhales",
+        "context": "ShortWhales!=null&&t.smartMoneyShortWhales>0&&(0,X.jsxs)(`span`,{className:`ml-0.5`,children:[`(`,t.smartMoneyShortWhales,`🐋)`]})]})},{title:(0,X.jsxs)(`span`,{children:[`大户持仓`,(0,X.jsx)(`br`,{}),`集中度`]}),dataIndex:`topAveragePositionConcentration`,width:90,align:`right`,sorter:(e,t,n)=>{let r=e.topA"
+      },
+      {
+        "offset": 1823089,
+        "text": "topPositionRatio",
+        "context": "cend`?-1:1:i==null?n===`descend`?1:-1:r-i},render:e=>e==null?`—`:vT(e,4)},{title:`大户持仓比`,dataIndex:`topPositionRatio`,width:105,align:`right`,sorter:(e,t)=>(e.topPositionRatio??0)-(t.topPositionRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,3)})},{title:`大户账户比`,"
+      },
+      {
+        "offset": 1823148,
+        "text": "topPositionRatio",
+        "context": "l?`—`:vT(e,4)},{title:`大户持仓比`,dataIndex:`topPositionRatio`,width:105,align:`right`,sorter:(e,t)=>(e.topPositionRatio??0)-(t.topPositionRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,3)})},{title:`大户账户比`,dataIndex:`topAccountRatio`,width:105,align:`right`,sorter:"
+      },
+      {
+        "offset": 1823172,
+        "text": "topPositionRatio",
+        "context": "户持仓比`,dataIndex:`topPositionRatio`,width:105,align:`right`,sorter:(e,t)=>(e.topPositionRatio??0)-(t.topPositionRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,3)})},{title:`大户账户比`,dataIndex:`topAccountRatio`,width:105,align:`right`,sorter:(e,t)=>(e.topAccountRati"
+      },
+      {
+        "offset": 1823296,
+        "text": "topAccountRatio",
+        "context": "der:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,3)})},{title:`大户账户比`,dataIndex:`topAccountRatio`,width:105,align:`right`,sorter:(e,t)=>(e.topAccountRatio??0)-(t.topAccountRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,3)})},{title:`账户比`,data"
+      },
+      {
+        "offset": 1823354,
+        "text": "topAccountRatio",
+        "context": "?`—`:_T(e,3)})},{title:`大户账户比`,dataIndex:`topAccountRatio`,width:105,align:`right`,sorter:(e,t)=>(e.topAccountRatio??0)-(t.topAccountRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,3)})},{title:`账户比`,dataIndex:`globalAccountRatio`,width:90,align:`right`,sorter:("
+      },
+      {
+        "offset": 1823377,
+        "text": "topAccountRatio",
+        "context": "`大户账户比`,dataIndex:`topAccountRatio`,width:105,align:`right`,sorter:(e,t)=>(e.topAccountRatio??0)-(t.topAccountRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,3)})},{title:`账户比`,dataIndex:`globalAccountRatio`,width:90,align:`right`,sorter:(e,t)=>(e.globalAccountR"
+      },
+      {
+        "offset": 1823709,
+        "text": "dataAt",
+        "context": "nder:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,3)})},{title:`数据时间`,dataIndex:`dataAt`,width:90,align:`right`,render:e=>{if(!e)return`—`;let t=Math.floor((Date.now()-e)/1e3/60);return(0,X.jsxs)(`span`,{className:`text-xs text-gray-500`,children:[t,`分钟前`]})}}]})}fun"
+      },
+      {
+        "offset": 1824154,
+        "text": "smartMoneyLongShortRatio",
+        "context": "im().toUpperCase();if(!e.symbol.toUpperCase().includes(t))return!1}return!(i.smartLsrMin!==null&&(e.smartMoneyLongShortRatio===null||e.smartMoneyLongShortRatio<i.smartLsrMin)||i.smartLsrMax!==null&&(e.smartMoneyLongShortRatio===null||e.smartMoneyLongShortRatio>i.smartLsrMax)||i.smartLongOiRatioMin!==nul"
+      },
+      {
+        "offset": 1824189,
+        "text": "smartMoneyLongShortRatio",
+        "context": "pperCase().includes(t))return!1}return!(i.smartLsrMin!==null&&(e.smartMoneyLongShortRatio===null||e.smartMoneyLongShortRatio<i.smartLsrMin)||i.smartLsrMax!==null&&(e.smartMoneyLongShortRatio===null||e.smartMoneyLongShortRatio>i.smartLsrMax)||i.smartLongOiRatioMin!==null&&(e.smartMoneyLongOiRatio===null|"
+      },
+      {
+        "offset": 1824255,
+        "text": "smartMoneyLongShortRatio",
+        "context": "martMoneyLongShortRatio===null||e.smartMoneyLongShortRatio<i.smartLsrMin)||i.smartLsrMax!==null&&(e.smartMoneyLongShortRatio===null||e.smartMoneyLongShortRatio>i.smartLsrMax)||i.smartLongOiRatioMin!==null&&(e.smartMoneyLongOiRatio===null||e.smartMoneyLongOiRatio*100<i.smartLongOiRatioMin)||i.smartShortO"
+      },
+      {
+        "offset": 1824290,
+        "text": "smartMoneyLongShortRatio",
+        "context": "martMoneyLongShortRatio<i.smartLsrMin)||i.smartLsrMax!==null&&(e.smartMoneyLongShortRatio===null||e.smartMoneyLongShortRatio>i.smartLsrMax)||i.smartLongOiRatioMin!==null&&(e.smartMoneyLongOiRatio===null||e.smartMoneyLongOiRatio*100<i.smartLongOiRatioMin)||i.smartShortOiRatioMin!==null&&(e.smartMoneyShor"
+      },
+      {
+        "offset": 1824364,
+        "text": "smartMoneyLongOiRatio",
+        "context": "yLongShortRatio===null||e.smartMoneyLongShortRatio>i.smartLsrMax)||i.smartLongOiRatioMin!==null&&(e.smartMoneyLongOiRatio===null||e.smartMoneyLongOiRatio*100<i.smartLongOiRatioMin)||i.smartShortOiRatioMin!==null&&(e.smartMoneyShortOiRatio===null||e.smartMoneyShortOiRatio*100<i.smartShortOiRatioMin)||"
+      },
+      {
+        "offset": 1824396,
+        "text": "smartMoneyLongOiRatio",
+        "context": "oneyLongShortRatio>i.smartLsrMax)||i.smartLongOiRatioMin!==null&&(e.smartMoneyLongOiRatio===null||e.smartMoneyLongOiRatio*100<i.smartLongOiRatioMin)||i.smartShortOiRatioMin!==null&&(e.smartMoneyShortOiRatio===null||e.smartMoneyShortOiRatio*100<i.smartShortOiRatioMin)||i.oiValueMin!==null&&(e.openInte"
+      },
+      {
+        "offset": 1824480,
+        "text": "smartMoneyShortOiRatio",
+        "context": "Ratio===null||e.smartMoneyLongOiRatio*100<i.smartLongOiRatioMin)||i.smartShortOiRatioMin!==null&&(e.smartMoneyShortOiRatio===null||e.smartMoneyShortOiRatio*100<i.smartShortOiRatioMin)||i.oiValueMin!==null&&(e.openInterestValue===null||e.openInterestValue<i.oiValueMin*1e6))}),[n,i]);return(0,X.jsxs)(VT"
+      },
+      {
+        "offset": 1824513,
+        "text": "smartMoneyShortOiRatio",
+        "context": "atio*100<i.smartLongOiRatioMin)||i.smartShortOiRatioMin!==null&&(e.smartMoneyShortOiRatio===null||e.smartMoneyShortOiRatio*100<i.smartShortOiRatioMin)||i.oiValueMin!==null&&(e.openInterestValue===null||e.openInterestValue<i.oiValueMin*1e6))}),[n,i]);return(0,X.jsxs)(VT,{loading:t,title:(0,X.jsxs)(`div"
+      },
+      {
+        "offset": 1824589,
+        "text": "openInterestValue",
+        "context": "yShortOiRatio===null||e.smartMoneyShortOiRatio*100<i.smartShortOiRatioMin)||i.oiValueMin!==null&&(e.openInterestValue===null||e.openInterestValue<i.oiValueMin*1e6))}),[n,i]);return(0,X.jsxs)(VT,{loading:t,title:(0,X.jsxs)(`div`,{children:[`币种列表`,r&&(0,X.jsxs)(`span`,{className:`text-xs text-gray-"
+      },
+      {
+        "offset": 1824617,
+        "text": "openInterestValue",
+        "context": "tMoneyShortOiRatio*100<i.smartShortOiRatioMin)||i.oiValueMin!==null&&(e.openInterestValue===null||e.openInterestValue<i.oiValueMin*1e6))}),[n,i]);return(0,X.jsxs)(VT,{loading:t,title:(0,X.jsxs)(`div`,{children:[`币种列表`,r&&(0,X.jsxs)(`span`,{className:`text-xs text-gray-500 font-normal pl-2`,childr"
+      },
+      {
+        "offset": 1825840,
+        "text": "fundingRate",
+        "context": "ter()};applyFilter(){let{rows:e,filter:t}=this.data,n=e;if(t.minAbsRatePct!==null&&(n=n.filter(e=>e.fundingRate!==null&&Math.abs(e.fundingRate)*100>=t.minAbsRatePct)),t.symbolKeyword){let e=t.symbolKeyword.trim().toUpperCase();n=n.filter(t=>t.symbol.toUpperCase().includes(e))}this.data.filt"
+      },
+      {
+        "offset": 1825871,
+        "text": "fundingRate",
+        "context": ",filter:t}=this.data,n=e;if(t.minAbsRatePct!==null&&(n=n.filter(e=>e.fundingRate!==null&&Math.abs(e.fundingRate)*100>=t.minAbsRatePct)),t.symbolKeyword){let e=t.symbolKeyword.trim().toUpperCase();n=n.filter(t=>t.symbol.toUpperCase().includes(e))}this.data.filteredRows=n}};function Nme({vm:e"
+      },
+      {
+        "offset": 1827780,
+        "text": "fundingRate",
+        "context": "idth:140,render:e=>(0,X.jsx)(`span`,{className:`font-medium`,children:e})},{title:`资金费率`,dataIndex:`fundingRate`,width:120,align:`right`,defaultSortOrder:`ascend`,sorter:(e,t)=>(e.fundingRate??0)-(t.fundingRate??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-re"
+      },
+      {
+        "offset": 1827860,
+        "text": "fundingRate",
+        "context": "e:`资金费率`,dataIndex:`fundingRate`,width:120,align:`right`,defaultSortOrder:`ascend`,sorter:(e,t)=>(e.fundingRate??0)-(t.fundingRate??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600 font-semibold`,children:Pme(e)})},{title:`结算频率`,dataIndex"
+      },
+      {
+        "offset": 1827879,
+        "text": "fundingRate",
+        "context": "`fundingRate`,width:120,align:`right`,defaultSortOrder:`ascend`,sorter:(e,t)=>(e.fundingRate??0)-(t.fundingRate??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600 font-semibold`,children:Pme(e)})},{title:`结算频率`,dataIndex:`fundingIntervalHo"
+      },
+      {
+        "offset": 1828053,
+        "text": "fundingIntervalHours",
+        "context": "400`:e>=0?`text-red-600`:`text-green-600 font-semibold`,children:Pme(e)})},{title:`结算频率`,dataIndex:`fundingIntervalHours`,width:90,align:`right`,sorter:(e,t)=>(e.fundingIntervalHours??0)-(t.fundingIntervalHours??0),render:e=>e===null?`—`:(0,X.jsxs)(`span`,{className:e<8?`text-orange-600`:`text-gray-"
+      },
+      {
+        "offset": 1828115,
+        "text": "fundingIntervalHours",
+        "context": "en:Pme(e)})},{title:`结算频率`,dataIndex:`fundingIntervalHours`,width:90,align:`right`,sorter:(e,t)=>(e.fundingIntervalHours??0)-(t.fundingIntervalHours??0),render:e=>e===null?`—`:(0,X.jsxs)(`span`,{className:e<8?`text-orange-600`:`text-gray-600`,children:[e,`h`]})},{title:`标记价格`,dataIndex:`markPrice`,w"
+      },
+      {
+        "offset": 1828143,
+        "text": "fundingIntervalHours",
+        "context": "ataIndex:`fundingIntervalHours`,width:90,align:`right`,sorter:(e,t)=>(e.fundingIntervalHours??0)-(t.fundingIntervalHours??0),render:e=>e===null?`—`:(0,X.jsxs)(`span`,{className:e<8?`text-orange-600`:`text-gray-600`,children:[e,`h`]})},{title:`标记价格`,dataIndex:`markPrice`,width:120,align:`right`,rende"
+      },
+      {
+        "offset": 1828549,
+        "text": "dataAt",
+        "context": "`,{className:`text-gray-600`,children:gT(new Date(e),`MM-dd HH:mm`)}):`—`},{title:`数据时间`,dataIndex:`dataAt`,width:100,align:`right`,render:e=>{if(!e)return`—`;let t=Math.floor((Date.now()-e)/1e3/60);return(0,X.jsxs)(`span`,{className:`text-xs text-gray-500`,children:[t,`分钟前`]})}}]})]})"
+      },
+      {
+        "offset": 1833314,
+        "text": "marketCap",
+        "context": ":`交易状态`,quoteAsset:`计价币`,contractType:`合约类型`,listingAge:`上市时间`,volume24h:`24小时成交额`,oiValue:`OI名义价值`,marketCap:`流通市值`,concentration:`大户多头持仓集中度`,concentrationChange:`大户多头持仓集中度增长`,positionRatio:`大户持仓多空比`,positionRatioChange:`大户持仓比增长`,whaleQtyChange:`聪明钱巨鲸多头持仓量增长`,whaleCount:`聪明钱巨鲸多头人数`,whale"
+      },
+      {
+        "offset": 1833604,
+        "text": "smartMoneyRatio",
+        "context": "iShare:`聪明钱巨鲸多头占OI比例`,longOutgrowsShort:`多头增长快于空头`,entryPriceChange:`聪明钱多头平均持仓成本增长`,oiChange:`OI增长`,smartMoneyRatio:`聪明钱多空比`,priceChange1h:`1小时涨幅`,priceToEntry:`价格距聪明钱多头成本`,globalRatio:`全局账户多空比`,fundingRate:`资金费率`,fundingInterval:`结算周期`},Vme=new Set([`exitConcentrationChange`,`exitWhaleQtyChang"
+      },
+      {
+        "offset": 1833699,
+        "text": "fundingRate",
+        "context": "I增长`,smartMoneyRatio:`聪明钱多空比`,priceChange1h:`1小时涨幅`,priceToEntry:`价格距聪明钱多头成本`,globalRatio:`全局账户多空比`,fundingRate:`资金费率`,fundingInterval:`结算周期`},Vme=new Set([`exitConcentrationChange`,`exitWhaleQtyChange`,`exitEntryPriceChange`,`concentrationChange`,`positionRatioChange`,`whaleQtyChange`,`wha"
+      },
+      {
+        "offset": 1833983,
+        "text": "fundingRate",
+        "context": "e`,`whaleOiShare`,`longOutgrowsShort`,`entryPriceChange`,`oiChange`,`priceChange1h`,`priceToEntry`,`fundingRate`]),Z5=(e,t=2)=>typeof e==`number`&&Number.isFinite(e)?`${(e*100).toFixed(t)}%`:`—`;function Q5(e,t){return t===null?`缺少数据`:typeof t==`string`?{TRADING:`交易中`,PERPETUAL:`永续`,binance"
+      },
+      {
+        "offset": 1834213,
+        "text": "fundingRate",
+        "context": "少数据`:typeof t==`string`?{TRADING:`交易中`,PERPETUAL:`永续`,binance:`Binance`}[t]??t:Vme.has(e)?Z5(t,e===`fundingRate`?4:2):e===`listingAge`?`${(t/864e5).toFixed(1)}天`:e===`fundingInterval`?`${t}小时`:t.toLocaleString(`zh-CN`,{maximumFractionDigits:4})}function Hme(e,t){if(t.group===`exit`&&typeof "
+      },
+      {
+        "offset": 1834774,
+        "text": "fundingRate",
+        "context": "return n?`${Q5(e,Number(n[1]))} ～ ${Q5(e,Number(n[2]))}`:Q5(e,t.threshold)}return`${[`globalRatio`,`fundingRate`].includes(e)?`≤`:e===`fundingInterval`?`=`:`≥`} ${Q5(e,t.threshold)}`}var Ume={smartMoney:`聪明钱数据`,overview:`聪明钱数据`,fundingInterval:`资金结算周期`,onboardAt:`上市时间`,ratios:`大户多空比`,positi"
+      },
+      {
+        "offset": 1835153,
+        "text": "smartMoneyRatio",
+        "context": "leCount:`聪明钱巨鲸人数`,shortWhaleQty:`聪明钱巨鲸空头持仓量`,entryPrice:`聪明钱多头平均持仓成本`,whaleEntryPrice:`聪明钱巨鲸多头平均成本`,smartMoneyRatio:`聪明钱多空比`,oi:`OI`,oiValue:`OI名义价值`,globalRatio:`全局多空比`,marketCap:`流通市值`,markPrice:`标记价格`,fundingRate:`资金费率`,volume24h:`24小时成交额`,ticker:`行情`,tickerPrice:`最新价格`,tickerPrice1hAgo:`1小时"
+      },
+      {
+        "offset": 1835223,
+        "text": "marketCap",
+        "context": "whaleEntryPrice:`聪明钱巨鲸多头平均成本`,smartMoneyRatio:`聪明钱多空比`,oi:`OI`,oiValue:`OI名义价值`,globalRatio:`全局多空比`,marketCap:`流通市值`,markPrice:`标记价格`,fundingRate:`资金费率`,volume24h:`24小时成交额`,ticker:`行情`,tickerPrice:`最新价格`,tickerPrice1hAgo:`1小时前价格`,priceChange1h:`1小时涨幅`,priceToEntry:`价格距成本`,whaleOiShare:`聪明"
+      },
+      {
+        "offset": 1835257,
+        "text": "fundingRate",
+        "context": "tMoneyRatio:`聪明钱多空比`,oi:`OI`,oiValue:`OI名义价值`,globalRatio:`全局多空比`,marketCap:`流通市值`,markPrice:`标记价格`,fundingRate:`资金费率`,volume24h:`24小时成交额`,ticker:`行情`,tickerPrice:`最新价格`,tickerPrice1hAgo:`1小时前价格`,priceChange1h:`1小时涨幅`,priceToEntry:`价格距成本`,whaleOiShare:`聪明钱巨鲸多头占OI比例`,fundingIntervalHours:`资金"
+      },
+      {
+        "offset": 1835424,
+        "text": "fundingIntervalHours",
+        "context": "格`,tickerPrice1hAgo:`1小时前价格`,priceChange1h:`1小时涨幅`,priceToEntry:`价格距成本`,whaleOiShare:`聪明钱巨鲸多头占OI比例`,fundingIntervalHours:`资金结算周期`,anchor:`行情时间`};function $5(e){return e.split(/[.:]/).map(e=>Ume[e]??{current:`当前窗口`,baseline:`基准窗口`,currentSamples:`当前窗口样本不足`,baselineSamples:`基准窗口样本不足`,change:`变化量`}[e]?"
+      },
+      {
+        "offset": 1838999,
+        "text": "fundingRate",
+        "context": "en:Z5(n?.priceToEntry)})]}),(0,X.jsxs)(`span`,{children:[`资金费率 `,(0,X.jsx)(`strong`,{children:Z5(n?.fundingRate,4)})]})]})]})}function Yme({event:e}){let t=On(),n=Wme[e.type],r=(0,X.jsx)(`div`,{className:`text-sm text-gray-700`,children:e.title});switch(e.type){case`smart_money_confluence`:"
+      },
+      {
+        "offset": 1853874,
+        "text": "lastEvaluatedAt",
+        "context": "ome(e=>e.id===r.id)&&v.unshift(r);let y=r&&[`WATCH`,`READY`].includes(r.status),b=y&&u-Date.parse(r.lastEvaluatedAt)>3e5;return(0,X.jsx)(gY,{size:`small`,title:`聪明钱共振`,className:`flex-auto`,extra:(0,X.jsx)(QK,{size:`small`,loading:a,onClick:()=>void e.querySignals(l),children:`刷新信号`}),children:"
+      },
+      {
+        "offset": 1855732,
+        "text": "lastEvaluatedAt",
+        "context": "chStartedAt)],[`触发时间`,a7(r.readyAt)],[`结束时间`,a7(r.endedAt)],[`触发价格`,r.entryPrice??`—`],[`最近评价`,a7(r.lastEvaluatedAt)],[`行情时间`,a7(r.lastAnchorAt)],[`到期时间`,a7(r.expiresAt)],[`冷却至`,a7(r.cooldownUntil)]].map(([e,t])=>(0,X.jsxs)(`div`,{className:`min-w-0`,children:[(0,X.jsx)(`dt`,{className:`text-gr"
+      },
+      {
+        "offset": 1878903,
+        "text": "fundingRate",
+        "context": "-mono tabular-nums leading-5`,children:[(0,X.jsx)(`div`,{className:`text-base font-semibold ${ghe(e.fundingRate)}`,children:u7(e.fundingRate,5)}),(0,X.jsxs)(`div`,{className:`text-xs text-gray-500`,children:[`年化 `,u7(e.annualizedFundingRate,2)]}),(0,X.jsxs)(`div`,{className:`mt-1 text-xs te"
+      },
+      {
+        "offset": 1878932,
+        "text": "fundingRate",
+        "context": ",children:[(0,X.jsx)(`div`,{className:`text-base font-semibold ${ghe(e.fundingRate)}`,children:u7(e.fundingRate,5)}),(0,X.jsxs)(`div`,{className:`text-xs text-gray-500`,children:[`年化 `,u7(e.annualizedFundingRate,2)]}),(0,X.jsxs)(`div`,{className:`mt-1 text-xs text-gray-700`,children:[`最新 `,"
+      },
+      {
+        "offset": 1903879,
+        "text": "fundingIntervalHours",
+        "context": "(e.currentFundingRate??0)>=0?`text-red-600`:`text-green-600`}`,children:[w7(e.currentFundingRate),e.fundingIntervalHours===null?``:` / ${C7(e.fundingIntervalHours,2)}h`]}),(0,X.jsx)(`span`,{className:`text-gray-500`,children:`下次结算`}),(0,X.jsx)(`span`,{className:`text-right`,children:e.nextFundingAt?"
+      },
+      {
+        "offset": 1903921,
+        "text": "fundingIntervalHours",
+        "context": "`:`text-green-600`}`,children:[w7(e.currentFundingRate),e.fundingIntervalHours===null?``:` / ${C7(e.fundingIntervalHours,2)}h`]}),(0,X.jsx)(`span`,{className:`text-gray-500`,children:`下次结算`}),(0,X.jsx)(`span`,{className:`text-right`,children:e.nextFundingAt?gT(new Date(e.nextFundingAt),`MM-dd HH:mm`"
+      },
+      {
+        "offset": 1993225,
+        "text": "triggerPrice",
+        "context": "hildren:L9[e.status]??e.status}),e.quantity&&(0,X.jsxs)(`span`,{children:[`数量 `,e.quantity,` `]}),e.triggerPrice&&(0,X.jsxs)(`span`,{children:[`触发价 `,e.triggerPrice]}),(0,X.jsx)(`p`,{className:`mt-1 whitespace-pre-wrap break-words text-muted-foreground`,children:e.message})]},e.id)),e&&(0,X."
+      },
+      {
+        "offset": 1993277,
+        "text": "triggerPrice",
+        "context": "xs)(`span`,{children:[`数量 `,e.quantity,` `]}),e.triggerPrice&&(0,X.jsxs)(`span`,{children:[`触发价 `,e.triggerPrice]}),(0,X.jsx)(`p`,{className:`mt-1 whitespace-pre-wrap break-words text-muted-foreground`,children:e.message})]},e.id)),e&&(0,X.jsxs)(X.Fragment,{children:[(0,X.jsxs)(`details`,{cl"
+      },
+      {
+        "offset": 1995368,
+        "text": "triggerPrice",
+        "context": "umber(e)?`市价`:R9(e),width:110},{title:`触发价`,render:(e,t)=>t.isAlgo?(0,X.jsxs)(`div`,{children:[R9(t.triggerPrice),(0,X.jsx)(`div`,{className:`text-xs text-muted-foreground`,children:t.workingType===`MARK_PRICE`?`标记价格`:t.workingType===`CONTRACT_PRICE`?`最新成交价`:t.workingType})]}):Number(t.stopP"
+      }
+    ]
+  },
+  "display_percent_formatters": {
+    "match_count_capped": 16,
+    "items": [
+      {
+        "offset": 524549,
+        "text": "*100),providedFormat:t,state:n}),o=Object.assign({},eb,t);return i?`%${o.spaceSeparated?` `:``}${a}`:`${a}${o.spaceSeparated?` `:``}%`}function mb(e,t,n){let r=n.currentCurrency(),i=Object.assign({},t),a=Object.assign({},eb,i),o,s=``,c=!!a.totalLength||!!a.forceAverage||a.average,l=i.currencyPosition||r.position,u=i.currencySymbol||r.symbol,d=a.spaceSeparatedCurrency===void 0?a.spaceSeparated:a.spaceSeparatedCurrency;i.lowPrecision===void 0&&(i.lowPrecision=!1),d&&(s=` `),l===`infix`&&(o=s+u+s);let f=Ob({instance:e,providedFormat:i,state:n,decimalSeparator:o});return l===`prefix`&&(f=e._value<0&&a.negative===`sign`?`-${s}${u}${f.slice(1)}`:e._value>0&&a.forceSign?`+${s}${u}${f.slice(1)}`:u+s+f),(!l||l===`postfix`)&&(s=!a.spaceSeparatedAbbreviation&&c?``:s,f=f+s+u),f}function hb({value:e,forceAverage:t,lowPrecision:n=!0,abbreviations:r,spaceSeparated:i=!1,totalLength:a=0,roundingFunction:o=Math.round}){let s=``,c=Math.abs(e),l=-1;if(t&&r[t]&&$y[t]?(s=r[t],e/=$y[t]):c>=$y.trillion||n&&o(c/$y.trillion)===1?(s=r.trillion,e/=$y.trillion):c<$y.trillion&&c>=$y.billion||n&&o(c/$y.billion)===1?(s=r.billion,e/=$y.billion):c<$y.billion&&c>=$y.million||n&&o(c/$y.million)===1?(s=r.million,e/=$y.million):(c<$y.million&&c>=$y.thousand||n&&o(c/$y.thousand)===1)&&(s=r.thousand,e/=$y.thousand),s&&=(i?` `:``)+s,a){let t=e<0,n=e.toString().split(`.`)[0],r=t?n.length-1:n.length;l=Math.max(a-r,0)}return{value:e,abbreviation:s,mantissaPrecision:l}}function gb({value:e,characteristicPrecision:t}){let[n,r]=e.toExponential().split(`e`),i=+n;return t&&1<t&&(i*=10**(t-1),r=+r-(t-1),r=r>=0?`+${r}`:r),{value:i,abbreviation:`e${r}`}}function _b(e){let t=``;for(let n=0;n<e;n++)t+=`0`;return t}function vb(e,t){let n=e.toString(),[r,i]=n.split(`e`),[a,o=``]=r.split(`.`);if(+i>0)n=a+o+_b(i-o.length);else{let e=`.`;e=+a<0?`-0${e}`:`0${e}`;let r=(_b(-i-1)+Math.abs(a)+o).substr(0,t);r.length<t&&(r+=_b(t-r.length)),n=e+r}return+i>0&&t>0&&(n+=`.${_b(t)}`),n}function yb(e,t,n=Math.round){return e.toString().indexOf(`e`)===-1?new Qy(n(+`${e}e+${t}`)/10**t).toFixed",
+        "context": "?`0`:``}${n}:${r<10?`0`:``}${r}`}function pb(e,t,n,r){let i=t.prefixSymbol,a=Ob({instance:r(e._value*100),providedFormat:t,state:n}),o=Object.assign({},eb,t);return i?`%${o.spaceSeparated?` `:``}${a}`:`${a}${o.spaceSeparated?` `:``}%`}function mb(e,t,n){let r=n.currentCurrency(),i=Object.assign({},t),a=Object.assign({},eb,i),o,s=``,c=!!a.totalLength||!!a.forceAverage||a.average,l=i.currencyPosition||r.position,u=i.currencySymbol||r.symbol,d=a.spaceSeparatedCurrency===void 0?a.spaceSeparated:a.spaceSeparatedCurrency;i.lowPrecision===void 0&&(i.lowPrecision=!1),d&&(s=` `),l===`infix`&&(o=s+u+s);let f=Ob({instance:e,providedFormat:i,state:n,decimalSeparator:o});return l===`prefix`&&(f=e._value<0&&a.negative===`sign`?`-${s}${u}${f.slice(1)}`:e._value>0&&a.forceSign?`+${s}${u}${f.slice(1)}`:u+s+f),(!l||l===`postfix`)&&(s=!a.spaceSeparatedAbbreviation&&c?``:s,f=f+s+u),f}function hb({value:e,forceAverage:t,lowPrecision:n=!0,abbreviations:r,spaceSeparated:i=!1,totalLength:a=0,roundingFunction:o=Math.round}){let s=``,c=Math.abs(e),l=-1;if(t&&r[t]&&$y[t]?(s=r[t],e/=$y[t]):c>=$y.trillion||n&&o(c/$y.trillion)===1?(s=r.trillion,e/=$y.trillion):c<$y.trillion&&c>=$y.billion||n&&o(c/$y.billion)===1?(s=r.billion,e/=$y.billion):c<$y.billion&&c>=$y.million||n&&o(c/$y.million)===1?(s=r.million,e/=$y.million):(c<$y.million&&c>=$y.thousand||n&&o(c/$y.thousand)===1)&&(s=r.thousand,e/=$y.thousand),s&&=(i?` `:``)+s,a){let t=e<0,n=e.toString().split(`.`)[0],r=t?n.length-1:n.length;l=Math.max(a-r,0)}return{value:e,abbreviation:s,mantissaPrecision:l}}function gb({value:e,characteristicPrecision:t}){let[n,r]=e.toExponential().split(`e`),i=+n;return t&&1<t&&(i*=10**(t-1),r=+r-(t-1),r=r>=0?`+${r}`:r),{value:i,abbreviation:`e${r}`}}function _b(e){let t=``;for(let n=0;n<e;n++)t+=`0`;return t}function vb(e,t){let n=e.toString(),[r,i]=n.split(`e`),[a,o=``]=r.split(`.`);if(+i>0)n=a+o+_b(i-o.length);else{let e=`.`;e=+a<0?`-0${e}`:`0${e}`;let r=(_b(-i-1)+Math.abs(a)+o).substr(0,t);r.length<t&&(r+=_b(t-r.length)),n=e+r}return+i>0&&t>0&&(n+=`.${_b(t)}`),n}function yb(e,t,n=Math.round){return e.toString().indexOf(`e`)===-1?new Qy(n(+`${e}e+${t}`)/10**t).toFixed(t):vb(e,t)}function bb(e,t,n,r,i,a){if(r===-1)return e;let o=yb(t,r,a),[s,c=``]=o.toString().split(`.`);if(c.match(/^0+$/)&&(n||i))return s;let l=c.match(/0+$/);return i&&l?`${s}."
+      },
+      {
+        "offset": 818881,
+        "text": "*100)/100};return this._c(a)}tint(e=10){return this.mix({r:255,g:255,b:255,a:1},e)}shade(e=10){return this.mix({r:0,g:0,b:0,a:1},e)}onBackground(e){let t=this._c(e),n=this.a+t.a*(1-this.a),r=e=>zA((this[e]*this.a+t[e]*t.a*(1-this.a))/n);return this._c({r:r(`r`),g:r(`g`),b:r(`b`),a:n})}isDark(){return this.getBrightness()<128}isLight(){return this.getBrightness()>=128}equals(e){return this.r===e.r&&this.g===e.g&&this.b===e.b&&this.a===e.a}clone(){return this._c(this)}toHexString(){let e=`#`,t=(this.r||0).toString(16);e+=t.length===2?t:`0`+t;let n=(this.g||0).toString(16);e+=n.length===2?n:`0`+n;let r=(this.b||0).toString(16);if(e+=r.length===2?r:`0`+r,typeof this.a==`number`&&this.a>=0&&this.a<1){let t=zA(this.a*255).toString(16);e+=t.length===2?t:`0`+t}return e}toHsl(){return{h:this.getHue(),s:this.getSaturation(),l:this.getLightness(),a:this.a}}toHslString(){let e=this.getHue(),t=zA(this.getSaturation()*100),n=zA(this.getLightness()*100);return this.a===1?`hsl(${e},${t}%,${n}%)`:`hsla(${e},${t}%,${n}%,${this.a})`}toHsv(){return{h:this.getHue(),s:this.getSaturation(),v:this.getValue(),a:this.a}}toRgb(){return{r:this.r,g:this.g,b:this.b,a:this.a}}toRgbString(){return this.a===1?`rgb(${this.r},${this.g},${this.b})`:`rgba(${this.r},${this.g},${this.b},${this.a})`}toString(){return this.toRgbString()}_sc(e,t,n){let r=this.clone();return r[e]=HA(t,n),r}_c(e){return new this.constructor(e)}getMax(){return this._max===void 0&&(this._max=Math.max(this.r,this.g,this.b)),this._max}getMin(){return this._min===void 0&&(this._min=Math.min(this.r,this.g,this.b)),this._min}fromHexString(e){let t=e.replace(`#`,``);function n(e,n){return parseInt(t[e]+t[n||e],16)}t.length<6?(this.r=n(0),this.g=n(1),this.b=n(2),this.a=t[3]?n(3)/255:1):(this.r=n(0,1),this.g=n(2,3),this.b=n(4,5),this.a=t[6]?n(6,7)/255:1)}fromHsl({h:e,s:t,l:n,a:r}){if(this._h=e%360,this._s=t,this._l=n,this.a=typeof r==`number`?r:1,t<=0){let e=zA(n*255);this.r=e,this.g=e,this.b=e}let i=0,a=0,o=0,s=e/60,c=(1-Math.abs(2*n-1))*t,l=c*(1-Math.abs(s%2-1));s>=0&&s<1?(i=c,a=l):s>=1&&s<2?(i=l,a=c):s>=2&&s<3?(a=c,o=l):s>=3&&s<4?(a=l,o=c):s>=4&&s<5?(i=l,o=c):s>=5&&s<6&&(i=c,o=l);let u=n-c/2;this.r=zA((i+u)*255),this.g=zA((a+u)*255),this.b=zA((o+u)*255)}fromHsv({h:e,s:t,v:n,a:r}){this._h=e%360,this._s=t,this._v=n,this.a=typeof r==`number`?r:1;let i=zA(n*255);if(this.r=i,this.g=i,this.b=i,t<=0)return;let a=e/60,o=Math.floor(a),s=a-o,c=zA(n*(1-t)*255),l=zA(n*(1-t*s)*255),u=zA(n*(1-t*(1-s))*255);switch(o){case 0:this.g=u,this.b=c;break;case 1:this.r=l,this.b=c;break;case 2:this.r=c,this.b=u;break;case 3:this.r=c,this.g=l;break;case 4:this.r=u,this.g=c;break;default:this.g=c,this.b=l}}fromHsvString(e){let t=BA(e,VA);this.fromHsv({h:t[0],s:t[1],v:t[2],a:t[3]})}fromHslString(e){let t=BA(e,VA);this.fromHsl({h:t[0],s:t[1],l:t[2],a:t[3]})}fromRgbString(e){let t=BA(e,(e,t)=>t.includes(`%`)?zA(e/100*255):e);this.r=t[0],this.g=t[1],this.b=t[2],this.a=t[3]}},WA=2,GA=.16,Yae=.05,Xae=.05,Zae=.15,KA=5,qA=4,Qae=[{index:7,amount:15},{index:6,amount:25},{index:5,amount:30},{index:5,amount:45},{index:5,amount:65},{index:5,amount:85},{index:4,amount:90},{index:3,amount:95},{index:2,amount:97},{index:1,amount:98}];function JA(e,t,n){let r;return r=Math.round(e.h)>=60&&Math.round(e.h)<=240?n?Math.round(e.h)-WA*t:Math.round(e.h)+WA*t:n?Math.round(e.h)+WA*t:Math.round(e.h)-WA*t,r<0?r+=360:r>=360&&(r-=360),r}function YA(e,t,n){if(e.h===0&&e.s===0)return e.s;let r;return r=n?e.s-GA*t:t===qA?e.s+GA:e.s+Yae*t,r>1&&(r=1),n&&t===KA&&r>.1&&(r=.1),r<.06&&(r=.06),Math.round(r*100)/100}function XA(e,t,n){let r;return r=n?e.v+Xae*t:e.v-Zae*t,r=Math.max(0,Math.min(1,r)),Math.round(r*100)/100}function ZA(e,t={}){let n=[],r=new UA(e),i=r.toHsv();for(let e=KA;e>0;--e){let t=new UA({h:JA(i,e,!0),s:YA(i,e,!0),v:XA(i,e,!0)});n.push(t)}n.push(r);for(let e=1;e<=qA;e+=1){let t=new UA({h:JA(i,e),s:YA(i,e),v:XA(i,e)});n.push(t)}return t.theme===`dark`?Qae.map(({index:e,amount:r})=>new UA(t.backgroundColor||`#141414`).mix(n[e],r).toHexString()):n.map(e=>e.toHexString())}var QA={red:`#F5222D`,volcano:`#FA541C`,orange:`#FA8C16`,gold:`#FAAD14`,yellow:`#FADB14`,lime:`#A0D911`,green:`#52C41A`,cyan:`#13C2C2`,blue:`#1677FF`,geekblue:`#2F54EB`,purple:`#722ED1`,magenta:`#EB2F96`,grey:`#666666`},$A=[`#fff1f0`,`#ffccc7`,`#ffa39e`,`#ff7875`,`#ff4d4f`,`#f5222d`,`#cf1322`,`#a8071a`,`#820014`,`#5c0011`];$A.primary=$A[5];var ej=[`#fff2e8`,`#ffd8bf`,`#ffbb96`,`#ff9c6e`,`#ff7a45`,`#fa541c`,`#d4380d`,`#ad2102`,`#871400`,`#610b00`];ej.primary=ej[5];var tj=[`#fff7e6`,`#ffe7ba`,`#ffd591`,`#ffc069`,`#ffa940`,`#fa8c16`,`#d46b08`,`#ad4e00`,`#873800`,`#612500`];tj.primary=tj[5];var nj=[`#fffbe6`,`#fff1b8`,`#ffe58f`,`#ffd666`,`#ffc53d`,`#faad14`,`#d48806`,`#ad6800`,`#874d00`,`#613400`];nj.primary=nj[5];var rj=[`#feffe6`,`#ffffb8`,`#fffb8f`,`#fff566`,`#ffec3d`,`#fadb14`,`#d4b106`,`#ad8b00`,`#876800`,`#614700`];rj.primary=rj[5];var ij=[`#fcffe6`,`#f4ffb8`,`#eaff8f`,`#d3f261`,`#bae637`,`#a0d911`,`#7cb305`,`#5b8c00`,`#3f6600`,`#254000`];ij.primary=ij[5];var aj=[`#f6ffed`,`#d9f7be`,`#b7eb8f`,`#95de64`,`#73d13d`,`#52c41a`,`#389e0d`,`#237804`,`#135200`,`#092b00`];aj.primary=aj[5];var oj=[`#e6fffb`,`#b5f5ec`,`#87e8de`,`#5cdbd3`,`#36cfc9`,`#13c2c2`,`#08979c`,`#006d75`,`#00474f`,`#002329`];oj.primary=oj[5];var sj=[`#e6f4ff`,`#bae0ff`,`#91caff`,`#69b1ff`,`#4096ff`,`#1677ff`,`#0958d9`,`#003eb3`,`#002c8c`,`#001d66`];sj.primary=sj[5];var cj=[`#f0f5ff`,`#d6e4ff`,`#adc6ff`,`#85a5ff`,`#597ef7`,`#2f54eb`,`#1d39c4`,`#10239e`,`#061178`,`#030852`];cj.primary=cj[5];var lj=[`#f9f0ff`,`#efdbff`,`#d3adf7`,`#b37feb`,`#9254de`,`#722ed1`,`#531dab`,`#391085`,`#22075e`,`#120338`];lj.primary=lj[5];var uj=[`#fff0f6`,`#ffd6e7`,`#ffadd2`,`#ff85c0`,`#f759ab`,`#eb2f96`,`#c41d7f`,`#9e1068`,`#780650`,`#520339`];uj.primary=uj[5];var dj=[`#a6a6a6`,`#999999`,`#8c8c8c`,`#808080`,`#737373`,`#666666`,`#404040`,`#1a1a1a`,`#000000`,`#000000`];dj.primary=dj[5];var fj={red:$A,volcano:ej,orange:tj,gold:nj,yellow:rj,lime:ij,green:aj,cyan:oj,blue:sj,geekblue:cj,purple:lj,magenta:uj,grey:dj},pj=[`#2a1215`,`#431418`,`#58181c`,`#791a1f`,`#a61d24`,`#d32029`,`#e84749`,`#f37370`,`#f89f9a`,`#fac8c3`];pj.primary=pj[5];var mj=[`#2b1611`,`#441d12`,`#592716`,`#7c3118`,`#aa3e19`,`#d84a1b`,`#e87040`,`#f3956a`,`#f8b692`,`#fad4bc`];mj.primary=mj[5];var hj=[`#2b1d11`,`#442a11`,`#593815`,`#7c4a15`,`#aa6215`,`#d87a16`,`#e89a3c`,`#f3b765`,`#f8cf8d`,`#fae3b7`];hj.primary=hj[5];var gj=[`#2b2111`,`#443111`,`#594214`,`#7c5914`,`#aa7714`,`#d89614`,`#e8b339`,`#f3cc62`,`#f8df8b`,`#faedb5`];gj.primary=gj[5];var _j=[`#2b2611`,`#443b11`,`#595014`,`#7c6e14`,`#aa9514`,`#d8bd14`,`#e8d639`,`#f3ea62`,`#f8f48b`,`#fafab5`];_j.primary=_j[5];var vj=[`#1f2611`,`#2e3c10`,`#3e4f13`,`#536d13`,`#6f9412`,`#8bbb11`,`#a9d134`,`#c9e75d`,`#e4f88b`,`#f0fab5`];vj.primary=vj[5];var yj=[`#162312`,`#1d3712`,`#274916`,`#306317`,`#3c8618`,`#49aa19`,`#6abe39`,`#8fd460`,`#b2e58b`,`#d5f2bb`];yj.primary=yj[5];var bj=[`#112123`,`#113536`,`#144848`,`#146262`,`#138585`,`#13a8a8`,`#33bcb7`,`#58d1c9`,`#84e2d8`,`#b2f1e8`];bj.primary=bj[5];var xj=[`#111a2c`,`#112545`,`#15325b`,`#15417e`,`#1554ad`,`#1668dc`,`#3c89e8`,`#65a9f3`,`#8dc5f8`,`#b7dcfa`];xj.primary=xj[5];var Sj=[`#131629`,`#161d40`,`#1c2755`,`#203175`,`#263ea0`,`#2b4acb`,`#5273e0`,`#7f9ef3`,`#a8c1f8`,`#d2e0fa`];Sj.primary=Sj[5];var Cj=[`#1a1325`,`#24163a`,`#301c4d`,`#3e2069`,`#51258f`,`#642ab5`,`#854eca`,`#ab7ae0`,`#cda8f0`,`#ebd7fa`];Cj.primary=Cj[5];var wj=[`#291321`,`#40162f`,`#551c3b`,`#75204f`,`#a02669`,`#cb2b83`,`#e0529c`,`#f37fb7`,`#f8a8cc`,`#fad2e3`];wj.primary=wj[5];var Tj=[`#151515`,`#1f1f1f`,`#2d2d2d`,`#393939`,`#494949`,`#5a5a5a`,`#6a6a6a`,`#7b7b7b`,`#888888`,`#969696`];Tj.primary=Tj[5];function Ej(e,{generateColorPalettes:t,generateNeutralColorPalettes:n}){let{colorSuccess:r,colorWarning:i,colorError:a,colorInfo:o,colorPrimary:s,colorBgBase:c,colorTextBase:l}=e,u=t(s),d=t(r),f=t(i),p=t(a),m=t(o),h=n(c,l),g=t(e.colorLink||e.colorInfo),_=new UA(p[1]).mix(new UA(p[3]),50).toHexString();return{...h,colorPrimaryBg:u[1],colorPrimaryBgHover:u[2],colorPrimaryBorder:u[3],colorPrimaryBorderHover:u[4],colorPrimaryHover:u[5],colorPrimary:u[6],colorPrimaryActive:u[7],colorPrimaryTextHover:u[8],colorPrimaryText:u[9],colorPrimaryTextActive:u[10],colorSuccessBg:d[1],colorSuccessBgHover:d[2],colorSuccessBorder:d[3],colorSuccessBorderHover:d[4],colorSuccessHover:d[4],colorSuccess:d[6],colorSuccessActive:d[7],colorSuccessTextHover:d[8],colorSuccessText:d[9],colorSuccessTextActive:d[10],colorErrorBg:p[1],colorErrorBgHover:p[2],colorErrorBgFilledHover:_,colorErrorBgActive:p[3],colorErrorBorder:p[3],colorErrorBorderHover:p[4],colorErrorHover:p[5],colorError:p[6],colorErrorActive:p[7],colorErrorTextHover:p[8],colorErrorText:p[9],colorErrorTextActive:p[10],colorWarningBg:f[1],colorWarningBgHover:f[2],colorWarningBorder:f[3],colorWarningBorderHover:f[4],colorWarningHover:f[4],colorWarning:f[6],colorWarningActive:f[7],colorWarningTextHover:f[8],colorWarningText:f[9],colorWarningTextActive:f[10],colorInfoBg:m[1],colorInfoBgHover:m[2],colorInfoBorder:m[3],colorInfoBorderHover:m[4],colorInfoHover:m[4],colorInfo:m[6],colorInfoActive:m[7],colorInfoTextHover:m[8],colorInfoText:m[9],colorInfoTextActive:m[10],colorLinkHover:g[4],colorLink:g[6],colorLinkActive:g[7],colorBgMask:new UA(`#000`).setA(.45).toRgbString(),colorWhite:`#fff`}}var Dj=e=>{let t=e,n=e,r=e,i=e;return e<6&&e>=5?t=e+1:e<16&&e>=6?t=e+2:e>=16&&(t=16),e<7&&e>=5?n=4:e<8&&e>=7?n=5:e<14&&e>=8?n=6:e<16&&e>=14?n=7:e>=16&&(n=8),e<6&&e>=2?r=1:e>=6&&(r=2),e>4&&e<8?i=4:e>=8&&(i=6),{borderRadius:e,borderRadiusXS:r,borderRadiusSM:n,borderRadiusLG:t,borderRadiusOuter:i}};function Oj(e){let{motionUnit:t,motionBase:n,borderRadius:r,lineWidth:i}=e;return{motionDurationFast:`${(n+t).toFixed",
+        "context": "is._c(e),r=t/100,i=e=>(n[e]-this[e])*r+this[e],a={r:zA(i(`r`)),g:zA(i(`g`)),b:zA(i(`b`)),a:zA(i(`a`)*100)/100};return this._c(a)}tint(e=10){return this.mix({r:255,g:255,b:255,a:1},e)}shade(e=10){return this.mix({r:0,g:0,b:0,a:1},e)}onBackground(e){let t=this._c(e),n=this.a+t.a*(1-this.a),r=e=>zA((this[e]*this.a+t[e]*t.a*(1-this.a))/n);return this._c({r:r(`r`),g:r(`g`),b:r(`b`),a:n})}isDark(){return this.getBrightness()<128}isLight(){return this.getBrightness()>=128}equals(e){return this.r===e.r&&this.g===e.g&&this.b===e.b&&this.a===e.a}clone(){return this._c(this)}toHexString(){let e=`#`,t=(this.r||0).toString(16);e+=t.length===2?t:`0`+t;let n=(this.g||0).toString(16);e+=n.length===2?n:`0`+n;let r=(this.b||0).toString(16);if(e+=r.length===2?r:`0`+r,typeof this.a==`number`&&this.a>=0&&this.a<1){let t=zA(this.a*255).toString(16);e+=t.length===2?t:`0`+t}return e}toHsl(){return{h:this.getHue(),s:this.getSaturation(),l:this.getLightness(),a:this.a}}toHslString(){let e=this.getHue(),t=zA(this.getSaturation()*100),n=zA(this.getLightness()*100);return this.a===1?`hsl(${e},${t}%,${n}%)`:`hsla(${e},${t}%,${n}%,${this.a})`}toHsv(){return{h:this.getHue(),s:this.getSaturation(),v:this.getValue(),a:this.a}}toRgb(){return{r:this.r,g:this.g,b:this.b,a:this.a}}toRgbString(){return this.a===1?`rgb(${this.r},${this.g},${this.b})`:`rgba(${this.r},${this.g},${this.b},${this.a})`}toString(){return this.toRgbString()}_sc(e,t,n){let r=this.clone();return r[e]=HA(t,n),r}_c(e){return new this.constructor(e)}getMax(){return this._max===void 0&&(this._max=Math.max(this.r,this.g,this.b)),this._max}getMin(){return this._min===void 0&&(this._min=Math.min(this.r,this.g,this.b)),this._min}fromHexString(e){let t=e.replace(`#`,``);function n(e,n){return parseInt(t[e]+t[n||e],16)}t.length<6?(this.r=n(0),this.g=n(1),this.b=n(2),this.a=t[3]?n(3)/255:1):(this.r=n(0,1),this.g=n(2,3),this.b=n(4,5),this.a=t[6]?n(6,7)/255:1)}fromHsl({h:e,s:t,l:n,a:r}){if(this._h=e%360,this._s=t,this._l=n,this.a=typeof r==`number`?r:1,t<=0){let e=zA(n*255);this.r=e,this.g=e,this.b=e}let i=0,a=0,o=0,s=e/60,c=(1-Math.abs(2*n-1))*t,l=c*(1-Math.abs(s%2-1));s>=0&&s<1?(i=c,a=l):s>=1&&s<2?(i=l,a=c):s>=2&&s<3?(a=c,o=l):s>=3&&s<4?(a=l,o=c):s>=4&&s<5?(i=l,o=c):s>=5&&s<6&&(i=c,o=l);let u=n-c/2;this.r=zA((i+u)*255),this.g=zA((a+u)*255),this.b=zA((o+u)*255)}fromHsv({h:e,s:t,v:n,a:r}){this._h=e%360,this._s=t,this._v=n,this.a=typeof r==`number`?r:1;let i=zA(n*255);if(this.r=i,this.g=i,this.b=i,t<=0)return;let a=e/60,o=Math.floor(a),s=a-o,c=zA(n*(1-t)*255),l=zA(n*(1-t*s)*255),u=zA(n*(1-t*(1-s))*255);switch(o){case 0:this.g=u,this.b=c;break;case 1:this.r=l,this.b=c;break;case 2:this.r=c,this.b=u;break;case 3:this.r=c,this.g=l;break;case 4:this.r=u,this.g=c;break;default:this.g=c,this.b=l}}fromHsvString(e){let t=BA(e,VA);this.fromHsv({h:t[0],s:t[1],v:t[2],a:t[3]})}fromHslString(e){let t=BA(e,VA);this.fromHsl({h:t[0],s:t[1],l:t[2],a:t[3]})}fromRgbString(e){let t=BA(e,(e,t)=>t.includes(`%`)?zA(e/100*255):e);this.r=t[0],this.g=t[1],this.b=t[2],this.a=t[3]}},WA=2,GA=.16,Yae=.05,Xae=.05,Zae=.15,KA=5,qA=4,Qae=[{index:7,amount:15},{index:6,amount:25},{index:5,amount:30},{index:5,amount:45},{index:5,amount:65},{index:5,amount:85},{index:4,amount:90},{index:3,amount:95},{index:2,amount:97},{index:1,amount:98}];function JA(e,t,n){let r;return r=Math.round(e.h)>=60&&Math.round(e.h)<=240?n?Math.round(e.h)-WA*t:Math.round(e.h)+WA*t:n?Math.round(e.h)+WA*t:Math.round(e.h)-WA*t,r<0?r+=360:r>=360&&(r-=360),r}function YA(e,t,n){if(e.h===0&&e.s===0)return e.s;let r;return r=n?e.s-GA*t:t===qA?e.s+GA:e.s+Yae*t,r>1&&(r=1),n&&t===KA&&r>.1&&(r=.1),r<.06&&(r=.06),Math.round(r*100)/100}function XA(e,t,n){let r;return r=n?e.v+Xae*t:e.v-Zae*t,r=Math.max(0,Math.min(1,r)),Math.round(r*100)/100}function ZA(e,t={}){let n=[],r=new UA(e),i=r.toHsv();for(let e=KA;e>0;--e){let t=new UA({h:JA(i,e,!0),s:YA(i,e,!0),v:XA(i,e,!0)});n.push(t)}n.push(r);for(let e=1;e<=qA;e+=1){let t=new UA({h:JA(i,e),s:YA(i,e),v:XA(i,e)});n.push(t)}return t.theme===`dark`?Qae.map(({index:e,amount:r})=>new UA(t.backgroundColor||`#141414`).mix(n[e],r).toHexString()):n.map(e=>e.toHexString())}var QA={red:`#F5222D`,volcano:`#FA541C`,orange:`#FA8C16`,gold:`#FAAD14`,yellow:`#FADB14`,lime:`#A0D911`,green:`#52C41A`,cyan:`#13C2C2`,blue:`#1677FF`,geekblue:`#2F54EB`,purple:`#722ED1`,magenta:`#EB2F96`,grey:`#666666`},$A=[`#fff1f0`,`#ffccc7`,`#ffa39e`,`#ff7875`,`#ff4d4f`,`#f5222d`,`#cf1322`,`#a8071a`,`#820014`,`#5c0011`];$A.primary=$A[5];var ej=[`#fff2e8`,`#ffd8bf`,`#ffbb96`,`#ff9c6e`,`#ff7a45`,`#fa541c`,`#d4380d`,`#ad2102`,`#871400`,`#610b00`];ej.primary=ej[5];var tj=[`#fff7e6`,`#ffe7ba`,`#ffd591`,`#ffc069`,`#ffa940`,`#fa8c16`,`#d46b08`,`#ad4e00`,`#873800`,`#612500`];tj.primary=tj[5];var nj=[`#fffbe6`,`#fff1b8`,`#ffe58f`,`#ffd666`,`#ffc53d`,`#faad14`,`#d48806`,`#ad6800`,`#874d00`,`#613400`];nj.primary=nj[5];var rj=[`#feffe6`,`#ffffb8`,`#fffb8f`,`#fff566`,`#ffec3d`,`#fadb14`,`#d4b106`,`#ad8b00`,`#876800`,`#614700`];rj.primary=rj[5];var ij=[`#fcffe6`,`#f4ffb8`,`#eaff8f`,`#d3f261`,`#bae637`,`#a0d911`,`#7cb305`,`#5b8c00`,`#3f6600`,`#254000`];ij.primary=ij[5];var aj=[`#f6ffed`,`#d9f7be`,`#b7eb8f`,`#95de64`,`#73d13d`,`#52c41a`,`#389e0d`,`#237804`,`#135200`,`#092b00`];aj.primary=aj[5];var oj=[`#e6fffb`,`#b5f5ec`,`#87e8de`,`#5cdbd3`,`#36cfc9`,`#13c2c2`,`#08979c`,`#006d75`,`#00474f`,`#002329`];oj.primary=oj[5];var sj=[`#e6f4ff`,`#bae0ff`,`#91caff`,`#69b1ff`,`#4096ff`,`#1677ff`,`#0958d9`,`#003eb3`,`#002c8c`,`#001d66`];sj.primary=sj[5];var cj=[`#f0f5ff`,`#d6e4ff`,`#adc6ff`,`#85a5ff`,`#597ef7`,`#2f54eb`,`#1d39c4`,`#10239e`,`#061178`,`#030852`];cj.primary=cj[5];var lj=[`#f9f0ff`,`#efdbff`,`#d3adf7`,`#b37feb`,`#9254de`,`#722ed1`,`#531dab`,`#391085`,`#22075e`,`#120338`];lj.primary=lj[5];var uj=[`#fff0f6`,`#ffd6e7`,`#ffadd2`,`#ff85c0`,`#f759ab`,`#eb2f96`,`#c41d7f`,`#9e1068`,`#780650`,`#520339`];uj.primary=uj[5];var dj=[`#a6a6a6`,`#999999`,`#8c8c8c`,`#808080`,`#737373`,`#666666`,`#404040`,`#1a1a1a`,`#000000`,`#000000`];dj.primary=dj[5];var fj={red:$A,volcano:ej,orange:tj,gold:nj,yellow:rj,lime:ij,green:aj,cyan:oj,blue:sj,geekblue:cj,purple:lj,magenta:uj,grey:dj},pj=[`#2a1215`,`#431418`,`#58181c`,`#791a1f`,`#a61d24`,`#d32029`,`#e84749`,`#f37370`,`#f89f9a`,`#fac8c3`];pj.primary=pj[5];var mj=[`#2b1611`,`#441d12`,`#592716`,`#7c3118`,`#aa3e19`,`#d84a1b`,`#e87040`,`#f3956a`,`#f8b692`,`#fad4bc`];mj.primary=mj[5];var hj=[`#2b1d11`,`#442a11`,`#593815`,`#7c4a15`,`#aa6215`,`#d87a16`,`#e89a3c`,`#f3b765`,`#f8cf8d`,`#fae3b7`];hj.primary=hj[5];var gj=[`#2b2111`,`#443111`,`#594214`,`#7c5914`,`#aa7714`,`#d89614`,`#e8b339`,`#f3cc62`,`#f8df8b`,`#faedb5`];gj.primary=gj[5];var _j=[`#2b2611`,`#443b11`,`#595014`,`#7c6e14`,`#aa9514`,`#d8bd14`,`#e8d639`,`#f3ea62`,`#f8f48b`,`#fafab5`];_j.primary=_j[5];var vj=[`#1f2611`,`#2e3c10`,`#3e4f13`,`#536d13`,`#6f9412`,`#8bbb11`,`#a9d134`,`#c9e75d`,`#e4f88b`,`#f0fab5`];vj.primary=vj[5];var yj=[`#162312`,`#1d3712`,`#274916`,`#306317`,`#3c8618`,`#49aa19`,`#6abe39`,`#8fd460`,`#b2e58b`,`#d5f2bb`];yj.primary=yj[5];var bj=[`#112123`,`#113536`,`#144848`,`#146262`,`#138585`,`#13a8a8`,`#33bcb7`,`#58d1c9`,`#84e2d8`,`#b2f1e8`];bj.primary=bj[5];var xj=[`#111a2c`,`#112545`,`#15325b`,`#15417e`,`#1554ad`,`#1668dc`,`#3c89e8`,`#65a9f3`,`#8dc5f8`,`#b7dcfa`];xj.primary=xj[5];var Sj=[`#131629`,`#161d40`,`#1c2755`,`#203175`,`#263ea0`,`#2b4acb`,`#5273e0`,`#7f9ef3`,`#a8c1f8`,`#d2e0fa`];Sj.primary=Sj[5];var Cj=[`#1a1325`,`#24163a`,`#301c4d`,`#3e2069`,`#51258f`,`#642ab5`,`#854eca`,`#ab7ae0`,`#cda8f0`,`#ebd7fa`];Cj.primary=Cj[5];var wj=[`#291321`,`#40162f`,`#551c3b`,`#75204f`,`#a02669`,`#cb2b83`,`#e0529c`,`#f37fb7`,`#f8a8cc`,`#fad2e3`];wj.primary=wj[5];var Tj=[`#151515`,`#1f1f1f`,`#2d2d2d`,`#393939`,`#494949`,`#5a5a5a`,`#6a6a6a`,`#7b7b7b`,`#888888`,`#969696`];Tj.primary=Tj[5];function Ej(e,{generateColorPalettes:t,generateNeutralColorPalettes:n}){let{colorSuccess:r,colorWarning:i,colorError:a,colorInfo:o,colorPrimary:s,colorBgBase:c,colorTextBase:l}=e,u=t(s),d=t(r),f=t(i),p=t(a),m=t(o),h=n(c,l),g=t(e.colorLink||e.colorInfo),_=new UA(p[1]).mix(new UA(p[3]),50).toHexString();return{...h,colorPrimaryBg:u[1],colorPrimaryBgHover:u[2],colorPrimaryBorder:u[3],colorPrimaryBorderHover:u[4],colorPrimaryHover:u[5],colorPrimary:u[6],colorPrimaryActive:u[7],colorPrimaryTextHover:u[8],colorPrimaryText:u[9],colorPrimaryTextActive:u[10],colorSuccessBg:d[1],colorSuccessBgHover:d[2],colorSuccessBorder:d[3],colorSuccessBorderHover:d[4],colorSuccessHover:d[4],colorSuccess:d[6],colorSuccessActive:d[7],colorSuccessTextHover:d[8],colorSuccessText:d[9],colorSuccessTextActive:d[10],colorErrorBg:p[1],colorErrorBgHover:p[2],colorErrorBgFilledHover:_,colorErrorBgActive:p[3],colorErrorBorder:p[3],colorErrorBorderHover:p[4],colorErrorHover:p[5],colorError:p[6],colorErrorActive:p[7],colorErrorTextHover:p[8],colorErrorText:p[9],colorErrorTextActive:p[10],colorWarningBg:f[1],colorWarningBgHover:f[2],colorWarningBorder:f[3],colorWarningBorderHover:f[4],colorWarningHover:f[4],colorWarning:f[6],colorWarningActive:f[7],colorWarningTextHover:f[8],colorWarningText:f[9],colorWarningTextActive:f[10],colorInfoBg:m[1],colorInfoBgHover:m[2],colorInfoBorder:m[3],colorInfoBorderHover:m[4],colorInfoHover:m[4],colorInfo:m[6],colorInfoActive:m[7],colorInfoTextHover:m[8],colorInfoText:m[9],colorInfoTextActive:m[10],colorLinkHover:g[4],colorLink:g[6],colorLinkActive:g[7],colorBgMask:new UA(`#000`).setA(.45).toRgbString(),colorWhite:`#fff`}}var Dj=e=>{let t=e,n=e,r=e,i=e;return e<6&&e>=5?t=e+1:e<16&&e>=6?t=e+2:e>=16&&(t=16),e<7&&e>=5?n=4:e<8&&e>=7?n=5:e<14&&e>=8?n=6:e<16&&e>=14?n=7:e>=16&&(n=8),e<6&&e>=2?r=1:e>=6&&(r=2),e>4&&e<8?i=4:e>=8&&(i=6),{borderRadius:e,borderRadiusXS:r,borderRadiusSM:n,borderRadiusLG:t,borderRadiusOuter:i}};function Oj(e){let{motionUnit:t,motionBase:n,borderRadius:r,lineWidth:i}=e;return{motionDurationFast:`${(n+t).toFixed(1)}s`,motionDurationMid:`${(n+t*2).toFixed(1)}s`,motionDurationSlow:`${(n+t*3).toFixed(1)}s`,lineWidthBold:i+1,...Dj(r)}}var kj=e=>{let{controlHeight:t}=e;return{controlHeightSM:t"
+      },
+      {
+        "offset": 929578,
+        "text": "*100),n=xL(e.b*100),r=xL(e.h),i=e.a,a=`hsb(${r}, ${t}%, ${n}%)`,o=`hsba(${r}, ${t}%, ${n}%, ${i.toFixed",
+        "context": "`hsv`):e},SL=class extends UA{constructor(e){super(Xoe(e))}toHsbString(){let e=this.toHsb(),t=xL(e.s*100),n=xL(e.b*100),r=xL(e.h),i=e.a,a=`hsb(${r}, ${t}%, ${n}%)`,o=`hsba(${r}, ${t}%, ${n}%, ${i.toFixed(i===0?0:2)})`;return i===1?a:o}toHsb(){let{v:e,...t}=this.toHsv();return{...t,b:e,a:this.a}}};(e=>e instanceof SL?e:new SL(e))(`#1677ff`);var Zoe=(e,t)=>e?.replace(/[^\\w/]/g,``).s"
+      },
+      {
+        "offset": 1795200,
+        "text": ".toFixed(2)+`%`",
+        "context": "0`:`text-gray-700`,mme=e=>e==null?`—`:`$`+parseFloat(e.toFixed(4)),hme=e=>e==null?`—`:(e>0?`+`:``)+e.toFixed(2)+`%`,gme=e=>e==null?`—`:(e*100).toFixed(4)+`%`,_me=e=>e==null?`—`:e>=1e9?(e/1e9).toFixed(2)+`B`:e>=1e6?(e/1e6).toFixed(2)+`M`:e>=1e3?(e/1e3).toFixed(2)+`K`:e.toFixed(2),P5=e=>e==null?`"
+      },
+      {
+        "offset": 1795237,
+        "text": "*100).toFixed",
+        "context": ":`$`+parseFloat(e.toFixed(4)),hme=e=>e==null?`—`:(e>0?`+`:``)+e.toFixed(2)+`%`,gme=e=>e==null?`—`:(e*100).toFixed(4)+`%`,_me=e=>e==null?`—`:e>=1e9?(e/1e9).toFixed(2)+`B`:e>=1e6?(e/1e6).toFixed(2)+`M`:e>=1e3?(e/1e3).toFixed(2)+`K`:e.toFixed(2),P5=e=>e==null?`—`:(e*100).toFixed(2)+`%`;function "
+      },
+      {
+        "offset": 1795400,
+        "text": "*100).toFixed",
+        "context": "2)+`B`:e>=1e6?(e/1e6).toFixed(2)+`M`:e>=1e3?(e/1e3).toFixed(2)+`K`:e.toFixed(2),P5=e=>e==null?`—`:(e*100).toFixed(2)+`%`;function F5({label:e,value:t,className:n}){return(0,X.jsxs)(`div`,{children:[(0,X.jsx)(`div`,{className:`text-gray-400 text-[11px] leading-tight`,children:e}),(0,X.jsx)(`di"
+      },
+      {
+        "offset": 1819475,
+        "text": "*100).toFixed",
+        "context": "idth:130}})]}),(0,X.jsx)(QK,{onClick:e.resetFilter,children:`重置`})]})}var W5=(e,t=2)=>e==null?`—`:(e*100).toFixed(t)+`%`,Eme=e=>e==null?`—`:e>=1e9?(e/1e9).toFixed(2)+`B`:e>=1e6?(e/1e6).toFixed(2)+`M`:e>=1e3?(e/1e3).toFixed(2)+`K`:e.toFixed(2),Dme=e=>e==null?`—`:(e>0?`+`:``)+e.toFixed(2)+`%`,O"
+      },
+      {
+        "offset": 1819651,
+        "text": ".toFixed(2)+`%`",
+        "context": "?(e/1e6).toFixed(2)+`M`:e>=1e3?(e/1e3).toFixed(2)+`K`:e.toFixed(2),Dme=e=>e==null?`—`:(e>0?`+`:``)+e.toFixed(2)+`%`,Ome=e=>e==null?`—`:`$`+parseFloat(e.toFixed(4)),G5=e=>e===null?`text-gray-400`:e>1?`text-red-600 font-semibold`:e<1?`text-green-600 font-semibold`:`text-gray-700`,kme=(0,X.jsx)(`s"
+      },
+      {
+        "offset": 1821082,
+        "text": "*100).toFixed",
+        "context": "n`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:e===null?`—`:(e*100).toFixed(4)+`%`})},{title:`总OI(U)`,dataIndex:`openInterestValue`,width:95,align:`right`,sorter:(e,t)=>(e.openInterestValue??0)-(t.openInterestValue??0),render:e=>Eme(e)},{title:K5(`多空比`),d"
+      },
+      {
+        "offset": 1826728,
+        "text": "*100).toFixed",
+        "context": "le:{width:110}})]}),(0,X.jsx)(QK,{onClick:e.resetFilter,children:`重置`})]})}var Pme=e=>e==null?`—`:(e*100).toFixed(4)+`%`,Fme=e=>e==null?`—`:`$`+parseFloat(e.toFixed(4));function Ime(){let e=xE(Mme),{loading:t,rows:n,filteredRows:r,updatedAt:i,filter:a}=e.useSnapshot();return(0,X.jsxs)(VT,{loa"
+      },
+      {
+        "offset": 1834054,
+        "text": "*100).toFixed",
+        "context": "iceChange1h`,`priceToEntry`,`fundingRate`]),Z5=(e,t=2)=>typeof e==`number`&&Number.isFinite(e)?`${(e*100).toFixed(t)}%`:`—`;function Q5(e,t){return t===null?`缺少数据`:typeof t==`string`?{TRADING:`交易中`,PERPETUAL:`永续`,binance:`Binance`}[t]??t:Vme.has(e)?Z5(t,e===`fundingRate`?4:2):e===`listingAge`"
+      },
+      {
+        "offset": 1835917,
+        "text": "*100).toFixed",
+        "context": ":`聪明钱共振`,color:`purple`,border:`border-l-purple-400`}},Gme=e=>typeof e==`number`?`${e>=0?`+`:``}${(e*100).toFixed(1)}%`:null,e7=e=>typeof e==`number`?e>=1e8?(e/1e8).toFixed(2)+` 亿`:e>=1e4?(e/1e4).toFixed(2)+` 万`:e.toFixed(0):null,t7=e=>{let t=parseFloat(e);return isNaN(t)?e:(t*100).toFixed(2)"
+      },
+      {
+        "offset": 1836094,
+        "text": "*100).toFixed",
+        "context": " 亿`:e>=1e4?(e/1e4).toFixed(2)+` 万`:e.toFixed(0):null,t7=e=>{let t=parseFloat(e);return isNaN(t)?e:(t*100).toFixed(2)+`%`};function Kme({payload:e}){let t=(e,t)=>{let n=Gme(e);if(!n)return null;let r=e>=0;return(0,X.jsxs)(`span`,{className:r?`text-red-600 font-semibold`:`text-green-600 font-se"
+      },
+      {
+        "offset": 1846183,
+        "text": "*100).toFixed",
+        "context": "0`:`text-red-600`}`,children:[d.candle.close>=d.candle.open?`+`:``,((d.candle.close/d.candle.open-1)*100).toFixed(2),`%`]})]})]})]}):(0,X.jsx)(DU,{description:`没有可用K线，请确认网络可访问Binance`})]})}function i7({className:e,useViewportHeight:t=!0,topOffset:n=`auto`,bottomOffset:r=0,headerSelector:i=`he"
+      },
+      {
+        "offset": 1902478,
+        "text": "*100).toFixed",
+        "context": "ctionDigits:t}).format(e)}function w7(e){return e===null||!Number.isFinite(e)?`—`:`${e>0?`+`:``}${(e*100).toFixed(4)}%`}function T7({leg:e,missingLabel:t,closing:n,onClose:r,onForceClose:i}){return e?(0,X.jsxs)(`div`,{className:`min-w-52 rounded-md border border-gray-200 bg-white px-3 py-2 te"
+      },
+      {
+        "offset": 1910896,
+        "text": "*100).toFixed",
+        "context": " tabular-nums`,children:[(0,X.jsxs)(`div`,{children:[`对冲率：`,t.hedgeRatio===null?`—`:`${(t.hedgeRatio*100).toFixed(2)}%`]}),(0,X.jsxs)(`div`,{className:`mt-1 text-gray-500`,children:[`数量差：`,C7(t.quantityDifference)]})]})},{title:`合计`,key:`summary`,width:170,render:(e,t)=>(0,X.jsxs)(`div`,{clas"
+      }
+    ]
+  },
+  "router_sections": {
+    "match_count_capped": 0,
+    "items": []
+  }
+}

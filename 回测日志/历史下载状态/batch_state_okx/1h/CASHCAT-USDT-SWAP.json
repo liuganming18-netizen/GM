@@ -1,0 +1,27 @@
+{
+  "inst_id": "CASHCAT-USDT-SWAP",
+  "bar": "1h",
+  "status": "done",
+  "rows": 769,
+  "pages": 8,
+  "errors": 0,
+  "window": [
+    "2026-09-03T03:30:00Z",
+    "2026-10-05T04:58:23Z"
+  ],
+  "source_id": 22713,
+  "api_call_ids": [
+    6521,
+    6522,
+    6524,
+    6525,
+    6526,
+    6527,
+    6528,
+    6529
+  ],
+  "raw_path": "raw/okx/1h/CASHCAT-USDT-SWAP.json",
+  "taker_buy": "空串（欧易无 taker 字段，B 策略数据不足）",
+  "trade_count": "0 占位（欧易无该字段，非真值）",
+  "updated_utc": "2026-10-05T05:19:05Z"
+}

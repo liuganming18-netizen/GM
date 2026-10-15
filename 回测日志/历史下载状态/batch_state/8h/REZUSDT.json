@@ -1,0 +1,636 @@
+{
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-04.zip",
+  "bytes": 396,
+  "sha256": "a01d51f61264745d7f131f5692f54694718ad1874afd7b227f00bd3c20e3146f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46002,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 46002,
+  "rows": 2
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-05.zip",
+  "bytes": 4998,
+  "sha256": "ae9b46bd3e68b9fbe3cf2b59420e65778acccb3176a2ac90c418bb861c02705e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46003,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46003,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-06.zip",
+  "bytes": 4841,
+  "sha256": "a0618837d9a8cffcd314b78e3edab83cad80b2a9185faa3d643caa9d006d647d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46004,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 46004,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-07.zip",
+  "bytes": 5141,
+  "sha256": "c3140c1adfd3e96144a9f3e31f33910396d9e319ce0e8720c8f5f4ebf690f859",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46005,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46005,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-08.zip",
+  "bytes": 5128,
+  "sha256": "8d308beae160c276a933058a75ad11c0331a456aebc62abe419cde247ca3b8fc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46006,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46006,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-09.zip",
+  "bytes": 4860,
+  "sha256": "1230472a21e9a3f144b9adcedd1ab2a7c49df15f166e5f18fa3ed3b51f33b018",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46007,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 46007,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-10.zip",
+  "bytes": 5012,
+  "sha256": "8cc69e67bc3ddd83cc7ed97d8b8ca8b5b25f5495e7af775144edc2540f67d766",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46008,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46008,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-11.zip",
+  "bytes": 4888,
+  "sha256": "3ae46ba07ba31ffdd1ce5a369f2fe733482dd087df18f5b625aaf37821d0222b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46009,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 46009,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2024-12.zip",
+  "bytes": 5061,
+  "sha256": "b9c26e1b7923a7617a609bf24e760095a4fa27a5db1ea286411de01fe09667a7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46010,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46010,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-01.zip",
+  "bytes": 4949,
+  "sha256": "48fe9e645c8c904c95e20fbe5e0fa1410354ee9501b21f29c649c7e4dea3e938",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46011,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46011,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-02.zip",
+  "bytes": 4489,
+  "sha256": "dae924edf1e74f02764aff0c7d4bdb562005e8c797f2fd4a98b65c373a6aaae0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46012,
+   "新增版本数": 84,
+   "状态": "已入库"
+  },
+  "source_id": 46012,
+  "rows": 84
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-03.zip",
+  "bytes": 5108,
+  "sha256": "ba2a26449c39740ee8c0f7e323414233e27ac470bef938c62a91d344a7fe5f4d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46013,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46013,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-04.zip",
+  "bytes": 4901,
+  "sha256": "6dc12aa751ee1e82fdf1eb90d0185275c941fa710d1962ec1641f0bc9202a91b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46014,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 46014,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-05.zip",
+  "bytes": 5027,
+  "sha256": "5ab3553aea5999a5e4d9a282299cd9ce515928d07f037709b78a19807b549cf5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46015,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46015,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-06.zip",
+  "bytes": 4706,
+  "sha256": "3dc3bc976023ca53f2acdd320f313bdb6da820d3bbb5822a3c1e7be36ad455b1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46016,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 46016,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-07.zip",
+  "bytes": 4986,
+  "sha256": "58ef82d42a0ff8f9e95d415d8d5125866d687db58eb481baf2f43bf3a8d27536",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46017,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46017,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-08.zip",
+  "bytes": 4923,
+  "sha256": "5f1fa4f55ec9d5e351ef1c85a10bb2331e810dd40325916b3d0bb7697d934a83",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46018,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46018,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-09.zip",
+  "bytes": 4675,
+  "sha256": "f169c55eed76a8f314bd86df75956c264856da7a24f0de71c24c974e9f6be2a7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46019,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 46019,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-10.zip",
+  "bytes": 4938,
+  "sha256": "f37625bb937ac21bfcc0027703104863645b1fc36d9a5f4da15bdaed04170f53",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46020,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46020,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-11.zip",
+  "bytes": 4868,
+  "sha256": "ab81aba4179101c8e2d5feb0d9c950e74d6d0062bcd2302eed0b794724fb37d6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46021,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 46021,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2025-12.zip",
+  "bytes": 5018,
+  "sha256": "96731805de0cbc995d3e47b96c790ba41e513dcd9292c1bc55d66d76273b1f75",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46022,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46022,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-01.zip",
+  "bytes": 4986,
+  "sha256": "8e1274db2348bd5210f8d1316de4487708ebc4382043e16c8889b7cfeb79b955",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46023,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46023,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-02.zip",
+  "bytes": 4483,
+  "sha256": "ce5d5dfa7d4b846bcd2fd6f93ee4c36cc36ef4e18f072e87edebb72884be1ccb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46024,
+   "新增版本数": 84,
+   "状态": "已入库"
+  },
+  "source_id": 46024,
+  "rows": 84
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-03.zip",
+  "bytes": 4962,
+  "sha256": "ca445cab3493dccfa4f8e41911a89f33a05cae5e64295c71323c2657f7502a36",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46025,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46025,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-04.zip",
+  "bytes": 4840,
+  "sha256": "04ecbe3191f248755004921a7855612b2fb9e15e3e52ee4a0801c71d1cc37ea0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46026,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 46026,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-05.zip",
+  "bytes": 5052,
+  "sha256": "a455e7e58aac58882833cff0842d89d45f363225db940be45ffa47a43161207e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46027,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46027,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-06.zip",
+  "bytes": 4743,
+  "sha256": "4f08ac8f83297524d3cc45e02508918aba933cb64b27e4c86b61b36b6a7930f5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46028,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 46028,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-07.zip",
+  "bytes": 4872,
+  "sha256": "1136510136101309de264ca5b1846b3fae864dbe932e704d996a1204d7379eb2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46029,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46029,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-08.zip",
+  "bytes": 4861,
+  "sha256": "9966d460b4eaacf82762bcee254225b4f3671c0c16cd5cd1b564dcfb8764dd13",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46030,
+   "新增版本数": 93,
+   "状态": "已入库"
+  },
+  "source_id": 46030,
+  "rows": 93
+ },
+ "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/REZUSDT/8h/REZUSDT-8h-2026-09.zip",
+  "bytes": 4957,
+  "sha256": "f3c110b682a3534a5fd7e51c2a1d36f294a11d924ff7c869449e925bf266c27e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46031,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 46031,
+  "rows": 90
+ },
+ "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-01.zip",
+  "bytes": 451,
+  "sha256": "7fc6bae06bc7e5adac19b59a617af1f4490693eeed540bd895f56ebb6b6224d5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 45999,
+   "新增版本数": 3,
+   "状态": "已入库"
+  },
+  "source_id": 45999,
+  "rows": 3
+ },
+ "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-02.zip",
+  "bytes": 452,
+  "sha256": "7fe2e1fb05effbcb92c48bcde3662bec5835f094ff3c57273107edf75350caff",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46000,
+   "新增版本数": 3,
+   "状态": "已入库"
+  },
+  "source_id": 46000,
+  "rows": 3
+ },
+ "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-04.zip",
+  "bytes": 451,
+  "sha256": "16da34fcac7484b19714d090d64dcc0f168f0203d43c933248742839c6e5edfe",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 51868,
+   "新增版本数": 3,
+   "状态": "已入库"
+  },
+  "source_id": 51868,
+  "rows": 3
+ },
+ "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-03.zip",
+  "bytes": 449,
+  "sha256": "98d9039c79c7e2b907ba4298ba5957cdcbd6c47c01014bb327aad419483a36d9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 46001,
+   "新增版本数": 3,
+   "状态": "已入库"
+  },
+  "source_id": 46001,
+  "rows": 3
+ },
+ "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-05.zip",
+  "bytes": 453,
+  "sha256": "3b74b80a3b35a1d99e6a857e3cbf38dc396cd6b0d5157d00d4885dc424d974fe",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 294021,
+   "新增版本数": 3,
+   "状态": "已入库"
+  },
+  "source_id": 294021,
+  "rows": 3
+ },
+ "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-06.zip",
+  "bytes": 448,
+  "sha256": "1a519291122258a0614b7196161bf234784aadf6dee7a0b74eaf7e0eff0ef54d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1613564,
+   "新增版本数": 3,
+   "状态": "已入库"
+  },
+  "source_id": 1613564,
+  "rows": 3
+ },
+ "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-07.zip",
+  "bytes": 449,
+  "sha256": "69e6a80d453756e92f4dc5472902c4ea22b228de9a1d7aad26db3cae16507e13",
+  "checksum_ok": true,
+  "size_bytes": 449,
+  "fetched_at": "2026-10-08T07:31:28Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/8h/REZUSDT/REZUSDT-8h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/REZUSDT/8h/REZUSDT-8h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1804766,
+   "新增版本数": 3,
+   "状态": "已入库"
+  },
+  "source_id": 1804766,
+  "rows": 3,
+  "imported_at": "2026-10-08T07:34:28Z"
+ }
+}

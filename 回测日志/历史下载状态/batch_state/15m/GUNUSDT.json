@@ -1,0 +1,476 @@
+{
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-04.zip",
+  "bytes": 127183,
+  "sha256": "62f633db9ea1c2b9bd9be8fa701aa1fcc86e02b0a95007f8d48a139ea54705cb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120753,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 120753,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-03.zip",
+  "bytes": 2386,
+  "sha256": "127fc419bdc54f9b7501d07857d7756625d6e8f38a56b6f5b914aec831ac8d4d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120752,
+   "新增版本数": 44,
+   "状态": "已入库"
+  },
+  "source_id": 120752,
+  "rows": 44
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-05.zip",
+  "bytes": 129150,
+  "sha256": "e79fe366c817fee2c6e1ea50c9f9ad5f54731268e3e6e3b926e4479a11ac05dd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120754,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 120754,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-06.zip",
+  "bytes": 119977,
+  "sha256": "775596a731f6d1cc71546a6debb1f5e571071785df017a656690b43f3e0323fd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120755,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 120755,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-07.zip",
+  "bytes": 126839,
+  "sha256": "058c97a02ee0bcfc6d31546017828a21b2fbc525588ca366cdc5863fe3509911",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120756,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 120756,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-08.zip",
+  "bytes": 121833,
+  "sha256": "b5e86175b31b56343f21e44c0934283cb582e9afd4f94dbd157fdc65ac33c859",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120757,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 120757,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-09.zip",
+  "bytes": 116111,
+  "sha256": "007c449f75e2b00298447e7c2c4ba8118de5afa5395e1abb2570519a80b26fa0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120758,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 120758,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-10.zip",
+  "bytes": 118400,
+  "sha256": "e570a941e48306d0beb1ac288c2c39b2db91102cf1650175affbdf88f4e52bf1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120759,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 120759,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-11.zip",
+  "bytes": 112204,
+  "sha256": "d5dd22e8234ed7808b9d1aabd083d70880cd3f82829caefdbdb6569e63e325ee",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120760,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 120760,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2025-12.zip",
+  "bytes": 118111,
+  "sha256": "ae0992bc20c32a2603b30680f1f0dd7a0e1fbad9d8e23f7c35713787186bde85",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120761,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 120761,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-01.zip",
+  "bytes": 129740,
+  "sha256": "c3c1f898ef44aaceb1dda2184efc1211220d3cee0cba56cfd475f8e81987dfaf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120762,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 120762,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-02.zip",
+  "bytes": 112242,
+  "sha256": "6f21ad440ea2f3ef5d416f6b796c34a86825e4f2bc5371bd3e0841714578f516",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120763,
+   "新增版本数": 2688,
+   "状态": "已入库"
+  },
+  "source_id": 120763,
+  "rows": 2688
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-03.zip",
+  "bytes": 122805,
+  "sha256": "5b4f7ea1b3115d59669daaae46cb5678c1fe2c227ae7e2a459d2ff9c96d29af7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120764,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 120764,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-04.zip",
+  "bytes": 118508,
+  "sha256": "d9c3f51e9d589080dd07c02632a418cb37b8dc12b1db2b4cebd5896cb7bace5b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120765,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 120765,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-05.zip",
+  "bytes": 118154,
+  "sha256": "09d726d66e86c6076a4f48a8c89b6800a06902ee27fa936d103df5b1fd78dc02",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120766,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 120766,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-06.zip",
+  "bytes": 123040,
+  "sha256": "2efab9236180658fbc0c79af66ea38878747502a7f644e9c97dc37faa1d5dac5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120767,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 120767,
+  "rows": 2880
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-07.zip",
+  "bytes": 124145,
+  "sha256": "61d6122a29a1909cdbdac6772623c80cd457c9235d670b4fe24816950b4a3a6f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120768,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 120768,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-08.zip",
+  "bytes": 123885,
+  "sha256": "c795f1b4ee169aece899c5604d7674963b3b4bc25c52bcfb61794d1120076bad",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120769,
+   "新增版本数": 2976,
+   "状态": "已入库"
+  },
+  "source_id": 120769,
+  "rows": 2976
+ },
+ "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/GUNUSDT/15m/GUNUSDT-15m-2026-09.zip",
+  "bytes": 117743,
+  "sha256": "d1bbb0fb0a6545e205870761c846fd1b43f30ff7d0abe1f4eaccf2d4a7c23d86",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120770,
+   "新增版本数": 2880,
+   "状态": "已入库"
+  },
+  "source_id": 120770,
+  "rows": 2880
+ },
+ "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-01.zip",
+  "bytes": 4269,
+  "sha256": "d4153aac28cea6c126bf5ca6f97ddbd22fd3ed2f2fbb8586d7699da4fbd80bdb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120748,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 120748,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-02.zip",
+  "bytes": 4516,
+  "sha256": "e2724d3a38fbd0a50d678156603cbc8c7aeb916a889c506300465a460ff16f9f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120749,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 120749,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-03.zip",
+  "bytes": 4372,
+  "sha256": "80a8644c42b5abe44f590f8a7267a7f625bdc292c485318dd8967f2971ada47c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120750,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 120750,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-04.zip",
+  "bytes": 4459,
+  "sha256": "4788a54f816c9196d74082efc519200ed1d3784804800b35bc024ef287b7078a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 120751,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 120751,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-05.zip",
+  "bytes": 4452,
+  "sha256": "6a3b544db2e2afeaefd02dbec14ea7e93468d3ed49749ffb11a18c531ed6dd68",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 364577,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 364577,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-06.zip",
+  "bytes": 4305,
+  "sha256": "47b8f97d5eab73225fc9702abd732215d2388d6ec6e917b626432b22f016050d",
+  "checksum_ok": true,
+  "size_bytes": 4305,
+  "fetched_at": "2026-10-07T20:38:35Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/15m/GUNUSDT/GUNUSDT-15m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 4073291,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 4073291,
+  "rows": 96,
+  "imported_at": "2026-10-10T14:36:47Z"
+ },
+ "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-07.zip",
+  "bytes": 4324,
+  "sha256": "8f2a9a8a89f1a850701bf5168dc1f88f5eafbd4e9642354c34867639f9916c7b",
+  "checksum_ok": true,
+  "size_bytes": 4324,
+  "fetched_at": "2026-10-09T14:45:10Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/15m/GUNUSDT/GUNUSDT-15m-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 4073292,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 4073292,
+  "rows": 96,
+  "imported_at": "2026-10-10T14:36:47Z"
+ },
+ "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-08.zip": {
+  "key": "data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-08.zip",
+  "kind": "daily",
+  "period": "2026-10-08",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-08.zip",
+  "bytes": 4347,
+  "sha256": "3e271301d1df19ecb44410cf294aa416b29a3a7cd4ad6a5e4b56b5843edb1fe8",
+  "checksum_ok": true,
+  "size_bytes": 4347,
+  "fetched_at": "2026-10-09T14:45:11Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/15m/GUNUSDT/GUNUSDT-15m-2026-10-08.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/GUNUSDT/15m/GUNUSDT-15m-2026-10-08.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 4073293,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 4073293,
+  "rows": 96,
+  "imported_at": "2026-10-10T14:36:47Z"
+ }
+}

@@ -1,0 +1,37 @@
+{
+  "round": {
+    "id": 4199,
+    "started_at": 1791387144992,
+    "finished_at": 1791387901542,
+    "symbols_ok": 518,
+    "symbols_failed": 10
+  },
+  "coverage": {
+    "pool": 528,
+    "latest_has_row": 528,
+    "latest_has_usd": 518,
+    "usd_fresh_le20min": 513,
+    "usd_stale_gt20min": 5,
+    "row_without_usd": 10,
+    "pool_missing_row": 0,
+    "sample_usd": [
+      "RONINUSDT",
+      "牛来USDT",
+      "RUNEUSDT",
+      "MAGMAUSDT",
+      "SLXUSDT",
+      "SPKUSDT"
+    ],
+    "sample_no_usd": [
+      "STOUSDT",
+      "SAHARAUSDT",
+      "LINKUSDT",
+      "KERNELUSDT",
+      "WALUSDT",
+      "TRUMPUSDT"
+    ],
+    "sample_missing": [],
+    "now_ms": 1791387918644
+  },
+  "waited_s": 620.6
+}

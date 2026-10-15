@@ -1,0 +1,58 @@
+﻿类别,组号,项,文件数/说明
+①目标原有,数据/研究输入/WyckoffMaster,9467,28410896384字节
+①目标原有,数据/研究输入/WyckoffMaster_v31,35036,8569196544字节
+②本任务新增,G-RESTGAP,0,df消耗0.0MiB
+②本任务新增,G-POOL,0,df消耗0.0MiB
+②本任务新增,G-LOGS,0,df消耗0.0MiB
+②本任务新增,G-STATE-OKX,0,df消耗0.0MiB
+②本任务新增,G-STATE,0,df消耗0.0MiB
+②本任务新增,G-CATALOG,0,df消耗0.0MiB
+②本任务新增,G-OISTATE,0,df消耗0.2MiB
+②本任务新增,G-SRC-PROV,0,df消耗0.2MiB
+②本任务新增,G-RAW-1d,0,df消耗0.1MiB
+②本任务新增,G-RAW-12h,0,df消耗0.2MiB
+②本任务新增,G-RAW-8h,614,df消耗61.7MiB
+②本任务新增,G-RAW-4h,614,df消耗84.7MiB
+②本任务新增,G-RAW-1h,614,df消耗60.6MiB
+②本任务新增,G-RAW-30m,614,df消耗51.4MiB
+②本任务新增,G-RAW-15m,634,df消耗60.1MiB
+②本任务新增,G-RAW-5m,610,df消耗125.4MiB
+②本任务新增,G-RAW-OKX,0,df消耗0.0MiB
+②本任务新增,G-OI-COLD,525,df消耗18.5MiB
+②本任务新增,G-K-CANDLES,545,df消耗91.6MiB
+②本任务新增,G-K-HEADS,545,df消耗59.0MiB
+②本任务新增,G-RAW-OI,526,df消耗763.1MiB
+③重复跳过,G-RESTGAP,1,允许1
+③重复跳过,G-POOL,1,允许1
+③重复跳过,G-LOGS,1,允许1
+③重复跳过,G-STATE-OKX,1,允许1
+③重复跳过,G-STATE,1,允许1
+③重复跳过,G-CATALOG,5,允许5
+③重复跳过,G-OISTATE,526,允许526
+③重复跳过,G-SRC-PROV,549,允许549
+③重复跳过,G-RAW-1d,614,允许614
+③重复跳过,G-RAW-12h,614,允许614
+③重复跳过,G-RAW-8h,0,允许614
+③重复跳过,G-RAW-4h,0,允许614
+③重复跳过,G-RAW-1h,0,允许614
+③重复跳过,G-RAW-30m,0,允许614
+③重复跳过,G-RAW-15m,0,允许634
+③重复跳过,G-RAW-5m,0,允许610
+③重复跳过,G-RAW-OKX,112,允许112
+③重复跳过,G-OI-COLD,0,允许525
+③重复跳过,G-K-CANDLES,0,允许545
+③重复跳过,G-K-HEADS,0,允许545
+③重复跳过,G-RAW-OI,0,允许526
+④未迁/排除,G-SRC-PROV,265,1331文件 0.0071GiB
+④未迁/排除,G-RAW-1d,2,184文件 0.0001GiB
+④未迁/排除,G-RAW-12h,2,184文件 0.0002GiB
+④未迁/排除,G-RAW-8h,2,184文件 0.0003GiB
+④未迁/排除,G-RAW-4h,2,184文件 0.0006GiB
+④未迁/排除,G-RAW-1h,2,184文件 0.0021GiB
+④未迁/排除,G-RAW-30m,2,180文件 0.0041GiB
+④未迁/排除,G-RAW-15m,2,236文件 0.0078GiB
+④未迁/排除,G-RAW-5m,2,180文件 0.021GiB
+④未迁/排除,G-K-CANDLES,2,53文件 0.0133GiB
+④未迁/排除,G-K-HEADS,2,53文件 0.0014GiB
+④误拷已移除,"数据/raw/{1d,12h}",368,指数副本 ALLUSDT/BTCDOMUSDT
+④误拷已移除,数据/archive/parquet/sources,1331,指数/非白名单OKX

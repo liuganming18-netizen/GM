@@ -1,0 +1,806 @@
+{
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-06.zip",
+  "bytes": 447,
+  "sha256": "b3d345071f0857165b65b707dcc8ae74b38dec86ddd7a071c8814d4caee0c469",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26260,
+   "新增版本数": 3,
+   "状态": "已入库"
+  },
+  "source_id": 26260,
+  "rows": 3
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-07.zip",
+  "bytes": 3410,
+  "sha256": "cceb76eff9085cbb375b933ca3da195d42a9f004717685ab803fe4c9f05bcf7c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26261,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26261,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-08.zip",
+  "bytes": 3298,
+  "sha256": "0ff4bd09378eb54cc6be8929e843324fe6785dbd1789b21f0530708a80d0a0ba",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26262,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26262,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-09.zip",
+  "bytes": 3208,
+  "sha256": "2a44adf7b038181064598c62a2845a387f036f3a2f06fb02b5c3bb9c2911bfc1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26263,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26263,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-10.zip",
+  "bytes": 3273,
+  "sha256": "b06f5254581c2ad6472377cb800e4abded2ff43e04f55e14a1b2a4b79830ebc9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26264,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26264,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-11.zip",
+  "bytes": 3252,
+  "sha256": "d7c82068835afd35d58144c1426b22d4e42566c1241140016b1e44f8a9a90212",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26265,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26265,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2023-12.zip",
+  "bytes": 3400,
+  "sha256": "8a6c4923a38a3dbfa7d426e3c74e93b57f1093fcb9b9c5fa450e25830bd70f7d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26266,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26266,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-01.zip",
+  "bytes": 3493,
+  "sha256": "0cb0e21654d3004d58a837f6d3400bf895ab4460b7c4658940f03f5841e8a135",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26267,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26267,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-02.zip",
+  "bytes": 3222,
+  "sha256": "960ca5e2a6d4ef3fc66051562e607f9e3251a8c5fbc0d3576e8d76093d39ea5d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26268,
+   "新增版本数": 58,
+   "状态": "已入库"
+  },
+  "source_id": 26268,
+  "rows": 58
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-03.zip",
+  "bytes": 3414,
+  "sha256": "f0fbb2fbd53b4994485b2ce7fa8a8ed8177d21baebe53fb4a87f813d40b468a4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26269,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26269,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-04.zip",
+  "bytes": 3279,
+  "sha256": "d38fe8dce224b10ad97486f0072bab0f8b518e3efd3a4e065292f119f7934e71",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26270,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26270,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-05.zip",
+  "bytes": 3285,
+  "sha256": "ade9758054b57275067e4af9c8da091d6fd68af868b818041837833624b3a47f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26271,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26271,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-06.zip",
+  "bytes": 3232,
+  "sha256": "f22816c223ec73961b1f4ae4761cc9d23efed6f0a1c817a1cef610c1b7de54a2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26272,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26272,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-07.zip",
+  "bytes": 3311,
+  "sha256": "523b027b5e4da81a63e8f3fce84949cb47a672edafd6f92d47cd025403e8efb0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26273,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26273,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-08.zip",
+  "bytes": 3505,
+  "sha256": "12c2226b1b16496482245e91718483e5c0fa81978f1ad38694edc5b5c6a2bfb2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26274,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26274,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-09.zip",
+  "bytes": 3330,
+  "sha256": "1df162678c2610b5557c425a068acad62ada2685c0bd88e66eaa21892387bd44",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26275,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26275,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-10.zip",
+  "bytes": 3413,
+  "sha256": "6c50a6435b12af3810b609247ece4782c8567c3a50766ff9b6589d56f5b90fa5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26276,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26276,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-11.zip",
+  "bytes": 3390,
+  "sha256": "3fdc64f086fd90a628c61df9c9e6bcef01d32f4b9d8f48f9aa8e0b0090409f4a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26277,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26277,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2024-12.zip",
+  "bytes": 3503,
+  "sha256": "39786c7300fe50f6658364af14f851b8e59b404c9a46f53c6bd6b4a73e216183",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26278,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26278,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-01.zip",
+  "bytes": 3453,
+  "sha256": "8528efd6072ad9aed01884861984cc5108786c209986b6e955d03d8619879a7b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26279,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26279,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-02.zip",
+  "bytes": 3123,
+  "sha256": "8648c7fcf6febd23d86dc752c8f0822d2a6ee289760065cd3fd9cfba245b036d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26280,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 26280,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-03.zip",
+  "bytes": 3372,
+  "sha256": "e93472a1d21a32e64c5288f0fa85231edfb587fa70a767bca542b9a676fe1715",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26281,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26281,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-04.zip",
+  "bytes": 3276,
+  "sha256": "6453195f1146cbf302a3c9c9c669c76cd28633fba48b1f07794ac7e4160b85f2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26282,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26282,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-05.zip",
+  "bytes": 3385,
+  "sha256": "c93e8db70a8dbb93cd5efbbbdca3d45acc04af8a7f3432ca099f8f69dfbf536b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26283,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26283,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-06.zip",
+  "bytes": 3238,
+  "sha256": "b85cddcbbd548fabfbc75daf492444201a97952ea3613c02b9ca6a8ba3b3cec9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26284,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26284,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-07.zip",
+  "bytes": 3497,
+  "sha256": "3c85aa96283a7ee7e91e299ad4c184f50bf87d5a6dc7b5200117205c7cce5ec3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26285,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26285,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-08.zip",
+  "bytes": 3567,
+  "sha256": "abba4907c8b1de6790f27893077a759c46c3f5a24842715abd9f4cbbd69588b6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26286,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26286,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-09.zip",
+  "bytes": 3426,
+  "sha256": "bfdf87f9f6ee7f47a707917da38f8674a4d70391ff1a6259f0eec3e122e50975",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26287,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26287,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-10.zip",
+  "bytes": 3419,
+  "sha256": "4d728272ae9fed9a328a54e8bbcf314bc7f8fc0f3b39c3de4638a8dadbca7b07",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26288,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26288,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-11.zip",
+  "bytes": 3309,
+  "sha256": "d643965f31c98c59a7a9ac498b437d6f484668d5b93bde739ffe6a7c77cc5ae8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26289,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26289,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2025-12.zip",
+  "bytes": 3307,
+  "sha256": "b4693558c65843887749edbc34276a052bbb80236f90e3781d3e36c15fa648d4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26290,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26290,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-02.zip",
+  "bytes": 2976,
+  "sha256": "6e0f9e4b1f664e601927fbe7498d5f4d574f3d1a5ba57603cdbe1a6b28865b51",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26292,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 26292,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-01.zip",
+  "bytes": 3283,
+  "sha256": "3b15a591889205e334760ccf772a74ddc55d6e3d1040f481e5a8a62f815246c4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26291,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26291,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-03.zip",
+  "bytes": 3226,
+  "sha256": "3a7b5aae7cd353b2af21abfb30033a0e5817d069a2286e3db2badad560063428",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26293,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26293,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-04.zip",
+  "bytes": 3192,
+  "sha256": "6ddfb0d285e490d66afa96f1f18bdfd8d938e28f44450fb40bc6d8985a2a150e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26294,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26294,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-05.zip",
+  "bytes": 3266,
+  "sha256": "5efb089ad9a719bd6d492d29f6f5c6d588c9967c97d6098216f3fd273b20d756",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26295,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26295,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-06.zip",
+  "bytes": 3124,
+  "sha256": "a27a0209c12ac7c566603c9dc2d61ef68e5742d69c438b80a76006b1ac017607",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26296,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26296,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-07.zip",
+  "bytes": 3199,
+  "sha256": "c23eca2aa4b7e41977bb66b348ef94ba2a181ae44f78320a65861c23784f78f0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26297,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26297,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-08.zip",
+  "bytes": 3428,
+  "sha256": "5e59bc60f0038c314da7905403263e578fecb135d12a6d04d746f055618d2359",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26298,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26298,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MAVUSDT/12h/MAVUSDT-12h-2026-09.zip",
+  "bytes": 3285,
+  "sha256": "dbd512b394103b273729b8e6ac66539758f61a15d23631e645ce38658ee6fe8b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26299,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26299,
+  "rows": 60
+ },
+ "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-01.zip",
+  "bytes": 397,
+  "sha256": "a4f59d60e97266798f45e8f989b11a266c818111075f29fb4de4e3fa4cf677bf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26257,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 26257,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-02.zip",
+  "bytes": 404,
+  "sha256": "11b4f1d5283dc108e9c14b4aae3698c302110089dc1e3d1c050a50b798f6eba5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26258,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 26258,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-03.zip",
+  "bytes": 401,
+  "sha256": "fad081545cfc74924040b78d41eb183028749fc27f8368a1b5ca4ccb828f2112",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26259,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 26259,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-04.zip",
+  "bytes": 401,
+  "sha256": "1b2d21a82e269af1b26649ee6de4ad7fa27fd3ba58d001800d8325230c075199",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 51314,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 51314,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-05.zip",
+  "bytes": 402,
+  "sha256": "d55e80d91f424d0559545d542d499c5057c42fc7bd2f9aa5f9041db456de8484",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 272264,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 272264,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-06.zip",
+  "bytes": 400,
+  "sha256": "48328c92c1ab50b96684a2be7cb756f98305862d6e6688678e2f015e9aafe014",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1607198,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1607198,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-07.zip",
+  "bytes": 400,
+  "sha256": "0be2289416aa1140d547a7eeb3fa33d4989ea7c9de0184118b03f39047085d5a",
+  "checksum_ok": true,
+  "size_bytes": 400,
+  "fetched_at": "2026-10-08T07:24:27Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/12h/MAVUSDT/MAVUSDT-12h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/MAVUSDT/12h/MAVUSDT-12h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1798965,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1798965,
+  "rows": 2,
+  "imported_at": "2026-10-08T07:27:57Z"
+ }
+}

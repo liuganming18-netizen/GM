@@ -1,0 +1,554 @@
+{
+  "gate": "strategy",
+  "schema": "strategy_ready/1",
+  "generated_at_utc": "2026-10-14T18:21:07Z",
+  "scope": "策略规则与实现（M0–M6 信号/止损/锁利/因子纯函数）；不含数据与回测",
+  "authority": "docs/策略优化_数据收集_分窗口回测施工单_2026-10-15.md",
+  "ready": true,
+  "ready_actual": true,
+  "ready_meaning": "策略门禁 PASS = 冻结规则与实现通过全部核验；不等于可回测（回测另需 data_ready 门禁 PASS）",
+  "backtest_run_ready": false,
+  "backtest_run_ready_reason": "data_ready.json 尚未发布；且执行层绑定/样本切分由回测窗口完成",
+  "code_sha256": {
+    "bundle_sha256": "0bdf5db0a78742b78eb45a91d6aec8bd1814b3904f94c7dd49261ed889e089f1",
+    "per_file": {
+      "README.md": "fe91b9446c5bca46e878d166cbe97411ca1961c070aed1008ebbb9f7c1c1d2dc",
+      "__init__.py": "44d62431a8c19ef33059197f155e462eab09e866298b263096f72ea000d0bde2",
+      "core.py": "929bf3dbe926ca536581d7d908523fad03cf5903d9fade498bb018a60968e34c",
+      "experiments.py": "ae85ef783578362d2b0e78d9a217b3f6ecb97b253d4c5a033f48c0426d3a5cee",
+      "factors.py": "6853f1232062ee4a0019459a82e0ee114043c8ea880fd1104e0e69605d26092a",
+      "params.py": "c5a5cea7459e66e3a0df12d3904346117bd4b5a81a0e65d55f7928c3f6b28687",
+      "series.py": "2adec648634bc90c07604545bb267a45748ea7578e05a80ab3dfde9b7e18d1ec",
+      "verify.py": "03f89bb886042fcda11c50fd01c8280239f9c08fbc92ae62cfdc0360e3cd0506"
+    },
+    "module_dir": "/Users/boos/Desktop/威科夫因子共振趋势/策略/WyckoffMaster"
+  },
+  "config": {
+    "params": {
+      "atr_n": 20,
+      "be_trigger_r": 1.0,
+      "breakout_vol_mult": 1.5,
+      "don_entry": 20,
+      "don_exit": 10,
+      "max_holding_hours": 720,
+      "max_stop_atr": 3.5,
+      "min_stop_atr": 1.5,
+      "overheat_ext_atr": 1.2,
+      "overheat_range_atr": 2.5,
+      "retest_window_bars": 5,
+      "spring_close_pos": 0.5,
+      "spring_confirm_bars": 3,
+      "spring_depth_atr": 0.6,
+      "spring_vol_mult": 1.5,
+      "target_rr": 2.0,
+      "tr_atr_mult": 4.0,
+      "trail_activate_atr": 2.0,
+      "trail_lookback_bars": 5,
+      "trail_min_above_entry_atr": 0.3,
+      "trail_min_bars_after_entry": 5,
+      "uniform_stop_atr": 3.0,
+      "vol_n": 20,
+      "wick_buffer_atr": 0.8
+    },
+    "experiment_config_hash": "57f0f26e9e4719b3bbb883cd4ef4d669ecb40334e529c4656a1ecb2371b7cdfd",
+    "experiments": {
+      "M0": {
+        "entry_mode": "donchian_only",
+        "exp_id": "M0",
+        "factor_filter": "none",
+        "needs_factors": false,
+        "parent": "",
+        "question": "纯 20 突破 + 3ATR 固定止损 + 不移止损 的原始基准",
+        "rank_mode": "quote_vol_30d_median",
+        "single_variable": "(基线)",
+        "stop_mode": "uniform",
+        "trail_mode": "none"
+      },
+      "M1": {
+        "entry_mode": "three_buy_points",
+        "exp_id": "M1",
+        "factor_filter": "none",
+        "needs_factors": false,
+        "parent": "M0",
+        "question": "单测买点：三类买点整体（Spring+温和突破+过热回踩）是否优于纯突破",
+        "rank_mode": "quote_vol_30d_median",
+        "single_variable": "entry_mode",
+        "stop_mode": "uniform",
+        "trail_mode": "none"
+      },
+      "M2": {
+        "entry_mode": "three_buy_points",
+        "exp_id": "M2",
+        "factor_filter": "none",
+        "needs_factors": false,
+        "parent": "M1",
+        "question": "单测初始止损：结构缓冲止损（含过远拒单）是否优于固定 3ATR",
+        "rank_mode": "quote_vol_30d_median",
+        "single_variable": "stop_mode",
+        "stop_mode": "structural",
+        "trail_mode": "none"
+      },
+      "M3_BE": {
+        "entry_mode": "three_buy_points",
+        "exp_id": "M3_BE",
+        "factor_filter": "none",
+        "needs_factors": false,
+        "parent": "M2",
+        "question": "单测锁利：收盘 >=1R 后推保本 的对照臂",
+        "rank_mode": "quote_vol_30d_median",
+        "single_variable": "trail_mode(naive_be)",
+        "stop_mode": "structural",
+        "trail_mode": "naive_be"
+      },
+      "M3_Step": {
+        "entry_mode": "three_buy_points",
+        "exp_id": "M3_Step",
+        "factor_filter": "none",
+        "needs_factors": false,
+        "parent": "M2",
+        "question": "单测锁利：台阶上移是否比推保本更少被震出、Calmar 更高",
+        "rank_mode": "quote_vol_30d_median",
+        "single_variable": "trail_mode(step_swing)",
+        "stop_mode": "structural",
+        "trail_mode": "step_swing"
+      },
+      "M4": {
+        "entry_mode": "three_buy_points",
+        "exp_id": "M4",
+        "factor_filter": "none",
+        "needs_factors": true,
+        "parent": "M2/M3 胜出者",
+        "question": "单测 OI 排序：同刻多信号时优先选 OI 变化 90 日分位高的币是否有正增量",
+        "rank_mode": "oi_change_90d_pct",
+        "single_variable": "rank_mode",
+        "stop_mode": "structural",
+        "trail_mode": "step_swing"
+      },
+      "M5": {
+        "entry_mode": "three_buy_points",
+        "exp_id": "M5",
+        "factor_filter": "global_account_ratio_90d_pct_gt_0.90",
+        "needs_factors": true,
+        "parent": "M4",
+        "question": "单测全网账户比过滤：自身 90 日分位 > 0.90 不开多 是否有正增量",
+        "rank_mode": "oi_change_90d_pct",
+        "single_variable": "factor_filter(M5)",
+        "stop_mode": "structural",
+        "trail_mode": "step_swing"
+      },
+      "M6": {
+        "entry_mode": "three_buy_points",
+        "exp_id": "M6",
+        "factor_filter": "top_position_ratio_90d_z_ge_0",
+        "needs_factors": true,
+        "parent": "M5",
+        "question": "单测大户持仓比过滤（唯一规则）：自身 90 日 Z >= 0 才开多 是否有正增量",
+        "rank_mode": "oi_change_90d_pct",
+        "single_variable": "factor_filter(M6)",
+        "stop_mode": "structural",
+        "trail_mode": "step_swing"
+      }
+    }
+  },
+  "verifications": {
+    "C1_truncation_no_lookahead": true,
+    "C2_stop_conflict": true,
+    "C3_step_no_backfill": true,
+    "C4_atr_consistency": true,
+    "C5_boundaries": true,
+    "C6_m6_rule": true,
+    "C9_reject_accounting": true,
+    "C7_config_validity": true,
+    "C8_experiments_run": true
+  },
+  "verification_detail": {
+    "C1_truncation_no_lookahead": {
+      "passed": true,
+      "cuts": [
+        60,
+        120,
+        200,
+        333,
+        500,
+        700,
+        899
+      ],
+      "mismatches": [],
+      "note": "前缀重算与全序列前缀逐位一致（含事件/结构低点/参考止损）"
+    },
+    "C2_stop_conflict": {
+      "passed": true,
+      "cases": [
+        {
+          "name": "too_far_rejects",
+          "reject": "structural_stop_too_far",
+          "passed": true,
+          "raw_dist_atr": 10.799999999999997
+        },
+        {
+          "name": "too_near_expands_down_only",
+          "reject": null,
+          "stop": 97.0,
+          "raw_stop": 97.60000000000001,
+          "passed": true
+        },
+        {
+          "name": "normal_uses_raw",
+          "reject": null,
+          "passed": true
+        },
+        {
+          "name": "nonpositive_raw_stop",
+          "reject": "nonpositive_raw_stop",
+          "passed": true
+        },
+        {
+          "name": "open_through_stop",
+          "reject": "open_already_through_stop",
+          "passed": true
+        },
+        {
+          "name": "round_then_recheck",
+          "reject": "structural_stop_too_far_after_round",
+          "dist_after_round_atr": 3.75,
+          "passed": true
+        },
+        {
+          "name": "uniform_3atr",
+          "reject": null,
+          "passed": true
+        },
+        {
+          "name": "target_2r",
+          "passed": true
+        }
+      ],
+      "note": "v3：过远拒单而非 clip；不足只向更低处扩大；取整后复核上限"
+    },
+    "C3_step_no_backfill": {
+      "passed": true,
+      "monotone_non_decreasing": true,
+      "truncation_insensitive": true,
+      "min_bars_gate": true,
+      "raise_formula_ok": true,
+      "effective_next_15m": true,
+      "raised_steps": [
+        {
+          "k": 9,
+          "close_time": 1700028800000,
+          "effective_from_open_time": 1700028800001,
+          "stop_before": 94.0,
+          "stop_after": 100.9,
+          "updated": true,
+          "reason": "step_swing_raise",
+          "cand": 100.9,
+          "swing_low": 102.5
+        },
+        {
+          "k": 10,
+          "close_time": 1700032400000,
+          "effective_from_open_time": 1700032400001,
+          "stop_before": 100.9,
+          "stop_after": 101.9,
+          "updated": true,
+          "reason": "step_swing_raise",
+          "cand": 101.9,
+          "swing_low": 103.5
+        },
+        {
+          "k": 11,
+          "close_time": 1700036000000,
+          "effective_from_open_time": 1700036000001,
+          "stop_before": 101.9,
+          "stop_after": 102.9,
+          "updated": true,
+          "reason": "step_swing_raise",
+          "cand": 102.9,
+          "swing_low": 104.5
+        }
+      ],
+      "all_steps": [
+        {
+          "k": 1,
+          "close_time": 1700000000000,
+          "effective_from_open_time": 1700000000001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "hold",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 2,
+          "close_time": 1700003600000,
+          "effective_from_open_time": 1700003600001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "insufficient_bars_after_entry",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 3,
+          "close_time": 1700007200000,
+          "effective_from_open_time": 1700007200001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "insufficient_bars_after_entry",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 4,
+          "close_time": 1700010800000,
+          "effective_from_open_time": 1700010800001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "insufficient_bars_after_entry",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 5,
+          "close_time": 1700014400000,
+          "effective_from_open_time": 1700014400001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "insufficient_bars_after_entry",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 6,
+          "close_time": 1700018000000,
+          "effective_from_open_time": 1700018000001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "insufficient_bars_after_entry",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 7,
+          "close_time": 1700021600000,
+          "effective_from_open_time": 1700021600001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "candidate_below_entry_plus_buffer",
+          "cand": 98.9,
+          "swing_low": 100.5
+        },
+        {
+          "k": 8,
+          "close_time": 1700025200000,
+          "effective_from_open_time": 1700025200001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "candidate_below_entry_plus_buffer",
+          "cand": 99.9,
+          "swing_low": 101.5
+        },
+        {
+          "k": 9,
+          "close_time": 1700028800000,
+          "effective_from_open_time": 1700028800001,
+          "stop_before": 94.0,
+          "stop_after": 100.9,
+          "updated": true,
+          "reason": "step_swing_raise",
+          "cand": 100.9,
+          "swing_low": 102.5
+        },
+        {
+          "k": 10,
+          "close_time": 1700032400000,
+          "effective_from_open_time": 1700032400001,
+          "stop_before": 100.9,
+          "stop_after": 101.9,
+          "updated": true,
+          "reason": "step_swing_raise",
+          "cand": 101.9,
+          "swing_low": 103.5
+        },
+        {
+          "k": 11,
+          "close_time": 1700036000000,
+          "effective_from_open_time": 1700036000001,
+          "stop_before": 101.9,
+          "stop_after": 102.9,
+          "updated": true,
+          "reason": "step_swing_raise",
+          "cand": 102.9,
+          "swing_low": 104.5
+        }
+      ],
+      "note": "判定仅用截至当根已收盘序列；候选=前5根低点-0.8ATR；回看5根须全属持仓后（评估bar与入场bar至少相隔6根）；只升不降；新止损自判定 bar 收盘后的下一根 15m 开盘起生效"
+    },
+    "C4_atr_consistency": {
+      "passed": true,
+      "compared_points": 881,
+      "first_finite_index": 19,
+      "note": "Wilder 式递归（alpha=1/20, adjust=False, min_periods=20），非 EMA span"
+    },
+    "C5_boundaries": {
+      "passed": true,
+      "zero_range_rejected": true,
+      "zero_volume_no_signal": true,
+      "signal_kinds_present": [
+        "",
+        "breakout",
+        "spring"
+      ],
+      "retest_triggered": true,
+      "clip_boundary_ok": true
+    },
+    "C6_m6_rule": {
+      "passed": true,
+      "m6_allow": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "m6_reasons": [
+        "m6_factor_unavailable",
+        "m6_top_position_ratio_z_lt_0",
+        "m6_top_position_ratio_z_lt_0",
+        "ok",
+        "ok",
+        "ok"
+      ],
+      "m5_allow": [
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      "tie_rank_ok": true,
+      "note": "M6 只做 Z>=0 过滤，不测差值排序"
+    },
+    "C9_reject_accounting": {
+      "passed": true,
+      "signals": 1,
+      "rejected": 1,
+      "reject_reasons": [
+        "structural_stop_too_far"
+      ],
+      "reject_rate": 1.0,
+      "note": "拒单原因保留、参考止损为空；信号本身仍登记（不静默缩池）"
+    },
+    "C7_config_validity": {
+      "passed": true,
+      "param_errors": [],
+      "experiment_errors": [],
+      "experiment_count": 8
+    },
+    "C8_experiments_run": {
+      "passed": true,
+      "per_experiment": {
+        "M0": {
+          "entry_mode": "donchian_only",
+          "stop_mode": "uniform",
+          "master_count": 78,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M1": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "uniform",
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M2": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M3_BE": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M3_Step": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M4": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M5": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M6": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        }
+      },
+      "note": "仅信号层跑通；执行/费用/回测由回测窗口负责"
+    }
+  },
+  "environment": {
+    "python": "3.13.12",
+    "numpy": "2.5.4",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O"
+  },
+  "blocking_items": [
+    {
+      "id": "B1",
+      "item": "M4–M6 依赖 OI / 全网账户比 / 大户持仓比因子序列（各自 90 天历史）",
+      "owner": "策略数据窗口（data_ready.json）",
+      "impact": "M4–M6 真实回测不可运行；M0–M3 不依赖该因子，不受影响",
+      "status": "未解除"
+    },
+    {
+      "id": "B2",
+      "item": "执行层绑定（15m 成交/滑点/费用/真实资金费/回撤停机）需在回测窗口按 SHA 绑定既有引擎",
+      "owner": "回测窗口",
+      "impact": "回测运行前必须完成；不阻塞策略门禁本身",
+      "status": "未解除（属回测窗口职责）"
+    },
+    {
+      "id": "B3",
+      "item": "1h/4h 信号数据、15m 执行数据与 IS/Val/Holdout 样本切分",
+      "owner": "策略数据窗口 / 回测窗口",
+      "impact": "无数据则无法回测",
+      "status": "未解除（属数据/回测窗口职责）"
+    }
+  ],
+  "notes": [
+    "报告不等于 Codex 验收；本文件为策略窗口自证，需回测窗口独立核对。",
+    "1h/4h 及 M0–M6 为研究版本，不增加生产账户、不切生产端口、不改他窗文件、不删旧代码。",
+    "v3 相对 v2 的强制修正：结构止损过远拒单（非 clip）、ATR 口径统一、台阶下一根 15m 生效且不回填、M6 只用 Z>=0 过滤。",
+    "同根冲突顺序 Spring→breakout→retest；母线最多确认一次；未决锚点不被覆盖。"
+  ]
+}

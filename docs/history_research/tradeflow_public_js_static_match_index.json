@@ -1,0 +1,636 @@
+{
+  "asset_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/tradeflow_index-27SKEJ8j.js",
+  "bytes": 2158821,
+  "sha256": "80dac5a26b62e83b86a822af8d6973c1c2342a6faca01181fab337de27cfa7d4",
+  "analyzed_utc": "2026-10-03T10:33:44.943024+00:00",
+  "analysis": "Local static string/regex inspection only; no script execution, browser state, auth storage, network endpoint calls or source-map fetch.",
+  "findings": {
+    "/analytics/coin-list": {
+      "count": 4,
+      "occurrences": [
+        {
+          "char_offset": 750072,
+          "context": "params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async function Pie(e){return xT(`GET`,`/api/arbitrage/funding/opportunities`,null,{params:e})}async function Fie(e){return xT(`POST`,`/api/arbitrage/funding/manual-order`,e)}async function Ii"
+        },
+        {
+          "char_offset": 751265,
+          "context": "ie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analytics/coin-list/${e}`,null)}async function Wie(){return xT(`GET`,`/api/console/system-configs`,null)}async function Gie(e,t){return xT(`PUT`,`/api/console/system-configs/${e}`,t)}async function Kie(){return xT(`GET`,`/api/my/favorite-symbols`,null)}async function qie(){return xT(`GET`,`/api/my/favorite-symbol-names`,null)}async function DT(e){return xT(`POST`,`/api/my/favo"
+        },
+        {
+          "char_offset": 753996,
+          "context": "==0))}var zT={menus:[{title:`欢迎`,url:`/`,icon:ma,role:PT.User},{title:`聪明钱`,icon:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`,url:`/analytics/market-feed`,role:PT.User}]},{title:`"
+        },
+        {
+          "char_offset": 759165,
+          "context": ")(`p`,{className:`text-sm text-muted-foreground`,children:a})]})})]})}var HT={聪明钱:`观察多空持仓、平均成本与持仓变化。`,数据看板:`查看市场指标、资金费率与最新事件。`},UT={\"/analytics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t<12?`上午好`:t<18?`下午好`:`晚上好`,r=RT(zT.menus,e?."
+        }
+      ]
+    },
+    "/analytics/trading-data": {
+      "count": 2,
+      "occurrences": [
+        {
+          "char_offset": 754213,
+          "context": "IP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`,url:`/analytics/market-feed`,role:PT.User}]},{title:`套利`,icon:gi,items:[{title:`跨所资金费套利`,url:`/arbitrage/funding`,role:PT.Owner},{title:`实时套利分析`,url:`/arbitrage/realtime`,role:PT.Owner},{title:`跨所套利持仓`,url:`/arbitrage/positions`,role:PT.Owner},{title:`跨所套利历史持仓`,url:`/arbit"
+        },
+        {
+          "char_offset": 759299,
+          "context": "analytics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t<12?`上午好`:t<18?`下午好`:`晚上好`,r=RT(zT.menus,e?.role??``).filter(e=>[`聪明钱`,`数据看板`].includes(e.title)&&e.items?.length),i=r.flatMap(e=>e.items??[]).find(e=>e.url===`/analytics/smart-mone"
+        }
+      ]
+    },
+    "/analytics/smart-money-signal": {
+      "count": 13,
+      "occurrences": [
+        {
+          "char_offset": 749042,
+          "context": "Content-Type\":`application/json`}}).then(e=>e.json())).data}async function xie(){return(await fetch(`/api/auth/me`,{method:`GET`,headers:{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function ST(){return xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${e}/kline?includeTopTraderRatios=true`,null)}async function Cie(e){return xT(`GET`,`/api/console/users`,null,{params:e})}async function wie(e,t){return xT(`PUT`,`/api/console/users/${e}`,t)}async function Tie(e,t,n){return xT(`POST`,`/api/console/users/${e}/recharge`,{a"
+        },
+        {
+          "char_offset": 749130,
+          "context": "await fetch(`/api/auth/me`,{method:`GET`,headers:{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function ST(){return xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${e}/kline?includeTopTraderRatios=true`,null)}async function Cie(e){return xT(`GET`,`/api/console/users`,null,{params:e})}async function wie(e,t){return xT(`PUT`,`/api/console/users/${e}`,t)}async function Tie(e,t,n){return xT(`POST`,`/api/console/users/${e}/recharge`,{amount:t,remark:n})}async function Eie(e,t,n){return xT(`POST`,`/api/console/users/${e}/e"
+        },
+        {
+          "char_offset": 749885,
+          "context": "on CT(){return xT(`GET`,`/api/my/profile`,null)}async function Oie(){return xT(`GET`,`/api/my/invitation-info`,null)}async function kie(e){return xT(`GET`,`/api/my/billing-records`,null,{params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async functio"
+        },
+        {
+          "char_offset": 749973,
+          "context": "pi/my/invitation-info`,null)}async function kie(e){return xT(`GET`,`/api/my/billing-records`,null,{params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async function Pie(e){return xT(`GET`,`/api/arbitrage/funding/opportunities`,null,{params:e})}async f"
+        },
+        {
+          "char_offset": 751146,
+          "context": "/feed`,null,{params:e})}async function ET(e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analytics/coin-list/${e}`,null)}async function Wie(){return xT(`GET`,`/api/console/system-configs`,null)}async function Gie(e,t){return xT(`PUT`,`/api/console/system-configs/${e}`,t)}async function Kie(){return xT(`GET`,`/api/my/favorite-symbols`,null)}async function q"
+        },
+        {
+          "char_offset": 753867,
+          "context": ")).map(e=>{if(e.items&&e.items.length>0){let n=RT(e.items,t);return{...e,items:n}}return e}).filter(e=>!(e.items&&e.items.length===0))}var zT={menus:[{title:`欢迎`,url:`/`,icon:ma,role:PT.User},{title:`聪明钱`,icon:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{tit"
+        }
+      ]
+    },
+    "/analytics/smart-money-volatility": {
+      "count": 2,
+      "occurrences": [
+        {
+          "char_offset": 754114,
+          "context": "ics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`,url:`/analytics/market-feed`,role:PT.User}]},{title:`套利`,icon:gi,items:[{title:`跨所资金费套利`,url:`/arbitrage/funding`,role:PT.Owner},{title:`实时套利分析`,url:`/arbitrage/realtime`,role:PT.Owner"
+        },
+        {
+          "char_offset": 759246,
+          "context": ":`观察多空持仓、平均成本与持仓变化。`,数据看板:`查看市场指标、资金费率与最新事件。`},UT={\"/analytics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t<12?`上午好`:t<18?`下午好`:`晚上好`,r=RT(zT.menus,e?.role??``).filter(e=>[`聪明钱`,`数据看板`].includes(e.title)&&e.items?.length),i=r.flatMap(e=>e.items?"
+        }
+      ]
+    },
+    "/analytics/funding-rates": {
+      "count": 3,
+      "occurrences": [
+        {
+          "char_offset": 750142,
+          "context": "money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async function Pie(e){return xT(`GET`,`/api/arbitrage/funding/opportunities`,null,{params:e})}async function Fie(e){return xT(`POST`,`/api/arbitrage/funding/manual-order`,e)}async function Iie(){return xT(`GET`,`/api/arbitrage/funding/positions`,null)}async functio"
+        },
+        {
+          "char_offset": 754271,
+          "context": "{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`,url:`/analytics/market-feed`,role:PT.User}]},{title:`套利`,icon:gi,items:[{title:`跨所资金费套利`,url:`/arbitrage/funding`,role:PT.Owner},{title:`实时套利分析`,url:`/arbitrage/realtime`,role:PT.Owner},{title:`跨所套利持仓`,url:`/arbitrage/positions`,role:PT.Owner},{title:`跨所套利历史持仓`,url:`/arbitrage/history`,role:PT.Owner}]},{title:`自动交易`,icon:bi,items:"
+        },
+        {
+          "char_offset": 759340,
+          "context": "价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t<12?`上午好`:t<18?`下午好`:`晚上好`,r=RT(zT.menus,e?.role??``).filter(e=>[`聪明钱`,`数据看板`].includes(e.title)&&e.items?.length),i=r.flatMap(e=>e.items??[]).find(e=>e.url===`/analytics/smart-money-signal`);return(0,X.jsx)(VT,{title:`欢迎`,"
+        }
+      ]
+    },
+    "/analytics/confluence-signals": {
+      "count": 2,
+      "occurrences": [
+        {
+          "char_offset": 753933,
+          "context": "n{...e,items:n}}return e}).filter(e=>!(e.items&&e.items.length===0))}var zT={menus:[{title:`欢迎`,url:`/`,icon:ma,role:PT.User},{title:`聪明钱`,icon:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`"
+        },
+        {
+          "char_offset": 759112,
+          "context": "n text-primary motion-reduce:animate-none`}),(0,X.jsx)(`p`,{className:`text-sm text-muted-foreground`,children:a})]})})]})}var HT={聪明钱:`观察多空持仓、平均成本与持仓变化。`,数据看板:`查看市场指标、资金费率与最新事件。`},UT={\"/analytics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t"
+        }
+      ]
+    },
+    "/analytics/favorite-symbols": {
+      "count": 2,
+      "occurrences": [
+        {
+          "char_offset": 754050,
+          "context": "PT.User},{title:`聪明钱`,icon:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`,url:`/analytics/market-feed`,role:PT.User}]},{title:`套利`,icon:gi,items:[{title:`跨所资金费套利`,url:`/arbitrage/funding`,"
+        },
+        {
+          "char_offset": 759203,
+          "context": "oreground`,children:a})]})})]})}var HT={聪明钱:`观察多空持仓、平均成本与持仓变化。`,数据看板:`查看市场指标、资金费率与最新事件。`},UT={\"/analytics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t<12?`上午好`:t<18?`下午好`:`晚上好`,r=RT(zT.menus,e?.role??``).filter(e=>[`聪明钱`,`数据看板`].includes(e"
+        }
+      ]
+    },
+    "/analytics/market-feed": {
+      "count": 2,
+      "occurrences": [
+        {
+          "char_offset": 754328,
+          "context": "IP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{title:`快讯`,url:`/analytics/market-feed`,role:PT.User}]},{title:`套利`,icon:gi,items:[{title:`跨所资金费套利`,url:`/arbitrage/funding`,role:PT.Owner},{title:`实时套利分析`,url:`/arbitrage/realtime`,role:PT.Owner},{title:`跨所套利持仓`,url:`/arbitrage/positions`,role:PT.Owner},{title:`跨所套利历史持仓`,url:`/arbitrage/history`,role:PT.Owner}]},{title:`自动交易`,icon:bi,items:[{title:`交易机器人`,url:`/trading/bots`,role:PT.Admin},{tit"
+        },
+        {
+          "char_offset": 759381,
+          "context": "\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t<12?`上午好`:t<18?`下午好`:`晚上好`,r=RT(zT.menus,e?.role??``).filter(e=>[`聪明钱`,`数据看板`].includes(e.title)&&e.items?.length),i=r.flatMap(e=>e.items??[]).find(e=>e.url===`/analytics/smart-money-signal`);return(0,X.jsx)(VT,{title:`欢迎`,children:(0,X.jsxs)(`div`,{className:`s"
+        }
+      ]
+    },
+    "指数信息监控": {
+      "count": 1,
+      "occurrences": [
+        {
+          "char_offset": 1970287,
+          "context": "[{id:`user`,name:`User 普通会员`,englishName:`User`,price:`$0`,originalPrice:`$0`,period:`永久免费`,description:`适合个人用户体验基础功能`,highlight:!1,features:[{name:`聪明钱 4 小时数据`,available:!0},{name:`币种交易数据`,available:!0},{name:`资金费率监控`,available:!0},{name:`指数信息监控`,available:!0}]},{id:`vip`,name:`VIP 高级会员`,englishName:`VIP`,price:`$24.5`,originalPrice:`$49`,titleBadge:`限时 5 折`,period:`/月`,description:`适合个人交易者，解锁更多功能`,highlight:!1,features:[{name:`所有普通会员功能`,available:!0},{name:`聪明钱 5 天数据`,available:!0},{name:`多空比排行榜`,available:!0},{name:`多空比波动分析`,available:!0},{name:`自选币种观测`,available:!0}]},{id:`vip_plus`,name:`VIP Pl"
+        }
+      ]
+    },
+    "多空比排行榜": {
+      "count": 2,
+      "occurrences": [
+        {
+          "char_offset": 1811900,
+          "context": "an`,{className:`px-4 py-3 text-right text-gray-700`,children:_T(e,0)})}]})})]})})}function xme(){let e=e3(bme),{loading:t,top20:n,bottom20:r,updatedAt:i}=e.$useSnapshot();return(0,X.jsxs)(VT,{loading:t,title:(0,X.jsxs)(`div`,{children:[`聪明钱多空比排行榜`,i&&(0,X.jsxs)(`span`,{className:`text-xs text-gray-500 font-normal pl-2`,children:[`最后更新:`,` `,gT(new Date(i),`yyyy-MM-dd HH:mm:ss`)]})]}),extra:(0,X.jsx)(QK,{onClick:e.fetchRankings,icon:(0,X.jsx)(Qi,{className:`w-4 h-4`})}),children:[(0,X.jsx)(eF,{type:`info`,description:(0,X.jsxs)(`div`,{className:`text-sm text-blue-800 space-y-2`,children:[(0,X.jsxs)(`"
+        },
+        {
+          "char_offset": 1970543,
+          "context": "e:!0}]},{id:`vip`,name:`VIP 高级会员`,englishName:`VIP`,price:`$24.5`,originalPrice:`$49`,titleBadge:`限时 5 折`,period:`/月`,description:`适合个人交易者，解锁更多功能`,highlight:!1,features:[{name:`所有普通会员功能`,available:!0},{name:`聪明钱 5 天数据`,available:!0},{name:`多空比排行榜`,available:!0},{name:`多空比波动分析`,available:!0},{name:`自选币种观测`,available:!0}]},{id:`vip_plus`,name:`VIP Plus 尊享会员`,englishName:`VIP Plus`,price:`--`,period:`/月`,originalPrice:`--`,description:`适合个人高频交易者，更多功能和服务`,highlight:!0,titleBadge:`限时 5 折`,comingSoon:!0,features:[{name:`所有高级会员功能`,available:!0}]},{id:`vip_max`,name:`VIP Max 至尊会员`,englishName:`VIP Max`,pric"
+        }
+      ]
+    },
+    "smart-money": {
+      "count": 20,
+      "occurrences": [
+        {
+          "char_offset": 749053,
+          "context": "e\":`application/json`}}).then(e=>e.json())).data}async function xie(){return(await fetch(`/api/auth/me`,{method:`GET`,headers:{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function ST(){return xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${e}/kline?includeTopTraderRatios=true`,null)}async function Cie(e){return xT(`GET`,`/api/console/users`,null,{params:e})}async function wie(e,t){return xT(`PUT`,`/api/console/users/${e}`,t)}async function Tie(e,t,n){return xT(`POST`,`/api/console/users/${e}/recha"
+        },
+        {
+          "char_offset": 749141,
+          "context": "(`/api/auth/me`,{method:`GET`,headers:{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function ST(){return xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${e}/kline?includeTopTraderRatios=true`,null)}async function Cie(e){return xT(`GET`,`/api/console/users`,null,{params:e})}async function wie(e,t){return xT(`PUT`,`/api/console/users/${e}`,t)}async function Tie(e,t,n){return xT(`POST`,`/api/console/users/${e}/recharge`,{amount:t,remark:n})}async function Eie(e,t,n){return xT(`POST`,`/api/console/users"
+        },
+        {
+          "char_offset": 749896,
+          "context": "urn xT(`GET`,`/api/my/profile`,null)}async function Oie(){return xT(`GET`,`/api/my/invitation-info`,null)}async function kie(e){return xT(`GET`,`/api/my/billing-records`,null,{params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async "
+        },
+        {
+          "char_offset": 749984,
+          "context": "ation-info`,null)}async function kie(e){return xT(`GET`,`/api/my/billing-records`,null,{params:e})}async function Aie(){return xT(`GET`,`/api/analytics/smart-money-signal/rankings`,null)}async function jie(){return xT(`GET`,`/api/analytics/smart-money-signal/volatility-rankings`,null)}async function Mie(){return xT(`GET`,`/api/analytics/coin-list`,null)}async function Nie(){return xT(`GET`,`/api/analytics/funding-rates`,null)}async function wT(e){return xT(`GET`,`/api/arbitrage/funding/markets`,null,{params:e})}async function Pie(e){return xT(`GET`,`/api/arbitrage/funding/opportunities`,null,{params:e})}"
+        },
+        {
+          "char_offset": 751157,
+          "context": ",{params:e})}async function ET(e){return xT(`GET`,`/api/analytics/signals`,null,{params:e})}async function Vie(e){return xT(`GET`,`/api/analytics/signals/${encodeURIComponent(e)}`,null)}async function Hie(e){return xT(`GET`,`/api/analytics/smart-money-signal/${encodeURIComponent(e)}/active-signal`,null)}async function Uie(e){return xT(`GET`,`/api/analytics/coin-list/${e}`,null)}async function Wie(){return xT(`GET`,`/api/console/system-configs`,null)}async function Gie(e,t){return xT(`PUT`,`/api/console/system-configs/${e}`,t)}async function Kie(){return xT(`GET`,`/api/my/favorite-symbols`,null)}async fun"
+        },
+        {
+          "char_offset": 753878,
+          "context": "if(e.items&&e.items.length>0){let n=RT(e.items,t);return{...e,items:n}}return e}).filter(e=>!(e.items&&e.items.length===0))}var zT={menus:[{title:`欢迎`,url:`/`,icon:ma,role:PT.User},{title:`聪明钱`,icon:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.Use"
+        }
+      ]
+    },
+    "confluence": {
+      "count": 15,
+      "occurrences": [
+        {
+          "char_offset": 753944,
+          "context": "s:n}}return e}).filter(e=>!(e.items&&e.items.length===0))}var zT={menus:[{title:`欢迎`,url:`/`,icon:ma,role:PT.User},{title:`聪明钱`,icon:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/funding-rates`,role:PT.User},{ti"
+        },
+        {
+          "char_offset": 759123,
+          "context": "ary motion-reduce:animate-none`}),(0,X.jsx)(`p`,{className:`text-sm text-muted-foreground`,children:a})]})})]})}var HT={聪明钱:`观察多空持仓、平均成本与持仓变化。`,数据看板:`查看市场指标、资金费率与最新事件。`},UT={\"/analytics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5"
+        },
+        {
+          "char_offset": 1828836,
+          "context": "e)return`—`;let t=Math.floor((Date.now()-e)/1e3/60);return(0,X.jsxs)(`span`,{className:`text-xs text-gray-500`,children:[t,`分钟前`]})}}]})]})}var Lme=[{value:`index_adjust`,label:`指数调整`},{value:`oi_anomaly`,label:`OI 异动`},{value:`smart_money_confluence`,label:`聪明钱共振`}],J5=[`oi_anomaly`,`smart_money_confluence`],Rme=class extends bE{$data(){return{loading:!1,refreshing:!1,loadingMore:!1,rows:[],hasMore:!1,filter:{types:[...J5],symbolKeyword:``},updatedAt:null,error:null}}generation=0;latestCursor=null;oldestCursor=null;timer=null;searchTimer=null;onMount(){this.fetchData(),this.timer=setInterval(()=>{docum"
+        },
+        {
+          "char_offset": 1828894,
+          "context": "(0,X.jsxs)(`span`,{className:`text-xs text-gray-500`,children:[t,`分钟前`]})}}]})]})}var Lme=[{value:`index_adjust`,label:`指数调整`},{value:`oi_anomaly`,label:`OI 异动`},{value:`smart_money_confluence`,label:`聪明钱共振`}],J5=[`oi_anomaly`,`smart_money_confluence`],Rme=class extends bE{$data(){return{loading:!1,refreshing:!1,loadingMore:!1,rows:[],hasMore:!1,filter:{types:[...J5],symbolKeyword:``},updatedAt:null,error:null}}generation=0;latestCursor=null;oldestCursor=null;timer=null;searchTimer=null;onMount(){this.fetchData(),this.timer=setInterval(()=>{document.hidden||this.fetchData()},3e4),document.addEventListen"
+        },
+        {
+          "char_offset": 1835800,
+          "context": "tSamples:`当前窗口样本不足`,baselineSamples:`基准窗口样本不足`,change:`变化量`}[e]??e).join(` / `)}var Wme={index_adjust:{label:`指数调整`,color:`blue`,border:`border-l-blue-400`},oi_anomaly:{label:`OI 异动`,color:`orange`,border:`border-l-orange-400`},smart_money_confluence:{label:`聪明钱共振`,color:`purple`,border:`border-l-purple-400`}},Gme=e=>typeof e==`number`?`${e>=0?`+`:``}${(e*100).toFixed(1)}%`:null,e7=e=>typeof e==`number`?e>=1e8?(e/1e8).toFixed(2)+` 亿`:e>=1e4?(e/1e4).toFixed(2)+` 万`:e.toFixed(0):null,t7=e=>{let t=parseFloat(e);return isNaN(t)?e:(t*100).toFixed(2)+`%`};function Kme({payload:e}){let t=(e,t)=>{let n=Gme(e);i"
+        },
+        {
+          "char_offset": 1839178,
+          "context": "`span`,{children:[`资金费率 `,(0,X.jsx)(`strong`,{children:Z5(n?.fundingRate,4)})]})]})]})}function Yme({event:e}){let t=On(),n=Wme[e.type],r=(0,X.jsx)(`div`,{className:`text-sm text-gray-700`,children:e.title});switch(e.type){case`smart_money_confluence`:r=(0,X.jsx)(Jme,{payload:e.payload});break;case`oi_anomaly`:r=(0,X.jsx)(Kme,{payload:e.payload});break;case`index_adjust`:r=(0,X.jsx)(qme,{payload:e.payload})}return(0,X.jsxs)(`div`,{className:`rounded-lg border border-gray-200 border-l-4 ${n?.border??`border-l-gray-300`} bg-white px-4 py-3`,children:[(0,X.jsxs)(`div`,{className:`flex flex-wrap items-cente"
+        }
+      ]
+    },
+    "Cumulative Volume Delta": {
+      "count": 0,
+      "occurrences": []
+    },
+    "cumDelta": {
+      "count": 0,
+      "occurrences": []
+    },
+    "fundingRate": {
+      "count": 18,
+      "occurrences": [
+        {
+          "char_offset": 1796104,
+          "context": "ols-9`,children:[(0,X.jsx)(F5,{label:`价格`,value:mme(e.lastPrice),className:`text-gray-900 font-bold`}),(0,X.jsx)(F5,{label:`24h 涨跌`,value:hme(e.priceChangePercent),className:M5(e.priceChangePercent)}),(0,X.jsx)(F5,{label:`资金费率`,value:gme(e.fundingRate),className:M5(e.fundingRate)}),(0,X.jsx)(F5,{label:`总 OI(U)`,value:_me(e.openInterestValue)}),(0,X.jsx)(F5,{label:`聪明钱多空比`,value:_T(e.smartMoneyLongShortRatio,4),className:N5(e.smartMoneyLongShortRatio)}),(0,X.jsx)(F5,{label:`多头 OI%`,value:P5(e.smartMoneyLongOiRatio),className:`text-red-600`}),(0,X.jsx)(F5,{label:`空头 OI%`,value:P5(e.smartMoneyShortOiRatio),"
+        },
+        {
+          "char_offset": 1796132,
+          "context": "5,{label:`价格`,value:mme(e.lastPrice),className:`text-gray-900 font-bold`}),(0,X.jsx)(F5,{label:`24h 涨跌`,value:hme(e.priceChangePercent),className:M5(e.priceChangePercent)}),(0,X.jsx)(F5,{label:`资金费率`,value:gme(e.fundingRate),className:M5(e.fundingRate)}),(0,X.jsx)(F5,{label:`总 OI(U)`,value:_me(e.openInterestValue)}),(0,X.jsx)(F5,{label:`聪明钱多空比`,value:_T(e.smartMoneyLongShortRatio,4),className:N5(e.smartMoneyLongShortRatio)}),(0,X.jsx)(F5,{label:`多头 OI%`,value:P5(e.smartMoneyLongOiRatio),className:`text-red-600`}),(0,X.jsx)(F5,{label:`空头 OI%`,value:P5(e.smartMoneyShortOiRatio),className:`text-green-600`})"
+        },
+        {
+          "char_offset": 1820870,
+          "context": "rcent`,width:90,align:`right`,sorter:(e,t)=>(e.priceChangePercent??0)-(t.priceChangePercent??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:Dme(e)})},{title:`资金费率`,dataIndex:`fundingRate`,width:95,align:`right`,sorter:(e,t)=>(e.fundingRate??0)-(t.fundingRate??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:e===null?`—`:(e*100).toFixed(4)+`%`})},{title:`总OI(U)`,dataIndex:`openInterestValue`,width:95,align:`right`,sorter:(e,t)=>(e.openInterestValue??0)-(t.openInterestValue??0),re"
+        },
+        {
+          "char_offset": 1820923,
+          "context": "hangePercent??0)-(t.priceChangePercent??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:Dme(e)})},{title:`资金费率`,dataIndex:`fundingRate`,width:95,align:`right`,sorter:(e,t)=>(e.fundingRate??0)-(t.fundingRate??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:e===null?`—`:(e*100).toFixed(4)+`%`})},{title:`总OI(U)`,dataIndex:`openInterestValue`,width:95,align:`right`,sorter:(e,t)=>(e.openInterestValue??0)-(t.openInterestValue??0),render:e=>Eme(e)},{title:K5(`多空比`),dataIndex:`smartMone"
+        },
+        {
+          "char_offset": 1820942,
+          "context": ".priceChangePercent??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:Dme(e)})},{title:`资金费率`,dataIndex:`fundingRate`,width:95,align:`right`,sorter:(e,t)=>(e.fundingRate??0)-(t.fundingRate??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:e===null?`—`:(e*100).toFixed(4)+`%`})},{title:`总OI(U)`,dataIndex:`openInterestValue`,width:95,align:`right`,sorter:(e,t)=>(e.openInterestValue??0)-(t.openInterestValue??0),render:e=>Eme(e)},{title:K5(`多空比`),dataIndex:`smartMoneyLongShortRatio`,wi"
+        },
+        {
+          "char_offset": 1825840,
+          "context": "g=!1}};setFilter=e=>{Object.assign(this.data.filter,e),this.applyFilter()};resetFilter=()=>{Object.assign(this.data.filter,q5),this.applyFilter()};applyFilter(){let{rows:e,filter:t}=this.data,n=e;if(t.minAbsRatePct!==null&&(n=n.filter(e=>e.fundingRate!==null&&Math.abs(e.fundingRate)*100>=t.minAbsRatePct)),t.symbolKeyword){let e=t.symbolKeyword.trim().toUpperCase();n=n.filter(t=>t.symbol.toUpperCase().includes(e))}this.data.filteredRows=n}};function Nme({vm:e,filter:t}){return(0,X.jsxs)(`div`,{className:`flex flex-wrap gap-3 items-end`,children:[(0,X.jsxs)(`div`,{children:[(0,X.jsx)(`div`,{className:`text"
+        }
+      ]
+    },
+    "funding_rate": {
+      "count": 0,
+      "occurrences": []
+    },
+    "openInterest": {
+      "count": 6,
+      "occurrences": [
+        {
+          "char_offset": 1796189,
+          "context": "-900 font-bold`}),(0,X.jsx)(F5,{label:`24h 涨跌`,value:hme(e.priceChangePercent),className:M5(e.priceChangePercent)}),(0,X.jsx)(F5,{label:`资金费率`,value:gme(e.fundingRate),className:M5(e.fundingRate)}),(0,X.jsx)(F5,{label:`总 OI(U)`,value:_me(e.openInterestValue)}),(0,X.jsx)(F5,{label:`聪明钱多空比`,value:_T(e.smartMoneyLongShortRatio,4),className:N5(e.smartMoneyLongShortRatio)}),(0,X.jsx)(F5,{label:`多头 OI%`,value:P5(e.smartMoneyLongOiRatio),className:`text-red-600`}),(0,X.jsx)(F5,{label:`空头 OI%`,value:P5(e.smartMoneyShortOiRatio),className:`text-green-600`}),(0,X.jsx)(F5,{label:`大户持仓比`,value:_T(e.topPositionRatio,3"
+        },
+        {
+          "char_offset": 1821133,
+          "context": "lign:`right`,sorter:(e,t)=>(e.fundingRate??0)-(t.fundingRate??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:e===null?`—`:(e*100).toFixed(4)+`%`})},{title:`总OI(U)`,dataIndex:`openInterestValue`,width:95,align:`right`,sorter:(e,t)=>(e.openInterestValue??0)-(t.openInterestValue??0),render:e=>Eme(e)},{title:K5(`多空比`),dataIndex:`smartMoneyLongShortRatio`,width:95,align:`right`,defaultSortOrder:`descend`,sorter:(e,t)=>(e.smartMoneyLongShortRatio??0)-(t.smartMoneyLongShortRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:"
+        },
+        {
+          "char_offset": 1821192,
+          "context": "e??0),render:e=>(0,X.jsx)(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:e===null?`—`:(e*100).toFixed(4)+`%`})},{title:`总OI(U)`,dataIndex:`openInterestValue`,width:95,align:`right`,sorter:(e,t)=>(e.openInterestValue??0)-(t.openInterestValue??0),render:e=>Eme(e)},{title:K5(`多空比`),dataIndex:`smartMoneyLongShortRatio`,width:95,align:`right`,defaultSortOrder:`descend`,sorter:(e,t)=>(e.smartMoneyLongShortRatio??0)-(t.smartMoneyLongShortRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,4)})},{title:K5(`多头OI%`),dataIndex:`smartMoneyLongOiRa"
+        },
+        {
+          "char_offset": 1821217,
+          "context": "(`span`,{className:e===null?`text-gray-400`:e>=0?`text-red-600`:`text-green-600`,children:e===null?`—`:(e*100).toFixed(4)+`%`})},{title:`总OI(U)`,dataIndex:`openInterestValue`,width:95,align:`right`,sorter:(e,t)=>(e.openInterestValue??0)-(t.openInterestValue??0),render:e=>Eme(e)},{title:K5(`多空比`),dataIndex:`smartMoneyLongShortRatio`,width:95,align:`right`,defaultSortOrder:`descend`,sorter:(e,t)=>(e.smartMoneyLongShortRatio??0)-(t.smartMoneyLongShortRatio??0),render:e=>(0,X.jsx)(`span`,{className:G5(e),children:e===null?`—`:_T(e,4)})},{title:K5(`多头OI%`),dataIndex:`smartMoneyLongOiRatio`,width:100,align:`rig"
+        },
+        {
+          "char_offset": 1824589,
+          "context": "Min!==null&&(e.smartMoneyLongOiRatio===null||e.smartMoneyLongOiRatio*100<i.smartLongOiRatioMin)||i.smartShortOiRatioMin!==null&&(e.smartMoneyShortOiRatio===null||e.smartMoneyShortOiRatio*100<i.smartShortOiRatioMin)||i.oiValueMin!==null&&(e.openInterestValue===null||e.openInterestValue<i.oiValueMin*1e6))}),[n,i]);return(0,X.jsxs)(VT,{loading:t,title:(0,X.jsxs)(`div`,{children:[`币种列表`,r&&(0,X.jsxs)(`span`,{className:`text-xs text-gray-500 font-normal pl-2`,children:[`最后更新:`,` `,gT(new Date(r),`yyyy-MM-dd HH:mm:ss`)]}),(0,X.jsxs)(`span`,{className:`text-xs text-gray-500 font-normal pl-2`,children:[`（筛选后 `,a."
+        },
+        {
+          "char_offset": 1824617,
+          "context": "gOiRatio===null||e.smartMoneyLongOiRatio*100<i.smartLongOiRatioMin)||i.smartShortOiRatioMin!==null&&(e.smartMoneyShortOiRatio===null||e.smartMoneyShortOiRatio*100<i.smartShortOiRatioMin)||i.oiValueMin!==null&&(e.openInterestValue===null||e.openInterestValue<i.oiValueMin*1e6))}),[n,i]);return(0,X.jsxs)(VT,{loading:t,title:(0,X.jsxs)(`div`,{children:[`币种列表`,r&&(0,X.jsxs)(`span`,{className:`text-xs text-gray-500 font-normal pl-2`,children:[`最后更新:`,` `,gT(new Date(r),`yyyy-MM-dd HH:mm:ss`)]}),(0,X.jsxs)(`span`,{className:`text-xs text-gray-500 font-normal pl-2`,children:[`（筛选后 `,a.length,` / `,n.length,`）`]})"
+        }
+      ]
+    },
+    "open_interest": {
+      "count": 0,
+      "occurrences": []
+    },
+    "whale": {
+      "count": 9,
+      "occurrences": [
+        {
+          "char_offset": 1833445,
+          "context": "所`,status:`交易状态`,quoteAsset:`计价币`,contractType:`合约类型`,listingAge:`上市时间`,volume24h:`24小时成交额`,oiValue:`OI名义价值`,marketCap:`流通市值`,concentration:`大户多头持仓集中度`,concentrationChange:`大户多头持仓集中度增长`,positionRatio:`大户持仓多空比`,positionRatioChange:`大户持仓比增长`,whaleQtyChange:`聪明钱巨鲸多头持仓量增长`,whaleCount:`聪明钱巨鲸多头人数`,whaleOiShare:`聪明钱巨鲸多头占OI比例`,longOutgrowsShort:`多头增长快于空头`,entryPriceChange:`聪明钱多头平均持仓成本增长`,oiChange:`OI增长`,smartMoneyRatio:`聪明钱多空比`,priceChange1h:`1小时涨幅`,priceToEntry:`价格距聪明钱多头成本`,globalRatio:`全局账户多空比`,fundingRate:`资金费率`,fundingInterval:`结算周期`},Vme=new Set([`exitConcentrationChange`,`exitWhaleQtyChange`,`exitEnt"
+        },
+        {
+          "char_offset": 1833475,
+          "context": "价币`,contractType:`合约类型`,listingAge:`上市时间`,volume24h:`24小时成交额`,oiValue:`OI名义价值`,marketCap:`流通市值`,concentration:`大户多头持仓集中度`,concentrationChange:`大户多头持仓集中度增长`,positionRatio:`大户持仓多空比`,positionRatioChange:`大户持仓比增长`,whaleQtyChange:`聪明钱巨鲸多头持仓量增长`,whaleCount:`聪明钱巨鲸多头人数`,whaleOiShare:`聪明钱巨鲸多头占OI比例`,longOutgrowsShort:`多头增长快于空头`,entryPriceChange:`聪明钱多头平均持仓成本增长`,oiChange:`OI增长`,smartMoneyRatio:`聪明钱多空比`,priceChange1h:`1小时涨幅`,priceToEntry:`价格距聪明钱多头成本`,globalRatio:`全局账户多空比`,fundingRate:`资金费率`,fundingInterval:`结算周期`},Vme=new Set([`exitConcentrationChange`,`exitWhaleQtyChange`,`exitEntryPriceChange`,`concentrationC"
+        },
+        {
+          "char_offset": 1833498,
+          "context": ",listingAge:`上市时间`,volume24h:`24小时成交额`,oiValue:`OI名义价值`,marketCap:`流通市值`,concentration:`大户多头持仓集中度`,concentrationChange:`大户多头持仓集中度增长`,positionRatio:`大户持仓多空比`,positionRatioChange:`大户持仓比增长`,whaleQtyChange:`聪明钱巨鲸多头持仓量增长`,whaleCount:`聪明钱巨鲸多头人数`,whaleOiShare:`聪明钱巨鲸多头占OI比例`,longOutgrowsShort:`多头增长快于空头`,entryPriceChange:`聪明钱多头平均持仓成本增长`,oiChange:`OI增长`,smartMoneyRatio:`聪明钱多空比`,priceChange1h:`1小时涨幅`,priceToEntry:`价格距聪明钱多头成本`,globalRatio:`全局账户多空比`,fundingRate:`资金费率`,fundingInterval:`结算周期`},Vme=new Set([`exitConcentrationChange`,`exitWhaleQtyChange`,`exitEntryPriceChange`,`concentrationChange`,`positionRatioCh"
+        },
+        {
+          "char_offset": 1833870,
+          "context": "riceChange1h:`1小时涨幅`,priceToEntry:`价格距聪明钱多头成本`,globalRatio:`全局账户多空比`,fundingRate:`资金费率`,fundingInterval:`结算周期`},Vme=new Set([`exitConcentrationChange`,`exitWhaleQtyChange`,`exitEntryPriceChange`,`concentrationChange`,`positionRatioChange`,`whaleQtyChange`,`whaleOiShare`,`longOutgrowsShort`,`entryPriceChange`,`oiChange`,`priceChange1h`,`priceToEntry`,`fundingRate`]),Z5=(e,t=2)=>typeof e==`number`&&Number.isFinite(e)?`${(e*100).toFixed(t)}%`:`—`;function Q5(e,t){return t===null?`缺少数据`:typeof t==`string`?{TRADING:`交易中`,PERPETUAL:`永续`,binance:`Binance`}[t]??t:Vme.has(e)?Z5(t,e===`fundingRate`?4:2):e==="
+        },
+        {
+          "char_offset": 1833887,
+          "context": "涨幅`,priceToEntry:`价格距聪明钱多头成本`,globalRatio:`全局账户多空比`,fundingRate:`资金费率`,fundingInterval:`结算周期`},Vme=new Set([`exitConcentrationChange`,`exitWhaleQtyChange`,`exitEntryPriceChange`,`concentrationChange`,`positionRatioChange`,`whaleQtyChange`,`whaleOiShare`,`longOutgrowsShort`,`entryPriceChange`,`oiChange`,`priceChange1h`,`priceToEntry`,`fundingRate`]),Z5=(e,t=2)=>typeof e==`number`&&Number.isFinite(e)?`${(e*100).toFixed(t)}%`:`—`;function Q5(e,t){return t===null?`缺少数据`:typeof t==`string`?{TRADING:`交易中`,PERPETUAL:`永续`,binance:`Binance`}[t]??t:Vme.has(e)?Z5(t,e===`fundingRate`?4:2):e===`listingAge`?`${("
+        },
+        {
+          "char_offset": 1835028,
+          "context": "includes(e)?`≤`:e===`fundingInterval`?`=`:`≥`} ${Q5(e,t.threshold)}`}var Ume={smartMoney:`聪明钱数据`,overview:`聪明钱数据`,fundingInterval:`资金结算周期`,onboardAt:`上市时间`,ratios:`大户多空比`,positionRatio:`大户持仓比`,accountRatio:`大户账户比`,concentration:`大户多头持仓集中度`,whaleQty:`聪明钱巨鲸多头持仓量`,whaleCount:`聪明钱巨鲸人数`,shortWhaleQty:`聪明钱巨鲸空头持仓量`,entryPrice:`聪明钱多头平均持仓成本`,whaleEntryPrice:`聪明钱巨鲸多头平均成本`,smartMoneyRatio:`聪明钱多空比`,oi:`OI`,oiValue:`OI名义价值`,globalRatio:`全局多空比`,marketCap:`流通市值`,markPrice:`标记价格`,fundingRate:`资金费率`,volume24h:`24小时成交额`,ticker:`行情`,tickerPrice:`最新价格`,tickerPrice1hAgo:`1小时前价格`,priceChange1h:`1小时涨幅`,priceToEntry:`价格距成"
+        }
+      ]
+    },
+    "鲸鱼": {
+      "count": 0,
+      "occurrences": []
+    },
+    "巨鲸": {
+      "count": 28,
+      "occurrences": [
+        {
+          "char_offset": 759097,
+          "context": "h-8 animate-spin text-primary motion-reduce:animate-none`}),(0,X.jsx)(`p`,{className:`text-sm text-muted-foreground`,children:a})]})})]})}var HT={聪明钱:`观察多空持仓、平均成本与持仓变化。`,数据看板:`查看市场指标、资金费率与最新事件。`},UT={\"/analytics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapsh"
+        },
+        {
+          "char_offset": 1797551,
+          "context": "`--`;return(0,X.jsxs)(`div`,{className:`space-y-0.5 text-[11px] leading-5 tabular-nums sm:text-xs`,children:[(0,X.jsxs)(`div`,{style:{color:R5.Long},children:[`多头持仓量：`,vT(e.longPos),(0,X.jsxs)(`span`,{style:{color:R5.LongWhale},children:[`（巨鲸：`,vT(e.longWhalePos),`，`,t(e.longWhalePos,e.longPos),`）`]})]}),(0,X.jsxs)(`div`,{style:{color:R5.Short},children:[`空头持仓量：`,vT(e.shortPos),(0,X.jsxs)(`span`,{style:{color:R5.ShortWhale},children:[`（巨鲸：`,vT(e.shortWhalePos),`，`,t(e.shortWhalePos,e.shortPos),`）`]})]}),(0,X.jsxs)(`div`,{style:{color:R5.Long},children:[`多头/巨鲸均价：`,vT(e.longAvgPrice),` /`,` `,(0,X"
+        },
+        {
+          "char_offset": 1797751,
+          "context": "{style:{color:R5.LongWhale},children:[`（巨鲸：`,vT(e.longWhalePos),`，`,t(e.longWhalePos,e.longPos),`）`]})]}),(0,X.jsxs)(`div`,{style:{color:R5.Short},children:[`空头持仓量：`,vT(e.shortPos),(0,X.jsxs)(`span`,{style:{color:R5.ShortWhale},children:[`（巨鲸：`,vT(e.shortWhalePos),`，`,t(e.shortWhalePos,e.shortPos),`）`]})]}),(0,X.jsxs)(`div`,{style:{color:R5.Long},children:[`多头/巨鲸均价：`,vT(e.longAvgPrice),` /`,` `,(0,X.jsx)(`span`,{style:{color:R5.LongWhale},children:vT(e.longWhalesAvgPrice)})]}),(0,X.jsxs)(`div`,{style:{color:R5.Short},children:[`空头/巨鲸均价：`,vT(e.shortAvgPrice),` /`,` `,(0,X.jsx)(`span`,{style:{colo"
+        },
+        {
+          "char_offset": 1797874,
+          "context": "{style:{color:R5.Short},children:[`空头持仓量：`,vT(e.shortPos),(0,X.jsxs)(`span`,{style:{color:R5.ShortWhale},children:[`（巨鲸：`,vT(e.shortWhalePos),`，`,t(e.shortWhalePos,e.shortPos),`）`]})]}),(0,X.jsxs)(`div`,{style:{color:R5.Long},children:[`多头/巨鲸均价：`,vT(e.longAvgPrice),` /`,` `,(0,X.jsx)(`span`,{style:{color:R5.LongWhale},children:vT(e.longWhalesAvgPrice)})]}),(0,X.jsxs)(`div`,{style:{color:R5.Short},children:[`空头/巨鲸均价：`,vT(e.shortAvgPrice),` /`,` `,(0,X.jsx)(`span`,{style:{color:R5.ShortWhale},children:vT(e.shortWhalesAvgPrice)})]}),(0,X.jsxs)(`div`,{className:`flex min-w-0 items-center gap-1 white"
+        },
+        {
+          "char_offset": 1798048,
+          "context": "),`）`]})]}),(0,X.jsxs)(`div`,{style:{color:R5.Long},children:[`多头/巨鲸均价：`,vT(e.longAvgPrice),` /`,` `,(0,X.jsx)(`span`,{style:{color:R5.LongWhale},children:vT(e.longWhalesAvgPrice)})]}),(0,X.jsxs)(`div`,{style:{color:R5.Short},children:[`空头/巨鲸均价：`,vT(e.shortAvgPrice),` /`,` `,(0,X.jsx)(`span`,{style:{color:R5.ShortWhale},children:vT(e.shortWhalesAvgPrice)})]}),(0,X.jsxs)(`div`,{className:`flex min-w-0 items-center gap-1 whitespace-nowrap text-muted-foreground`,children:[(0,X.jsx)(`span`,{children:`多空账户数`}),(0,X.jsxs)(`span`,{style:{color:R5.Long},children:[vT(e.longTraders),(0,X.jsxs)(`span`,{sty"
+        },
+        {
+          "char_offset": 1798466,
+          "context": "ap-1 whitespace-nowrap text-muted-foreground`,children:[(0,X.jsx)(`span`,{children:`多空账户数`}),(0,X.jsxs)(`span`,{style:{color:R5.Long},children:[vT(e.longTraders),(0,X.jsxs)(`span`,{style:{color:R5.LongWhale},children:[`（`,vT(e.longWhales),`巨鲸）`]})]}),(0,X.jsx)(`span`,{className:`text-muted-foreground`,children:`/`}),(0,X.jsxs)(`span`,{style:{color:R5.Short},children:[vT(e.shortTraders),(0,X.jsxs)(`span`,{style:{color:R5.ShortWhale},children:[`（`,vT(e.shortWhales),`巨鲸）`]})]})]}),(0,X.jsxs)(`div`,{className:`grid grid-cols-3 gap-2 border-t border-border/60 pt-1.5`,children:[(0,X.jsxs)(`div`,{class"
+        }
+      ]
+    },
+    "聪明钱": {
+      "count": 48,
+      "occurrences": [
+        {
+          "char_offset": 753827,
+          "context": "{return e.filter(e=>!e.role||IT(t,e.role)).map(e=>{if(e.items&&e.items.length>0){let n=RT(e.items,t);return{...e,items:n}}return e}).filter(e=>!(e.items&&e.items.length===0))}var zT={menus:[{title:`欢迎`,url:`/`,icon:ma,role:PT.User},{title:`聪明钱`,icon:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,ite"
+        },
+        {
+          "char_offset": 753855,
+          "context": "|IT(t,e.role)).map(e=>{if(e.items&&e.items.length>0){let n=RT(e.items,t);return{...e,items:n}}return e}).filter(e=>!(e.items&&e.items.length===0))}var zT={menus:[{title:`欢迎`,url:`/`,icon:ma,role:PT.User},{title:`聪明钱`,icon:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/anal"
+        },
+        {
+          "char_offset": 759003,
+          "context": "s)(`div`,{className:`flex flex-col items-center gap-3`,children:[(0,X.jsx)(Vi,{className:`w-8 h-8 animate-spin text-primary motion-reduce:animate-none`}),(0,X.jsx)(`p`,{className:`text-sm text-muted-foreground`,children:a})]})})]})}var HT={聪明钱:`观察多空持仓、平均成本与持仓变化。`,数据看板:`查看市场指标、资金费率与最新事件。`},UT={\"/analytics/smart-money-signal\":`多空持仓 · 巨鲸均价 · 持仓集中度`,\"/analytics/confluence-signals\":`共振状态 · 历史周期 · 触发依据`,\"/analytics/coin-list\":`按指标筛选并查看币种概览`,\"/analytics/favorite-symbols\":`集中查看已收藏的币种`,\"/analytics/smart-money-volatility\":`比较不同时间维度的多空比变化`,\"/analytics/trading-data\":`持仓量与多空比等市场指标`,\"/analytics/funding-rates\":"
+        },
+        {
+          "char_offset": 759567,
+          "context": "量与多空比等市场指标`,\"/analytics/funding-rates\":`比较资金费率与结算周期`,\"/analytics/market-feed\":`查看市场事件与异动记录`};function WT(){let{user:e}=NT.$useSnapshot(),t=new Date().getHours(),n=t<5?`夜深了`:t<12?`上午好`:t<18?`下午好`:`晚上好`,r=RT(zT.menus,e?.role??``).filter(e=>[`聪明钱`,`数据看板`].includes(e.title)&&e.items?.length),i=r.flatMap(e=>e.items??[]).find(e=>e.url===`/analytics/smart-money-signal`);return(0,X.jsx)(VT,{title:`欢迎`,children:(0,X.jsxs)(`div`,{className:`space-y-section`,children:[(0,X.jsxs)(`section`,{className:`flex flex-wrap items-end justify-between gap-4 py-2`,children:[(0,X.jsxs)(`div`,{className:`min-w-0 space-y-"
+        },
+        {
+          "char_offset": 761363,
+          "context": "bg-foreground px-4 text-sm font-medium text-background transition-colors hover:bg-foreground/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 motion-reduce:transition-none`,children:[`查看聪明钱明细`,(0,X.jsx)(vi,{className:`size-4`,\"aria-hidden\":`true`})]})]})]}),(0,X.jsxs)(`aside`,{\"aria-labelledby\":`risk-reminder-title`,className:`flex items-start gap-3 rounded-xl border border-amber-300 bg-amber-50 p-3 text-amber-950 sm:p-4 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-100`,children:[(0,X.jsx)(la,{className:`mt-0.5 size-5 shrink-0`,\""
+        },
+        {
+          "char_offset": 1796231,
+          "context": " 涨跌`,value:hme(e.priceChangePercent),className:M5(e.priceChangePercent)}),(0,X.jsx)(F5,{label:`资金费率`,value:gme(e.fundingRate),className:M5(e.fundingRate)}),(0,X.jsx)(F5,{label:`总 OI(U)`,value:_me(e.openInterestValue)}),(0,X.jsx)(F5,{label:`聪明钱多空比`,value:_T(e.smartMoneyLongShortRatio,4),className:N5(e.smartMoneyLongShortRatio)}),(0,X.jsx)(F5,{label:`多头 OI%`,value:P5(e.smartMoneyLongOiRatio),className:`text-red-600`}),(0,X.jsx)(F5,{label:`空头 OI%`,value:P5(e.smartMoneyShortOiRatio),className:`text-green-600`}),(0,X.jsx)(F5,{label:`大户持仓比`,value:_T(e.topPositionRatio,3),className:N5(e.topPositionRatio"
+        }
+      ]
+    },
+    "多头共振": {
+      "count": 3,
+      "occurrences": [
+        {
+          "char_offset": 753920,
+          "context": "tems,t);return{...e,items:n}}return e}).filter(e=>!(e.items&&e.items.length===0))}var zT={menus:[{title:`欢迎`,url:`/`,icon:ma,role:PT.User},{title:`聪明钱`,icon:ji,items:[{title:`聪明钱明细`,url:`/analytics/smart-money-signal`,role:PT.User},{title:`多头共振信号`,url:`/analytics/confluence-signals`,role:PT.VIP},{title:`币种列表`,url:`/analytics/coin-list`,role:PT.VIP},{title:`自选币种`,url:`/analytics/favorite-symbols`,role:PT.VIP},{title:`多空比波动分析`,url:`/analytics/smart-money-volatility`,role:PT.User}]},{title:`数据看板`,icon:Oi,items:[{title:`交易数据`,url:`/analytics/trading-data`,role:PT.User},{title:`资金费率`,url:`/analytics/fu"
+        },
+        {
+          "char_offset": 1859762,
+          "context": "f=ihe(u,u?[u.watchAnchorAt??u.watchStartedAt,u.readyAnchorAt,u.endedAt].filter(e=>!!e).map(e=>Math.floor(Date.parse(e)/1e3)).filter(Number.isFinite).sort((e,t)=>e-t):[]);return(0,X.jsx)(i7,{children:(0,X.jsxs)(VT,{title:u?.triggerCount48h?`多头共振信号 · 第${u.triggerCount48h}次推送`:`多头共振信号`,contentClassName:`flex min-h-0 flex-col gap-section overflow-hidden`,extra:(0,X.jsx)(QK,{icon:(0,X.jsx)(Qi,{className:`h-4 w-4`}),onClick:e.refresh,loading:r,children:`刷新列表`}),children:[(0,X.jsx)(gY,{size:`small`,className:`shrink-0`,children:(0,X.jsxs)(`div`,{className:`flex flex-wrap items-end gap-3`,children:[(0,X.j"
+        },
+        {
+          "char_offset": 1859798,
+          "context": "tartedAt,u.readyAnchorAt,u.endedAt].filter(e=>!!e).map(e=>Math.floor(Date.parse(e)/1e3)).filter(Number.isFinite).sort((e,t)=>e-t):[]);return(0,X.jsx)(i7,{children:(0,X.jsxs)(VT,{title:u?.triggerCount48h?`多头共振信号 · 第${u.triggerCount48h}次推送`:`多头共振信号`,contentClassName:`flex min-h-0 flex-col gap-section overflow-hidden`,extra:(0,X.jsx)(QK,{icon:(0,X.jsx)(Qi,{className:`h-4 w-4`}),onClick:e.refresh,loading:r,children:`刷新列表`}),children:[(0,X.jsx)(gY,{size:`small`,className:`shrink-0`,children:(0,X.jsxs)(`div`,{className:`flex flex-wrap items-end gap-3`,children:[(0,X.jsxs)(`div`,{className:`w-60 min-w-0 "
+        }
+      ]
+    },
+    "费率绝对值": {
+      "count": 1,
+      "occurrences": [
+        {
+          "char_offset": 1826499,
+          "context": "x)(jQ,{placeholder:`搜索 symbol`,allowClear:!0,value:t.symbolKeyword,onChange:t=>e.setFilter({symbolKeyword:t.target.value}),style:{width:160}})]}),(0,X.jsxs)(`div`,{children:[(0,X.jsx)(`div`,{className:`text-xs text-gray-500 mb-1`,children:`费率绝对值 ≥ (%)`}),(0,X.jsx)(IX,{placeholder:`不限`,value:t.minAbsRatePct,onChange:t=>e.setFilter({minAbsRatePct:t}),step:.05,min:0,style:{width:110}})]}),(0,X.jsx)(QK,{onClick:e.resetFilter,children:`重置`})]})}var Pme=e=>e==null?`—`:(e*100).toFixed(4)+`%`,Fme=e=>e==null?`—`:`$`+parseFloat(e.toFixed(4));function Ime(){let e=xE(Mme),{loading:t,rows:n,filteredRows:r,updat"
+        }
+      ]
+    },
+    "标记价格": {
+      "count": 5,
+      "occurrences": [
+        {
+          "char_offset": 1828286,
+          "context": "Index:`fundingIntervalHours`,width:90,align:`right`,sorter:(e,t)=>(e.fundingIntervalHours??0)-(t.fundingIntervalHours??0),render:e=>e===null?`—`:(0,X.jsxs)(`span`,{className:e<8?`text-orange-600`:`text-gray-600`,children:[e,`h`]})},{title:`标记价格`,dataIndex:`markPrice`,width:120,align:`right`,render:e=>Fme(e)},{title:`下次结算`,dataIndex:`nextFundingTime`,width:140,align:`right`,render:e=>e?(0,X.jsx)(`span`,{className:`text-gray-600`,children:gT(new Date(e),`MM-dd HH:mm`)}):`—`},{title:`数据时间`,dataIndex:`dataAt`,width:100,align:`right`,render:e=>{if(!e)return`—`;let t=Math.floor((Date.now()-e)/1e3/60);re"
+        },
+        {
+          "char_offset": 1835251,
+          "context": "tion:`大户多头持仓集中度`,whaleQty:`聪明钱巨鲸多头持仓量`,whaleCount:`聪明钱巨鲸人数`,shortWhaleQty:`聪明钱巨鲸空头持仓量`,entryPrice:`聪明钱多头平均持仓成本`,whaleEntryPrice:`聪明钱巨鲸多头平均成本`,smartMoneyRatio:`聪明钱多空比`,oi:`OI`,oiValue:`OI名义价值`,globalRatio:`全局多空比`,marketCap:`流通市值`,markPrice:`标记价格`,fundingRate:`资金费率`,volume24h:`24小时成交额`,ticker:`行情`,tickerPrice:`最新价格`,tickerPrice1hAgo:`1小时前价格`,priceChange1h:`1小时涨幅`,priceToEntry:`价格距成本`,whaleOiShare:`聪明钱巨鲸多头占OI比例`,fundingIntervalHours:`资金结算周期`,anchor:`行情时间`};function $5(e){return e.split(/[.:]/).map(e=>Ume[e]??{current:`当前窗口`,baseline:`基准窗口`,currentSamples:`当前窗口样本不足`,baselineSamples:`基准窗口样本不足`,change:`"
+        },
+        {
+          "char_offset": 1838298,
+          "context": "(0,X.jsx)(`span`,{className:`font-medium text-green-700`,children:`核心条件已触发`}),e.endReason&&(0,X.jsx)(`span`,{className:`text-gray-600`,children:X5[e.endReason]??e.endReason}),e.price&&(0,X.jsxs)(`span`,{className:`text-gray-600`,children:[`标记价格 `,e.price]})]}),(0,X.jsxs)(`div`,{className:`grid grid-cols-2 gap-x-4 gap-y-1 text-gray-600 sm:grid-cols-3`,children:[(0,X.jsxs)(`span`,{children:[`大户多头持仓集中度增长`,` `,(0,X.jsx)(`strong`,{children:Z5(n?.concentrationChange)})]}),(0,X.jsxs)(`span`,{children:[`聪明钱巨鲸多头持仓量增长`,` `,(0,X.jsx)(`strong`,{children:Z5(n?.longWhaleQtyChange)})]}),(0,X.jsxs)(`span`,{childr"
+        },
+        {
+          "char_offset": 1995480,
+          "context": "`,render:(e,t)=>t.isAlgo&&!Number(e)?`市价`:R9(e),width:110},{title:`触发价`,render:(e,t)=>t.isAlgo?(0,X.jsxs)(`div`,{children:[R9(t.triggerPrice),(0,X.jsx)(`div`,{className:`text-xs text-muted-foreground`,children:t.workingType===`MARK_PRICE`?`标记价格`:t.workingType===`CONTRACT_PRICE`?`最新成交价`:t.workingType})]}):Number(t.stopPrice)>0?R9(t.stopPrice):`—`,width:120},{title:`数量 / 已成交`,render:(e,t)=>t.closePosition?`全部平仓`:`${R9(t.origQty)} / ${R9(t.executedQty)}`,width:145},{title:`状态`,dataIndex:`status`,render:(e,t)=>t.isAlgo&&e===`NEW`?`待触发`:g_e[e]??e,width:100},{title:`时间`,render:(e,t)=>z9(t.updateTime||t."
+        },
+        {
+          "char_offset": 1996461,
+          "context": "`LONG`||t.positionSide===`BOTH`&&Number(t.positionAmt)>0?`多头`:`空头`})})]}),width:140},{title:`持仓数量`,dataIndex:`positionAmt`,render:e=>R9(Math.abs(Number(e))),width:120},{title:`开仓均价`,dataIndex:`entryPrice`,render:e=>R9(e),width:115},{title:`标记价格`,dataIndex:`markPrice`,render:e=>R9(e),width:115},{title:`未实现盈亏`,dataIndex:`unRealizedProfit`,render:B9,width:120},{title:`强平价格`,dataIndex:`liquidationPrice`,render:e=>R9(e),width:115}],orders:H9,history:H9,trades:[{title:`合约`,dataIndex:`symbol`,width:115},{title:`方向`,dataIndex:`side`,render:V9,width:85},{title:`成交价格`,dataIndex:`price`,render:e=>R9(e),width"
+        }
+      ]
+    },
+    "下次结算": {
+      "count": 3,
+      "occurrences": [
+        {
+          "char_offset": 1828364,
+          "context": "tervalHours??0)-(t.fundingIntervalHours??0),render:e=>e===null?`—`:(0,X.jsxs)(`span`,{className:e<8?`text-orange-600`:`text-gray-600`,children:[e,`h`]})},{title:`标记价格`,dataIndex:`markPrice`,width:120,align:`right`,render:e=>Fme(e)},{title:`下次结算`,dataIndex:`nextFundingTime`,width:140,align:`right`,render:e=>e?(0,X.jsx)(`span`,{className:`text-gray-600`,children:gT(new Date(e),`MM-dd HH:mm`)}):`—`},{title:`数据时间`,dataIndex:`dataAt`,width:100,align:`right`,render:e=>{if(!e)return`—`;let t=Math.floor((Date.now()-e)/1e3/60);return(0,X.jsxs)(`span`,{className:`text-xs text-gray-500`,children:[t,`分钟前`]})}"
+        },
+        {
+          "char_offset": 1882940,
+          "context": "ple`,allowClear:!0,maxTagCount:`responsive`,placeholder:`全部交易所`,options:phe,value:i.exchanges,onChange:t=>e.setFilter({exchanges:t}),className:`w-64`})]}),(0,X.jsxs)(`label`,{className:`flex flex-col gap-1 text-xs text-gray-600`,children:[`下次结算`,(0,X.jsx)(rW,{options:mhe,value:i.fundingWithinMinutes??0,onChange:t=>e.setFilter({fundingWithinMinutes:t||null}),className:`w-40`})]}),(0,X.jsx)(bhe,{keyword:i.keyword,onSearch:e.searchKeyword,onReset:e.resetFilter})]})}),(0,X.jsx)(yhe,{rows:n,exchanges:a})]})}var p7={baseAsset:``,minNetEdgeBps:0},She=class extends bE{fetchSeq=0;$data(){return{loading:!1,"
+        },
+        {
+          "char_offset": 1904005,
+          "context": "`text-right ${(e.currentFundingRate??0)>=0?`text-red-600`:`text-green-600`}`,children:[w7(e.currentFundingRate),e.fundingIntervalHours===null?``:` / ${C7(e.fundingIntervalHours,2)}h`]}),(0,X.jsx)(`span`,{className:`text-gray-500`,children:`下次结算`}),(0,X.jsx)(`span`,{className:`text-right`,children:e.nextFundingAt?gT(new Date(e.nextFundingAt),`MM-dd HH:mm`):`—`}),(0,X.jsx)(`span`,{className:`text-gray-500`,children:`未实现盈亏`}),(0,X.jsx)(`span`,{className:`text-right ${e.upnl>=0?`text-green-600`:`text-red-600`}`,children:S7(e.upnl)})]}),(0,X.jsxs)(`div`,{className:`mt-3 flex flex-wrap gap-2 border-t bo"
+        }
+      ]
+    },
+    "X-CMC-PRO-API-KEY": {
+      "count": 0,
+      "occurrences": []
+    },
+    "/api/v5": {
+      "count": 0,
+      "occurrences": []
+    },
+    "/fapi/v1": {
+      "count": 1,
+      "occurrences": [
+        {
+          "char_offset": 1841677,
+          "context": "ds Error{retryAt;constructor(e,t=0){super(e),this.retryAt=t}};async function Qme(e,t,n,r){let i=new URLSearchParams({symbol:e,interval:`1m`,limit:String(t)});r!==void 0&&i.set(`endTime`,String(r));let a=await fetch(`https://fapi.binance.com/fapi/v1/klines?${i}`,{signal:n,credentials:`omit`});if(!a.ok){let e=a.headers.get(`Retry-After`),t=e===null?NaN:Number(e),n=Number.isFinite(t)?Date.now()+t*1e3:Date.parse(e??``);throw new n7(a.status===429||a.status===418?`Binance请求受限，请稍后重试`:`Binance行情请求失败（${a.status}）`,a.status===429||a.status===418?Math.max(Date.now()+6e4,Number.isFinite(n)?n:Date.now()+3e5):0)}l"
+        }
+      ]
+    },
+    "/futures/data": {
+      "count": 0,
+      "occurrences": []
+    },
+    "fetch(": {
+      "count": 9,
+      "occurrences": [
+        {
+          "char_offset": 1216,
+          "context": "y&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var l=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.portal`),r=Symbol.for(`react.fragment`),i=Symbol.for(`react.strict_mode`),a=Symbol.for(`react.profiler`),o=Symbol.for(`react.consumer`),s=Symbol.for(`react.context`),c=Symbol.for(`react.forward_ref`),l=Symbol.for(`react.suspense`),u=Symbol.for(`react.memo`),d=Symbo"
+        },
+        {
+          "char_offset": 747849,
+          "context": "){return _re(e)}async function xT(e,t,n,r){let i={method:e,headers:{\"Content-Type\":`application/json`}};(e===`POST`||e===`PUT`)&&n&&(i.body=JSON.stringify(n));let a=r?.params?`${t}?${new URLSearchParams(yT(r.params)).toString()}`:t,o=await fetch(a,i).then(e=>e.json());if(!o.success)throw Error(o.trace_id?`${o.message}（Trace：${o.trace_id}）`:o.requestId?`${o.message}（请求编号：${o.requestId}）`:o.message);return o.data}async function _ie(e,t){let n=await fetch(`/api/auth/signin`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify({code:e,invitationCode:t})}).then(e=>e.json());if(!"
+        },
+        {
+          "char_offset": 748060,
+          "context": "ams)).toString()}`:t,o=await fetch(a,i).then(e=>e.json());if(!o.success)throw Error(o.trace_id?`${o.message}（Trace：${o.trace_id}）`:o.requestId?`${o.message}（请求编号：${o.requestId}）`:o.message);return o.data}async function _ie(e,t){let n=await fetch(`/api/auth/signin`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify({code:e,invitationCode:t})}).then(e=>e.json());if(!n.success)throw Error(n.message||`Login failed`)}async function vie(e){let t=await fetch(`/api/auth/signup/password`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify(e)}).then(e=>e."
+        },
+        {
+          "char_offset": 748298,
+          "context": "t fetch(`/api/auth/signin`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify({code:e,invitationCode:t})}).then(e=>e.json());if(!n.success)throw Error(n.message||`Login failed`)}async function vie(e){let t=await fetch(`/api/auth/signup/password`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify(e)}).then(e=>e.json());if(!t.success)throw Error(t.message||`Registration failed`)}async function yie(e){let t=await fetch(`/api/auth/signin/password`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify(e)}).then(e=>e.json());"
+        },
+        {
+          "char_offset": 748528,
+          "context": "t t=await fetch(`/api/auth/signup/password`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify(e)}).then(e=>e.json());if(!t.success)throw Error(t.message||`Registration failed`)}async function yie(e){let t=await fetch(`/api/auth/signin/password`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify(e)}).then(e=>e.json());if(!t.success)throw Error(t.message||`Login failed`)}async function bie(){return(await fetch(`/api/auth/signout`,{method:`POST`,headers:{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function xie(){return(awai"
+        },
+        {
+          "char_offset": 748751,
+          "context": "e(e){let t=await fetch(`/api/auth/signin/password`,{method:`POST`,headers:{\"Content-Type\":`application/json`},body:JSON.stringify(e)}).then(e=>e.json());if(!t.success)throw Error(t.message||`Login failed`)}async function bie(){return(await fetch(`/api/auth/signout`,{method:`POST`,headers:{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function xie(){return(await fetch(`/api/auth/me`,{method:`GET`,headers:{\"Content-Type\":`application/json`}}).then(e=>e.json())).data}async function ST(){return xT(`GET`,`/api/analytics/smart-money-signal/symbols`,null)}async function Sie(e){return x"
+        }
+      ]
+    },
+    "axios": {
+      "count": 0,
+      "occurrences": []
+    },
+    "baseURL": {
+      "count": 0,
+      "occurrences": []
+    },
+    "VITE_API": {
+      "count": 0,
+      "occurrences": []
+    },
+    "createRouter": {
+      "count": 1,
+      "occurrences": [
+        {
+          "char_offset": 206308,
+          "context": "ons`,nt=Symbol(`ResetLoaderData`);function rt(e){let t=e.window?e.window:typeof window<`u`?window:void 0,n=t!==void 0&&t.document!==void 0&&t.document.createElement!==void 0;k(e.routes.length>0,`You must provide a non-empty routes array to createRouter`);let r=e.hydrationRouteProperties||[],i=e.mapRouteProperties||et,a=i;if(e.unstable_instrumentations){let t=e.unstable_instrumentations;a=e=>({...i(e),...Fe(t.map(e=>e.route).filter(Boolean),e)})}let o={},s=te(e.routes,a,void 0,o),c,l=e.basename||`/`;l.startsWith(`/`)||(l=`/${l}`);let u=e.dataStrategy||bt,d={...e.future},f=null,p=new Set,m=null,h=null,g=nul"
+        }
+      ]
+    },
+    "createWebHistory": {
+      "count": 0,
+      "occurrences": []
+    },
+    "createBrowserRouter": {
+      "count": 0,
+      "occurrences": []
+    },
+    "sourceMappingURL": {
+      "count": 0,
+      "occurrences": []
+    }
+  },
+  "route_like_strings": [
+    "/analytics/coin-list",
+    "/analytics/coin-list/",
+    "/analytics/confluence-signals",
+    "/analytics/copy-trading/open-orders",
+    "/analytics/copy-trading/positions",
+    "/analytics/favorite-symbols",
+    "/analytics/feed",
+    "/analytics/funding-rates",
+    "/analytics/market-feed",
+    "/analytics/signals",
+    "/analytics/signals/",
+    "/analytics/smart-money-signal",
+    "/analytics/smart-money-signal/",
+    "/analytics/smart-money-signal/rankings",
+    "/analytics/smart-money-signal/symbols",
+    "/analytics/smart-money-signal/volatility-rankings",
+    "/analytics/smart-money-volatility",
+    "/analytics/trading-data"
+  ],
+  "strings_matching_api_like": [
+    "/api/analytics/coin-list",
+    "/api/analytics/coin-list/",
+    "/api/analytics/copy-trading/open-orders",
+    "/api/analytics/copy-trading/positions",
+    "/api/analytics/feed",
+    "/api/analytics/funding-rates",
+    "/api/analytics/signals",
+    "/api/analytics/signals/",
+    "/api/analytics/smart-money-signal/",
+    "/api/analytics/smart-money-signal/rankings",
+    "/api/analytics/smart-money-signal/symbols",
+    "/api/analytics/smart-money-signal/volatility-rankings",
+    "/api/arbitrage/funding/compensate",
+    "/api/arbitrage/funding/force-close",
+    "/api/arbitrage/funding/history",
+    "/api/arbitrage/funding/manual-close",
+    "/api/arbitrage/funding/manual-order",
+    "/api/arbitrage/funding/manual-order/preview",
+    "/api/arbitrage/funding/markets",
+    "/api/arbitrage/funding/opportunities",
+    "/api/arbitrage/funding/positions",
+    "/api/auth/me",
+    "/api/auth/signin",
+    "/api/auth/signin/password",
+    "/api/auth/signout",
+    "/api/auth/signup/password",
+    "/api/auto-trading/bots",
+    "/api/auto-trading/bots/",
+    "/api/auto-trading/exchange-keys",
+    "/api/auto-trading/exchange-keys/",
+    "/api/auto-trading/exchange-keys/active-rw",
+    "/api/auto-trading/llm-providers",
+    "/api/auto-trading/llm-providers/",
+    "/api/auto-trading/llm-providers/active",
+    "/api/auto-trading/llm-providers/defs",
+    "/api/auto-trading/llm-providers/verify",
+    "/api/auto-trading/strategy-defs",
+    "/api/console/system-configs",
+    "/api/console/system-configs/",
+    "/api/console/users",
+    "/api/console/users/",
+    "/api/my/billing-records",
+    "/api/my/change-password",
+    "/api/my/favorite-symbol-names",
+    "/api/my/favorite-symbols",
+    "/api/my/invitation-info",
+    "/api/my/profile",
+    "/api/my/purchase-vip",
+    "http://localhost`;typeof",
+    "http://www.w3.org/1998/Math/MathML`,a);break;default:switch(a){case`svg`:o=s.createElementNS(`http://www.w3.org/2000/svg`,a);break;case`math`:o=s.createElementNS(`http://www.w3.org/1998/Math/MathML`,a);break;case`script`:o=s.createElement(`div`),o.innerHTML=`",
+    "http://www.w3.org/1998/Math/MathML`:return",
+    "http://www.w3.org/1999/xlink`,`xlink:actuate`,r);break;case`xlinkArcrole`:yt(e,`http://www.w3.org/1999/xlink`,`xlink:arcrole`,r);break;case`xlinkRole`:yt(e,`http://www.w3.org/1999/xlink`,`xlink:role`,r);break;case`xlinkShow`:yt(e,`http://www.w3.org/1999/xlink`,`xlink:show`,r);break;case`xlinkTitle`:yt(e,`http://www.w3.org/1999/xlink`,`xlink:title`,r);break;case`xlinkType`:yt(e,`http://www.w3.org/1999/xlink`,`xlink:type`,r);break;case`xmlBase`:yt(e,`http://www.w3.org/XML/1998/namespace`,`xml:base`,r);break;case`xmlLang`:yt(e,`http://www.w3.org/XML/1998/namespace`,`xml:lang`,r);break;case`xmlSpace`:yt(e,`http://www.w3.org/XML/1998/namespace`,`xml:space`,r);break;case`is`:_t(e,`is`,r);break;case`innerText`:case`textContent`:break;default:(!(2",
+    "http://www.w3.org/1999/xlink`,`xlink:href`,n);break;case`contentEditable`:case`spellCheck`:case`draggable`:case`value`:case`autoReverse`:case`externalResourcesRequired`:case`focusable`:case`preserveAlpha`:r!=null&&typeof",
+    "http://www.w3.org/2000/svg",
+    "http://www.w3.org/2000/svg`){var",
+    "http://www.w3.org/2000/svg`,a);break;case",
+    "http://www.w3.org/2000/svg`,className:`${n}-image-svg`},_.createElement(`title`,null,`Image",
+    "http://www.w3.org/2000/svg`,viewBox:`0",
+    "http://www.w3.org/2000/svg`,width:24,height:24,viewBox:`0",
+    "http://www.w3.org/2000/svg`,width:`12`,height:`12`,viewBox:`0",
+    "http://www.w3.org/2000/svg`:return",
+    "http://www.w3.org/2000/svg`||o.hasAttribute(`itemprop`))&&(o=a.createElement(r),a.head.insertBefore(o,a.querySelector(`head",
+    "http://www.w3.org/2000/svg`},_.createElement(`title`,null,t?.description||`Empty`),_.createElement(`g`,{fill:`none`,fillRule:`evenodd`},_.createElement(`g`,{transform:`translate(24",
+    "http://www.w3.org/2000/svg`},_.createElement(`title`,null,t?.description||`Empty`),_.createElement(`g`,{transform:`translate(0",
+    "https://accounts.google.com/o/oauth2/v2/auth?client_id=422095888350-e5r8hai279qquue1n1tc3lh39s1rhmhr.apps.googleusercontent.com&redirect_uri=${encodeURIComponent(window.location.origin+`/login`)}&scope=openid%20email%20profile&response_type=code&state=${Math.random().toString(36).substring(7)}&access_type=offline&prompt=consent`;window.location.href=e}handlePasswordSignIn=async",
+    "https://fapi.binance.com/fapi/v1/klines?${i}`,{signal:n,credentials:`omit`});if(!a.ok){let",
+    "https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md`}var",
+    "https://radix-ui.com/primitives/docs/components/${t.docsSlug}`;return",
+    "https://react.dev/errors/`+e;if(1",
+    "https://reactrouter.com/en/main/routers/picking-a-router.`}function",
+    "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js`,n.async=!0,n.type=`text/javascript`,n.innerHTML=JSON.stringify(e),t.current.appendChild(n),()=",
+    "https://t.me/Ruijiejiaoyi`,`_blank`),className:`flex-1",
+    "https://t.me/Ruijiejiaoyi`,target:`_blank`,rel:`noopener",
+    "https://tools.ieft.org/html/bcp47)`},delimiters:{type:`object`,children:{thousands:`string`,decimal:`string`,thousandsSize:`number`},mandatory:!0},abbreviations:o,spaceSeparated:`boolean`,spaceSeparatedCurrency:`boolean`,ordinal:{type:`function`,mandatory:!0},bytes:{type:`object`,children:{binarySuffixes:`object`,decimalSuffixes:`object`}},currency:{type:`object`,children:{symbol:`string`,position:`string`,code:`string`},mandatory:!0},defaults:`format`,ordinalFormat:`format`,byteFormat:`format`,percentageFormat:`format`,currencyFormat:`format`,timeDefaults:`format`,formats:{type:`object`,children:{fourDigits:{type:`format`,mandatory:!0},fullWithTwoDecimals:{type:`format`,mandatory:!0},fullWithTwoDecimalsNoCurrency:{type:`format`,mandatory:!0},fullWithNoDecimals:{type:`format`,mandatory:!0}}}};function",
+    "https://ukorvl.github.io/lightweight-charts-react-components/docs/`+i}`),this.message=`${this.message}",
+    "https://www.coinglass.com/tv/zh/Binance_${i}`;return(0,X.jsx)(MI,{theme:{},children:(0,X.jsxs)(VT,{title:(0,X.jsxs)(`div`,{className:`flex",
+    "https://www.tradingview.com/?utm_medium=lwc-link&utm_campaign=lwc-chart${this.Hv()}`,this.Vv.title=`Charting"
+  ]
+}

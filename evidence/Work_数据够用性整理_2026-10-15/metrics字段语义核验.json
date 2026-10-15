@@ -1,0 +1,724 @@
+{
+ "generated_at_utc": "2026-10-14T18:31:26.799948+00:00",
+ "discipline": "全程只读；只用本地已有 REST 采样与本地归档，不发起任何下载",
+ "C_K线时标控制": {
+  "对象": "binance/um/BTCUSDT/4h，REST 采样 vs 热库",
+  "结论": "热库 open_time = 桶起点；close_time = 起点+4h-1ms",
+  "明细": [
+   {
+    "open_time": 1791043200000,
+    "open_time_utc": "2026-10-03 16:00:00Z",
+    "rest": {
+     "open": "84835.10",
+     "close": "84794.60",
+     "volume": "6865.230",
+     "taker_buy_volume": "3100.751",
+     "close_time": "2026-10-03 19:59:59Z"
+    },
+    "hot": {
+     "open": "84835.10",
+     "close": "84794.60",
+     "volume": "6865.230",
+     "taker_buy_volume": "3100.751",
+     "close_time": "2026-10-03 19:59:59Z"
+    },
+    "match": true
+   },
+   {
+    "open_time": 1791057600000,
+    "open_time_utc": "2026-10-03 20:00:00Z",
+    "rest": {
+     "open": "84794.50",
+     "close": "84710.60",
+     "volume": "9190.768",
+     "taker_buy_volume": "3982.565",
+     "close_time": "2026-10-03 23:59:59Z"
+    },
+    "hot": {
+     "open": "84794.50",
+     "close": "84710.60",
+     "volume": "9190.768",
+     "taker_buy_volume": "3982.565",
+     "close_time": "2026-10-03 23:59:59Z"
+    },
+    "match": true
+   },
+   {
+    "open_time": 1791072000000,
+    "open_time_utc": "2026-10-04 00:00:00Z",
+    "rest": {
+     "open": "84710.50",
+     "close": "84799.90",
+     "volume": "4265.852",
+     "taker_buy_volume": "2203.409",
+     "close_time": "2026-10-04 03:59:59Z"
+    },
+    "hot": {
+     "open": "84710.50",
+     "close": "84799.90",
+     "volume": "4265.852",
+     "taker_buy_volume": "2203.409",
+     "close_time": "2026-10-04 03:59:59Z"
+    },
+    "match": true
+   },
+   {
+    "open_time": 1791086400000,
+    "open_time_utc": "2026-10-04 04:00:00Z",
+    "rest": {
+     "open": "84799.90",
+     "close": "85070.00",
+     "volume": "6171.257",
+     "taker_buy_volume": "3665.381",
+     "close_time": "2026-10-04 07:59:59Z"
+    },
+    "hot": {
+     "open": "84799.90",
+     "close": "85070.00",
+     "volume": "6171.257",
+     "taker_buy_volume": "3665.381",
+     "close_time": "2026-10-04 07:59:59Z"
+    },
+    "match": true
+   },
+   {
+    "open_time": 1791100800000,
+    "open_time_utc": "2026-10-04 08:00:00Z",
+    "rest": {
+     "open": "85070.00",
+     "close": "85119.90",
+     "volume": "978.762",
+     "taker_buy_volume": "523.628",
+     "close_time": "2026-10-04 11:59:59Z"
+    },
+    "hot": {
+     "open": "85070.00",
+     "close": "85263.90",
+     "volume": "8906.927",
+     "taker_buy_volume": "4422.276",
+     "close_time": "2026-10-04 11:59:59Z"
+    },
+    "match": false
+   }
+  ]
+ },
+ "A_OI端点与归档": {
+  "对象": "binance openInterestHist(period=4h) vs raw_oi_metrics 5m 行",
+  "结论": "归档 create_time = REST 标签 - 300s（桶起点）；OI 值逐位相等",
+  "明细": [
+   {
+    "rest_label": "2026-10-02 20:00:00Z",
+    "rest_sum_open_interest": "95638.54500000",
+    "archive_at_-300s": {
+     "create_time": "2026-10-02 19:55:00",
+     "sum_open_interest": "95638.5450000000000000"
+    },
+    "exact_hits": [
+     -300
+    ],
+    "archive_at_-600s": {
+     "create_time": "2026-10-02 19:50:00",
+     "sum_open_interest": "95220.1440000000000000"
+    },
+    "archive_at_-900s": {
+     "create_time": "2026-10-02 19:45:00",
+     "sum_open_interest": "95172.0350000000000000"
+    },
+    "archive_at_0s": {
+     "create_time": "2026-10-02 20:00:00",
+     "sum_open_interest": "95503.0260000000000000"
+    }
+   },
+   {
+    "rest_label": "2026-10-03 00:00:00Z",
+    "rest_sum_open_interest": "98184.17400000",
+    "archive_at_-300s": {
+     "create_time": "2026-10-02 23:55:00",
+     "sum_open_interest": "98184.1740000000000000"
+    },
+    "exact_hits": [
+     -300
+    ],
+    "archive_at_-600s": {
+     "create_time": "2026-10-02 23:50:00",
+     "sum_open_interest": "98131.6200000000000000"
+    },
+    "archive_at_-900s": {
+     "create_time": "2026-10-02 23:45:00",
+     "sum_open_interest": "98163.5040000000000000"
+    },
+    "archive_at_0s": {
+     "create_time": "2026-10-03 00:00:00",
+     "sum_open_interest": "98152.0630000000000000"
+    }
+   },
+   {
+    "rest_label": "2026-10-03 04:00:00Z",
+    "rest_sum_open_interest": "97618.76400000",
+    "archive_at_-300s": {
+     "create_time": "2026-10-03 03:55:00",
+     "sum_open_interest": "97618.7640000000000000"
+    },
+    "exact_hits": [
+     -300
+    ],
+    "archive_at_-600s": {
+     "create_time": "2026-10-03 03:50:00",
+     "sum_open_interest": "97650.3660000000000000"
+    },
+    "archive_at_-900s": {
+     "create_time": "2026-10-03 03:45:00",
+     "sum_open_interest": "97659.2900000000000000"
+    },
+    "archive_at_0s": {
+     "create_time": "2026-10-03 04:00:00",
+     "sum_open_interest": "97626.1280000000000000"
+    }
+   },
+   {
+    "rest_label": "2026-10-03 08:00:00Z",
+    "rest_sum_open_interest": "97724.85700000",
+    "archive_at_-300s": {
+     "create_time": "2026-10-03 07:55:00",
+     "sum_open_interest": "97724.8570000000000000"
+    },
+    "exact_hits": [
+     -300
+    ],
+    "archive_at_-600s": {
+     "create_time": "2026-10-03 07:50:00",
+     "sum_open_interest": "97768.7380000000000000"
+    },
+    "archive_at_-900s": {
+     "create_time": "2026-10-03 07:45:00",
+     "sum_open_interest": "97823.6970000000000000"
+    },
+    "archive_at_0s": {
+     "create_time": "2026-10-03 08:00:00",
+     "sum_open_interest": "97735.4880000000000000"
+    }
+   },
+   {
+    "rest_label": "2026-10-03 12:00:00Z",
+    "rest_sum_open_interest": "97532.72800000",
+    "archive_at_-300s": {
+     "create_time": "2026-10-03 11:55:00",
+     "sum_open_interest": "97532.7280000000000000"
+    },
+    "exact_hits": [
+     -300
+    ],
+    "archive_at_-600s": {
+     "create_time": "2026-10-03 11:50:00",
+     "sum_open_interest": "97539.0500000000000000"
+    },
+    "archive_at_-900s": {
+     "create_time": "2026-10-03 11:45:00",
+     "sum_open_interest": "97555.2060000000000000"
+    },
+    "archive_at_0s": {
+     "create_time": "2026-10-03 12:00:00",
+     "sum_open_interest": "97510.7470000000000000"
+    }
+   },
+   {
+    "rest_label": "2026-10-03 16:00:00Z",
+    "rest_sum_open_interest": "97637.69900000",
+    "archive_at_-300s": {
+     "create_time": "2026-10-03 15:55:00",
+     "sum_open_interest": "97637.6990000000000000"
+    },
+    "exact_hits": [
+     -300
+    ],
+    "archive_at_-600s": {
+     "create_time": "2026-10-03 15:50:00",
+     "sum_open_interest": "97630.9690000000000000"
+    },
+    "archive_at_-900s": {
+     "create_time": "2026-10-03 15:45:00",
+     "sum_open_interest": "97612.8770000000000000"
+    },
+    "archive_at_0s": {
+     "create_time": "2026-10-03 16:00:00",
+     "sum_open_interest": "97654.7300000000000000"
+    }
+   },
+   {
+    "rest_label": "2026-10-03 20:00:00Z",
+    "rest_sum_open_interest": "96744.27300000",
+    "archive_at_-300s": {
+     "create_time": "2026-10-03 19:55:00",
+     "sum_open_interest": "96744.2730000000000000"
+    },
+    "exact_hits": [
+     -300
+    ],
+    "archive_at_-600s": {
+     "create_time": "2026-10-03 19:50:00",
+     "sum_open_interest": "96763.5450000000000000"
+    },
+    "archive_at_-900s": {
+     "create_time": "2026-10-03 19:45:00",
+     "sum_open_interest": "96764.9010000000000000"
+    },
+    "archive_at_0s": {
+     "create_time": "2026-10-03 20:00:00",
+     "sum_open_interest": "96717.6440000000000000"
+    }
+   },
+   {
+    "rest_label": "2026-10-04 00:00:00Z",
+    "rest_sum_open_interest": "97927.84500000",
+    "archive_at_-300s": {
+     "create_time": "2026-10-03 23:55:00",
+     "sum_open_interest": "97927.8450000000000000"
+    },
+    "exact_hits": [
+     -300
+    ],
+    "archive_at_-600s": {
+     "create_time": "2026-10-03 23:50:00",
+     "sum_open_interest": "97297.1660000000000000"
+    },
+    "archive_at_-900s": {
+     "create_time": "2026-10-03 23:45:00",
+     "sum_open_interest": "97388.7470000000000000"
+    },
+    "archive_at_0s": {
+     "create_time": "2026-10-04 00:00:00",
+     "sum_open_interest": "97572.5540000000000000"
+    }
+   },
+   {
+    "rest_label": "2026-10-04 04:00:00Z",
+    "rest_sum_open_interest": "97176.65000000",
+    "archive_at_-300s": {
+     "create_time": "2026-10-04 03:55:00",
+     "sum_open_interest": "97176.6500000000000000"
+    },
+    "exact_hits": [
+     -300
+    ],
+    "archive_at_-600s": {
+     "create_time": "2026-10-04 03:50:00",
+     "sum_open_interest": "97170.7030000000000000"
+    },
+    "archive_at_-900s": {
+     "create_time": "2026-10-04 03:45:00",
+     "sum_open_interest": "97167.6130000000000000"
+    },
+    "archive_at_0s": {
+     "create_time": "2026-10-04 04:00:00",
+     "sum_open_interest": "97184.1820000000000000"
+    }
+   },
+   {
+    "rest_label": "2026-10-04 08:00:00Z",
+    "rest_sum_open_interest": "98158.83100000",
+    "archive_at_-300s": {
+     "create_time": "2026-10-04 07:55:00",
+     "sum_open_interest": "98158.8310000000000000"
+    },
+    "exact_hits": [
+     -300
+    ],
+    "archive_at_-600s": {
+     "create_time": "2026-10-04 07:50:00",
+     "sum_open_interest": "98134.5180000000000000"
+    },
+    "archive_at_-900s": {
+     "create_time": "2026-10-04 07:45:00",
+     "sum_open_interest": "98118.5830000000000000"
+    },
+    "archive_at_0s": {
+     "create_time": "2026-10-04 08:00:00",
+     "sum_open_interest": "98199.1500000000000000"
+    }
+   }
+  ],
+  "精确命中数": 10,
+  "总点数": 10
+ },
+ "B_taker端点与K线": {
+  "对象": "binance takerlongshortRatio(period=4h) vs 热库 5m K线 taker 字段窗口求和",
+  "结论": "同币同窗口买卖比可由 K线 taker_buy_volume/volume 复算；该端点标签 = 窗口起点（与 K线 open_time 同为桶起点，10 点窗口均满 48 根 5m）；但两个官方端点不保证逐位相同：10 点中 6 点买量逐位相等，最大相对残差 0.114% ⇒ 只能称『可复算/近似』",
+  "明细": [
+   {
+    "rest_label": "2026-10-02 16:00:00Z",
+    "rest_buyVol": "21731.2670",
+    "rest_sellVol": "22999.6000",
+    "rest_buySellRatio": "0.9449",
+    "窗口": "[2026-10-02 16:00:00Z, 2026-10-02 19:55:00Z]",
+    "n_5m": 48,
+    "sum_taker_buy_volume": 21731.267,
+    "sum_volume": 44730.867,
+    "derived_buyVol": 21731.267,
+    "derived_sellVol": 22999.6,
+    "derived_buySellRatio": 0.9449,
+    "buyVol_bit_exact": true,
+    "sellVol_bit_exact": true,
+    "ratio_4dp_match": true
+   },
+   {
+    "rest_label": "2026-10-02 20:00:00Z",
+    "rest_buyVol": "9416.2350",
+    "rest_sellVol": "9279.6830",
+    "rest_buySellRatio": "1.0147",
+    "窗口": "[2026-10-02 20:00:00Z, 2026-10-02 23:55:00Z]",
+    "n_5m": 48,
+    "sum_taker_buy_volume": 9416.236,
+    "sum_volume": 18695.923,
+    "derived_buyVol": 9416.236,
+    "derived_sellVol": 9279.687,
+    "derived_buySellRatio": 1.0147,
+    "buyVol_bit_exact": false,
+    "sellVol_bit_exact": false,
+    "ratio_4dp_match": true
+   },
+   {
+    "rest_label": "2026-10-03 00:00:00Z",
+    "rest_buyVol": "3506.3250",
+    "rest_sellVol": "3528.1170",
+    "rest_buySellRatio": "0.9938",
+    "窗口": "[2026-10-03 00:00:00Z, 2026-10-03 03:55:00Z]",
+    "n_5m": 48,
+    "sum_taker_buy_volume": 3506.458,
+    "sum_volume": 7034.583,
+    "derived_buyVol": 3506.458,
+    "derived_sellVol": 3528.125,
+    "derived_buySellRatio": 0.9939,
+    "buyVol_bit_exact": false,
+    "sellVol_bit_exact": false,
+    "ratio_4dp_match": false
+   },
+   {
+    "rest_label": "2026-10-03 04:00:00Z",
+    "rest_buyVol": "2756.0520",
+    "rest_sellVol": "3650.8940",
+    "rest_buySellRatio": "0.7549",
+    "窗口": "[2026-10-03 04:00:00Z, 2026-10-03 07:55:00Z]",
+    "n_5m": 48,
+    "sum_taker_buy_volume": 2757.227,
+    "sum_volume": 6419.04,
+    "derived_buyVol": 2757.227,
+    "derived_sellVol": 3661.813,
+    "derived_buySellRatio": 0.753,
+    "buyVol_bit_exact": false,
+    "sellVol_bit_exact": false,
+    "ratio_4dp_match": false
+   },
+   {
+    "rest_label": "2026-10-03 08:00:00Z",
+    "rest_buyVol": "1954.6760",
+    "rest_sellVol": "1737.3580",
+    "rest_buySellRatio": "1.1251",
+    "窗口": "[2026-10-03 08:00:00Z, 2026-10-03 11:55:00Z]",
+    "n_5m": 48,
+    "sum_taker_buy_volume": 1954.676,
+    "sum_volume": 3692.034,
+    "derived_buyVol": 1954.676,
+    "derived_sellVol": 1737.358,
+    "derived_buySellRatio": 1.1251,
+    "buyVol_bit_exact": true,
+    "sellVol_bit_exact": true,
+    "ratio_4dp_match": true
+   },
+   {
+    "rest_label": "2026-10-03 12:00:00Z",
+    "rest_buyVol": "5521.9160",
+    "rest_sellVol": "4442.0820",
+    "rest_buySellRatio": "1.2431",
+    "窗口": "[2026-10-03 12:00:00Z, 2026-10-03 15:55:00Z]",
+    "n_5m": 48,
+    "sum_taker_buy_volume": 5521.952,
+    "sum_volume": 9964.034,
+    "derived_buyVol": 5521.952,
+    "derived_sellVol": 4442.082,
+    "derived_buySellRatio": 1.2431,
+    "buyVol_bit_exact": false,
+    "sellVol_bit_exact": true,
+    "ratio_4dp_match": true
+   },
+   {
+    "rest_label": "2026-10-03 16:00:00Z",
+    "rest_buyVol": "3100.7510",
+    "rest_sellVol": "3764.4790",
+    "rest_buySellRatio": "0.8237",
+    "窗口": "[2026-10-03 16:00:00Z, 2026-10-03 19:55:00Z]",
+    "n_5m": 48,
+    "sum_taker_buy_volume": 3100.751,
+    "sum_volume": 6865.23,
+    "derived_buyVol": 3100.751,
+    "derived_sellVol": 3764.479,
+    "derived_buySellRatio": 0.8237,
+    "buyVol_bit_exact": true,
+    "sellVol_bit_exact": true,
+    "ratio_4dp_match": true
+   },
+   {
+    "rest_label": "2026-10-03 20:00:00Z",
+    "rest_buyVol": "3982.5650",
+    "rest_sellVol": "5208.1640",
+    "rest_buySellRatio": "0.7647",
+    "窗口": "[2026-10-03 20:00:00Z, 2026-10-03 23:55:00Z]",
+    "n_5m": 48,
+    "sum_taker_buy_volume": 3982.565,
+    "sum_volume": 9190.768,
+    "derived_buyVol": 3982.565,
+    "derived_sellVol": 5208.203,
+    "derived_buySellRatio": 0.7647,
+    "buyVol_bit_exact": true,
+    "sellVol_bit_exact": false,
+    "ratio_4dp_match": true
+   },
+   {
+    "rest_label": "2026-10-04 00:00:00Z",
+    "rest_buyVol": "2203.4090",
+    "rest_sellVol": "2062.4420",
+    "rest_buySellRatio": "1.0683",
+    "窗口": "[2026-10-04 00:00:00Z, 2026-10-04 03:55:00Z]",
+    "n_5m": 48,
+    "sum_taker_buy_volume": 2203.409,
+    "sum_volume": 4265.852,
+    "derived_buyVol": 2203.409,
+    "derived_sellVol": 2062.443,
+    "derived_buySellRatio": 1.0683,
+    "buyVol_bit_exact": true,
+    "sellVol_bit_exact": false,
+    "ratio_4dp_match": true
+   },
+   {
+    "rest_label": "2026-10-04 04:00:00Z",
+    "rest_buyVol": "3661.2080",
+    "rest_sellVol": "2505.8120",
+    "rest_buySellRatio": "1.4611",
+    "窗口": "[2026-10-04 04:00:00Z, 2026-10-04 07:55:00Z]",
+    "n_5m": 48,
+    "sum_taker_buy_volume": 3665.381,
+    "sum_volume": 6171.257,
+    "derived_buyVol": 3665.381,
+    "derived_sellVol": 2505.876,
+    "derived_buySellRatio": 1.4627,
+    "buyVol_bit_exact": false,
+    "sellVol_bit_exact": false,
+    "ratio_4dp_match": false
+   }
+  ],
+  "买量逐位相等点数": 5,
+  "比值4位相等点数": 7,
+  "总点数": 10
+ },
+ "D_多空比端点与归档": {
+  "对象": "binance topLongShortAccountRatio(period=4h) vs 归档 5m count_toptrader_long_short_ratio",
+  "结论": "数值最接近 -300s 边界（即桶起点口径），但 10 点中仅 3 点在 4 位小数上相等；REST 4h 是窗口口径，与归档 5m 口径不逐位相等 ⇒ 不得直接等同",
+  "明细": [
+   {
+    "rest_label": "2026-10-02 20:00:00Z",
+    "rest_longShortRatio": "1.2193",
+    "rest_longAccount": "0.5494",
+    "rest_shortAccount": "0.4506",
+    "count_toptrader_at_-300s": "1.21919633",
+    "round4_-300s": "1.2192",
+    "count_toptrader_at_-600s": "1.21928219",
+    "round4_-600s": "1.2193",
+    "count_toptrader_at_-900s": "1.21847388",
+    "round4_-900s": "1.2185",
+    "bit_equal_any_offset": true
+   },
+   {
+    "rest_label": "2026-10-03 00:00:00Z",
+    "rest_longShortRatio": "1.2604",
+    "rest_longAccount": "0.5576",
+    "rest_shortAccount": "0.4424",
+    "count_toptrader_at_-300s": "1.26048753",
+    "round4_-300s": "1.2605",
+    "count_toptrader_at_-600s": "1.25940545",
+    "round4_-600s": "1.2594",
+    "count_toptrader_at_-900s": "1.25769071",
+    "round4_-900s": "1.2577",
+    "bit_equal_any_offset": false
+   },
+   {
+    "rest_label": "2026-10-03 04:00:00Z",
+    "rest_longShortRatio": "1.2457",
+    "rest_longAccount": "0.5547",
+    "rest_shortAccount": "0.4453",
+    "count_toptrader_at_-300s": "1.24557953",
+    "round4_-300s": "1.2456",
+    "count_toptrader_at_-600s": "1.24534847",
+    "round4_-600s": "1.2453",
+    "count_toptrader_at_-900s": "1.24473294",
+    "round4_-900s": "1.2447",
+    "bit_equal_any_offset": false
+   },
+   {
+    "rest_label": "2026-10-03 08:00:00Z",
+    "rest_longShortRatio": "1.2452",
+    "rest_longAccount": "0.5546",
+    "rest_shortAccount": "0.4454",
+    "count_toptrader_at_-300s": "1.24538933",
+    "round4_-300s": "1.2454",
+    "count_toptrader_at_-600s": "1.24496905",
+    "round4_-600s": "1.2450",
+    "count_toptrader_at_-900s": "1.24554184",
+    "round4_-900s": "1.2455",
+    "bit_equal_any_offset": false
+   },
+   {
+    "rest_label": "2026-10-03 12:00:00Z",
+    "rest_longShortRatio": "1.2517",
+    "rest_longAccount": "0.5559",
+    "rest_shortAccount": "0.4441",
+    "count_toptrader_at_-300s": "1.25156613",
+    "round4_-300s": "1.2516",
+    "count_toptrader_at_-600s": "1.25057138",
+    "round4_-600s": "1.2506",
+    "count_toptrader_at_-900s": "1.25066895",
+    "round4_-900s": "1.2507",
+    "bit_equal_any_offset": false
+   },
+   {
+    "rest_label": "2026-10-03 16:00:00Z",
+    "rest_longShortRatio": "1.2472",
+    "rest_longAccount": "0.5550",
+    "rest_shortAccount": "0.4450",
+    "count_toptrader_at_-300s": "1.24716288",
+    "round4_-300s": "1.2472",
+    "count_toptrader_at_-600s": "1.24662563",
+    "round4_-600s": "1.2466",
+    "count_toptrader_at_-900s": "1.24598673",
+    "round4_-900s": "1.2460",
+    "bit_equal_any_offset": true
+   },
+   {
+    "rest_label": "2026-10-03 20:00:00Z",
+    "rest_longShortRatio": "1.2452",
+    "rest_longAccount": "0.5546",
+    "rest_shortAccount": "0.4454",
+    "count_toptrader_at_-300s": "1.24513481",
+    "round4_-300s": "1.2451",
+    "count_toptrader_at_-600s": "1.24447663",
+    "round4_-600s": "1.2445",
+    "count_toptrader_at_-900s": "1.24450427",
+    "round4_-900s": "1.2445",
+    "bit_equal_any_offset": false
+   },
+   {
+    "rest_label": "2026-10-04 00:00:00Z",
+    "rest_longShortRatio": "1.2467",
+    "rest_longAccount": "0.5549",
+    "rest_shortAccount": "0.4451",
+    "count_toptrader_at_-300s": "1.24665374",
+    "round4_-300s": "1.2467",
+    "count_toptrader_at_-600s": "1.24632360",
+    "round4_-600s": "1.2463",
+    "count_toptrader_at_-900s": "1.24606266",
+    "round4_-900s": "1.2461",
+    "bit_equal_any_offset": true
+   },
+   {
+    "rest_label": "2026-10-04 04:00:00Z",
+    "rest_longShortRatio": "1.2619",
+    "rest_longAccount": "0.5579",
+    "rest_shortAccount": "0.4421",
+    "count_toptrader_at_-300s": "1.26168190",
+    "round4_-300s": "1.2617",
+    "count_toptrader_at_-600s": "1.26151023",
+    "round4_-600s": "1.2615",
+    "count_toptrader_at_-900s": "1.26103071",
+    "round4_-900s": "1.2610",
+    "bit_equal_any_offset": false
+   },
+   {
+    "rest_label": "2026-10-04 08:00:00Z",
+    "rest_longShortRatio": "1.2589",
+    "rest_longAccount": "0.5573",
+    "rest_shortAccount": "0.4427",
+    "count_toptrader_at_-300s": "1.25908855",
+    "round4_-300s": "1.2591",
+    "count_toptrader_at_-600s": "1.25625624",
+    "round4_-600s": "1.2563",
+    "count_toptrader_at_-900s": "1.25629126",
+    "round4_-900s": "1.2563",
+    "bit_equal_any_offset": false
+   }
+  ],
+  "4位相等点数": 3,
+  "总点数": 10
+ },
+ "E_5m桶taker近似": {
+  "对象": "BTCUSDT 2026-09-10 归档 sum_taker_long_short_vol_ratio vs 冷档 5m K线",
+  "结论": "同桶（偏移 0）对齐成立；数值近似而非逐位相等",
+  "明细": [
+   {
+    "口径": "base taker_buy_volume/(volume-tbv)",
+    "偏移分钟": 0,
+    "n": 288,
+    "中位绝对差": 0.000164,
+    "≤1e-3占比": 77.4,
+    "≤1e-2占比": 94.8
+   },
+   {
+    "口径": "base taker_buy_volume/(volume-tbv)",
+    "偏移分钟": -5,
+    "n": 288,
+    "中位绝对差": 0.390825,
+    "≤1e-3占比": 0.0,
+    "≤1e-2占比": 1.4
+   },
+   {
+    "口径": "base taker_buy_volume/(volume-tbv)",
+    "偏移分钟": 5,
+    "n": 288,
+    "中位绝对差": 0.390954,
+    "≤1e-3占比": 0.0,
+    "≤1e-2占比": 1.4
+   },
+   {
+    "口径": "quote taker_buy_quote/(quote-tbq)",
+    "偏移分钟": 0,
+    "n": 288,
+    "中位绝对差": 3.2e-05,
+    "≤1e-3占比": 77.8,
+    "≤1e-2占比": 94.8
+   },
+   {
+    "口径": "quote taker_buy_quote/(quote-tbq)",
+    "偏移分钟": -5,
+    "n": 288,
+    "中位绝对差": 0.390916,
+    "≤1e-3占比": 0.0,
+    "≤1e-2占比": 1.4
+   },
+   {
+    "口径": "quote taker_buy_quote/(quote-tbq)",
+    "偏移分钟": 5,
+    "n": 288,
+    "中位绝对差": 0.390944,
+    "≤1e-3占比": 0.0,
+    "≤1e-2占比": 1.4
+   }
+  ]
+ },
+ "F_OKX_taker可用性": {
+  "对象": "热库 candle_versions taker 列空值率",
+  "结论": "币安 0% 空（可复算）；OKX 100% 空（OKX K线响应无该字段，candle_field_notes 已记录） ⇒ 币安结论不得外推 OKX",
+  "明细": [
+   {
+    "exchange": "binance",
+    "rows": 5865913,
+    "empty_taker_buy_volume": 0,
+    "empty_taker_buy_quote_volume": 0,
+    "empty_pct": 0.0
+   },
+   {
+    "exchange": "okx",
+    "rows": 318056,
+    "empty_taker_buy_volume": 318056,
+    "empty_taker_buy_quote_volume": 318056,
+    "empty_pct": 100.0
+   }
+  ]
+ }
+}

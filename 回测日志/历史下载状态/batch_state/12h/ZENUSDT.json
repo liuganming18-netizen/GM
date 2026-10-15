@@ -1,0 +1,1319 @@
+{
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2020-11.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2020-11.zip",
+  "kind": "monthly",
+  "period": "2020-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2020-11.zip",
+  "bytes": 883,
+  "sha256": "c967b48fd3eeb5d52b9dd521533c24867da7b4bd1e72d876207af29ea7c98440",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21914,
+   "新增版本数": 14,
+   "状态": "已入库"
+  },
+  "source_id": 21914,
+  "rows": 14
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2020-12.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2020-12.zip",
+  "kind": "monthly",
+  "period": "2020-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2020-12.zip",
+  "bytes": 3144,
+  "sha256": "d2fce8630795a8d5a3955c7a9d0134c5d063f4076e1c5f1f06d58b73247c9df0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21915,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21915,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-01.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-01.zip",
+  "kind": "monthly",
+  "period": "2021-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-01.zip",
+  "bytes": 3253,
+  "sha256": "0559b7461cb840d615ee40a44c83a93e730aee84fc66c5abcec1c7ac0f6549db",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21916,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21916,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-02.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-02.zip",
+  "kind": "monthly",
+  "period": "2021-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-02.zip",
+  "bytes": 2989,
+  "sha256": "1c1e9b23e65950b93fd9e893d087731ec3368d38c89866a4bbaf79722b54f824",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21917,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 21917,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-03.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-03.zip",
+  "kind": "monthly",
+  "period": "2021-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-03.zip",
+  "bytes": 3227,
+  "sha256": "7f5c8bcb79258d83e20e63af60dc016552cda4481b10f7ecde6677e27594e37f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21918,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21918,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-04.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-04.zip",
+  "kind": "monthly",
+  "period": "2021-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-04.zip",
+  "bytes": 3293,
+  "sha256": "f1817e18b7a97133ab2a6cef73d2a478261bbd32acd638022a4e0db1c9ddbd56",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21919,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21919,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-06.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-06.zip",
+  "kind": "monthly",
+  "period": "2021-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-06.zip",
+  "bytes": 3204,
+  "sha256": "14d4ef4ce2d7e5f5d56011221adb7794260bfe9bc49dba42b8e346827f53928a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21921,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21921,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-05.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-05.zip",
+  "kind": "monthly",
+  "period": "2021-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-05.zip",
+  "bytes": 3408,
+  "sha256": "833b9808dd19f745b80847c06f0215626ed27851be50cb2fa4e18c66af8d19e9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21920,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21920,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-07.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-07.zip",
+  "kind": "monthly",
+  "period": "2021-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-07.zip",
+  "bytes": 3228,
+  "sha256": "33021bfb1250eb5621cfecd33be0717d17e95384f05ecb66377c6fa8c6b0094c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21922,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21922,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-08.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-08.zip",
+  "kind": "monthly",
+  "period": "2021-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-08.zip",
+  "bytes": 3284,
+  "sha256": "0721ccbc1e826537cc0d8d4ec31b77bccdb02883e807f0e76c63f263775b1b24",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21923,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21923,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-09.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-09.zip",
+  "kind": "monthly",
+  "period": "2021-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-09.zip",
+  "bytes": 3234,
+  "sha256": "3ed320879036a308b63eaafce456f2d0cd3bf91a0f2c80304b735084c00f6563",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21924,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21924,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-10.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-10.zip",
+  "kind": "monthly",
+  "period": "2021-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-10.zip",
+  "bytes": 3277,
+  "sha256": "04267518086fe178b8b198a6b94b2ecc844b5fd3d30668e9d4676c0880aacffb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21925,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21925,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-11.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-11.zip",
+  "kind": "monthly",
+  "period": "2021-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-11.zip",
+  "bytes": 3275,
+  "sha256": "7bcdc700504c17210d5effff8e445e8543a02bb5739c0b9fca9081c5b08659cc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21926,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21926,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-12.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-12.zip",
+  "kind": "monthly",
+  "period": "2021-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2021-12.zip",
+  "bytes": 3312,
+  "sha256": "1e7a82203c12fa4565f15f55238c087267da71a3933399f8adad86a97a065544",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21927,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21927,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-02.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-02.zip",
+  "kind": "monthly",
+  "period": "2022-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-02.zip",
+  "bytes": 2756,
+  "sha256": "49c85656305fbcbdb05f64849da70270e3a195de260d1dd58ff8d892003d4557",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21929,
+   "新增版本数": 50,
+   "状态": "已入库"
+  },
+  "source_id": 21929,
+  "rows": 50
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-01.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-01.zip",
+  "kind": "monthly",
+  "period": "2022-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-01.zip",
+  "bytes": 3387,
+  "sha256": "cad8b3b838d4b2323469f5883f6f054dea006657ed34f228e048bca45e54ff0c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21928,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21928,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-03.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-03.zip",
+  "kind": "monthly",
+  "period": "2022-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-03.zip",
+  "bytes": 3268,
+  "sha256": "415338c3fa03b54b0589f0fd0c03279cc3397ffbeeb0dd76e8320ff474ddbaf4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21930,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21930,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-04.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-04.zip",
+  "kind": "monthly",
+  "period": "2022-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-04.zip",
+  "bytes": 3027,
+  "sha256": "439d8cb034fc44298dd83be028a6a42c1eb04db21ba0b24c024c8552d1c36e21",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21931,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 21931,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-05.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-05.zip",
+  "kind": "monthly",
+  "period": "2022-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-05.zip",
+  "bytes": 3339,
+  "sha256": "d22093bd9182cbe35b6997d0412fcbcc05cfd2dc36fe12bd9507e978160595d0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21932,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21932,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-06.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-06.zip",
+  "kind": "monthly",
+  "period": "2022-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-06.zip",
+  "bytes": 3152,
+  "sha256": "1d3071873763bf55e5227c57dbf93b8ee7a9c1089a51e93ee02a42f9b25ad59c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21933,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21933,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-07.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-07.zip",
+  "kind": "monthly",
+  "period": "2022-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-07.zip",
+  "bytes": 3287,
+  "sha256": "7552075b8f5a823490e8cb5c2270dae87b4e77d371239351bd0e2acf16364556",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21934,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21934,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-08.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-08.zip",
+  "kind": "monthly",
+  "period": "2022-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-08.zip",
+  "bytes": 3288,
+  "sha256": "d70d960d62b1380d6db9aea430350fa81794dd2072602d60b23099f0ea46ee67",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21935,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21935,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-09.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-09.zip",
+  "kind": "monthly",
+  "period": "2022-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-09.zip",
+  "bytes": 3122,
+  "sha256": "5b3f392cc7d373aea059a9d25b1f5e52b8de3e800d931beab50b50f6a8b344bb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21936,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21936,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-10.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-10.zip",
+  "kind": "monthly",
+  "period": "2022-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-10.zip",
+  "bytes": 3200,
+  "sha256": "e57aba48f0c66011d0f1704b13b5f99ea55685cb344fc955fd97232d21de13e6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21937,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21937,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-11.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-11.zip",
+  "kind": "monthly",
+  "period": "2022-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-11.zip",
+  "bytes": 3130,
+  "sha256": "174eb86ba00a980c8a527bd56191a2b2323950b41c31aeac3994b37010a9264d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21938,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21938,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-12.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-12.zip",
+  "kind": "monthly",
+  "period": "2022-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2022-12.zip",
+  "bytes": 3185,
+  "sha256": "61d05a74f5a50372a4322ea85ea45a9afda0375f167e6836e99e7e7eb2875d87",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21939,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21939,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-01.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-01.zip",
+  "kind": "monthly",
+  "period": "2023-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-01.zip",
+  "bytes": 3247,
+  "sha256": "5c2d380475350b3401abdc1742a41fae877323b67391e49dbe0cd2537241d86d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21940,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21940,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-02.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-02.zip",
+  "kind": "monthly",
+  "period": "2023-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-02.zip",
+  "bytes": 3041,
+  "sha256": "97a5eeaeb1bf158320d03c5d5fe40231e3af2b3b2adb6fa33efecf207938b533",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21941,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 21941,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-03.zip",
+  "bytes": 3244,
+  "sha256": "513efea192ca7b3d4109ca1a905c4f8bbed129733f8b820fbef4652dac77f5f0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21942,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21942,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-04.zip",
+  "bytes": 3117,
+  "sha256": "a72c5bb7b7e11114cdd7aaa1f7bff020f520ace2e97f27c0a06001974dbbaf05",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21943,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21943,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-05.zip",
+  "bytes": 3126,
+  "sha256": "a411a49bfd91158a73b18275049213dbd2cac1a3ff7080a2ae31118109c94010",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21944,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21944,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-06.zip",
+  "bytes": 3092,
+  "sha256": "df9a0ff289200513aec821755b9ae9d8cc33fd9a679dfa05430e5ae576aff5ea",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21945,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21945,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-07.zip",
+  "bytes": 3270,
+  "sha256": "9ae86c768f412e9e331ecf29493c93ede7b5b8c842f2477cfd6666686ecdb8a4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21946,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21946,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-08.zip",
+  "bytes": 3185,
+  "sha256": "a532a7394ba7dca95ba4b0770b14f70362b04a103beb4329e2b5a2d52df8b9ce",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21947,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21947,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-09.zip",
+  "bytes": 3058,
+  "sha256": "24bce4ddb453849b08095384736e803dbbfa8c9f62c2ee631fcc55e27ff2744d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21948,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21948,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-10.zip",
+  "bytes": 3139,
+  "sha256": "b4f6aabe14beea1bc16927f00adb9c23f1427b7f976805777e77c4f03124b0a9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21949,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21949,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-11.zip",
+  "bytes": 3173,
+  "sha256": "2bbde28f4ae5cfd67c4b40239a8e9eb4fbda7dc7c41171a3b80753badc7a8dd2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21950,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21950,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2023-12.zip",
+  "bytes": 3230,
+  "sha256": "e028edfb6167408a3d3f26548f26d3c24a880a971a4a167dde9807bdf3a0d93d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21951,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21951,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-01.zip",
+  "bytes": 3246,
+  "sha256": "8968f658bfa1389111a67ddc5d72c487e8cd6553b40975b1431ab53441e8715b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21952,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21952,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-02.zip",
+  "bytes": 3059,
+  "sha256": "1d2ba0b2a23b720ba677670cac3e82c55870ad71482e6cd3497c4b576e0dd487",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21953,
+   "新增版本数": 58,
+   "状态": "已入库"
+  },
+  "source_id": 21953,
+  "rows": 58
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-03.zip",
+  "bytes": 3312,
+  "sha256": "c0113190c5673860029f7fd5be4df993f191ce86d2f9128c940f2fd81392c7c1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21954,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21954,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-04.zip",
+  "bytes": 3135,
+  "sha256": "26662e7c2051e3b866f44a1436a9b6064359c6209e31b410e1eb25c87150aafa",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21955,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21955,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-05.zip",
+  "bytes": 3122,
+  "sha256": "ba7750a7f8c15c6d0f3c88a47326f39995a0d54b73de83448aac6c6ff4d5c7eb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21956,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21956,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-07.zip",
+  "bytes": 3404,
+  "sha256": "bb2abba6669cf37251e66a01b810c3c72ca27362af5d462e197a730ed3aa07e4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21958,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21958,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-06.zip",
+  "bytes": 3039,
+  "sha256": "f18be75271c695ec8fe44fbe91a687ebb1c48a25894c89eca7c8ef9ef404bb38",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21957,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21957,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-08.zip",
+  "bytes": 3221,
+  "sha256": "98ec06ed533a8aaf6f6658304a5d144aa1b7273e75c5465ba824a5912a53986c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21959,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21959,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-09.zip",
+  "bytes": 3080,
+  "sha256": "78c32b5d91e0cf06a79e11d6be34a9bd57339a5132033830840013ea7f0fd961",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21960,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21960,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-10.zip",
+  "bytes": 3143,
+  "sha256": "eee6205c09e5db461682a9c2414afe077d86bc16d60de9cb3fd8d6c30650f9cf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21961,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21961,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-11.zip",
+  "bytes": 3184,
+  "sha256": "3caeba11ac273f210e68d3fc598972e324a69d0c9770655d6153cdf5cafb7ca0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21962,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21962,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2024-12.zip",
+  "bytes": 3471,
+  "sha256": "19f75a1e12ea9b1af655f57a87590d6e6ff5a2c28b581092eec090cb1dd34826",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21963,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21963,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-01.zip",
+  "bytes": 3473,
+  "sha256": "cb382af7b8cc090b9f419832ec47442f1909d817fcadf17dfe865dd0a9383e1a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21964,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21964,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-02.zip",
+  "bytes": 3089,
+  "sha256": "6bd1e8a846c7fcfdf9e54d3cde622a438989b6289db3b965553433e14f515242",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21965,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 21965,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-03.zip",
+  "bytes": 3285,
+  "sha256": "558523ee1b123e80e89b1ecb68127b54f745ba350ce0f72df9f9ca6249ec6a81",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21966,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21966,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-04.zip",
+  "bytes": 3098,
+  "sha256": "0fdbf03e7a9472009e53afc3d9da3abcec3cd6bf2d8fe4f462d186e12c2462b0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21967,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21967,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-05.zip",
+  "bytes": 3225,
+  "sha256": "d60755ee2de10cb6ad9ea555d2d2bfb8612c76766baf42944ba8b798ce0b637a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21968,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21968,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-06.zip",
+  "bytes": 3185,
+  "sha256": "1e9443725f0c0c1c1112ce555c97f5368614cdd04f51220d9cfcce130b2ce38f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21969,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21969,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-07.zip",
+  "bytes": 3213,
+  "sha256": "df40d270eeceb72267ae09e7cb8de40d77dee495373ca2877626612db56945b1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21970,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21970,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-08.zip",
+  "bytes": 3166,
+  "sha256": "d92cbdc5302bf3a54182a37880fd2ef3822b35cfe6947d0878501b0a98bf4d57",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21971,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21971,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-09.zip",
+  "bytes": 3074,
+  "sha256": "93e1e318edf2b9641a77c0b4cbb04108e5e6ce57a4a72fe53fc6bd4b550ccd0f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21972,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21972,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-10.zip",
+  "bytes": 3447,
+  "sha256": "92d9071e58abd70d12942ed5215708fe574cf56554cd63dfd88a598fb4124566",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21973,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21973,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-11.zip",
+  "bytes": 3403,
+  "sha256": "33b78729eac8c457d3f5dd999be0f4b1e49348293863ef97fb85add937205591",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21974,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21974,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2025-12.zip",
+  "bytes": 3307,
+  "sha256": "8ebc87a124e4a225920de0e789da3e6c568bf76a8fcae4d70116891d5aa58ee5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21975,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21975,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-01.zip",
+  "bytes": 3367,
+  "sha256": "af6f2e0ecc5802a987ffe95395382b8e6d40ad53fa7fa287f63315a446036434",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21976,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21976,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-02.zip",
+  "bytes": 2953,
+  "sha256": "b6d62e6d57bd8a9259ef4509b59c439befc080c809f7713e5ef852f873a96a1b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21977,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 21977,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-03.zip",
+  "bytes": 3184,
+  "sha256": "3ec1636f3eee0a98ccfc45d167a6760cbbe30a1f2776c15acd902bedfc318ecc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21978,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21978,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-04.zip",
+  "bytes": 3114,
+  "sha256": "07e20c7cc2633324083a2002902e1fdf876725d643115d3c7a22bae5473e17cb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21979,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21979,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-05.zip",
+  "bytes": 3236,
+  "sha256": "d24c8c1a6b792417a8d7a27eeffb5cda2528957221d50fd72dbd2482c75e86db",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21980,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21980,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-06.zip",
+  "bytes": 3079,
+  "sha256": "493c31b424a6fae6adc45ef5c6778da8e594f4d21963e5ca59c029e9ed56764a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21981,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21981,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-07.zip",
+  "bytes": 3103,
+  "sha256": "8b827cff44b85fded26c74cf5b90974804731079d9f830bb2f48f78d95dc8c7d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21982,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21982,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-08.zip",
+  "bytes": 3154,
+  "sha256": "634f5980e0677a3102789e7c0e3059d4131d41f5d6248e21a1ea018162b40898",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21983,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21983,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZENUSDT/12h/ZENUSDT-12h-2026-09.zip",
+  "bytes": 3220,
+  "sha256": "da38139ec1979a67dfecdfb87240acd072a89c24a4ef8868e343e7b78a390828",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21984,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21984,
+  "rows": 60
+ },
+ "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-01.zip",
+  "bytes": 394,
+  "sha256": "ee61fad804680837cbacf02dd36d223257e4970c3fee00d6af63c8e6c554a609",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21911,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 21911,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-02.zip",
+  "bytes": 395,
+  "sha256": "77f898257108b9e651f76e9f35049ceedc737e8dd65e0a73c8d35bfad7aea61a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21912,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 21912,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-04.zip",
+  "bytes": 391,
+  "sha256": "9f083e2c82a47b2ef598c0ea21ea59c7a2509507cf0972a4971fbb0ab0356e9e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 124150,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 124150,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-03.zip",
+  "bytes": 392,
+  "sha256": "3d5f144df63f38ebf155c11e2c92a973d2397f1e1d16741b0095a7b4100139ca",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21913,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 21913,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-05.zip",
+  "bytes": 395,
+  "sha256": "58811ec135f7ca50b9dd9fb3e22e17f6025256ce6fed5396ed56580b4d1bba08",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 266491,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 266491,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-06.zip",
+  "bytes": 395,
+  "sha256": "b50e3f8a026a45e25377d9f0186cfdc6860f69f85fb20135a7c5fc76ac9597a1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1606903,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1606903,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ZENUSDT/12h/ZENUSDT-12h-2026-10-07.zip",
+  "status": "missing_in_archive",
+  "note": "官方归档或 CHECKSUM 不存在（日度按需探测，404 即缺失）；不计为完成"
+ }
+}

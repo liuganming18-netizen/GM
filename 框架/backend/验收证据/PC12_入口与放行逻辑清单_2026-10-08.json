@@ -1,0 +1,168 @@
+{
+ "generated_utc": "2026-10-08T08:35:21Z",
+ "scope": "六周期全池历史补齐（1d→12h→8h→4h→1h→30m）",
+ "rule": "唯一正式运行入口 = logs/_pool_pipeline.py；唯一放行逻辑 = check_fill + check_verify；差异用参数/小适配表达；不静默扩展到 15m/5m。",
+ "canonical": {
+  "run_entry": {
+   "path": "logs/_pool_pipeline.py",
+   "role": "唯一正式运行入口（编排：周期推进 / 断点 / 退避 / 无进展即停）",
+   "why": "项目既有成熟编排器；PERIODS 已含 1d/12h/8h/4h/1h/30m 且 8h 显式 binance-only（OKX 无原生 8h，不合成）；以 --periods 显式限定即不会静默扩到 15m/5m。",
+   "size": 37119
+  },
+  "release_logic": {
+   "paths": [
+    "logs/_pool_pipeline.py::check_fill",
+    "logs/_pool_pipeline.py::check_verify"
+   ],
+   "role": "唯一放行逻辑（补齐层 + 验收层）",
+   "why": "check_fill 逐条复算 status∈ok 集合、复算 symbols_ok/failed、核对真实标的池键集；check_verify 逐币完整性恒等式 + 逐条复算 totals + 强制根层 tf/last_closed_open。两函数均已按用户历次退回加固，是唯一被授权的放行判据。"
+  },
+  "verifier": {
+   "path": "logs/_pool_verify.py",
+   "role": "唯一验收器（产出 vrep，供 check_verify 消费）",
+   "why": "已实现：官方可得最早=min(官方归档,REST最早)、库内首根不作起点候选、UNKNOWN、合约身份实质核验 _audit_identity、官方已证不存在区间须逐区间证据、异边界 boundary_mixed、PENDING_IDENTITY 阻塞。",
+   "size": 64866
+  },
+  "filler": {
+   "path": "logs/_pool_restfill.py",
+   "role": "唯一 REST 补齐器（头/中/尾 + 正文证据 + 幂等入库）",
+   "size": 77162
+  },
+  "identity": {
+   "path": "logs/_pool_identity.py",
+   "role": "身份核验产出器（供 --identity 传入验收器）",
+   "size": 12922
+  }
+ },
+ "adapters": [
+  {
+   "path": "历史下载/_work_6tf_chain.py",
+   "role": "六周期驱动适配器（本 run 的实际驱动）",
+   "relation": "等价于 `_pool_pipeline.py --periods 1d,12h,8h,4h,1h,30m --deadline <固定>`；TF_ORDER 只含六周期，不静默扩展到 15m/5m。",
+   "change_2026_10_08": "新增 --data-only（归档优先：只取数三步，验收另判）；文件头标注唯一入口/唯一放行逻辑。",
+   "keep_reason": "本 run 已在飞行中（1d/12h/8h 已过、4h 取数中）；保留断点与数据。",
+   "size": 10102
+  },
+  {
+   "path": "logs/_pool_gate.py",
+   "role": "DB 级覆盖核验适配器（被 _audit_pool_coverage / _final_acceptance_6tf 共用）",
+   "relation": "**不是第二套放行判据**；身份是否「已核」直接复用 `_pool_verify._audit_identity` 的实质核验。",
+   "change_2026_10_08": "① 周期长度常量改由 `data_hub.store.INTERVAL_MS` 提供（去重）；② load_identity 不再裁剪字段（保留 applies_to/basis）；③ 头段身份判定改为调用 canonical `_audit_identity`。",
+   "keep_reason": "6 周期驱动需直接读库做 DB 级覆盖核验；收敛后与 canonical 逐项一致。",
+   "size": 16600
+  },
+  {
+   "path": "历史下载/_final_acceptance_6tf.py",
+   "role": "六周期最终验收（门禁）",
+   "relation": "判据来自 `logs/_pool_gate.evaluate_tf`（已与 canonical 对齐）；存在未决→返回 4。",
+   "size": 5667
+  },
+  {
+   "path": "历史下载/_audit_pool_coverage.py",
+   "role": "逐标的覆盖审计（与最终验收同源）",
+   "relation": "与 `_final_acceptance_6tf.py` 共用 `_pool_gate`，杜绝「审计放行/验收不放行」分叉。",
+   "size": 6028
+  },
+  {
+   "path": "历史下载/_pool_manifest_6tf.py",
+   "role": "全池完成清单（最终交付用，只读汇总）",
+   "relation": "读 PC6 验收产物 + 豁免台账 + coverage_cache；文件存在/退出 0 不等于完成。",
+   "size": 6635
+  },
+  {
+   "path": "logs/_build_exemptions_identity.py",
+   "role": "周期绑定豁免台账生成器（证据文件 + sha256）",
+   "size": 18264
+  },
+  {
+   "path": "logs/_probe_8h_gap_evidence.py",
+   "role": "8h 代际缝隙官方不可得取证（P11）",
+   "size": 8467
+  },
+  {
+   "path": "logs/_probe_tf_gap_evidence.py",
+   "role": "4h/1h/30m 代际缝隙官方不可得取证（P12）",
+   "size": 9710
+  }
+ ],
+ "retired": [
+  {
+   "path": "logs/_k02_gate_positive_test.py",
+   "superseded_by": "tests/test_pool_gate.py",
+   "keep_reason": "历次退回的正反例回归留档；不再被任何入口调用。",
+   "called_by": []
+  },
+  {
+   "path": "logs/_k02_gate_positive_test_v2.py",
+   "superseded_by": "tests/test_pool_gate.py",
+   "keep_reason": "同上（留档）。",
+   "called_by": []
+  },
+  {
+   "path": "logs/_k02_gate_positive_test_v3.py",
+   "superseded_by": "tests/test_pool_gate.py",
+   "keep_reason": "同上（留档）。",
+   "called_by": []
+  },
+  {
+   "path": "logs/_k02_gate_positive_test_v4.py",
+   "superseded_by": "tests/test_pool_gate.py",
+   "keep_reason": "同上（留档）。",
+   "called_by": []
+  },
+  {
+   "path": "logs/_k02_fix_identity.py",
+   "superseded_by": "logs/_pool_identity.py",
+   "keep_reason": "曾产出 applies_to/basis schema 的身份记录；保留以溯源 schema 差异。",
+   "called_by": []
+  },
+  {
+   "path": "logs/_k02_fix_identity_v2.py",
+   "superseded_by": "logs/_pool_identity.py",
+   "keep_reason": "同上；**重要**：其 schema 是 canonical 验收器所要求的 applies_to/basis。",
+   "called_by": []
+  },
+  {
+   "path": "历史下载/_phaseAB_chain.py",
+   "superseded_by": "logs/_pool_pipeline.py",
+   "keep_reason": "阶段A/B 旧编排；不再调用。",
+   "called_by": []
+  },
+  {
+   "path": "历史下载/_phaseA_inventory.py",
+   "superseded_by": "历史下载/_pool_manifest_6tf.py",
+   "keep_reason": "阶段A 盘点一次性脚本。",
+   "called_by": []
+  },
+  {
+   "path": "历史下载/_phaseA_progress.py",
+   "superseded_by": "历史下载/_pool_manifest_6tf.py",
+   "keep_reason": "阶段A 进度一次性脚本。",
+   "called_by": []
+  },
+  {
+   "path": "历史下载/_phaseB_reconcile.py",
+   "superseded_by": "历史下载/_audit_pool_coverage.py",
+   "keep_reason": "阶段B 对账一次性脚本。",
+   "called_by": []
+  },
+  {
+   "path": "logs/_repro_acceptance_2.py",
+   "superseded_by": "tests/test_pool_gate.py",
+   "keep_reason": "一次性复现脚本。",
+   "called_by": []
+  },
+  {
+   "path": "logs/_prove_readonly_12h.py",
+   "superseded_by": "logs/_pool_gate.py",
+   "keep_reason": "12h 只读一次性验证。",
+   "called_by": []
+  },
+  {
+   "path": "logs/_smoke_nonreadonly.py",
+   "superseded_by": "logs/_pool_pipeline.py",
+   "keep_reason": "一次性冒烟。",
+   "called_by": []
+  }
+ ]
+}

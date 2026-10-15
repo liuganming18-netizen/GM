@@ -1,0 +1,291 @@
+{
+ "captured_at": "2026-10-08T01:59:26Z",
+ "index": {
+  "elapsed_s": 1153.77,
+  "failed": 0,
+  "failures": [
+   "binance:1000000BOBUSDT → 币安聪明钱接口对该合约返回 `data:null`（**该合约无聪明钱覆盖**，不是错误）；不填 0、不用其它指标顶替。",
+   "binance:PROMPTUSDT → 币安聪明钱接口对该合约返回 `data:null`（**该合约无聪明钱覆盖**，不是错误）；不填 0、不用其它指标顶替。",
+   "binance:PUMPBTCUSDT → 币安聪明钱接口对该合约返回 `data:null`（**该合约无聪明钱覆盖**，不是错误）；不填 0、不用其它指标顶替。"
+  ],
+  "full_pool": true,
+  "head_n": 526,
+  "head_symbols": [
+   "0GUSDT",
+   "1000000BOBUSDT",
+   "1000000MOGUSDT",
+   "1000BONKUSDT",
+   "1000CATUSDT",
+   "1000CHEEMSUSDT",
+   "1000FLOKIUSDT",
+   "1000LUNCUSDT"
+  ],
+  "interval_s": 300,
+  "mode": "bapi（overview+details/stats+details/list，单标≤3次）",
+  "note": "快照由**现有采集工作器**周期写入；本机 API **只读快照**，前端读取**不触发**任何交易所请求",
+  "ok": 523,
+  "requests": {
+   "attempts": 1578,
+   "cached": 0,
+   "deferred": 0,
+   "failed": 0,
+   "rejected": 0,
+   "upstream": 1578
+  },
+  "skipped": 3,
+  "snapshot_dir": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/快照/smart_money",
+  "source": "币安公开页面 bapi（www.binance.bh/bapi/futures/v1/public/future/smart-money/signal/*，无鉴权只读）",
+  "targets": 526,
+  "time_range": "ALL",
+  "updated_at": "2026-10-08T01:59:07Z",
+  "updated_at_ms": 1791424747676
+ },
+ "collector": {
+  "last_round_at": "2026-10-08T01:59:07Z",
+  "last_round_age_seconds": 18.5,
+  "status": "ok",
+  "note": "最近一轮采集完成时点；用于区分「采集停摆」与「该标的未被覆盖」"
+ },
+ "coverage": {
+  "symbols_on_disk": 523,
+  "freshness": {
+   "ok": 262,
+   "stale": 261,
+   "unknown": 0
+  },
+  "age_seconds": {
+   "min": 18.7,
+   "max": 1170.3
+  },
+  "stale_after_s": 600,
+  "continuous_set": {
+   "targets": 526,
+   "ok": 523,
+   "skipped": 3,
+   "failed": 0,
+   "full_pool": true,
+   "head_n": 526,
+   "interval_s": 300,
+   "updated_at": "2026-10-08T01:59:07Z",
+   "elapsed_s": 1153.77,
+   "mode_run": null
+  },
+  "collector": {
+   "last_round_at": "2026-10-08T01:59:07Z",
+   "last_round_age_seconds": 18.9,
+   "status": "ok",
+   "note": "最近一轮采集完成时点；用于区分「采集停摆」与「该标的未被覆盖」"
+  }
+ },
+ "symbols": [
+  {
+   "symbol": "ARXUSDT",
+   "available": true,
+   "snapshot_refreshed_at": "2026-10-08T01:41:51Z",
+   "snapshot_refreshed_at_ms": 1791423711944,
+   "local_fetched_at": "2026-10-08T01:41:51Z",
+   "trade_event_time": "2026-10-08T01:40:52Z",
+   "upstream_snapshot_time": null,
+   "update_time": "2026-10-07T06:19:49Z",
+   "quality": {
+    "basis": "本机快照落盘时点 snapshot_refreshed_at",
+    "stale_after_s": 600,
+    "local_fetched_at": "2026-10-08T01:41:51Z",
+    "trade_event_time": "2026-10-08T01:40:52Z",
+    "upstream_snapshot_time": null,
+    "upstream_snapshot_time_note": "币安未公开上游数据快照时点 ⇒ null；本模块不据此判断新鲜度",
+    "status": "stale",
+    "age_seconds": 1054.2,
+    "note": "本机取回 2026-10-08T01:41:51Z，1054s 前，阈值 600s（=采集周期×2，**不随扫描用时放宽**）；交易活动时间 2026-10-08T01:40:52Z（仅活跃度，**非**陈旧判据）；`overview.updateTime` 为日级队列标记，不参与新鲜度判定",
+    "event_time": "2026-10-08T01:41:51Z"
+   },
+   "source_refs": [
+    {
+     "endpoint": "overview",
+     "call_id": 204310,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:41:50Z",
+     "sha256": "fe527cc526d2d65274916276af9e46bcf4f1215de7d3c11e4621c48a486ab15d",
+     "http_status": 200,
+     "bytes": 653
+    },
+    {
+     "endpoint": "details/stats",
+     "call_id": 204312,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:41:51Z",
+     "sha256": "a6cbd27c31cd81d4472ca0f6ba45cb058efa32c50ad8f995c096cb2e36fa3abb",
+     "http_status": 200,
+     "bytes": 411
+    },
+    {
+     "endpoint": "details/list",
+     "call_id": 204314,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:41:51Z",
+     "sha256": "39b057651abb55e9502d19e5d085a6512caac89a746488837dda9bd14c2b3bec",
+     "http_status": 200,
+     "bytes": 1087
+    }
+   ]
+  },
+  {
+   "symbol": "BTCUSDT",
+   "available": true,
+   "snapshot_refreshed_at": "2026-10-08T01:43:47Z",
+   "snapshot_refreshed_at_ms": 1791423827354,
+   "local_fetched_at": "2026-10-08T01:43:47Z",
+   "trade_event_time": "2026-10-08T01:42:59Z",
+   "upstream_snapshot_time": null,
+   "update_time": "2026-10-07T06:19:49Z",
+   "quality": {
+    "basis": "本机快照落盘时点 snapshot_refreshed_at",
+    "stale_after_s": 600,
+    "local_fetched_at": "2026-10-08T01:43:47Z",
+    "trade_event_time": "2026-10-08T01:42:59Z",
+    "upstream_snapshot_time": null,
+    "upstream_snapshot_time_note": "币安未公开上游数据快照时点 ⇒ null；本模块不据此判断新鲜度",
+    "status": "stale",
+    "age_seconds": 938.8,
+    "note": "本机取回 2026-10-08T01:43:47Z，939s 前，阈值 600s（=采集周期×2，**不随扫描用时放宽**）；交易活动时间 2026-10-08T01:42:59Z（仅活跃度，**非**陈旧判据）；`overview.updateTime` 为日级队列标记，不参与新鲜度判定",
+    "event_time": "2026-10-08T01:43:47Z"
+   },
+   "source_refs": [
+    {
+     "endpoint": "overview",
+     "call_id": 204671,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:43:45Z",
+     "sha256": "b7caa9435582c6da1bc539926fbccbb7a361319ff69adbb1ea9041b58fcfa09f",
+     "http_status": 200,
+     "bytes": 667
+    },
+    {
+     "endpoint": "details/stats",
+     "call_id": 204674,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:43:46Z",
+     "sha256": "538275b288b5ba22ce954f3a912974a1170109ff6ff7947457ecd3ef35026f96",
+     "http_status": 200,
+     "bytes": 414
+    },
+    {
+     "endpoint": "details/list",
+     "call_id": 204676,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:43:47Z",
+     "sha256": "688940a1b275dd47bcbc04df6c815c91e608965dd9efe35c6630f7a22a5585ff",
+     "http_status": 200,
+     "bytes": 2651
+    }
+   ]
+  },
+  {
+   "symbol": "ETHUSDT",
+   "available": true,
+   "snapshot_refreshed_at": "2026-10-08T01:46:27Z",
+   "snapshot_refreshed_at_ms": 1791423987825,
+   "local_fetched_at": "2026-10-08T01:46:27Z",
+   "trade_event_time": "2026-10-08T01:44:59Z",
+   "upstream_snapshot_time": null,
+   "update_time": "2026-10-07T06:19:49Z",
+   "quality": {
+    "basis": "本机快照落盘时点 snapshot_refreshed_at",
+    "stale_after_s": 600,
+    "local_fetched_at": "2026-10-08T01:46:27Z",
+    "trade_event_time": "2026-10-08T01:44:59Z",
+    "upstream_snapshot_time": null,
+    "upstream_snapshot_time_note": "币安未公开上游数据快照时点 ⇒ null；本模块不据此判断新鲜度",
+    "status": "stale",
+    "age_seconds": 778.4,
+    "note": "本机取回 2026-10-08T01:46:27Z，778s 前，阈值 600s（=采集周期×2，**不随扫描用时放宽**）；交易活动时间 2026-10-08T01:44:59Z（仅活跃度，**非**陈旧判据）；`overview.updateTime` 为日级队列标记，不参与新鲜度判定",
+    "event_time": "2026-10-08T01:46:27Z"
+   },
+   "source_refs": [
+    {
+     "endpoint": "overview",
+     "call_id": 205184,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:46:26Z",
+     "sha256": "6c279e3833572ee7fbfce5f02f54191ddb0c31aa98ddcfd6aa6cd80c462a9063",
+     "http_status": 200,
+     "bytes": 669
+    },
+    {
+     "endpoint": "details/stats",
+     "call_id": 205186,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:46:27Z",
+     "sha256": "0f178c01d18722a24263b9078fb641f7f574c23ddd59a4f9f843f6fda8139fd6",
+     "http_status": 200,
+     "bytes": 420
+    },
+    {
+     "endpoint": "details/list",
+     "call_id": 205188,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:46:27Z",
+     "sha256": "013410e9ee5cc94e7a688129b3e011d6ec5100e4db1a993234db1ed82d27d848",
+     "http_status": 200,
+     "bytes": 2668
+    }
+   ]
+  },
+  {
+   "symbol": "SOLUSDT",
+   "available": true,
+   "snapshot_refreshed_at": "2026-10-08T01:54:51Z",
+   "snapshot_refreshed_at_ms": 1791424491839,
+   "local_fetched_at": "2026-10-08T01:54:51Z",
+   "trade_event_time": "2026-10-08T01:52:59Z",
+   "upstream_snapshot_time": null,
+   "update_time": "2026-10-07T06:19:49Z",
+   "quality": {
+    "basis": "本机快照落盘时点 snapshot_refreshed_at",
+    "stale_after_s": 600,
+    "local_fetched_at": "2026-10-08T01:54:51Z",
+    "trade_event_time": "2026-10-08T01:52:59Z",
+    "upstream_snapshot_time": null,
+    "upstream_snapshot_time_note": "币安未公开上游数据快照时点 ⇒ null；本模块不据此判断新鲜度",
+    "status": "ok",
+    "age_seconds": 274.4,
+    "note": "本机取回 2026-10-08T01:54:51Z，274s 前，阈值 600s（=采集周期×2，**不随扫描用时放宽**）；交易活动时间 2026-10-08T01:52:59Z（仅活跃度，**非**陈旧判据）；`overview.updateTime` 为日级队列标记，不参与新鲜度判定",
+    "event_time": "2026-10-08T01:54:51Z"
+   },
+   "source_refs": [
+    {
+     "endpoint": "overview",
+     "call_id": 206907,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:54:50Z",
+     "sha256": "e68ed9a1f1dd95b8a1b00c8cadac630c33fbff477c61e494d1f2dc84c90f86af",
+     "http_status": 200,
+     "bytes": 666
+    },
+    {
+     "endpoint": "details/stats",
+     "call_id": 206909,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:54:51Z",
+     "sha256": "f47fbc52c6f7e9c1a5df3ca840b3eac79a4a425e0b178b2e73e3de4086325fbe",
+     "http_status": 200,
+     "bytes": 419
+    },
+    {
+     "endpoint": "details/list",
+     "call_id": 206911,
+     "origin": "公共REST",
+     "fetched_at": "2026-10-08T01:54:51Z",
+     "sha256": "ae691185bbc682983a520f781c0f85c37ff3fdea2c167664c8d5fc54b134c2f3",
+     "http_status": 200,
+     "bytes": 2668
+    }
+   ]
+  },
+  {
+   "symbol": "1000000BOBUSDT",
+   "snapshot": null,
+   "note": "无本机快照（本轮未覆盖或该合约无数据）"
+  }
+ ]
+}

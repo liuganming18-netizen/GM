@@ -1,0 +1,220 @@
+{
+ "generated_utc": "2026-10-07T15:01:55Z",
+ "scope": "12h 剩余未提供时点（ICP 10 + LIT 1 + MAVIA 1 = 12）",
+ "discipline": "只做分类与来源证据；**不假补 K 线**；不得据此称 548/551 为全池 FULL",
+ "official_entry_template": "https://data.binance.vision/data/futures/um/daily/klines/{sym}/12h/{sym}-12h-{date}.zip",
+ "lifecycle_ref": "验收证据/P04_继续补齐_日线剩余_官方公告原文与ICP生命周期证据_2026-10-07.json",
+ "items": [
+  {
+   "symbol": "binance:ICPUSDT",
+   "open_time": "2022-09-22T00:00:00Z",
+   "classification": "official_absent_inside_no_contract_window",
+   "classification_zh": "官方无此区间（落在官方『无合约窗口』内）",
+   "evidence": {
+    "daily_zip_http": "404",
+    "daily_checksum_http": "404",
+    "monthly_2022_09_zip_exists": true,
+    "monthly_2022_09_row_count": 8,
+    "monthly_2022_09_first_day": "2022-09-27",
+    "monthly_2022_09_has_this_day": false,
+    "lifecycle_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30"
+   },
+   "conclusion": "官方日线 ZIP+CHECKSUM 均 404；月度 2022-09 归档仅 8 根且自 09-27 起；该时点落在官方无合约窗口内 → 官方无此区间（有证），不假补。"
+  },
+  {
+   "symbol": "binance:ICPUSDT",
+   "open_time": "2022-09-22T12:00:00Z",
+   "classification": "official_absent_inside_no_contract_window",
+   "classification_zh": "官方无此区间（落在官方『无合约窗口』内）",
+   "evidence": {
+    "daily_zip_http": "404",
+    "daily_checksum_http": "404",
+    "monthly_2022_09_zip_exists": true,
+    "monthly_2022_09_row_count": 8,
+    "monthly_2022_09_first_day": "2022-09-27",
+    "monthly_2022_09_has_this_day": false,
+    "lifecycle_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30"
+   },
+   "conclusion": "官方日线 ZIP+CHECKSUM 均 404；月度 2022-09 归档仅 8 根且自 09-27 起；该时点落在官方无合约窗口内 → 官方无此区间（有证），不假补。"
+  },
+  {
+   "symbol": "binance:ICPUSDT",
+   "open_time": "2022-09-23T00:00:00Z",
+   "classification": "official_absent_inside_no_contract_window",
+   "classification_zh": "官方无此区间（落在官方『无合约窗口』内）",
+   "evidence": {
+    "daily_zip_http": "404",
+    "daily_checksum_http": "404",
+    "monthly_2022_09_zip_exists": true,
+    "monthly_2022_09_row_count": 8,
+    "monthly_2022_09_first_day": "2022-09-27",
+    "monthly_2022_09_has_this_day": false,
+    "lifecycle_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30"
+   },
+   "conclusion": "官方日线 ZIP+CHECKSUM 均 404；月度 2022-09 归档仅 8 根且自 09-27 起；该时点落在官方无合约窗口内 → 官方无此区间（有证），不假补。"
+  },
+  {
+   "symbol": "binance:ICPUSDT",
+   "open_time": "2022-09-23T12:00:00Z",
+   "classification": "official_absent_inside_no_contract_window",
+   "classification_zh": "官方无此区间（落在官方『无合约窗口』内）",
+   "evidence": {
+    "daily_zip_http": "404",
+    "daily_checksum_http": "404",
+    "monthly_2022_09_zip_exists": true,
+    "monthly_2022_09_row_count": 8,
+    "monthly_2022_09_first_day": "2022-09-27",
+    "monthly_2022_09_has_this_day": false,
+    "lifecycle_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30"
+   },
+   "conclusion": "官方日线 ZIP+CHECKSUM 均 404；月度 2022-09 归档仅 8 根且自 09-27 起；该时点落在官方无合约窗口内 → 官方无此区间（有证），不假补。"
+  },
+  {
+   "symbol": "binance:ICPUSDT",
+   "open_time": "2022-09-24T00:00:00Z",
+   "classification": "official_absent_inside_no_contract_window",
+   "classification_zh": "官方无此区间（落在官方『无合约窗口』内）",
+   "evidence": {
+    "daily_zip_http": "404",
+    "daily_checksum_http": "404",
+    "monthly_2022_09_zip_exists": true,
+    "monthly_2022_09_row_count": 8,
+    "monthly_2022_09_first_day": "2022-09-27",
+    "monthly_2022_09_has_this_day": false,
+    "lifecycle_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30"
+   },
+   "conclusion": "官方日线 ZIP+CHECKSUM 均 404；月度 2022-09 归档仅 8 根且自 09-27 起；该时点落在官方无合约窗口内 → 官方无此区间（有证），不假补。"
+  },
+  {
+   "symbol": "binance:ICPUSDT",
+   "open_time": "2022-09-24T12:00:00Z",
+   "classification": "official_absent_inside_no_contract_window",
+   "classification_zh": "官方无此区间（落在官方『无合约窗口』内）",
+   "evidence": {
+    "daily_zip_http": "404",
+    "daily_checksum_http": "404",
+    "monthly_2022_09_zip_exists": true,
+    "monthly_2022_09_row_count": 8,
+    "monthly_2022_09_first_day": "2022-09-27",
+    "monthly_2022_09_has_this_day": false,
+    "lifecycle_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30"
+   },
+   "conclusion": "官方日线 ZIP+CHECKSUM 均 404；月度 2022-09 归档仅 8 根且自 09-27 起；该时点落在官方无合约窗口内 → 官方无此区间（有证），不假补。"
+  },
+  {
+   "symbol": "binance:ICPUSDT",
+   "open_time": "2022-09-25T00:00:00Z",
+   "classification": "official_absent_inside_no_contract_window",
+   "classification_zh": "官方无此区间（落在官方『无合约窗口』内）",
+   "evidence": {
+    "daily_zip_http": "404",
+    "daily_checksum_http": "404",
+    "monthly_2022_09_zip_exists": true,
+    "monthly_2022_09_row_count": 8,
+    "monthly_2022_09_first_day": "2022-09-27",
+    "monthly_2022_09_has_this_day": false,
+    "lifecycle_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30"
+   },
+   "conclusion": "官方日线 ZIP+CHECKSUM 均 404；月度 2022-09 归档仅 8 根且自 09-27 起；该时点落在官方无合约窗口内 → 官方无此区间（有证），不假补。"
+  },
+  {
+   "symbol": "binance:ICPUSDT",
+   "open_time": "2022-09-25T12:00:00Z",
+   "classification": "official_absent_inside_no_contract_window",
+   "classification_zh": "官方无此区间（落在官方『无合约窗口』内）",
+   "evidence": {
+    "daily_zip_http": "404",
+    "daily_checksum_http": "404",
+    "monthly_2022_09_zip_exists": true,
+    "monthly_2022_09_row_count": 8,
+    "monthly_2022_09_first_day": "2022-09-27",
+    "monthly_2022_09_has_this_day": false,
+    "lifecycle_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30"
+   },
+   "conclusion": "官方日线 ZIP+CHECKSUM 均 404；月度 2022-09 归档仅 8 根且自 09-27 起；该时点落在官方无合约窗口内 → 官方无此区间（有证），不假补。"
+  },
+  {
+   "symbol": "binance:ICPUSDT",
+   "open_time": "2022-09-26T00:00:00Z",
+   "classification": "official_absent_inside_no_contract_window",
+   "classification_zh": "官方无此区间（落在官方『无合约窗口』内）",
+   "evidence": {
+    "daily_zip_http": "404",
+    "daily_checksum_http": "404",
+    "monthly_2022_09_zip_exists": true,
+    "monthly_2022_09_row_count": 8,
+    "monthly_2022_09_first_day": "2022-09-27",
+    "monthly_2022_09_has_this_day": false,
+    "lifecycle_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30"
+   },
+   "conclusion": "官方日线 ZIP+CHECKSUM 均 404；月度 2022-09 归档仅 8 根且自 09-27 起；该时点落在官方无合约窗口内 → 官方无此区间（有证），不假补。"
+  },
+  {
+   "symbol": "binance:ICPUSDT",
+   "open_time": "2022-09-26T12:00:00Z",
+   "classification": "official_absent_inside_no_contract_window",
+   "classification_zh": "官方无此区间（落在官方『无合约窗口』内）",
+   "evidence": {
+    "daily_zip_http": "404",
+    "daily_checksum_http": "404",
+    "monthly_2022_09_zip_exists": true,
+    "monthly_2022_09_row_count": 8,
+    "monthly_2022_09_first_day": "2022-09-27",
+    "monthly_2022_09_has_this_day": false,
+    "lifecycle_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30"
+   },
+   "conclusion": "官方日线 ZIP+CHECKSUM 均 404；月度 2022-09 归档仅 8 根且自 09-27 起；该时点落在官方无合约窗口内 → 官方无此区间（有证），不假补。"
+  },
+  {
+   "symbol": "binance:LITUSDT",
+   "open_time": "2025-12-23T00:00:00Z",
+   "classification": "official_daily_body_lacks_root",
+   "classification_zh": "官方日线正文缺该根（月线亦缺）",
+   "evidence": {
+    "daily_zip_roots": [
+     "2025-12-23T12:00:00Z"
+    ],
+    "daily_zip_row_count": 1,
+    "monthly_zip_row_count": 61,
+    "monthly_roots_on_this_day": [
+     "12:00:00Z"
+    ],
+    "expected_roots_per_day": 2
+   },
+   "conclusion": "官方日线 ZIP 正文仅含 12:00Z 一根（无 00:00Z）；月度归档该日亦仅 12:00Z 一根（当月共 61 根，缺 1 根）→ 官方无此根（有证），不假补。"
+  },
+  {
+   "symbol": "binance:MAVIAUSDT",
+   "open_time": "2025-03-26T00:00:00Z",
+   "classification": "official_daily_body_lacks_root",
+   "classification_zh": "官方日线正文缺该根（月线亦缺）",
+   "evidence": {
+    "daily_zip_roots": [
+     "2025-03-26T12:00:00Z"
+    ],
+    "daily_zip_row_count": 1,
+    "monthly_zip_row_count": 61,
+    "monthly_roots_on_this_day": [
+     "12:00:00Z"
+    ],
+    "expected_roots_per_day": 2
+   },
+   "conclusion": "官方日线 ZIP 正文仅含 12:00Z 一根（无 00:00Z）；月度归档该日亦仅 12:00Z 一根（当月共 61 根，缺 1 根）→ 官方无此根（有证），不假补。"
+  }
+ ],
+ "summary": {
+  "total_timepoints": 12,
+  "by_classification": {
+   "official_absent_inside_no_contract_window": 10,
+   "official_daily_body_lacks_root": 2
+  },
+  "by_symbol": {
+   "binance:ICPUSDT": 10,
+   "binance:LITUSDT": 1,
+   "binance:MAVIAUSDT": 1
+  },
+  "all_have_official_evidence": true,
+  "any_fabricated_candle": false,
+  "note": "12 个时点全部有官方来源证据（404 / 正文缺根 / 无合约窗口）；无一假补；**不据此判 548/551 为全池 FULL**（余 12 根为官方未提供，非本系统缺口）。"
+ }
+}

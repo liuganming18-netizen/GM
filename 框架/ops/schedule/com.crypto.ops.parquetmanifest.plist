@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 数据保全 · 冷层 catalog/state 配对版本 manifest（北京时间 01:30，前提为归档/水位已完成）
+     ⚠ 未启用：须先过前置门禁（见 ops/schedule/README.md）。 -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.crypto.ops.parquetmanifest</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/sh</string>
+    <string>/Users/boos/WorkBuddy AI/加密货币趋势判断系统/ops/schedule/run_parquet.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>30</integer></dict>
+  </array>
+  <key>StandardOutPath</key><string>/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/logs/parquet.out.log</string>
+  <key>StandardErrorPath</key><string>/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/logs/parquet.err.log</string>
+  <key>RunAtLoad</key><false/>
+</dict>
+</plist>

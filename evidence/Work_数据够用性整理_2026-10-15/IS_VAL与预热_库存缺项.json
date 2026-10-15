@@ -1,0 +1,82 @@
+{
+ "生成说明": "按 v3.1 固定 IS/Val 与预热切分，仅复用本窗已计算聚合产物，不新增触及 Holdout 的扫描。",
+ "窗口定义": {
+  "IS": [
+   "2022-01-01T00:00:00Z",
+   "2025-01-01T00:00:00Z"
+  ],
+  "Val": [
+   "2025-01-01T00:00:00Z",
+   "2026-04-15T00:00:00Z"
+  ],
+  "IS+Val": [
+   "2022-01-01T00:00:00Z",
+   "2026-04-15T00:00:00Z"
+  ],
+  "预热90(IS前)": [
+   "2021-10-03T00:00:00Z",
+   "2022-01-01T00:00:00Z"
+  ]
+ },
+ "metrics原件(OI/多空比ZIP)": {
+  "原件日覆盖_币数": 526,
+  "原件覆盖IS": 92,
+  "原件覆盖Val": 270,
+  "原件覆盖IS+Val": 92,
+  "原件覆盖预热90": 1,
+  "原件全期缺日合计": 2707,
+  "原件起止范围": [
+   "2020-09-01",
+   "2026-10-07"
+  ]
+ },
+ "metrics多空比逐币可用性": {
+  "symbols": 526,
+  "columns": {
+   "count_toptrader_long_short_ratio": {
+    "zero_empty_symbols": 91,
+    "symbols_with_full_empty_days": 116,
+    "nonempty_pct_min": 64.941,
+    "nonempty_pct_median": 99.974,
+    "nonempty_pct_max": 100.0,
+    "longest_fully_ok_days_median": 342,
+    "symbols_longest_fully_ok_ge_30": 524,
+    "symbols_longest_fully_ok_ge_90": 512,
+    "symbols_longest_fully_ok_ge_365": 216
+   },
+   "sum_toptrader_long_short_ratio": {
+    "zero_empty_symbols": 91,
+    "symbols_with_full_empty_days": 114,
+    "nonempty_pct_min": 64.955,
+    "nonempty_pct_median": 99.989,
+    "nonempty_pct_max": 100.0,
+    "longest_fully_ok_days_median": 342,
+    "symbols_longest_fully_ok_ge_30": 524,
+    "symbols_longest_fully_ok_ge_90": 512,
+    "symbols_longest_fully_ok_ge_365": 217
+   },
+   "count_long_short_ratio": {
+    "zero_empty_symbols": 151,
+    "symbols_with_full_empty_days": 100,
+    "nonempty_pct_min": 97.481,
+    "nonempty_pct_median": 99.99,
+    "nonempty_pct_max": 100.0,
+    "longest_fully_ok_days_median": 443,
+    "symbols_longest_fully_ok_ge_30": 525,
+    "symbols_longest_fully_ok_ge_90": 519,
+    "symbols_longest_fully_ok_ge_365": 427
+   },
+   "sum_taker_long_short_vol_ratio": {
+    "zero_empty_symbols": 42,
+    "symbols_with_full_empty_days": 108,
+    "nonempty_pct_min": 84.904,
+    "nonempty_pct_median": 99.971,
+    "nonempty_pct_max": 100.0,
+    "longest_fully_ok_days_median": 247,
+    "symbols_longest_fully_ok_ge_30": 521,
+    "symbols_longest_fully_ok_ge_90": 476,
+    "symbols_longest_fully_ok_ge_365": 178
+   }
+  }
+ }
+}

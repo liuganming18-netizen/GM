@@ -1,0 +1,183 @@
+{
+ "generated_utc": "2026-10-07T19:31:49Z",
+ "stage": "A（下载落盘，不写行情库）",
+ "start_command": "PYTHONDONTWRITEBYTECODE=1 MARKET_DB=/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3 /Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3 ../spawn_detached.py --pid logs/phaseA.pid --log logs/phaseA_run.log --cwd . -- <PY> batch_download.py --all --download-only --concurrency 2 --min-free-gb 30",
+ "pid": 20421,
+ "pid_alive": true,
+ "launch_utc": "2026-10-07T19:24:12Z",
+ "log": "历史下载/logs/phaseA_run.log",
+ "detach_mechanism": "双重 fork + os.setsid（spawn_detached.py），父进程不等待，孙进程被 init 收养；跨工具调用长驻",
+ "code_sha256": {
+  "batch_download.py": "5955d32162968e7197b01b3426b3c17efa83725c6cba1eb893b55450964e60ec",
+  "_phaseA_inventory.py": "c9b5ab62846fbfee389fd5b906bb01609655f6760d6d73316ffeb1ea365c300f",
+  "_phaseA_progress.py": "0527b818c307f849b92002199cb95d0ab1e629f1f3d87fafa37566e92f03994a"
+ },
+ "download_only_readonly_proof": {
+  "before": {
+   "download_runs": 11,
+   "download_tasks": 3926,
+   "runs_max_id": 11,
+   "sources_1d_btc": 91
+  },
+  "after": {
+   "download_runs": 11,
+   "download_tasks": 3926,
+   "runs_max_id": 11,
+   "sources_1d_btc": 91
+  },
+  "unchanged": true,
+  "note": "阶段 A 用 ReadOnlyStore(mode=ro)+空事务；smoke 前后行情库计数完全一致"
+ },
+ "first_batch_files": 352,
+ "first_batch_bytes": 171403,
+ "first_batch_sample": [
+  {
+   "tf": "12h",
+   "file": "KNCUSDT-12h-2026-10-06.zip",
+   "bytes": 389,
+   "mtime_utc": "2026-10-07T19:24:40Z"
+  },
+  {
+   "tf": "12h",
+   "file": "ZRXUSDT-12h-2026-10-06.zip",
+   "bytes": 394,
+   "mtime_utc": "2026-10-07T19:24:41Z"
+  },
+  {
+   "tf": "12h",
+   "file": "COMPUSDT-12h-2026-10-06.zip",
+   "bytes": 396,
+   "mtime_utc": "2026-10-07T19:24:42Z"
+  },
+  {
+   "tf": "12h",
+   "file": "DOGEUSDT-12h-2026-10-06.zip",
+   "bytes": 408,
+   "mtime_utc": "2026-10-07T19:24:43Z"
+  },
+  {
+   "tf": "12h",
+   "file": "KAVAUSDT-12h-2026-10-06.zip",
+   "bytes": 404,
+   "mtime_utc": "2026-10-07T19:24:44Z"
+  },
+  {
+   "tf": "12h",
+   "file": "BANDUSDT-12h-2026-10-06.zip",
+   "bytes": 401,
+   "mtime_utc": "2026-10-07T19:24:45Z"
+  },
+  {
+   "tf": "12h",
+   "file": "RLCUSDT-12h-2026-10-06.zip",
+   "bytes": 410,
+   "mtime_utc": "2026-10-07T19:24:46Z"
+  },
+  {
+   "tf": "12h",
+   "file": "SNXUSDT-12h-2026-10-06.zip",
+   "bytes": 395,
+   "mtime_utc": "2026-10-07T19:24:48Z"
+  },
+  {
+   "tf": "12h",
+   "file": "DOTUSDT-12h-2026-10-06.zip",
+   "bytes": 402,
+   "mtime_utc": "2026-10-07T19:24:49Z"
+  },
+  {
+   "tf": "12h",
+   "file": "QNTUSDT-12h-2026-10-06.zip",
+   "bytes": 405,
+   "mtime_utc": "2026-10-07T19:24:54Z"
+  },
+  {
+   "tf": "8h",
+   "file": "HYPEUSDT-8h-2026-10-06.zip",
+   "bytes": 467,
+   "mtime_utc": "2026-10-07T19:25:29Z"
+  },
+  {
+   "tf": "8h",
+   "file": "LAUSDT-8h-2026-10-06.zip",
+   "bytes": 453,
+   "mtime_utc": "2026-10-07T19:25:30Z"
+  }
+ ],
+ "phase_snapshot": {
+  "1d": {
+   "planned": 19127,
+   "reused": 18924,
+   "new_downloaded": 0,
+   "official_missing": 203,
+   "failed": 0,
+   "on_disk_zips": 19414
+  },
+  "12h": {
+   "planned": 19127,
+   "reused": 18916,
+   "new_downloaded": 10,
+   "official_missing": 201,
+   "failed": 0,
+   "on_disk_zips": 18949
+  },
+  "8h": {
+   "planned": 19127,
+   "reused": 18685,
+   "new_downloaded": 236,
+   "official_missing": 206,
+   "failed": 0,
+   "on_disk_zips": 19121
+  },
+  "4h": {
+   "planned": 18674,
+   "reused": 18393,
+   "new_downloaded": 75,
+   "official_missing": 206,
+   "failed": 0,
+   "on_disk_zips": 18673
+  },
+  "1h": {
+   "planned": 18599,
+   "reused": 18395,
+   "new_downloaded": 0,
+   "official_missing": 204,
+   "failed": 0,
+   "on_disk_zips": 18597
+  },
+  "30m": {
+   "planned": 18599,
+   "reused": 18393,
+   "new_downloaded": 0,
+   "official_missing": 206,
+   "failed": 0,
+   "on_disk_zips": 18596
+  },
+  "15m": {
+   "planned": 18274,
+   "reused": 18272,
+   "new_downloaded": 0,
+   "official_missing": 2,
+   "failed": 0,
+   "on_disk_zips": 18495
+  },
+  "5m": {
+   "planned": 9890,
+   "reused": 9879,
+   "new_downloaded": 0,
+   "official_missing": 11,
+   "failed": 0,
+   "on_disk_zips": 9923
+  },
+  "1m": {
+   "planned": 0,
+   "reused": 0,
+   "new_downloaded": 0,
+   "official_missing": 0,
+   "failed": 0,
+   "on_disk_zips": 10
+  }
+ },
+ "rate_files_per_s": 0.79,
+ "note_eta": "全池 1m/5m/15m 为最大缺口；ETC 见后续进度快照（受并发≤2 纪律约束）"
+}

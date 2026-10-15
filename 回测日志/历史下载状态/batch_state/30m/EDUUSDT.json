@@ -1,0 +1,845 @@
+{
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-04.zip",
+  "bytes": 1409,
+  "sha256": "caf7c4567d8c5996bf541674557cd118e27a332e0f13991722155d1537ed166b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98305,
+   "新增版本数": 24,
+   "状态": "已入库"
+  },
+  "source_id": 98305,
+  "rows": 24
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-05.zip",
+  "bytes": 67271,
+  "sha256": "bf0f4570222377e73dffe0e3bb0d95436e2a64329dc989632a4eac9635aefcf9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98306,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98306,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-06.zip",
+  "bytes": 63009,
+  "sha256": "95e8fad970ea9f04fae28189a3c4e45e236a5938b3da03d551bb0e7a614f105a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98307,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98307,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-07.zip",
+  "bytes": 63316,
+  "sha256": "b4b4d5e4315228392980c275774ce98b8b5d4de470b2bc91a6613706641a7ccf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98308,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98308,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-08.zip",
+  "bytes": 61673,
+  "sha256": "a6592dd874408ecaf236f5a19f7150c3939e1ba0393f640c06e556f522b1683f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98309,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98309,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-09.zip",
+  "bytes": 59544,
+  "sha256": "230dfa93ace5e5f5b52d1e549560f64b7aeabb84c9e5c43615fa1b4c781d52a8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98310,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98310,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-10.zip",
+  "bytes": 61194,
+  "sha256": "92972b8bcb6fe32f56e11e8bd30395547f7be73624b42e926bf151e565de9cd3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98311,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98311,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-11.zip",
+  "bytes": 61006,
+  "sha256": "b645e9c5eac93c387133ee016f12218e40c1f6a875094335298d09b9594b9f86",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98312,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98312,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-01.zip",
+  "bytes": 61584,
+  "sha256": "6ce8454b77c3311b5bad219b5fd32f1e13294bb3e323fe82bc1fa73139f55637",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98314,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98314,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2023-12.zip",
+  "bytes": 62714,
+  "sha256": "1f137570ecfe3e39024bfbbbbcc883e3121016d48c675e140c476f1c6a683712",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98313,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98313,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-02.zip",
+  "bytes": 58092,
+  "sha256": "deb0cb239d7b334eab6d1852fe3d1ad0721ca4ec5b20ec8f65abe4e9dfc4c5c1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98315,
+   "新增版本数": 1392,
+   "状态": "已入库"
+  },
+  "source_id": 98315,
+  "rows": 1392
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-03.zip",
+  "bytes": 63659,
+  "sha256": "5abc78224c1d8592844a6bc227a23956aec05fb38eebaab1847bcd7671b588e0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98316,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98316,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-04.zip",
+  "bytes": 60060,
+  "sha256": "7a3e14cb4f539bd888dc14fae9b15990aff7401a2c5d95c6b97410187a7a8960",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98317,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98317,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-05.zip",
+  "bytes": 62551,
+  "sha256": "9fc8ffd7af8ace546ed229e0b6f072365a8c23ff6e9456956675fcf6b1e6134b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98318,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98318,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-06.zip",
+  "bytes": 59841,
+  "sha256": "fb1b8ff5c7aee1bee3f979a9ed48fab3ca30950a6b82053fe88002d15f6338f4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98319,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98319,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-07.zip",
+  "bytes": 62276,
+  "sha256": "154697668c2fe5bcb5936c5147715cd978f310e2364c7b8c828eb2ac1ad223e0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98320,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98320,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-08.zip",
+  "bytes": 61529,
+  "sha256": "5c5fd15c927db78f298a8dccf0ec9198ff7220672d975f19e3e3258a9145650c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98321,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98321,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-09.zip",
+  "bytes": 59237,
+  "sha256": "b1f71ab4d77069e97b29efa9f7f106ffd537f67dc33e7b4c0dd590a0ff7ab754",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98322,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98322,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-10.zip",
+  "bytes": 60678,
+  "sha256": "359190f27b157b4f3d1bfa8528f1bf5f92aa18e19b008a97d28bfe2302bf1263",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98323,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98323,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-11.zip",
+  "bytes": 59849,
+  "sha256": "cc8059ff4f0eba6fbf24ae9aed527cc10c9da94eeccb9c2b124967ec58eae811",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98324,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98324,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2024-12.zip",
+  "bytes": 62359,
+  "sha256": "3503a60017ff461f30578fbb45fbf21c345e560906a77af0be785a9915a6bbf4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98325,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98325,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-01.zip",
+  "bytes": 60349,
+  "sha256": "5111aed74e112e110cdce5b67488a1ffdf84af67218bb827a20160aec5182a2b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98326,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98326,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-02.zip",
+  "bytes": 54317,
+  "sha256": "2cf0a0c1542be569798bc0dda8b77932c23744b9d1f71704c637dcf90cc8af45",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98327,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 98327,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-03.zip",
+  "bytes": 59295,
+  "sha256": "448f02ee2d23316e691735794c79b111617ab12ded541612fa3d89332799b359",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98328,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98328,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-04.zip",
+  "bytes": 58774,
+  "sha256": "c9feccb699a8a2945e2261f9a5d3f9e16e96c6a032f3fba247b22600611b50bb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98329,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98329,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-05.zip",
+  "bytes": 60081,
+  "sha256": "c0303f8ccf6935d4469317032c5911bd9aae616c6b78f47570d5b38502d32ade",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98330,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98330,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-06.zip",
+  "bytes": 55883,
+  "sha256": "55e4ac362c6a35f720bd0d733cd51a500d3a96804edd0dc76e9555b30c3e7ffb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98331,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98331,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-07.zip",
+  "bytes": 58143,
+  "sha256": "4302893d7724f541b7e47cf036bf0973547a14e146eff4fa7b0f787646000013",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98332,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98332,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-08.zip",
+  "bytes": 58785,
+  "sha256": "2a082c5d093d17b43a9519c119fcaf74ae00bf67a4b14dfc72a70d85dfb38965",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98333,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98333,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-09.zip",
+  "bytes": 56878,
+  "sha256": "caac5f329fef68b899ee82352aa3a1760934192091d9c2856a3b95079e7fafd2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98334,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98334,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-10.zip",
+  "bytes": 61706,
+  "sha256": "3944155eb70b725c6d6dbe117777cdf4d86605717727a84c1d42281654f8c33f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98335,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98335,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-11.zip",
+  "bytes": 57842,
+  "sha256": "2be41813feb0ad6aa1a04557b85438f99086936299aba7c919fc6010a1140289",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98336,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98336,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2025-12.zip",
+  "bytes": 56934,
+  "sha256": "c4dfc4c3fa88218cb5a870e055a40c90bfb1525f85b2bda65092e6cd8ae8ccea",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98337,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98337,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-01.zip",
+  "bytes": 57792,
+  "sha256": "2fc1d6945a3c77f91c822da1957e76fb3f88a1611bd24355f61aa6385fa9ba90",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98338,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98338,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-02.zip",
+  "bytes": 52343,
+  "sha256": "6cc3eee207264d2b4301231440da6e6da903c6847df9a52f0e9dd1a55e0a16d2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98339,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 98339,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-03.zip",
+  "bytes": 55705,
+  "sha256": "090013ac2e730c789b1ef3d6ba708d40d3bd2aeae728877045703934f3ca3344",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98340,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98340,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-05.zip",
+  "bytes": 63761,
+  "sha256": "e9cc6237144e3e593cea78bfb67cc51f32cad16d68720fdbc2a986ae59841804",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98342,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98342,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-04.zip",
+  "bytes": 62646,
+  "sha256": "ae0693caa1eeb3b8589b7193f5e42217f33308d179c5c7fc9f5656744328de35",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98341,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98341,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-06.zip",
+  "bytes": 60729,
+  "sha256": "b921200fd9f5613b044144b2c126fa9929bc5d7b3101326809461050c440cd93",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98343,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98343,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-07.zip",
+  "bytes": 60888,
+  "sha256": "c86df6820fb2e1d2183b757c205bc242a4320f3190fd83f872dbb3d3f00a0c61",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98344,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98344,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-08.zip",
+  "bytes": 61492,
+  "sha256": "6b69046451470027f6a5e4b7abf920e264e9b4eca86cf7a5a28d35d01deb8ad9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98345,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98345,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EDUUSDT/30m/EDUUSDT-30m-2026-09.zip",
+  "bytes": 59636,
+  "sha256": "27e74ec180089a2e09c9b6f4529979c1daadfac5319f56380503b03e78d20b96",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98346,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98346,
+  "rows": 1440
+ },
+ "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-01.zip",
+  "bytes": 2268,
+  "sha256": "230313b3d88762516a1d89ae79729a48ef1368f87118505c86fdee462feb262e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98301,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98301,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-02.zip",
+  "bytes": 2315,
+  "sha256": "9ef8f84b197c14f396003bc233d59abfe00f1dadb1eb4174ed4e7f6a1c9c52c7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98302,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98302,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-03.zip",
+  "bytes": 2293,
+  "sha256": "448319c63c17eaa7ebd36351412ebe37d2330d3e2e00e8ccbf1546fe534499a2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98303,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98303,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-04.zip",
+  "bytes": 2240,
+  "sha256": "c801ccd85b304abd0f3594cab7640e9dbba8c51e13a818cd679d855d8423412f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98304,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98304,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-05.zip",
+  "bytes": 2460,
+  "sha256": "56ce4728c918e6f80d321a08bcddc0103b392097b2c54238c6ca013868134e22",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 344372,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 344372,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-06.zip",
+  "bytes": 2576,
+  "sha256": "813eab70f79604e4128598fa9fd5e9435260eafe32509c3297352f47aebdce29",
+  "checksum_ok": true,
+  "size_bytes": 2576,
+  "fetched_at": "2026-10-07T19:49:51Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/EDUUSDT/EDUUSDT-30m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940761,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940761,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:12Z"
+ },
+ "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-07.zip",
+  "bytes": 2447,
+  "sha256": "9388d7545f992d752813f31ccf66a1865e09606ed4aa92685fc9b047c536644b",
+  "checksum_ok": true,
+  "size_bytes": 2447,
+  "fetched_at": "2026-10-08T10:36:02Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/EDUUSDT/EDUUSDT-30m-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/EDUUSDT/30m/EDUUSDT-30m-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940762,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940762,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:12Z"
+ }
+}

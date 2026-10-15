@@ -1,0 +1,153 @@
+{
+ "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-01.zip",
+  "bytes": 3430,
+  "sha256": "8c5c41124752d7c8c914aff4d7d41fd28c73a7d185db4014bb4601892032a28d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 125815,
+   "新增版本数": 65,
+   "状态": "已入库"
+  },
+  "source_id": 125815,
+  "rows": 65
+ },
+ "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-03.zip",
+  "bytes": 4784,
+  "sha256": "31455cd1dbbf04878440dd35f306b0ed47124ba46baac83f1a4cf54141b02b40",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 125817,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 125817,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-02.zip",
+  "bytes": 5028,
+  "sha256": "55ae925d42d7728f42e709f7f8c857ac76d0b2a593c7ffc91279cdbaffe90d08",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 125816,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 125816,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-05.zip",
+  "bytes": 4702,
+  "sha256": "12d20f47035515b13ab01f2562fb5e7e4d94ca5fd6ff537650140b2a6609eceb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 373060,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 373060,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-04.zip",
+  "bytes": 4614,
+  "sha256": "7cc32a212e6c447aab8e7060866c82b2ee37a900b0aa0cd9d8f0a593f69b5a86",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 125818,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 125818,
+  "rows": 96
+ },
+ "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-06.zip",
+  "bytes": 4706,
+  "sha256": "63cc45dae3a3e8b78c044a5e4fde28274d8941b77c09fe9889374ec12f924696",
+  "checksum_ok": true,
+  "size_bytes": 4706,
+  "fetched_at": "2026-10-07T20:44:16Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/15m/CTUSDT/CTUSDT-15m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 4074227,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 4074227,
+  "rows": 96,
+  "imported_at": "2026-10-10T14:37:37Z"
+ },
+ "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-07.zip",
+  "bytes": 4655,
+  "sha256": "09bd6cbe5507848ec6e265253dd8daf0d9fba64fb7fed5fe80cebf1710fc7067",
+  "checksum_ok": true,
+  "size_bytes": 4655,
+  "fetched_at": "2026-10-09T14:51:35Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/15m/CTUSDT/CTUSDT-15m-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 4074228,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 4074228,
+  "rows": 96,
+  "imported_at": "2026-10-10T14:37:37Z"
+ },
+ "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-08.zip": {
+  "key": "data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-08.zip",
+  "kind": "daily",
+  "period": "2026-10-08",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-08.zip",
+  "bytes": 4598,
+  "sha256": "598f30368f7b1c27e8356780afd23a35c6f7a5de487aef3c6de5e2cc7e575200",
+  "checksum_ok": true,
+  "size_bytes": 4598,
+  "fetched_at": "2026-10-09T14:51:35Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/15m/CTUSDT/CTUSDT-15m-2026-10-08.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/CTUSDT/15m/CTUSDT-15m-2026-10-08.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 4074229,
+   "新增版本数": 96,
+   "状态": "已入库"
+  },
+  "source_id": 4074229,
+  "rows": 96,
+  "imported_at": "2026-10-10T14:37:37Z"
+ }
+}

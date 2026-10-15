@@ -1,0 +1,24 @@
+{
+  "inst_id": "DGAI-USDT-SWAP",
+  "bar": "5m",
+  "status": "partial",
+  "rows": 441,
+  "pages": 5,
+  "errors": 1,
+  "window": [
+    "2025-10-05T04:58:23Z",
+    "2026-10-05T04:58:23Z"
+  ],
+  "source_id": 50840,
+  "api_call_ids": [
+    36345,
+    36348,
+    36350,
+    36352,
+    36357
+  ],
+  "raw_path": "raw/okx/5m/DGAI-USDT-SWAP.json",
+  "taker_buy": "空串（欧易无 taker 字段，B 策略数据不足）",
+  "trade_count": "0 占位（欧易无该字段，非真值）",
+  "updated_utc": "2026-10-05T09:52:52Z"
+}

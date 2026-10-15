@@ -1,0 +1,66 @@
+{
+ "generated_utc": "2026-10-07T12:48:03Z",
+ "scope": "12h UTC 边界一致性最小改动 + 读侧隔离（仅 12h，不动其他周期）",
+ "owner": "历史续工（独占 realtime_collector.py / adapter.py 内仅 12h UTC 一致性所需小改动）",
+ "code_changes": [
+  {
+   "file": "realtime_collector.py",
+   "line": 115,
+   "before": "OKX_CANDLE_CHANNEL['12h']=\"candle12H\"",
+   "after": "OKX_CANDLE_CHANNEL['12h']=\"candle12Hutc\"",
+   "why": "官方 WS 频道 candle12Hutc = UTC+0 开盘；旧 candle12H = UTC+8 开盘(锚点04:00/16:00Z)",
+   "sha256_before": "62261aa7fb1d20ed09d8b14ae3dba06a36053ae7d9a71b07f5cb31ca1f1d2a43",
+   "sha256_after": "35646d8cda3bcce6f163a4af2be080d4da3decafa012680da82fc9815cfba81c"
+  },
+  {
+   "file": "realtime_collector.py",
+   "line": 1462,
+   "before": "_expected_closed_open: okx 12h anchor=4h",
+   "after": "_expected_closed_open: anchor=0（UTC 00:00/12:00，与币安一致）",
+   "why": "与 candle12Hutc 同一边界；其他周期 anchor 本就为 0，行为不变"
+  },
+  {
+   "file": "adapter.py",
+   "line": 1174,
+   "before": "_OKX_BAR['12h']=\"12H\"",
+   "after": "_OKX_BAR['12h']=\"12Hutc\"",
+   "why": "网关 okx.candles 白名单只接受 12Hutc；传 12H 会 RejectedRequest → OKX 12h 尾段补缺静默失败",
+   "sha256_before": "008bfe9b872c32014c957c74759eb17ac980132ea36d72affbf4587de48c342a",
+   "sha256_after": "70e9f8496fd7a1de0bcc6dcf4cd983e37387cb4b79b5ccbecd5586ae960c3d24"
+  },
+  {
+   "file": "adapter.py",
+   "line": 1405,
+   "before": "(无)",
+   "after": "新增 _utc_boundary_filter(rows, exchange, tf)",
+   "why": "读侧隔离 OKX 12h 非UTC对齐旧行；**库内原行保留、不删除**；v1_candles 调用并如实写 note"
+  }
+ ],
+ "gateway_whitelist": {
+  "endpoint": "okx.candles (/api/v5/market/history-candles)",
+  "source": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data_hub/gateway.py:108-110",
+  "allowed_bar": [
+   "1m",
+   "5m",
+   "15m",
+   "30m",
+   "1H",
+   "4H",
+   "12Hutc",
+   "1Dutc"
+  ],
+  "note": "12Hutc 在白名单；12H 会被 RejectedRequest。okx.candles_recent(gateway_ext) 无值白名单但参数值取自 OKX_REST_BAR"
+ },
+ "official_support": {
+  "doc": "OKX API v5 中文文档镜像 offline/zh.html（源自 https://www.okx.com/docs-v5/zh）",
+  "ws_channel": "公共频道 candle 列表含 candle12Hutc / candle6Hutc",
+  "rest_bar": "GET /api/v5/market/candles 与 /api/v5/market/history-candles 的 bar：UTC+0开盘价k线含 12Hutc",
+  "excerpt_file": "验收证据/P10_src_okx官方文档_12Hutc_正文摘录_2026-10-07.txt"
+ },
+ "tests": {
+  "new": "tests/test_12h_utc_boundary.py（13 项：频道/bar映射、其他周期回归守卫、_expected_closed_open 与币安一致、网关白名单接受12Hutc拒绝12H/candle12Hutc、读侧隔离）",
+  "exit_code_new": 0,
+  "regression_history_integrity": "32 项 退出0",
+  "regression_business": "109 项 退出0"
+ }
+}

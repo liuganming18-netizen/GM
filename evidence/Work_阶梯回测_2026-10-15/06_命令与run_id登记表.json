@@ -1,0 +1,35 @@
+{
+  "schema": "wyckoffmaster_run_registry/v2_v31",
+  "spec_version": "WyckoffMaster_v3.1",
+  "generated_utc": "2026-10-15T02:20:00Z",
+  "status": "EMPTY_NO_RUNS_STARTED",
+  "run_id_convention": "wm31_<phase>_<segment>_<level>  例：wm31_kline_IS_M0 / wm31_holdout_Holdout_FINAL",
+  "ledger_path_convention": {
+    "raw": "回测日志/WyckoffMaster/ledgers/raw_<segment>_<level>.sqlite3（引擎原样输出，保留备查）",
+    "final": "回测日志/WyckoffMaster/ledgers/ledger_<segment>_<level>.sqlite3（经 v3.1 段末强平适配）"
+  },
+  "log_path_convention": "回测日志/WyckoffMaster/logs/ladder_<phase>.log",
+  "pid_path_convention": "回测日志/WyckoffMaster/logs/ladder_<phase>.pid",
+  "planned_runs": [
+    {"phase": "kline", "segments": ["IS", "Val"], "levels": ["M0", "M1", "M2", "M3_BE", "M3_Step"],
+     "conditional": ["M2b（任一类 IS+Val 超限拒单率>30% 时加跑）"],
+     "run_id_template": "wm31_kline_<segment>_<level>", "order": "先定 M2/M2b 及 M3 父配置"},
+    {"phase": "factor", "segments": ["IS", "Val"], "levels": ["M4"],
+     "run_id_template": "wm31_factor_<segment>_M4",
+     "gate": "仅当 M0–M3 有 IS/Val 正 Calmar",
+     "note": "M4 另固定共同因子样本，并在该样本重跑纯K线胜出父配置作对照"},
+    {"phase": "holdout", "segments": ["Holdout"], "levels": ["FINAL"],
+     "run_id_template": "wm31_holdout_Holdout_FINAL",
+     "gate": "① state/winner_lock.json 存在 ② Holdout 截止已到 ③ 数据闭合通过",
+     "note": "仅一次；不得调参救结果、不得据此再挑配置或 1h/4h 赢家"}
+  ],
+  "not_this_round": {
+    "M5": "前向验证（全网账户比自身30日分位>90%过滤；每币≥30自然日且≥90唯一有效有来源时间快照才激活）",
+    "M6": "前向验证（大户持仓比自身30日 Z-score 降序，平手保原序；同门槛）",
+    "note": "已有历史 metrics 不是新前向采集满 30 天的证据；前向采集单列，从 Holdout 截止后开始"
+  },
+  "actual_runs": [],
+  "launch_command": "sh adapters/launch_isolated.sh logs/ladder_<phase>.pid logs/ladder_<phase>.log scripts/run_ladder.py --phase <phase>",
+  "detached_evidence_required": ["PID 文件", "独立会话（setsid）", "实际 FD", "日志与账本增长", "断点", "退出状态"],
+  "forbidden": ["nohup", "改 3000/8787", "动真实账本", "与其他窗口重复跑全池", "选型阶段触及 Holdout", "同时启动多套全池"]
+}

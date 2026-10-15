@@ -1,0 +1,974 @@
+{
+ "generated_utc": "2026-10-07T12:13:54Z",
+ "tf": "12h",
+ "last_closed_open": 1791331200000,
+ "mode": "fill",
+ "readonly": false,
+ "db_open_mode": "rw",
+ "state_written": true,
+ "use_range_cache": true,
+ "range_cache_diag": {
+  "valid": true,
+  "invalidated": {},
+  "entries_dropped": {},
+  "kept": 551,
+  "dropped": 0
+ },
+ "evidence_seed": null,
+ "rule": "目标=[官方可得最早时点(含官方归档), 最近已闭合根]；库内早于REST最早的行**不得**仅凭REST截断判为另一代际，须逐项核验合约身份（见 _pool_identity.py）",
+ "symbols": {
+  "binance:ICPUSDT": {
+   "exchange": "binance",
+   "symbol": "ICPUSDT",
+   "range_basis": "cache",
+   "rest_first": "2022-09-27T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2021-07-01T00:00:00Z",
+   "db_last": "2026-10-07T00:00:00Z",
+   "db_rows": 3797,
+   "db_first_utc": "2021-07-01T00:00:00Z",
+   "db_last_utc": "2026-10-07T00:00:00Z",
+   "db_rows_utc": 3797,
+   "pre_rest": {
+    "rows_before_rest_first": 854,
+    "note": "库内早于官方REST最早时点：**待身份核验**，不得仅凭REST截断判为另一代际"
+   },
+   "target_start": "2022-09-27T00:00:00Z",
+   "mid_gaps_n": 1,
+   "mid_gaps": [
+    [
+     "2022-09-01T00:00:00Z",
+     "2022-09-26T12:00:00Z"
+    ]
+   ],
+   "planned_ranges": [
+    [
+     "2022-09-01T00:00:00Z",
+     "2022-09-26T12:00:00Z"
+    ]
+   ],
+   "planned_bars": 52,
+   "empty_ranges": [
+    [
+     "2022-09-01T00:00:00Z",
+     "2022-09-26T12:00:00Z"
+    ]
+   ],
+   "status": "ok",
+   "rows_added": 0,
+   "head_filled": 0,
+   "tail_filled": 0,
+   "db_first_after": "2021-07-01T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 3797
+  },
+  "binance:LITUSDT": {
+   "exchange": "binance",
+   "symbol": "LITUSDT",
+   "range_basis": "cache",
+   "rest_first": "2025-12-23T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2025-12-01T00:00:00Z",
+   "db_last": "2026-10-07T00:00:00Z",
+   "db_rows": 620,
+   "db_first_utc": "2025-12-01T00:00:00Z",
+   "db_last_utc": "2026-10-07T00:00:00Z",
+   "db_rows_utc": 620,
+   "pre_rest": {
+    "rows_before_rest_first": 44,
+    "note": "库内早于官方REST最早时点：**待身份核验**，不得仅凭REST截断判为另一代际"
+   },
+   "target_start": "2025-12-23T12:00:00Z",
+   "mid_gaps_n": 1,
+   "mid_gaps": [
+    [
+     "2025-12-23T00:00:00Z",
+     "2025-12-23T00:00:00Z"
+    ]
+   ],
+   "planned_ranges": [
+    [
+     "2025-12-23T00:00:00Z",
+     "2025-12-23T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "empty_ranges": [
+    [
+     "2025-12-23T00:00:00Z",
+     "2025-12-23T00:00:00Z"
+    ]
+   ],
+   "status": "ok",
+   "rows_added": 0,
+   "head_filled": 0,
+   "tail_filled": 0,
+   "db_first_after": "2025-12-01T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 620
+  },
+  "binance:MAVIAUSDT": {
+   "exchange": "binance",
+   "symbol": "MAVIAUSDT",
+   "range_basis": "cache",
+   "rest_first": "2025-03-26T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2025-03-01T00:00:00Z",
+   "db_last": "2026-10-07T00:00:00Z",
+   "db_rows": 1170,
+   "db_first_utc": "2025-03-01T00:00:00Z",
+   "db_last_utc": "2026-10-07T00:00:00Z",
+   "db_rows_utc": 1170,
+   "pre_rest": {
+    "rows_before_rest_first": 50,
+    "note": "库内早于官方REST最早时点：**待身份核验**，不得仅凭REST截断判为另一代际"
+   },
+   "target_start": "2025-03-26T12:00:00Z",
+   "mid_gaps_n": 1,
+   "mid_gaps": [
+    [
+     "2025-03-26T00:00:00Z",
+     "2025-03-26T00:00:00Z"
+    ]
+   ],
+   "planned_ranges": [
+    [
+     "2025-03-26T00:00:00Z",
+     "2025-03-26T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "empty_ranges": [
+    [
+     "2025-03-26T00:00:00Z",
+     "2025-03-26T00:00:00Z"
+    ]
+   ],
+   "status": "ok",
+   "rows_added": 0,
+   "head_filled": 0,
+   "tail_filled": 0,
+   "db_first_after": "2025-03-01T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 1170
+  },
+  "okx:CRO-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "CRO-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2021-04-08T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2021-04-08T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 4032,
+   "db_first_utc": "2021-04-08T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 4015,
+   "target_start": "2021-04-08T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2021-04-08T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 4033
+  },
+  "okx:LUNA-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "LUNA-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2022-05-28T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2022-05-28T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 3202,
+   "db_first_utc": "2022-05-28T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 3185,
+   "target_start": "2022-05-28T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2022-05-28T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 3203
+  },
+  "okx:CORE-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "CORE-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2023-02-08T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2023-02-08T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 2690,
+   "db_first_utc": "2023-02-08T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 2673,
+   "target_start": "2023-02-08T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2023-02-08T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 2691
+  },
+  "okx:RAY-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "RAY-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2024-03-12T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2024-03-12T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 1895,
+   "db_first_utc": "2024-03-12T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 1878,
+   "target_start": "2024-03-12T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2024-03-12T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 1896
+  },
+  "okx:PI-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "PI-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2025-02-20T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2025-02-20T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 1205,
+   "db_first_utc": "2025-02-20T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 1188,
+   "target_start": "2025-02-20T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2025-02-20T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 1206
+  },
+  "okx:OKB-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "OKB-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2025-09-04T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2025-09-04T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 813,
+   "db_first_utc": "2025-09-04T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 796,
+   "target_start": "2025-09-04T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2025-09-04T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 814
+  },
+  "okx:OL-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "OL-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2025-10-29T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2025-10-29T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 703,
+   "db_first_utc": "2025-10-29T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 686,
+   "target_start": "2025-10-29T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2025-10-29T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 704
+  },
+  "okx:RLS-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "RLS-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2025-12-02T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2025-12-02T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 634,
+   "db_first_utc": "2025-12-02T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 617,
+   "target_start": "2025-12-02T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2025-12-02T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 635
+  },
+  "okx:UP-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "UP-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-04-08T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-04-08T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 381,
+   "db_first_utc": "2026-04-08T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 364,
+   "target_start": "2026-04-08T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-04-08T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 382
+  },
+  "okx:OFC-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "OFC-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-04-09T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-04-09T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 379,
+   "db_first_utc": "2026-04-09T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 362,
+   "target_start": "2026-04-09T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-04-09T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 380
+  },
+  "okx:PROS-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "PROS-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-04-28T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-04-28T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 340,
+   "db_first_utc": "2026-04-28T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 323,
+   "target_start": "2026-04-28T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-04-28T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 341
+  },
+  "okx:BLEND-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "BLEND-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-04-29T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-04-29T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 339,
+   "db_first_utc": "2026-04-29T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 322,
+   "target_start": "2026-04-29T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-04-29T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 340
+  },
+  "okx:AI-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "AI-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-04-29T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-04-29T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 338,
+   "db_first_utc": "2026-04-29T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 321,
+   "target_start": "2026-04-29T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-04-29T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 339
+  },
+  "okx:NES-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "NES-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-06-24T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-06-24T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 226,
+   "db_first_utc": "2026-06-24T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 209,
+   "target_start": "2026-06-24T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-06-24T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 227
+  },
+  "okx:DATA-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "DATA-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-07-02T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-07-02T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 210,
+   "db_first_utc": "2026-07-02T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 193,
+   "target_start": "2026-07-02T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-07-02T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 211
+  },
+  "okx:AEON-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "AEON-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-07-27T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-07-27T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 161,
+   "db_first_utc": "2026-07-27T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 144,
+   "target_start": "2026-07-27T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-07-27T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 162
+  },
+  "okx:CP-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "CP-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-09-02T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-09-02T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 86,
+   "db_first_utc": "2026-09-02T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 69,
+   "target_start": "2026-09-02T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-09-02T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 87
+  },
+  "okx:DGAI-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "DGAI-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-09-03T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-09-03T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 85,
+   "db_first_utc": "2026-09-03T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 68,
+   "target_start": "2026-09-03T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-09-03T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 86
+  },
+  "okx:CASHCAT-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "CASHCAT-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-09-03T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-09-03T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 85,
+   "db_first_utc": "2026-09-03T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 68,
+   "target_start": "2026-09-03T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-09-03T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 86
+  },
+  "okx:CNPY-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "CNPY-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-09-07T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-09-07T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 76,
+   "db_first_utc": "2026-09-07T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 59,
+   "target_start": "2026-09-07T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-09-07T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 77
+  },
+  "okx:KII-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "KII-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-09-24T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-09-24T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 43,
+   "db_first_utc": "2026-09-24T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 26,
+   "target_start": "2026-09-24T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-09-24T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 44
+  },
+  "okx:XDP-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "XDP-USDT-SWAP",
+   "off_boundary_rows": 17,
+   "range_basis": "cache",
+   "rest_first": "2026-09-28T12:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-09-28T12:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 34,
+   "db_first_utc": "2026-09-28T12:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 17,
+   "target_start": "2026-09-28T12:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-09-28T12:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 35
+  },
+  "okx:QUANT-USDT-SWAP": {
+   "exchange": "okx",
+   "symbol": "QUANT-USDT-SWAP",
+   "off_boundary_rows": 12,
+   "range_basis": "cache",
+   "rest_first": "2026-10-01T00:00:00Z",
+   "rest_last_raw": null,
+   "db_first": "2026-10-01T00:00:00Z",
+   "db_last": "2026-10-06T16:00:00Z",
+   "db_rows": 24,
+   "db_first_utc": "2026-10-01T00:00:00Z",
+   "db_last_utc": "2026-10-06T12:00:00Z",
+   "db_rows_utc": 12,
+   "target_start": "2026-10-01T00:00:00Z",
+   "tail_gap": {
+    "from": "2026-10-07T00:00:00Z",
+    "to": "2026-10-07T00:00:00Z"
+   },
+   "planned_ranges": [
+    [
+     "2026-10-07T00:00:00Z",
+     "2026-10-07T00:00:00Z"
+    ]
+   ],
+   "planned_bars": 1,
+   "status": "ok",
+   "rows_added": 1,
+   "head_filled": 0,
+   "tail_filled": 1,
+   "db_first_after": "2026-10-01T00:00:00Z",
+   "db_last_after": "2026-10-07T00:00:00Z",
+   "db_rows_after": 25
+  }
+ },
+ "totals": {
+  "head_filled": 0,
+  "tail_filled": 23,
+  "mid_filled": 0,
+  "rows_added": 23,
+  "unavailable": 0,
+  "range_empty": 3,
+  "failed": 0,
+  "pre_rest_rows": 948,
+  "off_boundary_rows": 386,
+  "boundary_mixed": 23,
+  "symbols_ok": 26,
+  "skipped_local_complete": 0,
+  "needs_fill": 0,
+  "needs_range_evidence": 0,
+  "needs_evidence": 0,
+  "range_probes": 0,
+  "gap_fetches": 26,
+  "elapsed_s": 25.3,
+  "gateway": {
+   "ok": 26,
+   "deferred": 0,
+   "transient": 0,
+   "failed": 0,
+   "rejected": 0
+  },
+  "raw_archive": {
+   "saved": 26,
+   "bytes": 682395,
+   "link_bytes": 25356,
+   "skipped_over_cap": 0,
+   "save_error": 0,
+   "skipped_low_space": 0,
+   "dir_existing_bytes": 0,
+   "cap_bytes": 536870912,
+   "min_free_gb": 30.0,
+   "last_error": null,
+   "enabled": true,
+   "require_evidence": true,
+   "budget_scope": "目录级（既有占用 + 本次写入[正文+元数据+sidecar] ≤ cap）"
+  },
+  "state_written": true,
+  "readonly": false,
+  "range_cache_used": true,
+  "range_cache_dirty": false,
+  "range_cache_diag": {
+   "valid": true,
+   "invalidated": {},
+   "entries_dropped": {},
+   "kept": 551,
+   "dropped": 0
+  },
+  "deadline_hit": false,
+  "processed": 26,
+  "remaining": 0
+ },
+ "targets_total": 26,
+ "deadline_hit": false,
+ "free_gb_after": 91.4
+}

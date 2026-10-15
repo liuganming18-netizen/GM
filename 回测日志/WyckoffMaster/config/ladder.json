@@ -1,0 +1,209 @@
+{
+  "schema": "wyckoffmaster_ladder/v2_v31",
+  "spec_version": "WyckoffMaster_v3.1",
+  "authority": "docs/WyckoffMaster_v3.1_执行补充与窗口交接_2026-10-15.md",
+  "status": "ENCODED_NOT_RUN",
+  "scope_this_round": {
+    "historical_ladder": ["M0", "M1", "M2", "M2b_conditional", "M3_BE", "M3_Step", "M4"],
+    "not_this_round": ["M5", "M6"],
+    "m5_m6_note": "M5/M6 不用于本轮历史模型选型，改为前向验证（见 forward_validation）"
+  },
+  "single_account": {
+    "initial_equity_usdt": 5000.0,
+    "max_concurrent_positions": 10,
+    "direction": "long_only",
+    "leverage": 1,
+    "segments_independent": true,
+    "per_segment_start": "5000 USDT / 零仓 / 零挂单",
+    "note": "三段各自独立 5000U；不得把实验组合合成生产账户"
+  },
+  "execution_layer_shared": {
+    "detail_timeframe": "15m",
+    "entry_delay_minutes": 15,
+    "entry": "market_at_eligible_detail_open",
+    "fee_each_side": 0.0005,
+    "slippage_each_side": 0.0005,
+    "buy_round": "adverse_slippage_then_ceil_to_tick",
+    "sell_round": "adverse_slippage_then_floor_to_tick",
+    "stop_check_frequency": "every_15m_bar",
+    "stop_priority": "15m 逐根检查，止损优先；开盘穿 stop 用更差 open 加卖出不利滑点",
+    "no_future_low": "不用同根 15m 未来 low/close 决定是否下单或出场；已知时序的开盘正常出场与该 bar 之后才发生的 low 不倒置",
+    "trail_effective": "台阶下一根 15m 才生效且单调上移",
+    "expiry_check": "720h 逐 15m 检查",
+    "participation_cap": "prior_closed_15m_quote_volume * 0.01",
+    "risk": {
+      "per_trade_stop_budget_frac_of_equity": 0.005,
+      "per_symbol_notional_frac": 0.10,
+      "gross_long_notional_frac": 0.80,
+      "cash_reserve_frac": 0.20,
+      "portfolio_initial_stop_risk_frac": 0.03
+    },
+    "funding_model_required": "historical_events",
+    "funding_model_forbidden": ["norm4h", "ext1h", "zero_fill", "ordinary_close_as_mark"],
+    "funding_negative_income_kept": true,
+    "drawdown_lock_frac": 0.20,
+    "max_holding_hours": 720,
+    "target_2r": "仅展示，不执行固定触价止盈"
+  },
+  "levels": [
+    {
+      "id": "M0",
+      "desc": "纯20突破 + 3ATR固定止损 + 不移止损 + 过去30完整UTC日成交额中位排序",
+      "entry_rule": "close > prior 20-bar high (strict)",
+      "stop": "fixed_3atr",
+      "trail": "none",
+      "liquidity_rank": "median_quote_volume_past_30_complete_utc_days",
+      "parent": null
+    },
+    {
+      "id": "M1",
+      "desc": "仅替换为三类买点整体，其余同 M0",
+      "entry_rule": "three_buy_points",
+      "conflict_order": ["spring", "breakout", "retest"],
+      "anchor": "first_active_no_replace_consume_once",
+      "stop": "fixed_3atr",
+      "trail": "none",
+      "parent": "M0",
+      "note": "整组买点比较，不拆称每个条件单独贡献"
+    },
+    {
+      "id": "M2",
+      "desc": "在 M0/M1 上一胜出配置上只替换结构止损（按类型统计 3.5ATR 超限拒单）",
+      "stop": "structural",
+      "structure_stop": {
+        "raw_stop": "struct_low - 0.8*ATR",
+        "if_dist_lt_min": "只向更低处扩大到 min_stop_atr(1.5ATR)，绝不抬回结构点上方",
+        "if_dist_gt_max": "拒单（reject_reason=structure_stop_distance_gt_3p5atr）",
+        "floor_then_recheck": true,
+        "reject_if": ["raw_stop<=0", "raw_open_already_beyond_stop", "P_entry<=L_struct"]
+      },
+      "reject_stats": {
+        "group_by": ["spring", "breakout", "retest"],
+        "metric": "D_stop>3.5ATR 拒单计数及比例",
+        "denominator": "到达结构止损超限判断、具备有效结构和执行价的唯一候选信号数",
+        "zero_denominator": "记 N/A，不触发",
+        "per_trade_keys": "超限事件单独留逐笔键",
+        "must_not_mix_with": ["entry_below_struct_low", "precision", "insufficient_funds"]
+      },
+      "parent_rule": "if M1 promoted -> parent=M1 else parent=M0",
+      "note": "M1 未晋级则父配置为 M0，不偷换父策略"
+    },
+    {
+      "id": "M2b",
+      "desc": "条件预注册：任一类买点 IS+Val 合并的超限拒单率 > 30% 时自动加跑",
+      "trigger": {
+        "condition": "any(buy_type).combined_IS_Val_overlimit_reject_rate > 0.30",
+        "auto_run": true,
+        "preregistered": true
+      },
+      "distance_rule": "D = max(P_entry - (L_struct - 0.8*ATR), 1.5*ATR)",
+      "no_reject_for": "不因 >3.5ATR 拒单",
+      "qty": "按 0.5% 权益 / 实际距离自然缩小",
+      "constraints_continue": ["原名义上限", "组合风险", "现金预留", "参与率", "最小单位"],
+      "still_require": ["合法正止损", "正常精度", "真实风险"],
+      "same_as_M2": ["父配置", "数据", "时间", "排序", "费用"],
+      "only_differs_in": "距离上限",
+      "selection": "M2b 与 M2 及父配置按原晋级标准比较后再定 M3 父层",
+      "entry_below_struct_low_applies": true
+    },
+    {
+      "id": "M3_BE",
+      "desc": "从 M2/M2b 后胜出父配置出发，只改锁利为保本对照",
+      "trail": "breakeven_1r_close_confirmed",
+      "effective": "next_15m_after_confirm",
+      "no_backfill": true,
+      "no_downward": true,
+      "parent": "M2_or_M2b_winner",
+      "control": "M2_or_M2b_winner"
+    },
+    {
+      "id": "M3_Step",
+      "desc": "从 M2/M2b 后胜出父配置出发，只改锁利为台阶锁利",
+      "trail": "step_swing",
+      "step_lock": {
+        "trigger": "signal_period_close_new_high AND unrealized>=2*frozen_ATR",
+        "candidate": "prior 5 closed lows minus 0.8*ATR",
+        "constraints": ["above_current_stop", ">=entry+0.3ATR", ">=5 full bars held"],
+        "effective": "next_15m_after_confirm",
+        "monotonic_up_only": true,
+        "no_backfill": true,
+        "frozen_atr": "ATR frozen at entry signal"
+      },
+      "parent": "M2_or_M2b_winner",
+      "also_compare": ["M2_or_M2b_winner", "M3_BE"]
+    },
+    {
+      "id": "M4",
+      "desc": "OI 变化自身 90 日分位排序（本轮历史阶梯最后一层）",
+      "filter": "oi_change_90d_pct_rank",
+      "tie_break": ["raw_quote_volume_rank", "exchange", "symbol"],
+      "sample": "common_factor_history_sample",
+      "must_rerun_kline_winner": true,
+      "note": "本轮 IS/Val 只需要 M4 OI；衍生品缺失不得反过来淘汰价格样本"
+    }
+  ],
+  "entry_below_struct_low": {
+    "rule": "所有使用结构低点的候选，若 P_entry <= L_struct ⇒ 拒单",
+    "reject_reason": "entry_below_struct_low",
+    "inputs_allowed": ["该时刻 open", "已知信号结构", "滑点/取整"],
+    "forbidden": "不用同根 15m 未来 low/close 决定入场",
+    "applies_to": ["M2", "M2b"],
+    "note": "不能因放宽距离取消结构失效拒单；原 open<=initial_stop 拒单继续"
+  },
+  "forward_validation": {
+    "M5": {
+      "rule": "全网账户比自身 30 日分位 > 90% 过滤（不开多）",
+      "activation": "每币真实前向采集 ≥30 个自然日且 ≥90 个唯一、有效、有来源时间的历史快照",
+      "below_threshold": "不跳过（不生效）"
+    },
+    "M6": {
+      "rule": "大户持仓比自身 30 日 Z-score 降序排序，平手保持原排序",
+      "activation": "同 M5 门槛",
+      "below_threshold": "不改序"
+    },
+    "notes": [
+      "已有历史 metrics 不是新前向采集满 30 天的证据",
+      "全网账户不重命名为散户专属，仍不是巨鲸成本",
+      "历史 metrics 列保留，不删除、不重下",
+      "前向采集单列，从 Holdout 截止后开始，不混入历史选型"
+    ]
+  },
+  "promotion_rules": {
+    "trades": "IS+Val 交易数 >= 父配置 60%",
+    "win_months": "有差异月份中获胜月 > 50%（无差异月全部相同则不晋级）",
+    "improvement": "正基线 Calmar 相对提升 >= 15% 或 Sharpe 绝对提升 >= 0.15",
+    "drawdown": "最大回撤相对恶化 <= 10%（相对，不是百分点）",
+    "val_positive": "Val 的 Calmar 与 Sharpe 均为正且优于父配置",
+    "zero_baseline": "零DD / 负或零基线 Calmar 不可算相对提升，走 Sharpe 分支并披露",
+    "insufficient_sample": "样本不足不晋级",
+    "not_profit_guarantee": "总体正 Calmar 不是盈利保证",
+    "order": "先定 M2/M2b 及 M3 父配置，再 M4；不同时启动多套全池"
+  },
+  "stop_rule": {
+    "trigger": "若 M0–M4 没有任何一层在 IS 和 Val 分别正 Calmar",
+    "action": "按项目停机规则停止并如实汇报",
+    "forbidden_wording": "不得称为『过滤器在数学上必然无法挽救』",
+    "no_param_expansion": "不扩大参数搜索"
+  },
+  "sample_separation": {
+    "kline_ladder": "M0–M3(+M2b) 使用同一清洁冻结样本",
+    "derivative_ladder": "M4 另固定有共同因子历史的可用样本",
+    "cross_check": "在共同因子样本上重跑纯K线胜出父配置作对照",
+    "report_split": "全历史与共同样本结果分表",
+    "forbidden": "禁止把样本变化说成因子增益"
+  },
+  "selection": {
+    "timeframe_choice": "1h / 4h 选型仅看 IS/Val",
+    "holdout": "最终配置/代码/输入 SHA 冻结后仅一次 Holdout，不调参救结果",
+    "holdout_not_for": ["再挑配置", "1h/4h 赢家选择"]
+  },
+  "reporting": {
+    "by_signal_type": ["win_rate", "expectancy"],
+    "bootstrap": {"n": 1000, "method": "time_block", "ci": 0.95, "fixed_seed": true,
+                  "block_length": "fixed_and_documented", "keep_contemporaneous_correlation": true},
+    "metrics": ["trades", "annualized", "net_return", "DD", "Sharpe", "Calmar",
+                "funding_net", "fee_slippage", "full_reject_reasons"],
+    "whipsaw": {"def": "止损后 5 根主周期收盘再越原入场价", "usage": "仅事后统计，不反馈交易"},
+    "stress": "候选确定后手续费/滑点加倍压力核验；不用压力结果事后选参数"
+  }
+}

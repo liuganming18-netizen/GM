@@ -1,0 +1,62 @@
+{
+  "patch_files": {
+    "补缺_K线_local_import.csv": 93,
+    "补缺_K线_api_import.csv": 149932,
+    "补缺_K线_okx前端_import.csv": 2117,
+    "补缺_K线_okx补齐_import.csv": 332864,
+    "补缺_K线_官方日包_import.csv": 2016
+  },
+  "patch_dup": {
+    "补缺_K线_local_import.csv": 0,
+    "补缺_K线_api_import.csv": 0,
+    "补缺_K线_okx前端_import.csv": 0,
+    "补缺_K线_okx补齐_import.csv": 0,
+    "补缺_K线_官方日包_import.csv": 0
+  },
+  "patch_keys": 162,
+  "patch_rows": 484907,
+  "patch_vs_coldhot_overlap": 0,
+  "A_mainline_segments": 195,
+  "A_mainline_expected": 24746,
+  "A_mainline_covered_by_patch": 23137,
+  "A_mainline_still_uncovered": 1609,
+  "A_mainline_covered_total": 23137,
+  "A_mainline_segments_fully_covered": 147,
+  "A_mainline_segments_uncovered": 48,
+  "B_frontend_segments": 63,
+  "B_frontend_expected": 456579,
+  "B_frontend_covered_by_patch": 456516,
+  "B_frontend_still_uncovered": 0,
+  "B_frontend_covered_total": 456579,
+  "B_frontend_segments_fully_covered": 63,
+  "B_frontend_segments_uncovered": 0,
+  "C_oi_segments": 8399,
+  "C_oi_expected": 690426,
+  "C_oi_covered_by_patch": 13750,
+  "C_oi_still_uncovered": 676676,
+  "C_oi_covered_total": 13750,
+  "C_oi_segments_fully_covered": 527,
+  "C_oi_segments_uncovered": 7872,
+  "C_oi_by_status": {
+    "no_surviving_day_zip": {
+      "segments": 530,
+      "expected": 13753,
+      "covered_by_patch": 13750,
+      "still_uncovered": 3,
+      "phantom_seam_slots": 2,
+      "real_uncovered": 1,
+      "segments_fully_covered": 527
+    },
+    "source_zip_has_no_event_in_gap": {
+      "segments": 7869,
+      "expected": 676673,
+      "covered_by_patch": 0,
+      "still_uncovered": 676673,
+      "phantom_seam_slots": 543,
+      "real_uncovered": 676130,
+      "segments_fully_covered": 0
+    }
+  },
+  "C_oi_phantom_seam_slots": 545,
+  "C_oi_real_uncovered": 676131
+}

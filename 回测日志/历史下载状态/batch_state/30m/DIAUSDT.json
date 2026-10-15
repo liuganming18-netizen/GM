@@ -1,0 +1,539 @@
+{
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2024-10.zip",
+  "bytes": 63210,
+  "sha256": "07731f8ffeb5864e9158e09223def6eaa20d843cd0fc09ed9944499a721974e5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101530,
+   "新增版本数": 1415,
+   "状态": "已入库"
+  },
+  "source_id": 101530,
+  "rows": 1415
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2024-11.zip",
+  "bytes": 61121,
+  "sha256": "1505fc097076a707a396704c6d8a7601b43ef7be0c27af2a477b6c51a53f177a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101531,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 101531,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2024-12.zip",
+  "bytes": 62310,
+  "sha256": "46a57c3f70afaca854e5619a6cbc3c57f42c7af2898ba3d9f9387f9060487848",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101532,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101532,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-01.zip",
+  "bytes": 59881,
+  "sha256": "2d1f02f09649fb3218f28083b2e09486b7467f2f6ce64c885f05c821ea5c97a4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101533,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101533,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-03.zip",
+  "bytes": 58766,
+  "sha256": "c4e48bb25df948759b8eac582032499e1f75ecd24304be3eeaacfe540593410d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101535,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101535,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-02.zip",
+  "bytes": 53896,
+  "sha256": "1ff782d4d39b0de37a12b85043fd268510dff1c86c4f3bbf37b55da2322799fb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101534,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 101534,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-05.zip",
+  "bytes": 58326,
+  "sha256": "376f08f849d6826aa941e209498edd8b9564c504761601fc27f559c3f4f1a3b0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101537,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101537,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-04.zip",
+  "bytes": 56946,
+  "sha256": "aafb7240a6b8164363f461d8e2ea26650786eab450e5e4c3083a7682b32615bd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101536,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 101536,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-06.zip",
+  "bytes": 55501,
+  "sha256": "d3e3943c8ca07e2ea323a9ab493dcab791d4b1afb08b8cb705a0b48f8d85123e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101538,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 101538,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-07.zip",
+  "bytes": 60979,
+  "sha256": "8d386cb76fd4e25d7cb49b86ae8124508ef70c9d8711e8c3c360e18e25f60617",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101539,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101539,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-08.zip",
+  "bytes": 61980,
+  "sha256": "57a5412286cd1384c855ac8b8b894a8c3e03a14b2b9cb10757cba4b19a064217",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101540,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101540,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-09.zip",
+  "bytes": 57116,
+  "sha256": "12af1f1fd24a46f4ef8e4a0c83334c00f581f31f765c9844f3392307dcd7ebe4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101541,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 101541,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-10.zip",
+  "bytes": 60480,
+  "sha256": "e59304546c39ff34e6055e0652a5f8014f589f3f0fff76fe6aeb44be774b5cb8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101542,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101542,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-11.zip",
+  "bytes": 57131,
+  "sha256": "8a6ee1a1c1ecbe103d71ffec648116532cda39041bad5332541b01b272cdd079",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101543,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 101543,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2025-12.zip",
+  "bytes": 56199,
+  "sha256": "892e03f29777407885ff22840ec009e339c3c5c770ced2475b266fe8a046d62c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101544,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101544,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-01.zip",
+  "bytes": 56448,
+  "sha256": "75a46f93f4d2836d666997b41bb3bacf99d021060cc0b234ad7be827985e8754",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101545,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101545,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-02.zip",
+  "bytes": 50199,
+  "sha256": "75cf3b90b4c5a931f49655faa0ae826d8857186195bdb4121e384ff33c6a8c97",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101546,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 101546,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-03.zip",
+  "bytes": 55130,
+  "sha256": "b9bd02a4edc84b8599d10a93ee4aee2604f2b00b05d806d1214f638b1f3e030e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101547,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101547,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-04.zip",
+  "bytes": 53616,
+  "sha256": "6e77c9b5c2437a305f382b1a34218f270efc0e3e56501710cd3e2d65daa48e40",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101548,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 101548,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-05.zip",
+  "bytes": 55821,
+  "sha256": "fdac56c1cd586026d429bf129741cea7f8fea215e78b38d8748ad2f4d32042c5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101549,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101549,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-06.zip",
+  "bytes": 53279,
+  "sha256": "21732dfbb81167a405e6cf4c2dfdf6989dd34e31701548ceb36090b879060737",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101550,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 101550,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-07.zip",
+  "bytes": 55360,
+  "sha256": "ded928112194ef3ea7e79ca57352932d1c35cf78bdeb10fe34c06081058c7f46",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101551,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101551,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-08.zip",
+  "bytes": 57319,
+  "sha256": "03ebe4038ce6b0d4cb1a39a015b00b6992282c413b978f92e19d806874b35d11",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101552,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 101552,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/DIAUSDT/30m/DIAUSDT-30m-2026-09.zip",
+  "bytes": 53774,
+  "sha256": "6041bc1abf3a854df081029fb29daa5cdcd5824b4cc5ee017abb046712aac683",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101553,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 101553,
+  "rows": 1440
+ },
+ "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-01.zip",
+  "bytes": 2199,
+  "sha256": "08c4dcf33fc756353bfdeec06ac9fe38a83968922dc58c85567748648360eb74",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101526,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 101526,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-02.zip",
+  "bytes": 2173,
+  "sha256": "d463e5c3b23e3375d4c82995bd7aa26ee5e575ffe100bcda4fc9f3afa1512204",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101527,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 101527,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-03.zip",
+  "bytes": 2107,
+  "sha256": "3f604a42114357ab1c72c98f875d789ba8a1f14fe0d50c2ef712cc44de180366",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101528,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 101528,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-04.zip",
+  "bytes": 2142,
+  "sha256": "c2ab824e7d8deb47e2a2fda3e35f8de386078f93638a255d80a4a29ee037c7ee",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 101529,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 101529,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-05.zip",
+  "bytes": 2229,
+  "sha256": "e851964664eaa0c087fa3209d6f3fecb305cf12c8a0c995ba195ad65cd31a9a6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 346088,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 346088,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-06.zip",
+  "bytes": 2354,
+  "sha256": "d0e04e6eb0d972316f93e9294ae86158aef3fce17beea09f32ced5b9ffb7e63b",
+  "checksum_ok": true,
+  "size_bytes": 2354,
+  "fetched_at": "2026-10-07T19:51:20Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/DIAUSDT/DIAUSDT-30m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940939,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940939,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:25Z"
+ },
+ "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-07.zip",
+  "bytes": 2248,
+  "sha256": "c69a434464a0ccc22b1d99164491d1ce4dee8867cf7d614d2ac88f8dd3784022",
+  "checksum_ok": true,
+  "size_bytes": 2248,
+  "fetched_at": "2026-10-08T10:36:49Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/DIAUSDT/DIAUSDT-30m-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/DIAUSDT/30m/DIAUSDT-30m-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940940,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940940,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:25Z"
+ }
+}

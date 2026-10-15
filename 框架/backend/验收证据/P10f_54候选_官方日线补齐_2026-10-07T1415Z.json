@@ -1,0 +1,247 @@
+{
+ "generated_utc": "2026-10-07T13:51:34Z",
+ "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "entry": "binance official daily archive (data.binance.vision)",
+ "targets": {
+  "ICPUSDT": {
+   "dates": 26,
+   "files": [
+    {
+     "date": "2022-09-01",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500096
+    },
+    {
+     "date": "2022-09-02",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500097
+    },
+    {
+     "date": "2022-09-03",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500098
+    },
+    {
+     "date": "2022-09-04",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500099
+    },
+    {
+     "date": "2022-09-05",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500100
+    },
+    {
+     "date": "2022-09-06",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500101
+    },
+    {
+     "date": "2022-09-07",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500102
+    },
+    {
+     "date": "2022-09-08",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500103
+    },
+    {
+     "date": "2022-09-09",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500104
+    },
+    {
+     "date": "2022-09-10",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500557
+    },
+    {
+     "date": "2022-09-11",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500657
+    },
+    {
+     "date": "2022-09-12",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500658
+    },
+    {
+     "date": "2022-09-13",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500659
+    },
+    {
+     "date": "2022-09-14",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500660
+    },
+    {
+     "date": "2022-09-15",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500661
+    },
+    {
+     "date": "2022-09-16",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500662
+    },
+    {
+     "date": "2022-09-17",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500663
+    },
+    {
+     "date": "2022-09-18",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500664
+    },
+    {
+     "date": "2022-09-19",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500665
+    },
+    {
+     "date": "2022-09-20",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500666
+    },
+    {
+     "date": "2022-09-21",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 2,
+     "source_id": 1500667
+    },
+    {
+     "date": "2022-09-22",
+     "zip": "http_404",
+     "checksum": "http_404",
+     "result": "official_absent_404"
+    },
+    {
+     "date": "2022-09-23",
+     "zip": "http_404",
+     "checksum": "http_404",
+     "result": "official_absent_404"
+    },
+    {
+     "date": "2022-09-24",
+     "zip": "http_404",
+     "checksum": "http_404",
+     "result": "official_absent_404"
+    },
+    {
+     "date": "2022-09-25",
+     "zip": "http_404",
+     "checksum": "http_404",
+     "result": "official_absent_404"
+    },
+    {
+     "date": "2022-09-26",
+     "zip": "http_404",
+     "checksum": "http_404",
+     "result": "official_absent_404"
+    }
+   ],
+   "rows_added": 42,
+   "status": "ok"
+  },
+  "LITUSDT": {
+   "dates": 1,
+   "files": [
+    {
+     "date": "2025-12-23",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 1,
+     "source_id": 1500668
+    }
+   ],
+   "rows_added": 1,
+   "status": "ok"
+  },
+  "MAVIAUSDT": {
+   "dates": 1,
+   "files": [
+    {
+     "date": "2025-03-26",
+     "zip": "ok",
+     "checksum": "ok",
+     "result": "imported",
+     "rows_added": 1,
+     "source_id": 1500669
+    }
+   ],
+   "rows_added": 1,
+   "status": "ok"
+  }
+ },
+ "totals": {
+  "files_imported": 23,
+  "rows_added": 44,
+  "failures": 0
+ }
+}

@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-10-15T00:54:20.450126+08:00",
+  "shards": 184,
+  "covered_shards": 184,
+  "abnormal_shards": 0,
+  "old_rows_sum": 1827782,
+  "delta_rows_sum": -449048,
+  "overlap_rows_sum": 0,
+  "by_status": {
+    "rows_reduced": {
+      "shards": 122,
+      "old_rows": 1525537,
+      "union_rows": 1525537,
+      "delta_rows": -146803
+    },
+    "old_path_absent": {
+      "shards": 62,
+      "old_rows": 302245,
+      "union_rows": 302245,
+      "delta_rows": -302245
+    }
+  },
+  "conclusion": "清单差 449,048 行已被现有补件完整覆盖（归档 ∪ 补件 ≥ old_rows 且零重叠），不存在「能补而未补」",
+  "patch_files_scanned": [
+    "补缺_K线_api_import.csv",
+    "补缺_K线_local_import.csv",
+    "补缺_K线_okx前端_import.csv",
+    "补缺_K线_okx补齐_import.csv",
+    "补缺_K线_官方日包_import.csv"
+  ]
+}

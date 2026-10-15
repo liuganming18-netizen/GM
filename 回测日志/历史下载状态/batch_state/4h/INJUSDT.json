@@ -1,0 +1,981 @@
+{
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-08.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-08.zip",
+  "kind": "monthly",
+  "period": "2022-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-08.zip",
+  "bytes": 4450,
+  "sha256": "7da94e00f8720bd44f33d5347a886f7adfb1e8fde9bd2dd89d7c45139479ed3c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61426,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 61426,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-09.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-09.zip",
+  "kind": "monthly",
+  "period": "2022-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-09.zip",
+  "bytes": 8593,
+  "sha256": "32fbe7f0aa57c36d4ea25038e2838ecce1c0474ca179536865264068044487eb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61427,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61427,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-10.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-10.zip",
+  "kind": "monthly",
+  "period": "2022-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-10.zip",
+  "bytes": 9214,
+  "sha256": "3794e96976ce3aad110ba3f752a5c693307a1f89bdaf85b14114da3b4943d02a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61428,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61428,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-11.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-11.zip",
+  "kind": "monthly",
+  "period": "2022-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-11.zip",
+  "bytes": 8843,
+  "sha256": "18440ba5f19f911829b1145608f1f035c518898526ead75a1f46f35f63353905",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61429,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61429,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-12.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-12.zip",
+  "kind": "monthly",
+  "period": "2022-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2022-12.zip",
+  "bytes": 8623,
+  "sha256": "b2740195249bf39c624ed4089fae1e8c1a724357ee946998fd4c04c9e1bb3461",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61430,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61430,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-01.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-01.zip",
+  "kind": "monthly",
+  "period": "2023-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-01.zip",
+  "bytes": 8963,
+  "sha256": "8766146ec12148e33e7a9c7c3413019dad548e0fbaa93cceddc994c804c82075",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61431,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61431,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-02.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-02.zip",
+  "kind": "monthly",
+  "period": "2023-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-02.zip",
+  "bytes": 8538,
+  "sha256": "3de8f71e8ff492638383b994f51f36483275b71ed26435ed650dd0af349e9ba9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61432,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 61432,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-03.zip",
+  "bytes": 9392,
+  "sha256": "1c9a70fe803a258855f8eca099cb1ba35109a623859138f8b0dc7bad6f012b94",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61433,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61433,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-05.zip",
+  "bytes": 9587,
+  "sha256": "c7b050b535b275e49aba9e17a68d3001144f8ca14ec2b09720cf9f8335a314e6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61435,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61435,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-04.zip",
+  "bytes": 9455,
+  "sha256": "dcbc67208fde7ea20f440a0a11a484583321268a08847acd0af14dde83982471",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61434,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61434,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-06.zip",
+  "bytes": 9348,
+  "sha256": "7c216204fcb15329432521f7db2fbf3946d01270131fda7d0e0996b4f2b0de77",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61436,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61436,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-07.zip",
+  "bytes": 9465,
+  "sha256": "c905ded8435f18ac887adfc99fe4a108e8a7258d40c41744101f50b23155edd9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61437,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61437,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-08.zip",
+  "bytes": 9341,
+  "sha256": "54b7ac9a4a9f3fec8e5d5f46e62262b05bba8b966dbe5bad3959aa3b12f38a08",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61438,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61438,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-09.zip",
+  "bytes": 8787,
+  "sha256": "8136e94731818977bce42d9dd03eb341975d3b45c057661b96bf57638124fdd8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61439,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61439,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-10.zip",
+  "bytes": 9335,
+  "sha256": "e3415440cde8c501715841334366114bdadc391aa80601101216f621737b1beb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61440,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61440,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-11.zip",
+  "bytes": 9308,
+  "sha256": "5af0b913384f9da526d9238646cc17faecbb2cbb0f7dca7b1f829e94e52c5990",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61441,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61441,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2023-12.zip",
+  "bytes": 9968,
+  "sha256": "f8d3d0b92ee61f3f4186cd1b49b2e09ff05a62a63cc653b200120eccc8f1d4ac",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61442,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61442,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-01.zip",
+  "bytes": 9910,
+  "sha256": "ada57d21a957ee9e0884f25c2cc311c33626df99f5e3b9ad5080b246cfd36f7e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61443,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61443,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-02.zip",
+  "bytes": 9195,
+  "sha256": "af7786f1b2b897eb962c387dc8bb74e049b89758962234b12212665efca9fd5e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61444,
+   "新增版本数": 174,
+   "状态": "已入库"
+  },
+  "source_id": 61444,
+  "rows": 174
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-03.zip",
+  "bytes": 9878,
+  "sha256": "9b6baa4577b2a0bbdd78f89e3fd0bcace0c6f798a28f03f8078e289621fbf076",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61445,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61445,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-04.zip",
+  "bytes": 9415,
+  "sha256": "620a3efe94d6aa5aea2115e5d8b2bb4edba40929caea75c79690fa4b631d242e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61446,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61446,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-05.zip",
+  "bytes": 9522,
+  "sha256": "8d01f0ab2e49459e75463428b8b8365170b9710bc0923ae015e37afad9c13ea7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61447,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61447,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-06.zip",
+  "bytes": 9440,
+  "sha256": "69c5f92743174264d7e4613c1feb01529ee5c8ef9114e1c72420e1ac7ebaf7d8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61448,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61448,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-07.zip",
+  "bytes": 9602,
+  "sha256": "be35bb783aa893f90fca70f8a9d3727d7574afd9a257211c9acff6a52774ea5a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61449,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61449,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-08.zip",
+  "bytes": 9566,
+  "sha256": "155f0cd535defef8c5e1423ae00ff215606329f685c611149c3383d1826a4111",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61450,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61450,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-09.zip",
+  "bytes": 9220,
+  "sha256": "da86b0278c6c0606e7b35acc56fe51185a83e07315168e48cd8137d4a09f2253",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61451,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61451,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-11.zip",
+  "bytes": 9414,
+  "sha256": "363c85feb7c8b357e840e5cff2c5c6c9ec506235b18275573dfc971aec2d9435",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61453,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61453,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-10.zip",
+  "bytes": 9485,
+  "sha256": "c1c069815a80001c844248fb113981e0c87393e9d20ec0e7ef5684875684b6f3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61452,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61452,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2024-12.zip",
+  "bytes": 9689,
+  "sha256": "245fa3fff87c5496742c203f875e72adba9561b5edc603232528a726f6f08825",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61454,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61454,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-01.zip",
+  "bytes": 9653,
+  "sha256": "8a4c6549054a11bebaf2702f945381b98bbfc9800034ba9c75de2614018b24df",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61455,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61455,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-02.zip",
+  "bytes": 8638,
+  "sha256": "50daff779076e71216add3a17a2c4ec12158f6b1e80c48aa03b8e5774a354aca",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61456,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 61456,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-03.zip",
+  "bytes": 9372,
+  "sha256": "9625f78c478abfe22a9fdaf16f182e1c8d95abcb35ce50a05d474af340d0eaaf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61457,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61457,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-04.zip",
+  "bytes": 9029,
+  "sha256": "d4f2646d121c9469087bc987075bbd9e68eabea0118aed0a9e086a080178780b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61458,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61458,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-05.zip",
+  "bytes": 9507,
+  "sha256": "01f5ab816418a2668663f8fc1a96af9ee83f8346b8b03033317007ba403749d5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61459,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61459,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-06.zip",
+  "bytes": 9178,
+  "sha256": "5e0282de7953e0785f0ffaed6fd29ba88091df165ad37044d6c8c2896cc8d0ef",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61460,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61460,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-07.zip",
+  "bytes": 9533,
+  "sha256": "f5c961183041d698a2128e023af910d615034f5f43541d15dec495c15668ee67",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61461,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61461,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-08.zip",
+  "bytes": 9502,
+  "sha256": "bb19d39c6f8409b4d85e312ea74b2671fc9ccaff1e1254d8eff9dc06ee1ea6b9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61462,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61462,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-09.zip",
+  "bytes": 9076,
+  "sha256": "ff5058f8180ae0b90976260260a4297519f7439b6b8d0da8b89061532f877f23",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61463,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61463,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-10.zip",
+  "bytes": 9341,
+  "sha256": "5fc5b0d06eaeddf7e51cc8b6448957b2aad88b55e41d034a5a34af7911f14744",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61464,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61464,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-12.zip",
+  "bytes": 9148,
+  "sha256": "201e320e2c302f46d8db7405b79abaf270c84e06ff0118e44f237b7cb2ac5845",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61466,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61466,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2025-11.zip",
+  "bytes": 9106,
+  "sha256": "cb2a334ec40f800935795dcfe073d155c7e6e4adcf1dda5f57731b7703b5c086",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61465,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61465,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-02.zip",
+  "bytes": 8311,
+  "sha256": "115dfd8959719df50b4d0f033bebdfddccfc17ea4f2bc40cfc5866c082a37264",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61468,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 61468,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-01.zip",
+  "bytes": 9121,
+  "sha256": "14139ee42d2b012b2873e6bf65a1618ba1a4028a630e3ddf1176d5567e01cdb0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61467,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61467,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-03.zip",
+  "bytes": 8897,
+  "sha256": "896afa660c64632830f36c40b960bc6acc8a5d02f542a14230ce4b007a2e6aba",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61469,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61469,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-04.zip",
+  "bytes": 8655,
+  "sha256": "0c416047ce8703aa6808dedb53e18f409cd044f5b81cc8bf2843243aabb694a2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61470,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61470,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-05.zip",
+  "bytes": 9364,
+  "sha256": "d445aacd240197b7a8e904a6647efc341b48ca017993cbaafadc1ed8242c032f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61471,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61471,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-06.zip",
+  "bytes": 9089,
+  "sha256": "f599061d56b86c5d6a98bfa5afe5842c1129bf0df9bc35b023af50089d3d9be7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61472,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61472,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-07.zip",
+  "bytes": 9076,
+  "sha256": "feafee2172e93dcb64734f31754e3209ece5c1ad0dd82de69a7bee4d3090da07",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61473,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61473,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-08.zip",
+  "bytes": 9139,
+  "sha256": "d3ef6833104d13e5ca261a5603243b16ce79189ea3ecaaf87020a42aaf3cdd4a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61474,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61474,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/INJUSDT/4h/INJUSDT-4h-2026-09.zip",
+  "bytes": 9122,
+  "sha256": "35d41dfd4dcfcea34cbba11a39de9293558ff63c8efaf7188473cc69dee7f0a8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61475,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61475,
+  "rows": 180
+ },
+ "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-01.zip",
+  "bytes": 587,
+  "sha256": "8855bf22b271e136995f8a380557021b2339381ef3b22b69c0bc411758970e81",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61422,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 61422,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-03.zip",
+  "bytes": 587,
+  "sha256": "e076f2b8c93cb8fb59b575c470f4e948947c91b58065ee73d8dc65fd2a7ea190",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61424,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 61424,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-02.zip",
+  "bytes": 591,
+  "sha256": "0cfb8335e877ff668c3fed276817254bb866771ea5edcd60f5034a570549cf25",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61423,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 61423,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-04.zip",
+  "bytes": 582,
+  "sha256": "86d26c02c3d3cd38d802c22287949a64e258b07b7e8679b0213ea5238cc27c02",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61425,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 61425,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-05.zip",
+  "bytes": 587,
+  "sha256": "6a092a430824dd85ad725f62c93aec1e7cd6375aed5430a5ddacfb55ea52e21a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 306665,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 306665,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-06.zip",
+  "bytes": 595,
+  "sha256": "aa68557d228e5d7e33617216547d1ebc78d09824b3e1fa245172b62cde6f9f8c",
+  "checksum_ok": true,
+  "size_bytes": 595,
+  "fetched_at": "2026-10-07T19:31:37Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/INJUSDT/INJUSDT-4h-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836214,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836214,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:29Z"
+ },
+ "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-07.zip",
+  "bytes": 595,
+  "sha256": "ff06074d2099daed94898171f21e8433a552280639273674b46dd3e28ae900c7",
+  "checksum_ok": true,
+  "size_bytes": 595,
+  "fetched_at": "2026-10-08T08:11:14Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/INJUSDT/INJUSDT-4h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/INJUSDT/4h/INJUSDT-4h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836215,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836215,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:29Z"
+ }
+}

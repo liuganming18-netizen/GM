@@ -1,0 +1,27 @@
+{
+  "inst_id": "CNPY-USDT-SWAP",
+  "bar": "1h",
+  "status": "done",
+  "rows": 664,
+  "pages": 8,
+  "errors": 0,
+  "window": [
+    "2026-09-07T13:00:00Z",
+    "2026-10-05T04:58:23Z"
+  ],
+  "source_id": 22715,
+  "api_call_ids": [
+    6530,
+    6532,
+    6533,
+    6534,
+    6535,
+    6536,
+    6537,
+    6538
+  ],
+  "raw_path": "raw/okx/1h/CNPY-USDT-SWAP.json",
+  "taker_buy": "空串（欧易无 taker 字段，B 策略数据不足）",
+  "trade_count": "0 占位（欧易无该字段，非真值）",
+  "updated_utc": "2026-10-05T05:19:13Z"
+}

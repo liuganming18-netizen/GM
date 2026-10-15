@@ -1,0 +1,789 @@
+{
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-07.zip",
+  "bytes": 681,
+  "sha256": "4b72836eb50b6f172adf9b3be3d9dfa8aec4cf70b81e532fcdfb0b1cfa2d1297",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26430,
+   "新增版本数": 8,
+   "状态": "已入库"
+  },
+  "source_id": 26430,
+  "rows": 8
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-08.zip",
+  "bytes": 3343,
+  "sha256": "1e4f4bc7dfa2474f1b9b0a0272fc65b233d6d22179e8bdb5ed5870546332c740",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26431,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26431,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-09.zip",
+  "bytes": 3250,
+  "sha256": "9b3257fcd09985dcd7aa9d9a0eb3ab8212ac1761ec18cefac70ee0965d4083fb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26432,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26432,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-10.zip",
+  "bytes": 3343,
+  "sha256": "1daeeec82ef1103d586051a62c1e40c17c8e4cb227d2670c86c1a202398cf591",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26433,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26433,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-11.zip",
+  "bytes": 3295,
+  "sha256": "c3629c7455673645e547fd791f7f433908bc19af8f2c69f8bbc3b1e5d3f5076b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26434,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26434,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2023-12.zip",
+  "bytes": 3436,
+  "sha256": "8e337ffce5cffe191405fc726d2f9e568a66adaed50219e13a182cee7f4a882f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26435,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26435,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-01.zip",
+  "bytes": 3356,
+  "sha256": "73cd4958ea27824ff7987b8875e33d8883c9802255a75fabe7197e0ff992c9f0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26436,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26436,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-02.zip",
+  "bytes": 3256,
+  "sha256": "650d63d55252a1c87e41915554aa2706bb590345391141545bc781801ab2e6ce",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26437,
+   "新增版本数": 58,
+   "状态": "已入库"
+  },
+  "source_id": 26437,
+  "rows": 58
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-03.zip",
+  "bytes": 3536,
+  "sha256": "cb7f4b6d51e5ef30fb64a6f2c1470f3e837b79d3c0c828f697616f287c0ba7c6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26438,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26438,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-05.zip",
+  "bytes": 3482,
+  "sha256": "4fd60f9ffa63f2a5043848bf23fed41b919be967cbafea375336bbee021fbc7d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26440,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26440,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-04.zip",
+  "bytes": 3413,
+  "sha256": "78008e62b4867b4628c45ba184904c572bc202840eab6cc72ada40ff4734ad6b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26439,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26439,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-06.zip",
+  "bytes": 3320,
+  "sha256": "cac17d4f47988d9dd179c3968876a78e07faca597fb8d45938f81bb9b786338b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26441,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26441,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-07.zip",
+  "bytes": 3399,
+  "sha256": "040e666134052a146a443a74d3713f54702eb24c7a9c89aca78a8911b60698cd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26442,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26442,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-08.zip",
+  "bytes": 3394,
+  "sha256": "8c7654038014c4e5cde8065affa50d7770da75d150219902573c0b603932957f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26443,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26443,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-09.zip",
+  "bytes": 3314,
+  "sha256": "87a814c32358dff2379017bd875f4f66dea1cee3297effec07b78997eede3268",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26444,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26444,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-10.zip",
+  "bytes": 3465,
+  "sha256": "2c7da001ae45fcf495cff1d84979b0c700d216a6d14e0c807b21ebfaf2120fbf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26445,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26445,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-11.zip",
+  "bytes": 3420,
+  "sha256": "a721335fc28b06761fe118f286c26374fc02319a2ccb0e758f78fb25ad36da1f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26446,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26446,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2024-12.zip",
+  "bytes": 3490,
+  "sha256": "08fcee6178397cfa3487493ff16250083959df1944b2524a111ff86d7e0ef74f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26447,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26447,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-01.zip",
+  "bytes": 3453,
+  "sha256": "32b8aa742d5d26284bb99856fd2aee8a31d673f22070e73ce08397c666633e1c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26448,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26448,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-02.zip",
+  "bytes": 3176,
+  "sha256": "9c11477df41dbac070662a4c44eb76f45895aae428f09dd16aad1b5f304ea974",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26449,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 26449,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-03.zip",
+  "bytes": 3455,
+  "sha256": "213d8152c07a260ec769ff679e2243ca1b78674b31c4f72f27ad5ec838c128f1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26450,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26450,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-04.zip",
+  "bytes": 3269,
+  "sha256": "75d2ac6f20ca6642ef956c130fafa8f4befcc6d34d0573b46ac9027072fd6bbd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26451,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26451,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-05.zip",
+  "bytes": 3413,
+  "sha256": "e3dc3853843eb1de8c84b80d2ed01f1e5a8744658e84f646339e1671651b2bd2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26452,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26452,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-06.zip",
+  "bytes": 3255,
+  "sha256": "eb17125f4a60eb38b2e1729039e52d79abcefc70ba41217eb4b806ae7d54d8b1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26453,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26453,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-07.zip",
+  "bytes": 3365,
+  "sha256": "cd5ada8f80e5c3ebc925b1e30eaffad3f469d92b3b505ce12518d14493402989",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26454,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26454,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-08.zip",
+  "bytes": 3355,
+  "sha256": "f4987df62b5628083d870f5975eb8769ece6a53fc170f27c8dc0b9f9f555f417",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26455,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26455,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-09.zip",
+  "bytes": 3291,
+  "sha256": "67cf56be4172d8db097d9ca980e2675886dd9805ac49eedfa089bda7478d3d3c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26456,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26456,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-10.zip",
+  "bytes": 3361,
+  "sha256": "80715346f29ecd7ccef949381f1e5c5cda994ad2d7b15d0131833aa060bb7dc9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26457,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26457,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-11.zip",
+  "bytes": 3251,
+  "sha256": "c952ea7d3a2ca7f5038709cfe1cbd32b070884709aac4b4784d14d2d277f55d2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26458,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26458,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-01.zip",
+  "bytes": 3309,
+  "sha256": "798a9fa7f93b6f321da06f8a09787bc2c551eb7916e463eab9c54fbc1b64a8ef",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26460,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26460,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2025-12.zip",
+  "bytes": 3264,
+  "sha256": "5e19edb7e5a6b3f3672832e30853d42933910ffacac24d61062c235ba71584bd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26459,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26459,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-02.zip",
+  "bytes": 2940,
+  "sha256": "f76a2ac33c108530b96d4da2c5a54511d52ad88fd5bef84ad88e51d254f00a56",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26461,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 26461,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-03.zip",
+  "bytes": 3200,
+  "sha256": "0a35eb4dd16f7b7ce7713ac742006e123b07264e0ff721f1c4d078a93b043797",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26462,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26462,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-04.zip",
+  "bytes": 3130,
+  "sha256": "686b74fd4c55da757565305d1a55b2d4e8710e787b4a90e84b1be8838cb21136",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26463,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26463,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-05.zip",
+  "bytes": 3243,
+  "sha256": "339dcb305bada3f52bd01ee278f7ca45883528c182a813f80746f5a34eccbb4a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26464,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26464,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-06.zip",
+  "bytes": 3141,
+  "sha256": "ad9319f4672458fdd50cafcca96003cae7a7b3a57306c8cf4a7571c7d3c163b4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26465,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26465,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-07.zip",
+  "bytes": 3105,
+  "sha256": "b2895b413dab3a9893776c646df67eef8022315daeb95857e50417a34a3c6795",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26466,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26466,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-08.zip",
+  "bytes": 3096,
+  "sha256": "8ae504e9c6b387ee62865b35f2afdd19739703a1cd922e87e5be51c6916cf5c3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26467,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 26467,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-09.zip",
+  "bytes": 3100,
+  "sha256": "d1bd60fc3353ce16485d3f867d3d1d0e2865b109108396d512a54fde2d5e9023",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26468,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 26468,
+  "rows": 60
+ },
+ "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-01.zip",
+  "bytes": 392,
+  "sha256": "c71fc5e6caf139755c3133e3a83a51649a88371e3cb850c9795fe0d5b410a4d9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26427,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 26427,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-02.zip",
+  "bytes": 396,
+  "sha256": "81c400c4778571326e406f01d27c0bafb0d98c55cf2f394b23e8b6572d317e7d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26428,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 26428,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-03.zip",
+  "bytes": 395,
+  "sha256": "a3e62b63a424b4875360a2499df763480fbd545758e64d2eaee835d053619be9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 26429,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 26429,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-04.zip",
+  "bytes": 388,
+  "sha256": "6cc8146ce5bd8efc2fe7a70a7015630dfdd53d2a094b6c037de445e3185bd878",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 51318,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 51318,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-05.zip",
+  "bytes": 398,
+  "sha256": "a60d981ab109bb3f9eb1ae24a52222566ebeffe5ffd189b823e63715352d153d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 272268,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 272268,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-06.zip",
+  "bytes": 394,
+  "sha256": "a4d8033af0ff3662d969610b32b8193a14404433f32469c7abf866349df63b2e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1607202,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1607202,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-07.zip",
+  "bytes": 396,
+  "sha256": "5ab28f3fc5e2635e1c1fc2803b5879547ffa3ff9e5798d40a3a82038b5565cad",
+  "checksum_ok": true,
+  "size_bytes": 396,
+  "fetched_at": "2026-10-08T07:24:30Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/12h/ARKMUSDT/ARKMUSDT-12h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/ARKMUSDT/12h/ARKMUSDT-12h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1798967,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1798967,
+  "rows": 2,
+  "imported_at": "2026-10-08T07:27:57Z"
+ }
+}

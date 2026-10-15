@@ -1,0 +1,707 @@
+{
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2023-12.zip",
+  "bytes": 1937,
+  "sha256": "47701572d00f3f68a5c1cecc2fab4b8bc32ea259bb3938218df25619b242ec8b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9927,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9927,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2023-11.zip",
+  "bytes": 563,
+  "sha256": "caa3e8b0f08f7dcd133f12b3655e0cc74c2798a2cba26d951fb1e77f6822f464",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9926,
+   "新增版本数": 5,
+   "状态": "已入库"
+  },
+  "source_id": 9926,
+  "rows": 5
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-01.zip",
+  "bytes": 1892,
+  "sha256": "e207ffaf36bef9078fc61b2aa1e4236cb32ac28b2d67e2d288eafdd34831eda8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9928,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9928,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-02.zip",
+  "bytes": 1831,
+  "sha256": "510e3d22e3efa6ebef3b2d3e451bedb20da5cf725cd23c08b821a4d2b1f18977",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9929,
+   "新增版本数": 29,
+   "状态": "已入库"
+  },
+  "source_id": 9929,
+  "rows": 29
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-03.zip",
+  "bytes": 1899,
+  "sha256": "ff82d2178e3976d674277529c196c885e7594b0e8ad0c61ff0a02c28b3e0025a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9930,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9930,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-04.zip",
+  "bytes": 1816,
+  "sha256": "bef11bbade880a2c4a036c955bf893df7e4db4b755a7db08a1d898f43bc12e3a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9931,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9931,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-05.zip",
+  "bytes": 1855,
+  "sha256": "d9b578209b7f32d303f8a52f06e22571dec7f2e8f8e1e66506c4d738c9c1f2d7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9932,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9932,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-06.zip",
+  "bytes": 1796,
+  "sha256": "ad13b34e1fc8d4d2c87c9d13723fab1b2eaf451e155538dc371df2fcd51f3e88",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9933,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9933,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-08.zip",
+  "bytes": 1891,
+  "sha256": "208247adf981471d089cbccc78a02f82bf7a8253fbd758124052023739800ddd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9935,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9935,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-07.zip",
+  "bytes": 1843,
+  "sha256": "71d66d8668588d086a9912b546a95929bd95e7b5b4f3d2e808fe23d6ac8ba51a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9934,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9934,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-09.zip",
+  "bytes": 1864,
+  "sha256": "366e21dfffb6c7613106bbaa9a591e1c6c301ae77397174c76e5a41c85807c0f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9936,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9936,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-10.zip",
+  "bytes": 1897,
+  "sha256": "66f54dc4bcc66305e51e39d7a1eaf0cfcd1a283e8149494a7e248ef62a79a1d7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9937,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9937,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-11.zip",
+  "bytes": 1836,
+  "sha256": "733563aa296af2951023e7ef671812a85b787c431f169398526e7da45f6c9bf5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9938,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9938,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2024-12.zip",
+  "bytes": 1923,
+  "sha256": "2f9e3b3e5450e09247d0553156abdf77cc440ba1e46e7c3dd3eb963b8713f449",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9939,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9939,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-01.zip",
+  "bytes": 1868,
+  "sha256": "21643e2238253a6c4480eb95734f3a14a9f7bcef027c1a5b76efca868dd45b9e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9940,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9940,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-02.zip",
+  "bytes": 1713,
+  "sha256": "edd20af76368bf06f0393aa0bcf8219ae121bfee59f3332fb8d9fa9da5e5e744",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9941,
+   "新增版本数": 28,
+   "状态": "已入库"
+  },
+  "source_id": 9941,
+  "rows": 28
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-03.zip",
+  "bytes": 1867,
+  "sha256": "37c0be7b64048f263ee56dafc4e3b3012b1478c6a38dd7b24f3d9bc646fe32d7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9942,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9942,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-05.zip",
+  "bytes": 1847,
+  "sha256": "9cec4f846cdcac5dcafc4fb6f91436abde3a97b5df486f5d9655714ed039546c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9944,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9944,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-04.zip",
+  "bytes": 1819,
+  "sha256": "9aeaffbc384a994015c8870033ecae144bb37f6c31446f5d31ad9342a67eea07",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9943,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9943,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-06.zip",
+  "bytes": 1786,
+  "sha256": "6598d60db46dbaf2b0eddece084f2a6d1f8581773e75b99d0321a68c364257dc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9945,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9945,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-07.zip",
+  "bytes": 1838,
+  "sha256": "bb897d96546de796ef4bdc2122af75c6bbe21f795001e24742e5f6a6b9f44e36",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9946,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9946,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-08.zip",
+  "bytes": 1829,
+  "sha256": "fbd703df4b20e46bd90cc629e8e68f6e49b2dd3abf2a49aa8ef23668ebd0aee9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9947,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9947,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-09.zip",
+  "bytes": 1760,
+  "sha256": "e9d09e861a7552fe73b55f55d9f6b464a09110dd47d519a2965f1debe234cf17",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9948,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9948,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-10.zip",
+  "bytes": 1871,
+  "sha256": "f1cb6c6cec097cfc4b8745fc5fa22c13417fac57636ba0f24f27a7efc77dc433",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9949,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9949,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-11.zip",
+  "bytes": 1808,
+  "sha256": "745893794ab58414b8440b8cf8c43868a0100fe22f463fa07e2cc0f863323926",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9950,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9950,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-01.zip",
+  "bytes": 1817,
+  "sha256": "97615c9049ef1891e55a5504143d78a1e8f669e5143342b8120370913ffec9c7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9952,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9952,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2025-12.zip",
+  "bytes": 1851,
+  "sha256": "e4ad44864e5e2de7aeb2f016904d2244303ced38e77d8beb1682aef8f468bd5d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9951,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9951,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-02.zip",
+  "bytes": 1659,
+  "sha256": "4a8c5cd86ada2ceb2dcfae5cb8f9f262e02faf6ff44d8f9535ae4f31129d38cf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9953,
+   "新增版本数": 28,
+   "状态": "已入库"
+  },
+  "source_id": 9953,
+  "rows": 28
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-03.zip",
+  "bytes": 1751,
+  "sha256": "c545ba67f8a3cece972d7e1a4b5a2fc5550bcce9fff82110a6946d5b7b8547e0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9954,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9954,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-05.zip",
+  "bytes": 1779,
+  "sha256": "74fc2f2a30a1386d0b069db3a027de69fd8a7c552fbcc77363d20874192bb67e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9956,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9956,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-04.zip",
+  "bytes": 1773,
+  "sha256": "fec544b66151258c94df185c4738c922af505b97529e526e610323127f96f82e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9955,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9955,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-07.zip",
+  "bytes": 1704,
+  "sha256": "076cbe3cc95aaceb92a885b14a962f479be826b0616dee5ca3ff059dfdbd4592",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9958,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9958,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-06.zip",
+  "bytes": 1710,
+  "sha256": "9ac6ec4629e7bebaa2ec13b94fcc0a3fc6f2c25af5577d5cb16805f7b6307bfd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9957,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9957,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-09.zip",
+  "bytes": 1848,
+  "sha256": "1b2dd1de4c09e3ca28687a351280363db2e5104719daa4290f4907a3f191031f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9960,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9960,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-08.zip",
+  "bytes": 1856,
+  "sha256": "7905bd1e2a8c8af67191e571fe2d7d3a11b654be9d763586ecae67af402012b7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9959,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9959,
+  "rows": 31
+ },
+ "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-01.zip",
+  "bytes": 352,
+  "sha256": "5d4d24a540ab9c7c167c41e94e625a8989cbd6ba776c938c76122bcca35ecf5b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9923,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 9923,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-02.zip",
+  "bytes": 354,
+  "sha256": "78a18e0b9b445b0bcc15ccec67f309e6122a5525081a1d5f48a86198a5a45cd1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9924,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 9924,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-04.zip",
+  "bytes": 352,
+  "sha256": "8628ff0fdb2cedbaaab5256b0db0c3f977f4c608e091e6d908a1a2d04fc01894",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 50842,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 50842,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-03.zip",
+  "bytes": 354,
+  "sha256": "880b1ed5f9346d8ca58f5d41552008f4c24d3bba0a4d8443b54dcd39bea36a0c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9925,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 9925,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-05.zip",
+  "bytes": 350,
+  "sha256": "a4f25d8b2f3152eb8aa1dd6e5c8675e7b2c0f19f8bc913d26a514596ca33c034",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 246532,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 246532,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-06.zip",
+  "bytes": 350,
+  "sha256": "1b81b643cae9690ad2a5d602d572552e356becd54025fa8ee6bd28cb40c4c1d0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1590298,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 1590298,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SUPERUSDT/1d/SUPERUSDT-1d-2026-10-07.zip",
+  "status": "missing_in_archive",
+  "note": "官方归档或 CHECKSUM 不存在（日度按需探测，404 即缺失）；不计为完成"
+ }
+}

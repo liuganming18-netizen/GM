@@ -1,0 +1,828 @@
+{
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-05.zip",
+  "bytes": 37933,
+  "sha256": "a5e4529c7508fce430c55b9cc9d3a0178e9b580f44437aed6873788845408201",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98442,
+   "新增版本数": 1031,
+   "状态": "已入库"
+  },
+  "source_id": 98442,
+  "rows": 1031
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-06.zip",
+  "bytes": 52177,
+  "sha256": "a10b0e98578fdbaa6fdb66ce9d572fb79d88c63e191a0c0f13203a6288a36b93",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98443,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98443,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-08.zip",
+  "bytes": 52451,
+  "sha256": "618a1b14238984a99225980b73e2e993e347a5784bde04a8b766a67689c9c418",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98445,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98445,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-07.zip",
+  "bytes": 53425,
+  "sha256": "56f295054d3de4b1ee42208073b66dfdd9504b53694fb7ef3d9d791d3478ec0d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98444,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98444,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-09.zip",
+  "bytes": 51063,
+  "sha256": "7877c23b40e3ea4486838549a2ae8ddc4da245ffb84e747ea33f286933979f8f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98446,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98446,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-10.zip",
+  "bytes": 53189,
+  "sha256": "75b882660407414feb5ed7c0d8144c0ce1bca0e96e04026321f9d23ecb65e674",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98447,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98447,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-11.zip",
+  "bytes": 53729,
+  "sha256": "37a4110cc2c642ef4216b4bc3d092942ccdb533d79ff755c15e48840fefcffad",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98448,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98448,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2023-12.zip",
+  "bytes": 55779,
+  "sha256": "f663baa5ef673a4c959a0140d42f4b6bfd79bb301a11ddbc6d8bb931b4f14285",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98449,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98449,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-01.zip",
+  "bytes": 59649,
+  "sha256": "5bc262c59086291e02197fe6601efd231438c6af856002809f09aa36dfaa9889",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98450,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98450,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-02.zip",
+  "bytes": 55849,
+  "sha256": "aae4ecfaeb3a449c04dbb0a76c297b4f38059e8eb72c250757efbedc0461a543",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98451,
+   "新增版本数": 1392,
+   "状态": "已入库"
+  },
+  "source_id": 98451,
+  "rows": 1392
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-03.zip",
+  "bytes": 59046,
+  "sha256": "a616fff9997f9c3079ef21c8a8e9166eef889cf1bb3e0c62449d6f2580d50ece",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98452,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98452,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-04.zip",
+  "bytes": 55379,
+  "sha256": "5214972c260d099f0eff9e1cd557a80bc8ff4eefd045d3e6045c20ca1a5ba9e6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98453,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98453,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-05.zip",
+  "bytes": 59303,
+  "sha256": "5e08656010deb2b5a128bc4e7c02c295d42894b3437f631baf807b947c8ae019",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98454,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98454,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-06.zip",
+  "bytes": 54717,
+  "sha256": "38a5f2b90720fb35c7c5345b3b08c3580e3c13ee634df8424c6d0c80fc0a9419",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98455,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98455,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-07.zip",
+  "bytes": 56758,
+  "sha256": "b489dbb12817c310e26d4f29a6a5f42bf6791a1ee85c43e663a651a45f07c8a2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98456,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98456,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-08.zip",
+  "bytes": 57265,
+  "sha256": "217130f74afaca27d904707ca21e90096a8493ccc75c202c7964992d67f86077",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98457,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98457,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-09.zip",
+  "bytes": 54290,
+  "sha256": "8b7ea1b42e55421eb3126cf3e6bb8b3f922c8ba56845b2ea3acaa1f88a3d0250",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98458,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98458,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-10.zip",
+  "bytes": 57586,
+  "sha256": "b42be36652c754efd2cc7fe21f830b71d110eba6abde44fd7cc87627660d3bec",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98459,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98459,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-11.zip",
+  "bytes": 55570,
+  "sha256": "b5b9ed1fc45ac110c148f3fbb7d8ee92fd5ad6e099023ae5d48cb5e91351fd23",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98460,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98460,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2024-12.zip",
+  "bytes": 57397,
+  "sha256": "9816b09987123522c213934647eb1b49d0bd32bfe8ebe9b9642fcc3f312a797b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98461,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98461,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-01.zip",
+  "bytes": 55777,
+  "sha256": "54c73ec52502deff958c0ac4ef2b12d8aa5cc1150bfa2fd1ae2c39e5bcdea399",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98462,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98462,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-02.zip",
+  "bytes": 50154,
+  "sha256": "0912f291a08ca08e8c0c19be5380daac0bb67ddd6c1972671c75b8d09977a6a1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98463,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 98463,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-03.zip",
+  "bytes": 55402,
+  "sha256": "3703a795413307d0397cd92451419871d6abda4b02461f60eedf9d571c048349",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98464,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98464,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-04.zip",
+  "bytes": 51500,
+  "sha256": "167c4b6bca38a29dbc6147c20ee4707d5c6dd6a2f8d0cfbce490c91591f0807a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98465,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98465,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-05.zip",
+  "bytes": 53944,
+  "sha256": "3d32579bca4832855c7535315bebcd9a69da94f180e41a43fdcd256d826801e5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98466,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98466,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-06.zip",
+  "bytes": 53947,
+  "sha256": "40dceb660674c6e3f19087e0c8050134d4c671b9b693353268302a326438d76f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98467,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98467,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-07.zip",
+  "bytes": 54873,
+  "sha256": "d8bdc0e6035a297e8c1a0be0769093a7a72e262e2a49ef404dc623441ee744d9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98468,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98468,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-08.zip",
+  "bytes": 56385,
+  "sha256": "6c32750e51eb702e2f84509ac43ed657c2d35e5dd1d6c80ee87a64ccc055c88a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98469,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98469,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-09.zip",
+  "bytes": 51909,
+  "sha256": "7a5aa5488c93fb34d6ba9085c0887a969fa1c0bffed9ab833bc9b7a2cbc37902",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98470,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98470,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-10.zip",
+  "bytes": 54910,
+  "sha256": "4db39384ae4fb77cda92d4dfa62910b6d30a86a2db05d5c252e4ff71eca27c72",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98471,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98471,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-11.zip",
+  "bytes": 52273,
+  "sha256": "efc46771b5c2a39f48299da72d4f54c047bdbe8f79c3b598a411348aba776594",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98472,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98472,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2025-12.zip",
+  "bytes": 57319,
+  "sha256": "d47edb7512e6d3de0eb37e94b84892771e8870f1015951cada0c7594ac805423",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98473,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98473,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-01.zip",
+  "bytes": 57324,
+  "sha256": "f029016a87451575d1fd4d0a18c5307c437464d75a11c3e9fbf3ef5e903b00fd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98474,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98474,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-02.zip",
+  "bytes": 52580,
+  "sha256": "a1820fd3cd0968dcb74f2988f77888904d723f745e3165f7aa2a92f3e6c2bff9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98475,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 98475,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-03.zip",
+  "bytes": 56878,
+  "sha256": "9747f5b3f73b186a2eae5372c04e794daad8c613680237f8d655b908ee73d56f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98476,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98476,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-04.zip",
+  "bytes": 55607,
+  "sha256": "2f033ddfa22378c57a2cd559f655d600f6312f3b0480cc3d7a65c7f42403fada",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98477,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98477,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-05.zip",
+  "bytes": 56549,
+  "sha256": "b92fdddad713251cdd02df61012ec72281c7b0f9326872c2a556dcece297a75a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98478,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98478,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-06.zip",
+  "bytes": 54700,
+  "sha256": "1e383c7c08e22143078971c10a78689b4797e3e7df1211d258c839c970356514",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98479,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98479,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-07.zip",
+  "bytes": 54709,
+  "sha256": "a1852d8c661edeeaa20698c95866b04e3e69bfeeb14b49720cb4d25fc884630f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98480,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98480,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-08.zip",
+  "bytes": 54476,
+  "sha256": "b373aee71b8db75aa78b42de688b041234b610988e084bff6372a73fa69e65e3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98481,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 98481,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/UMAUSDT/30m/UMAUSDT-30m-2026-09.zip",
+  "bytes": 53970,
+  "sha256": "2aea769a50f8073e7bf342a74bfba22dcff0c01e7efa8a59d489bf4494d96ade",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98482,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 98482,
+  "rows": 1440
+ },
+ "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-01.zip",
+  "bytes": 2099,
+  "sha256": "4e3c5687529024b6f313c385f8d700771be02f0886b355687fd657c2d97c317a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98438,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98438,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-02.zip",
+  "bytes": 2151,
+  "sha256": "84482623d7876e5bdf019660358822a011083e66fc630374c5ad12c55ab93a0c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98439,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98439,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-03.zip",
+  "bytes": 2083,
+  "sha256": "13f4eb37b7620011932a7325fd4e067df8906b94061663754187328107eea678",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98440,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98440,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-04.zip",
+  "bytes": 2049,
+  "sha256": "1757e31704cca410be3e033c5988671a6ec3352ce47f79ee6d7d56ce2e6220fa",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98441,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98441,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-05.zip",
+  "bytes": 2254,
+  "sha256": "6351d8e6b0ef422dda8bb49d7765f6ea264e071de193d1e719d2977bf8d25995",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 344376,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 344376,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-06.zip",
+  "bytes": 2357,
+  "sha256": "e2689a154b9a9d636772262147bb6c170d8726026158d709f3b3fc9b2e4d881a",
+  "checksum_ok": true,
+  "size_bytes": 2357,
+  "fetched_at": "2026-10-07T19:49:55Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/UMAUSDT/UMAUSDT-30m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940769,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940769,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:13Z"
+ },
+ "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-07.zip",
+  "bytes": 2269,
+  "sha256": "ecf9e7ce3560eb03d1a3809fcc3945fa9f575fcca9b6b916228a96dcacab5c91",
+  "checksum_ok": true,
+  "size_bytes": 2269,
+  "fetched_at": "2026-10-08T10:36:04Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/UMAUSDT/UMAUSDT-30m-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/UMAUSDT/30m/UMAUSDT-30m-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940770,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940770,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:13Z"
+ }
+}

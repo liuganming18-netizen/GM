@@ -1,0 +1,1333 @@
+{
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2020-11.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2020-11.zip",
+  "kind": "monthly",
+  "period": "2020-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2020-11.zip",
+  "bytes": 1498,
+  "sha256": "cc9113b9d4286fd177821b50f4e40555ad8db3411ea5ddd0cc8059ef11642e47",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21764,
+   "新增版本数": 26,
+   "状态": "已入库"
+  },
+  "source_id": 21764,
+  "rows": 26
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2020-12.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2020-12.zip",
+  "kind": "monthly",
+  "period": "2020-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2020-12.zip",
+  "bytes": 3315,
+  "sha256": "1c8d5c4dff21e35a79803a10da5e52fe2e7bf090ccdbc2154ec836a1f6c2d53e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21765,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21765,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-02.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-02.zip",
+  "kind": "monthly",
+  "period": "2021-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-02.zip",
+  "bytes": 3086,
+  "sha256": "e98d0eb5103ffc5c91c21549760d29dc5a22dc3bc9d9be475493c458a43f26ca",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21767,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 21767,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-01.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-01.zip",
+  "kind": "monthly",
+  "period": "2021-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-01.zip",
+  "bytes": 3334,
+  "sha256": "5ca79d4f5f81c220dcf4ad38fbe622ac8327161f3635ca9cb0c7080c63e1ba08",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21766,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21766,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-03.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-03.zip",
+  "kind": "monthly",
+  "period": "2021-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-03.zip",
+  "bytes": 3409,
+  "sha256": "f80433ca150f6abc0b84e08c3bc804a2f21dc0826d107137dcdd0effc47e0363",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21768,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21768,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-04.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-04.zip",
+  "kind": "monthly",
+  "period": "2021-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-04.zip",
+  "bytes": 3344,
+  "sha256": "d11d6e5054d01d0fec003bece4bf9d6e998c568e70c2c5b69e9cb4999456d3a4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21769,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21769,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-05.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-05.zip",
+  "kind": "monthly",
+  "period": "2021-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-05.zip",
+  "bytes": 3298,
+  "sha256": "90565e049cd2c5f6bda8f92fd131a811f06c64ba0a7527da4fc9f3d949784420",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21770,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21770,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-06.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-06.zip",
+  "kind": "monthly",
+  "period": "2021-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-06.zip",
+  "bytes": 3142,
+  "sha256": "e615b61c23472985f863849e070bb143902e0e444c9aa64d7aa5f565c391bfb2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21771,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21771,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-07.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-07.zip",
+  "kind": "monthly",
+  "period": "2021-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-07.zip",
+  "bytes": 3254,
+  "sha256": "5ea573652c9ee180976e1db39b7a3cbac7207174c63a8d27b9ea50ef3b69d365",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21772,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21772,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-08.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-08.zip",
+  "kind": "monthly",
+  "period": "2021-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-08.zip",
+  "bytes": 3281,
+  "sha256": "02a949c098bbc2384c9ac4074dad1525272b7639ffce3b3b5488715732e81ba0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21773,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21773,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-09.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-09.zip",
+  "kind": "monthly",
+  "period": "2021-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-09.zip",
+  "bytes": 3149,
+  "sha256": "8a21328e99e6754b714de2294fc9f08e4460c20a881158953937cc777182bd01",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21774,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21774,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-10.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-10.zip",
+  "kind": "monthly",
+  "period": "2021-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-10.zip",
+  "bytes": 3269,
+  "sha256": "d71b727c7d5d4de9767a58d46ab86ef735ddcf1aab6fdc07450739861a91d3de",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21775,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21775,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-11.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-11.zip",
+  "kind": "monthly",
+  "period": "2021-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-11.zip",
+  "bytes": 3125,
+  "sha256": "7e51323038c12ce4b35ef99ea0d4ad60bf68a7258b8ef044fb6e7d6ce194c04a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21776,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21776,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-12.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-12.zip",
+  "kind": "monthly",
+  "period": "2021-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2021-12.zip",
+  "bytes": 3258,
+  "sha256": "92a28a7f156937a19ca2f0cedb846ae582b7ce456e7359f12fec03ff370c5a04",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21777,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21777,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-02.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-02.zip",
+  "kind": "monthly",
+  "period": "2022-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-02.zip",
+  "bytes": 3011,
+  "sha256": "638bccc86f7e29c656a11a7f9a92a42959a415363820ac4c87616efeaa00c71a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21779,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 21779,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-01.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-01.zip",
+  "kind": "monthly",
+  "period": "2022-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-01.zip",
+  "bytes": 3282,
+  "sha256": "ac92543e7af93ec497710a6d1f41eeeef797bf5e3851115054a4a21f39814163",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21778,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21778,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-03.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-03.zip",
+  "kind": "monthly",
+  "period": "2022-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-03.zip",
+  "bytes": 3280,
+  "sha256": "4ec3a5ccb98ec46a5a54f85d4e046dbf38277da7d2351f836f3e663febe80869",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21780,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21780,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-04.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-04.zip",
+  "kind": "monthly",
+  "period": "2022-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-04.zip",
+  "bytes": 3170,
+  "sha256": "edae1fc48990e4f98861bc52cf364423cd0bcdee9daaad82b18313f2ad0b7446",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21781,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21781,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-05.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-05.zip",
+  "kind": "monthly",
+  "period": "2022-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-05.zip",
+  "bytes": 3356,
+  "sha256": "4f8e14d3475de9126c39132fdd5fe646c45757d01a6ba4a4f0811791d8329842",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21782,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21782,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-06.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-06.zip",
+  "kind": "monthly",
+  "period": "2022-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-06.zip",
+  "bytes": 3425,
+  "sha256": "a2fa3c195933bb4cb16cd97e8b434fa53edc351b869e24d472b25399affd61b6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21783,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21783,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-07.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-07.zip",
+  "kind": "monthly",
+  "period": "2022-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-07.zip",
+  "bytes": 3347,
+  "sha256": "e180beb4dbbcbb3d6595297174905cefdfbb3d745279c3a279109d3a8b726ce1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21784,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21784,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-08.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-08.zip",
+  "kind": "monthly",
+  "period": "2022-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-08.zip",
+  "bytes": 3296,
+  "sha256": "f773568fd00fbe53112633aa2b2609ba2d29b2b8dfb6a711712e118a531cb210",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21785,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21785,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-09.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-09.zip",
+  "kind": "monthly",
+  "period": "2022-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-09.zip",
+  "bytes": 3172,
+  "sha256": "afb7348f3909430e2f6a70f435cc40014cc706a99ae48a189f481df7e11934e4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21786,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21786,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-10.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-10.zip",
+  "kind": "monthly",
+  "period": "2022-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-10.zip",
+  "bytes": 3255,
+  "sha256": "e08302794a3e0bb0a0fd8ab38a2104ed83da89d6ac102f63666a390a8d589e1b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21787,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21787,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-11.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-11.zip",
+  "kind": "monthly",
+  "period": "2022-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-11.zip",
+  "bytes": 3201,
+  "sha256": "92722d298f25712d61888b5fd1db5227cbe1f4ad9c73fd93cbb466770c9e5077",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21788,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21788,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-12.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-12.zip",
+  "kind": "monthly",
+  "period": "2022-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2022-12.zip",
+  "bytes": 3207,
+  "sha256": "70fb80a47021cb3376a2722202cbed48fa931ef8a217b8b16e6d5dca62d42ab8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21789,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21789,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-01.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-01.zip",
+  "kind": "monthly",
+  "period": "2023-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-01.zip",
+  "bytes": 3239,
+  "sha256": "898d27a781bf5cd8f741656cba3ce40ddef448b5e15ceef33bf52768ec515516",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21790,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21790,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-02.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-02.zip",
+  "kind": "monthly",
+  "period": "2023-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-02.zip",
+  "bytes": 3042,
+  "sha256": "5b5e103d7dcde15d5d269190eb7c50696eb25c819f4104e36f4fa6f5fe0e264a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21791,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 21791,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-03.zip",
+  "bytes": 3274,
+  "sha256": "6d75fe8ac9bf6af591d9bcad447b4aa82e60d3a7370f9b08f1cc41331f87dd72",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21792,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21792,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-04.zip",
+  "bytes": 3245,
+  "sha256": "63e9abe46646944ede1ec6ab7eeccd98230c06679a325349f0a6cb9d47aa5fc1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21793,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21793,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-05.zip",
+  "bytes": 3351,
+  "sha256": "72da85a8eb60dd7a8119f6eb0108f91c8a91aae3c4150b8b54217a643443e389",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21794,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21794,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-06.zip",
+  "bytes": 3232,
+  "sha256": "1982e3d96da763c1b1cd53f5c0588b6b55e49d924dabf7b15d47726c74a354f7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21795,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21795,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-07.zip",
+  "bytes": 3307,
+  "sha256": "f53826e5a60da24e80a21d25cb181b6bc0524790cf592524849da50d035b8ff0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21796,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21796,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-08.zip",
+  "bytes": 3218,
+  "sha256": "215110cac2f11fd57c474a757b290394c8135c13392773cacbcba206c5fc4530",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21797,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21797,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-09.zip",
+  "bytes": 3194,
+  "sha256": "83f3069eec51ef3c564bbed3db4ee55753351f0d0e43f39d26384b7a0dcc3004",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21798,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21798,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-10.zip",
+  "bytes": 3214,
+  "sha256": "c4bdb22d24afcbe2294c33869155eb8b54ee26b63226295551164659aae4f66c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21799,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21799,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-11.zip",
+  "bytes": 3163,
+  "sha256": "92c84aa8f648039d52946273d1c7f9c8b760c1f72feef00acc692a6c06593d96",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21800,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21800,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2023-12.zip",
+  "bytes": 3245,
+  "sha256": "72382939d4cd12f84826e00bf6a75d0d69875aaf9ab445dbe9cac8caeb7606bc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21801,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21801,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-01.zip",
+  "bytes": 3186,
+  "sha256": "7dbaf8c010e5c0c476f47237e6b61f546ae3984b11015a109f432234c3873c55",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21802,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21802,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-03.zip",
+  "bytes": 3292,
+  "sha256": "7f269b44a7aeaf82d259cc8d7eca2a958cb12d2ef1fe07d74204673cd29d0dc6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21804,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21804,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-02.zip",
+  "bytes": 3034,
+  "sha256": "f0773b9fc2b3a674c11286414a7b13ee8e61862d147724e9b166434e6660c257",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21803,
+   "新增版本数": 58,
+   "状态": "已入库"
+  },
+  "source_id": 21803,
+  "rows": 58
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-04.zip",
+  "bytes": 3337,
+  "sha256": "af2df70ff2c50a88ab55d693f541b618e3095f8b0e1a810b2d13a180dbc7b4ea",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21805,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21805,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-05.zip",
+  "bytes": 3269,
+  "sha256": "d1f51e086801fd22df496c8fc1fd5e17d294023ce308dd090ea66a65a94a415c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21806,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21806,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-06.zip",
+  "bytes": 3143,
+  "sha256": "471f6f2071c9d706e5e96d94c5e205c18a4fea8f452598edccabe3c2836e95f2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21807,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21807,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-07.zip",
+  "bytes": 3183,
+  "sha256": "f78433b7afb5b0708966f042cc21d1dd100faaa433580327564ce912dbe16716",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21808,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21808,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-08.zip",
+  "bytes": 3222,
+  "sha256": "bd60ae04acb11043ab9e53f79c51b341cf87314890f6df63d3ad715be1857661",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21809,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21809,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-09.zip",
+  "bytes": 3162,
+  "sha256": "cb513b23f0e6426625a4810ad6915f38ee3398fe67502835860b492337e2c40f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21810,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21810,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-11.zip",
+  "bytes": 3175,
+  "sha256": "a8a2e3c92b02cd9f9344517f923d1d22a089e52314b78adc9060aa4c3341f75f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21812,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21812,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-10.zip",
+  "bytes": 3204,
+  "sha256": "3d5c3d0cfa2345323c73b596232aa85eb519578df71fefa87923b9fbb4355903",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21811,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21811,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2024-12.zip",
+  "bytes": 3254,
+  "sha256": "38bf0db89dd1f8b0522076a17c5f949adfb2716b172c605fe59d4badbfd01f81",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21813,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21813,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-01.zip",
+  "bytes": 3235,
+  "sha256": "72ea929ff29aa1cf8f1445776e73b53a5bf4decea240a55e32f583ca9390b9eb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21814,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21814,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-02.zip",
+  "bytes": 3051,
+  "sha256": "fde8a27bfc9ab544be0782b7b9a20f5c5c13d5d228b43a98fd147d0a0336b93a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21815,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 21815,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-03.zip",
+  "bytes": 3282,
+  "sha256": "6d2d51e61dbedc2c018a6e589849cf4713d71c1a1d8e1dd6dff426bfde87baf7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21816,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21816,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-04.zip",
+  "bytes": 3179,
+  "sha256": "72dda375852401864d08b419c2b729209477c3ec887e5aba2e81a236abd83cbe",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21817,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21817,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-05.zip",
+  "bytes": 3198,
+  "sha256": "5bfcce82216b83b2a6b3a4dc4628f343f311f69e4a928193d1bd848b664e5e0b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21818,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21818,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-06.zip",
+  "bytes": 3059,
+  "sha256": "ba1f7df9c9a27709b299d406a4405197df18802dcb037903bcaf45973f68ed8b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21819,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21819,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-07.zip",
+  "bytes": 3212,
+  "sha256": "b20a0603482da97edf1dcf3b6405e91e6f3e393e7f7875e35560437ceb24db54",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21820,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21820,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-09.zip",
+  "bytes": 3017,
+  "sha256": "ce2c6cc82352e212a9c940497ed6376109a7c564b276fbb68c9bbaaf50a84c12",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21822,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21822,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-08.zip",
+  "bytes": 3141,
+  "sha256": "23e99e4618f454cef2c38c267104dfce4c9889492a8a1a5375b6d477b3d52c58",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21821,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21821,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-10.zip",
+  "bytes": 3267,
+  "sha256": "7aed73c04a8e645d3dbd833115afe2157dd3083850640dc316266697ac77d80d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21823,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21823,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-11.zip",
+  "bytes": 3061,
+  "sha256": "2f67adbe6efc234f7e9b344585dfc2af7095008c03c14d5154fd206e0d40450d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21824,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21824,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2025-12.zip",
+  "bytes": 3057,
+  "sha256": "975bef3d83ccf7750a14ddebfab99a376a56d59ee12aeafdd63c0897b711f15a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21825,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21825,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-01.zip",
+  "bytes": 3081,
+  "sha256": "a4e11f86131b0d8fa18428df163e7a83f2a5bb21d70781d2e4a26298b1482b2b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21826,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21826,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-03.zip",
+  "bytes": 2991,
+  "sha256": "155215b2f455e8f17cf7d1b9172247bb5938ad7a71b04b2940ca66a89cbb947e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21828,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21828,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-02.zip",
+  "bytes": 2785,
+  "sha256": "b2db5b28fdd628189e8f324ecbfef57b360b661c0d614ceb32764981d3806e47",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21827,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 21827,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-04.zip",
+  "bytes": 2971,
+  "sha256": "e24933b23d176838b4d9611967d7599d591f321020cb1e6570003dd4f8e8d39a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21829,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21829,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-05.zip",
+  "bytes": 3010,
+  "sha256": "d7f94c3131336019c44a337d0c0eb66484d61b02e7796eb7426c6e013a935b03",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21830,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21830,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-06.zip",
+  "bytes": 3230,
+  "sha256": "3bd09b3790923a26ce14ec5a45a72a4e2fb7e2ec457fafad165f9b6709d9f378",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21831,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21831,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-07.zip",
+  "bytes": 3291,
+  "sha256": "328796d2ab270776426559cef78e43e8a1de4de6a5954206dc9610e1919778a1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21832,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21832,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-08.zip",
+  "bytes": 3222,
+  "sha256": "58270305988676e115acc54a9daa1317c0c334d0730342209d2aa32ded7e9b11",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21833,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 21833,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BELUSDT/12h/BELUSDT-12h-2026-09.zip",
+  "bytes": 3092,
+  "sha256": "ab066029c517dd431e2a239185aaa5ab2f491b1c33ec591694281cab62fad511",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21834,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 21834,
+  "rows": 60
+ },
+ "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-01.zip",
+  "bytes": 391,
+  "sha256": "7848431fa26a01a4a663d6981c6ba6d8662f2b2217da142972c2894b4bd1c0a8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21761,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 21761,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-02.zip",
+  "bytes": 393,
+  "sha256": "f610e9886b31ca697c3e5686cb468438b0694b25536c0ff23c366ccaa7c3f1e2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21762,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 21762,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-04.zip",
+  "bytes": 390,
+  "sha256": "bbb09789fe93698a3fed595e160cc0f17caf6f289445f8666f2496e79d77b67f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 51240,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 51240,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-03.zip",
+  "bytes": 394,
+  "sha256": "ca30b40bce6fee1631811d89837c3f079508e5b868a018b8a8822f626f99ce01",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 21763,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 21763,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-05.zip",
+  "bytes": 393,
+  "sha256": "bdef74b593ee22693c6e5ae8c8fc98ab9919f9cfc9626f32fb13725f5f62dff3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 266274,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 266274,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-06.zip",
+  "bytes": 392,
+  "sha256": "e9432ba26c4542f779ae368ad07b0be0ba06fd13106f82f9e093ca2f9d882a3f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1606896,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1606896,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-07.zip",
+  "bytes": 392,
+  "sha256": "b3d23292121ab2f92f1daac115e6c6651451779c43167d1e94ceee891c07305b",
+  "checksum_ok": true,
+  "size_bytes": 392,
+  "fetched_at": "2026-10-08T07:23:45Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/12h/BELUSDT/BELUSDT-12h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/BELUSDT/12h/BELUSDT-12h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1798907,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1798907,
+  "rows": 2,
+  "imported_at": "2026-10-08T07:27:56Z"
+ }
+}

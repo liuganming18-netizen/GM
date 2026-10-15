@@ -1,0 +1,128 @@
+{
+ "抽样总数": 600,
+ "抽样SHA相同": 600,
+ "抽样SHA不同": 0,
+ "抽样缺失": 0,
+ "不同明细": [],
+ "sidecar聚合比对": [
+  {
+   "源": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/1d",
+   "目标": "/Users/boos/Desktop/威科夫因子共振趋势/数据/raw/1d",
+   "聚合SHA_源": "ddece70e34b27bb8",
+   "聚合SHA_目标": "52bc7f190d8a2027",
+   "相同": false
+  },
+  {
+   "源": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/12h",
+   "目标": "/Users/boos/Desktop/威科夫因子共振趋势/数据/raw/12h",
+   "聚合SHA_源": "c8f782973e8aadfa",
+   "聚合SHA_目标": "dc2350221cd723cb",
+   "相同": false
+  },
+  {
+   "源": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/8h",
+   "目标": "/Users/boos/Desktop/威科夫因子共振趋势/数据/raw/8h",
+   "聚合SHA_源": "4cfe965eb7b5ecd4",
+   "聚合SHA_目标": "c1767c9b649cfc33",
+   "相同": false
+  },
+  {
+   "源": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h",
+   "目标": "/Users/boos/Desktop/威科夫因子共振趋势/数据/raw/4h",
+   "聚合SHA_源": "cc74caaba66d06a8",
+   "聚合SHA_目标": "a352ed595d0e5c33",
+   "相同": false
+  },
+  {
+   "源": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/1h",
+   "目标": "/Users/boos/Desktop/威科夫因子共振趋势/数据/raw/1h",
+   "聚合SHA_源": "bdc3463c9b9ae318",
+   "聚合SHA_目标": "fedf3be98ac8acea",
+   "相同": false
+  },
+  {
+   "源": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m",
+   "目标": "/Users/boos/Desktop/威科夫因子共振趋势/数据/raw/30m",
+   "聚合SHA_源": "fe41ae145919e24a",
+   "聚合SHA_目标": "0af6da7c134eb1ea",
+   "相同": false
+  },
+  {
+   "源": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/15m",
+   "目标": "/Users/boos/Desktop/威科夫因子共振趋势/数据/raw/15m",
+   "聚合SHA_源": "4338f9543d06e90b",
+   "聚合SHA_目标": "e97ff7c1e309a3ac",
+   "相同": false
+  },
+  {
+   "源": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m",
+   "目标": "/Users/boos/Desktop/威科夫因子共振趋势/数据/raw/5m",
+   "聚合SHA_源": "9fb9cf8dc7b24503",
+   "聚合SHA_目标": "48e75f489ee18759",
+   "相同": false
+  },
+  {
+   "源": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_oi_metrics",
+   "目标": "/Users/boos/Desktop/威科夫因子共振趋势/数据/raw_oi_metrics",
+   "聚合SHA_源": "990ef57efaf718d0",
+   "聚合SHA_目标": "990ef57efaf718d0",
+   "相同": true
+  }
+ ],
+ "sidecar聚合比对_源去指数目录": [
+  {
+   "周期": "1d",
+   "源_去指数聚合SHA": "52bc7f190d8a2027",
+   "目标聚合SHA": "52bc7f190d8a2027",
+   "相同": true
+  },
+  {
+   "周期": "12h",
+   "源_去指数聚合SHA": "dc2350221cd723cb",
+   "目标聚合SHA": "dc2350221cd723cb",
+   "相同": true
+  },
+  {
+   "周期": "8h",
+   "源_去指数聚合SHA": "c1767c9b649cfc33",
+   "目标聚合SHA": "c1767c9b649cfc33",
+   "相同": true
+  },
+  {
+   "周期": "4h",
+   "源_去指数聚合SHA": "a352ed595d0e5c33",
+   "目标聚合SHA": "a352ed595d0e5c33",
+   "相同": true
+  },
+  {
+   "周期": "1h",
+   "源_去指数聚合SHA": "fedf3be98ac8acea",
+   "目标聚合SHA": "fedf3be98ac8acea",
+   "相同": true
+  },
+  {
+   "周期": "30m",
+   "源_去指数聚合SHA": "0af6da7c134eb1ea",
+   "目标聚合SHA": "0af6da7c134eb1ea",
+   "相同": true
+  },
+  {
+   "周期": "15m",
+   "源_去指数聚合SHA": "e97ff7c1e309a3ac",
+   "目标聚合SHA": "e97ff7c1e309a3ac",
+   "相同": true
+  },
+  {
+   "周期": "5m",
+   "源_去指数聚合SHA": "48e75f489ee18759",
+   "目标聚合SHA": "48e75f489ee18759",
+   "相同": true
+  },
+  {
+   "周期": "raw_oi_metrics",
+   "源_去指数聚合SHA": "990ef57efaf718d0",
+   "目标聚合SHA": "990ef57efaf718d0",
+   "相同": true
+  }
+ ]
+}

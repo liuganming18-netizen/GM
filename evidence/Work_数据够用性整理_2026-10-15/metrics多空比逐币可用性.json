@@ -1,0 +1,49 @@
+{
+ "symbols": 526,
+ "columns": {
+  "count_toptrader_long_short_ratio": {
+   "zero_empty_symbols": 91,
+   "symbols_with_full_empty_days": 116,
+   "nonempty_pct_min": 64.941,
+   "nonempty_pct_median": 99.974,
+   "nonempty_pct_max": 100.0,
+   "longest_fully_ok_days_median": 342,
+   "symbols_longest_fully_ok_ge_30": 524,
+   "symbols_longest_fully_ok_ge_90": 512,
+   "symbols_longest_fully_ok_ge_365": 216
+  },
+  "sum_toptrader_long_short_ratio": {
+   "zero_empty_symbols": 91,
+   "symbols_with_full_empty_days": 114,
+   "nonempty_pct_min": 64.955,
+   "nonempty_pct_median": 99.989,
+   "nonempty_pct_max": 100.0,
+   "longest_fully_ok_days_median": 342,
+   "symbols_longest_fully_ok_ge_30": 524,
+   "symbols_longest_fully_ok_ge_90": 512,
+   "symbols_longest_fully_ok_ge_365": 217
+  },
+  "count_long_short_ratio": {
+   "zero_empty_symbols": 151,
+   "symbols_with_full_empty_days": 100,
+   "nonempty_pct_min": 97.481,
+   "nonempty_pct_median": 99.99,
+   "nonempty_pct_max": 100.0,
+   "longest_fully_ok_days_median": 443,
+   "symbols_longest_fully_ok_ge_30": 525,
+   "symbols_longest_fully_ok_ge_90": 519,
+   "symbols_longest_fully_ok_ge_365": 427
+  },
+  "sum_taker_long_short_vol_ratio": {
+   "zero_empty_symbols": 42,
+   "symbols_with_full_empty_days": 108,
+   "nonempty_pct_min": 84.904,
+   "nonempty_pct_median": 99.971,
+   "nonempty_pct_max": 100.0,
+   "longest_fully_ok_days_median": 247,
+   "symbols_longest_fully_ok_ge_30": 521,
+   "symbols_longest_fully_ok_ge_90": 476,
+   "symbols_longest_fully_ok_ge_365": 178
+  }
+ }
+}

@@ -1,0 +1,20 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: application/json;charset=UTF-8
+content-length: 411
+date: Wed, 07 Oct 2026 19:28:34 GMT
+via: 1.1 tesla, 1.1 7bcefe02457cf7668a37cd21e54ea7ee.cloudfront.net (CloudFront)
+etag: W/"0eed43f49c8b0cafc6961822629aad001"
+x-http2-stream-id: 7786979
+x-http2-stream-weight: 16
+access-control-allow-origin: *
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: origin-when-cross-origin
+strict-transport-security: max-age=31536000; includeSubdomains
+x-cache: Miss from cloudfront
+x-amz-cf-pop: SIN3-P4
+x-amz-cf-id: D2t3a1dmQLv0YdaKctt-BkR_Pap9xE_fsEcXv87J5v7fQGWOs6Thtg==
+

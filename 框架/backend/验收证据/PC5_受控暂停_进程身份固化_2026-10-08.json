@@ -1,0 +1,28 @@
+{
+ "captured_utc": "2026-10-08T07:01:12Z",
+ "note": "受控暂停前进程身份固化（pgrep -fl 只读）",
+ "history_run": {
+  "orchestrator": 41751,
+  "child": 42363
+ },
+ "do_not_touch": {
+  "realtime_collector": 32765,
+  "adapter_api": 32913,
+  "vite_frontend": 25968
+ },
+ "41751": {
+  "cmd": "/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3 /Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/_work_6tf_chain.py"
+ },
+ "42363": {
+  "cmd": "/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3 /Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/batch_download.py --phases 8h --download-only --min-free-gb 30"
+ },
+ "32765": {
+  "cmd": "/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3 /Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/realtime_collector.py"
+ },
+ "32913": {
+  "cmd": "/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3 /Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/adapter.py"
+ },
+ "25968": {
+  "cmd": "node node_modules/.bin/vite --port=3000 --host 127.0.0.1 --strictPort"
+ }
+}

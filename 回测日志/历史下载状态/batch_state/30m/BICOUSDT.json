@@ -1,0 +1,760 @@
+{
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-10.zip",
+  "bytes": 57979,
+  "sha256": "56e08fb86e81f98d03dc3c678e08a30171639ff8bae3519645dcd389d9ea0339",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99000,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99000,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-09.zip",
+  "bytes": 5447,
+  "sha256": "b78b398df6037cf89ccf43ee3f83f1f9f90aeb022a8267821a715c1246a3fefd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98999,
+   "新增版本数": 119,
+   "状态": "已入库"
+  },
+  "source_id": 98999,
+  "rows": 119
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-11.zip",
+  "bytes": 57819,
+  "sha256": "243525b9c4f506af911e2f0377324c619c3046016dc280fa120ba51b70c8dd31",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99001,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99001,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2023-12.zip",
+  "bytes": 60611,
+  "sha256": "58165da1b701b98e9abb83ed969847b52a9c87704e131281dfd194d0666af6f3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99002,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99002,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-02.zip",
+  "bytes": 55784,
+  "sha256": "be854b9c2113d38f5b0a96cbc1c7517bb121f6bd7f6cec74cf23fc4749d18552",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99004,
+   "新增版本数": 1392,
+   "状态": "已入库"
+  },
+  "source_id": 99004,
+  "rows": 1392
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-01.zip",
+  "bytes": 60074,
+  "sha256": "4ed2163e9508bffa119d6291287275b599084b4740f7c363bdf6af2ee3cad9d2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99003,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99003,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-03.zip",
+  "bytes": 63235,
+  "sha256": "3591d05350d43a27f334c65b5ffc54405d320ecb96dddf4c19096a7c72876020",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99005,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99005,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-04.zip",
+  "bytes": 62192,
+  "sha256": "59c501e64b25c9e5ae6723c2d89998021c5736412d231a63cc78f3fe9e6b99c8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99006,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99006,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-05.zip",
+  "bytes": 61527,
+  "sha256": "adc21a10d809f9939922098c46a77892e4b1c471dddce965166cf19a0e70ad61",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99007,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99007,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-06.zip",
+  "bytes": 59593,
+  "sha256": "52e76f212c1219395923c74b8a9119e75bb441a6e2eb86be491a570e5b7e8d7c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99008,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99008,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-08.zip",
+  "bytes": 59390,
+  "sha256": "83683e6fb0c4f51fc1e75370e4ebb3512cdb65e430d83ab14be8df4a93ea6be3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99010,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99010,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-07.zip",
+  "bytes": 59389,
+  "sha256": "a7c8e1b1f3b57f5734b49b2fea76caf18d2e11d2844ee1735545156ae354afa5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99009,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99009,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-09.zip",
+  "bytes": 55819,
+  "sha256": "a02917d1ef1fcd1b46d0bb9e875aaf2e2c336b0bae397fa7fbe11bdc4a8470b4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99011,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99011,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-10.zip",
+  "bytes": 59448,
+  "sha256": "01f3dfb551b25011b169eb10a90c5e266ed95c206ea5104e7d9dbde24bbcaaa3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99012,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99012,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-11.zip",
+  "bytes": 61169,
+  "sha256": "f87d50a94cfe67510e1dcee219f0094584b55b8e6d4c93ca9ce402562194636e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99013,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99013,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2024-12.zip",
+  "bytes": 62180,
+  "sha256": "2c292d4a95cc13157993b563838b9db67fbd85f5e6a5d68f34745e1fb4cdb159",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99014,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99014,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-01.zip",
+  "bytes": 60012,
+  "sha256": "771c6c2b642acbe88c05d02b039e95ca0dc6a76ba60e19b8445f249077976de4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99015,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99015,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-02.zip",
+  "bytes": 53233,
+  "sha256": "c423fd53ec62d4eea0e8287b7f03709beb4aaf0fafcd4893a67a05ff33d68348",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99016,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 99016,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-03.zip",
+  "bytes": 58028,
+  "sha256": "b9d5119de07de710a547fcc9c65697b01533d7113f6511912df39b6590f51812",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99017,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99017,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-04.zip",
+  "bytes": 55847,
+  "sha256": "6310af435f84b549f5d34ee94c0289d9020d785a7c05c9a08912fce967086f0e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99018,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99018,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-05.zip",
+  "bytes": 58276,
+  "sha256": "99bf666a587161dd3c554690a76bdb7d840ce9091500e89bee3d48050092d414",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99019,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99019,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-06.zip",
+  "bytes": 55277,
+  "sha256": "6bb453149e9f16fc1ede2e696163e318affd0b67663247827a1012dfdae671dc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99020,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99020,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-07.zip",
+  "bytes": 57841,
+  "sha256": "2fc98ad4144d00217677469c3ccaacf2efa1d57df9523f7687e2a785b86ab07c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99021,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99021,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-08.zip",
+  "bytes": 60139,
+  "sha256": "0d772d51425fed60d867655f37655e27038cf40bfdc084bca2127faf5bbebb0e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99022,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99022,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-09.zip",
+  "bytes": 60574,
+  "sha256": "18b6331255f29688961d3716f836fd970e74d60f2f950d66332cb0f957fd3af0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99023,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99023,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-10.zip",
+  "bytes": 62327,
+  "sha256": "7bc36eb9483a60bc3849c6bcef6ab0b4659d1f64be230ddd210c1647ebdee21a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99024,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99024,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-11.zip",
+  "bytes": 60600,
+  "sha256": "a929f073aa42d98d4103a2b2fcf383f646f5949626a3941c31fe39bea4737083",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99025,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99025,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2025-12.zip",
+  "bytes": 59706,
+  "sha256": "3b807155724700e1e5cae76a9316154d8184b9fb3ed0ddcf6565590f1859a39f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99026,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99026,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-01.zip",
+  "bytes": 60408,
+  "sha256": "da525b9d300038bd02b2409730d2f7160b356ea09e2f602a971df8c1355c7a89",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99027,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99027,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-02.zip",
+  "bytes": 54387,
+  "sha256": "7a80b4917ac245fc48a7949df649353deb9bab474c015e33c0fe8e2e723616d9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99028,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 99028,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-03.zip",
+  "bytes": 60581,
+  "sha256": "862277273f55dcad758642eef14dcf20313724896f2796463849318548a2621b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99029,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99029,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-04.zip",
+  "bytes": 59174,
+  "sha256": "3a7050df0ad1fe4f1c7b0b92ea32972ad265a87b8792b8fbe675072b86123bed",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99030,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99030,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-05.zip",
+  "bytes": 60544,
+  "sha256": "44038a1866644cc4d3943b902412445b627cd672767c32e8d12eb60bf51a2627",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99031,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99031,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-06.zip",
+  "bytes": 61938,
+  "sha256": "109e4b1e757163de9fa2952fa23e5c31e5b43744b8c8fedc292f2db61f67d6b5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99032,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99032,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-07.zip",
+  "bytes": 61166,
+  "sha256": "da3f0693739e39ce68457c990ac87acc0bce54ce16d03cb2a7585bf6a74d012a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99033,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99033,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-08.zip",
+  "bytes": 68749,
+  "sha256": "1889f3be4568b29fd91975e9fda2bd8f811676ef1b1e9ab8a7447e6ff29dd5eb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99034,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 99034,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/BICOUSDT/30m/BICOUSDT-30m-2026-09.zip",
+  "bytes": 61339,
+  "sha256": "d27e9f5e7a0152191a09a63d0fd81f5fc50464a8f6d3832ce895a9cce55e3b75",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 99035,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 99035,
+  "rows": 1440
+ },
+ "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-01.zip",
+  "bytes": 2303,
+  "sha256": "3ffa173569f5854fc4a6f728712ae8155fb9903710b26f31047e49e454d7ca29",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98995,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98995,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-02.zip",
+  "bytes": 2341,
+  "sha256": "de88ef6140c7bd0f2c9b3ec5cbb1e726f6b88e16232fae867d65d65f2e5062b0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98996,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98996,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-03.zip",
+  "bytes": 2226,
+  "sha256": "ab2226b8a4e454574731fa19b266ca19f24be3150864f96a121576bafcbb7024",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98997,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98997,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-04.zip",
+  "bytes": 2246,
+  "sha256": "02cdd00f935370ccd940d0bb2f3d9ab74e6a138ccc71f9d623314184a0cd30fb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 98998,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 98998,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-05.zip",
+  "bytes": 2298,
+  "sha256": "b0c1073275294bc4bfb782de5c43ac36260cb56a675a075698e5ad341ddce58c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 344389,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 344389,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-06.zip",
+  "bytes": 2287,
+  "sha256": "3bfce9ad6543509eff3251d9fa399466077546a5b6d64c10879a7684f8c636e2",
+  "checksum_ok": true,
+  "size_bytes": 2287,
+  "fetched_at": "2026-10-07T19:50:08Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/BICOUSDT/BICOUSDT-30m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940795,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940795,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:16Z"
+ },
+ "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-07.zip",
+  "bytes": 2318,
+  "sha256": "fa0bc5978a21f5513d60c73224696c6795543f7ce99650e7c059e4414622ddec",
+  "checksum_ok": true,
+  "size_bytes": 2318,
+  "fetched_at": "2026-10-08T10:36:13Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/BICOUSDT/BICOUSDT-30m-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/BICOUSDT/30m/BICOUSDT-30m-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940796,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940796,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:16Z"
+ }
+}

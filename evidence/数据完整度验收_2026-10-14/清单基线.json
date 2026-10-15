@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-10-14T20:20:04.548753+08:00",
+  "fixed_now_ms": 1791980404548,
+  "old_catalog": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/archive/parquet/_catalog.json.1791969466.bak",
+  "old_sha256": "e4a8830e661f2e9af3a54b110488b3d00b640da0b1efb74ffaba98cbd6f024e0",
+  "current_catalog": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/archive/parquet/_catalog.json",
+  "current_sha256": "f56b5090f25d1fe058f29debd8f1d30f410c22ee80d12e767519cc33f75d27fc",
+  "old": {
+    "candles": {
+      "files": 14213,
+      "rows": 114852665,
+      "bytes": 5687127301
+    },
+    "candle_heads": {
+      "files": 14213,
+      "rows": 113887021,
+      "bytes": 618371448
+    },
+    "sources": {
+      "files": 5700,
+      "rows": 1848884,
+      "bytes": 134580599
+    },
+    "oi": {
+      "files": 1935,
+      "rows": 128236484,
+      "bytes": 4408325333
+    },
+    "funding": {
+      "files": 814,
+      "rows": 116305,
+      "bytes": 3599100
+    }
+  },
+  "current": {
+    "candle_heads": {
+      "files": 12457,
+      "rows": 107792528,
+      "bytes": 577042628
+    },
+    "candles": {
+      "files": 12457,
+      "rows": 108389667,
+      "bytes": 5379298145
+    },
+    "funding": {
+      "files": 525,
+      "rows": 2102859,
+      "bytes": 17987220
+    },
+    "oi": {
+      "files": 1646,
+      "rows": 123422671,
+      "bytes": 4257043629
+    },
+    "sources": {
+      "files": 5700,
+      "rows": 2072958,
+      "bytes": 148659725
+    }
+  },
+  "pool_count": 549,
+  "pool_by_exchange": {
+    "binance": 526,
+    "okx": 23
+  },
+  "exclusions": [
+    "ALLUSDT",
+    "BTCDOMUSDT",
+    "DEFIUSDT"
+  ],
+  "note": "清单行数差不是唯一事件丢失数；需冷热合并及实际时间集合核对"
+}

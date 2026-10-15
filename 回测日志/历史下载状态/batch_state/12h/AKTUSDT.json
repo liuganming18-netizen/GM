@@ -1,0 +1,517 @@
+{
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2024-11.zip",
+  "bytes": 1611,
+  "sha256": "1c6d7b7050529bf2f77b624d4ab76b67ef1dbf58ecd856da240f504e6b4a502c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32838,
+   "新增版本数": 26,
+   "状态": "已入库"
+  },
+  "source_id": 32838,
+  "rows": 26
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2024-12.zip",
+  "bytes": 3343,
+  "sha256": "2fe0feddf42d5b6295051b499f9acb7048e8c1d9725950a7fcb186d2d9947129",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32839,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32839,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-01.zip",
+  "bytes": 3328,
+  "sha256": "c35df856beb16964f7e32b3bd34f0d1fed96d5cc90b87c4740fc791b91675565",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32840,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32840,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-02.zip",
+  "bytes": 2958,
+  "sha256": "cb047e9bcd392899a69186ca9a049047a005bab3ae7f8262496b23b12e4108e1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32841,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 32841,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-03.zip",
+  "bytes": 3304,
+  "sha256": "524707e68d7850b9cf8e32281e4b05f8fcc52b3398f1ee07b7cce4bf15b4cbc7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32842,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32842,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-04.zip",
+  "bytes": 3126,
+  "sha256": "332f858d1b0eaa17cd0458bcb98e5a7c0341991b45c4e6bb9be31f11706fcee4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32843,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 32843,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-05.zip",
+  "bytes": 3332,
+  "sha256": "8a9b5db576e4e33abe8015a16d4bc38ca4949a3ad0b47e195cc5bc919fbc9394",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32844,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32844,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-06.zip",
+  "bytes": 3104,
+  "sha256": "b518f336ba5067697620438ef2daa5633e3672a33e26971f9051628d5c2880fc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32845,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 32845,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-07.zip",
+  "bytes": 3232,
+  "sha256": "99308ff2854f80382d38b69813b00c632378d9b3e03b068812303ee4392eba2a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32846,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32846,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-08.zip",
+  "bytes": 3162,
+  "sha256": "b8e5f874d1859fc5323950b5ababdab839b84dc469aab1901f5add4eae043c20",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32847,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32847,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-09.zip",
+  "bytes": 3073,
+  "sha256": "84451c1e8a68e84b29712b0e8c330dba5f5599201b92b730545433d97647b613",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32848,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 32848,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-10.zip",
+  "bytes": 3269,
+  "sha256": "306eca520ba1b8623ee5425f32da1b9bb8cd6c0663723e296515cdb7b5f88212",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32849,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32849,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-12.zip",
+  "bytes": 3298,
+  "sha256": "e0903d8d382f20a052cc00c1fed55e762f37cb258e88135d62189a208e914d6c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32851,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32851,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2025-11.zip",
+  "bytes": 3339,
+  "sha256": "0f9e45cd41e244d57889079fe168d57ea6b3dfa03e4f9d6e111dfe1c49e115c5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32850,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 32850,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-01.zip",
+  "bytes": 3423,
+  "sha256": "a550c4c2f3bcd4a05bcabbf6615f4c8e4d8b30cb8faa36d70a87fd82d21145e6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32852,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32852,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-02.zip",
+  "bytes": 3069,
+  "sha256": "e8590d20d00e63ca70dc16a98ef71ab39aa0b1e0bedb0d2686b0e4bf9b949d8f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32853,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 32853,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-04.zip",
+  "bytes": 3274,
+  "sha256": "df5c2eb3e8e9d5b9a4622cfad5497a9aeaf1dce89913f0e16bb3a38c9e3cf134",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32855,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 32855,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-03.zip",
+  "bytes": 3520,
+  "sha256": "8e03889479f5e044368026cbaed93083af5d3d261da8988ada2b7c372c8d4b88",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32854,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32854,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-05.zip",
+  "bytes": 3545,
+  "sha256": "7075a4284c1966e90548b1962916a2db7df93aaf18cb9442840e33e207740afc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32856,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32856,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-06.zip",
+  "bytes": 3389,
+  "sha256": "eac00b729978042f79ac89eb1a0c72ac6880d39340c8dcc6404e369e5672cd4b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32857,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 32857,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-07.zip",
+  "bytes": 3347,
+  "sha256": "35ab634fc140ac6c5911bb18c8672bbab7098b937a2c0324038b8d781c06ce1c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32858,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32858,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-08.zip",
+  "bytes": 3382,
+  "sha256": "66cd3fe79fc4d6d821f26fa6e5d4231440be79104d7c2d051322f60324e34bcd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32859,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 32859,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/AKTUSDT/12h/AKTUSDT-12h-2026-09.zip",
+  "bytes": 3294,
+  "sha256": "0013dedf402ac742f328f93aafc33ed3bb4ab44d709047dfb04a5ed73002907b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32860,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 32860,
+  "rows": 60
+ },
+ "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-01.zip",
+  "bytes": 400,
+  "sha256": "5f395f8f3ebacfe58116ca2389789df91202000b1e08a2aa2610e0852e5188cf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32835,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 32835,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-02.zip",
+  "bytes": 403,
+  "sha256": "f760b889b5e89152cb4ee29dc93a547517715bb95949359683b1fbf39cfc3817",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32836,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 32836,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-04.zip",
+  "bytes": 409,
+  "sha256": "0d7fc10b3edfb59b0da5c500c7868fc76b8147beb8f724c93fed400058c739e4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 51553,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 51553,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-03.zip",
+  "bytes": 400,
+  "sha256": "44cf3c46e7869028536c9f0109eacad2f819488ff902f3f1352cd6a37d9d2e0c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 32837,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 32837,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-05.zip",
+  "bytes": 409,
+  "sha256": "f36a9874cfca96412f3025d0f019f21a0bd269214bd0392f0a5f8fc9b03882d3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 282292,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 282292,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-06.zip",
+  "bytes": 403,
+  "sha256": "d28ef1b147c88c63f0f52ffec8e6dabb55420c9b7bad9a1646c9ce88eb7bcbbb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1608581,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1608581,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-07.zip",
+  "bytes": 404,
+  "sha256": "890641616ec3d91feec05bfd9487b1f07f409a55b757efcee5909bf9dab4880d",
+  "checksum_ok": true,
+  "size_bytes": 404,
+  "fetched_at": "2026-10-08T07:26:37Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/12h/AKTUSDT/AKTUSDT-12h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/AKTUSDT/12h/AKTUSDT-12h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1799140,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1799140,
+  "rows": 2,
+  "imported_at": "2026-10-08T07:28:00Z"
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "generated_utc": "2026-10-14T19:23:27Z",
+ "out_root": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster",
+ "backup_dir": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster/_backup/20261014T192054Z",
+ "isolated_restore_dir": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_策略数据_2026-10-15/isolated_restore/20261014T192054Z",
+ "n_files_backed_up": 3155,
+ "backup_bytes": 9463433746,
+ "backup_sha_mismatches": [],
+ "isolated_restore_scope": "bounded_sample（每数据集≤3文件 + 全部 schema/manifest/pool）",
+ "isolated_restore_files": 16,
+ "restore_verified_ok": 16,
+ "restore_failures": [],
+ "manifest_sha_ref": "6838a05e53b4e15dae759de5e3461b61f2f926c72b087fccb1ef6d1500e3cfb9",
+ "existing_hot_backup_verified": {
+  "path": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/hot/20261014T131200Z/market_v2.sqlite3",
+  "recorded_sha256": "20f60475ed06f771fa5adfd034c8759c8e281bdfd1be4adf980e5a0d91224cc0",
+  "recomputed_sha256": "20f60475ed06f771fa5adfd034c8759c8e281bdfd1be4adf980e5a0d91224cc0",
+  "quick_check": "ok",
+  "match": true
+ },
+ "elapsed_s": 153.3
+}

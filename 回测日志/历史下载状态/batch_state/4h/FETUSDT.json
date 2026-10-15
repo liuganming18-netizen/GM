@@ -1,0 +1,896 @@
+{
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-02.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-02.zip",
+  "kind": "monthly",
+  "period": "2023-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-02.zip",
+  "bytes": 8681,
+  "sha256": "97c7bfa60a8a2f4de8b9221a985931fd35c7a0700eead15247ddf3b920eea98c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61744,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 61744,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-01.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-01.zip",
+  "kind": "monthly",
+  "period": "2023-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-01.zip",
+  "bytes": 4643,
+  "sha256": "b0eb61966c3016b767a0cfc91304bfbab9733fdd5dbb5a9aa3b2843cea9c4908",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61743,
+   "新增版本数": 90,
+   "状态": "已入库"
+  },
+  "source_id": 61743,
+  "rows": 90
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-03.zip",
+  "bytes": 9443,
+  "sha256": "ab3f99779618ae40c808b1c64d01b06c000f32d9c1ccab393cce6b2d7f4f391d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61745,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61745,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-04.zip",
+  "bytes": 8887,
+  "sha256": "5718ba5702f8d18e27b0f0c15725ab0bfa47458c9036400761e340f1974622f0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61746,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61746,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-05.zip",
+  "bytes": 9177,
+  "sha256": "0dba75fba368a5a3c898cd4ef11eb6fce0ce354b5d5cba79ef0381b1a79ae105",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61747,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61747,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-06.zip",
+  "bytes": 8867,
+  "sha256": "8b347a0355afb7a833fc70ca823077e4062d9cf74a986528fe8fb88164441c9e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61748,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61748,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-07.zip",
+  "bytes": 8990,
+  "sha256": "855f85a50f3dd575bf1fb86dc586a39f56e2a6c52a10d52fcfadbdbfd38aff6f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61749,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61749,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-08.zip",
+  "bytes": 9009,
+  "sha256": "cd7fe50a8dbc21642201b7d73f402d3f7e4c29b1bad1f42cea14a5f468ad0932",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61750,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61750,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-09.zip",
+  "bytes": 8768,
+  "sha256": "adc3f3606d35d4bbf626e1822ab5959519156f5903e84afd5b96ea0b5cc72aac",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61751,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61751,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-10.zip",
+  "bytes": 9111,
+  "sha256": "436a358de8e9546e3d32373e809c5d9cdbe485c9849511125a0f6cf3b305f04c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61752,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61752,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-11.zip",
+  "bytes": 9142,
+  "sha256": "cb572ad86da33e0c2e661050fcd0265de0147c6a5e1af522f928d636a2054b47",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61753,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61753,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2023-12.zip",
+  "bytes": 9488,
+  "sha256": "4e1866139865cf7043c60e275909bd7d269867a9fc1fffa2cd6bbd1b398587fc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61754,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61754,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-01.zip",
+  "bytes": 9289,
+  "sha256": "3ea681efdeb87bcd61dbbebe3ff2c311f06c0fa181b2e9bef1a3113825f6d492",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61755,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61755,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-02.zip",
+  "bytes": 8920,
+  "sha256": "4087ecad42dec264ed070320e30434137b0c29c9308d32c093267d6c877c8164",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61756,
+   "新增版本数": 174,
+   "状态": "已入库"
+  },
+  "source_id": 61756,
+  "rows": 174
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-03.zip",
+  "bytes": 9934,
+  "sha256": "193ed278b619dbebaac93ffe79d637cf09fdb0d38b91baff43a9998b60d56567",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61757,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61757,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-04.zip",
+  "bytes": 9373,
+  "sha256": "cfa889523f499aa78ab79c415abfa2cc58dca57740e60b5da82b147a4082636e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61758,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61758,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-05.zip",
+  "bytes": 9574,
+  "sha256": "9c59c168ce3a2c99f4600609f7e0dbad6d82c2d38ad5a0997ff17da4fdf33f99",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61759,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61759,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-06.zip",
+  "bytes": 9272,
+  "sha256": "668f1ba473aef8b10f0ce32fbab66554cf85c6d6628813d501126eeb6c3c7004",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61760,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61760,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-07.zip",
+  "bytes": 9410,
+  "sha256": "51b7d34561925978f8ba1f20e3510c172c2038cd1f6de4a3e14c406c9a9d8103",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61761,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61761,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-08.zip",
+  "bytes": 9560,
+  "sha256": "f3a61c0c425e5dc96e4b65bd3ef4866011d26f348f7c2ee1a2cc5e94275d04ab",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61762,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61762,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-09.zip",
+  "bytes": 9343,
+  "sha256": "41c2b20d1049a789e3df36419906e072d88ae7fd1c23327b823d797f6e21e798",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61763,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61763,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-10.zip",
+  "bytes": 9487,
+  "sha256": "7fb5e686a8aeb373852433073ad0674165a01ddc2515e00d36a8f36f6377177e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61764,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61764,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-11.zip",
+  "bytes": 9376,
+  "sha256": "4abd0d1652ac448d189c54a34ae048318da01f5fc7a3020f91662a4d08425d97",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61765,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61765,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2024-12.zip",
+  "bytes": 9654,
+  "sha256": "2062075ee2deb3cbd5f094ad4c530605b836651dad391c6863f68387e90ece4e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61766,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61766,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-01.zip",
+  "bytes": 9577,
+  "sha256": "bc33433a9e4278b7df892ded2ea4feb1f9210e1f0e2cc56c2ed8e5382cb054ca",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61767,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61767,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-03.zip",
+  "bytes": 9327,
+  "sha256": "53dba258b04c74d7805e4a8ed86ccefc2b8153bcccf99ac01bac37d15d6fbab1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61769,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61769,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-02.zip",
+  "bytes": 8565,
+  "sha256": "d5087ffc4e2142ed54c38dcfe47ba157ffe57c6ffa2d3e0f24eacc2072425f4b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61768,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 61768,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-04.zip",
+  "bytes": 9176,
+  "sha256": "d46a4ef97c6c16592871b9c1c00eb6410e687c76088aa4201908ebfcdd1015fd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61770,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61770,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-05.zip",
+  "bytes": 9507,
+  "sha256": "d35482d8189d4218bf133adb135aaedda733172cf4ed6ff5d909bf81a5037294",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61771,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61771,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-06.zip",
+  "bytes": 9077,
+  "sha256": "4f373c9c2d43368c1dd2d173d4d548a4b37ccf72c7070fc92ba43b104d3506e2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61772,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61772,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-07.zip",
+  "bytes": 9408,
+  "sha256": "03867535119b5ded79274668fdf7a47c30613be983e7174ded7164796b323a60",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61773,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61773,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-08.zip",
+  "bytes": 9264,
+  "sha256": "667151069db3702ecfeee1ad77647ed4bf6a3257f44e62427b7c07d8c10a236c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61774,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61774,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-09.zip",
+  "bytes": 8891,
+  "sha256": "f0f27e2692025dbaf59adf64ca68e3858ba82dde03f5b8022558e214ab10b04d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61775,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61775,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-10.zip",
+  "bytes": 9382,
+  "sha256": "84fe3034eb6aff716d90aa5669183bbc06ce2257258e8bb179197d1e7b6653a9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61776,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61776,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-11.zip",
+  "bytes": 9141,
+  "sha256": "d2e819c363e33d5f02932466bed427776bad40d393aa5c6c4643494d5a1f7e53",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61777,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61777,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2025-12.zip",
+  "bytes": 9071,
+  "sha256": "ca334560c373c9ab07f326089c5f07a0d4970fe6f816ff43d09e3c8e32d05661",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61778,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61778,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-01.zip",
+  "bytes": 9177,
+  "sha256": "7fcc776e485a6ed08ecf9958651d80e5c0bbda47cb68ec43ca68dbbab83533c6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61779,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61779,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-02.zip",
+  "bytes": 8102,
+  "sha256": "71c156c3dbb027882f93ceeb8caafddf3304e7eb1090c6627c73a4380dd32c4f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61780,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 61780,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-03.zip",
+  "bytes": 9215,
+  "sha256": "3cbc0c7a496f0e944955f523cb1d710f2a0deed3720678ece05c82bbc95c5633",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61781,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61781,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-04.zip",
+  "bytes": 8760,
+  "sha256": "784c8235094549e2aefaf451eaa0d41168e4f406996d9f599c9fc072f9ee35a4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61782,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61782,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-05.zip",
+  "bytes": 9144,
+  "sha256": "f07655aaeb281c1a74adcbd6e757b1182999465cd63242e85a66fc15a0ac50e1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61783,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61783,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-06.zip",
+  "bytes": 8946,
+  "sha256": "ecca73dae8123f7026fb78f7ef16b229b72e98ad29fb6756d003df51c27b0b3f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61784,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61784,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-07.zip",
+  "bytes": 8871,
+  "sha256": "e3c66b5883600880906adf28c686e75d5aab53be2548d393364e948eca473416",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61785,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61785,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-08.zip",
+  "bytes": 8928,
+  "sha256": "1197bae407bd5a1f4aa081a01dc43815f1c9dac8efb27c35677673f69dd89e3c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61786,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 61786,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/FETUSDT/4h/FETUSDT-4h-2026-09.zip",
+  "bytes": 8886,
+  "sha256": "07823997169fb9c8108662efa41cd30a4e5bbfe9092989b0e5c9b21087deeada",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61787,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 61787,
+  "rows": 180
+ },
+ "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-01.zip",
+  "bytes": 587,
+  "sha256": "7051adb7850cff6943cd6a94571f2a4de528a90cf19e8c3ee60b5a40edb9d612",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61739,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 61739,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-02.zip",
+  "bytes": 586,
+  "sha256": "78298b216dc4ec641c3cb911d17391630972d3da74fb4430ec63759f75e538a0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61740,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 61740,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-03.zip",
+  "bytes": 574,
+  "sha256": "5a32a9a67ac1004277fb2462e3aadc4847b1925119d6c45f645ec99679208c44",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61741,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 61741,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-04.zip",
+  "bytes": 589,
+  "sha256": "75ca428f1f170fac58e52b7164172bce4cbb731a51dd4b30438dc913c7a896f7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 61742,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 61742,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-05.zip",
+  "bytes": 598,
+  "sha256": "824fdcc57a4b038e6c9ba4c578e450c5977af5011039d42687e3f376f40b1a35",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 306671,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 306671,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-06.zip",
+  "bytes": 582,
+  "sha256": "378b5479b6e20cfeb6cc67362dcd874ef4b04e43163abd0bb910f3b27f8ccbc2",
+  "checksum_ok": true,
+  "size_bytes": 582,
+  "fetched_at": "2026-10-07T19:31:44Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/FETUSDT/FETUSDT-4h-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836226,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836226,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:29Z"
+ },
+ "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-07.zip",
+  "bytes": 587,
+  "sha256": "d6c32ab48169ab7fbf0195be5f706a242de5c42a1386a5cc5a08e5967d76ca45",
+  "checksum_ok": true,
+  "size_bytes": 587,
+  "fetched_at": "2026-10-08T08:11:17Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/FETUSDT/FETUSDT-4h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/FETUSDT/4h/FETUSDT-4h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836227,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836227,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:29Z"
+ }
+}

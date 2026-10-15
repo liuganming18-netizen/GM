@@ -1,0 +1,56 @@
+{
+ "generated_utc": "2026-10-08T13:53:39Z",
+ "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "pool_binance_um": 526,
+ "pool_okx_supplement": 23,
+ "scope_version": "crypto_only_v1",
+ "scope_source": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/标的池/scope_crypto.json",
+ "excluded_indices": [
+  "BTCDOMUSDT",
+  "ALLUSDT"
+ ],
+ "scope_counts": {
+  "binance": 526,
+  "okx": 23,
+  "total": 549
+ },
+ "exemptions_file": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/logs/pool_exemptions.json",
+ "exemptions_entries": 62,
+ "criterion": "头段按官方可得最早边界（rest_first 范围证据缓存）+ 合约身份核验；内部洞逐段列出并对**周期绑定**的已证官方缺失单列；尾段对最后一个已收盘 UTC bar。",
+ "timeframes": {
+  "4h": {
+   "timeframe": "4h",
+   "last_closed_open": "2026-10-08T08:00:00Z",
+   "range_cache": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/logs/pool_range_cache_4h.json",
+   "aggregate": {
+    "symbols": 549,
+    "rows": 2891432,
+    "head_residual_bars": 0,
+    "internal_residual_bars": 0,
+    "tail_residual_bars": 0,
+    "head_resolved": 549,
+    "internal_documented": 49,
+    "pass": 549,
+    "no_range_evidence": 0,
+    "empty": 0,
+    "identity_unverified": 0,
+    "structural_absent": 0,
+    "off_boundary_symbols": 0,
+    "off_boundary_rows": 0
+   },
+   "status": "pass",
+   "not_passing_count": 0,
+   "not_passing": [],
+   "boundary_contamination": {
+    "symbols": 0,
+    "rows": 0,
+    "blocking": false,
+    "note": "异边界行（如 OKX 12h 旧 UTC+8 锚点）**不参与** UTC 对齐序列的完整性判定，**显式单列**不隐藏；其物理清理按既有处置方案（验收证据/P02_OKX12h旧边界_处置方案_2026-10-07.md）需**另行提交并经用户确认**，本门禁不做物理删除。"
+   }
+  }
+ },
+ "gate": {
+  "status": "pass",
+  "failed_timeframes": []
+ }
+}

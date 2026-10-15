@@ -1,0 +1,49 @@
+{
+ "format": "pc8_8h_gap_exemption_remediation",
+ "version": 1,
+ "generated_utc": "2026-10-08T08:07:04Z",
+ "context": "独立验收退回后 8h 续传；旧模块运行时 rest_fill 报 gate=fail blocking=[failed=4, unresolved_empty_ranges=8, unresolved_rest_empty=23]。",
+ "diagnosis": {
+  "unresolved_empty_ranges_8": {
+   "root_cause": "8 个空段**全部**落在『库内 pre_rest 段末端 … 官方 REST 最早根(rest_first)』之间，即新合约上市前无合约窗口（与 ICP 1d/12h 已豁免缺口同源）；旧 _pool_restfill 缺该周期绑定豁免，故按未决空段阻塞。",
+   "symbols": [
+    "AIAUSDT",
+    "CTKUSDT",
+    "CVCUSDT",
+    "CVXUSDT",
+    "SLPUSDT",
+    "LITUSDT",
+    "MAVIAUSDT",
+    "ICPUSDT"
+   ],
+   "bars_total": 24,
+   "note": "与库内 8h 官方缺失计数 24（1+1+1+1+1+2+2+15）**逐根吻合**。"
+  },
+  "unresolved_rest_empty_23": {
+   "root_cause": "OKX 官方无原生 8h（bar 枚举 1H/2H/4H/6H/12H/1D）；旧模块在 OKX_BAR 无 8h 键时走 rest_empty 分支而非结构性不可得单列。",
+   "fix": "_pool_restfill 主循环开头加结构性不可得拦截（ex==okx 且 tf not in OKX_BAR → structural_absent），与 _pool_gate.STRUCTURAL_ABSENT 同源判据。"
+  },
+  "failed_4": {
+   "root_cause": "ONT/PARTI/PENDLE/T 范围探测遇 DeferredRequest（本地请求预算已用尽），属**限频待重试**，非官方不可得；重跑经既有退避调度重试。"
+  }
+ },
+ "evidence": {
+  "file": "验收证据/P11_8h_代际缝隙_官方不可得证据_2026-10-08.json",
+  "sha256": "686eefd25bcf94ac77fb4883d270078ac359aa8f8cf7ba07f70c492e5c0c9eeb",
+  "exists": true,
+  "note": "逐币原始：REST 以洞起点为 startTime 请求（最早返回根 > 洞起点）+ 官方日档 ZIP 正文（不含洞内根）；ICP 5 天日档 HTTP 404。"
+ },
+ "exemptions_after": {
+  "file": "logs/pool_exemptions.json",
+  "sha256": "39635ca71192f84ee238b095e315f70c4753bf363ccbd8f1ed0727a312e2e872",
+  "total_entries": 35,
+  "binance_8h_official_not_published": 8,
+  "okx_8h_no_native_interval": 23,
+  "evidence_invalid_keys": []
+ },
+ "api_side_okx_8h": {
+  "quality": "missing",
+  "note": "okx 无 8h 原生周期：如实置空，不合成、不跨所拼接（实测 /api/v1/markets/okx/CRO-USDT-SWAP/candles?timeframe=8h）"
+ },
+ "rule": "源真正不可得须有准确周期/合约身份/区间/原始证据及 sha256 才豁免；证据缺失或哈希不符 ⇒ 未豁免（阻塞）。"
+}

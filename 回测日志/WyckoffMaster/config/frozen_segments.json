@@ -1,0 +1,142 @@
+{
+  "schema": "wyckoffmaster_segments/v2_v31",
+  "spec_version": "WyckoffMaster_v3.1",
+  "status": "FROZEN_V31",
+  "authority": "docs/WyckoffMaster_v3.1_执行补充与窗口交接_2026-10-15.md（覆盖上一版候选）",
+  "rule": {
+    "intervals": "半开 UTC 区间 [start, end)",
+    "timezone": "UTC",
+    "immutable": "日期只由开工令与数据边界决定，绝不按收益调整"
+  },
+  "data_boundary": {
+    "hot_db": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
+    "hot_db_note": "只读；**不是** data_hub/market_v2.sqlite3 旧路径，不得创建旧路径库",
+    "archive": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/archive/parquet",
+    "research_input": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster",
+    "holdout_cutoff_utc": "2026-10-15T00:00:00Z",
+    "holdout_cutoff_beijing": "2026-10-15 08:00 (+08)",
+    "cutoff_note": "交接核对时北京时间 01:57，Holdout 截止尚未到；终验须等该段全部 bar 闭合、事件材料通过，不得按 01:57 截断冒充完整六个月"
+  },
+  "pool": {
+    "scope": "crypto_only_v1_549_historical",
+    "binance": 526,
+    "okx": 23,
+    "excluded": [
+      "ALLUSDT",
+      "BTCDOMUSDT",
+      "DEFIUSDT"
+    ],
+    "survivor_bias_note": "549 只作库存范围；历史上市/下架身份按 PIT 清单，未知身份单列"
+  },
+  "segments": [
+    {
+      "name": "IS",
+      "start_utc": "2022-01-01T00:00:00Z",
+      "end_excl_utc": "2025-01-01T00:00:00Z",
+      "start_ms": 1640995200000,
+      "end_excl_ms": 1735689600000,
+      "days": 1096,
+      "equity_start": 5000.0,
+      "positions_at_start": 0,
+      "pending_orders_at_start": 0,
+      "warmup_bars_1h": 240,
+      "warmup_roll_days": 90,
+      "warmup_oi_span_bars": 20,
+      "warmup_note": "起点前仅指标预热，不产生任何成交",
+      "reset_on_segment_boundary": [
+        "cash",
+        "pending_orders",
+        "positions",
+        "execution_state",
+        "equity_peak"
+      ],
+      "carry_positions_across": false
+    },
+    {
+      "name": "Val",
+      "start_utc": "2025-01-01T00:00:00Z",
+      "end_excl_utc": "2026-04-15T00:00:00Z",
+      "start_ms": 1735689600000,
+      "end_excl_ms": 1776211200000,
+      "days": 469,
+      "equity_start": 5000.0,
+      "positions_at_start": 0,
+      "pending_orders_at_start": 0,
+      "warmup_bars_1h": 240,
+      "warmup_roll_days": 90,
+      "warmup_oi_span_bars": 20,
+      "warmup_note": "起点前仅指标预热，不产生任何成交",
+      "reset_on_segment_boundary": [
+        "cash",
+        "pending_orders",
+        "positions",
+        "execution_state",
+        "equity_peak"
+      ],
+      "carry_positions_across": false
+    },
+    {
+      "name": "Holdout",
+      "start_utc": "2026-04-15T00:00:00Z",
+      "end_excl_utc": "2026-10-15T00:00:00Z",
+      "start_ms": 1776211200000,
+      "end_excl_ms": 1792022400000,
+      "days": 183,
+      "equity_start": 5000.0,
+      "positions_at_start": 0,
+      "pending_orders_at_start": 0,
+      "warmup_bars_1h": 240,
+      "warmup_roll_days": 90,
+      "warmup_oi_span_bars": 20,
+      "warmup_note": "起点前仅指标预热，不产生任何成交",
+      "reset_on_segment_boundary": [
+        "cash",
+        "pending_orders",
+        "positions",
+        "execution_state",
+        "equity_peak"
+      ],
+      "carry_positions_across": false
+    }
+  ],
+  "segment_end_liquidation": {
+    "price": "本段最后 15m 收盘价",
+    "costs": [
+      "卖出不利滑点 0.05%",
+      "手续费 0.05%",
+      "应结资金费"
+    ],
+    "forbidden": "不得用下一段开盘价清算",
+    "reason_code": "segment_end_force_close_last_15m_close",
+    "accounting": "单独列账（逐笔），不混入正常出场统计"
+  },
+  "segment_boundary": {
+    "reset": [
+      "cash",
+      "pending_orders",
+      "positions",
+      "execution_state",
+      "equity_peak"
+    ],
+    "anchor_carry_policy": {
+      "allowed": "仅由预热形成且尚有效的信号锚点",
+      "must_be_consistent": true,
+      "forbidden": "不得产生段前开仓（entry_ts 必须落在本段内）"
+    }
+  },
+  "holdout_isolation": {
+    "red_line": "IS/Val 选型锁定前：不读取 Holdout 区间行情/因子数据，不运行该段，不计算/查看该段交易、收益、信号表现",
+    "step0_scope": "Step0 只审计 IS/Val 及其预热；Holdout 审计后置到最终候选冻结之后",
+    "physical_separation": "研究输入必须物理区分 IS/Val 与 Holdout；跨界月包/混合近期库不得整文件解析后过滤",
+    "enforced_by": "adapters/holdout_guard.py（窗口交集即拒绝）"
+  },
+  "forbidden_models": {
+    "norm4h_approx": "禁止作为真实历史资金费",
+    "ext1h_approx": "禁止作为真实历史资金费",
+    "zero_fill": "缺事件 mark 不得补 0",
+    "ordinary_close": "不得用普通成交 close 伪称真实结算 mark",
+    "required": "真实结算时刻 / 真实结算费率含正负 / 结算时刻真实 mark"
+  },
+  "notes": "v3.1 正式开工令冻结区间，覆盖上一版候选(IS 2020-12-15起/Val 2024-04-11起/Holdout 2026-04-09起)。三段各自5000U零仓零挂单，段末本段最后15m收盘强平。",
+  "self_sha256": "e76e231ddbcc819098fb6d939016b0a8915ae69d9f017cd286328f52f932bff1"
+}

@@ -1,0 +1,226 @@
+{
+ "funding_mark_sample": {
+  "files_sampled": 60,
+  "total_files": 525,
+  "rows": 259202,
+  "mark_filled": 0,
+  "fill_rate": 0.0,
+  "funding_time_min": 1578556800000,
+  "funding_time_max": 1789369200000,
+  "per_file": [
+   {
+    "file": "funding/binance/um/GUSDT/funding.parquet",
+    "rows": 4607,
+    "mark_filled": 0
+   },
+   {
+    "file": "funding/binance/um/GLMUSDT/funding.parquet",
+    "rows": 5609,
+    "mark_filled": 0
+   },
+   {
+    "file": "funding/binance/um/TOSHIUSDT/funding.parquet",
+    "rows": 2171,
+    "mark_filled": 0
+   },
+   {
+    "file": "funding/binance/um/XANUSDT/funding.parquet",
+    "rows": 2099,
+    "mark_filled": 0
+   },
+   {
+    "file": "funding/binance/um/1000SATSUSDT/funding.parquet",
+    "rows": 6039,
+    "mark_filled": 0
+   },
+   {
+    "file": "funding/binance/um/ANIMEUSDT/funding.parquet",
+    "rows": 3870,
+    "mark_filled": 0
+   },
+   {
+    "file": "funding/binance/um/AIOTUSDT/funding.parquet",
+    "rows": 3009,
+    "mark_filled": 0
+   },
+   {
+    "file": "funding/binance/um/FUSDT/funding.parquet",
+    "rows": 3001,
+    "mark_filled": 0
+   },
+   {
+    "file": "funding/binance/um/SUPERUSDT/funding.parquet",
+    "rows": 7461,
+    "mark_filled": 0
+   },
+   {
+    "file": "funding/binance/um/SKYAIUSDT/funding.parquet",
+    "rows": 2932,
+    "mark_filled": 0
+   }
+  ]
+ },
+ "oi_cold_sample": {
+  "files_sampled": 40,
+  "total_files": 1646,
+  "rows": 3238264,
+  "period_counts": {
+   "5m": 3238264
+  },
+  "source_counts": {
+   "binance.archive.metrics": 3238264
+  },
+  "ts_min": 1638316800000,
+  "ts_max": 1789370400000
+ },
+ "candle_BTCUSDT": {
+  "1d": {
+   "rows": 2450,
+   "first": 1577750400000,
+   "last": 1789344000000,
+   "files": 8
+  },
+  "12h": {
+   "rows": 4899,
+   "first": 1577750400000,
+   "last": 1789344000000,
+   "files": 8
+  },
+  "8h": {
+   "rows": 7348,
+   "first": 1577750400000,
+   "last": 1789344000000,
+   "files": 8
+  },
+  "4h": {
+   "rows": 14696,
+   "first": 1577750400000,
+   "last": 1789358400000,
+   "files": 8
+  },
+  "1h": {
+   "rows": 58783,
+   "first": 1577750400000,
+   "last": 1789365600000,
+   "files": 8
+  },
+  "30m": {
+   "rows": 117566,
+   "first": 1577750400000,
+   "last": 1789367400000,
+   "files": 8
+  },
+  "15m": {
+   "rows": 235131,
+   "first": 1577750400000,
+   "last": 1789367400000,
+   "files": 8
+  },
+  "5m": {
+   "rows": 99151,
+   "first": 1759622400000,
+   "last": 1789367400000,
+   "files": 2
+  }
+ },
+ "candle_ETHUSDT": {
+  "1d": {
+   "rows": 2450,
+   "first": 1577750400000,
+   "last": 1789344000000,
+   "files": 8
+  },
+  "12h": {
+   "rows": 4899,
+   "first": 1577750400000,
+   "last": 1789344000000,
+   "files": 8
+  },
+  "8h": {
+   "rows": 7348,
+   "first": 1577750400000,
+   "last": 1789344000000,
+   "files": 8
+  },
+  "4h": {
+   "rows": 14696,
+   "first": 1577750400000,
+   "last": 1789358400000,
+   "files": 8
+  },
+  "1h": {
+   "rows": 58781,
+   "first": 1577750400000,
+   "last": 1789358400000,
+   "files": 8
+  },
+  "30m": {
+   "rows": 117561,
+   "first": 1577750400000,
+   "last": 1789358400000,
+   "files": 8
+  },
+  "15m": {
+   "rows": 235121,
+   "first": 1577750400000,
+   "last": 1789358400000,
+   "files": 8
+  },
+  "5m": {
+   "rows": 99121,
+   "first": 1759622400000,
+   "last": 1789358400000,
+   "files": 2
+  }
+ },
+ "candle_SOLUSDT": {
+  "1d": {
+   "rows": 2192,
+   "first": 1600041600000,
+   "last": 1789344000000,
+   "files": 7
+  },
+  "12h": {
+   "rows": 4373,
+   "first": 1600041600000,
+   "last": 1789344000000,
+   "files": 7
+  },
+  "8h": {
+   "rows": 6574,
+   "first": 1600041600000,
+   "last": 1789344000000,
+   "files": 7
+  },
+  "4h": {
+   "rows": 13147,
+   "first": 1600056000000,
+   "last": 1789358400000,
+   "files": 7
+  },
+  "1h": {
+   "rows": 52585,
+   "first": 1600066800000,
+   "last": 1789369200000,
+   "files": 7
+  },
+  "30m": {
+   "rows": 105169,
+   "first": 1600066800000,
+   "last": 1789369200000,
+   "files": 7
+  },
+  "15m": {
+   "rows": 209858,
+   "first": 1600066800000,
+   "last": 1789370100000,
+   "files": 7
+  },
+  "5m": {
+   "rows": 99161,
+   "first": 1759622400000,
+   "last": 1789370400000,
+   "files": 2
+  }
+ }
+}

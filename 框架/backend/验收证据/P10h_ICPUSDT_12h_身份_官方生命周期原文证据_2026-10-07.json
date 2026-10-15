@@ -1,0 +1,80 @@
+{
+  "generated_utc": "2026-10-07T14:20:00Z",
+  "round": "P10 12h 收敛·ICPUSDT 身份原文证据（只读，不改库/不改历史台账）",
+  "database": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+  "mode": "read_only",
+  "timeframe": "12h",
+  "symbol": "binance:ICPUSDT",
+  "market": "um",
+  "purpose": "收敛 pool_identity_12h.json 中唯一 unverified 项：证明库内 ICPUSDT 12h 的 pre-REST 段身份（同一符号、两代合约），给出可核查官方原文。",
+  "source_of_official_evidence": {
+    "note": "沿用本项目 P04 证据包已取得的官方 CMS 公告原文（URL + articleCode + 引文 + 落盘 SHA256），不重复请求。",
+    "p04_pack": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/验收证据/P04_继续补齐_日线剩余_官方公告原文与ICP生命周期证据_2026-10-07.json",
+    "retrieval_channel": "WebFetch（binance.com 直连被 WAF 拦截 http=000）",
+    "hash_scope_declaration": "sha256 均为落盘文件自身哈希（提取文本/存档文本 SHA），非 HTTP 原始响应字节 SHA。"
+  },
+  "official_lifecycle": {
+    "old_contract_delisting": {
+      "url": "https://www.binance.com/en/support/announcement/detail/af469aeeab074738bb4a276070a9d11b",
+      "article_code": "af469aeeab074738bb4a276070a9d11b",
+      "published_utc": "2022-06-02",
+      "settlement_utc": "2022-06-10 09:00 UTC",
+      "title": "Binance Futures Will Delist TLM and ICP USDT-Margined Contracts",
+      "quoted_original_sentences": [
+        "Binance Futures will conduct automatic settlements on the TLM USDT-Margined Contracts at 2022-06-09 09:00 (UTC) and ICP USDT-Margined Contracts at 2022-06-10 09:00 (UTC).",
+        "Both contracts will be delisted after the settlements are complete."
+      ],
+      "artifact_sha256": {
+        "raw_return_archive": "27e371e649d44da115b2e6f5887b65650d8bed22654d85246b545896ef071d6c",
+        "plain_text": "d99b249f06189ebb9e3297852a4df1f4a5d207f52ae66d73a0e2774fb1c843d1"
+      }
+    },
+    "new_contract_listing": {
+      "url": "https://www.binance.com/en/support/announcement/detail/adabdfbc53344094808a7bea464f101b",
+      "article_code": "adabdfbc53344094808a7bea464f101b",
+      "published_utc": "2022-09-26",
+      "launch_utc": "2022-09-27 02:30 UTC",
+      "quoted_original_sentences": [
+        "Binance Futures will launch USDⓈ-M ICP perpetual contracts with up to 25x leverage on 2022-09-27 at 02:30 (UTC).",
+        "The symbol for the old ICPUSDT contract, which was previously delisted at 2022-06-10 09:00 (UTC), has been updated to ICPUSDT_SETTLED in users' transaction histories, where applicable."
+      ]
+    },
+    "derived_no_contract_window_utc": "2022-06-10 09:00 → 2022-09-27 02:30",
+    "conclusion": "ICPUSDT 为**同一符号、两代合约**：旧合约 2022-06-10 交割退市（符号改 ICPUSDT_SETTLED）；新合约 2022-09-27 02:30 UTC 上市。两代之间为官方『无合约窗口』。"
+  },
+  "db_observed_12h": {
+    "criterion": "volume==0 且 OHLC 四值相同 ⇒ 官方归档占位行",
+    "rest_first": "2022-09-27T00:00:00Z",
+    "pre_rest_rows": 896,
+    "real_rows": 689,
+    "real_span": ["2021-07-01T00:00:00Z", "2022-06-10T00:00:00Z"],
+    "padding_rows": 207,
+    "padding_span": ["2022-06-10T12:00:00Z", "2022-09-21T12:00:00Z"],
+    "padding_constant_ohlc": ["6.44", "6.44", "6.44", "6.44"],
+    "padding_volume": "0.00",
+    "gap_still_missing": [["2022-09-22T00:00:00Z", "2022-09-26T12:00:00Z"]],
+    "gap_still_missing_n": 10,
+    "interpretation": "689 真实行 = 第一代（旧）合约真实成交（2021-07-01..2022-06-10）；207 占位行 = 官方归档在『无合约窗口』内发布的零量平价行（含本轮补齐的 42 根）；2022-09-22..26 共 10 根为官方归档遗漏（日线 ZIP+CHECKSUM 均 404），非本系统缺口。"
+  },
+  "verdict": {
+    "value": "official_lifecycle_confirmed_symbol_reuse_two_generations",
+    "supersedes": "unverified",
+    "basis": "官方公告原文（下架交割 2022-06-10 09:00 UTC；新上市 2022-09-27 02:30 UTC；旧符号改 ICPUSDT_SETTLED）",
+    "counted_as_full": false,
+    "range_changed": false,
+    "history_deleted": false,
+    "note": "库内两代行均**保留**（未删旧历史）；本项不再为『无证据待核』。是否在对外身份台账中把 unverified 改判为已核，由主助手独立验收定案（本文件只给证据与结论，不改写 pool_identity_12h.json 历史件）。"
+  },
+  "counter_arguments_inherited": [
+    "官方归档在无合约期间仍产出零量平价行（2022-06-11..2022-09-21 共 207 根均为 O=H=L=C=6.44 / V=0），说明该 5 天缺失是归档侧遗漏，而非『当时无数据』——缺行本身仍不能单独证明无交易。",
+    "『无合约期』解释『为何没有真实成交』，但不能单独解释『为何归档独独跳过 09-22..26』。",
+    "本项未豁免、未写例外台账、未改 FULL。"
+  ],
+  "scope_discipline": {
+    "db_written": false,
+    "downloads_this_round": 0,
+    "imports_this_round": 0,
+    "other_timeframes_touched": false,
+    "other_symbols_touched": false
+  }
+}

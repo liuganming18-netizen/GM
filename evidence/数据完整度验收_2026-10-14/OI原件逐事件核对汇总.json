@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "source_zip_has_no_event_in_gap": 7869,
+    "proven_missing_raw_events_total": 0,
+    "source_errors": 0,
+    "no_surviving_day_zip": 530
+  },
+  "note": "核对已发现的内部缺槽候选，不覆盖上市前端和缺失历史时段的所有应有记录；不平移、取整或补零"
+}

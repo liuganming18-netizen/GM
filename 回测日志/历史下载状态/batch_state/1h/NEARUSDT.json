@@ -1,0 +1,1355 @@
+{
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2020-11.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2020-11.zip",
+  "kind": "monthly",
+  "period": "2020-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2020-11.zip",
+  "bytes": 30136,
+  "sha256": "5f3903725491f8be3afb756138ed8eb1adab5bcfa27039da1eb9504cb9dd65c2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75871,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75871,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2020-10.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2020-10.zip",
+  "kind": "monthly",
+  "period": "2020-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2020-10.zip",
+  "bytes": 16982,
+  "sha256": "c0c2cb2c2e1a9f7814486641c2970fad9c85271471b4cf5227304fc2ce75b5b0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75870,
+   "新增版本数": 400,
+   "状态": "已入库"
+  },
+  "source_id": 75870,
+  "rows": 400
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2020-12.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2020-12.zip",
+  "kind": "monthly",
+  "period": "2020-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2020-12.zip",
+  "bytes": 30468,
+  "sha256": "9fe58c4c5cb4a5a1c8a78d924d4e3d7420d1af85bcdbb54c583fc57583a78bbc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75872,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75872,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-01.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-01.zip",
+  "kind": "monthly",
+  "period": "2021-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-01.zip",
+  "bytes": 31388,
+  "sha256": "adef75185948da27915e9f3de5c644932aea4828f4b1a6eb554b97bf0dd75352",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75873,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75873,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-03.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-03.zip",
+  "kind": "monthly",
+  "period": "2021-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-03.zip",
+  "bytes": 32374,
+  "sha256": "5468a64de1ac314871ed176e7601cf47ef0dfe20314753a1ab921593bc1b3da1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75875,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75875,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-02.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-02.zip",
+  "kind": "monthly",
+  "period": "2021-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-02.zip",
+  "bytes": 29206,
+  "sha256": "36b1059e1a90856b7a13e9692380b5fb3db7b065d18f6a16c74756a96a42b7aa",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75874,
+   "新增版本数": 672,
+   "状态": "已入库"
+  },
+  "source_id": 75874,
+  "rows": 672
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-05.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-05.zip",
+  "kind": "monthly",
+  "period": "2021-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-05.zip",
+  "bytes": 32492,
+  "sha256": "550a894f001e3e382779e6f94a315916a09ff58ffffba29d43f5d8d4485369ea",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75877,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75877,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-04.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-04.zip",
+  "kind": "monthly",
+  "period": "2021-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-04.zip",
+  "bytes": 31448,
+  "sha256": "f3cd33e6abf5036ecfe57ef61feeeeb39361848e5a70e7612bdf96d351e57037",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75876,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75876,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-06.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-06.zip",
+  "kind": "monthly",
+  "period": "2021-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-06.zip",
+  "bytes": 30747,
+  "sha256": "fc31035359ebe88fde2382949e54fa7f13b2450422740fa02a05072df16ca69f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75878,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75878,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-07.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-07.zip",
+  "kind": "monthly",
+  "period": "2021-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-07.zip",
+  "bytes": 31550,
+  "sha256": "4f515e8245ceede2b181b2dff96beb7f5cb1d5731a8e3903588f930420a0277a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75879,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75879,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-09.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-09.zip",
+  "kind": "monthly",
+  "period": "2021-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-09.zip",
+  "bytes": 33090,
+  "sha256": "7321185345ecf5cf8a3af47698deb181277cbabc6ef2f19c49b180c5f7800cf1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75881,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75881,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-08.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-08.zip",
+  "kind": "monthly",
+  "period": "2021-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-08.zip",
+  "bytes": 32787,
+  "sha256": "d213a25157bcd587515d7eceec2e17a07a1929e470eadcd013c13a95b26db0bd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75880,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75880,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-10.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-10.zip",
+  "kind": "monthly",
+  "period": "2021-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-10.zip",
+  "bytes": 33734,
+  "sha256": "844851203ba446dd447404ec3332d481b7227eb58402f7156fc966e40d160888",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75882,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75882,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-11.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-11.zip",
+  "kind": "monthly",
+  "period": "2021-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-11.zip",
+  "bytes": 32519,
+  "sha256": "567a86bd7570893c3a69c402cdbf5ea4c9a342a2203e1f6f3b31adb27ef68e68",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75883,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75883,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-12.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-12.zip",
+  "kind": "monthly",
+  "period": "2021-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2021-12.zip",
+  "bytes": 34723,
+  "sha256": "8854f37940646b15b116a9ece6060117663657b210400c3f74626f956150524f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75884,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75884,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-01.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-01.zip",
+  "kind": "monthly",
+  "period": "2022-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-01.zip",
+  "bytes": 35281,
+  "sha256": "4a96f31db834c8fe6bed0c86e4d72f682df763cd0a7532aa5477a2555fbb5365",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75885,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75885,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-02.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-02.zip",
+  "kind": "monthly",
+  "period": "2022-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-02.zip",
+  "bytes": 26800,
+  "sha256": "474d81646bb1e509be256ea02ba7c212b04e9d4e18b111e5952607e168dffad2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75886,
+   "新增版本数": 600,
+   "状态": "已入库"
+  },
+  "source_id": 75886,
+  "rows": 600
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-03.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-03.zip",
+  "kind": "monthly",
+  "period": "2022-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-03.zip",
+  "bytes": 32537,
+  "sha256": "4d9dafa1ac5910d1302880d52b270276399b1f7455d88a6b58093bfab776f025",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75887,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75887,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-04.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-04.zip",
+  "kind": "monthly",
+  "period": "2022-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-04.zip",
+  "bytes": 30593,
+  "sha256": "0e22a50dfc1518fcc5cdee97f263deaf91a88db6043e45a8e28c17704b5574bd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75888,
+   "新增版本数": 672,
+   "状态": "已入库"
+  },
+  "source_id": 75888,
+  "rows": 672
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-06.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-06.zip",
+  "kind": "monthly",
+  "period": "2022-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-06.zip",
+  "bytes": 31230,
+  "sha256": "f0898f1231c77e83c6376cc2659b36dbec05b6e0c9a2ed4b72b090279726b516",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75890,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75890,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-05.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-05.zip",
+  "kind": "monthly",
+  "period": "2022-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-05.zip",
+  "bytes": 33314,
+  "sha256": "c6d70bb01021e07dcc329730d15b8db13ccce79aaa91d5176f267a4a23e6ebab",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75889,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75889,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-07.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-07.zip",
+  "kind": "monthly",
+  "period": "2022-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-07.zip",
+  "bytes": 31701,
+  "sha256": "a8a59615465ae6fb1477183d4f613d44fd032b0979765b0b04b11d12961e2dd9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75891,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75891,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-08.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-08.zip",
+  "kind": "monthly",
+  "period": "2022-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-08.zip",
+  "bytes": 32039,
+  "sha256": "bdaa45ac8059753fe40ff27249ef1e18bdcf579c711adb9bbbd42699050e554b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75892,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75892,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-09.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-09.zip",
+  "kind": "monthly",
+  "period": "2022-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-09.zip",
+  "bytes": 30434,
+  "sha256": "daaf0a182d9b68473aed6dfce33819b38246cd9c223ced44d0fbab4fe13ffd1d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75893,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75893,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-11.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-11.zip",
+  "kind": "monthly",
+  "period": "2022-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-11.zip",
+  "bytes": 30323,
+  "sha256": "ad9d219894cae84c95caf2437edd05b0e61cc5ece67cc9d960cb59c07def6c1a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75895,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75895,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-10.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-10.zip",
+  "kind": "monthly",
+  "period": "2022-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-10.zip",
+  "bytes": 30569,
+  "sha256": "1011acafea2e2406aa63b0d42f2aa77062a013e0c4a98b1908dd3166eb2bdd1f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75894,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75894,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-12.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-12.zip",
+  "kind": "monthly",
+  "period": "2022-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2022-12.zip",
+  "bytes": 29780,
+  "sha256": "449e4b6f0d8441e63f8b25bc52559f3ce8368573e767416f63c47485e1371f25",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75896,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75896,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-01.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-01.zip",
+  "kind": "monthly",
+  "period": "2023-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-01.zip",
+  "bytes": 31260,
+  "sha256": "79cc8fbaabec17e94ba4fc0d0a2cbb75bf5021c0070e941df6d05303cf914542",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75897,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75897,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-02.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-02.zip",
+  "kind": "monthly",
+  "period": "2023-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-02.zip",
+  "bytes": 28150,
+  "sha256": "822e5d7a6626b1707477facf324128c145d5eee65c80bc9d506006bfed5cbff6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75898,
+   "新增版本数": 672,
+   "状态": "已入库"
+  },
+  "source_id": 75898,
+  "rows": 672
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-03.zip",
+  "bytes": 30591,
+  "sha256": "5de23c6bda2c6a4808f069aaaf3c3bac278c64eb5256324e3a96b0224a12bd9c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75899,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75899,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-04.zip",
+  "bytes": 29218,
+  "sha256": "ef6b1215fd94aad9589733c3b198996451d04e8850887300871d4f8235ad2ca2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75900,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75900,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-05.zip",
+  "bytes": 29331,
+  "sha256": "ae4f751d3e1f55c21da56217834ec993022b93bd62aebd4fc4efbb1798ebf218",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75901,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75901,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-06.zip",
+  "bytes": 29015,
+  "sha256": "6ca247377a260c42402ca1c34fb1d7227a860e802ff9f683bf86106ca5537b50",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75902,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75902,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-07.zip",
+  "bytes": 29623,
+  "sha256": "246a8dd512e90b10394356a92990dcdb8f88b58f1233aaff53a177b96e974d59",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75903,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75903,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-08.zip",
+  "bytes": 28871,
+  "sha256": "ca8136d10f10fe4d7cfb384637ccd8154f2f7c90ab3d4d60012d0b3ea80eb2be",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75904,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75904,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-09.zip",
+  "bytes": 27312,
+  "sha256": "01a027bdd72184e64ef10c3e1525b3cf57f43bb9b7c0b9da2454c43f99fde127",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75905,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75905,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-10.zip",
+  "bytes": 28954,
+  "sha256": "854016fcd5242ce7d3bce14eee05886c70fdfc294e268eab13d52e0bdc2532e8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75906,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75906,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-11.zip",
+  "bytes": 30056,
+  "sha256": "24b833495aff5029398862d0880f8d609302f100d51a2624da0df0b3fb18ff75",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75907,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75907,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2023-12.zip",
+  "bytes": 31844,
+  "sha256": "863ce3de2b6c1c39dd2fde34015b56ff3dfb2922803a11096819769f83797600",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75908,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75908,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-02.zip",
+  "bytes": 29211,
+  "sha256": "bebec9d5c18d9ba8e0e03f41bdef050477c496c6bc40083bc05d856dd5ac0a5f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75910,
+   "新增版本数": 696,
+   "状态": "已入库"
+  },
+  "source_id": 75910,
+  "rows": 696
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-01.zip",
+  "bytes": 31573,
+  "sha256": "734645c7843e7e332bb3cc60fcded0932e0dbfb0205a66b3100d108378e20b1a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75909,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75909,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-03.zip",
+  "bytes": 32811,
+  "sha256": "4c38f8f9e5df9aee17665dceec22635df3906e6e72d72c9f8c74fc671dc7fa0f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75911,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75911,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-04.zip",
+  "bytes": 31498,
+  "sha256": "cbd764613380213cab7dda4144a9fbeff3e9d2d7bed5a0b29ad4beb6f839418a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75912,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75912,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-05.zip",
+  "bytes": 31991,
+  "sha256": "238d4b36a547e817c22db684bed6e985d6b2ae099863942135b8fac65714118f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75913,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75913,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-06.zip",
+  "bytes": 30393,
+  "sha256": "79a1d2e84a3a065c3b38ea007f79fb1bf023d7915575a61f342d06defa983513",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75914,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75914,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-07.zip",
+  "bytes": 31382,
+  "sha256": "68c18ac5989ae97192e95a41d38c111ad2ee88b757c1ce63f2fe6b33b9d2a648",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75915,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75915,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-08.zip",
+  "bytes": 31185,
+  "sha256": "24853bfa475fcf0c634315a5f1870c04fa26502d106438a76fbf99e57d7b0766",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75916,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75916,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-10.zip",
+  "bytes": 31006,
+  "sha256": "bfb923f21a4b8d20e1fb0df827b294eaef84f9cc5c8e795f69efdeacc7cca257",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75918,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75918,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-09.zip",
+  "bytes": 30229,
+  "sha256": "7673948257d5ff62893255da6a9385ababda99b9e8aa4fb7f6927801bd9ab199",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75917,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75917,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-12.zip",
+  "bytes": 32002,
+  "sha256": "e12d63a21a8d9537bdba62df2779fee0d7b1fe28382e2d778c1a1b6c8b7d08b6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75920,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75920,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2024-11.zip",
+  "bytes": 31185,
+  "sha256": "dece23ef7537d7eb13dcd44b4f0bc35eb73a7f87b515d843a446ea27e99fdc74",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75919,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75919,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-01.zip",
+  "bytes": 31272,
+  "sha256": "1eb1a0c18f2a9d05182e7a64b66bb474b348ca19980fc621668dbd155adaf0d3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75921,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75921,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-02.zip",
+  "bytes": 28205,
+  "sha256": "d81f1e70141212b6d875c5e64a208dba02a1ccd99bcdb30033c6365d232af934",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75922,
+   "新增版本数": 672,
+   "状态": "已入库"
+  },
+  "source_id": 75922,
+  "rows": 672
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-03.zip",
+  "bytes": 30785,
+  "sha256": "aa8923905c08a7cbf4ead52cd2fc98c08dc82f5970a02a9cd9263ec8c16d8316",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75923,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75923,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-04.zip",
+  "bytes": 29707,
+  "sha256": "c900c44ae5c7989c0291b0b3faac500e2cdf4126c2fec8821cdb220f21b03643",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75924,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75924,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-05.zip",
+  "bytes": 31098,
+  "sha256": "c564ae2eb4f23db11cec93a60282e383f7749e4acc87cb573d3c30147490133d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75925,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75925,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-06.zip",
+  "bytes": 29566,
+  "sha256": "940daa15380674b073409aa6dc541c96a4d06daf8fb886092d03137386a4cd8f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75926,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75926,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-07.zip",
+  "bytes": 30983,
+  "sha256": "fff077789d0efe9a0e7f2c20f545f8985866c0d85ede33e5a1492140aaa2a154",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75927,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75927,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-08.zip",
+  "bytes": 30729,
+  "sha256": "3d1de1217b1c9be48bd9cae33df992c30af7712c820456673f2f33cb06677952",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75928,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75928,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-09.zip",
+  "bytes": 29805,
+  "sha256": "0e1e98aeec7979e5628dc8e371a0415e6331ac5cb1b34838fd8ebe5145085e64",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75929,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75929,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-10.zip",
+  "bytes": 31027,
+  "sha256": "c7a26bbb22e3cb5227397a008f433e993b996319c41a54fba7cef80df64eee6c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75930,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75930,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-11.zip",
+  "bytes": 30317,
+  "sha256": "40350df2eff60ac6627f04a74055829f603f908fde426264de9d9944c9880f14",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75931,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75931,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2025-12.zip",
+  "bytes": 30041,
+  "sha256": "1af66c4c6ea595c9e84c11557370357b02ed9e43a76be3ffa27eb7d42972743e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75932,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75932,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-01.zip",
+  "bytes": 29984,
+  "sha256": "5d039c41fd44b1bc1495e44e00897493373284a8e0f6ec8ef93807f0e81bde06",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75933,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75933,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-02.zip",
+  "bytes": 27075,
+  "sha256": "c0c5cc2bc125a2551d9a16f7587a04ba721f6251811a14fcd1c2fed2896f6cd7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75934,
+   "新增版本数": 672,
+   "状态": "已入库"
+  },
+  "source_id": 75934,
+  "rows": 672
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-03.zip",
+  "bytes": 30239,
+  "sha256": "d8b3fb90d5f3cd57b37d7765f0154819423b2f273e92b493413760f11ce6e009",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75935,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75935,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-05.zip",
+  "bytes": 31090,
+  "sha256": "3e182e25a143c7cc6edfe9c8f80936a72cfe179445473db38d587dad71c03f23",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75937,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75937,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-04.zip",
+  "bytes": 28783,
+  "sha256": "c51354773e0925f80b9d2a4a2e95fee70b99de4273280605d8710c60b9be737f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75936,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75936,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-06.zip",
+  "bytes": 30692,
+  "sha256": "35007189d567423113a37529be636f0f289a0439f6679339f27ad52496d17dcf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75938,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75938,
+  "rows": 720
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-07.zip",
+  "bytes": 30340,
+  "sha256": "fe15a70866032a00e073321c68d9efa93aefbee1044dd6c9486598329972ec67",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75939,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75939,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-08.zip",
+  "bytes": 30046,
+  "sha256": "bea71293577ef999705d5d0002de74df15a9448ac87d953e889b965a5fd2bfc2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75940,
+   "新增版本数": 744,
+   "状态": "已入库"
+  },
+  "source_id": 75940,
+  "rows": 744
+ },
+ "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/NEARUSDT/1h/NEARUSDT-1h-2026-09.zip",
+  "bytes": 31477,
+  "sha256": "50ad6139e3c8cc54768b9ccffc58cce531cf0ba16333f911292876660e8776c0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75941,
+   "新增版本数": 720,
+   "状态": "已入库"
+  },
+  "source_id": 75941,
+  "rows": 720
+ },
+ "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-01.zip",
+  "bytes": 1381,
+  "sha256": "89c788b73efe2b38cd0e42885079dc208b1cf5c5ef8449807d68e63f3d8393c0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75866,
+   "新增版本数": 24,
+   "状态": "已入库"
+  },
+  "source_id": 75866,
+  "rows": 24
+ },
+ "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-02.zip",
+  "bytes": 1375,
+  "sha256": "1778e5b2c99947dec621a2f892f422dc5882d2f846260fa6cefd197c238d11e9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75867,
+   "新增版本数": 24,
+   "状态": "已入库"
+  },
+  "source_id": 75867,
+  "rows": 24
+ },
+ "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-03.zip",
+  "bytes": 1322,
+  "sha256": "e92d3da51f85da67a1e23d3bba9f3d052742d41f48cc4c2a03c6ad23650a0d7a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75868,
+   "新增版本数": 24,
+   "状态": "已入库"
+  },
+  "source_id": 75868,
+  "rows": 24
+ },
+ "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-04.zip",
+  "bytes": 1341,
+  "sha256": "d1b25734a2f14edc6ab17be9b7e3d69ee66a08e26db60e993b48b838bb82be88",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 75869,
+   "新增版本数": 24,
+   "状态": "已入库"
+  },
+  "source_id": 75869,
+  "rows": 24
+ },
+ "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-05.zip",
+  "bytes": 1371,
+  "sha256": "1ad89edd4e4a572039def400dea376d356d8ae031ed2eac41c589ae2b652518f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 322609,
+   "新增版本数": 24,
+   "状态": "已入库"
+  },
+  "source_id": 322609,
+  "rows": 24
+ },
+ "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-06.zip",
+  "bytes": 1345,
+  "sha256": "bdc17ba112c5b78299946fa36dfddbe756f7a42907e16a58de44d18a5b2e684d",
+  "checksum_ok": true,
+  "size_bytes": 1345,
+  "fetched_at": "2026-10-07T19:39:39Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/1h/NEARUSDT/NEARUSDT-1h-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1871715,
+   "新增版本数": 24,
+   "状态": "已入库"
+  },
+  "source_id": 1871715,
+  "rows": 24,
+  "imported_at": "2026-10-08T09:04:15Z"
+ },
+ "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-07.zip",
+  "bytes": 1378,
+  "sha256": "0f9306b2c2f6d3b515b7a4a4c2aafebb82c9a5b7de29cd487a2f872ac470e9c0",
+  "checksum_ok": true,
+  "size_bytes": 1378,
+  "fetched_at": "2026-10-08T08:59:07Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/1h/NEARUSDT/NEARUSDT-1h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/NEARUSDT/1h/NEARUSDT-1h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1871717,
+   "新增版本数": 24,
+   "状态": "已入库"
+  },
+  "source_id": 1871717,
+  "rows": 24,
+  "imported_at": "2026-10-08T09:04:15Z"
+ }
+}

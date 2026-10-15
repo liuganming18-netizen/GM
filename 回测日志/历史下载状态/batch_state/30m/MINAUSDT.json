@@ -1,0 +1,879 @@
+{
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-02.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-02.zip",
+  "kind": "monthly",
+  "period": "2023-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-02.zip",
+  "bytes": 45868,
+  "sha256": "54946cd8ebf139803cba9d058aee08023682d20cf0a3744e4f57e02ead7cfdfd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97547,
+   "新增版本数": 1034,
+   "状态": "已入库"
+  },
+  "source_id": 97547,
+  "rows": 1034
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-03.zip",
+  "bytes": 64781,
+  "sha256": "7b5fe67cfeb0e8446ed83313b0b7efb0b750e74973b2429e699dab90fa692ff1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97548,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97548,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-05.zip",
+  "bytes": 61119,
+  "sha256": "92e60848305a5776190db070208f3f9f1aefd85c264bd43f8573ecfeadbe5ff0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97550,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97550,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-04.zip",
+  "bytes": 60331,
+  "sha256": "c1b15532fad9952fd2022556f14d2dac430f5f02f6fc2a5318a536e6e6927eea",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97549,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97549,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-06.zip",
+  "bytes": 59948,
+  "sha256": "b8653c4542d725392450cad22a767732953f4814be37a96b80715bc44ff4c601",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97551,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97551,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-07.zip",
+  "bytes": 61095,
+  "sha256": "b09f2861e9ac9bc5dc6a5451aface4124bd41d42f0e13ee5bf88820c33751cb6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97552,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97552,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-08.zip",
+  "bytes": 59742,
+  "sha256": "52a750d714336db04de08efd7b43b2a6864401b455edbea4fa3d249da777907c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97553,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97553,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-09.zip",
+  "bytes": 56827,
+  "sha256": "f6d2a06a7fc9d895a20a573b72e1ba71c11540c38e9b0e031969d0e9c6eedb85",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97554,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97554,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-10.zip",
+  "bytes": 62223,
+  "sha256": "c4cbd5257af22bfe1427a816471090d61eb7ef9fc23b50db7dacda25abbc7dd0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97555,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97555,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-11.zip",
+  "bytes": 62894,
+  "sha256": "908089ed58a4dd0b9093a5e5716632e55275700479bc9164ee793cc91e1ba5ee",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97556,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97556,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2023-12.zip",
+  "bytes": 66019,
+  "sha256": "dfe4cd8ca39636ec2e4b06f9c19597ca522ed24b44de6b691c7f6ca4859b1a46",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97557,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97557,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-01.zip",
+  "bytes": 66004,
+  "sha256": "4fbfb4cc84ebb205526771b47516280ea403790e1f302cf3d00f55b60a9695e1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97558,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97558,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-02.zip",
+  "bytes": 60688,
+  "sha256": "4bd5b52c14029147371884984399661684ac264f06a8ea85e87d04c3385d5e67",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97559,
+   "新增版本数": 1392,
+   "状态": "已入库"
+  },
+  "source_id": 97559,
+  "rows": 1392
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-03.zip",
+  "bytes": 65242,
+  "sha256": "f59e197e63d44d5dcffbaabf03947ca3cd49701e9d85ef5144a82d9d3089c568",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97560,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97560,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-04.zip",
+  "bytes": 61904,
+  "sha256": "e187fd3e368ce5c908a315903e5ad8ab3ce022c04d5c3c1c46d45f8a16f759c2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97561,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97561,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-05.zip",
+  "bytes": 63027,
+  "sha256": "af1286c03883bf336039f5dd7ed306f491599d20af2eeb4cdf50ec19064e5aa0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97562,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97562,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-06.zip",
+  "bytes": 60428,
+  "sha256": "d83f074fa454c2d0ed1915f4deece083f979337f67a8bfe734762734d12b94c6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97563,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97563,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-07.zip",
+  "bytes": 61748,
+  "sha256": "3a4d5dcd20cf7587855cf4294f4c5f10e56759d48a5fabd19eff1496c3878fb4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97564,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97564,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-08.zip",
+  "bytes": 61755,
+  "sha256": "b211a3bb4aa151c0eb82df17e1f512d6184e4a7ed89c814974074f6c8cbff55a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97565,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97565,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-09.zip",
+  "bytes": 59283,
+  "sha256": "4059db60a6a784cf4bba2d599514b148a36346b0dd3bdcfa20bc450eb70386c3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97566,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97566,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-10.zip",
+  "bytes": 62495,
+  "sha256": "f36dedb158eb3c2d8f68fe49e81850914a7dbaa7ee1fa3de0e88cc16d1a2caf3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97567,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97567,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-11.zip",
+  "bytes": 61422,
+  "sha256": "41dbdb20b7ca4929b8ef1e04de247f6553def16735e939789faeb959b3ade929",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97568,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97568,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2024-12.zip",
+  "bytes": 63971,
+  "sha256": "f4242d7a36efb1e9ac81856526f22af81262b3edd9d572f065932bdb2d8be983",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97569,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97569,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-01.zip",
+  "bytes": 61756,
+  "sha256": "7d1f036b178ef307aa8d74e2c69a87df6a4044cf6bf39417d884f07778b229c2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97570,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97570,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-02.zip",
+  "bytes": 55302,
+  "sha256": "932089451bfb0e3247194dc8f4e783695bf42e5ad79c68e2d4bf4cf98b6f715a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97571,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 97571,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-03.zip",
+  "bytes": 59948,
+  "sha256": "089596473a847739dfc74a093b428cdc4e76dff5c92f6248b3878ba27a3dce3d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97572,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97572,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-04.zip",
+  "bytes": 57843,
+  "sha256": "4e9e30e2dc87366faf378397fca31f5d4dd77d7f7aa845d1b5bcb2058431c331",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97573,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97573,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-05.zip",
+  "bytes": 60552,
+  "sha256": "d13b38ada729e37a3834da023810f86a30f9efe1c505f97b172419e4dc56285f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97574,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97574,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-06.zip",
+  "bytes": 57507,
+  "sha256": "eefb974d86d85b5b2a0679091685d6831f5a9dfb142f7edeb9ca702ebf3291ef",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97575,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97575,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-07.zip",
+  "bytes": 60430,
+  "sha256": "d95900abcf81f914f1ee81bf5dde8d51c7d6e6d0fbb2d6f26cb0fe9428da6746",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97576,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97576,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-08.zip",
+  "bytes": 59635,
+  "sha256": "452cdb73aba38eda08d6e16d92d7f1dca9b115aec2f690f5f1472a0b4e6df139",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97577,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97577,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-09.zip",
+  "bytes": 56515,
+  "sha256": "558dd99f84e74ad0f84d33ee6ca15847fc440cb285eb0e55d8d45fe93539cf9d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97578,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97578,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-10.zip",
+  "bytes": 59135,
+  "sha256": "09ba42134a73906e26fb9e00fd176b408c152fe7e8fe1d47d532fbf704744578",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97579,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97579,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-11.zip",
+  "bytes": 61378,
+  "sha256": "14c51440c5f33d019269957720d3bf62155927e197a6db2b0d1b63085c6563e9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97580,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97580,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2025-12.zip",
+  "bytes": 57400,
+  "sha256": "1284a90a9edf209c46f3390fd75db1f46359405d02483c0f421fdbaf24b6ffd8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97581,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97581,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-01.zip",
+  "bytes": 58654,
+  "sha256": "02939c5eba4dbb9995919a47b8a3bca5172c88a24ea863e73f248f78ef3e2b40",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97582,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97582,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-02.zip",
+  "bytes": 55567,
+  "sha256": "028ba1cfec93e632f658a47121cb3a1032bdd8c224160d6fc368f60942f2fdf6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97583,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 97583,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-03.zip",
+  "bytes": 61715,
+  "sha256": "149dc9d005b0def681734f5bfbff1331647e4109b37afead1755160281d32d49",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97584,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97584,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-04.zip",
+  "bytes": 60417,
+  "sha256": "36ed3c2e0c7cc651662cbdbfdbefd0ea83d4de3c7bb98ece715f9bacc1d60117",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97585,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97585,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-05.zip",
+  "bytes": 61381,
+  "sha256": "0597a73fba149044e62ff454918d1c6e948fba5f723c4edfc3f58844a5f3dd83",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97586,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97586,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-06.zip",
+  "bytes": 59245,
+  "sha256": "497060cf803d1ad43c0c889f71d0ff0ee7f3ee1b01df2d760d835b3491bd286c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97587,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97587,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-07.zip",
+  "bytes": 61139,
+  "sha256": "fd461594ac3c74d4e146c835958ba4771c551dd898d8dd4f2c72653cb82279f0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97588,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97588,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-08.zip",
+  "bytes": 60663,
+  "sha256": "4d8cf8ad87cc15d519a718a8bbb5c15ff08aeff8c91cca94d5a89cf4ed4dec26",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97589,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97589,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/MINAUSDT/30m/MINAUSDT-30m-2026-09.zip",
+  "bytes": 64081,
+  "sha256": "47e6a2bdf122324f76ba574e2df919585033e2812250ec11932ac3cc402bad07",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97590,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97590,
+  "rows": 1440
+ },
+ "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-01.zip",
+  "bytes": 2423,
+  "sha256": "82faf47f50408626f5b076acf8f0126fabfe9323199b24021619918ba0d472bb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97543,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 97543,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-02.zip",
+  "bytes": 2502,
+  "sha256": "bad74ef5b91677b87842a99ac777afb76659a398f1c0f163175195f3191ad05d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97544,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 97544,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-03.zip",
+  "bytes": 2479,
+  "sha256": "840bb70e380e6afd314b2091b9a6eb3666ead428a6dc942801ead1f452e6fb91",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97545,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 97545,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-04.zip",
+  "bytes": 2443,
+  "sha256": "1e3e243ae1da3b69fc71f3980f3bb765a74d2eeaeff33b36457a1581513c5a54",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97546,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 97546,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-05.zip",
+  "bytes": 2480,
+  "sha256": "64d8d0339eeaa5cd8d7d10fe33b4a14abd2e36cbbf4ae1674bff309d15bfcfaf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 343542,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 343542,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-06.zip",
+  "bytes": 2600,
+  "sha256": "f51ed8d046030eee404588b3e5d86a162b460b03774094cbf32af10400da4146",
+  "checksum_ok": true,
+  "size_bytes": 2600,
+  "fetched_at": "2026-10-07T19:49:34Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/MINAUSDT/MINAUSDT-30m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940729,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940729,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:09Z"
+ },
+ "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-07.zip",
+  "bytes": 2633,
+  "sha256": "5a3e3f674f69df626fd9f06d70c7ae93170d1852d4833f748129c24b90486c62",
+  "checksum_ok": true,
+  "size_bytes": 2633,
+  "fetched_at": "2026-10-08T10:35:52Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/MINAUSDT/MINAUSDT-30m-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/MINAUSDT/30m/MINAUSDT-30m-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940730,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940730,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:09Z"
+ }
+}

@@ -1,0 +1,879 @@
+{
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-02.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-02.zip",
+  "kind": "monthly",
+  "period": "2023-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-02.zip",
+  "bytes": 2311,
+  "sha256": "705ef5c9a475d3f53352f09c10975533f5f3c1edd973d9c99c0c914fdd713ba8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62129,
+   "新增版本数": 39,
+   "状态": "已入库"
+  },
+  "source_id": 62129,
+  "rows": 39
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-03.zip",
+  "bytes": 9737,
+  "sha256": "a08cea28e684ff7d2a88445b1858337a38ea0324c61098e8fab3b37737c325c2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62130,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62130,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-04.zip",
+  "bytes": 9370,
+  "sha256": "0f74e4f6a30082b5f1226a05eb84991aad2282432230e7481dfeb33e477ebd7f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62131,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62131,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-05.zip",
+  "bytes": 9549,
+  "sha256": "b2d2afb5021b07f2b4f9a82048714c14e24c0e133b2c7b4bbe7e2e37d79bb4e7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62132,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62132,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-06.zip",
+  "bytes": 9186,
+  "sha256": "f3def14e035fbc8aac21212112fcddfd1c1ea04dee1db158f5997881dc9bad1e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62133,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62133,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-07.zip",
+  "bytes": 9170,
+  "sha256": "890e86e4128b2ee542a0fca0694475d68986a1335fe3462d80f95519e4cb3232",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62134,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62134,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-08.zip",
+  "bytes": 9083,
+  "sha256": "1c86ce5ea94e26b7b47e8b117f359b933fb5abc089125707f6718225f26d98a9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62135,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62135,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-09.zip",
+  "bytes": 8884,
+  "sha256": "b127a06c11cb7b485be7db3a487636f1df4a384a2a527d7a2a295db0feaa7e63",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62136,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62136,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-10.zip",
+  "bytes": 9007,
+  "sha256": "4e8ac751b1e15a1e0f6b6727292b6c774778a4b25dbef148e05a7c885619e3b5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62137,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62137,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-11.zip",
+  "bytes": 9064,
+  "sha256": "31dde7faeacbe36abff374b48b764a4840c267b3f4ccc10a054ea4c2552c110e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62138,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62138,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-01.zip",
+  "bytes": 9244,
+  "sha256": "6680a96b3e2b19da20cf0c2475343fda2cfda129798c89be9c3ecf6c6ed6b497",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62140,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62140,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2023-12.zip",
+  "bytes": 9353,
+  "sha256": "ec0d1026ed32722933ef29774f1699e914609d10985c792e562675f37e0b7789",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62139,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62139,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-02.zip",
+  "bytes": 9150,
+  "sha256": "4f065fa30750c9ac166e11e24238d30e8f8a9572b294dd18ee0064b8647716ff",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62141,
+   "新增版本数": 174,
+   "状态": "已入库"
+  },
+  "source_id": 62141,
+  "rows": 174
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-03.zip",
+  "bytes": 10213,
+  "sha256": "8660ce68bf531cb33067cf1b78218575a88a3149feb290536a1d12dffb9c9242",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62142,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62142,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-04.zip",
+  "bytes": 9747,
+  "sha256": "a3c9bfb282c7be5fa5a9f9ef519de58cecbc0570ee5e1955d66d56dd34b170e5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62143,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62143,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-05.zip",
+  "bytes": 9884,
+  "sha256": "059e71fcc1ebd92f765ddfde206519868657bb8ceb8e5997e0b523e2178f2609",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62144,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62144,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-07.zip",
+  "bytes": 9824,
+  "sha256": "536458ec47259be5ba1f198c95945e1b92f12f4e0da1ef2ef384a29d7a682e3d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62146,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62146,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-06.zip",
+  "bytes": 9417,
+  "sha256": "4de869a5a5da645f17bffdd4a9822b412559b52f9efe6316e596df82f9e5dbad",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62145,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62145,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-08.zip",
+  "bytes": 9697,
+  "sha256": "119d656ea29206f09f70b5b16c19f0a98cc0418d817093d1a1c814dccd526759",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62147,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62147,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-09.zip",
+  "bytes": 9380,
+  "sha256": "1709ee5e85cc933d3f611e8ba6d63cd31a67fb29bad0bd329d3f691688b337b0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62148,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62148,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-10.zip",
+  "bytes": 9740,
+  "sha256": "e0a088a8eabe237f52efea821c0baedc270da218004a15eba60279eb45c8222c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62149,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62149,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-11.zip",
+  "bytes": 9562,
+  "sha256": "e96744ad5a0f361be18702716c1a81ac5cfbcb6db0bcbaa90b14d21a3499e031",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62150,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62150,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2024-12.zip",
+  "bytes": 9993,
+  "sha256": "14a46cafaac8e15b80c844df65c6ef5e11289c1cb6dfd72c5800fb63cf79b211",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62151,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62151,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-01.zip",
+  "bytes": 9936,
+  "sha256": "7b7ead825c649951b37763b0210ff135b4173ddd3ad9a3cedf03702b054c0c82",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62152,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62152,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-02.zip",
+  "bytes": 9483,
+  "sha256": "2fdd07a65c5d41d6804ad636d7c2a2a03b95914c50c5586fad3b5c12cf64f7a0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62153,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 62153,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-03.zip",
+  "bytes": 10034,
+  "sha256": "cb7be98fb9f02d8cdeda62b78aab4a0ae7188f0f66c6d13690e4d657dfe351cf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62154,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62154,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-04.zip",
+  "bytes": 9705,
+  "sha256": "539452defbfd689bebea8706c666a302771b8ff2f9c762c49d206b3dce09fdb0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62155,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62155,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-05.zip",
+  "bytes": 9922,
+  "sha256": "6551ec83f883ba9d965df46c8aa11a990d18c65d7f5e677d8e40568331ea4f8c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62156,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62156,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-06.zip",
+  "bytes": 9391,
+  "sha256": "8c1e8acdafe6fb49ac1a042c567ff62e7736aa026ac6257e50f0226b616a3a59",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62157,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62157,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-07.zip",
+  "bytes": 9899,
+  "sha256": "1e075fc28ee994a334db133444329f3d3faa04cd13b1856235d80658346802b3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62158,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62158,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-08.zip",
+  "bytes": 9801,
+  "sha256": "13e0d38b571bfd6d63ba510f5d3d977f4f1779a3ee3e921f5284b0861e4f1943",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62159,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62159,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-09.zip",
+  "bytes": 9328,
+  "sha256": "e1d8386df964571d453cfa4509008f3dc56ad5b76dc469e3b27673cc9f868d2b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62160,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62160,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-10.zip",
+  "bytes": 9658,
+  "sha256": "699bca22a9a8bf490e3dae58cbe97bec33b487a64b876c965ee70306bcb14ac8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62161,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62161,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-11.zip",
+  "bytes": 9439,
+  "sha256": "62b2fb5eea1d6d408273eebcf1ad6595c525aa36ea6c1d9c3260708c53bc59e2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62162,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62162,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2025-12.zip",
+  "bytes": 9413,
+  "sha256": "54b1bc9136f46e29d358706388045fcb1915861c0cae8452d7d5200ac49d9611",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62163,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62163,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-01.zip",
+  "bytes": 9847,
+  "sha256": "e2cd3f60f33e490f1b9b6b9b30aa33cf8671a33ad6d89f8f60ddf04aa555dfdb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62164,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62164,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-02.zip",
+  "bytes": 8660,
+  "sha256": "f9dd31908cff633c19b0ef0a9158546327426e6781f949a902563947306a9ffb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62165,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 62165,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-03.zip",
+  "bytes": 9293,
+  "sha256": "4a46320548bd8ed6e8722d0eae050eb09f549fd650c47ee9338349f30dc1cb13",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62166,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62166,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-04.zip",
+  "bytes": 9062,
+  "sha256": "03ad247974272f04357f7467073a6b496e894a575d3a14a739dc9873a64ce558",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62167,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62167,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-05.zip",
+  "bytes": 9488,
+  "sha256": "6e5e6915acf222a3d018d6b811fc6f50b65a261975499949b8ffa052e4e1c9fa",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62168,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62168,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-06.zip",
+  "bytes": 9027,
+  "sha256": "702db6ef75c5fdfca9cc0bb406af2733a92f6e474295124847b7ce57758aee8f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62169,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62169,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-07.zip",
+  "bytes": 9227,
+  "sha256": "3e7f7b467a0ae6a8cd3237323f9f7f4b1e3d62eb72d862791b7ef1752876f135",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62170,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62170,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-08.zip",
+  "bytes": 9241,
+  "sha256": "36b0ef16b438d827cad55d57723d15824a871c46c6bedbed6b4f7ab819d5080c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62171,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62171,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ACHUSDT/4h/ACHUSDT-4h-2026-09.zip",
+  "bytes": 8990,
+  "sha256": "887eaa603cd7d27b43f17672ecc6c561c114d2ce805d9e595e32f5e439b72b35",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62172,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62172,
+  "rows": 180
+ },
+ "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-01.zip",
+  "bytes": 590,
+  "sha256": "40610dfbebb4e0506d0af0016e6e1b5ed0fb4db42b3413709f50db9e77f610eb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62125,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 62125,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-02.zip",
+  "bytes": 589,
+  "sha256": "40fd5231a877ee5449d7c66c56e2ca0622f614308ca6a4031242f62ec244f19e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62126,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 62126,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-03.zip",
+  "bytes": 590,
+  "sha256": "a6cacf122ce5f993002f26f5b53f81bf080b503149b12fd711b41b53173b979c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62127,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 62127,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-04.zip",
+  "bytes": 587,
+  "sha256": "e89def5132786b4c4c1b04743ebc09202c6f7484d6272319c2cb5a4dde32163b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62128,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 62128,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-05.zip",
+  "bytes": 589,
+  "sha256": "b66ae158729ccc8ab2a612f9eeba22f857e7f3d9ffabd6fe2d07c56dbb45da24",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 306679,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 306679,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-06.zip",
+  "bytes": 588,
+  "sha256": "190561fb460ef45ff39a7aceca0b8f7eb682a59e861be9bf9f17ea87063aaf66",
+  "checksum_ok": true,
+  "size_bytes": 588,
+  "fetched_at": "2026-10-07T19:31:54Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/ACHUSDT/ACHUSDT-4h-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836240,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836240,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:30Z"
+ },
+ "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-07.zip",
+  "bytes": 590,
+  "sha256": "1131498755b272512dac5552cb867b3290f10dd9b8c3ac41bcb0850bcc53c5d0",
+  "checksum_ok": true,
+  "size_bytes": 590,
+  "fetched_at": "2026-10-08T08:11:21Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/ACHUSDT/ACHUSDT-4h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/ACHUSDT/4h/ACHUSDT-4h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836241,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836241,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:30Z"
+ }
+}

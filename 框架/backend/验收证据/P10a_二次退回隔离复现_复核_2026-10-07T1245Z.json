@@ -1,0 +1,40 @@
+{
+ "generated_utc": "2026-10-07T12:42:39Z",
+ "note": "隔离复现：临时目录 + 临时库，零网络；不改正式行情库/断点/缓存",
+ "A_dir_cap_10B_body_10B": {
+  "cap": 10,
+  "body_bytes": 10,
+  "counted_bytes": 0,
+  "actual_directory_bytes": 0,
+  "saved": 0,
+  "skipped_over_cap": 1,
+  "fixed": true,
+  "before_fix_repro": {
+   "actual_directory_bytes": 598,
+   "saved": 1
+  }
+ },
+ "B_empty_evidence": {
+  "rows_added": 0,
+  "source_id": null,
+  "evidence_status": "missing_body",
+  "database_heads": 0,
+  "accepted": false,
+  "fixed": true,
+  "before_fix_repro": {
+   "added": 1,
+   "database_heads": 1,
+   "link_evidence_n": 0,
+   "raw_save_error": 0,
+   "last_error": null
+  }
+ },
+ "C_link_write_failure": {
+  "rows_added": 0,
+  "source_id": null,
+  "evidence_status": "link_failed",
+  "database_heads": 0,
+  "fixed": true
+ },
+ "all_fixed": true
+}

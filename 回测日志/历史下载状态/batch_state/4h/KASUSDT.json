@@ -1,0 +1,717 @@
+{
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2023-12.zip",
+  "bytes": 9687,
+  "sha256": "d4fa6e56f800723289a300533339d2ade3717cd814bafa32dddb59b92c9d28ec",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69234,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69234,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-01.zip",
+  "bytes": 9460,
+  "sha256": "8a5f9885d9936cf60ab297d0acdbb19fd00549eaea4e78b56b07d03ecf2e5c54",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69235,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69235,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2023-11.zip",
+  "bytes": 4594,
+  "sha256": "832f92bebc43b94981f7efee756b93d436f3e7d18c7b3ab8b6f77a488eda57a5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69233,
+   "新增版本数": 84,
+   "状态": "已入库"
+  },
+  "source_id": 69233,
+  "rows": 84
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-02.zip",
+  "bytes": 9002,
+  "sha256": "649669aaf483b14d6db5c261e4d9ad7803e9b7bd0dc712f1cc07b27ae94ef5f0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69236,
+   "新增版本数": 174,
+   "状态": "已入库"
+  },
+  "source_id": 69236,
+  "rows": 174
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-03.zip",
+  "bytes": 9636,
+  "sha256": "db2cb0cd7a1902d50a8804ce7fa3dd0c15ba456f0289e657a9548a8491c9fbd0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69237,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69237,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-04.zip",
+  "bytes": 9202,
+  "sha256": "917a95a8d2edabeb155ec7ba9332133c60308c5826c95af9bc8a53e347d485d4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69238,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69238,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-06.zip",
+  "bytes": 9374,
+  "sha256": "ebe8da7e4483ad95e185fc06908960803d1817c613ab565f48515bd701a60b9b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69240,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69240,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-05.zip",
+  "bytes": 9409,
+  "sha256": "4fd6211c8eb1da78b90ce64258e20af62691d1fb12f56db68e0f553d5a425d4b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69239,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69239,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-07.zip",
+  "bytes": 9510,
+  "sha256": "58b5b75fdad459e4118eca19c4a5c55bffa361952f68fb6e340e27acbb8f34f8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69241,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69241,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-08.zip",
+  "bytes": 9532,
+  "sha256": "57b132fccc78be092c62347ffee9510cd785e9d0d901e8bfb365a98d56bb31f3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69242,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69242,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-09.zip",
+  "bytes": 9078,
+  "sha256": "b4f37a702678d3e696df9a9a09a5e61ca5d58d9f37b906f8510ed9f78783e95f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69243,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69243,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-10.zip",
+  "bytes": 9521,
+  "sha256": "8416949a7df28835158778a00993be8be9453b9f73226dc35e7d5e844d18772c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69244,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69244,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-11.zip",
+  "bytes": 9405,
+  "sha256": "a20703554fa86757c6536ccdfa5c38ed6f8146f1003aea5fb881e20481e727ba",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69245,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69245,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2024-12.zip",
+  "bytes": 9724,
+  "sha256": "9b90c4455beca28b7a859c437e97596df65bb4668277312da1b32b021ad783f6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69246,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69246,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-01.zip",
+  "bytes": 9562,
+  "sha256": "170eccc57a9a048149c04dd231debe758828a2e8d03f48615943905970cd81df",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69247,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69247,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-02.zip",
+  "bytes": 8714,
+  "sha256": "b18d2d62bef2e2d30115bfd22db0c7b5f030c92e402e95c91f7abf59c3b80725",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69248,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 69248,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-03.zip",
+  "bytes": 9501,
+  "sha256": "6d28d91bc7ca0aae7e289abb2593b82f4ca271eacb8b4ef08b101199e2a63eb5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69249,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69249,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-04.zip",
+  "bytes": 9140,
+  "sha256": "cb7b264c65ef836082e630b81f13a13481c0cc5301640e59102aeef3c1d8cd0d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69250,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69250,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-05.zip",
+  "bytes": 9580,
+  "sha256": "1d6f3bd80e9cd215008e552063f0895579e243a0069a86fffbfd0e2dcb7d88d7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69251,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69251,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-06.zip",
+  "bytes": 9160,
+  "sha256": "02c26debb99abb3d1ef7d5385e98b17ccb6428fce8588ddea9b2a5548586516e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69252,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69252,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-07.zip",
+  "bytes": 9510,
+  "sha256": "db44ca108ae6119097c9ecefc6a727313b03d24b47307fb900f71b3bca63d923",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69253,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69253,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-08.zip",
+  "bytes": 9372,
+  "sha256": "e0a213b26c423f0def0a43495d15258a7c5b29e217039d8c21babdf367d1a375",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69254,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69254,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-09.zip",
+  "bytes": 9037,
+  "sha256": "406418fa0648ea3d91ebccd7ebbdb412504acd32dbccd9ddf429a238204b8b66",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69255,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69255,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-11.zip",
+  "bytes": 9165,
+  "sha256": "d7860e5e33a8b86dd7336834fb320ba108ddacc571787b31e3d312b7fcf48187",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69257,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69257,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-10.zip",
+  "bytes": 9436,
+  "sha256": "2e679db49dc1935df4b8126bf5435b417bf4a62f17e1a06486a93c1331c14cd1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69256,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69256,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2025-12.zip",
+  "bytes": 9225,
+  "sha256": "61dd9b445bbe94dee3e7f61f15264862ea308889ab6685fc0e623e0310aaeea5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69258,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69258,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-01.zip",
+  "bytes": 9220,
+  "sha256": "b7b957fef12b8b946286c894e5458a3ef7cb111e487a9c83ee0480d4cfb6f4ee",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69259,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69259,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-02.zip",
+  "bytes": 8281,
+  "sha256": "a8a546fa6877aa6cb7bec34cdcae9f0bc725b12cd3ef9cc2ce9f5bef6f6a9755",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69260,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 69260,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-03.zip",
+  "bytes": 9113,
+  "sha256": "3e1ef135f3e16c649f4fffdb87a7f00980c0507ba2d0de9761d07dda227324c1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69261,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69261,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-04.zip",
+  "bytes": 8638,
+  "sha256": "981d01b217dce5cd21e6f79c9074642104e9385542fb740b1433a6239a511309",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69262,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69262,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-05.zip",
+  "bytes": 9054,
+  "sha256": "d78940aaaa5abe2539214d76443c0417ad306a4477fa47fc65b9330ac8a8d17a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69263,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69263,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-07.zip",
+  "bytes": 8755,
+  "sha256": "d8f6aed03e5d5986137482253651f31c5d6523d3ee20beb9caf9d3aaecf53cd0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69265,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69265,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-06.zip",
+  "bytes": 8775,
+  "sha256": "4dde647ba001331c877734145ccc86d2ee71ac98460e30ff21d1c48083086c58",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69264,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69264,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-08.zip",
+  "bytes": 8825,
+  "sha256": "9e0f337680d3014068ee8998411fd53e1c1fafc05859165edb410cdb6e485583",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69266,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 69266,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/KASUSDT/4h/KASUSDT-4h-2026-09.zip",
+  "bytes": 8954,
+  "sha256": "5764d82b5fbc74cfb92b267c0038e20d9ce0fd4ae1ca6646f38fdea8a4539c8f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69267,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 69267,
+  "rows": 180
+ },
+ "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-02.zip",
+  "bytes": 588,
+  "sha256": "974054302e5dc84008c010898a633cfed2e2275aacd65ee740c1aba8c04fa760",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69230,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 69230,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-01.zip",
+  "bytes": 588,
+  "sha256": "8b268aba0911823c44858fffef5f6278e74522197cf1c79e075c10f1a586647b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69229,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 69229,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-03.zip",
+  "bytes": 577,
+  "sha256": "2af0f7d7eec09ca472b9468779cbf0f993b8b993489431ad5cea5729b275b774",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69231,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 69231,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-04.zip",
+  "bytes": 577,
+  "sha256": "7c187f38f455a00f64d62b188fcb9095bcee168bda6ac96a4003ea765766a458",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 69232,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 69232,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-05.zip",
+  "status": "missing_in_archive",
+  "note": "官方归档或 CHECKSUM 不存在（日度按需探测，404 即缺失）；不计为完成"
+ },
+ "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-06.zip",
+  "bytes": 585,
+  "sha256": "39bac902723fa80c3ca1cc3a863fdd5326e6a4970ef74eb8bed9a9e2cd6ea542",
+  "checksum_ok": true,
+  "size_bytes": 585,
+  "fetched_at": "2026-10-07T19:36:13Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/KASUSDT/KASUSDT-4h-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836714,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836714,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:49Z"
+ },
+ "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-07.zip",
+  "bytes": 577,
+  "sha256": "d68c0bc56320d3fab9ec6368ada5a135f458b6d58d223dfd736e733eaea31e55",
+  "checksum_ok": true,
+  "size_bytes": 577,
+  "fetched_at": "2026-10-08T08:13:47Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/KASUSDT/KASUSDT-4h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/KASUSDT/4h/KASUSDT-4h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836715,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836715,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:49Z"
+ }
+}

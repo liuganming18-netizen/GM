@@ -1,0 +1,17 @@
+elapsed 216.8 s
+{
+ "db_file_bytes": 5118255104,
+ "db_wal_bytes": 46720832,
+ "data_version": 2,
+ "long_short_ratio_columns_in_db": [],
+ "symbol_pool": {
+  "binance": 528,
+  "okx": 286
+ },
+ "archive_catalog_updated_at_utc": "1970-01-21T17:46:15Z",
+ "raw_oi_metrics_date_range": {
+  "min": "2020-09-01",
+  "max": "2026-10-07",
+  "n_zip": 441575
+ }
+}

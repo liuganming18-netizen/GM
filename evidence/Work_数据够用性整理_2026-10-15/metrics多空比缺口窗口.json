@@ -1,0 +1,42 @@
+{
+ "window": [
+  "2021-12-25",
+  "2023-01-05"
+ ],
+ "symbols_scanned": 526,
+ "day_records": 37741,
+ "count_toptrader_long_short_ratio": {
+  "days_with_any_full_empty": 317,
+  "days_where_ALL_symbols_empty": 164,
+  "first_day_with_full_empty": "2021-12-30",
+  "last_day_with_full_empty": "2023-01-04",
+  "all_symbols_empty_window": [
+   "2022-05-10",
+   "2022-12-13"
+  ]
+ },
+ "sum_toptrader_long_short_ratio": {
+  "days_with_any_full_empty": 317,
+  "days_where_ALL_symbols_empty": 164,
+  "first_day_with_full_empty": "2021-12-30",
+  "last_day_with_full_empty": "2023-01-04",
+  "all_symbols_empty_window": [
+   "2022-05-10",
+   "2022-12-13"
+  ]
+ },
+ "count_long_short_ratio": {
+  "days_with_any_full_empty": 27,
+  "days_where_ALL_symbols_empty": 0,
+  "first_day_with_full_empty": "2021-12-30",
+  "last_day_with_full_empty": "2022-12-31",
+  "all_symbols_empty_window": null
+ },
+ "sum_taker_long_short_vol_ratio": {
+  "days_with_any_full_empty": 159,
+  "days_where_ALL_symbols_empty": 0,
+  "first_day_with_full_empty": "2021-12-30",
+  "last_day_with_full_empty": "2023-01-04",
+  "all_symbols_empty_window": null
+ }
+}

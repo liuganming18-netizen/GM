@@ -1,0 +1,29 @@
+﻿组号,名称,类别,源根,源相对,来源类型,在范围,存在,文件数,逻辑字节,GiB,分配字节,分配GiB,时间起,时间止,时间粒度
+G-K-CANDLES,K线冷档 candles+candle_heads,K线,/Users/boos/WorkBuddy AI/加密货币趋势判断系统,data/archive/parquet/candles,已结构化(parquet),True,True,12457,5379298145,5.0099,5404643328,5.0335,2019-01-01,2026-12-31,年
+G-K-HEADS,K线头版本 candle_heads,K线,/Users/boos/WorkBuddy AI/加密货币趋势判断系统,data/archive/parquet/candle_heads,已结构化(parquet),True,True,12457,577042628,0.5374,599244800,0.5581,2019-01-01,2026-12-31,年
+G-OI-COLD,OI正式冷档 oi,OI,/Users/boos/WorkBuddy AI/加密货币趋势判断系统,data/archive/parquet/oi,已结构化(parquet),True,True,1646,4257043629,3.9647,4260478976,3.9679,2020-01-01,2026-12-31,年
+G-SRC-PROV,来源凭证 sources,控制/来源,/Users/boos/WorkBuddy AI/加密货币趋势判断系统,data/archive/parquet/sources,已结构化(parquet),True,True,5700,148659725,0.1385,161136640,0.1501,,,
+G-CATALOG,冷档catalog/state/检查点,控制/清单,/Users/boos/WorkBuddy AI/加密货币趋势判断系统,data/archive/parquet,清单/状态,True,True,5,38937589,0.0363,38948864,0.0363,,,
+G-HOTDB,正式热库 market_v2.sqlite3,K线+OI(混),/Users/boos/WorkBuddy AI/加密货币趋势判断系统,data,活动SQLite,True,True,3,5340254616,4.9735,5354717184,4.987,,,
+G-RAW-1d,raw 1d K线ZIP+CHECKSUM,K线,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/1d,下载(ZIP),True,True,44366,33411485,0.0311,181723136,0.1692,2019-12-31,2026-10-12,日
+G-RAW-12h,raw 12h K线ZIP+CHECKSUM,K线,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/12h,下载(ZIP),True,True,38636,55077540,0.0513,158269440,0.1474,2019-12-31,2026-10-07,日
+G-RAW-8h,raw 8h K线ZIP+CHECKSUM,K线,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/8h,下载(ZIP),True,True,39120,77709383,0.0724,222519296,0.2072,2019-12-31,2026-10-07,日
+G-RAW-4h,raw 4h K线ZIP+CHECKSUM,K线,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/4h,下载(ZIP),True,True,39122,143883637,0.134,281739264,0.2624,2019-12-31,2026-10-07,日
+G-RAW-1h,raw 1h K线ZIP+CHECKSUM,K线,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/1h,下载(ZIP),True,True,42462,511516408,0.4764,643842048,0.5996,2019-12-31,2026-10-10,日
+G-RAW-30m,raw 30m K线ZIP+CHECKSUM,K线,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/30m,下载(ZIP),True,True,39300,975853576,0.9088,1093664768,1.0186,2019-12-31,2026-10-07,日
+G-RAW-15m,raw 15m K线ZIP+CHECKSUM,K线,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/15m,下载(ZIP),True,True,54554,1906215111,1.7753,2079584256,1.9368,2019-12-31,2026-10-10,日
+G-RAW-5m,raw 5m K线ZIP+CHECKSUM(冻结冷备),K线,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/5m,下载(ZIP),True,True,50300,5253919526,4.8931,5402488832,5.0315,2019-12-31,2026-10-06,日
+G-RAW-OKX,raw OKX官方历史原件,K线,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/okx,下载(JSON),True,True,112,332480040,0.3096,332742656,0.3099,,,
+G-RAW-OI,raw_oi_metrics 币安日度OI ZIP+CHECKSUM,OI,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw_oi_metrics,下载(ZIP),True,True,883150,4913087596,4.5757,7314198528,6.8119,2020-09-01,2026-10-07,日
+G-RESTGAP,raw_rest_gap API补缺原始响应,K线(API补缺),/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw_rest_gap,API原始响应,True,True,16,6869100,0.0064,6914048,0.0064,,,
+G-POOL,标的池/范围分类,控制/分类,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,标的池,分类(JSON),True,True,20,18188647,0.0169,18231296,0.017,2026-10-05,2026-10-05,日
+G-STATE,batch_state/oi_state/logs 断点状态,控制/状态,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,batch_state,状态/断点,True,True,9506,198390107,0.1848,220069888,0.205,2026-10-06,2026-10-08,日
+G-STATE-OKX,batch_state_okx 断点状态,控制/状态,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,batch_state_okx,状态/断点,True,True,184,335030,0.0003,868352,0.0008,,,
+G-OISTATE,oi_state 逐文件核验记录,控制/状态(OI),/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,oi_state,状态/核验,True,True,526,462902942,0.4311,464003072,0.4321,,,
+G-LOGS,下载任务日志,控制/日志,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,logs,日志,True,True,70,4141364,0.0039,4337664,0.004,2026-01-01,2026-12-31,年
+X-RAW-FUNDING,raw/funding 资金费原始归档[范围外],资金费,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/funding,下载(ZIP),False,True,31806,18538550,0.0173,130457600,0.1215,2020-01-01,2026-09-31,月
+X-RAW-MARK1H,raw/mark1h 标记价[范围外],mark,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/mark1h,下载(ZIP),False,True,42223,262084800,0.2441,394981376,0.3679,2026-10-01,2026-10-10,日
+X-RAW-MARK1D,raw/mark1d 标记价[范围外],mark,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,raw/mark1d,下载(ZIP),False,True,42156,20274097,0.0189,172670976,0.1608,2021-07-01,2026-10-08,日
+X-COLD-FUNDING,冷档 funding[范围外],资金费,/Users/boos/WorkBuddy AI/加密货币趋势判断系统,data/archive/parquet/funding,已结构化,False,True,525,17987220,0.0168,19054592,0.0177,,,
+X-PERP-REAL,perp_datadir_real Freqtrade转换[混mark/funding],混合,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,perp_datadir_real,Feather/JSON,False,True,3203,1757739113,1.637,1764343808,1.6432,,,
+X-PERP,perp_datadir 旧转换试验[范围外],混合,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载,perp_datadir,试验,False,True,526,5428764,0.0051,6451200,0.006,,,

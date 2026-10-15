@@ -1,0 +1,166 @@
+{
+  "generated_at": "2026-10-14T20:46:13.323174+08:00",
+  "fixed_now_ms": 1791980404548,
+  "fixed_now_utc": "2026-10-14T12:20:04.548000+00:00",
+  "scope": {
+    "binance": 526,
+    "okx": 23,
+    "excluded": [
+      "ALLUSDT",
+      "BTCDOMUSDT",
+      "DEFIUSDT"
+    ]
+  },
+  "totals": {
+    "proven_missing_events": 11773,
+    "symbols_with_proven_missing": 420
+  },
+  "binance_symbols_with_source": 525,
+  "binance_symbols_without_source": 1,
+  "dedup_rule": "唯一资金费事件=(symbol, funding_time 精确到毫秒)；同结算秒不同毫秒不合并，单列为时间偏移；同毫秒率不一致单列为冲突；不平移、不取整、不补零。",
+  "okx_no_local_source": [
+    {
+      "symbol": "AEON-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "AI-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "BLEND-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "CASHCAT-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "CNPY-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "CORE-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 128
+    },
+    {
+      "symbol": "CP-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "CRO-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 128
+    },
+    {
+      "symbol": "DATA-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "DGAI-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "KII-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 121
+    },
+    {
+      "symbol": "LUNA-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "NES-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "OFC-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "OKB-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "OL-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "PI-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "PROS-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "QUANT-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 79
+    },
+    {
+      "symbol": "RAY-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 128
+    },
+    {
+      "symbol": "RLS-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "UP-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 156
+    },
+    {
+      "symbol": "XDP-USDT-SWAP",
+      "source": "none_local_monthly_zip",
+      "cold_events": 0,
+      "hot_events": 100
+    }
+  ],
+  "notes": [
+    "已证实缺失=源件校验MATCH且冷+热均无该毫秒；校验未过单列unverified",
+    "extra_in_coldhot=冷/热有而源件无(源件覆盖期之外)，不是丢失",
+    "仅币安有本地月度资金费ZIP原件；OKX无本地原件，只能记无原件"
+  ]
+}

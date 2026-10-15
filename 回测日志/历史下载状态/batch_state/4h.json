@@ -1,0 +1,9099 @@
+{
+ "0GUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2315,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "1000000BOBUSDT": {
+  "status": "done",
+  "planned_files": 23,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2939,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 23
+  }
+ },
+ "1000000MOGUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4198,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 30
+  }
+ },
+ "1000BONKUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6330,
+  "first_open": 1700654400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "1000CATUSDT": {
+  "status": "done",
+  "planned_files": 35,
+  "imported_files": 31,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4326,
+  "first_open": 1729512000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 31
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "1000CHEEMSUSDT": {
+  "status": "done",
+  "planned_files": 34,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4117,
+  "first_open": 1732521600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 30
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "1000FLOKIUSDT": {
+  "status": "done",
+  "planned_files": 52,
+  "imported_files": 48,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7529,
+  "first_open": 1683388800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 48
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "1000LUNCUSDT": {
+  "status": "done",
+  "planned_files": 60,
+  "imported_files": 56,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 8964,
+  "first_open": 1662724800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 56
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "1000PEPEUSDT": {
+  "status": "done",
+  "planned_files": 52,
+  "imported_files": 4,
+  "cached_files": 44,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7535,
+  "first_open": 1683302400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "already_imported": 44,
+   "imported": 4
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "1000RATSUSDT": {
+  "status": "done",
+  "planned_files": 41,
+  "imported_files": 41,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6166,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 41
+  }
+ },
+ "1000SATSUSDT": {
+  "status": "done",
+  "planned_files": 45,
+  "imported_files": 41,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6210,
+  "first_open": 1702382400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 41
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "1000SHIBUSDT": {
+  "status": "done",
+  "planned_files": 76,
+  "imported_files": 72,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 11885,
+  "first_open": 1620662400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 72
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "1000XECUSDT": {
+  "status": "done",
+  "planned_files": 72,
+  "imported_files": 68,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 11109,
+  "first_open": 1631836800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 68
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "1INCHUSDT": {
+  "status": "done",
+  "planned_files": 81,
+  "imported_files": 77,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12703,
+  "first_open": 1608883200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 77
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "1MBABYDOGEUSDT": {
+  "status": "done",
+  "planned_files": 36,
+  "imported_files": 32,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4537,
+  "first_open": 1726473600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 32
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "2ZUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2224,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "4USDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2189,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "AAVEUSDT": {
+  "status": "done",
+  "planned_files": 83,
+  "imported_files": 79,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13124,
+  "first_open": 1602820800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 79
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ACEUSDT": {
+  "status": "done",
+  "planned_files": 45,
+  "imported_files": 41,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6175,
+  "first_open": 1702886400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 41
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ACHUSDT": {
+  "status": "done",
+  "planned_files": 55,
+  "imported_files": 51,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7968,
+  "first_open": 1677067200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 51
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ACTUSDT": {
+  "status": "done",
+  "planned_files": 34,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4200,
+  "first_open": 1731326400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 30
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ACUUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1558,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "ADAUSDT": {
+  "status": "done",
+  "planned_files": 92,
+  "imported_files": 88,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14677,
+  "first_open": 1580457600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 88
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AEROUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4062,
+  "first_open": 1733313600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AEVOUSDT": {
+  "status": "done",
+  "planned_files": 42,
+  "imported_files": 38,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5658,
+  "first_open": 1710331200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 38
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AGLDUSDT": {
+  "status": "done",
+  "planned_files": 50,
+  "imported_files": 46,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7029,
+  "first_open": 1690588800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 46
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AGTUSDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3035,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 24
+  }
+ },
+ "AIAUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1679,
+  "gaps": 3,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "AIGENSYNUSDT": {
+  "status": "done",
+  "planned_files": 13,
+  "imported_files": 13,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 970,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 13
+  }
+ },
+ "AINUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2729,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "AIOTUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3154,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 25
+  }
+ },
+ "AIOUSDT": {
+  "status": "done",
+  "planned_files": 21,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2525,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 21
+  }
+ },
+ "AIXBTUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3965,
+  "first_open": 1734710400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AKEUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2260,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "AKTUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4133,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 30
+  }
+ },
+ "ALCHUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3833,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 28
+  }
+ },
+ "ALGOUSDT": {
+  "status": "done",
+  "planned_files": 87,
+  "imported_files": 83,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13855,
+  "first_open": 1592294400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 83
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ALICEUSDT": {
+  "status": "done",
+  "planned_files": 78,
+  "imported_files": 74,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12219,
+  "first_open": 1615852800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 74
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ALLOUSDT": {
+  "status": "done",
+  "planned_files": 18,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1984,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 18
+  }
+ },
+ "ALLUSDT": {
+  "status": "done",
+  "planned_files": 21,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2567,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 21
+  }
+ },
+ "ALPINEUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3145,
+  "first_open": 1746518400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ALTUSDT": {
+  "status": "done",
+  "planned_files": 44,
+  "imported_files": 40,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5946,
+  "first_open": 1706184000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 40
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ANIMEUSDT": {
+  "status": "done",
+  "planned_files": 32,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3761,
+  "first_open": 1737648000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ANKRUSDT": {
+  "status": "done",
+  "planned_files": 80,
+  "imported_files": 76,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12512,
+  "first_open": 1611633600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 76
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "APEUSDT": {
+  "status": "done",
+  "planned_files": 66,
+  "imported_files": 62,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10020,
+  "first_open": 1647518400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 62
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "API3USDT": {
+  "status": "done",
+  "planned_files": 67,
+  "imported_files": 63,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10161,
+  "first_open": 1645488000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 63
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "APRUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2099,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "APTUSDT": {
+  "status": "done",
+  "planned_files": 59,
+  "imported_files": 55,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 8727,
+  "first_open": 1666137600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 55
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ARBUSDT": {
+  "status": "done",
+  "planned_files": 54,
+  "imported_files": 50,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7794,
+  "first_open": 1679572800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 50
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ARCUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3772,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 28
+  }
+ },
+ "ARIAUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2399,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "ARKMUSDT": {
+  "status": "done",
+  "planned_files": 50,
+  "imported_files": 46,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7035,
+  "first_open": 1690502400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 46
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ARKUSDT": {
+  "status": "done",
+  "planned_files": 48,
+  "imported_files": 44,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6714,
+  "first_open": 1695124800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 44
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ARPAUSDT": {
+  "status": "done",
+  "planned_files": 71,
+  "imported_files": 67,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10917,
+  "first_open": 1634601600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 67
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ARUSDT": {
+  "status": "done",
+  "planned_files": 72,
+  "imported_files": 68,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 11043,
+  "first_open": 1632787200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 68
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ARXUSDT": {
+  "status": "done",
+  "planned_files": 11,
+  "imported_files": 11,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 642,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 11
+  }
+ },
+ "ASRUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3145,
+  "first_open": 1746518400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ASTERUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2302,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "ASTRUSDT": {
+  "status": "done",
+  "planned_files": 55,
+  "imported_files": 51,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 8019,
+  "first_open": 1676332800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 51
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ATHUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3322,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 25
+  }
+ },
+ "ATOMUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 87,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14634,
+  "first_open": 1581076800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 87
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ATUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2063,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "AUCTIONUSDT": {
+  "status": "done",
+  "planned_files": 45,
+  "imported_files": 41,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6192,
+  "first_open": 1702641600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 41
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3013,
+  "first_open": 1748419200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AVAAIUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3772,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 28
+  }
+ },
+ "AVAUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4008,
+  "first_open": 1734091200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AVAXUSDT": {
+  "status": "done",
+  "planned_files": 84,
+  "imported_files": 80,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13262,
+  "first_open": 1600833600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 80
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AVNTUSDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2388,
+  "first_open": 1757419200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AWEUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3055,
+  "first_open": 1747814400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AXLUSDT": {
+  "status": "done",
+  "planned_files": 42,
+  "imported_files": 38,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5730,
+  "first_open": 1709294400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 38
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AXSUSDT": {
+  "status": "done",
+  "planned_files": 82,
+  "imported_files": 78,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12914,
+  "first_open": 1605844800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 78
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "AZTECUSDT": {
+  "status": "done",
+  "planned_files": 15,
+  "imported_files": 15,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1434,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 15
+  }
+ },
+ "B2USDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3118,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 24
+  }
+ },
+ "BABYUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3330,
+  "first_open": 1743854400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BANANAS31USDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3415,
+  "first_open": 1742630400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BANANAUSDT": {
+  "status": "done",
+  "planned_files": 37,
+  "imported_files": 33,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4731,
+  "first_open": 1723680000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 33
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BANDUSDT": {
+  "status": "done",
+  "planned_files": 86,
+  "imported_files": 82,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13598,
+  "first_open": 1595995200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 82
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BANKUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3251,
+  "first_open": 1744992000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BANUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4133,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 30
+  }
+ },
+ "BARDUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2309,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "BASEDUSDT": {
+  "status": "done",
+  "planned_files": 14,
+  "imported_files": 14,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1151,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 14
+  }
+ },
+ "BASUSDT": {
+  "status": "done",
+  "planned_files": 21,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2446,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 21
+  }
+ },
+ "BATUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 87,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14599,
+  "first_open": 1581580800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 87
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BBUSDT": {
+  "status": "done",
+  "planned_files": 40,
+  "imported_files": 36,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5292,
+  "first_open": 1715601600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 36
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BCHUSDT": {
+  "status": "done",
+  "planned_files": 105,
+  "imported_files": 89,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 12,
+  "failed_files": 0,
+  "rows": 14935,
+  "first_open": 1576742400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 89,
+   "missing_in_archive": 12
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BEAMXUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6360,
+  "first_open": 1700222400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BEATUSDT": {
+  "status": "done",
+  "planned_files": 18,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1978,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 18
+  }
+ },
+ "BELUSDT": {
+  "status": "done",
+  "planned_files": 82,
+  "imported_files": 78,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12926,
+  "first_open": 1605672000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 78
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BERAUSDT": {
+  "status": "done",
+  "planned_files": 31,
+  "imported_files": 27,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3678,
+  "first_open": 1738843200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 27
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BICOUSDT": {
+  "status": "done",
+  "planned_files": 48,
+  "imported_files": 44,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6660,
+  "first_open": 1695902400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 44
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BIGTIMEUSDT": {
+  "status": "done",
+  "planned_files": 47,
+  "imported_files": 43,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6576,
+  "first_open": 1697112000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 43
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BILLUSDT": {
+  "status": "done",
+  "planned_files": 12,
+  "imported_files": 12,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 923,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 12
+  }
+ },
+ "BIOUSDT": {
+  "status": "done",
+  "planned_files": 32,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3882,
+  "first_open": 1735905600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BIRBUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1512,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "BLESSUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2279,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "BLUAIUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2111,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "BLURUSDT": {
+  "status": "done",
+  "planned_files": 53,
+  "imported_files": 49,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7578,
+  "first_open": 1682683200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 49
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BMTUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3444,
+  "first_open": 1742212800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BNBUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 87,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14617,
+  "first_open": 1581321600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 87
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BNTUSDT": {
+  "status": "done",
+  "planned_files": 49,
+  "imported_files": 45,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6954,
+  "first_open": 1691668800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 45
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BOMEUSDT": {
+  "status": "done",
+  "planned_files": 42,
+  "imported_files": 38,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5640,
+  "first_open": 1710590400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 38
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BRETTUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 33,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4673,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 33
+  }
+ },
+ "BREVUSDT": {
+  "status": "done",
+  "planned_files": 17,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1691,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 17
+  }
+ },
+ "BROCCOLI714USDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3421,
+  "first_open": 1742544000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BROCCOLIF3BUSDT": {
+  "status": "done",
+  "planned_files": 26,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3395,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 26
+  }
+ },
+ "BRUSDT": {
+  "status": "done",
+  "planned_files": 26,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3394,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 26
+  }
+ },
+ "BSBUSDT": {
+  "status": "done",
+  "planned_files": 14,
+  "imported_files": 14,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1181,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 14
+  }
+ },
+ "BSVUSDT": {
+  "status": "done",
+  "planned_files": 43,
+  "imported_files": 43,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6502,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 43
+  }
+ },
+ "BTCDOMUSDT": {
+  "status": "done",
+  "planned_files": 71,
+  "imported_files": 71,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 11611,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 71
+  }
+ },
+ "BTCUSDT": {
+  "status": "done",
+  "planned_files": 137,
+  "imported_files": 90,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 44,
+  "failed_files": 0,
+  "rows": 15545,
+  "first_open": 1567958400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 90,
+   "missing_in_archive": 44
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "BTRUSDT": {
+  "status": "done",
+  "planned_files": 21,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2441,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 21
+  }
+ },
+ "BTWUSDT": {
+  "status": "done",
+  "planned_files": 11,
+  "imported_files": 11,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 754,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 11
+  }
+ },
+ "BULLAUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2765,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "BUSDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3021,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 24
+  }
+ },
+ "C98USDT": {
+  "status": "done",
+  "planned_files": 73,
+  "imported_files": 69,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 11253,
+  "first_open": 1629763200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 69
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CAKEUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6450,
+  "first_open": 1698926400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CAPUSDT": {
+  "status": "done",
+  "planned_files": 11,
+  "imported_files": 11,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 617,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 11
+  }
+ },
+ "CARVUSDT": {
+  "status": "done",
+  "planned_files": 21,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2559,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 21
+  }
+ },
+ "CATIUSDT": {
+  "status": "done",
+  "planned_files": 36,
+  "imported_files": 32,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4513,
+  "first_open": 1726819200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 32
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CCUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2050,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "CELOUSDT": {
+  "status": "done",
+  "planned_files": 72,
+  "imported_files": 68,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 11049,
+  "first_open": 1632700800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 68
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CELRUSDT": {
+  "status": "done",
+  "planned_files": 78,
+  "imported_files": 74,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12140,
+  "first_open": 1616990400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 74
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CETUSUSDT": {
+  "status": "done",
+  "planned_files": 34,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4230,
+  "first_open": 1730894400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 30
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CFGUSDT": {
+  "status": "done",
+  "planned_files": 14,
+  "imported_files": 14,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1234,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 14
+  }
+ },
+ "CFXUSDT": {
+  "status": "done",
+  "planned_files": 55,
+  "imported_files": 51,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7980,
+  "first_open": 1676894400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 51
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CGPTUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3965,
+  "first_open": 1734710400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CHILLGUYUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4078,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 30
+  }
+ },
+ "CHIPUSDT": {
+  "status": "done",
+  "planned_files": 13,
+  "imported_files": 13,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1050,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 13
+  }
+ },
+ "CHRUSDT": {
+  "status": "done",
+  "planned_files": 78,
+  "imported_files": 74,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12242,
+  "first_open": 1615521600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 74
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CHZUSDT": {
+  "status": "done",
+  "planned_files": 80,
+  "imported_files": 76,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12542,
+  "first_open": 1611201600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 76
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CKBUSDT": {
+  "status": "done",
+  "planned_files": 55,
+  "imported_files": 51,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7932,
+  "first_open": 1677585600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 51
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CLANKERUSDT": {
+  "status": "done",
+  "planned_files": 18,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1978,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 18
+  }
+ },
+ "CLOUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2153,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "COAIUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2268,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "COLLECTUSDT": {
+  "status": "done",
+  "planned_files": 17,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1684,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 17
+  }
+ },
+ "COMPUSDT": {
+  "status": "done",
+  "planned_files": 87,
+  "imported_files": 83,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13771,
+  "first_open": 1593504000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 83
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "COOKIEUSDT": {
+  "status": "done",
+  "planned_files": 32,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3859,
+  "first_open": 1736236800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "COTIUSDT": {
+  "status": "done",
+  "planned_files": 78,
+  "imported_files": 74,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12254,
+  "first_open": 1615348800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 74
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "COWUSDT": {
+  "status": "done",
+  "planned_files": 34,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4230,
+  "first_open": 1730894400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 30
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CROSSUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2729,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "CRVUSDT": {
+  "status": "done",
+  "planned_files": 84,
+  "imported_files": 80,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13394,
+  "first_open": 1598932800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 80
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CTKUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3355,
+  "first_open": 1743465600000,
+  "last_close": 1791806399999,
+  "gaps": 2,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CTRUSDT": {
+  "status": "done",
+  "planned_files": 12,
+  "imported_files": 12,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 797,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 12
+  }
+ },
+ "CTSIUSDT": {
+  "status": "done",
+  "planned_files": 71,
+  "imported_files": 67,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10875,
+  "first_open": 1635206400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 67
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CTUSDT": {
+  "status": "done",
+  "planned_files": 7,
+  "imported_files": 7,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 42,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 7
+  }
+ },
+ "CUSDT": {
+  "status": "done",
+  "planned_files": 26,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2725,
+  "first_open": 1752566400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CVCUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3175,
+  "first_open": 1746057600000,
+  "last_close": 1791806399999,
+  "gaps": 2,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CVXUSDT": {
+  "status": "done",
+  "planned_files": 26,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2809,
+  "first_open": 1751328000000,
+  "last_close": 1791806399999,
+  "gaps": 2,
+  "files_by_status": {
+   "imported": 22
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CYBERUSDT": {
+  "status": "done",
+  "planned_files": 49,
+  "imported_files": 45,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6888,
+  "first_open": 1692619200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 45
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "CYSUSDT": {
+  "status": "done",
+  "planned_files": 17,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1799,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 17
+  }
+ },
+ "DASHUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 87,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14653,
+  "first_open": 1580803200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 87
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "DATAIPUSDT": {
+  "status": "done",
+  "planned_files": 10,
+  "imported_files": 10,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 582,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 10
+  }
+ },
+ "DEEPUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3203,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 25
+  }
+ },
+ "DEXEUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3943,
+  "first_open": 1735027200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "DIAUSDT": {
+  "status": "done",
+  "planned_files": 35,
+  "imported_files": 31,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4440,
+  "first_open": 1727870400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 31
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "DODOXUSDT": {
+  "status": "done",
+  "planned_files": 45,
+  "imported_files": 45,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6941,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 45
+  }
+ },
+ "DOGEUSDT": {
+  "status": "done",
+  "planned_files": 86,
+  "imported_files": 82,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13711,
+  "first_open": 1594368000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 82
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "DOGSUSDT": {
+  "status": "done",
+  "planned_files": 37,
+  "imported_files": 33,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4662,
+  "first_open": 1724673600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 33
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "DOLOUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3177,
+  "first_open": 1746057600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "DOODUSDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3101,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  }
+ },
+ "DOSUSDT": {
+  "status": "done",
+  "planned_files": 9,
+  "imported_files": 9,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 347,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 9
+  }
+ },
+ "DOTUSDT": {
+  "status": "done",
+  "planned_files": 85,
+  "imported_files": 81,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13454,
+  "first_open": 1598068800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 81
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "DRIFTUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4193,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 30
+  }
+ },
+ "DUSKUSDT": {
+  "status": "done",
+  "planned_files": 68,
+  "imported_files": 64,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10437,
+  "first_open": 1641513600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 64
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "DYDXUSDT": {
+  "status": "done",
+  "planned_files": 72,
+  "imported_files": 68,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 11151,
+  "first_open": 1631232000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 68
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "DYMUSDT": {
+  "status": "done",
+  "planned_files": 43,
+  "imported_files": 39,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5870,
+  "first_open": 1707278400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 39
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "EDENUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2238,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "EDGEUSDT": {
+  "status": "done",
+  "planned_files": 14,
+  "imported_files": 14,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1217,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 14
+  }
+ },
+ "EDUUSDT": {
+  "status": "done",
+  "planned_files": 53,
+  "imported_files": 49,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7566,
+  "first_open": 1682856000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 49
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "EGLDUSDT": {
+  "status": "done",
+  "planned_files": 84,
+  "imported_files": 80,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13316,
+  "first_open": 1600056000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 80
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "EIGENUSDT": {
+  "status": "done",
+  "planned_files": 35,
+  "imported_files": 31,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4448,
+  "first_open": 1727755200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 31
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ELSAUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1555,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "ENAUSDT": {
+  "status": "done",
+  "planned_files": 41,
+  "imported_files": 37,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5538,
+  "first_open": 1712059200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 37
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ENJUSDT": {
+  "status": "done",
+  "planned_files": 84,
+  "imported_files": 80,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13226,
+  "first_open": 1601352000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 80
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ENSOUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2154,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "ENSUSDT": {
+  "status": "done",
+  "planned_files": 70,
+  "imported_files": 66,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10665,
+  "first_open": 1638230400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 66
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "EPICUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3469,
+  "first_open": 1741852800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ERAUSDT": {
+  "status": "done",
+  "planned_files": 26,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2712,
+  "first_open": 1752753600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ESPORTSUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2616,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "ESPUSDT": {
+  "status": "done",
+  "planned_files": 15,
+  "imported_files": 15,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1440,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 15
+  }
+ },
+ "ETCUSDT": {
+  "status": "done",
+  "planned_files": 92,
+  "imported_files": 88,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14767,
+  "first_open": 1579161600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 88
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ETHFIUSDT": {
+  "status": "done",
+  "planned_files": 42,
+  "imported_files": 38,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5628,
+  "first_open": 1710763200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 38
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ETHUSDT": {
+  "status": "done",
+  "planned_files": 127,
+  "imported_files": 89,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 34,
+  "failed_files": 0,
+  "rows": 15068,
+  "first_open": 1574827200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 89,
+   "missing_in_archive": 34
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ETHWUSDT": {
+  "status": "done",
+  "planned_files": 42,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6269,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  }
+ },
+ "EULUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2159,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "EVAAUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2220,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "FARTCOINUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3940,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  }
+ },
+ "FETUSDT": {
+  "status": "done",
+  "planned_files": 56,
+  "imported_files": 52,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 8187,
+  "first_open": 1673913600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 52
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "FFUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2243,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "FHEUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3263,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  }
+ },
+ "FIDAUSDT": {
+  "status": "done",
+  "planned_files": 36,
+  "imported_files": 32,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4518,
+  "first_open": 1726747200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 32
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "FIGHTUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1547,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "FILUSDT": {
+  "status": "done",
+  "planned_files": 83,
+  "imported_files": 79,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13124,
+  "first_open": 1602820800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 79
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "FLOCKUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2365,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "FLOWUSDT": {
+  "status": "done",
+  "planned_files": 67,
+  "imported_files": 63,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10233,
+  "first_open": 1644451200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 63
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "FLUIDUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2274,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "FLUXUSDT": {
+  "status": "done",
+  "planned_files": 36,
+  "imported_files": 32,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4616,
+  "first_open": 1725336000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 32
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "FOGOUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1625,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "FOLKSUSDT": {
+  "status": "done",
+  "planned_files": 18,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2015,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 18
+  }
+ },
+ "FORMUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3433,
+  "first_open": 1742371200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "FRAXUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1596,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "FUSDT": {
+  "status": "done",
+  "planned_files": 27,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2886,
+  "first_open": 1750248000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 23
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GALAUSDT": {
+  "status": "done",
+  "planned_files": 72,
+  "imported_files": 68,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 11103,
+  "first_open": 1631923200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 68
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GASUSDT": {
+  "status": "done",
+  "planned_files": 47,
+  "imported_files": 43,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6501,
+  "first_open": 1698192000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 43
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GENIUSUSDT": {
+  "status": "done",
+  "planned_files": 13,
+  "imported_files": 13,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1052,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 13
+  }
+ },
+ "GIGGLEUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2184,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "GLMUSDT": {
+  "status": "done",
+  "planned_files": 43,
+  "imported_files": 39,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5779,
+  "first_open": 1708588800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 39
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GMTUSDT": {
+  "status": "done",
+  "planned_files": 66,
+  "imported_files": 62,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10034,
+  "first_open": 1647316800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 62
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GMXUSDT": {
+  "status": "done",
+  "planned_files": 55,
+  "imported_files": 51,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7998,
+  "first_open": 1676635200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 51
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GOATUSDT": {
+  "status": "done",
+  "planned_files": 31,
+  "imported_files": 31,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4283,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 31
+  }
+ },
+ "GPSUSDT": {
+  "status": "done",
+  "planned_files": 31,
+  "imported_files": 27,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3611,
+  "first_open": 1739808000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 27
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GRAMUSDT": {
+  "status": "done",
+  "planned_files": 10,
+  "imported_files": 10,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 588,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 10
+  }
+ },
+ "GRASSUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4193,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 30
+  }
+ },
+ "GRIFFAINUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3863,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28
+  }
+ },
+ "GRTUSDT": {
+  "status": "done",
+  "planned_files": 81,
+  "imported_files": 77,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12740,
+  "first_open": 1608350400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 77
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GRVTUSDT": {
+  "status": "done",
+  "planned_files": 10,
+  "imported_files": 10,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 413,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 10
+  }
+ },
+ "GTCUSDT": {
+  "status": "done",
+  "planned_files": 120,
+  "imported_files": 71,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 45,
+  "failed_files": 0,
+  "rows": 11697,
+  "first_open": 1623369600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 71,
+   "missing_in_archive": 45
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GUAUSDT": {
+  "status": "done",
+  "planned_files": 17,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1746,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 17
+  }
+ },
+ "GUNUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3360,
+  "first_open": 1743422400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GUSDT": {
+  "status": "done",
+  "planned_files": 37,
+  "imported_files": 33,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4728,
+  "first_open": 1723723200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 33
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "GWEIUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1513,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "HAEDALUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3177,
+  "first_open": 1746057600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HANAUSDT": {
+  "status": "missing_only",
+  "planned_files": 20,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2262,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "HBARUSDT": {
+  "status": "done",
+  "planned_files": 78,
+  "imported_files": 74,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12212,
+  "first_open": 1615953600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 74
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HEIUSDT": {
+  "status": "done",
+  "planned_files": 31,
+  "imported_files": 27,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3637,
+  "first_open": 1739433600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 27
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HEMIUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2456,
+  "first_open": 1756440000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 21
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HIVEUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3949,
+  "first_open": 1734940800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HMSTRUSDT": {
+  "status": "done",
+  "planned_files": 36,
+  "imported_files": 32,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4476,
+  "first_open": 1727352000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 32
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HOLOUSDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2376,
+  "first_open": 1757592000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HOMEUSDT": {
+  "status": "done",
+  "planned_files": 27,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2935,
+  "first_open": 1749542400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HOTUSDT": {
+  "status": "done",
+  "planned_files": 78,
+  "imported_files": 74,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12134,
+  "first_open": 1617076800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 74
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HUMAUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3024,
+  "first_open": 1748260800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HUSDT": {
+  "status": "done",
+  "planned_files": 23,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2820,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 23
+  }
+ },
+ "HYPERUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3228,
+  "first_open": 1745323200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "HYPEUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3001,
+  "first_open": 1748592000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 23,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ICNTUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2771,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "ICPUSDT": {
+  "status": "done",
+  "planned_files": 74,
+  "imported_files": 70,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 11547,
+  "first_open": 1625097600000,
+  "last_close": 1791806399999,
+  "gaps": 30,
+  "files_by_status": {
+   "imported": 70
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "IDOLUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2766,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "IDUSDT": {
+  "status": "done",
+  "planned_files": 54,
+  "imported_files": 49,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 7794,
+  "first_open": 1679572800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 49,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ILVUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 41,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 6401,
+  "first_open": 1699632000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 41,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "IMXUSDT": {
+  "status": "done",
+  "planned_files": 67,
+  "imported_files": 63,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10227,
+  "first_open": 1644537600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 63
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "INITUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3266,
+  "first_open": 1744776000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "INJUSDT": {
+  "status": "done",
+  "planned_files": 61,
+  "imported_files": 57,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 9105,
+  "first_open": 1660694400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 57
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "INUSDT": {
+  "status": "done",
+  "planned_files": 21,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2562,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 21
+  }
+ },
+ "INXUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1504,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "IOSTUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 86,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 14551,
+  "first_open": 1582272000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 86,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "IOTAUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 86,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 14605,
+  "first_open": 1581494400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 86,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "IOTXUSDT": {
+  "status": "done",
+  "planned_files": 73,
+  "imported_files": 69,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 11325,
+  "first_open": 1628726400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 69
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "IOUSDT": {
+  "status": "done",
+  "planned_files": 39,
+  "imported_files": 35,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5118,
+  "first_open": 1718107200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 35
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "IRYSUSDT": {
+  "status": "done",
+  "planned_files": 18,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1894,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 18
+  }
+ },
+ "JASMYUSDT": {
+  "status": "done",
+  "planned_files": 65,
+  "imported_files": 60,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 9819,
+  "first_open": 1650412800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 60,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "JCTUSDT": {
+  "status": "missing_only",
+  "planned_files": 18,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 1992,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "JELLYJELLYUSDT": {
+  "status": "done",
+  "planned_files": 26,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3364,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  }
+ },
+ "JOEUSDT": {
+  "status": "done",
+  "planned_files": 54,
+  "imported_files": 50,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7758,
+  "first_open": 1680091200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 50
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "JSTUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3193,
+  "first_open": 1745827200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "JTOUSDT": {
+  "status": "done",
+  "planned_files": 45,
+  "imported_files": 41,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6235,
+  "first_open": 1702022400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 41
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "JUPUSDT": {
+  "status": "done",
+  "planned_files": 44,
+  "imported_files": 40,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5909,
+  "first_open": 1706716800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 40
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "KAIAUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4062,
+  "first_open": 1733313600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "KAITOUSDT": {
+  "status": "done",
+  "planned_files": 31,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3594,
+  "first_open": 1740052800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "KASUSDT": {
+  "status": "missing_only",
+  "planned_files": 42,
+  "imported_files": 41,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 6338,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "KATUSDT": {
+  "status": "done",
+  "planned_files": 14,
+  "imported_files": 14,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1321,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 14
+  }
+ },
+ "KAVAUSDT": {
+  "status": "done",
+  "planned_files": 86,
+  "imported_files": 82,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13604,
+  "first_open": 1595908800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 82
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "KERNELUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3276,
+  "first_open": 1744632000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "KGENUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2195,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "KITEUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2064,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "KMNOUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3965,
+  "first_open": 1734710400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "KNCUSDT": {
+  "status": "done",
+  "planned_files": 87,
+  "imported_files": 83,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13819,
+  "first_open": 1592812800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 83
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "KOMAUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4001,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  }
+ },
+ "KSMUSDT": {
+  "status": "done",
+  "planned_files": 83,
+  "imported_files": 79,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13136,
+  "first_open": 1602648000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 79
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LABUSDT": {
+  "status": "missing_only",
+  "planned_files": 19,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2135,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "LAUSDT": {
+  "status": "done",
+  "planned_files": 27,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2965,
+  "first_open": 1749110400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 23
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LAYERUSDT": {
+  "status": "done",
+  "planned_files": 31,
+  "imported_files": 27,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3648,
+  "first_open": 1739275200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 27
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LDOUSDT": {
+  "status": "done",
+  "planned_files": 60,
+  "imported_files": 56,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 8886,
+  "first_open": 1663848000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 56
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LIGHTUSDT": {
+  "status": "missing_only",
+  "planned_files": 20,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2256,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "LINEAUSDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2437,
+  "first_open": 1756713600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LINKUSDT": {
+  "status": "done",
+  "planned_files": 92,
+  "imported_files": 88,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14761,
+  "first_open": 1579248000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 88
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LISTAUSDT": {
+  "status": "done",
+  "planned_files": 39,
+  "imported_files": 35,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5064,
+  "first_open": 1718884800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 35
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LITUSDT": {
+  "status": "done",
+  "planned_files": 17,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1864,
+  "gaps": 4,
+  "files_by_status": {
+   "imported": 17
+  }
+ },
+ "LPTUSDT": {
+  "status": "done",
+  "planned_files": 70,
+  "imported_files": 66,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10779,
+  "first_open": 1636588800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 66
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LQTYUSDT": {
+  "status": "done",
+  "planned_files": 54,
+  "imported_files": 50,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7872,
+  "first_open": 1678449600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 50
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LSKUSDT": {
+  "status": "done",
+  "planned_files": 44,
+  "imported_files": 40,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5946,
+  "first_open": 1706184000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 40
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LTCUSDT": {
+  "status": "done",
+  "planned_files": 92,
+  "imported_files": 87,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 14809,
+  "first_open": 1578556800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 87,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LUMIAUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3979,
+  "first_open": 1734508800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "LUNA2USDT": {
+  "status": "done",
+  "planned_files": 56,
+  "imported_files": 56,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 8936,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 56
+  }
+ },
+ "LYNUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2203,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "MAGICUSDT": {
+  "status": "done",
+  "planned_files": 56,
+  "imported_files": 52,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 8139,
+  "first_open": 1674604800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 52
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MAGMAUSDT": {
+  "status": "missing_only",
+  "planned_files": 17,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 1685,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "MANAUSDT": {
+  "status": "done",
+  "planned_files": 78,
+  "imported_files": 73,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 12224,
+  "first_open": 1615780800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 73,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MANTAUSDT": {
+  "status": "done",
+  "planned_files": 44,
+  "imported_files": 40,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5988,
+  "first_open": 1705579200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 40
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MANTRAUSDT": {
+  "status": "done",
+  "planned_files": 14,
+  "imported_files": 14,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1308,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 14
+  }
+ },
+ "MARSCOINUSDT": {
+  "status": "done",
+  "planned_files": 8,
+  "imported_files": 8,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 222,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 8
+  }
+ },
+ "MASKUSDT": {
+  "status": "done",
+  "planned_files": 89,
+  "imported_files": 69,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 16,
+  "failed_files": 0,
+  "rows": 11235,
+  "first_open": 1630022400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 69,
+   "missing_in_archive": 16
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MAVIAUSDT": {
+  "status": "missing_only",
+  "planned_files": 26,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3514,
+  "gaps": 4,
+  "files_by_status": {
+   "imported": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "MAVUSDT": {
+  "status": "done",
+  "planned_files": 51,
+  "imported_files": 47,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7206,
+  "first_open": 1688040000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 47
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MEGAUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1505,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "MELANIAUSDT": {
+  "status": "missing_only",
+  "planned_files": 28,
+  "imported_files": 27,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3756,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "MEMEUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6444,
+  "first_open": 1699012800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MERLUSDT": {
+  "status": "missing_only",
+  "planned_files": 24,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2982,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "METISUSDT": {
+  "status": "done",
+  "planned_files": 42,
+  "imported_files": 38,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5665,
+  "first_open": 1710230400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 38
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "METUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2171,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "MEUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4025,
+  "first_open": 1733846400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MEWUSDT": {
+  "status": "done",
+  "planned_files": 35,
+  "imported_files": 35,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5057,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 35
+  }
+ },
+ "MINAUSDT": {
+  "status": "done",
+  "planned_files": 55,
+  "imported_files": 50,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 8059,
+  "first_open": 1675756800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 50,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MIRAUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2261,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "MITOUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2459,
+  "first_open": 1756396800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 21
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MMTUSDT": {
+  "status": "done",
+  "planned_files": 18,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2027,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 18
+  }
+ },
+ "MOCAUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3966,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  }
+ },
+ "MONUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2179,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "MOODENGUSDT": {
+  "status": "missing_only",
+  "planned_files": 31,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 4278,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 30,
+   "missing_in_archive": 1
+  }
+ },
+ "MORPHOUSDT": {
+  "status": "done",
+  "planned_files": 34,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4104,
+  "first_open": 1732708800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 30
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MOVEUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4032,
+  "first_open": 1733745600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MOVRUSDT": {
+  "status": "done",
+  "planned_files": 45,
+  "imported_files": 41,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6126,
+  "first_open": 1703592000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 41
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MTLUSDT": {
+  "status": "done",
+  "planned_files": 78,
+  "imported_files": 73,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 12128,
+  "first_open": 1617163200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 73,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MUBARAKUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3444,
+  "first_open": 1742212800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "MUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2748,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "MYXUSDT": {
+  "status": "done",
+  "planned_files": 23,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2861,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 23
+  }
+ },
+ "NAORISUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2603,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "NEARUSDT": {
+  "status": "done",
+  "planned_files": 83,
+  "imported_files": 79,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13129,
+  "first_open": 1602748800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 79
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "NEIROUSDT": {
+  "status": "done",
+  "planned_files": 36,
+  "imported_files": 32,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4537,
+  "first_open": 1726473600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 32
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "NEOUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 87,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14575,
+  "first_open": 1581926400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 87
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "NEWTUSDT": {
+  "status": "done",
+  "planned_files": 27,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2880,
+  "first_open": 1750334400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "NIGHTUSDT": {
+  "status": "done",
+  "planned_files": 17,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1812,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 17
+  }
+ },
+ "NILUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3402,
+  "first_open": 1742817600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "NMRUSDT": {
+  "status": "done",
+  "planned_files": 51,
+  "imported_files": 47,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7248,
+  "first_open": 1687435200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 47
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "NOMUSDT": {
+  "status": "missing_only",
+  "planned_files": 19,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2232,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "NOTUSDT": {
+  "status": "done",
+  "planned_files": 40,
+  "imported_files": 35,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 5274,
+  "first_open": 1715860800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 35,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "NXPCUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3092,
+  "first_open": 1747281600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "OGNUSDT": {
+  "status": "done",
+  "planned_files": 78,
+  "imported_files": 73,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 12122,
+  "first_open": 1617249600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 73,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "OGUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3109,
+  "first_open": 1747036800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ONDOUSDT": {
+  "status": "done",
+  "planned_files": 44,
+  "imported_files": 40,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5976,
+  "first_open": 1705752000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 40
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ONEUSDT": {
+  "status": "done",
+  "planned_files": 78,
+  "imported_files": 73,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 12206,
+  "first_open": 1616040000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 73,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ONGUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6300,
+  "first_open": 1701086400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ONTUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 87,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14611,
+  "first_open": 1581408000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 87
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ONUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2094,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "OPENUSDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2394,
+  "first_open": 1757332800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "OPGUSDT": {
+  "status": "done",
+  "planned_files": 13,
+  "imported_files": 13,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1013,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 13
+  }
+ },
+ "OPNUSDT": {
+  "status": "done",
+  "planned_files": 15,
+  "imported_files": 15,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1373,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 15
+  }
+ },
+ "OPUSDT": {
+  "status": "done",
+  "planned_files": 63,
+  "imported_files": 59,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 9564,
+  "first_open": 1654084800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 59
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ORCAUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 4050,
+  "first_open": 1733486400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ORDERUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2261,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "ORDIUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6420,
+  "first_open": 1699358400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "OUSDT": {
+  "status": "done",
+  "planned_files": 11,
+  "imported_files": 11,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 636,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 11
+  }
+ },
+ "PARTIUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3396,
+  "first_open": 1742904000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PAXGUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3385,
+  "first_open": 1743062400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PENDLEUSDT": {
+  "status": "done",
+  "planned_files": 50,
+  "imported_files": 46,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7035,
+  "first_open": 1690502400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 46
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PENGUUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3983,
+  "first_open": 1734451200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PEOPLEUSDT": {
+  "status": "done",
+  "planned_files": 69,
+  "imported_files": 65,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10520,
+  "first_open": 1640318400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 65
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PHAROSUSDT": {
+  "status": "missing_only",
+  "planned_files": 12,
+  "imported_files": 11,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 883,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 11,
+   "missing_in_archive": 1
+  }
+ },
+ "PHAUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3907,
+  "first_open": 1735545600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PIEVERSEUSDT": {
+  "status": "done",
+  "planned_files": 18,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1968,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 18
+  }
+ },
+ "PIPPINUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3732,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28
+  }
+ },
+ "PIXELUSDT": {
+  "status": "done",
+  "planned_files": 43,
+  "imported_files": 39,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5796,
+  "first_open": 1708344000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 39
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PLAYUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2604,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "PLUMEUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3420,
+  "first_open": 1742558400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PNUTUSDT": {
+  "status": "done",
+  "planned_files": 34,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4200,
+  "first_open": 1731326400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 30
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "POLUSDT": {
+  "status": "done",
+  "planned_files": 36,
+  "imported_files": 32,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4554,
+  "first_open": 1726228800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 32
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "POLYXUSDT": {
+  "status": "done",
+  "planned_files": 47,
+  "imported_files": 43,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6501,
+  "first_open": 1698192000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 43
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PONSUSDT": {
+  "status": "done",
+  "planned_files": 8,
+  "imported_files": 8,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 193,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 8
+  }
+ },
+ "POPCATUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 33,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4661,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 33
+  }
+ },
+ "PORTALUSDT": {
+  "status": "done",
+  "planned_files": 43,
+  "imported_files": 38,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 5736,
+  "first_open": 1709208000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 38,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "POWERUSDT": {
+  "status": "missing_only",
+  "planned_files": 17,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 1836,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "POWRUSDT": {
+  "status": "done",
+  "planned_files": 47,
+  "imported_files": 43,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6489,
+  "first_open": 1698364800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 43
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PRLUSDT": {
+  "status": "done",
+  "planned_files": 13,
+  "imported_files": 13,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1140,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 13
+  }
+ },
+ "PROMPTUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3271,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  }
+ },
+ "PROMUSDT": {
+  "status": "done",
+  "planned_files": 32,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3810,
+  "first_open": 1736942400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PROVEUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2597,
+  "first_open": 1754409600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 21
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PTBUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2399,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "PUMPBTCUSDT": {
+  "status": "done",
+  "planned_files": 23,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2892,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 23
+  }
+ },
+ "PUMPUSDT": {
+  "status": "done",
+  "planned_files": 26,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2810,
+  "first_open": 1751328000000,
+  "last_close": 1791806399999,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 21,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PUNDIXUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3181,
+  "first_open": 1746000000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "PYTHUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6330,
+  "first_open": 1700654400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "QNTUSDT": {
+  "status": "done",
+  "planned_files": 59,
+  "imported_files": 55,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 8721,
+  "first_open": 1666224000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 55
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "QTUMUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 87,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14557,
+  "first_open": 1582185600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 87
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "QUSDT": {
+  "status": "missing_only",
+  "planned_files": 20,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2406,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "RAREUSDT": {
+  "status": "done",
+  "planned_files": 37,
+  "imported_files": 33,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4728,
+  "first_open": 1723723200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 33
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "RAVEUSDT": {
+  "status": "done",
+  "planned_files": 17,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1786,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 17
+  }
+ },
+ "RAYSOLUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4000,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 29
+  }
+ },
+ "RECALLUSDT": {
+  "status": "missing_only",
+  "planned_files": 19,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2146,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "REDUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3509,
+  "first_open": 1741276800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "RENDERUSDT": {
+  "status": "done",
+  "planned_files": 38,
+  "imported_files": 34,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4849,
+  "first_open": 1721980800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 34
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "RESOLVUSDT": {
+  "status": "done",
+  "planned_files": 27,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2934,
+  "first_open": 1749556800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 23
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "REUSDT": {
+  "status": "done",
+  "planned_files": 11,
+  "imported_files": 11,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 670,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 11
+  }
+ },
+ "REZUSDT": {
+  "status": "done",
+  "planned_files": 41,
+  "imported_files": 37,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5370,
+  "first_open": 1714478400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 37
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "RIFUSDT": {
+  "status": "done",
+  "planned_files": 47,
+  "imported_files": 43,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6522,
+  "first_open": 1697889600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 43
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "RIVERUSDT": {
+  "status": "missing_only",
+  "planned_files": 19,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2134,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "RLCUSDT": {
+  "status": "done",
+  "planned_files": 86,
+  "imported_files": 81,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 13586,
+  "first_open": 1596168000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 81,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ROBOUSDT": {
+  "status": "done",
+  "planned_files": 15,
+  "imported_files": 15,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1337,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 15
+  }
+ },
+ "RONINUSDT": {
+  "status": "done",
+  "planned_files": 43,
+  "imported_files": 39,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5876,
+  "first_open": 1707192000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 39
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ROSEUSDT": {
+  "status": "done",
+  "planned_files": 69,
+  "imported_files": 65,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 10479,
+  "first_open": 1640908800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 65
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "RPLUSDT": {
+  "status": "done",
+  "planned_files": 36,
+  "imported_files": 32,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4578,
+  "first_open": 1725883200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 32
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "RSRUSDT": {
+  "status": "done",
+  "planned_files": 83,
+  "imported_files": 78,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 13106,
+  "first_open": 1603080000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 78,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "RUNEUSDT": {
+  "status": "done",
+  "planned_files": 84,
+  "imported_files": 80,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13376,
+  "first_open": 1599192000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 80
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "RVNUSDT": {
+  "status": "done",
+  "planned_files": 79,
+  "imported_files": 74,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 12344,
+  "first_open": 1614052800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 74,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SAFEUSDT": {
+  "status": "missing_only",
+  "planned_files": 31,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 4276,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 30,
+   "missing_in_archive": 1
+  }
+ },
+ "SAGAUSDT": {
+  "status": "done",
+  "planned_files": 41,
+  "imported_files": 37,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5497,
+  "first_open": 1712649600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 37
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SAHARAUSDT": {
+  "status": "done",
+  "planned_files": 27,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2838,
+  "first_open": 1750939200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 23
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SANDUSDT": {
+  "status": "done",
+  "planned_files": 80,
+  "imported_files": 75,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 12518,
+  "first_open": 1611547200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 75,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SANTOSUSDT": {
+  "status": "done",
+  "planned_files": 35,
+  "imported_files": 31,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4284,
+  "first_open": 1730116800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 31
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SAPIENUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2507,
+  "first_open": 1755705600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SCRUSDT": {
+  "status": "done",
+  "planned_files": 35,
+  "imported_files": 30,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 4321,
+  "first_open": 1729584000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 30,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SEIUSDT": {
+  "status": "done",
+  "planned_files": 49,
+  "imported_files": 45,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6915,
+  "first_open": 1692230400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 45
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SENTUSDT": {
+  "status": "done",
+  "planned_files": 18,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1966,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 18
+  }
+ },
+ "SFPUSDT": {
+  "status": "done",
+  "planned_files": 79,
+  "imported_files": 74,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 12338,
+  "first_open": 1614139200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 74,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SHELLUSDT": {
+  "status": "done",
+  "planned_files": 31,
+  "imported_files": 27,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3611,
+  "first_open": 1739808000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 27
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SIGNUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3193,
+  "first_open": 1745827200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SIRENUSDT": {
+  "status": "missing_only",
+  "planned_files": 26,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3389,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "SKLUSDT": {
+  "status": "done",
+  "planned_files": 126,
+  "imported_files": 76,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 46,
+  "failed_files": 0,
+  "rows": 12806,
+  "first_open": 1607400000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 76,
+   "missing_in_archive": 46
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SKRUSDT": {
+  "status": "missing_only",
+  "planned_files": 16,
+  "imported_files": 15,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 1553,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "SKYAIUSDT": {
+  "status": "missing_only",
+  "planned_files": 24,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3077,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "SKYUSDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2390,
+  "first_open": 1757390400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SLPUSDT": {
+  "status": "done",
+  "planned_files": 26,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2809,
+  "first_open": 1751328000000,
+  "last_close": 1791806399999,
+  "gaps": 2,
+  "files_by_status": {
+   "imported": 22
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SLXUSDT": {
+  "status": "done",
+  "planned_files": 11,
+  "imported_files": 11,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 774,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 11
+  }
+ },
+ "SNXUSDT": {
+  "status": "done",
+  "planned_files": 85,
+  "imported_files": 81,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13502,
+  "first_open": 1597377600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 81
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SOLUSDT": {
+  "status": "done",
+  "planned_files": 84,
+  "imported_files": 80,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13316,
+  "first_open": 1600056000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 80
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SOLVUSDT": {
+  "status": "done",
+  "planned_files": 32,
+  "imported_files": 27,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3798,
+  "first_open": 1737115200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 27,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SOMIUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2479,
+  "first_open": 1756108800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SONICUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3828,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 28
+  }
+ },
+ "SOONUSDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3017,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 24
+  }
+ },
+ "SOPHUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3012,
+  "first_open": 1748433600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 23,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SPACEUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1547,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "SPELLUSDT": {
+  "status": "done",
+  "planned_files": 60,
+  "imported_files": 56,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 8982,
+  "first_open": 1662465600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 56
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SPKUSDT": {
+  "status": "done",
+  "planned_files": 27,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2893,
+  "first_open": 1750147200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SPORTFUNUSDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1588,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "SPXUSDT": {
+  "status": "missing_only",
+  "planned_files": 29,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 4000,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "SQDUSDT": {
+  "status": "done",
+  "planned_files": 23,
+  "imported_files": 23,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2902,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 23
+  }
+ },
+ "SSVUSDT": {
+  "status": "done",
+  "planned_files": 55,
+  "imported_files": 50,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 7956,
+  "first_open": 1677240000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 50,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "STABLEUSDT": {
+  "status": "missing_only",
+  "planned_files": 18,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2014,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "STARUSDT": {
+  "status": "done",
+  "planned_files": 12,
+  "imported_files": 12,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 882,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 12
+  }
+ },
+ "STBLUSDT": {
+  "status": "missing_only",
+  "planned_files": 20,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2316,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "STEEMUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6414,
+  "first_open": 1699444800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "STOUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3288,
+  "first_open": 1744459200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "STRKUSDT": {
+  "status": "done",
+  "planned_files": 43,
+  "imported_files": 39,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5789,
+  "first_open": 1708444800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 39
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "STXUSDT": {
+  "status": "done",
+  "planned_files": 55,
+  "imported_files": 50,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 7974,
+  "first_open": 1676980800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 50,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SUIUSDT": {
+  "status": "done",
+  "planned_files": 52,
+  "imported_files": 48,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7547,
+  "first_open": 1683129600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 48
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SUNUSDT": {
+  "status": "done",
+  "planned_files": 37,
+  "imported_files": 33,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 4686,
+  "first_open": 1724328000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 33
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SUPERUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6306,
+  "first_open": 1701000000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SUSDT": {
+  "status": "done",
+  "planned_files": 32,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3805,
+  "first_open": 1737014400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SUSHIUSDT": {
+  "status": "done",
+  "planned_files": 84,
+  "imported_files": 79,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 13376,
+  "first_open": 1599192000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 79,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SWARMSUSDT": {
+  "status": "missing_only",
+  "planned_files": 28,
+  "imported_files": 27,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3832,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "SXTUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3169,
+  "first_open": 1746172800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SYNUSDT": {
+  "status": "done",
+  "planned_files": 37,
+  "imported_files": 32,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 4722,
+  "first_open": 1723809600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 32,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "SYRUPUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 24,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3139,
+  "first_open": 1746604800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 24
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TACUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2699,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "TAGUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2639,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "TAIKOUSDT": {
+  "status": "missing_only",
+  "planned_files": 23,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2902,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "TAKEUSDT": {
+  "status": "missing_only",
+  "planned_files": 20,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2399,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "TAOUSDT": {
+  "status": "done",
+  "planned_files": 41,
+  "imported_files": 36,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 5484,
+  "first_open": 1712836800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 36,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TAUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2664,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "THETAUSDT": {
+  "status": "done",
+  "planned_files": 88,
+  "imported_files": 83,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 13975,
+  "first_open": 1590566400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 83,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "THEUSDT": {
+  "status": "done",
+  "planned_files": 34,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 4104,
+  "first_open": 1732708800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TIAUSDT": {
+  "status": "done",
+  "planned_files": 47,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 6461,
+  "first_open": 1698768000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TLMUSDT": {
+  "status": "done",
+  "planned_files": 54,
+  "imported_files": 49,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 7752,
+  "first_open": 1680177600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 49,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TNSRUSDT": {
+  "status": "done",
+  "planned_files": 41,
+  "imported_files": 37,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5501,
+  "first_open": 1712592000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 37
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TOSHIUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2316,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "TOWNSUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2598,
+  "first_open": 1754395200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TRADOORUSDT": {
+  "status": "missing_only",
+  "planned_files": 20,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2302,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "TRBUSDT": {
+  "status": "done",
+  "planned_files": 84,
+  "imported_files": 80,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13382,
+  "first_open": 1599105600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 80
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TREEUSDT": {
+  "status": "done",
+  "planned_files": 26,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2640,
+  "first_open": 1753790400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 22
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TRIAUSDT": {
+  "status": "done",
+  "planned_files": 15,
+  "imported_files": 15,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1462,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 15
+  }
+ },
+ "TRUMPUSDT": {
+  "status": "done",
+  "planned_files": 32,
+  "imported_files": 27,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3792,
+  "first_open": 1737201600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 27,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TRUSTUSDT": {
+  "status": "done",
+  "planned_files": 18,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2021,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 18
+  }
+ },
+ "TRUTHUSDT": {
+  "status": "missing_only",
+  "planned_files": 19,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2230,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "TRXUSDT": {
+  "status": "done",
+  "planned_files": 92,
+  "imported_files": 88,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14773,
+  "first_open": 1579075200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 88
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TSTUSDT": {
+  "status": "done",
+  "planned_files": 31,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3660,
+  "first_open": 1739102400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TURBOUSDT": {
+  "status": "done",
+  "planned_files": 40,
+  "imported_files": 36,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5190,
+  "first_open": 1717070400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 36
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TURTLEUSDT": {
+  "status": "missing_only",
+  "planned_files": 19,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2104,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "TUSDT": {
+  "status": "done",
+  "planned_files": 56,
+  "imported_files": 51,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 8094,
+  "first_open": 1675252800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 51,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TUTUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3427,
+  "first_open": 1742457600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "TWTUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6444,
+  "first_open": 1699012800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "UAIUSDT": {
+  "status": "missing_only",
+  "planned_files": 18,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2015,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "UBUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2345,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "UMAUSDT": {
+  "status": "done",
+  "planned_files": 52,
+  "imported_files": 47,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 7506,
+  "first_open": 1683720000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 47,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "UNIUSDT": {
+  "status": "done",
+  "planned_files": 84,
+  "imported_files": 80,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13292,
+  "first_open": 1600401600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 80
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "USDCUSDT": {
+  "status": "done",
+  "planned_files": 54,
+  "imported_files": 49,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 7859,
+  "first_open": 1678636800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 49,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "USELESSUSDT": {
+  "status": "missing_only",
+  "planned_files": 21,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2512,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "USTCUSDT": {
+  "status": "done",
+  "planned_files": 46,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6300,
+  "first_open": 1701086400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "USUALUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 29,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3978,
+  "first_open": 1734523200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 29
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "USUSDT": {
+  "status": "done",
+  "planned_files": 17,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1799,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 17
+  }
+ },
+ "VANAUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3990,
+  "first_open": 1734350400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "VELODROMEUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 4007,
+  "first_open": 1734105600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "VELVETUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2699,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "VETUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 86,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 14593,
+  "first_open": 1581667200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 86,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "VIRTUALUSDT": {
+  "status": "done",
+  "planned_files": 33,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 4026,
+  "first_open": 1733832000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 28,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "VTHOUSDT": {
+  "status": "done",
+  "planned_files": 32,
+  "imported_files": 27,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 3769,
+  "first_open": 1737532800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 27,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "VVVUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3701,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 28
+  }
+ },
+ "WALUSDT": {
+  "status": "done",
+  "planned_files": 30,
+  "imported_files": 26,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3384,
+  "first_open": 1743076800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 26
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "WAXPUSDT": {
+  "status": "done",
+  "planned_files": 47,
+  "imported_files": 42,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 6540,
+  "first_open": 1697630400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 42,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "WCTUSDT": {
+  "status": "done",
+  "planned_files": 29,
+  "imported_files": 25,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3271,
+  "first_open": 1744704000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 25
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "WETUSDT": {
+  "status": "missing_only",
+  "planned_files": 17,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 1812,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "WIFUSDT": {
+  "status": "done",
+  "planned_files": 44,
+  "imported_files": 40,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5988,
+  "first_open": 1705579200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 40
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "WLDUSDT": {
+  "status": "done",
+  "planned_files": 50,
+  "imported_files": 46,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7056,
+  "first_open": 1690200000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 46
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "WLFIUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2491,
+  "first_open": 1755936000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "WOOUSDT": {
+  "status": "done",
+  "planned_files": 65,
+  "imported_files": 60,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 9891,
+  "first_open": 1649376000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 60,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "WUSDT": {
+  "status": "done",
+  "planned_files": 41,
+  "imported_files": 37,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5532,
+  "first_open": 1712145600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 37
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "XAIUSDT": {
+  "status": "done",
+  "planned_files": 44,
+  "imported_files": 40,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6042,
+  "first_open": 1704801600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 40
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "XANUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2243,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "XAUTUSDT": {
+  "status": "done",
+  "planned_files": 14,
+  "imported_files": 14,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1174,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 14
+  }
+ },
+ "XLMUSDT": {
+  "status": "done",
+  "planned_files": 92,
+  "imported_files": 88,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14743,
+  "first_open": 1579507200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 88
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "XMRUSDT": {
+  "status": "missing_only",
+  "planned_files": 87,
+  "imported_files": 86,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 14633,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "XNYUSDT": {
+  "status": "done",
+  "planned_files": 21,
+  "imported_files": 21,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2525,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 21
+  }
+ },
+ "XPINUSDT": {
+  "status": "done",
+  "planned_files": 20,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2345,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 20
+  }
+ },
+ "XPLUSDT": {
+  "status": "done",
+  "planned_files": 25,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2497,
+  "first_open": 1755849600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "XRPUSDT": {
+  "status": "done",
+  "planned_files": 92,
+  "imported_files": 88,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14827,
+  "first_open": 1578297600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 88
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "XTZUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 86,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 14641,
+  "first_open": 1580976000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 86,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "XVGUSDT": {
+  "status": "done",
+  "planned_files": 50,
+  "imported_files": 46,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7170,
+  "first_open": 1688558400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 46
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "XVSUSDT": {
+  "status": "done",
+  "planned_files": 53,
+  "imported_files": 49,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 7671,
+  "first_open": 1681344000000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 49
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "YBUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2176,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "YFIUSDT": {
+  "status": "done",
+  "planned_files": 85,
+  "imported_files": 80,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 13400,
+  "first_open": 1598846400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 80,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "YGGUSDT": {
+  "status": "done",
+  "planned_files": 49,
+  "imported_files": 45,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 6987,
+  "first_open": 1691193600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 45
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ZAMAUSDT": {
+  "status": "missing_only",
+  "planned_files": 16,
+  "imported_files": 15,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 1631,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "ZBTUSDT": {
+  "status": "done",
+  "planned_files": 19,
+  "imported_files": 19,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2135,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 19
+  }
+ },
+ "ZECUSDT": {
+  "status": "done",
+  "planned_files": 91,
+  "imported_files": 87,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 14647,
+  "first_open": 1580889600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 87
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ZENUSDT": {
+  "status": "done",
+  "planned_files": 82,
+  "imported_files": 78,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 12890,
+  "first_open": 1606190400000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 78
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ZEREBROUSDT": {
+  "status": "done",
+  "planned_files": 28,
+  "imported_files": 28,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 3862,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 28
+  }
+ },
+ "ZESTUSDT": {
+  "status": "done",
+  "planned_files": 11,
+  "imported_files": 11,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 754,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 11
+  }
+ },
+ "ZETAUSDT": {
+  "status": "missing_only",
+  "planned_files": 39,
+  "imported_files": 38,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 5873,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 38,
+   "missing_in_archive": 1
+  }
+ },
+ "ZILUSDT": {
+  "status": "done",
+  "planned_files": 87,
+  "imported_files": 82,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 13843,
+  "first_open": 1592467200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 82,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ZKCUSDT": {
+  "status": "done",
+  "planned_files": 24,
+  "imported_files": 20,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2352,
+  "first_open": 1757937600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 20
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ZKPUSDT": {
+  "status": "done",
+  "planned_files": 17,
+  "imported_files": 17,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1745,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 17
+  }
+ },
+ "ZKUSDT": {
+  "status": "done",
+  "planned_files": 39,
+  "imported_files": 35,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 5083,
+  "first_open": 1718611200000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 35
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ZORAUSDT": {
+  "status": "done",
+  "planned_files": 22,
+  "imported_files": 22,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 2639,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 22
+  }
+ },
+ "ZROUSDT": {
+  "status": "done",
+  "planned_files": 39,
+  "imported_files": 34,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 5064,
+  "first_open": 1718884800000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 34,
+   "missing_in_archive": 1
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "ZRXUSDT": {
+  "status": "done",
+  "planned_files": 87,
+  "imported_files": 83,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 13807,
+  "first_open": 1592985600000,
+  "last_close": 1791806399999,
+  "gaps": 0,
+  "files_by_status": {
+   "imported": 83
+  },
+  "newly_imported_files": 0,
+  "newly_rows": 0,
+  "note": "阶段B导入：本轮新增 0 文件 / 0 根；已存在 0；待导入余 0；失败 0"
+ },
+ "哈基米USDT": {
+  "status": "done",
+  "planned_files": 8,
+  "imported_files": 8,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 192,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 8
+  }
+ },
+ "币安人生USDT": {
+  "status": "missing_only",
+  "planned_files": 19,
+  "imported_files": 18,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 2117,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "我踏马来了USDT": {
+  "status": "done",
+  "planned_files": 16,
+  "imported_files": 16,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1558,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 16
+  }
+ },
+ "牛来USDT": {
+  "status": "done",
+  "planned_files": 9,
+  "imported_files": 9,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 233,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 9
+  }
+ },
+ "龙虾USDT": {
+  "status": "done",
+  "planned_files": 14,
+  "imported_files": 14,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 0,
+  "failed_files": 0,
+  "rows": 1265,
+  "gaps": 1,
+  "files_by_status": {
+   "imported": 14
+  }
+ }
+}

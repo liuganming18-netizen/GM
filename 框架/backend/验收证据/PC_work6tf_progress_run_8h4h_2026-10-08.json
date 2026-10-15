@@ -1,0 +1,71 @@
+{
+ "started_utc": "2026-10-08T08:06:30Z",
+ "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "tf_order": [
+  "1d",
+  "12h",
+  "8h",
+  "4h",
+  "1h",
+  "30m"
+ ],
+ "run_tfs": [
+  "8h",
+  "4h",
+  "1h",
+  "30m"
+ ],
+ "round_deadline_utc": "2026-10-08T19:21:30Z",
+ "pid": 49005,
+ "phases": {
+  "8h": {
+   "steps": {
+    "archive_download": {
+     "exit": 0,
+     "at": "2026-10-08T08:07:52Z"
+    },
+    "archive_import": {
+     "exit": 0,
+     "at": "2026-10-08T08:08:11Z"
+    },
+    "rest_fill": {
+     "exit": 0,
+     "at": "2026-10-08T08:08:39Z"
+    },
+    "identity": {
+     "exit": 0,
+     "at": "2026-10-08T08:08:40Z"
+    },
+    "coverage_audit": {
+     "exit": 0,
+     "at": "2026-10-08T08:09:31Z"
+    },
+    "final_acceptance": {
+     "exit": 0,
+     "at": "2026-10-08T08:10:19Z"
+    }
+   },
+   "status": "done",
+   "acceptance": "pass"
+  },
+  "4h": {
+   "steps": {
+    "archive_download": {
+     "exit": 0,
+     "at": "2026-10-08T08:15:20Z"
+    },
+    "archive_import": {
+     "exit": 0,
+     "at": "2026-10-08T08:16:02Z"
+    },
+    "rest_fill": {
+     "exit": 4,
+     "at": "2026-10-08T08:51:51Z"
+    }
+   },
+   "status": "failed",
+   "stop_reason": "4h/rest_fill exit=4"
+  }
+ },
+ "updated_utc": "2026-10-08T08:51:51Z"
+}

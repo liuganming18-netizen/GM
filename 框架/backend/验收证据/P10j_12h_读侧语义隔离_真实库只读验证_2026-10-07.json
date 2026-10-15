@@ -1,0 +1,91 @@
+{
+ "generated_utc": "2026-10-07T15:03:31Z",
+ "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "mode": "read_only(in-process)",
+ "checks": {
+  "A_v1_candles_icp_12h": {
+   "bars_n": 3,
+   "lifecycle": {
+    "scope_tf": "12h",
+    "registered": true,
+    "archive_padding_rows": 0,
+    "non_tradeable_rows": 0,
+    "generations": [
+     "g2"
+    ],
+    "rows_per_generation": {
+     "g2": 3
+    },
+    "cross_generation": false
+   },
+   "bar_fields": [
+    "available_at",
+    "available_at_known",
+    "base_volume",
+    "close",
+    "close_time",
+    "contract_volume",
+    "generation",
+    "high",
+    "is_closed",
+    "low",
+    "open",
+    "open_time",
+    "quote_volume",
+    "row_kind",
+    "tradeable",
+    "trades"
+   ],
+   "sample_bar": {
+    "open_time": "2026-10-07T00:00:00Z",
+    "row_kind": "traded",
+    "generation": "g2",
+    "tradeable": true
+   },
+   "note_has_lifecycle": false
+  },
+  "A_v1_candles_pepe_12h_unregistered": {
+   "bars_n": 3,
+   "lifecycle": {
+    "scope_tf": "12h",
+    "registered": false,
+    "archive_padding_rows": 0,
+    "non_tradeable_rows": 0,
+    "generations": [],
+    "rows_per_generation": {
+     "(未注册)": 3
+    },
+    "cross_generation": false
+   }
+  },
+  "B_strategy_read_bars_icp_12h": {
+   "db_rows_in_range": 3839,
+   "allow_cross_generation": {
+    "bars_kept": 3632,
+    "excluded_archive_padding": 207,
+    "generations_present": [
+     "g1",
+     "gap",
+     "g2"
+    ],
+    "first_bar": "2021-07-01T00:00:00Z",
+    "last_bar": "2026-10-07T00:00:00Z"
+   },
+   "default_restrict_latest": {
+    "bars_kept": 2943,
+    "restricted_to_generation": "g2",
+    "dropped_prior_generation_bars": 689,
+    "excluded_archive_padding": 207,
+    "first_bar": "2022-09-27T00:00:00Z",
+    "note": "剔除官方归档零量占位 207 根（非成交样本）；跨代际已按官方生命周期限用最新代 g2，丢弃旧代 689 根（不拼接旧新合约）"
+   }
+  },
+  "C_db_unchanged": {
+   "before": 3839,
+   "after": 3839,
+   "equal": true
+  }
+ },
+ "icp_rows_before": 3839,
+ "icp_rows_after": 3839
+}

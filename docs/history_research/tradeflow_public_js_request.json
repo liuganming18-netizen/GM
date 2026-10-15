@@ -1,0 +1,20 @@
+{
+  "request_start_utc": "2026-10-03T10:32:27.186314+00:00",
+  "request_end_utc": "2026-10-03T10:32:28.952394+00:00",
+  "method": "GET",
+  "url": "https://www.tradeflow.club/assets/index-27SKEJ8j.js",
+  "final_url": "https://www.tradeflow.club/assets/index-27SKEJ8j.js",
+  "headers_sent": {
+    "User-Agent": "WorkBuddy-public-asset-audit/1.0",
+    "Accept": "application/javascript,*/*;q=0.8"
+  },
+  "authentication_or_cookie_headers_sent": false,
+  "http_status": 200,
+  "content_type": "text/javascript; charset=utf-8",
+  "content_encoding": null,
+  "content_length_header": "2158821",
+  "bytes_saved": 2158821,
+  "sha256": "80dac5a26b62e83b86a822af8d6973c1c2342a6faca01181fab337de27cfa7d4",
+  "saved_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/tradeflow_index-27SKEJ8j.js",
+  "note": "Exact public JS URL only; no browser interaction, auth state, credential, backend request or other resource fetched."
+}

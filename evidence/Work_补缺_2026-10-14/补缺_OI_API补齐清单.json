@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-10-14T23:52:51.186425+08:00",
+  "policy": "只读源；写本目录；不写生产库",
+  "source": "binance.fapi.openInterestHist",
+  "day_utc": "2026-10-14",
+  "candidates": 523,
+  "internal_holes": 13746,
+  "rows": 13745,
+  "unique": 13745,
+  "duplicates": 0,
+  "symbols_filled": 523,
+  "ts_min_utc": "2026-10-14T00:30:00+00:00",
+  "ts_max_utc": "2026-10-14T03:15:00+00:00",
+  "residual_slots": 1,
+  "residual_note": "1000000MOGUSDT 2026-10-14T01:00 UTC —— 官方 API 该窗口返回 30/31 行，恰好缺此采样点（邻点 00:55/01:05 均有值），属官方源自身缺，非本地漏补",
+  "note": "仅补库内自身时间域的内部空档；行构造复刻 realtime_collector.oi_bucket_rows"
+}

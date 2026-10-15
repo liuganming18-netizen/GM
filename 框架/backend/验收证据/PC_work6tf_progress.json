@@ -1,0 +1,40 @@
+{
+ "started_utc": "2026-10-08T13:12:32Z",
+ "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+ "tf_order": [
+  "1d",
+  "12h",
+  "8h",
+  "4h",
+  "1h",
+  "30m"
+ ],
+ "run_tfs": [
+  "30m"
+ ],
+ "round_deadline_utc": "2026-10-08T17:12:32Z",
+ "pid": 71253,
+ "phases": {
+  "30m": {
+   "steps": {
+    "archive_download": {
+     "exit": 0,
+     "at": "2026-10-08T13:14:54Z"
+    },
+    "archive_import": {
+     "exit": 0,
+     "at": "2026-10-08T13:18:25Z"
+    },
+    "rest_fill": {
+     "exit": 0,
+     "at": "2026-10-08T13:20:51Z"
+    }
+   },
+   "status": "done",
+   "acceptance": "pass"
+  }
+ },
+ "updated_utc": "2026-10-08T13:20:51Z",
+ "finished_utc": "2026-10-08T13:20:51Z",
+ "status": "all_done"
+}

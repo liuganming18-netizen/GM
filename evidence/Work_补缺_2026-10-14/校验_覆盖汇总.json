@@ -1,0 +1,15 @@
+{
+  "patch_keys": 99,
+  "patch_rows": 47651,
+  "patch_duplicates": {
+    "补缺_K线_local_import.csv": 0,
+    "补缺_K线_api_import.csv": 0
+  },
+  "patch_vs_coldhot_overlap": 0,
+  "gap_segments": 195,
+  "gap_expected_slots": 24746,
+  "gap_covered_by_patch": 16980,
+  "gap_still_uncovered": 7766,
+  "gap_segments_fully_covered": 140,
+  "gap_segments_uncovered": 55
+}

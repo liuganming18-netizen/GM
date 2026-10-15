@@ -1,0 +1,76 @@
+{
+  "counts": {
+    "funding_proven_missing_events": 11773,
+    "funding_proven_missing_symbol_gaps": 420,
+    "candle_proven_missing_events": 93,
+    "candle_gap_without_raw_witness": 187,
+    "candle_proven_missing_symbol_gaps": 1,
+    "oi_candidate_gap_segments": 8399,
+    "oi_candidate_calendar_days": 10608,
+    "oi_candidate_days_with_zip": 7677,
+    "oi_candidate_days_without_zip": 2931
+  },
+  "funding_examples": [
+    {
+      "symbol": "0GUSDT",
+      "events": 26,
+      "from_utc": "2026-09-14T04:00:00.001000+00:00",
+      "to_utc": "2026-09-18T15:59:59.999000+00:00",
+      "file": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/funding/0GUSDT/0GUSDT-fundingRate-2026-09.zip"
+    },
+    {
+      "symbol": "1000000BOBUSDT",
+      "events": 26,
+      "from_utc": "2026-09-14T04:00:00.001000+00:00",
+      "to_utc": "2026-09-18T15:59:59.999000+00:00",
+      "file": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/funding/1000000BOBUSDT/1000000BOBUSDT-fundingRate-2026-09.zip"
+    },
+    {
+      "symbol": "1000000MOGUSDT",
+      "events": 26,
+      "from_utc": "2026-09-14T04:00:00.001000+00:00",
+      "to_utc": "2026-09-18T15:59:59.999000+00:00",
+      "file": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/funding/1000000MOGUSDT/1000000MOGUSDT-fundingRate-2026-09.zip"
+    },
+    {
+      "symbol": "1000BONKUSDT",
+      "events": 26,
+      "from_utc": "2026-09-14T04:00:00.001000+00:00",
+      "to_utc": "2026-09-18T15:59:59.999000+00:00",
+      "file": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/funding/1000BONKUSDT/1000BONKUSDT-fundingRate-2026-09.zip"
+    },
+    {
+      "symbol": "1000CATUSDT",
+      "events": 26,
+      "from_utc": "2026-09-14T04:00:00.001000+00:00",
+      "to_utc": "2026-09-18T15:59:59.999000+00:00",
+      "file": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/funding/1000CATUSDT/1000CATUSDT-fundingRate-2026-09.zip"
+    },
+    {
+      "symbol": "1000CHEEMSUSDT",
+      "events": 26,
+      "from_utc": "2026-09-14T04:00:00.001000+00:00",
+      "to_utc": "2026-09-18T15:59:59.999000+00:00",
+      "file": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/funding/1000CHEEMSUSDT/1000CHEEMSUSDT-fundingRate-2026-09.zip"
+    },
+    {
+      "symbol": "1000RATSUSDT",
+      "events": 26,
+      "from_utc": "2026-09-14T04:00:00.001000+00:00",
+      "to_utc": "2026-09-18T15:59:59.999000+00:00",
+      "file": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/funding/1000RATSUSDT/1000RATSUSDT-fundingRate-2026-09.zip"
+    },
+    {
+      "symbol": "1000SATSUSDT",
+      "events": 26,
+      "from_utc": "2026-09-14T04:00:00.001000+00:00",
+      "to_utc": "2026-09-18T15:59:59.999000+00:00",
+      "file": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/funding/1000SATSUSDT/1000SATSUSDT-fundingRate-2026-09.zip"
+    }
+  ],
+  "notes": [
+    "这里只将校验通过且原件确有事件、冷热区间完全为空的情况称为已证实漏恢复",
+    "OI本步骤是缺槽候选对应日包库存，不是逐事件完整度通过",
+    "跨段同日的日包统计可能重复，不是唯一文件数"
+  ]
+}

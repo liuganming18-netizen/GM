@@ -1,0 +1,636 @@
+{
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-05.zip",
+  "bytes": 3542,
+  "sha256": "d75caa357975acee2abe89a886f37950d11f27c434e4c850e55a16217a9c2bb7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28319,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28319,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-04.zip",
+  "bytes": 3237,
+  "sha256": "51d1f1d5e566bece9cbff1be46c1dc23e0cc7a8fcdcdb6062e04ea5942a40f15",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28318,
+   "新增版本数": 57,
+   "状态": "已入库"
+  },
+  "source_id": 28318,
+  "rows": 57
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-06.zip",
+  "bytes": 3420,
+  "sha256": "369b17f2beded7f293fc054508e8686b97f9da2916f272691032d362d01ed1c9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28320,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 28320,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-07.zip",
+  "bytes": 3539,
+  "sha256": "d4041b47f3ebf9c05376afdd1f85549f36b6ec2a607b2f1754cd6d7e1003dc94",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28321,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28321,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-08.zip",
+  "bytes": 3512,
+  "sha256": "716e53c1c8ea4cebc855a8fcadba895c576af1afe3e3499d8fa967be0e98c129",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28322,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28322,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-09.zip",
+  "bytes": 3393,
+  "sha256": "7a8ff995a87372669f2c31772936f4bfed7ffffb9a6b39e54c4950ab66a982be",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28323,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 28323,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-10.zip",
+  "bytes": 3540,
+  "sha256": "f7c224655e1bb6774a640e996c63a669d4bc29051dd6265305d0674dc7a72d42",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28324,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28324,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-11.zip",
+  "bytes": 3483,
+  "sha256": "378061db4090bbd5bb3825ab2e80d69d62faac63d91f8ac2a403ad016fe2d83e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28325,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 28325,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2024-12.zip",
+  "bytes": 3625,
+  "sha256": "4a1d6be3978cccb6611a953750ef7e917c587f19539dd35cadd95c75e8212dce",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28326,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28326,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-01.zip",
+  "bytes": 3625,
+  "sha256": "0db1c75d48cf53bad3c14c7adea53fdcf51eba490d904b60ab4940107ffcf8ab",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28327,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28327,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-02.zip",
+  "bytes": 3272,
+  "sha256": "787cda67702fa7dcb737099476a38753f519709c63b85f1aa9600d17cb0ad37b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28328,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 28328,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-03.zip",
+  "bytes": 3567,
+  "sha256": "c321e993e541a87ef0f15c716d4b7852c904234aea76a242b3c24811900bc102",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28329,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28329,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-04.zip",
+  "bytes": 3437,
+  "sha256": "013a7d6ce94870496e50dc650334cfec1e15763c956e7492a34201f522edbded",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28330,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 28330,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-05.zip",
+  "bytes": 3597,
+  "sha256": "dd56a166e572f7a4a711613ba812ad6c605c9d32dbddfcb6400e7ea335b91915",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28331,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28331,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-06.zip",
+  "bytes": 3433,
+  "sha256": "5cb3f3d0b338b344c8ebd5d7c27ec9b98048542024dc3f6787c154ee38bcb5db",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28332,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 28332,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-07.zip",
+  "bytes": 3603,
+  "sha256": "de70477d27dcae44701ee6d1552f544abfdb07ea112f1baefae1bd748c4626a7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28333,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28333,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-08.zip",
+  "bytes": 3655,
+  "sha256": "a9bec42ff2b49c8b6621f8232617a1be2f0d1fe6fd664691cdfc92ebacb572f1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28334,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28334,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-09.zip",
+  "bytes": 3489,
+  "sha256": "67effbf41797e0cf6df6adf19e4e14b425a7e325eea37595bcb0fd0229bea386",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28335,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 28335,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-10.zip",
+  "bytes": 3614,
+  "sha256": "5b230006aaee5816a95f92dcd53dab7a635b9cd8a16a01148e419aec72426cee",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28336,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28336,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-11.zip",
+  "bytes": 3427,
+  "sha256": "0172e6d12cba774144c332a6a77c09e805ee83c11712585267915711657df779",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28337,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 28337,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2025-12.zip",
+  "bytes": 3497,
+  "sha256": "55ec7f1f70ae58549f98106af62e474cd8b543685f4c3aa10da361498035d2d5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28338,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28338,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-01.zip",
+  "bytes": 3503,
+  "sha256": "b61d22ae68c1bdbeb382a36cb47d9f9e4b93611c6e63ce94db301872b9224644",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28339,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28339,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-02.zip",
+  "bytes": 3141,
+  "sha256": "a0b191f174f6d7dc4bc182f66cbc139b96dc6d8a09c4d99f393b7ce1368ac41b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28340,
+   "新增版本数": 56,
+   "状态": "已入库"
+  },
+  "source_id": 28340,
+  "rows": 56
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-03.zip",
+  "bytes": 3416,
+  "sha256": "685b095e2d58ec5d6f1f6b06d0376df440e83e9b2b3396f971aa9c55acc2420d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28341,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28341,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-04.zip",
+  "bytes": 3457,
+  "sha256": "4eb8ad16cb2d8c9c9dac6c8a3cb410010d84dca3c2f237e6ecc1ce6df3ee94a6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28342,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 28342,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-05.zip",
+  "bytes": 3659,
+  "sha256": "11376cfb39bc90663156e4eb6d9400186ab63d77656fa48e1a32da4dd309ae48",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28343,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28343,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-06.zip",
+  "bytes": 3561,
+  "sha256": "a0ec4e3b22a4b95fefe10229d23fa0bc1d94d4915df277e5f03f7e6a1eb45871",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28344,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 28344,
+  "rows": 60
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-07.zip",
+  "bytes": 3583,
+  "sha256": "e401e155dc418ed26d0b77438f37cdfcfd3b8aa2368205b0f5ef05dc7db1c825",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28345,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28345,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-08.zip",
+  "bytes": 3674,
+  "sha256": "c7e593d299b7319231da804c8751f83c1eae2c4419ff49ecc75d835831b36be8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28346,
+   "新增版本数": 62,
+   "状态": "已入库"
+  },
+  "source_id": 28346,
+  "rows": 62
+ },
+ "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ENAUSDT/12h/ENAUSDT-12h-2026-09.zip",
+  "bytes": 3633,
+  "sha256": "f210265d13f3295dfdfb8203d5502f35767b5b22d5176b211415dbb37b191d0a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28347,
+   "新增版本数": 60,
+   "状态": "已入库"
+  },
+  "source_id": 28347,
+  "rows": 60
+ },
+ "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-01.zip",
+  "bytes": 410,
+  "sha256": "0aa80dda0d7543f696392017024002a12e0a4d91d96a511009281faebe68e7b7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28315,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 28315,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-02.zip",
+  "bytes": 411,
+  "sha256": "5937380290c052a6f8b27ecb8e6e70d20db2ea809d54e33e11daa57d130f4d83",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28316,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 28316,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-04.zip",
+  "bytes": 409,
+  "sha256": "0b12261c2649fe00cb590266aae38ca874199ee18d02bc6568f121b3282cd535",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 51365,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 51365,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-03.zip",
+  "bytes": 406,
+  "sha256": "6ef5a6a7822841180661b257ee605fc5ee2bb727a2c220c81715a2faccc4640d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 28317,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 28317,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-05.zip",
+  "bytes": 412,
+  "sha256": "1c1043405c1f966f93c93bf29bfd6454925644107a9cc71f5379a192048cb991",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 273689,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 273689,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-06.zip",
+  "bytes": 409,
+  "sha256": "d1f5a4b406c56c7dba2c8bdacf56fbf1c2654ed60d3ad34c4cde84a0aa4ce0fd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1607336,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1607336,
+  "rows": 2
+ },
+ "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-07.zip",
+  "bytes": 409,
+  "sha256": "1491e4d1a1f475e709f437d8ef04d99106dad47073a4410e669fe8a774700b40",
+  "checksum_ok": true,
+  "size_bytes": 409,
+  "fetched_at": "2026-10-08T07:24:55Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/12h/ENAUSDT/ENAUSDT-12h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/ENAUSDT/12h/ENAUSDT-12h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1799006,
+   "新增版本数": 2,
+   "状态": "已入库"
+  },
+  "source_id": 1799006,
+  "rows": 2,
+  "imported_at": "2026-10-08T07:27:58Z"
+ }
+}

@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-14T20:20:04.548753+08:00",
+  "fixed_now_ms": 1791980404548,
+  "groups": 5166,
+  "empty_groups": 0,
+  "totals": {
+    "candle_heads_unique_timestamps": 112624985,
+    "candle_heads_gap_segments": 196,
+    "candle_heads_missing_slots_candidate": 124305,
+    "funding_unique_timestamps": 2181414,
+    "funding_gap_segments": 426,
+    "funding_missing_slots_candidate": 0,
+    "oi_unique_timestamps": 127911193,
+    "oi_gap_segments": 8399,
+    "oi_missing_slots_candidate": 690426
+  },
+  "warnings": [
+    "内部缺槽不包含上市前或末端缺失；仍需按要求起止区间验收",
+    "OI缺槽候选必须结合原件时间语义，不自动平移或补零",
+    "资金费只列超过24h的间隔候选；不能据此宣布其余结算完整",
+    "恢复前清单仅有行数，差额不是唯一事件丢失数",
+    "5m K线保留库存审计，不改变历史冻结策略"
+  ]
+}

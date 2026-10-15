@@ -1,0 +1,6162 @@
+{
+ "generated_at_utc": "2026-10-14T17:41:20Z",
+ "db_path": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
+ "archive_path": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/archive/parquet",
+ "raw_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载",
+ "db_file_bytes": 5118255104,
+ "db_wal_bytes": 46720832,
+ "db_mtime_utc": "2026-10-14T17:41:17Z",
+ "data_version": 2,
+ "sqlite_version": "3.50.4",
+ "hot_candle_heads": {
+  "binance|um|12h": {
+   "symbols": 528,
+   "rows": 106921,
+   "first_utc": "2026-07-04T12:00:00Z",
+   "last_utc": "2026-10-14T00:00:00Z"
+  },
+  "binance|um|15m": {
+   "symbols": 528,
+   "rows": 1657121,
+   "first_utc": "2026-09-12T00:00:00Z",
+   "last_utc": "2026-10-14T17:15:00Z"
+  },
+  "binance|um|1d": {
+   "symbols": 528,
+   "rows": 104482,
+   "first_utc": "2026-03-26T00:00:00Z",
+   "last_utc": "2026-10-13T00:00:00Z"
+  },
+  "binance|um|1h": {
+   "symbols": 528,
+   "rows": 414017,
+   "first_utc": "2026-09-12T00:00:00Z",
+   "last_utc": "2026-10-14T16:00:00Z"
+  },
+  "binance|um|30m": {
+   "symbols": 528,
+   "rows": 828561,
+   "first_utc": "2026-09-12T00:00:00Z",
+   "last_utc": "2026-10-14T17:00:00Z"
+  },
+  "binance|um|4h": {
+   "symbols": 528,
+   "rows": 110224,
+   "first_utc": "2026-09-09T20:00:00Z",
+   "last_utc": "2026-10-14T12:00:00Z"
+  },
+  "binance|um|5m": {
+   "symbols": 528,
+   "rows": 2284063,
+   "first_utc": "2026-09-12T00:00:00Z",
+   "last_utc": "2026-10-14T17:35:00Z"
+  },
+  "binance|um|8h": {
+   "symbols": 528,
+   "rows": 107742,
+   "first_utc": "2026-08-07T08:00:00Z",
+   "last_utc": "2026-10-14T08:00:00Z"
+  },
+  "okx|swap|12h": {
+   "symbols": 23,
+   "rows": 4029,
+   "first_utc": "2026-07-04T12:00:00Z",
+   "last_utc": "2026-10-14T00:00:00Z"
+  },
+  "okx|swap|15m": {
+   "symbols": 23,
+   "rows": 67622,
+   "first_utc": "2026-09-12T00:00:00Z",
+   "last_utc": "2026-10-14T17:15:00Z"
+  },
+  "okx|swap|1d": {
+   "symbols": 23,
+   "rows": 3003,
+   "first_utc": "2026-03-26T00:00:00Z",
+   "last_utc": "2026-10-13T00:00:00Z"
+  },
+  "okx|swap|1h": {
+   "symbols": 23,
+   "rows": 16894,
+   "first_utc": "2026-09-12T00:00:00Z",
+   "last_utc": "2026-10-14T16:00:00Z"
+  },
+  "okx|swap|30m": {
+   "symbols": 23,
+   "rows": 33811,
+   "first_utc": "2026-09-12T00:00:00Z",
+   "last_utc": "2026-10-14T17:00:00Z"
+  },
+  "okx|swap|4h": {
+   "symbols": 23,
+   "rows": 4479,
+   "first_utc": "2026-09-09T20:00:00Z",
+   "last_utc": "2026-10-14T12:00:00Z"
+  },
+  "okx|swap|5m": {
+   "symbols": 23,
+   "rows": 187713,
+   "first_utc": "2026-09-12T00:00:00Z",
+   "last_utc": "2026-10-14T17:35:00Z"
+  }
+ },
+ "hot_funding": {
+  "binance": {
+   "rows": 79363,
+   "symbols": 528,
+   "first_utc": "2026-09-02T00:00:00Z",
+   "last_utc": "2026-10-14T12:00:00Z",
+   "mark_price_nonempty": 79363,
+   "funding_rate_nonempty": 79363
+  },
+  "okx": {
+   "rows": 42303,
+   "symbols": 286,
+   "first_utc": "2026-09-02T00:00:00Z",
+   "last_utc": "2026-10-14T12:00:00Z",
+   "mark_price_nonempty": 0,
+   "funding_rate_nonempty": 42303
+  }
+ },
+ "hot_funding_meta": [
+  {
+   "exchange": "binance",
+   "rate_type": "settled",
+   "source": "binance.fapi",
+   "rows": 79363
+  },
+  {
+   "exchange": "okx",
+   "rate_type": "settled",
+   "source": "okx.v5",
+   "rows": 42303
+  }
+ ],
+ "hot_oi": {
+  "binance|um|5m": {
+   "symbols": 528,
+   "rows": 4934962,
+   "first_utc": "2026-09-12T00:00:00Z",
+   "last_utc": "2026-10-14T17:35:00Z"
+  },
+  "binance|um|snapshot": {
+   "symbols": 528,
+   "rows": 367696,
+   "first_utc": "2026-10-05T04:22:36Z",
+   "last_utc": "2026-10-14T17:40:00Z"
+  },
+  "okx|swap|snapshot": {
+   "symbols": 286,
+   "rows": 35404,
+   "first_utc": "2026-10-05T04:22:43Z",
+   "last_utc": "2026-10-14T17:33:05Z"
+  }
+ },
+ "hot_oi_source": [
+  {
+   "exchange": "binance",
+   "source": "binance.fapi",
+   "period": "snapshot",
+   "rows": 95646
+  },
+  {
+   "exchange": "binance",
+   "source": "binance.fapi.openInterestHist",
+   "period": "5m",
+   "rows": 655896
+  },
+  {
+   "exchange": "binance",
+   "source": "binance.fapi.openInterestHist",
+   "period": "snapshot",
+   "rows": 272050
+  },
+  {
+   "exchange": "binance",
+   "source": "binance.fapi.openInterestHist#gapfill",
+   "period": "5m",
+   "rows": 348259
+  },
+  {
+   "exchange": "binance",
+   "source": "binance.vision.metrics.daily",
+   "period": "5m",
+   "rows": 3930807
+  },
+  {
+   "exchange": "okx",
+   "source": "okx.v5",
+   "period": "snapshot",
+   "rows": 35404
+  }
+ ],
+ "long_short_ratio_columns_in_db": [],
+ "long_short_ratio_table_exists": false,
+ "realtime_klines": [
+  {
+   "exchange": "binance",
+   "rows": 4200,
+   "symbols": 525,
+   "max_updated_utc": "2026-10-14T17:41:45Z"
+  },
+  {
+   "exchange": "okx",
+   "rows": 2002,
+   "symbols": 286,
+   "max_updated_utc": "2026-10-14T17:41:45Z"
+  }
+ ],
+ "realtime_quotes": [
+  {
+   "exchange": "binance",
+   "rows": 528,
+   "symbols": 528,
+   "mark_price_nonempty": 528,
+   "funding_rate_nonempty": 528,
+   "max_updated_utc": "2026-10-14T17:41:46Z"
+  },
+  {
+   "exchange": "okx",
+   "rows": 286,
+   "symbols": 286,
+   "mark_price_nonempty": 286,
+   "funding_rate_nonempty": 286,
+   "max_updated_utc": "2026-10-14T17:41:46Z"
+  }
+ ],
+ "symbol_pool": {
+  "binance": 528,
+  "okx": 286
+ },
+ "active_range_symbols": 812,
+ "archive_catalog_updated_at_utc": "1970-01-21T17:46:15Z",
+ "archive_by_key": {
+  "candle_heads|binance|um|0GUSDT": {
+   "files": 14,
+   "rows": 65099,
+   "bytes": 314406
+  },
+  "candle_heads|binance|um|1000000BOBUSDT": {
+   "files": 14,
+   "rows": 83871,
+   "bytes": 401071
+  },
+  "candle_heads|binance|um|1000000MOGUSDT": {
+   "files": 21,
+   "rows": 121641,
+   "bytes": 641665
+  },
+  "candle_heads|binance|um|1000BONKUSDT": {
+   "files": 30,
+   "rows": 283961,
+   "bytes": 1568372
+  },
+  "candle_heads|binance|um|1000CATUSDT": {
+   "files": 23,
+   "rows": 223852,
+   "bytes": 1222332
+  },
+  "candle_heads|binance|um|1000CHEEMSUSDT": {
+   "files": 23,
+   "rows": 217560,
+   "bytes": 1195497
+  },
+  "candle_heads|binance|um|1000FLOKIUSDT": {
+   "files": 30,
+   "rows": 319942,
+   "bytes": 1730457
+  },
+  "candle_heads|binance|um|1000LUNCUSDT": {
+   "files": 37,
+   "rows": 362988,
+   "bytes": 1993910
+  },
+  "candle_heads|binance|um|1000PEPEUSDT": {
+   "files": 30,
+   "rows": 320379,
+   "bytes": 1732082
+  },
+  "candle_heads|binance|um|1000RATSUSDT": {
+   "files": 28,
+   "rows": 180670,
+   "bytes": 983008
+  },
+  "candle_heads|binance|um|1000SATSUSDT": {
+   "files": 30,
+   "rows": 280361,
+   "bytes": 1553057
+  },
+  "candle_heads|binance|um|1000SHIBUSDT": {
+   "files": 44,
+   "rows": 450615,
+   "bytes": 2460736
+  },
+  "candle_heads|binance|um|1000XECUSDT": {
+   "files": 44,
+   "rows": 427320,
+   "bytes": 2354506
+  },
+  "candle_heads|binance|um|1INCHUSDT": {
+   "files": 51,
+   "rows": 475151,
+   "bytes": 2644076
+  },
+  "candle_heads|binance|um|1MBABYDOGEUSDT": {
+   "files": 23,
+   "rows": 230161,
+   "bytes": 1251102
+  },
+  "candle_heads|binance|um|2ZUSDT": {
+   "files": 14,
+   "rows": 62421,
+   "bytes": 302728
+  },
+  "candle_heads|binance|um|4USDT": {
+   "files": 14,
+   "rows": 61350,
+   "bytes": 297217
+  },
+  "candle_heads|binance|um|AAVEUSDT": {
+   "files": 51,
+   "rows": 487774,
+   "bytes": 2697889
+  },
+  "candle_heads|binance|um|ACEUSDT": {
+   "files": 30,
+   "rows": 279311,
+   "bytes": 1547861
+  },
+  "candle_heads|binance|um|ACHUSDT": {
+   "files": 30,
+   "rows": 333098,
+   "bytes": 1788272
+  },
+  "candle_heads|binance|um|ACTUSDT": {
+   "files": 23,
+   "rows": 220074,
+   "bytes": 1205489
+  },
+  "candle_heads|binance|um|ACUUSDT": {
+   "files": 7,
+   "rows": 42440,
+   "bytes": 202480
+  },
+  "candle_heads|binance|um|ADAUSDT": {
+   "files": 51,
+   "rows": 534385,
+   "bytes": 2908039
+  },
+  "candle_heads|binance|um|AEROUSDT": {
+   "files": 23,
+   "rows": 215920,
+   "bytes": 1187726
+  },
+  "candle_heads|binance|um|AEVOUSDT": {
+   "files": 23,
+   "rows": 263805,
+   "bytes": 1402465
+  },
+  "candle_heads|binance|um|AGLDUSDT": {
+   "files": 30,
+   "rows": 304927,
+   "bytes": 1659714
+  },
+  "candle_heads|binance|um|AGTUSDT": {
+   "files": 14,
+   "rows": 86737,
+   "bytes": 413234
+  },
+  "candle_heads|binance|um|AIAUSDT": {
+   "files": 8,
+   "rows": 46157,
+   "bytes": 220942
+  },
+  "candle_heads|binance|um|AIGENSYNUSDT": {
+   "files": 7,
+   "rows": 24789,
+   "bytes": 121345
+  },
+  "candle_heads|binance|um|AINUSDT": {
+   "files": 14,
+   "rows": 77556,
+   "bytes": 371940
+  },
+  "candle_heads|binance|um|AIOTUSDT": {
+   "files": 14,
+   "rows": 90321,
+   "bytes": 429223
+  },
+  "candle_heads|binance|um|AIOUSDT": {
+   "files": 14,
+   "rows": 71430,
+   "bytes": 342191
+  },
+  "candle_heads|binance|um|AIXBTUSDT": {
+   "files": 21,
+   "rows": 113857,
+   "bytes": 607909
+  },
+  "candle_heads|binance|um|AKEUSDT": {
+   "files": 14,
+   "rows": 63501,
+   "bytes": 307537
+  },
+  "candle_heads|binance|um|AKTUSDT": {
+   "files": 21,
+   "rows": 119670,
+   "bytes": 632489
+  },
+  "candle_heads|binance|um|ALCHUSDT": {
+   "files": 14,
+   "rows": 110669,
+   "bytes": 579924
+  },
+  "candle_heads|binance|um|ALGOUSDT": {
+   "files": 51,
+   "rows": 509718,
+   "bytes": 2797902
+  },
+  "candle_heads|binance|um|ALICEUSDT": {
+   "files": 44,
+   "rows": 460623,
+   "bytes": 2504785
+  },
+  "candle_heads|binance|um|ALLOUSDT": {
+   "files": 14,
+   "rows": 55210,
+   "bytes": 271030
+  },
+  "candle_heads|binance|um|ALLUSDT": {
+   "files": 14,
+   "rows": 72704,
+   "bytes": 347781
+  },
+  "candle_heads|binance|um|ALPINEUSDT": {
+   "files": 14,
+   "rows": 89263,
+   "bytes": 424623
+  },
+  "candle_heads|binance|um|ALTUSDT": {
+   "files": 23,
+   "rows": 272441,
+   "bytes": 1497733
+  },
+  "candle_heads|binance|um|ANIMEUSDT": {
+   "files": 14,
+   "rows": 107747,
+   "bytes": 564904
+  },
+  "candle_heads|binance|um|ANKRUSDT": {
+   "files": 44,
+   "rows": 469414,
+   "bytes": 2543679
+  },
+  "candle_heads|binance|um|APEUSDT": {
+   "files": 37,
+   "rows": 394654,
+   "bytes": 2136553
+  },
+  "candle_heads|binance|um|API3USDT": {
+   "files": 37,
+   "rows": 398880,
+   "bytes": 2155599
+  },
+  "candle_heads|binance|um|APRUSDT": {
+   "files": 14,
+   "rows": 58657,
+   "bytes": 285924
+  },
+  "candle_heads|binance|um|APTUSDT": {
+   "files": 37,
+   "rows": 355870,
+   "bytes": 1961215
+  },
+  "candle_heads|binance|um|ARBUSDT": {
+   "files": 30,
+   "rows": 327874,
+   "bytes": 1764928
+  },
+  "candle_heads|binance|um|ARCUSDT": {
+   "files": 14,
+   "rows": 108857,
+   "bytes": 570355
+  },
+  "candle_heads|binance|um|ARIAUSDT": {
+   "files": 14,
+   "rows": 67653,
+   "bytes": 325681
+  },
+  "candle_heads|binance|um|ARKMUSDT": {
+   "files": 30,
+   "rows": 305106,
+   "bytes": 1660522
+  },
+  "candle_heads|binance|um|ARKUSDT": {
+   "files": 30,
+   "rows": 295465,
+   "bytes": 1618122
+  },
+  "candle_heads|binance|um|ARPAUSDT": {
+   "files": 44,
+   "rows": 421560,
+   "bytes": 2328029
+  },
+  "candle_heads|binance|um|ARUSDT": {
+   "files": 44,
+   "rows": 425340,
+   "bytes": 2344630
+  },
+  "candle_heads|binance|um|ARXUSDT": {
+   "files": 7,
+   "rows": 14960,
+   "bytes": 77349
+  },
+  "candle_heads|binance|um|ASRUSDT": {
+   "files": 14,
+   "rows": 89264,
+   "bytes": 424409
+  },
+  "candle_heads|binance|um|ASTERUSDT": {
+   "files": 14,
+   "rows": 64764,
+   "bytes": 313144
+  },
+  "candle_heads|binance|um|ASTRUSDT": {
+   "files": 30,
+   "rows": 334627,
+   "bytes": 1795238
+  },
+  "candle_heads|binance|um|ATHUSDT": {
+   "files": 14,
+   "rows": 95339,
+   "bytes": 451632
+  },
+  "candle_heads|binance|um|ATOMUSDT": {
+   "files": 51,
+   "rows": 533095,
+   "bytes": 2902455
+  },
+  "candle_heads|binance|um|ATUSDT": {
+   "files": 14,
+   "rows": 57570,
+   "bytes": 281156
+  },
+  "candle_heads|binance|um|AUCTIONUSDT": {
+   "files": 30,
+   "rows": 279828,
+   "bytes": 1550683
+  },
+  "candle_heads|binance|um|AUSDT": {
+   "files": 14,
+   "rows": 85314,
+   "bytes": 406799
+  },
+  "candle_heads|binance|um|AVAAIUSDT": {
+   "files": 14,
+   "rows": 108856,
+   "bytes": 570499
+  },
+  "candle_heads|binance|um|AVAUSDT": {
+   "files": 23,
+   "rows": 214308,
+   "bytes": 1180774
+  },
+  "candle_heads|binance|um|AVAXUSDT": {
+   "files": 51,
+   "rows": 491914,
+   "bytes": 2716708
+  },
+  "candle_heads|binance|um|AVNTUSDT": {
+   "files": 14,
+   "rows": 66543,
+   "bytes": 320885
+  },
+  "candle_heads|binance|um|AWEUSDT": {
+   "files": 14,
+   "rows": 86574,
+   "bytes": 412541
+  },
+  "candle_heads|binance|um|AXLUSDT": {
+   "files": 23,
+   "rows": 265951,
+   "bytes": 1412037
+  },
+  "candle_heads|binance|um|AXSUSDT": {
+   "files": 51,
+   "rows": 481474,
+   "bytes": 2670363
+  },
+  "candle_heads|binance|um|AZTECUSDT": {
+   "files": 7,
+   "rows": 38723,
+   "bytes": 186108
+  },
+  "candle_heads|binance|um|B2USDT": {
+   "files": 14,
+   "rows": 89234,
+   "bytes": 424236
+  },
+  "candle_heads|binance|um|BABYUSDT": {
+   "files": 14,
+   "rows": 94814,
+   "bytes": 449283
+  },
+  "candle_heads|binance|um|BANANAS31USDT": {
+   "files": 14,
+   "rows": 97366,
+   "bytes": 461106
+  },
+  "candle_heads|binance|um|BANANAUSDT": {
+   "files": 23,
+   "rows": 235990,
+   "bytes": 1275983
+  },
+  "candle_heads|binance|um|BANDUSDT": {
+   "files": 51,
+   "rows": 501994,
+   "bytes": 2760761
+  },
+  "candle_heads|binance|um|BANKUSDT": {
+   "files": 14,
+   "rows": 92437,
+   "bytes": 438618
+  },
+  "candle_heads|binance|um|BANUSDT": {
+   "files": 21,
+   "rows": 119670,
+   "bytes": 632490
+  },
+  "candle_heads|binance|um|BARDUSDT": {
+   "files": 14,
+   "rows": 64953,
+   "bytes": 313903
+  },
+  "candle_heads|binance|um|BASEDUSDT": {
+   "files": 7,
+   "rows": 30220,
+   "bytes": 144870
+  },
+  "candle_heads|binance|um|BASUSDT": {
+   "files": 14,
+   "rows": 69074,
+   "bytes": 331953
+  },
+  "candle_heads|binance|um|BATUSDT": {
+   "files": 51,
+   "rows": 532045,
+   "bytes": 2897466
+  },
+  "candle_heads|binance|um|BBUSDT": {
+   "files": 23,
+   "rows": 252832,
+   "bytes": 1353222
+  },
+  "candle_heads|binance|um|BCHUSDT": {
+   "files": 58,
+   "rows": 540024,
+   "bytes": 3006892
+  },
+  "candle_heads|binance|um|BEAMXUSDT": {
+   "files": 30,
+   "rows": 284865,
+   "bytes": 1572049
+  },
+  "candle_heads|binance|um|BEATUSDT": {
+   "files": 14,
+   "rows": 55043,
+   "bytes": 270350
+  },
+  "candle_heads|binance|um|BELUSDT": {
+   "files": 51,
+   "rows": 481834,
+   "bytes": 2672220
+  },
+  "candle_heads|binance|um|BERAUSDT": {
+   "files": 14,
+   "rows": 105243,
+   "bytes": 495922
+  },
+  "candle_heads|binance|um|BICOUSDT": {
+   "files": 30,
+   "rows": 293872,
+   "bytes": 1611445
+  },
+  "candle_heads|binance|um|BIGTIMEUSDT": {
+   "files": 30,
+   "rows": 291338,
+   "bytes": 1600050
+  },
+  "candle_heads|binance|um|BILLUSDT": {
+   "files": 7,
+   "rows": 23393,
+   "bytes": 114990
+  },
+  "candle_heads|binance|um|BIOUSDT": {
+   "files": 14,
+   "rows": 111383,
+   "bytes": 583449
+  },
+  "candle_heads|binance|um|BIRBUSDT": {
+   "files": 7,
+   "rows": 41056,
+   "bytes": 196310
+  },
+  "candle_heads|binance|um|BLESSUSDT": {
+   "files": 14,
+   "rows": 64064,
+   "bytes": 310104
+  },
+  "candle_heads|binance|um|BLUAIUSDT": {
+   "files": 14,
+   "rows": 59010,
+   "bytes": 287490
+  },
+  "candle_heads|binance|um|BLURUSDT": {
+   "files": 30,
+   "rows": 321415,
+   "bytes": 1736199
+  },
+  "candle_heads|binance|um|BMTUSDT": {
+   "files": 14,
+   "rows": 98234,
+   "bytes": 464539
+  },
+  "candle_heads|binance|um|BNBUSDT": {
+   "files": 51,
+   "rows": 532585,
+   "bytes": 2899889
+  },
+  "candle_heads|binance|um|BNTUSDT": {
+   "files": 30,
+   "rows": 302695,
+   "bytes": 1649788
+  },
+  "candle_heads|binance|um|BOMEUSDT": {
+   "files": 23,
+   "rows": 263272,
+   "bytes": 1400098
+  },
+  "candle_heads|binance|um|BRETTUSDT": {
+   "files": 21,
+   "rows": 135877,
+   "bytes": 703867
+  },
+  "candle_heads|binance|um|BREVUSDT": {
+   "files": 14,
+   "rows": 46416,
+   "bytes": 233410
+  },
+  "candle_heads|binance|um|BROCCOLI714USDT": {
+   "files": 14,
+   "rows": 97547,
+   "bytes": 462087
+  },
+  "candle_heads|binance|um|BROCCOLIF3BUSDT": {
+   "files": 14,
+   "rows": 97546,
+   "bytes": 462074
+  },
+  "candle_heads|binance|um|BRUSDT": {
+   "files": 14,
+   "rows": 97520,
+   "bytes": 461326
+  },
+  "candle_heads|binance|um|BSBUSDT": {
+   "files": 7,
+   "rows": 31109,
+   "bytes": 151620
+  },
+  "candle_heads|binance|um|BSVUSDT": {
+   "files": 28,
+   "rows": 190761,
+   "bytes": 1025656
+  },
+  "candle_heads|binance|um|BTCDOMUSDT": {
+   "files": 39,
+   "rows": 228727,
+   "bytes": 1154978
+  },
+  "candle_heads|binance|um|BTCUSDT": {
+   "files": 58,
+   "rows": 540024,
+   "bytes": 3006898
+  },
+  "candle_heads|binance|um|BTRUSDT": {
+   "files": 14,
+   "rows": 68917,
+   "bytes": 331202
+  },
+  "candle_heads|binance|um|BTWUSDT": {
+   "files": 7,
+   "rows": 18309,
+   "bytes": 92706
+  },
+  "candle_heads|binance|um|BULLAUSDT": {
+   "files": 14,
+   "rows": 78647,
+   "bytes": 376985
+  },
+  "candle_heads|binance|um|BUSDT": {
+   "files": 14,
+   "rows": 86331,
+   "bytes": 411330
+  },
+  "candle_heads|binance|um|C98USDT": {
+   "files": 44,
+   "rows": 431640,
+   "bytes": 2372450
+  },
+  "candle_heads|binance|um|CAKEUSDT": {
+   "files": 30,
+   "rows": 287571,
+   "bytes": 1583437
+  },
+  "candle_heads|binance|um|CAPUSDT": {
+   "files": 7,
+   "rows": 14189,
+   "bytes": 74002
+  },
+  "candle_heads|binance|um|CARVUSDT": {
+   "files": 14,
+   "rows": 72470,
+   "bytes": 346768
+  },
+  "candle_heads|binance|um|CATIUSDT": {
+   "files": 23,
+   "rows": 229441,
+   "bytes": 1246992
+  },
+  "candle_heads|binance|um|CCUSDT": {
+   "files": 14,
+   "rows": 57204,
+   "bytes": 279515
+  },
+  "candle_heads|binance|um|CELOUSDT": {
+   "files": 44,
+   "rows": 425483,
+   "bytes": 2345682
+  },
+  "candle_heads|binance|um|CELRUSDT": {
+   "files": 44,
+   "rows": 458207,
+   "bytes": 2493826
+  },
+  "candle_heads|binance|um|CETUSUSDT": {
+   "files": 23,
+   "rows": 220914,
+   "bytes": 1209412
+  },
+  "candle_heads|binance|um|CFGUSDT": {
+   "files": 7,
+   "rows": 32700,
+   "bytes": 158772
+  },
+  "candle_heads|binance|um|CFXUSDT": {
+   "files": 30,
+   "rows": 333411,
+   "bytes": 1789600
+  },
+  "candle_heads|binance|um|CGPTUSDT": {
+   "files": 21,
+   "rows": 113835,
+   "bytes": 607725
+  },
+  "candle_heads|binance|um|CHILLGUYUSDT": {
+   "files": 21,
+   "rows": 118009,
+   "bytes": 625809
+  },
+  "candle_heads|binance|um|CHIPUSDT": {
+   "files": 7,
+   "rows": 27165,
+   "bytes": 131467
+  },
+  "candle_heads|binance|um|CHRUSDT": {
+   "files": 44,
+   "rows": 461267,
+   "bytes": 2507122
+  },
+  "candle_heads|binance|um|CHZUSDT": {
+   "files": 44,
+   "rows": 470267,
+   "bytes": 2603885
+  },
+  "candle_heads|binance|um|CKBUSDT": {
+   "files": 30,
+   "rows": 331988,
+   "bytes": 1783293
+  },
+  "candle_heads|binance|um|CLANKERUSDT": {
+   "files": 14,
+   "rows": 55027,
+   "bytes": 270506
+  },
+  "candle_heads|binance|um|CLOUSDT": {
+   "files": 14,
+   "rows": 60253,
+   "bytes": 292629
+  },
+  "candle_heads|binance|um|COAIUSDT": {
+   "files": 14,
+   "rows": 63703,
+   "bytes": 308546
+  },
+  "candle_heads|binance|um|COLLECTUSDT": {
+   "files": 14,
+   "rows": 46199,
+   "bytes": 232634
+  },
+  "candle_heads|binance|um|COMPUSDT": {
+   "files": 51,
+   "rows": 507151,
+   "bytes": 2786407
+  },
+  "candle_heads|binance|um|COOKIEUSDT": {
+   "files": 14,
+   "rows": 110653,
+   "bytes": 580007
+  },
+  "candle_heads|binance|um|COTIUSDT": {
+   "files": 44,
+   "rows": 461627,
+   "bytes": 2508990
+  },
+  "candle_heads|binance|um|COWUSDT": {
+   "files": 23,
+   "rows": 220918,
+   "bytes": 1209197
+  },
+  "candle_heads|binance|um|CROSSUSDT": {
+   "files": 14,
+   "rows": 77540,
+   "bytes": 372027
+  },
+  "candle_heads|binance|um|CRVUSDT": {
+   "files": 51,
+   "rows": 495827,
+   "bytes": 2733450
+  },
+  "candle_heads|binance|um|CTKUSDT": {
+   "files": 19,
+   "rows": 97136,
+   "bytes": 469147
+  },
+  "candle_heads|binance|um|CTRUSDT": {
+   "files": 7,
+   "rows": 19587,
+   "bytes": 98285
+  },
+  "candle_heads|binance|um|CTSIUSDT": {
+   "files": 44,
+   "rows": 420253,
+   "bytes": 2322507
+  },
+  "candle_heads|binance|um|CUSDT": {
+   "files": 14,
+   "rows": 76650,
+   "bytes": 365265
+  },
+  "candle_heads|binance|um|CVCUSDT": {
+   "files": 19,
+   "rows": 91786,
+   "bytes": 459290
+  },
+  "candle_heads|binance|um|CVXUSDT": {
+   "files": 17,
+   "rows": 80166,
+   "bytes": 390525
+  },
+  "candle_heads|binance|um|CYBERUSDT": {
+   "files": 30,
+   "rows": 300668,
+   "bytes": 1641230
+  },
+  "candle_heads|binance|um|CYSUSDT": {
+   "files": 14,
+   "rows": 49636,
+   "bytes": 246967
+  },
+  "candle_heads|binance|um|DASHUSDT": {
+   "files": 51,
+   "rows": 533618,
+   "bytes": 2904706
+  },
+  "candle_heads|binance|um|DATAIPUSDT": {
+   "files": 7,
+   "rows": 13129,
+   "bytes": 69585
+  },
+  "candle_heads|binance|um|DEEPUSDT": {
+   "files": 14,
+   "rows": 91774,
+   "bytes": 435645
+  },
+  "candle_heads|binance|um|DEXEUSDT": {
+   "files": 21,
+   "rows": 113173,
+   "bytes": 604704
+  },
+  "candle_heads|binance|um|DIAUSDT": {
+   "files": 23,
+   "rows": 227225,
+   "bytes": 1237202
+  },
+  "candle_heads|binance|um|DODOXUSDT": {
+   "files": 28,
+   "rows": 203887,
+   "bytes": 1083859
+  },
+  "candle_heads|binance|um|DOGEUSDT": {
+   "files": 51,
+   "rows": 505351,
+   "bytes": 2778307
+  },
+  "candle_heads|binance|um|DOGSUSDT": {
+   "files": 23,
+   "rows": 233885,
+   "bytes": 1266493
+  },
+  "candle_heads|binance|um|DOLOUSDT": {
+   "files": 14,
+   "rows": 90195,
+   "bytes": 428611
+  },
+  "candle_heads|binance|um|DOODUSDT": {
+   "files": 14,
+   "rows": 88677,
+   "bytes": 421879
+  },
+  "candle_heads|binance|um|DOSUSDT": {
+   "files": 7,
+   "rows": 6046,
+   "bytes": 39041
+  },
+  "candle_heads|binance|um|DOTUSDT": {
+   "files": 51,
+   "rows": 497627,
+   "bytes": 2741377
+  },
+  "candle_heads|binance|um|DRIFTUSDT": {
+   "files": 21,
+   "rows": 121422,
+   "bytes": 640252
+  },
+  "candle_heads|binance|um|DUSKUSDT": {
+   "files": 37,
+   "rows": 407113,
+   "bytes": 2252062
+  },
+  "candle_heads|binance|um|DYDXUSDT": {
+   "files": 44,
+   "rows": 428533,
+   "bytes": 2359111
+  },
+  "candle_heads|binance|um|DYMUSDT": {
+   "files": 23,
+   "rows": 270107,
+   "bytes": 1430441
+  },
+  "candle_heads|binance|um|EDENUSDT": {
+   "files": 14,
+   "rows": 62776,
+   "bytes": 304452
+  },
+  "candle_heads|binance|um|EDGEUSDT": {
+   "files": 7,
+   "rows": 32153,
+   "bytes": 156279
+  },
+  "candle_heads|binance|um|EDUUSDT": {
+   "files": 30,
+   "rows": 321008,
+   "bytes": 1734155
+  },
+  "candle_heads|binance|um|EGLDUSDT": {
+   "files": 51,
+   "rows": 493487,
+   "bytes": 2723479
+  },
+  "candle_heads|binance|um|EIGENUSDT": {
+   "files": 23,
+   "rows": 227454,
+   "bytes": 1238495
+  },
+  "candle_heads|binance|um|ELSAUSDT": {
+   "files": 7,
+   "rows": 42285,
+   "bytes": 201792
+  },
+  "candle_heads|binance|um|ENAUSDT": {
+   "files": 23,
+   "rows": 260165,
+   "bytes": 1386157
+  },
+  "candle_heads|binance|um|ENJUSDT": {
+   "files": 51,
+   "rows": 490787,
+   "bytes": 2711555
+  },
+  "candle_heads|binance|um|ENSOUSDT": {
+   "files": 14,
+   "rows": 60270,
+   "bytes": 292772
+  },
+  "candle_heads|binance|um|ENSUSDT": {
+   "files": 44,
+   "rows": 413953,
+   "bytes": 2295013
+  },
+  "candle_heads|binance|um|EPICUSDT": {
+   "files": 14,
+   "rows": 98977,
+   "bytes": 467890
+  },
+  "candle_heads|binance|um|ERAUSDT": {
+   "files": 14,
+   "rows": 76243,
+   "bytes": 363197
+  },
+  "candle_heads|binance|um|ESPORTSUSDT": {
+   "files": 14,
+   "rows": 74123,
+   "bytes": 354308
+  },
+  "candle_heads|binance|um|ESPUSDT": {
+   "files": 7,
+   "rows": 38857,
+   "bytes": 186608
+  },
+  "candle_heads|binance|um|ETCUSDT": {
+   "files": 51,
+   "rows": 537038,
+   "bytes": 2978609
+  },
+  "candle_heads|binance|um|ETHFIUSDT": {
+   "files": 23,
+   "rows": 262844,
+   "bytes": 1398349
+  },
+  "candle_heads|binance|um|ETHUSDT": {
+   "files": 58,
+   "rows": 539977,
+   "bytes": 3006664
+  },
+  "candle_heads|binance|um|ETHWUSDT": {
+   "files": 28,
+   "rows": 183724,
+   "bytes": 995443
+  },
+  "candle_heads|binance|um|EULUSDT": {
+   "files": 14,
+   "rows": 60410,
+   "bytes": 293301
+  },
+  "candle_heads|binance|um|EVAAUSDT": {
+   "files": 14,
+   "rows": 62240,
+   "bytes": 302154
+  },
+  "candle_heads|binance|um|FARTCOINUSDT": {
+   "files": 21,
+   "rows": 113839,
+   "bytes": 608170
+  },
+  "candle_heads|binance|um|FETUSDT": {
+   "files": 30,
+   "rows": 339620,
+   "bytes": 1875720
+  },
+  "candle_heads|binance|um|FFUSDT": {
+   "files": 14,
+   "rows": 62937,
+   "bytes": 305080
+  },
+  "candle_heads|binance|um|FHEUSDT": {
+   "files": 14,
+   "rows": 93526,
+   "bytes": 443453
+  },
+  "candle_heads|binance|um|FIDAUSDT": {
+   "files": 23,
+   "rows": 229565,
+   "bytes": 1247483
+  },
+  "candle_heads|binance|um|FIGHTUSDT": {
+   "files": 7,
+   "rows": 42066,
+   "bytes": 200915
+  },
+  "candle_heads|binance|um|FILUSDT": {
+   "files": 51,
+   "rows": 487244,
+   "bytes": 2694819
+  },
+  "candle_heads|binance|um|FLOCKUSDT": {
+   "files": 14,
+   "rows": 66589,
+   "bytes": 321131
+  },
+  "candle_heads|binance|um|FLOWUSDT": {
+   "files": 37,
+   "rows": 400503,
+   "bytes": 2163024
+  },
+  "candle_heads|binance|um|FLUIDUSDT": {
+   "files": 14,
+   "rows": 63862,
+   "bytes": 309220
+  },
+  "candle_heads|binance|um|FLUXUSDT": {
+   "files": 23,
+   "rows": 232487,
+   "bytes": 1260380
+  },
+  "candle_heads|binance|um|FOGOUSDT": {
+   "files": 7,
+   "rows": 44393,
+   "bytes": 211121
+  },
+  "candle_heads|binance|um|FOLKSUSDT": {
+   "files": 14,
+   "rows": 56104,
+   "bytes": 274985
+  },
+  "candle_heads|binance|um|FORMUSDT": {
+   "files": 14,
+   "rows": 97897,
+   "bytes": 463066
+  },
+  "candle_heads|binance|um|FRAXUSDT": {
+   "files": 7,
+   "rows": 43537,
+   "bytes": 207423
+  },
+  "candle_heads|binance|um|FUSDT": {
+   "files": 14,
+   "rows": 81483,
+   "bytes": 389349
+  },
+  "candle_heads|binance|um|GALAUSDT": {
+   "files": 44,
+   "rows": 427093,
+   "bytes": 2352763
+  },
+  "candle_heads|binance|um|GASUSDT": {
+   "files": 30,
+   "rows": 289039,
+   "bytes": 1589657
+  },
+  "candle_heads|binance|um|GENIUSUSDT": {
+   "files": 7,
+   "rows": 27192,
+   "bytes": 131668
+  },
+  "candle_heads|binance|um|GIGGLEUSDT": {
+   "files": 14,
+   "rows": 61166,
+   "bytes": 296728
+  },
+  "candle_heads|binance|um|GLMUSDT": {
+   "files": 23,
+   "rows": 267384,
+   "bytes": 1418341
+  },
+  "candle_heads|binance|um|GMTUSDT": {
+   "files": 37,
+   "rows": 394852,
+   "bytes": 2137499
+  },
+  "candle_heads|binance|um|GMXUSDT": {
+   "files": 30,
+   "rows": 333951,
+   "bytes": 1792075
+  },
+  "candle_heads|binance|um|GOATUSDT": {
+   "files": 21,
+   "rows": 124137,
+   "bytes": 651894
+  },
+  "candle_heads|binance|um|GPSUSDT": {
+   "files": 14,
+   "rows": 103230,
+   "bytes": 486792
+  },
+  "candle_heads|binance|um|GRAMUSDT": {
+   "files": 7,
+   "rows": 13297,
+   "bytes": 70227
+  },
+  "candle_heads|binance|um|GRASSUSDT": {
+   "files": 21,
+   "rows": 121423,
+   "bytes": 640249
+  },
+  "candle_heads|binance|um|GRIFFAINUSDT": {
+   "files": 14,
+   "rows": 111537,
+   "bytes": 584735
+  },
+  "candle_heads|binance|um|GRTUSDT": {
+   "files": 51,
+   "rows": 475717,
+   "bytes": 2645466
+  },
+  "candle_heads|binance|um|GRVTUSDT": {
+   "files": 7,
+   "rows": 8043,
+   "bytes": 47766
+  },
+  "candle_heads|binance|um|GTCUSDT": {
+   "files": 44,
+   "rows": 444423,
+   "bytes": 2431371
+  },
+  "candle_heads|binance|um|GUAUSDT": {
+   "files": 14,
+   "rows": 48022,
+   "bytes": 240073
+  },
+  "candle_heads|binance|um|GUNUSDT": {
+   "files": 14,
+   "rows": 95700,
+   "bytes": 453257
+  },
+  "candle_heads|binance|um|GUSDT": {
+   "files": 23,
+   "rows": 235865,
+   "bytes": 1274715
+  },
+  "candle_heads|binance|um|GWEIUSDT": {
+   "files": 7,
+   "rows": 41037,
+   "bytes": 196215
+  },
+  "candle_heads|binance|um|HAEDALUSDT": {
+   "files": 14,
+   "rows": 90194,
+   "bytes": 428746
+  },
+  "candle_heads|binance|um|HANAUSDT": {
+   "files": 14,
+   "rows": 63493,
+   "bytes": 307626
+  },
+  "candle_heads|binance|um|HBARUSDT": {
+   "files": 44,
+   "rows": 459877,
+   "bytes": 2500824
+  },
+  "candle_heads|binance|um|HEIUSDT": {
+   "files": 14,
+   "rows": 104010,
+   "bytes": 490311
+  },
+  "candle_heads|binance|um|HEMIUSDT": {
+   "files": 14,
+   "rows": 68584,
+   "bytes": 329828
+  },
+  "candle_heads|binance|um|HIVEUSDT": {
+   "files": 21,
+   "rows": 113353,
+   "bytes": 605454
+  },
+  "candle_heads|binance|um|HMSTRUSDT": {
+   "files": 23,
+   "rows": 228305,
+   "bytes": 1242177
+  },
+  "candle_heads|binance|um|HOLOUSDT": {
+   "files": 14,
+   "rows": 66187,
+   "bytes": 319367
+  },
+  "candle_heads|binance|um|HOMEUSDT": {
+   "files": 14,
+   "rows": 82933,
+   "bytes": 396122
+  },
+  "candle_heads|binance|um|HOTUSDT": {
+   "files": 44,
+   "rows": 457537,
+   "bytes": 2490151
+  },
+  "candle_heads|binance|um|HUMAUSDT": {
+   "files": 14,
+   "rows": 85620,
+   "bytes": 408420
+  },
+  "candle_heads|binance|um|HUSDT": {
+   "files": 14,
+   "rows": 80247,
+   "bytes": 383829
+  },
+  "candle_heads|binance|um|HYPERUSDT": {
+   "files": 14,
+   "rows": 91740,
+   "bytes": 435591
+  },
+  "candle_heads|binance|um|HYPEUSDT": {
+   "files": 14,
+   "rows": 84920,
+   "bytes": 405329
+  },
+  "candle_heads|binance|um|ICNTUSDT": {
+   "files": 14,
+   "rows": 78780,
+   "bytes": 377465
+  },
+  "candle_heads|binance|um|ICPUSDT": {
+   "files": 44,
+   "rows": 438455,
+   "bytes": 2349038
+  },
+  "candle_heads|binance|um|IDOLUSDT": {
+   "files": 14,
+   "rows": 78629,
+   "bytes": 376838
+  },
+  "candle_heads|binance|um|IDUSDT": {
+   "files": 30,
+   "rows": 327831,
+   "bytes": 1764565
+  },
+  "candle_heads|binance|um|ILVUSDT": {
+   "files": 30,
+   "rows": 286055,
+   "bytes": 1576709
+  },
+  "candle_heads|binance|um|IMXUSDT": {
+   "files": 37,
+   "rows": 400323,
+   "bytes": 2162033
+  },
+  "candle_heads|binance|um|INITUSDT": {
+   "files": 14,
+   "rows": 92870,
+   "bytes": 440579
+  },
+  "candle_heads|binance|um|INJUSDT": {
+   "files": 37,
+   "rows": 367159,
+   "bytes": 2011218
+  },
+  "candle_heads|binance|um|INUSDT": {
+   "files": 14,
+   "rows": 72500,
+   "bytes": 346765
+  },
+  "candle_heads|binance|um|INXUSDT": {
+   "files": 7,
+   "rows": 40756,
+   "bytes": 194958
+  },
+  "candle_heads|binance|um|IOSTUSDT": {
+   "files": 51,
+   "rows": 530558,
+   "bytes": 2891195
+  },
+  "candle_heads|binance|um|IOTAUSDT": {
+   "files": 51,
+   "rows": 531688,
+   "bytes": 2895775
+  },
+  "candle_heads|binance|um|IOTXUSDT": {
+   "files": 44,
+   "rows": 433753,
+   "bytes": 2381855
+  },
+  "candle_heads|binance|um|IOUSDT": {
+   "files": 23,
+   "rows": 247554,
+   "bytes": 1329489
+  },
+  "candle_heads|binance|um|IRYSUSDT": {
+   "files": 14,
+   "rows": 52477,
+   "bytes": 259280
+  },
+  "candle_heads|binance|um|JASMYUSDT": {
+   "files": 37,
+   "rows": 388573,
+   "bytes": 2109565
+  },
+  "candle_heads|binance|um|JCTUSDT": {
+   "files": 14,
+   "rows": 55400,
+   "bytes": 271773
+  },
+  "candle_heads|binance|um|JELLYJELLYUSDT": {
+   "files": 14,
+   "rows": 96577,
+   "bytes": 457683
+  },
+  "candle_heads|binance|um|JOEUSDT": {
+   "files": 30,
+   "rows": 326768,
+   "bytes": 1759946
+  },
+  "candle_heads|binance|um|JSTUSDT": {
+   "files": 14,
+   "rows": 90687,
+   "bytes": 430761
+  },
+  "candle_heads|binance|um|JTOUSDT": {
+   "files": 30,
+   "rows": 281064,
+   "bytes": 1555222
+  },
+  "candle_heads|binance|um|JUPUSDT": {
+   "files": 23,
+   "rows": 271281,
+   "bytes": 1435724
+  },
+  "candle_heads|binance|um|KAIAUSDT": {
+   "files": 23,
+   "rows": 215874,
+   "bytes": 1187485
+  },
+  "candle_heads|binance|um|KAITOUSDT": {
+   "files": 14,
+   "rows": 102720,
+   "bytes": 484671
+  },
+  "candle_heads|binance|um|KASUSDT": {
+   "files": 28,
+   "rows": 185782,
+   "bytes": 1004249
+  },
+  "candle_heads|binance|um|KATUSDT": {
+   "files": 7,
+   "rows": 35280,
+   "bytes": 170270
+  },
+  "candle_heads|binance|um|KAVAUSDT": {
+   "files": 51,
+   "rows": 502127,
+   "bytes": 2761315
+  },
+  "candle_heads|binance|um|KERNELUSDT": {
+   "files": 14,
+   "rows": 93187,
+   "bytes": 442150
+  },
+  "candle_heads|binance|um|KGENUSDT": {
+   "files": 14,
+   "rows": 61490,
+   "bytes": 298865
+  },
+  "candle_heads|binance|um|KITEUSDT": {
+   "files": 14,
+   "rows": 57560,
+   "bytes": 281215
+  },
+  "candle_heads|binance|um|KMNOUSDT": {
+   "files": 21,
+   "rows": 113836,
+   "bytes": 607728
+  },
+  "candle_heads|binance|um|KNCUSDT": {
+   "files": 51,
+   "rows": 508104,
+   "bytes": 2790001
+  },
+  "candle_heads|binance|um|KOMAUSDT": {
+   "files": 21,
+   "rows": 115692,
+   "bytes": 615515
+  },
+  "candle_heads|binance|um|KSMUSDT": {
+   "files": 51,
+   "rows": 487597,
+   "bytes": 2696360
+  },
+  "candle_heads|binance|um|LABUSDT": {
+   "files": 14,
+   "rows": 59690,
+   "bytes": 290295
+  },
+  "candle_heads|binance|um|LAUSDT": {
+   "files": 14,
+   "rows": 83850,
+   "bytes": 400401
+  },
+  "candle_heads|binance|um|LAYERUSDT": {
+   "files": 14,
+   "rows": 104322,
+   "bytes": 491923
+  },
+  "candle_heads|binance|um|LDOUSDT": {
+   "files": 37,
+   "rows": 360621,
+   "bytes": 1982506
+  },
+  "candle_heads|binance|um|LIGHTUSDT": {
+   "files": 14,
+   "rows": 63313,
+   "bytes": 306866
+  },
+  "candle_heads|binance|um|LINEAUSDT": {
+   "files": 14,
+   "rows": 68014,
+   "bytes": 327329
+  },
+  "candle_heads|binance|um|LINKUSDT": {
+   "files": 51,
+   "rows": 536858,
+   "bytes": 2977955
+  },
+  "candle_heads|binance|um|LISTAUSDT": {
+   "files": 23,
+   "rows": 245945,
+   "bytes": 1322645
+  },
+  "candle_heads|binance|um|LITUSDT": {
+   "files": 18,
+   "rows": 53314,
+   "bytes": 270673
+  },
+  "candle_heads|binance|um|LPTUSDT": {
+   "files": 44,
+   "rows": 417373,
+   "bytes": 2309691
+  },
+  "candle_heads|binance|um|LQTYUSDT": {
+   "files": 30,
+   "rows": 330188,
+   "bytes": 1775400
+  },
+  "candle_heads|binance|um|LSKUSDT": {
+   "files": 23,
+   "rows": 272393,
+   "bytes": 1497508
+  },
+  "candle_heads|binance|um|LTCUSDT": {
+   "files": 51,
+   "rows": 537808,
+   "bytes": 2982462
+  },
+  "candle_heads|binance|um|LUMIAUSDT": {
+   "files": 21,
+   "rows": 114253,
+   "bytes": 609506
+  },
+  "candle_heads|binance|um|LUNA2USDT": {
+   "files": 35,
+   "rows": 263721,
+   "bytes": 1425051
+  },
+  "candle_heads|binance|um|LYNUSDT": {
+   "files": 14,
+   "rows": 61723,
+   "bytes": 299807
+  },
+  "candle_heads|binance|um|MAGICUSDT": {
+   "files": 30,
+   "rows": 337941,
+   "bytes": 1810688
+  },
+  "candle_heads|binance|um|MAGMAUSDT": {
+   "files": 14,
+   "rows": 46219,
+   "bytes": 232550
+  },
+  "candle_heads|binance|um|MANAUSDT": {
+   "files": 44,
+   "rows": 460299,
+   "bytes": 2502736
+  },
+  "candle_heads|binance|um|MANTAUSDT": {
+   "files": 23,
+   "rows": 273716,
+   "bytes": 1504254
+  },
+  "candle_heads|binance|um|MANTRAUSDT": {
+   "files": 7,
+   "rows": 34919,
+   "bytes": 168767
+  },
+  "candle_heads|binance|um|MARSCOINUSDT": {
+   "files": 7,
+   "rows": 2328,
+   "bytes": 23324
+  },
+  "candle_heads|binance|um|MASKUSDT": {
+   "files": 44,
+   "rows": 430625,
+   "bytes": 2367842
+  },
+  "candle_heads|binance|um|MAVIAUSDT": {
+   "files": 15,
+   "rows": 101466,
+   "bytes": 480994
+  },
+  "candle_heads|binance|um|MAVUSDT": {
+   "files": 30,
+   "rows": 310270,
+   "bytes": 1686044
+  },
+  "candle_heads|binance|um|MEGAUSDT": {
+   "files": 7,
+   "rows": 40828,
+   "bytes": 195368
+  },
+  "candle_heads|binance|um|MELANIAUSDT": {
+   "files": 14,
+   "rows": 108349,
+   "bytes": 567842
+  },
+  "candle_heads|binance|um|MEMEUSDT": {
+   "files": 30,
+   "rows": 287410,
+   "bytes": 1582747
+  },
+  "candle_heads|binance|um|MERLUSDT": {
+   "files": 14,
+   "rows": 85136,
+   "bytes": 406214
+  },
+  "candle_heads|binance|um|METISUSDT": {
+   "files": 23,
+   "rows": 264037,
+   "bytes": 1403671
+  },
+  "candle_heads|binance|um|METUSDT": {
+   "files": 14,
+   "rows": 60806,
+   "bytes": 294961
+  },
+  "candle_heads|binance|um|MEUSDT": {
+   "files": 23,
+   "rows": 214833,
+   "bytes": 1182875
+  },
+  "candle_heads|binance|um|MEWUSDT": {
+   "files": 21,
+   "rows": 147375,
+   "bytes": 757250
+  },
+  "candle_heads|binance|um|MINAUSDT": {
+   "files": 30,
+   "rows": 335840,
+   "bytes": 1800611
+  },
+  "candle_heads|binance|um|MIRAUSDT": {
+   "files": 14,
+   "rows": 63509,
+   "bytes": 307644
+  },
+  "candle_heads|binance|um|MITOUSDT": {
+   "files": 14,
+   "rows": 68696,
+   "bytes": 330282
+  },
+  "candle_heads|binance|um|MMTUSDT": {
+   "files": 14,
+   "rows": 56489,
+   "bytes": 276516
+  },
+  "candle_heads|binance|um|MOCAUSDT": {
+   "files": 21,
+   "rows": 114635,
+   "bytes": 610969
+  },
+  "candle_heads|binance|um|MONUSDT": {
+   "files": 14,
+   "rows": 61027,
+   "bytes": 295935
+  },
+  "candle_heads|binance|um|MOODENGUSDT": {
+   "files": 21,
+   "rows": 124005,
+   "bytes": 651574
+  },
+  "candle_heads|binance|um|MORPHOUSDT": {
+   "files": 23,
+   "rows": 217193,
+   "bytes": 1193513
+  },
+  "candle_heads|binance|um|MOVEUSDT": {
+   "files": 23,
+   "rows": 214748,
+   "bytes": 1182892
+  },
+  "candle_heads|binance|um|MOVRUSDT": {
+   "files": 30,
+   "rows": 277867,
+   "bytes": 1541952
+  },
+  "candle_heads|binance|um|MTLUSDT": {
+   "files": 44,
+   "rows": 457909,
+   "bytes": 2492219
+  },
+  "candle_heads|binance|um|MUBARAKUSDT": {
+   "files": 14,
+   "rows": 98238,
+   "bytes": 464839
+  },
+  "candle_heads|binance|um|MUSDT": {
+   "files": 14,
+   "rows": 78109,
+   "bytes": 374232
+  },
+  "candle_heads|binance|um|MYXUSDT": {
+   "files": 14,
+   "rows": 81506,
+   "bytes": 389572
+  },
+  "candle_heads|binance|um|NAORISUSDT": {
+   "files": 14,
+   "rows": 73766,
+   "bytes": 352608
+  },
+  "candle_heads|binance|um|NEARUSDT": {
+   "files": 51,
+   "rows": 487470,
+   "bytes": 2696098
+  },
+  "candle_heads|binance|um|NEIROUSDT": {
+   "files": 23,
+   "rows": 230176,
+   "bytes": 1250567
+  },
+  "candle_heads|binance|um|NEOUSDT": {
+   "files": 51,
+   "rows": 531336,
+   "bytes": 2894336
+  },
+  "candle_heads|binance|um|NEWTUSDT": {
+   "files": 14,
+   "rows": 81312,
+   "bytes": 388846
+  },
+  "candle_heads|binance|um|NIGHTUSDT": {
+   "files": 14,
+   "rows": 50018,
+   "bytes": 248807
+  },
+  "candle_heads|binance|um|NILUSDT": {
+   "files": 14,
+   "rows": 96982,
+   "bytes": 458933
+  },
+  "candle_heads|binance|um|NMRUSDT": {
+   "files": 30,
+   "rows": 311530,
+   "bytes": 1691738
+  },
+  "candle_heads|binance|um|NOMUSDT": {
+   "files": 14,
+   "rows": 62639,
+   "bytes": 303758
+  },
+  "candle_heads|binance|um|NOTUSDT": {
+   "files": 23,
+   "rows": 252296,
+   "bytes": 1351029
+  },
+  "candle_heads|binance|um|NXPCUSDT": {
+   "files": 14,
+   "rows": 87672,
+   "bytes": 417454
+  },
+  "candle_heads|binance|um|OGNUSDT": {
+   "files": 44,
+   "rows": 457239,
+   "bytes": 2488825
+  },
+  "candle_heads|binance|um|OGUSDT": {
+   "files": 14,
+   "rows": 88192,
+   "bytes": 419601
+  },
+  "candle_heads|binance|um|ONDOUSDT": {
+   "files": 23,
+   "rows": 273363,
+   "bytes": 1502333
+  },
+  "candle_heads|binance|um|ONEUSDT": {
+   "files": 44,
+   "rows": 459759,
+   "bytes": 2500100
+  },
+  "candle_heads|binance|um|ONGUSDT": {
+   "files": 30,
+   "rows": 283083,
+   "bytes": 1563898
+  },
+  "candle_heads|binance|um|ONTUSDT": {
+   "files": 51,
+   "rows": 532420,
+   "bytes": 2899186
+  },
+  "candle_heads|binance|um|ONUSDT": {
+   "files": 14,
+   "rows": 58496,
+   "bytes": 285070
+  },
+  "candle_heads|binance|um|OPENUSDT": {
+   "files": 14,
+   "rows": 66742,
+   "bytes": 321697
+  },
+  "candle_heads|binance|um|OPGUSDT": {
+   "files": 7,
+   "rows": 26045,
+   "bytes": 126602
+  },
+  "candle_heads|binance|um|OPNUSDT": {
+   "files": 7,
+   "rows": 36848,
+   "bytes": 177370
+  },
+  "candle_heads|binance|um|OPUSDT": {
+   "files": 37,
+   "rows": 380996,
+   "bytes": 2075452
+  },
+  "candle_heads|binance|um|ORCAUSDT": {
+   "files": 23,
+   "rows": 215569,
+   "bytes": 1186264
+  },
+  "candle_heads|binance|um|ORDERUSDT": {
+   "files": 14,
+   "rows": 63505,
+   "bytes": 307689
+  },
+  "candle_heads|binance|um|ORDIUSDT": {
+   "files": 30,
+   "rows": 286687,
+   "bytes": 1579674
+  },
+  "candle_heads|binance|um|OUSDT": {
+   "files": 7,
+   "rows": 14734,
+   "bytes": 76279
+  },
+  "candle_heads|binance|um|PARTIUSDT": {
+   "files": 14,
+   "rows": 96802,
+   "bytes": 458309
+  },
+  "candle_heads|binance|um|PAXGUSDT": {
+   "files": 14,
+   "rows": 96462,
+   "bytes": 456685
+  },
+  "candle_heads|binance|um|PENDLEUSDT": {
+   "files": 30,
+   "rows": 305122,
+   "bytes": 1660912
+  },
+  "candle_heads|binance|um|PENGUUSDT": {
+   "files": 22,
+   "rows": 120466,
+   "bytes": 635765
+  },
+  "candle_heads|binance|um|PEOPLEUSDT": {
+   "files": 44,
+   "rows": 409200,
+   "bytes": 2274922
+  },
+  "candle_heads|binance|um|PHAROSUSDT": {
+   "files": 7,
+   "rows": 22161,
+   "bytes": 109661
+  },
+  "candle_heads|binance|um|PHAUSDT": {
+   "files": 21,
+   "rows": 112115,
+   "bytes": 600179
+  },
+  "candle_heads|binance|um|PIEVERSEUSDT": {
+   "files": 14,
+   "rows": 54695,
+   "bytes": 269136
+  },
+  "candle_heads|binance|um|PIPPINUSDT": {
+   "files": 14,
+   "rows": 107624,
+   "bytes": 564342
+  },
+  "candle_heads|binance|um|PIXELUSDT": {
+   "files": 23,
+   "rows": 267949,
+   "bytes": 1421192
+  },
+  "candle_heads|binance|um|PLAYUSDT": {
+   "files": 14,
+   "rows": 73789,
+   "bytes": 352605
+  },
+  "candle_heads|binance|um|PLUMEUSDT": {
+   "files": 14,
+   "rows": 97522,
+   "bytes": 461534
+  },
+  "candle_heads|binance|um|PNUTUSDT": {
+   "files": 23,
+   "rows": 220087,
+   "bytes": 1205690
+  },
+  "candle_heads|binance|um|POLUSDT": {
+   "files": 23,
+   "rows": 230709,
+   "bytes": 1252444
+  },
+  "candle_heads|binance|um|POLYXUSDT": {
+   "files": 30,
+   "rows": 289102,
+   "bytes": 1590309
+  },
+  "candle_heads|binance|um|PONSUSDT": {
+   "files": 7,
+   "rows": 1451,
+   "bytes": 19392
+  },
+  "candle_heads|binance|um|POPCATUSDT": {
+   "files": 21,
+   "rows": 135502,
+   "bytes": 702331
+  },
+  "candle_heads|binance|um|PORTALUSDT": {
+   "files": 23,
+   "rows": 266149,
+   "bytes": 1413285
+  },
+  "candle_heads|binance|um|POWERUSDT": {
+   "files": 14,
+   "rows": 50752,
+   "bytes": 251912
+  },
+  "candle_heads|binance|um|POWRUSDT": {
+   "files": 30,
+   "rows": 288742,
+   "bytes": 1588577
+  },
+  "candle_heads|binance|um|PRLUSDT": {
+   "files": 7,
+   "rows": 29862,
+   "bytes": 143264
+  },
+  "candle_heads|binance|um|PROMPTUSDT": {
+   "files": 14,
+   "rows": 93792,
+   "bytes": 444857
+  },
+  "candle_heads|binance|um|PROMUSDT": {
+   "files": 14,
+   "rows": 109226,
+   "bytes": 572325
+  },
+  "candle_heads|binance|um|PROVEUSDT": {
+   "files": 14,
+   "rows": 72832,
+   "bytes": 348420
+  },
+  "candle_heads|binance|um|PTBUSDT": {
+   "files": 14,
+   "rows": 67646,
+   "bytes": 325563
+  },
+  "candle_heads|binance|um|PUMPBTCUSDT": {
+   "files": 14,
+   "rows": 82425,
+   "bytes": 394016
+  },
+  "candle_heads|binance|um|PUMPUSDT": {
+   "files": 14,
+   "rows": 79285,
+   "bytes": 380903
+  },
+  "candle_heads|binance|um|PUNDIXUSDT": {
+   "files": 14,
+   "rows": 90345,
+   "bytes": 429403
+  },
+  "candle_heads|binance|um|PYTHUSDT": {
+   "files": 30,
+   "rows": 283973,
+   "bytes": 1567788
+  },
+  "candle_heads|binance|um|QNTUSDT": {
+   "files": 37,
+   "rows": 355702,
+   "bytes": 1960576
+  },
+  "candle_heads|binance|um|QTUMUSDT": {
+   "files": 51,
+   "rows": 530512,
+   "bytes": 2891116
+  },
+  "candle_heads|binance|um|QUSDT": {
+   "files": 14,
+   "rows": 67865,
+   "bytes": 326403
+  },
+  "candle_heads|binance|um|RAREUSDT": {
+   "files": 23,
+   "rows": 235923,
+   "bytes": 1275395
+  },
+  "candle_heads|binance|um|RAVEUSDT": {
+   "files": 14,
+   "rows": 49265,
+   "bytes": 245508
+  },
+  "candle_heads|binance|um|RAYSOLUSDT": {
+   "files": 21,
+   "rows": 115709,
+   "bytes": 615791
+  },
+  "candle_heads|binance|um|RECALLUSDT": {
+   "files": 14,
+   "rows": 60086,
+   "bytes": 292139
+  },
+  "candle_heads|binance|um|REDUSDT": {
+   "files": 14,
+   "rows": 100199,
+   "bytes": 473212
+  },
+  "candle_heads|binance|um|RENDERUSDT": {
+   "files": 23,
+   "rows": 239546,
+   "bytes": 1291533
+  },
+  "candle_heads|binance|um|RESOLVUSDT": {
+   "files": 14,
+   "rows": 82939,
+   "bytes": 396201
+  },
+  "candle_heads|binance|um|REUSDT": {
+   "files": 7,
+   "rows": 15795,
+   "bytes": 81749
+  },
+  "candle_heads|binance|um|REZUSDT": {
+   "files": 23,
+   "rows": 255176,
+   "bytes": 1363771
+  },
+  "candle_heads|binance|um|RIFUSDT": {
+   "files": 30,
+   "rows": 289747,
+   "bytes": 1592672
+  },
+  "candle_heads|binance|um|RIVERUSDT": {
+   "files": 14,
+   "rows": 59711,
+   "bytes": 290503
+  },
+  "candle_heads|binance|um|RLCUSDT": {
+   "files": 51,
+   "rows": 501159,
+   "bytes": 2756495
+  },
+  "candle_heads|binance|um|ROBOUSDT": {
+   "files": 7,
+   "rows": 35815,
+   "bytes": 172720
+  },
+  "candle_heads|binance|um|RONINUSDT": {
+   "files": 23,
+   "rows": 270367,
+   "bytes": 1431923
+  },
+  "candle_heads|binance|um|ROSEUSDT": {
+   "files": 44,
+   "rows": 407945,
+   "bytes": 2269106
+  },
+  "candle_heads|binance|um|RPLUSDT": {
+   "files": 23,
+   "rows": 231139,
+   "bytes": 1254464
+  },
+  "candle_heads|binance|um|RSRUSDT": {
+   "files": 51,
+   "rows": 486759,
+   "bytes": 2692864
+  },
+  "candle_heads|binance|um|RUNEUSDT": {
+   "files": 51,
+   "rows": 495349,
+   "bytes": 2731723
+  },
+  "candle_heads|binance|um|RVNUSDT": {
+   "files": 44,
+   "rows": 463899,
+   "bytes": 2518616
+  },
+  "candle_heads|binance|um|SAFEUSDT": {
+   "files": 21,
+   "rows": 123986,
+   "bytes": 651227
+  },
+  "candle_heads|binance|um|SAGAUSDT": {
+   "files": 23,
+   "rows": 258983,
+   "bytes": 1380977
+  },
+  "candle_heads|binance|um|SAHARAUSDT": {
+   "files": 14,
+   "rows": 80069,
+   "bytes": 383353
+  },
+  "candle_heads|binance|um|SANDUSDT": {
+   "files": 44,
+   "rows": 469119,
+   "bytes": 2542424
+  },
+  "candle_heads|binance|um|SANTOSUSDT": {
+   "files": 23,
+   "rows": 222596,
+   "bytes": 1216902
+  },
+  "candle_heads|binance|um|SAPIENUSDT": {
+   "files": 14,
+   "rows": 70129,
+   "bytes": 336724
+  },
+  "candle_heads|binance|um|SCRUSDT": {
+   "files": 23,
+   "rows": 223706,
+   "bytes": 1221275
+  },
+  "candle_heads|binance|um|SEIUSDT": {
+   "files": 30,
+   "rows": 301522,
+   "bytes": 1644669
+  },
+  "candle_heads|binance|um|SENTUSDT": {
+   "files": 14,
+   "rows": 54685,
+   "bytes": 268805
+  },
+  "candle_heads|binance|um|SFPUSDT": {
+   "files": 44,
+   "rows": 464209,
+   "bytes": 2520398
+  },
+  "candle_heads|binance|um|SHELLUSDT": {
+   "files": 14,
+   "rows": 103251,
+   "bytes": 487010
+  },
+  "candle_heads|binance|um|SIGNUSDT": {
+   "files": 14,
+   "rows": 90698,
+   "bytes": 430821
+  },
+  "candle_heads|binance|um|SIRENUSDT": {
+   "files": 14,
+   "rows": 97372,
+   "bytes": 460819
+  },
+  "candle_heads|binance|um|SKLUSDT": {
+   "files": 51,
+   "rows": 477468,
+   "bytes": 2652884
+  },
+  "candle_heads|binance|um|SKRUSDT": {
+   "files": 7,
+   "rows": 42281,
+   "bytes": 201746
+  },
+  "candle_heads|binance|um|SKYAIUSDT": {
+   "files": 14,
+   "rows": 88008,
+   "bytes": 418976
+  },
+  "candle_heads|binance|um|SKYUSDT": {
+   "files": 14,
+   "rows": 66608,
+   "bytes": 321057
+  },
+  "candle_heads|binance|um|SLPUSDT": {
+   "files": 16,
+   "rows": 79783,
+   "bytes": 386954
+  },
+  "candle_heads|binance|um|SLXUSDT": {
+   "files": 7,
+   "rows": 18905,
+   "bytes": 95264
+  },
+  "candle_heads|binance|um|SNXUSDT": {
+   "files": 51,
+   "rows": 499129,
+   "bytes": 2748037
+  },
+  "candle_heads|binance|um|SOLUSDT": {
+   "files": 51,
+   "rows": 493059,
+   "bytes": 2720943
+  },
+  "candle_heads|binance|um|SOLVUSDT": {
+   "files": 14,
+   "rows": 108868,
+   "bytes": 570458
+  },
+  "candle_heads|binance|um|SOMIUSDT": {
+   "files": 14,
+   "rows": 69289,
+   "bytes": 332945
+  },
+  "candle_heads|binance|um|SONICUSDT": {
+   "files": 14,
+   "rows": 110528,
+   "bytes": 579070
+  },
+  "candle_heads|binance|um|SOONUSDT": {
+   "files": 14,
+   "rows": 86216,
+   "bytes": 411002
+  },
+  "candle_heads|binance|um|SOPHUSDT": {
+   "files": 14,
+   "rows": 85282,
+   "bytes": 406889
+  },
+  "candle_heads|binance|um|SPACEUSDT": {
+   "files": 7,
+   "rows": 42094,
+   "bytes": 201027
+  },
+  "candle_heads|binance|um|SPELLUSDT": {
+   "files": 37,
+   "rows": 363550,
+   "bytes": 1995815
+  },
+  "candle_heads|binance|um|SPKUSDT": {
+   "files": 14,
+   "rows": 81712,
+   "bytes": 390499
+  },
+  "candle_heads|binance|um|SPORTFUNUSDT": {
+   "files": 7,
+   "rows": 43338,
+   "bytes": 206639
+  },
+  "candle_heads|binance|um|SPXUSDT": {
+   "files": 21,
+   "rows": 115705,
+   "bytes": 615499
+  },
+  "candle_heads|binance|um|SQDUSDT": {
+   "files": 14,
+   "rows": 82765,
+   "bytes": 395199
+  },
+  "candle_heads|binance|um|SSVUSDT": {
+   "files": 30,
+   "rows": 332770,
+   "bytes": 1786801
+  },
+  "candle_heads|binance|um|STABLEUSDT": {
+   "files": 14,
+   "rows": 56129,
+   "bytes": 275139
+  },
+  "candle_heads|binance|um|STARUSDT": {
+   "files": 7,
+   "rows": 22159,
+   "bytes": 109564
+  },
+  "candle_heads|binance|um|STBLUSDT": {
+   "files": 14,
+   "rows": 65178,
+   "bytes": 314860
+  },
+  "candle_heads|binance|um|STEEMUSDT": {
+   "files": 30,
+   "rows": 286493,
+   "bytes": 1579060
+  },
+  "candle_heads|binance|um|STOUSDT": {
+   "files": 14,
+   "rows": 93551,
+   "bytes": 443535
+  },
+  "candle_heads|binance|um|STRKUSDT": {
+   "files": 23,
+   "rows": 267465,
+   "bytes": 1418935
+  },
+  "candle_heads|binance|um|STXUSDT": {
+   "files": 30,
+   "rows": 333293,
+   "bytes": 1789136
+  },
+  "candle_heads|binance|um|SUIUSDT": {
+   "files": 30,
+   "rows": 320500,
+   "bytes": 1731920
+  },
+  "candle_heads|binance|um|SUNUSDT": {
+   "files": 23,
+   "rows": 234663,
+   "bytes": 1269788
+  },
+  "candle_heads|binance|um|SUPERUSDT": {
+   "files": 30,
+   "rows": 283263,
+   "bytes": 1564999
+  },
+  "candle_heads|binance|um|SUSDT": {
+   "files": 14,
+   "rows": 109065,
+   "bytes": 571250
+  },
+  "candle_heads|binance|um|SUSHIUSDT": {
+   "files": 51,
+   "rows": 494859,
+   "bytes": 2729394
+  },
+  "candle_heads|binance|um|SWARMSUSDT": {
+   "files": 14,
+   "rows": 110668,
+   "bytes": 580066
+  },
+  "candle_heads|binance|um|SXTUSDT": {
+   "files": 14,
+   "rows": 89996,
+   "bytes": 427579
+  },
+  "candle_heads|binance|um|SYNUSDT": {
+   "files": 23,
+   "rows": 235747,
+   "bytes": 1274524
+  },
+  "candle_heads|binance|um|SYRUPUSDT": {
+   "files": 14,
+   "rows": 89096,
+   "bytes": 423800
+  },
+  "candle_heads|binance|um|TACUSDT": {
+   "files": 14,
+   "rows": 76662,
+   "bytes": 365055
+  },
+  "candle_heads|binance|um|TAGUSDT": {
+   "files": 14,
+   "rows": 74857,
+   "bytes": 357129
+  },
+  "candle_heads|binance|um|TAIKOUSDT": {
+   "files": 14,
+   "rows": 82766,
+   "bytes": 395352
+  },
+  "candle_heads|binance|um|TAKEUSDT": {
+   "files": 14,
+   "rows": 67657,
+   "bytes": 325689
+  },
+  "candle_heads|binance|um|TAOUSDT": {
+   "files": 23,
+   "rows": 258593,
+   "bytes": 1379136
+  },
+  "candle_heads|binance|um|TAUSDT": {
+   "files": 14,
+   "rows": 75605,
+   "bytes": 360365
+  },
+  "candle_heads|binance|um|THETAUSDT": {
+   "files": 51,
+   "rows": 513340,
+   "bytes": 2814692
+  },
+  "candle_heads|binance|um|THEUSDT": {
+   "files": 23,
+   "rows": 217209,
+   "bytes": 1193188
+  },
+  "candle_heads|binance|um|TIAUSDT": {
+   "files": 30,
+   "rows": 287906,
+   "bytes": 1584789
+  },
+  "candle_heads|binance|um|TLMUSDT": {
+   "files": 32,
+   "rows": 327269,
+   "bytes": 1766087
+  },
+  "candle_heads|binance|um|TNSRUSDT": {
+   "files": 23,
+   "rows": 259113,
+   "bytes": 1381637
+  },
+  "candle_heads|binance|um|TOSHIUSDT": {
+   "files": 14,
+   "rows": 65179,
+   "bytes": 314934
+  },
+  "candle_heads|binance|um|TOWNSUSDT": {
+   "files": 14,
+   "rows": 72852,
+   "bytes": 348570
+  },
+  "candle_heads|binance|um|TRADOORUSDT": {
+   "files": 14,
+   "rows": 64766,
+   "bytes": 313279
+  },
+  "candle_heads|binance|um|TRBUSDT": {
+   "files": 51,
+   "rows": 495039,
+   "bytes": 2729635
+  },
+  "candle_heads|binance|um|TREEUSDT": {
+   "files": 14,
+   "rows": 74115,
+   "bytes": 353981
+  },
+  "candle_heads|binance|um|TRIAUSDT": {
+   "files": 7,
+   "rows": 39568,
+   "bytes": 189787
+  },
+  "candle_heads|binance|um|TRUMPUSDT": {
+   "files": 14,
+   "rows": 108682,
+   "bytes": 569616
+  },
+  "candle_heads|binance|um|TRUSTUSDT": {
+   "files": 14,
+   "rows": 56329,
+   "bytes": 275945
+  },
+  "candle_heads|binance|um|TRUTHUSDT": {
+   "files": 14,
+   "rows": 62609,
+   "bytes": 303798
+  },
+  "candle_heads|binance|um|TRXUSDT": {
+   "files": 51,
+   "rows": 536790,
+   "bytes": 2977274
+  },
+  "candle_heads|binance|um|TSTUSDT": {
+   "files": 14,
+   "rows": 104722,
+   "bytes": 493495
+  },
+  "candle_heads|binance|um|TURBOUSDT": {
+   "files": 23,
+   "rows": 249766,
+   "bytes": 1340159
+  },
+  "candle_heads|binance|um|TURTLEUSDT": {
+   "files": 14,
+   "rows": 58808,
+   "bytes": 286700
+  },
+  "candle_heads|binance|um|TUSDT": {
+   "files": 30,
+   "rows": 336903,
+   "bytes": 1804805
+  },
+  "candle_heads|binance|um|TUTUSDT": {
+   "files": 14,
+   "rows": 97732,
+   "bytes": 462314
+  },
+  "candle_heads|binance|um|TWTUSDT": {
+   "files": 30,
+   "rows": 287393,
+   "bytes": 1582593
+  },
+  "candle_heads|binance|um|UAIUSDT": {
+   "files": 14,
+   "rows": 56135,
+   "bytes": 274988
+  },
+  "candle_heads|binance|um|UBUSDT": {
+   "files": 14,
+   "rows": 66042,
+   "bytes": 318527
+  },
+  "candle_heads|binance|um|UMAUSDT": {
+   "files": 30,
+   "rows": 319267,
+   "bytes": 1726455
+  },
+  "candle_heads|binance|um|UNIUSDT": {
+   "files": 51,
+   "rows": 492829,
+   "bytes": 2720390
+  },
+  "candle_heads|binance|um|USDCUSDT": {
+   "files": 30,
+   "rows": 329853,
+   "bytes": 1773991
+  },
+  "candle_heads|binance|um|USELESSUSDT": {
+   "files": 14,
+   "rows": 71068,
+   "bytes": 340943
+  },
+  "candle_heads|binance|um|USTCUSDT": {
+   "files": 30,
+   "rows": 283087,
+   "bytes": 1564101
+  },
+  "candle_heads|binance|um|USUALUSDT": {
+   "files": 21,
+   "rows": 114262,
+   "bytes": 609527
+  },
+  "candle_heads|binance|um|USUSDT": {
+   "files": 14,
+   "rows": 49661,
+   "bytes": 246981
+  },
+  "candle_heads|binance|um|VANAUSDT": {
+   "files": 23,
+   "rows": 213780,
+   "bytes": 1178704
+  },
+  "candle_heads|binance|um|VELODROMEUSDT": {
+   "files": 23,
+   "rows": 214299,
+   "bytes": 1181536
+  },
+  "candle_heads|binance|um|VELVETUSDT": {
+   "files": 14,
+   "rows": 76671,
+   "bytes": 365702
+  },
+  "candle_heads|binance|um|VETUSDT": {
+   "files": 51,
+   "rows": 531297,
+   "bytes": 2893839
+  },
+  "candle_heads|binance|um|VIRTUALUSDT": {
+   "files": 23,
+   "rows": 214579,
+   "bytes": 1182548
+  },
+  "candle_heads|binance|um|VTHOUSDT": {
+   "files": 14,
+   "rows": 107989,
+   "bytes": 565984
+  },
+  "candle_heads|binance|um|VVVUSDT": {
+   "files": 14,
+   "rows": 106738,
+   "bytes": 502412
+  },
+  "candle_heads|binance|um|WALUSDT": {
+   "files": 14,
+   "rows": 96425,
+   "bytes": 456469
+  },
+  "candle_heads|binance|um|WAXPUSDT": {
+   "files": 30,
+   "rows": 290272,
+   "bytes": 1595008
+  },
+  "candle_heads|binance|um|WCTUSDT": {
+   "files": 14,
+   "rows": 93038,
+   "bytes": 441248
+  },
+  "candle_heads|binance|um|WETUSDT": {
+   "files": 14,
+   "rows": 50048,
+   "bytes": 248771
+  },
+  "candle_heads|binance|um|WIFUSDT": {
+   "files": 23,
+   "rows": 273715,
+   "bytes": 1503993
+  },
+  "candle_heads|binance|um|WLDUSDT": {
+   "files": 30,
+   "rows": 305770,
+   "bytes": 1663294
+  },
+  "candle_heads|binance|um|WLFIUSDT": {
+   "files": 14,
+   "rows": 69656,
+   "bytes": 334509
+  },
+  "candle_heads|binance|um|WOOUSDT": {
+   "files": 37,
+   "rows": 390795,
+   "bytes": 2119267
+  },
+  "candle_heads|binance|um|WUSDT": {
+   "files": 23,
+   "rows": 260026,
+   "bytes": 1385365
+  },
+  "candle_heads|binance|um|XAIUSDT": {
+   "files": 23,
+   "rows": 275336,
+   "bytes": 1512938
+  },
+  "candle_heads|binance|um|XANUSDT": {
+   "files": 14,
+   "rows": 62982,
+   "bytes": 305257
+  },
+  "candle_heads|binance|um|XAUTUSDT": {
+   "files": 7,
+   "rows": 30915,
+   "bytes": 150745
+  },
+  "candle_heads|binance|um|XLMUSDT": {
+   "files": 51,
+   "rows": 535890,
+   "bytes": 2974225
+  },
+  "candle_heads|binance|um|XMRUSDT": {
+   "files": 49,
+   "rows": 434699,
+   "bytes": 2337732
+  },
+  "candle_heads|binance|um|XNYUSDT": {
+   "files": 14,
+   "rows": 71434,
+   "bytes": 342201
+  },
+  "candle_heads|binance|um|XPINUSDT": {
+   "files": 14,
+   "rows": 66059,
+   "bytes": 318746
+  },
+  "candle_heads|binance|um|XPLUSDT": {
+   "files": 14,
+   "rows": 69829,
+   "bytes": 335207
+  },
+  "candle_heads|binance|um|XRPUSDT": {
+   "files": 51,
+   "rows": 538409,
+   "bytes": 2985614
+  },
+  "candle_heads|binance|um|XTZUSDT": {
+   "files": 51,
+   "rows": 533320,
+   "bytes": 2903158
+  },
+  "candle_heads|binance|um|XVGUSDT": {
+   "files": 30,
+   "rows": 308902,
+   "bytes": 1679973
+  },
+  "candle_heads|binance|um|XVSUSDT": {
+   "files": 30,
+   "rows": 324202,
+   "bytes": 1748497
+  },
+  "candle_heads|binance|um|YBUSDT": {
+   "files": 14,
+   "rows": 60971,
+   "bytes": 295639
+  },
+  "candle_heads|binance|um|YFIUSDT": {
+   "files": 51,
+   "rows": 495579,
+   "bytes": 2731999
+  },
+  "candle_heads|binance|um|YGGUSDT": {
+   "files": 30,
+   "rows": 303675,
+   "bytes": 1654142
+  },
+  "candle_heads|binance|um|ZAMAUSDT": {
+   "files": 7,
+   "rows": 44632,
+   "bytes": 212196
+  },
+  "candle_heads|binance|um|ZBTUSDT": {
+   "files": 14,
+   "rows": 59735,
+   "bytes": 290427
+  },
+  "candle_heads|binance|um|ZECUSDT": {
+   "files": 51,
+   "rows": 533010,
+   "bytes": 2901346
+  },
+  "candle_heads|binance|um|ZENUSDT": {
+   "files": 51,
+   "rows": 480279,
+   "bytes": 2664846
+  },
+  "candle_heads|binance|um|ZEREBROUSDT": {
+   "files": 14,
+   "rows": 111555,
+   "bytes": 584717
+  },
+  "candle_heads|binance|um|ZESTUSDT": {
+   "files": 7,
+   "rows": 18315,
+   "bytes": 92760
+  },
+  "candle_heads|binance|um|ZETAUSDT": {
+   "files": 21,
+   "rows": 171896,
+   "bytes": 866996
+  },
+  "candle_heads|binance|um|ZILUSDT": {
+   "files": 51,
+   "rows": 508595,
+   "bytes": 2792383
+  },
+  "candle_heads|binance|um|ZKCUSDT": {
+   "files": 14,
+   "rows": 65475,
+   "bytes": 316142
+  },
+  "candle_heads|binance|um|ZKPUSDT": {
+   "files": 14,
+   "rows": 48045,
+   "bytes": 240152
+  },
+  "candle_heads|binance|um|ZKUSDT": {
+   "files": 23,
+   "rows": 246559,
+   "bytes": 1325044
+  },
+  "candle_heads|binance|um|ZORAUSDT": {
+   "files": 14,
+   "rows": 74858,
+   "bytes": 357203
+  },
+  "candle_heads|binance|um|ZROUSDT": {
+   "files": 23,
+   "rows": 245993,
+   "bytes": 1322599
+  },
+  "candle_heads|binance|um|ZRXUSDT": {
+   "files": 51,
+   "rows": 508293,
+   "bytes": 2791273
+  },
+  "candle_heads|binance|um|哈基米USDT": {
+   "files": 7,
+   "rows": 1447,
+   "bytes": 19557
+  },
+  "candle_heads|binance|um|币安人生USDT": {
+   "files": 14,
+   "rows": 59198,
+   "bytes": 288807
+  },
+  "candle_heads|binance|um|我踏马来了USDT": {
+   "files": 7,
+   "rows": 42432,
+   "bytes": 202868
+  },
+  "candle_heads|binance|um|牛来USDT": {
+   "files": 7,
+   "rows": 2675,
+   "bytes": 24778
+  },
+  "candle_heads|binance|um|龙虾USDT": {
+   "files": 7,
+   "rows": 33635,
+   "bytes": 163059
+  },
+  "candle_heads|okx|swap|AEON-USDT-SWAP": {
+   "files": 5,
+   "rows": 22268,
+   "bytes": 101093
+  },
+  "candle_heads|okx|swap|AI-USDT-SWAP": {
+   "files": 5,
+   "rows": 62843,
+   "bytes": 374047
+  },
+  "candle_heads|okx|swap|BLEND-USDT-SWAP": {
+   "files": 5,
+   "rows": 62881,
+   "bytes": 374363
+  },
+  "candle_heads|okx|swap|CASHCAT-USDT-SWAP": {
+   "files": 5,
+   "rows": 5092,
+   "bytes": 29951
+  },
+  "candle_heads|okx|swap|CNPY-USDT-SWAP": {
+   "files": 5,
+   "rows": 3088,
+   "bytes": 22561
+  },
+  "candle_heads|okx|swap|CORE-USDT-SWAP": {
+   "files": 14,
+   "rows": 261765,
+   "bytes": 1373416
+  },
+  "candle_heads|okx|swap|CP-USDT-SWAP": {
+   "files": 5,
+   "rows": 5317,
+   "bytes": 30716
+  },
+  "candle_heads|okx|swap|CRO-USDT-SWAP": {
+   "files": 11,
+   "rows": 262452,
+   "bytes": 1376313
+  },
+  "candle_heads|okx|swap|DATA-USDT-SWAP": {
+   "files": 5,
+   "rows": 33649,
+   "bytes": 150675
+  },
+  "candle_heads|okx|swap|DGAI-USDT-SWAP": {
+   "files": 4,
+   "rows": 1881,
+   "bytes": 15702
+  },
+  "candle_heads|okx|swap|LUNA-USDT-SWAP": {
+   "files": 11,
+   "rows": 242523,
+   "bytes": 1286574
+  },
+  "candle_heads|okx|swap|NES-USDT-SWAP": {
+   "files": 5,
+   "rows": 37278,
+   "bytes": 165694
+  },
+  "candle_heads|okx|swap|OFC-USDT-SWAP": {
+   "files": 5,
+   "rows": 71982,
+   "bytes": 406907
+  },
+  "candle_heads|okx|swap|OKB-USDT-SWAP": {
+   "files": 7,
+   "rows": 63038,
+   "bytes": 291872
+  },
+  "candle_heads|okx|swap|OL-USDT-SWAP": {
+   "files": 9,
+   "rows": 145867,
+   "bytes": 789150
+  },
+  "candle_heads|okx|swap|PI-USDT-SWAP": {
+   "files": 7,
+   "rows": 95917,
+   "bytes": 440828
+  },
+  "candle_heads|okx|swap|PROS-USDT-SWAP": {
+   "files": 5,
+   "rows": 63261,
+   "bytes": 376637
+  },
+  "candle_heads|okx|swap|RAY-USDT-SWAP": {
+   "files": 12,
+   "rows": 222158,
+   "bytes": 1194579
+  },
+  "candle_heads|okx|swap|RLS-USDT-SWAP": {
+   "files": 9,
+   "rows": 130268,
+   "bytes": 722842
+  },
+  "candle_heads|okx|swap|UP-USDT-SWAP": {
+   "files": 5,
+   "rows": 72438,
+   "bytes": 409301
+  },
+  "candles|binance|um|0GUSDT": {
+   "files": 14,
+   "rows": 65099,
+   "bytes": 3350815
+  },
+  "candles|binance|um|1000000BOBUSDT": {
+   "files": 14,
+   "rows": 83871,
+   "bytes": 3911532
+  },
+  "candles|binance|um|1000000MOGUSDT": {
+   "files": 21,
+   "rows": 121641,
+   "bytes": 6351373
+  },
+  "candles|binance|um|1000BONKUSDT": {
+   "files": 30,
+   "rows": 286649,
+   "bytes": 15881787
+  },
+  "candles|binance|um|1000CATUSDT": {
+   "files": 23,
+   "rows": 223852,
+   "bytes": 10955486
+  },
+  "candles|binance|um|1000CHEEMSUSDT": {
+   "files": 23,
+   "rows": 217560,
+   "bytes": 11341923
+  },
+  "candles|binance|um|1000FLOKIUSDT": {
+   "files": 30,
+   "rows": 322630,
+   "bytes": 16280621
+  },
+  "candles|binance|um|1000LUNCUSDT": {
+   "files": 37,
+   "rows": 365676,
+   "bytes": 18309605
+  },
+  "candles|binance|um|1000PEPEUSDT": {
+   "files": 30,
+   "rows": 323067,
+   "bytes": 19994392
+  },
+  "candles|binance|um|1000RATSUSDT": {
+   "files": 28,
+   "rows": 183358,
+   "bytes": 9464852
+  },
+  "candles|binance|um|1000SATSUSDT": {
+   "files": 30,
+   "rows": 283049,
+   "bytes": 14522586
+  },
+  "candles|binance|um|1000SHIBUSDT": {
+   "files": 44,
+   "rows": 453303,
+   "bytes": 25010720
+  },
+  "candles|binance|um|1000XECUSDT": {
+   "files": 44,
+   "rows": 430008,
+   "bytes": 20598577
+  },
+  "candles|binance|um|1INCHUSDT": {
+   "files": 51,
+   "rows": 477839,
+   "bytes": 22992603
+  },
+  "candles|binance|um|1MBABYDOGEUSDT": {
+   "files": 23,
+   "rows": 232849,
+   "bytes": 12236719
+  },
+  "candles|binance|um|2ZUSDT": {
+   "files": 14,
+   "rows": 62421,
+   "bytes": 3200493
+  },
+  "candles|binance|um|4USDT": {
+   "files": 14,
+   "rows": 61350,
+   "bytes": 3276598
+  },
+  "candles|binance|um|AAVEUSDT": {
+   "files": 51,
+   "rows": 490462,
+   "bytes": 24357758
+  },
+  "candles|binance|um|ACEUSDT": {
+   "files": 30,
+   "rows": 281999,
+   "bytes": 15048206
+  },
+  "candles|binance|um|ACHUSDT": {
+   "files": 30,
+   "rows": 335786,
+   "bytes": 17316092
+  },
+  "candles|binance|um|ACTUSDT": {
+   "files": 23,
+   "rows": 220074,
+   "bytes": 10821614
+  },
+  "candles|binance|um|ACUUSDT": {
+   "files": 7,
+   "rows": 42440,
+   "bytes": 2116781
+  },
+  "candles|binance|um|ADAUSDT": {
+   "files": 51,
+   "rows": 537073,
+   "bytes": 27769032
+  },
+  "candles|binance|um|AEROUSDT": {
+   "files": 23,
+   "rows": 215920,
+   "bytes": 10789006
+  },
+  "candles|binance|um|AEVOUSDT": {
+   "files": 23,
+   "rows": 266493,
+   "bytes": 13088061
+  },
+  "candles|binance|um|AGLDUSDT": {
+   "files": 30,
+   "rows": 307615,
+   "bytes": 14427367
+  },
+  "candles|binance|um|AGTUSDT": {
+   "files": 14,
+   "rows": 86737,
+   "bytes": 4620519
+  },
+  "candles|binance|um|AIAUSDT": {
+   "files": 8,
+   "rows": 46202,
+   "bytes": 2209185
+  },
+  "candles|binance|um|AIGENSYNUSDT": {
+   "files": 7,
+   "rows": 24789,
+   "bytes": 1208852
+  },
+  "candles|binance|um|AINUSDT": {
+   "files": 14,
+   "rows": 77556,
+   "bytes": 3875722
+  },
+  "candles|binance|um|AIOTUSDT": {
+   "files": 14,
+   "rows": 90321,
+   "bytes": 4723008
+  },
+  "candles|binance|um|AIOUSDT": {
+   "files": 14,
+   "rows": 71430,
+   "bytes": 3675220
+  },
+  "candles|binance|um|AIXBTUSDT": {
+   "files": 21,
+   "rows": 113857,
+   "bytes": 6094162
+  },
+  "candles|binance|um|AKEUSDT": {
+   "files": 14,
+   "rows": 63501,
+   "bytes": 3514492
+  },
+  "candles|binance|um|AKTUSDT": {
+   "files": 21,
+   "rows": 119670,
+   "bytes": 5932888
+  },
+  "candles|binance|um|ALCHUSDT": {
+   "files": 14,
+   "rows": 110669,
+   "bytes": 5803753
+  },
+  "candles|binance|um|ALGOUSDT": {
+   "files": 51,
+   "rows": 512406,
+   "bytes": 25759743
+  },
+  "candles|binance|um|ALICEUSDT": {
+   "files": 44,
+   "rows": 463311,
+   "bytes": 21653497
+  },
+  "candles|binance|um|ALLOUSDT": {
+   "files": 14,
+   "rows": 55210,
+   "bytes": 2961173
+  },
+  "candles|binance|um|ALLUSDT": {
+   "files": 14,
+   "rows": 72704,
+   "bytes": 3166188
+  },
+  "candles|binance|um|ALPINEUSDT": {
+   "files": 14,
+   "rows": 89263,
+   "bytes": 4356798
+  },
+  "candles|binance|um|ALTUSDT": {
+   "files": 23,
+   "rows": 275129,
+   "bytes": 13747044
+  },
+  "candles|binance|um|ANIMEUSDT": {
+   "files": 14,
+   "rows": 107747,
+   "bytes": 5392735
+  },
+  "candles|binance|um|ANKRUSDT": {
+   "files": 44,
+   "rows": 472102,
+   "bytes": 23415763
+  },
+  "candles|binance|um|APEUSDT": {
+   "files": 37,
+   "rows": 397342,
+   "bytes": 19093965
+  },
+  "candles|binance|um|API3USDT": {
+   "files": 37,
+   "rows": 401568,
+   "bytes": 19833755
+  },
+  "candles|binance|um|APRUSDT": {
+   "files": 14,
+   "rows": 58657,
+   "bytes": 3072927
+  },
+  "candles|binance|um|APTUSDT": {
+   "files": 37,
+   "rows": 358558,
+   "bytes": 19454926
+  },
+  "candles|binance|um|ARBUSDT": {
+   "files": 30,
+   "rows": 330562,
+   "bytes": 17119886
+  },
+  "candles|binance|um|ARCUSDT": {
+   "files": 14,
+   "rows": 108857,
+   "bytes": 5718476
+  },
+  "candles|binance|um|ARIAUSDT": {
+   "files": 14,
+   "rows": 67653,
+   "bytes": 3450722
+  },
+  "candles|binance|um|ARKMUSDT": {
+   "files": 30,
+   "rows": 307794,
+   "bytes": 14810510
+  },
+  "candles|binance|um|ARKUSDT": {
+   "files": 30,
+   "rows": 298153,
+   "bytes": 13483994
+  },
+  "candles|binance|um|ARPAUSDT": {
+   "files": 44,
+   "rows": 424248,
+   "bytes": 20566791
+  },
+  "candles|binance|um|ARUSDT": {
+   "files": 44,
+   "rows": 428028,
+   "bytes": 21238668
+  },
+  "candles|binance|um|ARXUSDT": {
+   "files": 7,
+   "rows": 14960,
+   "bytes": 721807
+  },
+  "candles|binance|um|ASRUSDT": {
+   "files": 14,
+   "rows": 89264,
+   "bytes": 3991470
+  },
+  "candles|binance|um|ASTERUSDT": {
+   "files": 14,
+   "rows": 64764,
+   "bytes": 3294013
+  },
+  "candles|binance|um|ASTRUSDT": {
+   "files": 30,
+   "rows": 337315,
+   "bytes": 17252214
+  },
+  "candles|binance|um|ATHUSDT": {
+   "files": 14,
+   "rows": 95339,
+   "bytes": 4652896
+  },
+  "candles|binance|um|ATOMUSDT": {
+   "files": 51,
+   "rows": 535783,
+   "bytes": 27880803
+  },
+  "candles|binance|um|ATUSDT": {
+   "files": 14,
+   "rows": 57570,
+   "bytes": 2791759
+  },
+  "candles|binance|um|AUCTIONUSDT": {
+   "files": 30,
+   "rows": 282516,
+   "bytes": 14125528
+  },
+  "candles|binance|um|AUSDT": {
+   "files": 14,
+   "rows": 85314,
+   "bytes": 4162192
+  },
+  "candles|binance|um|AVAAIUSDT": {
+   "files": 14,
+   "rows": 108856,
+   "bytes": 5553204
+  },
+  "candles|binance|um|AVAUSDT": {
+   "files": 23,
+   "rows": 214308,
+   "bytes": 9901029
+  },
+  "candles|binance|um|AVAXUSDT": {
+   "files": 51,
+   "rows": 494602,
+   "bytes": 25232211
+  },
+  "candles|binance|um|AVNTUSDT": {
+   "files": 14,
+   "rows": 66543,
+   "bytes": 3345260
+  },
+  "candles|binance|um|AWEUSDT": {
+   "files": 14,
+   "rows": 86574,
+   "bytes": 4255039
+  },
+  "candles|binance|um|AXLUSDT": {
+   "files": 23,
+   "rows": 268639,
+   "bytes": 13196180
+  },
+  "candles|binance|um|AXSUSDT": {
+   "files": 51,
+   "rows": 484162,
+   "bytes": 22920775
+  },
+  "candles|binance|um|AZTECUSDT": {
+   "files": 7,
+   "rows": 38723,
+   "bytes": 1783189
+  },
+  "candles|binance|um|B2USDT": {
+   "files": 14,
+   "rows": 89234,
+   "bytes": 4211255
+  },
+  "candles|binance|um|BABYUSDT": {
+   "files": 14,
+   "rows": 94814,
+   "bytes": 4577404
+  },
+  "candles|binance|um|BANANAS31USDT": {
+   "files": 14,
+   "rows": 97366,
+   "bytes": 5127489
+  },
+  "candles|binance|um|BANANAUSDT": {
+   "files": 23,
+   "rows": 238678,
+   "bytes": 11403133
+  },
+  "candles|binance|um|BANDUSDT": {
+   "files": 51,
+   "rows": 504682,
+   "bytes": 26195267
+  },
+  "candles|binance|um|BANKUSDT": {
+   "files": 14,
+   "rows": 92437,
+   "bytes": 4803482
+  },
+  "candles|binance|um|BANUSDT": {
+   "files": 21,
+   "rows": 119670,
+   "bytes": 5883305
+  },
+  "candles|binance|um|BARDUSDT": {
+   "files": 14,
+   "rows": 64953,
+   "bytes": 3211620
+  },
+  "candles|binance|um|BASEDUSDT": {
+   "files": 7,
+   "rows": 30220,
+   "bytes": 1569509
+  },
+  "candles|binance|um|BASUSDT": {
+   "files": 14,
+   "rows": 69074,
+   "bytes": 3847100
+  },
+  "candles|binance|um|BATUSDT": {
+   "files": 51,
+   "rows": 534733,
+   "bytes": 25948761
+  },
+  "candles|binance|um|BBUSDT": {
+   "files": 23,
+   "rows": 255520,
+   "bytes": 12549786
+  },
+  "candles|binance|um|BCHUSDT": {
+   "files": 58,
+   "rows": 542712,
+   "bytes": 30722595
+  },
+  "candles|binance|um|BEAMXUSDT": {
+   "files": 30,
+   "rows": 287553,
+   "bytes": 14661330
+  },
+  "candles|binance|um|BEATUSDT": {
+   "files": 14,
+   "rows": 55043,
+   "bytes": 3047720
+  },
+  "candles|binance|um|BELUSDT": {
+   "files": 51,
+   "rows": 484522,
+   "bytes": 23569667
+  },
+  "candles|binance|um|BERAUSDT": {
+   "files": 14,
+   "rows": 105243,
+   "bytes": 5270485
+  },
+  "candles|binance|um|BICOUSDT": {
+   "files": 30,
+   "rows": 296560,
+   "bytes": 13899028
+  },
+  "candles|binance|um|BIGTIMEUSDT": {
+   "files": 30,
+   "rows": 294026,
+   "bytes": 14342144
+  },
+  "candles|binance|um|BILLUSDT": {
+   "files": 7,
+   "rows": 23393,
+   "bytes": 1251813
+  },
+  "candles|binance|um|BIOUSDT": {
+   "files": 14,
+   "rows": 111383,
+   "bytes": 5803889
+  },
+  "candles|binance|um|BIRBUSDT": {
+   "files": 7,
+   "rows": 41056,
+   "bytes": 2113174
+  },
+  "candles|binance|um|BLESSUSDT": {
+   "files": 14,
+   "rows": 64064,
+   "bytes": 3381274
+  },
+  "candles|binance|um|BLUAIUSDT": {
+   "files": 14,
+   "rows": 59010,
+   "bytes": 3129878
+  },
+  "candles|binance|um|BLURUSDT": {
+   "files": 30,
+   "rows": 324103,
+   "bytes": 15832931
+  },
+  "candles|binance|um|BMTUSDT": {
+   "files": 14,
+   "rows": 98234,
+   "bytes": 4675961
+  },
+  "candles|binance|um|BNBUSDT": {
+   "files": 51,
+   "rows": 535273,
+   "bytes": 29815807
+  },
+  "candles|binance|um|BNTUSDT": {
+   "files": 30,
+   "rows": 305383,
+   "bytes": 13880296
+  },
+  "candles|binance|um|BOMEUSDT": {
+   "files": 23,
+   "rows": 265960,
+   "bytes": 13901955
+  },
+  "candles|binance|um|BRETTUSDT": {
+   "files": 21,
+   "rows": 138565,
+   "bytes": 7065206
+  },
+  "candles|binance|um|BREVUSDT": {
+   "files": 14,
+   "rows": 46416,
+   "bytes": 2217859
+  },
+  "candles|binance|um|BROCCOLI714USDT": {
+   "files": 14,
+   "rows": 97547,
+   "bytes": 4619012
+  },
+  "candles|binance|um|BROCCOLIF3BUSDT": {
+   "files": 14,
+   "rows": 97546,
+   "bytes": 4996664
+  },
+  "candles|binance|um|BRUSDT": {
+   "files": 14,
+   "rows": 97520,
+   "bytes": 4823961
+  },
+  "candles|binance|um|BSBUSDT": {
+   "files": 7,
+   "rows": 31109,
+   "bytes": 1815947
+  },
+  "candles|binance|um|BSVUSDT": {
+   "files": 28,
+   "rows": 193449,
+   "bytes": 8459347
+  },
+  "candles|binance|um|BTCDOMUSDT": {
+   "files": 39,
+   "rows": 228727,
+   "bytes": 11125653
+  },
+  "candles|binance|um|BTCUSDT": {
+   "files": 58,
+   "rows": 542712,
+   "bytes": 34949083
+  },
+  "candles|binance|um|BTRUSDT": {
+   "files": 14,
+   "rows": 68917,
+   "bytes": 3522342
+  },
+  "candles|binance|um|BTWUSDT": {
+   "files": 7,
+   "rows": 18309,
+   "bytes": 1067814
+  },
+  "candles|binance|um|BULLAUSDT": {
+   "files": 14,
+   "rows": 78647,
+   "bytes": 4051873
+  },
+  "candles|binance|um|BUSDT": {
+   "files": 14,
+   "rows": 86331,
+   "bytes": 4264730
+  },
+  "candles|binance|um|C98USDT": {
+   "files": 44,
+   "rows": 434328,
+   "bytes": 20248212
+  },
+  "candles|binance|um|CAKEUSDT": {
+   "files": 30,
+   "rows": 290259,
+   "bytes": 14411269
+  },
+  "candles|binance|um|CAPUSDT": {
+   "files": 7,
+   "rows": 14189,
+   "bytes": 747899
+  },
+  "candles|binance|um|CARVUSDT": {
+   "files": 14,
+   "rows": 72470,
+   "bytes": 3304771
+  },
+  "candles|binance|um|CATIUSDT": {
+   "files": 23,
+   "rows": 232129,
+   "bytes": 10695690
+  },
+  "candles|binance|um|CCUSDT": {
+   "files": 14,
+   "rows": 57204,
+   "bytes": 2885474
+  },
+  "candles|binance|um|CELOUSDT": {
+   "files": 44,
+   "rows": 428171,
+   "bytes": 19808690
+  },
+  "candles|binance|um|CELRUSDT": {
+   "files": 44,
+   "rows": 460895,
+   "bytes": 21984789
+  },
+  "candles|binance|um|CETUSUSDT": {
+   "files": 23,
+   "rows": 220914,
+   "bytes": 10522342
+  },
+  "candles|binance|um|CFGUSDT": {
+   "files": 7,
+   "rows": 32700,
+   "bytes": 1532568
+  },
+  "candles|binance|um|CFXUSDT": {
+   "files": 30,
+   "rows": 336099,
+   "bytes": 16753948
+  },
+  "candles|binance|um|CGPTUSDT": {
+   "files": 21,
+   "rows": 113835,
+   "bytes": 5730939
+  },
+  "candles|binance|um|CHILLGUYUSDT": {
+   "files": 21,
+   "rows": 118009,
+   "bytes": 6069468
+  },
+  "candles|binance|um|CHIPUSDT": {
+   "files": 7,
+   "rows": 27165,
+   "bytes": 1400232
+  },
+  "candles|binance|um|CHRUSDT": {
+   "files": 44,
+   "rows": 463955,
+   "bytes": 21375698
+  },
+  "candles|binance|um|CHZUSDT": {
+   "files": 44,
+   "rows": 472955,
+   "bytes": 24660442
+  },
+  "candles|binance|um|CKBUSDT": {
+   "files": 30,
+   "rows": 334676,
+   "bytes": 16736626
+  },
+  "candles|binance|um|CLANKERUSDT": {
+   "files": 14,
+   "rows": 55027,
+   "bytes": 2524618
+  },
+  "candles|binance|um|CLOUSDT": {
+   "files": 14,
+   "rows": 60253,
+   "bytes": 3190931
+  },
+  "candles|binance|um|COAIUSDT": {
+   "files": 14,
+   "rows": 63703,
+   "bytes": 3062345
+  },
+  "candles|binance|um|COLLECTUSDT": {
+   "files": 14,
+   "rows": 46199,
+   "bytes": 2354791
+  },
+  "candles|binance|um|COMPUSDT": {
+   "files": 51,
+   "rows": 509839,
+   "bytes": 26120119
+  },
+  "candles|binance|um|COOKIEUSDT": {
+   "files": 14,
+   "rows": 110653,
+   "bytes": 5416234
+  },
+  "candles|binance|um|COTIUSDT": {
+   "files": 44,
+   "rows": 464315,
+   "bytes": 23753287
+  },
+  "candles|binance|um|COWUSDT": {
+   "files": 23,
+   "rows": 220918,
+   "bytes": 9832679
+  },
+  "candles|binance|um|CROSSUSDT": {
+   "files": 14,
+   "rows": 77540,
+   "bytes": 3905204
+  },
+  "candles|binance|um|CRVUSDT": {
+   "files": 51,
+   "rows": 498515,
+   "bytes": 23893413
+  },
+  "candles|binance|um|CTKUSDT": {
+   "files": 19,
+   "rows": 97184,
+   "bytes": 4019486
+  },
+  "candles|binance|um|CTRUSDT": {
+   "files": 7,
+   "rows": 19587,
+   "bytes": 968337
+  },
+  "candles|binance|um|CTSIUSDT": {
+   "files": 44,
+   "rows": 422941,
+   "bytes": 19154585
+  },
+  "candles|binance|um|CUSDT": {
+   "files": 14,
+   "rows": 76650,
+   "bytes": 3904165
+  },
+  "candles|binance|um|CVCUSDT": {
+   "files": 19,
+   "rows": 91839,
+   "bytes": 4242956
+  },
+  "candles|binance|um|CVXUSDT": {
+   "files": 17,
+   "rows": 80210,
+   "bytes": 3468922
+  },
+  "candles|binance|um|CYBERUSDT": {
+   "files": 30,
+   "rows": 303356,
+   "bytes": 14381654
+  },
+  "candles|binance|um|CYSUSDT": {
+   "files": 14,
+   "rows": 49636,
+   "bytes": 2464724
+  },
+  "candles|binance|um|DASHUSDT": {
+   "files": 51,
+   "rows": 536306,
+   "bytes": 27326726
+  },
+  "candles|binance|um|DATAIPUSDT": {
+   "files": 7,
+   "rows": 13129,
+   "bytes": 596797
+  },
+  "candles|binance|um|DEEPUSDT": {
+   "files": 14,
+   "rows": 91774,
+   "bytes": 4536295
+  },
+  "candles|binance|um|DEXEUSDT": {
+   "files": 21,
+   "rows": 113173,
+   "bytes": 6216237
+  },
+  "candles|binance|um|DIAUSDT": {
+   "files": 23,
+   "rows": 229913,
+   "bytes": 10033486
+  },
+  "candles|binance|um|DODOXUSDT": {
+   "files": 28,
+   "rows": 206575,
+   "bytes": 11424658
+  },
+  "candles|binance|um|DOGEUSDT": {
+   "files": 51,
+   "rows": 508039,
+   "bytes": 28144128
+  },
+  "candles|binance|um|DOGSUSDT": {
+   "files": 23,
+   "rows": 236573,
+   "bytes": 12151903
+  },
+  "candles|binance|um|DOLOUSDT": {
+   "files": 14,
+   "rows": 90195,
+   "bytes": 4633177
+  },
+  "candles|binance|um|DOODUSDT": {
+   "files": 14,
+   "rows": 88677,
+   "bytes": 4683954
+  },
+  "candles|binance|um|DOSUSDT": {
+   "files": 7,
+   "rows": 6046,
+   "bytes": 320859
+  },
+  "candles|binance|um|DOTUSDT": {
+   "files": 51,
+   "rows": 500315,
+   "bytes": 25621109
+  },
+  "candles|binance|um|DRIFTUSDT": {
+   "files": 21,
+   "rows": 121422,
+   "bytes": 6042717
+  },
+  "candles|binance|um|DUSKUSDT": {
+   "files": 37,
+   "rows": 409801,
+   "bytes": 21274347
+  },
+  "candles|binance|um|DYDXUSDT": {
+   "files": 44,
+   "rows": 431221,
+   "bytes": 20684038
+  },
+  "candles|binance|um|DYMUSDT": {
+   "files": 23,
+   "rows": 272795,
+   "bytes": 13662485
+  },
+  "candles|binance|um|EDENUSDT": {
+   "files": 14,
+   "rows": 62776,
+   "bytes": 3119655
+  },
+  "candles|binance|um|EDGEUSDT": {
+   "files": 7,
+   "rows": 32153,
+   "bytes": 1679613
+  },
+  "candles|binance|um|EDUUSDT": {
+   "files": 30,
+   "rows": 323696,
+   "bytes": 15154120
+  },
+  "candles|binance|um|EGLDUSDT": {
+   "files": 51,
+   "rows": 496175,
+   "bytes": 23955462
+  },
+  "candles|binance|um|EIGENUSDT": {
+   "files": 23,
+   "rows": 230142,
+   "bytes": 11788013
+  },
+  "candles|binance|um|ELSAUSDT": {
+   "files": 7,
+   "rows": 42285,
+   "bytes": 2049995
+  },
+  "candles|binance|um|ENAUSDT": {
+   "files": 23,
+   "rows": 262853,
+   "bytes": 13478396
+  },
+  "candles|binance|um|ENJUSDT": {
+   "files": 51,
+   "rows": 493475,
+   "bytes": 24979878
+  },
+  "candles|binance|um|ENSOUSDT": {
+   "files": 14,
+   "rows": 60270,
+   "bytes": 3136068
+  },
+  "candles|binance|um|ENSUSDT": {
+   "files": 44,
+   "rows": 416641,
+   "bytes": 20846543
+  },
+  "candles|binance|um|EPICUSDT": {
+   "files": 14,
+   "rows": 98977,
+   "bytes": 5115449
+  },
+  "candles|binance|um|ERAUSDT": {
+   "files": 14,
+   "rows": 76243,
+   "bytes": 3641535
+  },
+  "candles|binance|um|ESPORTSUSDT": {
+   "files": 14,
+   "rows": 74123,
+   "bytes": 3985548
+  },
+  "candles|binance|um|ESPUSDT": {
+   "files": 7,
+   "rows": 38857,
+   "bytes": 1954566
+  },
+  "candles|binance|um|ETCUSDT": {
+   "files": 51,
+   "rows": 539726,
+   "bytes": 29321160
+  },
+  "candles|binance|um|ETHFIUSDT": {
+   "files": 23,
+   "rows": 265532,
+   "bytes": 13674786
+  },
+  "candles|binance|um|ETHUSDT": {
+   "files": 58,
+   "rows": 542665,
+   "bytes": 34903308
+  },
+  "candles|binance|um|ETHWUSDT": {
+   "files": 28,
+   "rows": 186412,
+   "bytes": 8765286
+  },
+  "candles|binance|um|EULUSDT": {
+   "files": 14,
+   "rows": 60410,
+   "bytes": 3042693
+  },
+  "candles|binance|um|EVAAUSDT": {
+   "files": 14,
+   "rows": 62240,
+   "bytes": 3249689
+  },
+  "candles|binance|um|FARTCOINUSDT": {
+   "files": 21,
+   "rows": 113839,
+   "bytes": 6315420
+  },
+  "candles|binance|um|FETUSDT": {
+   "files": 30,
+   "rows": 342308,
+   "bytes": 17103426
+  },
+  "candles|binance|um|FFUSDT": {
+   "files": 14,
+   "rows": 62937,
+   "bytes": 3207588
+  },
+  "candles|binance|um|FHEUSDT": {
+   "files": 14,
+   "rows": 93526,
+   "bytes": 4676018
+  },
+  "candles|binance|um|FIDAUSDT": {
+   "files": 23,
+   "rows": 232253,
+   "bytes": 11102125
+  },
+  "candles|binance|um|FIGHTUSDT": {
+   "files": 7,
+   "rows": 42066,
+   "bytes": 2128318
+  },
+  "candles|binance|um|FILUSDT": {
+   "files": 51,
+   "rows": 489932,
+   "bytes": 25139217
+  },
+  "candles|binance|um|FLOCKUSDT": {
+   "files": 14,
+   "rows": 66589,
+   "bytes": 3168397
+  },
+  "candles|binance|um|FLOWUSDT": {
+   "files": 37,
+   "rows": 403191,
+   "bytes": 18700312
+  },
+  "candles|binance|um|FLUIDUSDT": {
+   "files": 14,
+   "rows": 63862,
+   "bytes": 2906958
+  },
+  "candles|binance|um|FLUXUSDT": {
+   "files": 23,
+   "rows": 235175,
+   "bytes": 10478867
+  },
+  "candles|binance|um|FOGOUSDT": {
+   "files": 7,
+   "rows": 44393,
+   "bytes": 2176783
+  },
+  "candles|binance|um|FOLKSUSDT": {
+   "files": 14,
+   "rows": 56104,
+   "bytes": 2704200
+  },
+  "candles|binance|um|FORMUSDT": {
+   "files": 14,
+   "rows": 97897,
+   "bytes": 5006502
+  },
+  "candles|binance|um|FRAXUSDT": {
+   "files": 7,
+   "rows": 43537,
+   "bytes": 2016687
+  },
+  "candles|binance|um|FUSDT": {
+   "files": 14,
+   "rows": 81483,
+   "bytes": 4122013
+  },
+  "candles|binance|um|GALAUSDT": {
+   "files": 44,
+   "rows": 429781,
+   "bytes": 22037032
+  },
+  "candles|binance|um|GASUSDT": {
+   "files": 30,
+   "rows": 291727,
+   "bytes": 13182446
+  },
+  "candles|binance|um|GENIUSUSDT": {
+   "files": 7,
+   "rows": 27192,
+   "bytes": 1323641
+  },
+  "candles|binance|um|GIGGLEUSDT": {
+   "files": 14,
+   "rows": 61166,
+   "bytes": 3082630
+  },
+  "candles|binance|um|GLMUSDT": {
+   "files": 23,
+   "rows": 270072,
+   "bytes": 13243819
+  },
+  "candles|binance|um|GMTUSDT": {
+   "files": 37,
+   "rows": 397540,
+   "bytes": 19863462
+  },
+  "candles|binance|um|GMXUSDT": {
+   "files": 30,
+   "rows": 336639,
+   "bytes": 16393671
+  },
+  "candles|binance|um|GOATUSDT": {
+   "files": 21,
+   "rows": 124137,
+   "bytes": 6371257
+  },
+  "candles|binance|um|GPSUSDT": {
+   "files": 14,
+   "rows": 103230,
+   "bytes": 5173757
+  },
+  "candles|binance|um|GRAMUSDT": {
+   "files": 7,
+   "rows": 13297,
+   "bytes": 610037
+  },
+  "candles|binance|um|GRASSUSDT": {
+   "files": 21,
+   "rows": 121423,
+   "bytes": 6563221
+  },
+  "candles|binance|um|GRIFFAINUSDT": {
+   "files": 14,
+   "rows": 111537,
+   "bytes": 5864524
+  },
+  "candles|binance|um|GRTUSDT": {
+   "files": 51,
+   "rows": 478405,
+   "bytes": 25359292
+  },
+  "candles|binance|um|GRVTUSDT": {
+   "files": 7,
+   "rows": 8043,
+   "bytes": 423340
+  },
+  "candles|binance|um|GTCUSDT": {
+   "files": 44,
+   "rows": 447111,
+   "bytes": 20690326
+  },
+  "candles|binance|um|GUAUSDT": {
+   "files": 14,
+   "rows": 48022,
+   "bytes": 2629689
+  },
+  "candles|binance|um|GUNUSDT": {
+   "files": 14,
+   "rows": 95700,
+   "bytes": 4741962
+  },
+  "candles|binance|um|GUSDT": {
+   "files": 23,
+   "rows": 238553,
+   "bytes": 11195202
+  },
+  "candles|binance|um|GWEIUSDT": {
+   "files": 7,
+   "rows": 41037,
+   "bytes": 2239583
+  },
+  "candles|binance|um|HAEDALUSDT": {
+   "files": 14,
+   "rows": 90194,
+   "bytes": 4595233
+  },
+  "candles|binance|um|HANAUSDT": {
+   "files": 14,
+   "rows": 63493,
+   "bytes": 3070229
+  },
+  "candles|binance|um|HBARUSDT": {
+   "files": 44,
+   "rows": 462565,
+   "bytes": 24250254
+  },
+  "candles|binance|um|HEIUSDT": {
+   "files": 14,
+   "rows": 104010,
+   "bytes": 5142220
+  },
+  "candles|binance|um|HEMIUSDT": {
+   "files": 14,
+   "rows": 68584,
+   "bytes": 3609790
+  },
+  "candles|binance|um|HIVEUSDT": {
+   "files": 21,
+   "rows": 113353,
+   "bytes": 5859438
+  },
+  "candles|binance|um|HMSTRUSDT": {
+   "files": 23,
+   "rows": 230993,
+   "bytes": 11618346
+  },
+  "candles|binance|um|HOLOUSDT": {
+   "files": 14,
+   "rows": 66187,
+   "bytes": 3192699
+  },
+  "candles|binance|um|HOMEUSDT": {
+   "files": 14,
+   "rows": 82933,
+   "bytes": 4615163
+  },
+  "candles|binance|um|HOTUSDT": {
+   "files": 44,
+   "rows": 460225,
+   "bytes": 22819218
+  },
+  "candles|binance|um|HUMAUSDT": {
+   "files": 14,
+   "rows": 85620,
+   "bytes": 4747586
+  },
+  "candles|binance|um|HUSDT": {
+   "files": 14,
+   "rows": 80247,
+   "bytes": 4451623
+  },
+  "candles|binance|um|HYPERUSDT": {
+   "files": 14,
+   "rows": 91740,
+   "bytes": 4407718
+  },
+  "candles|binance|um|HYPEUSDT": {
+   "files": 14,
+   "rows": 84920,
+   "bytes": 5085768
+  },
+  "candles|binance|um|ICNTUSDT": {
+   "files": 14,
+   "rows": 78780,
+   "bytes": 3687373
+  },
+  "candles|binance|um|ICPUSDT": {
+   "files": 44,
+   "rows": 441208,
+   "bytes": 19948189
+  },
+  "candles|binance|um|IDOLUSDT": {
+   "files": 14,
+   "rows": 78629,
+   "bytes": 3674702
+  },
+  "candles|binance|um|IDUSDT": {
+   "files": 30,
+   "rows": 330519,
+   "bytes": 16659532
+  },
+  "candles|binance|um|ILVUSDT": {
+   "files": 30,
+   "rows": 288743,
+   "bytes": 13142349
+  },
+  "candles|binance|um|IMXUSDT": {
+   "files": 37,
+   "rows": 403011,
+   "bytes": 19516367
+  },
+  "candles|binance|um|INITUSDT": {
+   "files": 14,
+   "rows": 92870,
+   "bytes": 4575010
+  },
+  "candles|binance|um|INJUSDT": {
+   "files": 37,
+   "rows": 369847,
+   "bytes": 18923791
+  },
+  "candles|binance|um|INUSDT": {
+   "files": 14,
+   "rows": 72500,
+   "bytes": 3645552
+  },
+  "candles|binance|um|INXUSDT": {
+   "files": 7,
+   "rows": 40756,
+   "bytes": 2117506
+  },
+  "candles|binance|um|IOSTUSDT": {
+   "files": 51,
+   "rows": 533246,
+   "bytes": 27694892
+  },
+  "candles|binance|um|IOTAUSDT": {
+   "files": 51,
+   "rows": 534376,
+   "bytes": 26166194
+  },
+  "candles|binance|um|IOTXUSDT": {
+   "files": 44,
+   "rows": 436441,
+   "bytes": 21041918
+  },
+  "candles|binance|um|IOUSDT": {
+   "files": 23,
+   "rows": 250242,
+   "bytes": 12260679
+  },
+  "candles|binance|um|IRYSUSDT": {
+   "files": 14,
+   "rows": 52477,
+   "bytes": 2670321
+  },
+  "candles|binance|um|JASMYUSDT": {
+   "files": 37,
+   "rows": 391261,
+   "bytes": 20632872
+  },
+  "candles|binance|um|JCTUSDT": {
+   "files": 14,
+   "rows": 55400,
+   "bytes": 2826777
+  },
+  "candles|binance|um|JELLYJELLYUSDT": {
+   "files": 14,
+   "rows": 96577,
+   "bytes": 4788433
+  },
+  "candles|binance|um|JOEUSDT": {
+   "files": 30,
+   "rows": 329456,
+   "bytes": 15747336
+  },
+  "candles|binance|um|JSTUSDT": {
+   "files": 14,
+   "rows": 90687,
+   "bytes": 4617214
+  },
+  "candles|binance|um|JTOUSDT": {
+   "files": 30,
+   "rows": 283752,
+   "bytes": 14285232
+  },
+  "candles|binance|um|JUPUSDT": {
+   "files": 23,
+   "rows": 273969,
+   "bytes": 13031550
+  },
+  "candles|binance|um|KAIAUSDT": {
+   "files": 23,
+   "rows": 215874,
+   "bytes": 9936090
+  },
+  "candles|binance|um|KAITOUSDT": {
+   "files": 14,
+   "rows": 102720,
+   "bytes": 5435702
+  },
+  "candles|binance|um|KASUSDT": {
+   "files": 28,
+   "rows": 188470,
+   "bytes": 9548399
+  },
+  "candles|binance|um|KATUSDT": {
+   "files": 7,
+   "rows": 35280,
+   "bytes": 1744831
+  },
+  "candles|binance|um|KAVAUSDT": {
+   "files": 51,
+   "rows": 504815,
+   "bytes": 25993303
+  },
+  "candles|binance|um|KERNELUSDT": {
+   "files": 14,
+   "rows": 93187,
+   "bytes": 4462640
+  },
+  "candles|binance|um|KGENUSDT": {
+   "files": 14,
+   "rows": 61490,
+   "bytes": 3141497
+  },
+  "candles|binance|um|KITEUSDT": {
+   "files": 14,
+   "rows": 57560,
+   "bytes": 3130582
+  },
+  "candles|binance|um|KMNOUSDT": {
+   "files": 21,
+   "rows": 113836,
+   "bytes": 5602332
+  },
+  "candles|binance|um|KNCUSDT": {
+   "files": 51,
+   "rows": 510792,
+   "bytes": 23851163
+  },
+  "candles|binance|um|KOMAUSDT": {
+   "files": 21,
+   "rows": 115692,
+   "bytes": 5811234
+  },
+  "candles|binance|um|KSMUSDT": {
+   "files": 51,
+   "rows": 490285,
+   "bytes": 23283629
+  },
+  "candles|binance|um|LABUSDT": {
+   "files": 14,
+   "rows": 59690,
+   "bytes": 3412002
+  },
+  "candles|binance|um|LAUSDT": {
+   "files": 14,
+   "rows": 83850,
+   "bytes": 4160075
+  },
+  "candles|binance|um|LAYERUSDT": {
+   "files": 14,
+   "rows": 104322,
+   "bytes": 5382083
+  },
+  "candles|binance|um|LDOUSDT": {
+   "files": 37,
+   "rows": 363309,
+   "bytes": 18337854
+  },
+  "candles|binance|um|LIGHTUSDT": {
+   "files": 14,
+   "rows": 63313,
+   "bytes": 3159862
+  },
+  "candles|binance|um|LINEAUSDT": {
+   "files": 14,
+   "rows": 68014,
+   "bytes": 3392696
+  },
+  "candles|binance|um|LINKUSDT": {
+   "files": 51,
+   "rows": 539546,
+   "bytes": 29495008
+  },
+  "candles|binance|um|LISTAUSDT": {
+   "files": 23,
+   "rows": 248633,
+   "bytes": 11360353
+  },
+  "candles|binance|um|LITUSDT": {
+   "files": 18,
+   "rows": 53338,
+   "bytes": 2773579
+  },
+  "candles|binance|um|LPTUSDT": {
+   "files": 44,
+   "rows": 420061,
+   "bytes": 20284340
+  },
+  "candles|binance|um|LQTYUSDT": {
+   "files": 30,
+   "rows": 332876,
+   "bytes": 16444743
+  },
+  "candles|binance|um|LSKUSDT": {
+   "files": 23,
+   "rows": 275081,
+   "bytes": 12506653
+  },
+  "candles|binance|um|LTCUSDT": {
+   "files": 51,
+   "rows": 540496,
+   "bytes": 28652648
+  },
+  "candles|binance|um|LUMIAUSDT": {
+   "files": 21,
+   "rows": 114253,
+   "bytes": 5769568
+  },
+  "candles|binance|um|LUNA2USDT": {
+   "files": 35,
+   "rows": 266409,
+   "bytes": 13467687
+  },
+  "candles|binance|um|LYNUSDT": {
+   "files": 14,
+   "rows": 61723,
+   "bytes": 3257406
+  },
+  "candles|binance|um|MAGICUSDT": {
+   "files": 30,
+   "rows": 340629,
+   "bytes": 16870133
+  },
+  "candles|binance|um|MAGMAUSDT": {
+   "files": 14,
+   "rows": 46219,
+   "bytes": 2581018
+  },
+  "candles|binance|um|MANAUSDT": {
+   "files": 44,
+   "rows": 462987,
+   "bytes": 22456307
+  },
+  "candles|binance|um|MANTAUSDT": {
+   "files": 23,
+   "rows": 276404,
+   "bytes": 13834749
+  },
+  "candles|binance|um|MANTRAUSDT": {
+   "files": 7,
+   "rows": 34919,
+   "bytes": 1743284
+  },
+  "candles|binance|um|MARSCOINUSDT": {
+   "files": 7,
+   "rows": 2328,
+   "bytes": 169912
+  },
+  "candles|binance|um|MASKUSDT": {
+   "files": 44,
+   "rows": 433313,
+   "bytes": 20501757
+  },
+  "candles|binance|um|MAVIAUSDT": {
+   "files": 15,
+   "rows": 101491,
+   "bytes": 4548570
+  },
+  "candles|binance|um|MAVUSDT": {
+   "files": 30,
+   "rows": 312958,
+   "bytes": 15081654
+  },
+  "candles|binance|um|MEGAUSDT": {
+   "files": 7,
+   "rows": 40828,
+   "bytes": 2057632
+  },
+  "candles|binance|um|MELANIAUSDT": {
+   "files": 14,
+   "rows": 108349,
+   "bytes": 5595209
+  },
+  "candles|binance|um|MEMEUSDT": {
+   "files": 30,
+   "rows": 290098,
+   "bytes": 15180119
+  },
+  "candles|binance|um|MERLUSDT": {
+   "files": 14,
+   "rows": 85136,
+   "bytes": 4431447
+  },
+  "candles|binance|um|METISUSDT": {
+   "files": 23,
+   "rows": 266725,
+   "bytes": 12260858
+  },
+  "candles|binance|um|METUSDT": {
+   "files": 14,
+   "rows": 60806,
+   "bytes": 2872806
+  },
+  "candles|binance|um|MEUSDT": {
+   "files": 23,
+   "rows": 214833,
+   "bytes": 10448046
+  },
+  "candles|binance|um|MEWUSDT": {
+   "files": 21,
+   "rows": 150063,
+   "bytes": 7737384
+  },
+  "candles|binance|um|MINAUSDT": {
+   "files": 30,
+   "rows": 338528,
+   "bytes": 16089272
+  },
+  "candles|binance|um|MIRAUSDT": {
+   "files": 14,
+   "rows": 63509,
+   "bytes": 3086577
+  },
+  "candles|binance|um|MITOUSDT": {
+   "files": 14,
+   "rows": 68696,
+   "bytes": 3442470
+  },
+  "candles|binance|um|MMTUSDT": {
+   "files": 14,
+   "rows": 56489,
+   "bytes": 2640929
+  },
+  "candles|binance|um|MOCAUSDT": {
+   "files": 21,
+   "rows": 114635,
+   "bytes": 5543416
+  },
+  "candles|binance|um|MONUSDT": {
+   "files": 14,
+   "rows": 61027,
+   "bytes": 2994804
+  },
+  "candles|binance|um|MOODENGUSDT": {
+   "files": 21,
+   "rows": 124005,
+   "bytes": 6733875
+  },
+  "candles|binance|um|MORPHOUSDT": {
+   "files": 23,
+   "rows": 217193,
+   "bytes": 11253173
+  },
+  "candles|binance|um|MOVEUSDT": {
+   "files": 23,
+   "rows": 214748,
+   "bytes": 10498249
+  },
+  "candles|binance|um|MOVRUSDT": {
+   "files": 30,
+   "rows": 280555,
+   "bytes": 13881498
+  },
+  "candles|binance|um|MTLUSDT": {
+   "files": 44,
+   "rows": 460597,
+   "bytes": 21783394
+  },
+  "candles|binance|um|MUBARAKUSDT": {
+   "files": 14,
+   "rows": 98238,
+   "bytes": 4732119
+  },
+  "candles|binance|um|MUSDT": {
+   "files": 14,
+   "rows": 78109,
+   "bytes": 4183354
+  },
+  "candles|binance|um|MYXUSDT": {
+   "files": 14,
+   "rows": 81506,
+   "bytes": 4289782
+  },
+  "candles|binance|um|NAORISUSDT": {
+   "files": 14,
+   "rows": 73766,
+   "bytes": 3674110
+  },
+  "candles|binance|um|NEARUSDT": {
+   "files": 51,
+   "rows": 490158,
+   "bytes": 23902449
+  },
+  "candles|binance|um|NEIROUSDT": {
+   "files": 23,
+   "rows": 232864,
+   "bytes": 12578201
+  },
+  "candles|binance|um|NEOUSDT": {
+   "files": 51,
+   "rows": 534024,
+   "bytes": 27581390
+  },
+  "candles|binance|um|NEWTUSDT": {
+   "files": 14,
+   "rows": 81312,
+   "bytes": 3835093
+  },
+  "candles|binance|um|NIGHTUSDT": {
+   "files": 14,
+   "rows": 50018,
+   "bytes": 2519652
+  },
+  "candles|binance|um|NILUSDT": {
+   "files": 14,
+   "rows": 96982,
+   "bytes": 4841459
+  },
+  "candles|binance|um|NMRUSDT": {
+   "files": 30,
+   "rows": 314218,
+   "bytes": 14429339
+  },
+  "candles|binance|um|NOMUSDT": {
+   "files": 14,
+   "rows": 62639,
+   "bytes": 3205187
+  },
+  "candles|binance|um|NOTUSDT": {
+   "files": 23,
+   "rows": 254984,
+   "bytes": 13125729
+  },
+  "candles|binance|um|NXPCUSDT": {
+   "files": 14,
+   "rows": 87672,
+   "bytes": 4303067
+  },
+  "candles|binance|um|OGNUSDT": {
+   "files": 44,
+   "rows": 459927,
+   "bytes": 20996246
+  },
+  "candles|binance|um|OGUSDT": {
+   "files": 14,
+   "rows": 88192,
+   "bytes": 4193985
+  },
+  "candles|binance|um|ONDOUSDT": {
+   "files": 23,
+   "rows": 276051,
+   "bytes": 14310817
+  },
+  "candles|binance|um|ONEUSDT": {
+   "files": 44,
+   "rows": 462447,
+   "bytes": 22699876
+  },
+  "candles|binance|um|ONGUSDT": {
+   "files": 30,
+   "rows": 285771,
+   "bytes": 14077398
+  },
+  "candles|binance|um|ONTUSDT": {
+   "files": 51,
+   "rows": 535108,
+   "bytes": 26170357
+  },
+  "candles|binance|um|ONUSDT": {
+   "files": 14,
+   "rows": 58496,
+   "bytes": 3003744
+  },
+  "candles|binance|um|OPENUSDT": {
+   "files": 14,
+   "rows": 66742,
+   "bytes": 3135971
+  },
+  "candles|binance|um|OPGUSDT": {
+   "files": 7,
+   "rows": 26045,
+   "bytes": 1241082
+  },
+  "candles|binance|um|OPNUSDT": {
+   "files": 7,
+   "rows": 36848,
+   "bytes": 1858614
+  },
+  "candles|binance|um|OPUSDT": {
+   "files": 37,
+   "rows": 383684,
+   "bytes": 20687189
+  },
+  "candles|binance|um|ORCAUSDT": {
+   "files": 23,
+   "rows": 215569,
+   "bytes": 9923036
+  },
+  "candles|binance|um|ORDERUSDT": {
+   "files": 14,
+   "rows": 63505,
+   "bytes": 3147870
+  },
+  "candles|binance|um|ORDIUSDT": {
+   "files": 30,
+   "rows": 289375,
+   "bytes": 14737399
+  },
+  "candles|binance|um|OUSDT": {
+   "files": 7,
+   "rows": 14734,
+   "bytes": 719648
+  },
+  "candles|binance|um|PARTIUSDT": {
+   "files": 14,
+   "rows": 96802,
+   "bytes": 4801170
+  },
+  "candles|binance|um|PAXGUSDT": {
+   "files": 14,
+   "rows": 96462,
+   "bytes": 5572568
+  },
+  "candles|binance|um|PENDLEUSDT": {
+   "files": 30,
+   "rows": 307810,
+   "bytes": 15986963
+  },
+  "candles|binance|um|PENGUUSDT": {
+   "files": 22,
+   "rows": 120466,
+   "bytes": 6943452
+  },
+  "candles|binance|um|PEOPLEUSDT": {
+   "files": 44,
+   "rows": 411888,
+   "bytes": 20603093
+  },
+  "candles|binance|um|PHAROSUSDT": {
+   "files": 7,
+   "rows": 22161,
+   "bytes": 1057966
+  },
+  "candles|binance|um|PHAUSDT": {
+   "files": 21,
+   "rows": 112115,
+   "bytes": 5713194
+  },
+  "candles|binance|um|PIEVERSEUSDT": {
+   "files": 14,
+   "rows": 54695,
+   "bytes": 2762629
+  },
+  "candles|binance|um|PIPPINUSDT": {
+   "files": 14,
+   "rows": 107624,
+   "bytes": 5699825
+  },
+  "candles|binance|um|PIXELUSDT": {
+   "files": 23,
+   "rows": 270637,
+   "bytes": 13270993
+  },
+  "candles|binance|um|PLAYUSDT": {
+   "files": 14,
+   "rows": 73789,
+   "bytes": 3713864
+  },
+  "candles|binance|um|PLUMEUSDT": {
+   "files": 14,
+   "rows": 97522,
+   "bytes": 4670195
+  },
+  "candles|binance|um|PNUTUSDT": {
+   "files": 23,
+   "rows": 220087,
+   "bytes": 11333945
+  },
+  "candles|binance|um|POLUSDT": {
+   "files": 23,
+   "rows": 233397,
+   "bytes": 11882853
+  },
+  "candles|binance|um|POLYXUSDT": {
+   "files": 30,
+   "rows": 291790,
+   "bytes": 14360507
+  },
+  "candles|binance|um|PONSUSDT": {
+   "files": 7,
+   "rows": 1451,
+   "bytes": 114472
+  },
+  "candles|binance|um|POPCATUSDT": {
+   "files": 21,
+   "rows": 138190,
+   "bytes": 6911069
+  },
+  "candles|binance|um|PORTALUSDT": {
+   "files": 23,
+   "rows": 268837,
+   "bytes": 13267592
+  },
+  "candles|binance|um|POWERUSDT": {
+   "files": 14,
+   "rows": 50752,
+   "bytes": 2714785
+  },
+  "candles|binance|um|POWRUSDT": {
+   "files": 30,
+   "rows": 291430,
+   "bytes": 13168591
+  },
+  "candles|binance|um|PRLUSDT": {
+   "files": 7,
+   "rows": 29862,
+   "bytes": 1395845
+  },
+  "candles|binance|um|PROMPTUSDT": {
+   "files": 14,
+   "rows": 93792,
+   "bytes": 4470513
+  },
+  "candles|binance|um|PROMUSDT": {
+   "files": 14,
+   "rows": 109226,
+   "bytes": 5321703
+  },
+  "candles|binance|um|PROVEUSDT": {
+   "files": 14,
+   "rows": 72832,
+   "bytes": 3589024
+  },
+  "candles|binance|um|PTBUSDT": {
+   "files": 14,
+   "rows": 67646,
+   "bytes": 3591708
+  },
+  "candles|binance|um|PUMPBTCUSDT": {
+   "files": 14,
+   "rows": 82425,
+   "bytes": 3854525
+  },
+  "candles|binance|um|PUMPUSDT": {
+   "files": 14,
+   "rows": 79340,
+   "bytes": 4159373
+  },
+  "candles|binance|um|PUNDIXUSDT": {
+   "files": 14,
+   "rows": 90345,
+   "bytes": 4045308
+  },
+  "candles|binance|um|PYTHUSDT": {
+   "files": 30,
+   "rows": 286661,
+   "bytes": 14362171
+  },
+  "candles|binance|um|QNTUSDT": {
+   "files": 37,
+   "rows": 358390,
+   "bytes": 15351772
+  },
+  "candles|binance|um|QTUMUSDT": {
+   "files": 51,
+   "rows": 533200,
+   "bytes": 24825326
+  },
+  "candles|binance|um|QUSDT": {
+   "files": 14,
+   "rows": 67865,
+   "bytes": 3738087
+  },
+  "candles|binance|um|RAREUSDT": {
+   "files": 23,
+   "rows": 238611,
+   "bytes": 11178074
+  },
+  "candles|binance|um|RAVEUSDT": {
+   "files": 14,
+   "rows": 49265,
+   "bytes": 2683314
+  },
+  "candles|binance|um|RAYSOLUSDT": {
+   "files": 21,
+   "rows": 115709,
+   "bytes": 6380829
+  },
+  "candles|binance|um|RECALLUSDT": {
+   "files": 14,
+   "rows": 60086,
+   "bytes": 2857846
+  },
+  "candles|binance|um|REDUSDT": {
+   "files": 14,
+   "rows": 100199,
+   "bytes": 4619471
+  },
+  "candles|binance|um|RENDERUSDT": {
+   "files": 23,
+   "rows": 242234,
+   "bytes": 11556912
+  },
+  "candles|binance|um|RESOLVUSDT": {
+   "files": 14,
+   "rows": 82939,
+   "bytes": 4341787
+  },
+  "candles|binance|um|REUSDT": {
+   "files": 7,
+   "rows": 15795,
+   "bytes": 837733
+  },
+  "candles|binance|um|REZUSDT": {
+   "files": 23,
+   "rows": 257864,
+   "bytes": 12576811
+  },
+  "candles|binance|um|RIFUSDT": {
+   "files": 30,
+   "rows": 292435,
+   "bytes": 14266847
+  },
+  "candles|binance|um|RIVERUSDT": {
+   "files": 14,
+   "rows": 59711,
+   "bytes": 3303427
+  },
+  "candles|binance|um|RLCUSDT": {
+   "files": 51,
+   "rows": 503847,
+   "bytes": 26019788
+  },
+  "candles|binance|um|ROBOUSDT": {
+   "files": 7,
+   "rows": 35815,
+   "bytes": 1738685
+  },
+  "candles|binance|um|RONINUSDT": {
+   "files": 23,
+   "rows": 273055,
+   "bytes": 13172443
+  },
+  "candles|binance|um|ROSEUSDT": {
+   "files": 44,
+   "rows": 410633,
+   "bytes": 20649956
+  },
+  "candles|binance|um|RPLUSDT": {
+   "files": 23,
+   "rows": 233827,
+   "bytes": 10445518
+  },
+  "candles|binance|um|RSRUSDT": {
+   "files": 51,
+   "rows": 489447,
+   "bytes": 25881375
+  },
+  "candles|binance|um|RUNEUSDT": {
+   "files": 51,
+   "rows": 498037,
+   "bytes": 23389979
+  },
+  "candles|binance|um|RVNUSDT": {
+   "files": 44,
+   "rows": 466587,
+   "bytes": 22498544
+  },
+  "candles|binance|um|SAFEUSDT": {
+   "files": 21,
+   "rows": 123986,
+   "bytes": 5868783
+  },
+  "candles|binance|um|SAGAUSDT": {
+   "files": 23,
+   "rows": 261671,
+   "bytes": 13358569
+  },
+  "candles|binance|um|SAHARAUSDT": {
+   "files": 14,
+   "rows": 80069,
+   "bytes": 3995544
+  },
+  "candles|binance|um|SANDUSDT": {
+   "files": 44,
+   "rows": 471807,
+   "bytes": 24975093
+  },
+  "candles|binance|um|SANTOSUSDT": {
+   "files": 23,
+   "rows": 222596,
+   "bytes": 10009344
+  },
+  "candles|binance|um|SAPIENUSDT": {
+   "files": 14,
+   "rows": 70129,
+   "bytes": 3590059
+  },
+  "candles|binance|um|SCRUSDT": {
+   "files": 23,
+   "rows": 223706,
+   "bytes": 10364876
+  },
+  "candles|binance|um|SEIUSDT": {
+   "files": 30,
+   "rows": 304210,
+   "bytes": 14822097
+  },
+  "candles|binance|um|SENTUSDT": {
+   "files": 14,
+   "rows": 54685,
+   "bytes": 2628112
+  },
+  "candles|binance|um|SFPUSDT": {
+   "files": 44,
+   "rows": 466897,
+   "bytes": 21147774
+  },
+  "candles|binance|um|SHELLUSDT": {
+   "files": 14,
+   "rows": 103251,
+   "bytes": 4853306
+  },
+  "candles|binance|um|SIGNUSDT": {
+   "files": 14,
+   "rows": 90698,
+   "bytes": 4493321
+  },
+  "candles|binance|um|SIRENUSDT": {
+   "files": 14,
+   "rows": 97372,
+   "bytes": 5149458
+  },
+  "candles|binance|um|SKLUSDT": {
+   "files": 51,
+   "rows": 480156,
+   "bytes": 24207877
+  },
+  "candles|binance|um|SKRUSDT": {
+   "files": 7,
+   "rows": 42281,
+   "bytes": 2307448
+  },
+  "candles|binance|um|SKYAIUSDT": {
+   "files": 14,
+   "rows": 88008,
+   "bytes": 4564756
+  },
+  "candles|binance|um|SKYUSDT": {
+   "files": 14,
+   "rows": 66608,
+   "bytes": 3200952
+  },
+  "candles|binance|um|SLPUSDT": {
+   "files": 16,
+   "rows": 79827,
+   "bytes": 3769790
+  },
+  "candles|binance|um|SLXUSDT": {
+   "files": 7,
+   "rows": 18905,
+   "bytes": 1056060
+  },
+  "candles|binance|um|SNXUSDT": {
+   "files": 51,
+   "rows": 501817,
+   "bytes": 24107481
+  },
+  "candles|binance|um|SOLUSDT": {
+   "files": 51,
+   "rows": 495747,
+   "bytes": 27128300
+  },
+  "candles|binance|um|SOLVUSDT": {
+   "files": 14,
+   "rows": 108868,
+   "bytes": 5314881
+  },
+  "candles|binance|um|SOMIUSDT": {
+   "files": 14,
+   "rows": 69289,
+   "bytes": 3313488
+  },
+  "candles|binance|um|SONICUSDT": {
+   "files": 14,
+   "rows": 110528,
+   "bytes": 5495619
+  },
+  "candles|binance|um|SOONUSDT": {
+   "files": 14,
+   "rows": 86216,
+   "bytes": 4363394
+  },
+  "candles|binance|um|SOPHUSDT": {
+   "files": 14,
+   "rows": 85282,
+   "bytes": 4594442
+  },
+  "candles|binance|um|SPACEUSDT": {
+   "files": 7,
+   "rows": 42094,
+   "bytes": 2175072
+  },
+  "candles|binance|um|SPELLUSDT": {
+   "files": 37,
+   "rows": 366238,
+   "bytes": 18907568
+  },
+  "candles|binance|um|SPKUSDT": {
+   "files": 14,
+   "rows": 81712,
+   "bytes": 4025678
+  },
+  "candles|binance|um|SPORTFUNUSDT": {
+   "files": 7,
+   "rows": 43338,
+   "bytes": 2090935
+  },
+  "candles|binance|um|SPXUSDT": {
+   "files": 21,
+   "rows": 115705,
+   "bytes": 5983351
+  },
+  "candles|binance|um|SQDUSDT": {
+   "files": 14,
+   "rows": 82765,
+   "bytes": 4121572
+  },
+  "candles|binance|um|SSVUSDT": {
+   "files": 30,
+   "rows": 335458,
+   "bytes": 16636266
+  },
+  "candles|binance|um|STABLEUSDT": {
+   "files": 14,
+   "rows": 56129,
+   "bytes": 2928361
+  },
+  "candles|binance|um|STARUSDT": {
+   "files": 7,
+   "rows": 22159,
+   "bytes": 1176522
+  },
+  "candles|binance|um|STBLUSDT": {
+   "files": 14,
+   "rows": 65178,
+   "bytes": 3228301
+  },
+  "candles|binance|um|STEEMUSDT": {
+   "files": 30,
+   "rows": 289181,
+   "bytes": 13761987
+  },
+  "candles|binance|um|STOUSDT": {
+   "files": 14,
+   "rows": 93551,
+   "bytes": 4762923
+  },
+  "candles|binance|um|STRKUSDT": {
+   "files": 23,
+   "rows": 270153,
+   "bytes": 13461670
+  },
+  "candles|binance|um|STXUSDT": {
+   "files": 30,
+   "rows": 335981,
+   "bytes": 16351977
+  },
+  "candles|binance|um|SUIUSDT": {
+   "files": 30,
+   "rows": 323188,
+   "bytes": 17849560
+  },
+  "candles|binance|um|SUNUSDT": {
+   "files": 23,
+   "rows": 237351,
+   "bytes": 11775483
+  },
+  "candles|binance|um|SUPERUSDT": {
+   "files": 30,
+   "rows": 285951,
+   "bytes": 13587571
+  },
+  "candles|binance|um|SUSDT": {
+   "files": 14,
+   "rows": 109065,
+   "bytes": 5462887
+  },
+  "candles|binance|um|SUSHIUSDT": {
+   "files": 51,
+   "rows": 497547,
+   "bytes": 24171525
+  },
+  "candles|binance|um|SWARMSUSDT": {
+   "files": 14,
+   "rows": 110668,
+   "bytes": 5639358
+  },
+  "candles|binance|um|SXTUSDT": {
+   "files": 14,
+   "rows": 89996,
+   "bytes": 4498075
+  },
+  "candles|binance|um|SYNUSDT": {
+   "files": 23,
+   "rows": 238435,
+   "bytes": 11334423
+  },
+  "candles|binance|um|SYRUPUSDT": {
+   "files": 14,
+   "rows": 89096,
+   "bytes": 4865362
+  },
+  "candles|binance|um|TACUSDT": {
+   "files": 14,
+   "rows": 76662,
+   "bytes": 3872470
+  },
+  "candles|binance|um|TAGUSDT": {
+   "files": 14,
+   "rows": 74857,
+   "bytes": 3968811
+  },
+  "candles|binance|um|TAIKOUSDT": {
+   "files": 14,
+   "rows": 82766,
+   "bytes": 3695033
+  },
+  "candles|binance|um|TAKEUSDT": {
+   "files": 14,
+   "rows": 67657,
+   "bytes": 3412255
+  },
+  "candles|binance|um|TAOUSDT": {
+   "files": 23,
+   "rows": 261281,
+   "bytes": 14476842
+  },
+  "candles|binance|um|TAUSDT": {
+   "files": 14,
+   "rows": 75605,
+   "bytes": 3758667
+  },
+  "candles|binance|um|THETAUSDT": {
+   "files": 51,
+   "rows": 516028,
+   "bytes": 26392066
+  },
+  "candles|binance|um|THEUSDT": {
+   "files": 23,
+   "rows": 217209,
+   "bytes": 10662844
+  },
+  "candles|binance|um|TIAUSDT": {
+   "files": 30,
+   "rows": 290594,
+   "bytes": 15270735
+  },
+  "candles|binance|um|TLMUSDT": {
+   "files": 32,
+   "rows": 329957,
+   "bytes": 16251262
+  },
+  "candles|binance|um|TNSRUSDT": {
+   "files": 23,
+   "rows": 261801,
+   "bytes": 13124925
+  },
+  "candles|binance|um|TOSHIUSDT": {
+   "files": 14,
+   "rows": 65179,
+   "bytes": 3309192
+  },
+  "candles|binance|um|TOWNSUSDT": {
+   "files": 14,
+   "rows": 72852,
+   "bytes": 3579840
+  },
+  "candles|binance|um|TRADOORUSDT": {
+   "files": 14,
+   "rows": 64766,
+   "bytes": 3141690
+  },
+  "candles|binance|um|TRBUSDT": {
+   "files": 51,
+   "rows": 497727,
+   "bytes": 24955580
+  },
+  "candles|binance|um|TREEUSDT": {
+   "files": 14,
+   "rows": 74115,
+   "bytes": 3526089
+  },
+  "candles|binance|um|TRIAUSDT": {
+   "files": 7,
+   "rows": 39568,
+   "bytes": 2032429
+  },
+  "candles|binance|um|TRUMPUSDT": {
+   "files": 14,
+   "rows": 108682,
+   "bytes": 6014867
+  },
+  "candles|binance|um|TRUSTUSDT": {
+   "files": 14,
+   "rows": 56329,
+   "bytes": 2627239
+  },
+  "candles|binance|um|TRUTHUSDT": {
+   "files": 14,
+   "rows": 62609,
+   "bytes": 3325653
+  },
+  "candles|binance|um|TRXUSDT": {
+   "files": 51,
+   "rows": 539478,
+   "bytes": 27790730
+  },
+  "candles|binance|um|TSTUSDT": {
+   "files": 14,
+   "rows": 104722,
+   "bytes": 5133249
+  },
+  "candles|binance|um|TURBOUSDT": {
+   "files": 23,
+   "rows": 252454,
+   "bytes": 14138433
+  },
+  "candles|binance|um|TURTLEUSDT": {
+   "files": 14,
+   "rows": 58808,
+   "bytes": 2755084
+  },
+  "candles|binance|um|TUSDT": {
+   "files": 30,
+   "rows": 339591,
+   "bytes": 16017915
+  },
+  "candles|binance|um|TUTUSDT": {
+   "files": 14,
+   "rows": 97732,
+   "bytes": 4740192
+  },
+  "candles|binance|um|TWTUSDT": {
+   "files": 30,
+   "rows": 290081,
+   "bytes": 13097299
+  },
+  "candles|binance|um|UAIUSDT": {
+   "files": 14,
+   "rows": 56135,
+   "bytes": 2704250
+  },
+  "candles|binance|um|UBUSDT": {
+   "files": 14,
+   "rows": 66042,
+   "bytes": 3535368
+  },
+  "candles|binance|um|UMAUSDT": {
+   "files": 30,
+   "rows": 321955,
+   "bytes": 13805984
+  },
+  "candles|binance|um|UNIUSDT": {
+   "files": 51,
+   "rows": 495517,
+   "bytes": 24078450
+  },
+  "candles|binance|um|USDCUSDT": {
+   "files": 30,
+   "rows": 332541,
+   "bytes": 13687710
+  },
+  "candles|binance|um|USELESSUSDT": {
+   "files": 14,
+   "rows": 71068,
+   "bytes": 3628442
+  },
+  "candles|binance|um|USTCUSDT": {
+   "files": 30,
+   "rows": 285775,
+   "bytes": 14139753
+  },
+  "candles|binance|um|USUALUSDT": {
+   "files": 21,
+   "rows": 114262,
+   "bytes": 5751793
+  },
+  "candles|binance|um|USUSDT": {
+   "files": 14,
+   "rows": 49661,
+   "bytes": 2671370
+  },
+  "candles|binance|um|VANAUSDT": {
+   "files": 23,
+   "rows": 213780,
+   "bytes": 10336489
+  },
+  "candles|binance|um|VELODROMEUSDT": {
+   "files": 23,
+   "rows": 214299,
+   "bytes": 9838293
+  },
+  "candles|binance|um|VELVETUSDT": {
+   "files": 14,
+   "rows": 76671,
+   "bytes": 4017339
+  },
+  "candles|binance|um|VETUSDT": {
+   "files": 51,
+   "rows": 533985,
+   "bytes": 28405206
+  },
+  "candles|binance|um|VIRTUALUSDT": {
+   "files": 23,
+   "rows": 214579,
+   "bytes": 11356530
+  },
+  "candles|binance|um|VTHOUSDT": {
+   "files": 14,
+   "rows": 107989,
+   "bytes": 5452974
+  },
+  "candles|binance|um|VVVUSDT": {
+   "files": 14,
+   "rows": 106738,
+   "bytes": 5592994
+  },
+  "candles|binance|um|WALUSDT": {
+   "files": 14,
+   "rows": 96425,
+   "bytes": 4596934
+  },
+  "candles|binance|um|WAXPUSDT": {
+   "files": 30,
+   "rows": 292960,
+   "bytes": 13918865
+  },
+  "candles|binance|um|WCTUSDT": {
+   "files": 14,
+   "rows": 93038,
+   "bytes": 4529974
+  },
+  "candles|binance|um|WETUSDT": {
+   "files": 14,
+   "rows": 50048,
+   "bytes": 2526858
+  },
+  "candles|binance|um|WIFUSDT": {
+   "files": 23,
+   "rows": 276403,
+   "bytes": 14730669
+  },
+  "candles|binance|um|WLDUSDT": {
+   "files": 30,
+   "rows": 308458,
+   "bytes": 16315558
+  },
+  "candles|binance|um|WLFIUSDT": {
+   "files": 14,
+   "rows": 69656,
+   "bytes": 3381887
+  },
+  "candles|binance|um|WOOUSDT": {
+   "files": 37,
+   "rows": 393483,
+   "bytes": 19765363
+  },
+  "candles|binance|um|WUSDT": {
+   "files": 23,
+   "rows": 262714,
+   "bytes": 13439063
+  },
+  "candles|binance|um|XAIUSDT": {
+   "files": 23,
+   "rows": 278024,
+   "bytes": 13678527
+  },
+  "candles|binance|um|XANUSDT": {
+   "files": 14,
+   "rows": 62982,
+   "bytes": 3256860
+  },
+  "candles|binance|um|XAUTUSDT": {
+   "files": 7,
+   "rows": 30915,
+   "bytes": 1741651
+  },
+  "candles|binance|um|XLMUSDT": {
+   "files": 51,
+   "rows": 538578,
+   "bytes": 28833094
+  },
+  "candles|binance|um|XMRUSDT": {
+   "files": 49,
+   "rows": 437387,
+   "bytes": 23328755
+  },
+  "candles|binance|um|XNYUSDT": {
+   "files": 14,
+   "rows": 71434,
+   "bytes": 3686575
+  },
+  "candles|binance|um|XPINUSDT": {
+   "files": 14,
+   "rows": 66059,
+   "bytes": 3323522
+  },
+  "candles|binance|um|XPLUSDT": {
+   "files": 14,
+   "rows": 69829,
+   "bytes": 3600397
+  },
+  "candles|binance|um|XRPUSDT": {
+   "files": 51,
+   "rows": 541097,
+   "bytes": 29468862
+  },
+  "candles|binance|um|XTZUSDT": {
+   "files": 51,
+   "rows": 536008,
+   "bytes": 24944684
+  },
+  "candles|binance|um|XVGUSDT": {
+   "files": 30,
+   "rows": 311590,
+   "bytes": 16261473
+  },
+  "candles|binance|um|XVSUSDT": {
+   "files": 30,
+   "rows": 326890,
+   "bytes": 14639508
+  },
+  "candles|binance|um|YBUSDT": {
+   "files": 14,
+   "rows": 60971,
+   "bytes": 2917659
+  },
+  "candles|binance|um|YFIUSDT": {
+   "files": 51,
+   "rows": 498267,
+   "bytes": 22545876
+  },
+  "candles|binance|um|YGGUSDT": {
+   "files": 30,
+   "rows": 306363,
+   "bytes": 14616686
+  },
+  "candles|binance|um|ZAMAUSDT": {
+   "files": 7,
+   "rows": 44632,
+   "bytes": 2190304
+  },
+  "candles|binance|um|ZBTUSDT": {
+   "files": 14,
+   "rows": 59735,
+   "bytes": 3045068
+  },
+  "candles|binance|um|ZECUSDT": {
+   "files": 51,
+   "rows": 535698,
+   "bytes": 28966110
+  },
+  "candles|binance|um|ZENUSDT": {
+   "files": 51,
+   "rows": 482967,
+   "bytes": 24423471
+  },
+  "candles|binance|um|ZEREBROUSDT": {
+   "files": 14,
+   "rows": 111555,
+   "bytes": 5854944
+  },
+  "candles|binance|um|ZESTUSDT": {
+   "files": 7,
+   "rows": 18315,
+   "bytes": 968756
+  },
+  "candles|binance|um|ZETAUSDT": {
+   "files": 21,
+   "rows": 174584,
+   "bytes": 8427421
+  },
+  "candles|binance|um|ZILUSDT": {
+   "files": 51,
+   "rows": 511283,
+   "bytes": 24994820
+  },
+  "candles|binance|um|ZKCUSDT": {
+   "files": 14,
+   "rows": 65475,
+   "bytes": 3168257
+  },
+  "candles|binance|um|ZKPUSDT": {
+   "files": 14,
+   "rows": 48045,
+   "bytes": 2446067
+  },
+  "candles|binance|um|ZKUSDT": {
+   "files": 23,
+   "rows": 249247,
+   "bytes": 12304397
+  },
+  "candles|binance|um|ZORAUSDT": {
+   "files": 14,
+   "rows": 74858,
+   "bytes": 3820919
+  },
+  "candles|binance|um|ZROUSDT": {
+   "files": 23,
+   "rows": 248681,
+   "bytes": 13298214
+  },
+  "candles|binance|um|ZRXUSDT": {
+   "files": 51,
+   "rows": 510981,
+   "bytes": 25019700
+  },
+  "candles|binance|um|哈基米USDT": {
+   "files": 7,
+   "rows": 1447,
+   "bytes": 113705
+  },
+  "candles|binance|um|币安人生USDT": {
+   "files": 14,
+   "rows": 59198,
+   "bytes": 3281280
+  },
+  "candles|binance|um|我踏马来了USDT": {
+   "files": 7,
+   "rows": 42432,
+   "bytes": 2240863
+  },
+  "candles|binance|um|牛来USDT": {
+   "files": 7,
+   "rows": 2675,
+   "bytes": 187869
+  },
+  "candles|binance|um|龙虾USDT": {
+   "files": 7,
+   "rows": 33635,
+   "bytes": 1894723
+  },
+  "candles|okx|swap|AEON-USDT-SWAP": {
+   "files": 5,
+   "rows": 22268,
+   "bytes": 671067
+  },
+  "candles|okx|swap|AI-USDT-SWAP": {
+   "files": 5,
+   "rows": 62843,
+   "bytes": 1687710
+  },
+  "candles|okx|swap|BLEND-USDT-SWAP": {
+   "files": 5,
+   "rows": 62881,
+   "bytes": 1703206
+  },
+  "candles|okx|swap|CASHCAT-USDT-SWAP": {
+   "files": 5,
+   "rows": 5092,
+   "bytes": 162153
+  },
+  "candles|okx|swap|CNPY-USDT-SWAP": {
+   "files": 5,
+   "rows": 3088,
+   "bytes": 109566
+  },
+  "candles|okx|swap|CORE-USDT-SWAP": {
+   "files": 14,
+   "rows": 261765,
+   "bytes": 8129652
+  },
+  "candles|okx|swap|CP-USDT-SWAP": {
+   "files": 5,
+   "rows": 5317,
+   "bytes": 176011
+  },
+  "candles|okx|swap|CRO-USDT-SWAP": {
+   "files": 11,
+   "rows": 262452,
+   "bytes": 7354093
+  },
+  "candles|okx|swap|DATA-USDT-SWAP": {
+   "files": 5,
+   "rows": 33649,
+   "bytes": 741634
+  },
+  "candles|okx|swap|DGAI-USDT-SWAP": {
+   "files": 4,
+   "rows": 1881,
+   "bytes": 70279
+  },
+  "candles|okx|swap|LUNA-USDT-SWAP": {
+   "files": 11,
+   "rows": 242523,
+   "bytes": 7292708
+  },
+  "candles|okx|swap|NES-USDT-SWAP": {
+   "files": 5,
+   "rows": 37278,
+   "bytes": 874499
+  },
+  "candles|okx|swap|OFC-USDT-SWAP": {
+   "files": 5,
+   "rows": 71982,
+   "bytes": 1993065
+  },
+  "candles|okx|swap|OKB-USDT-SWAP": {
+   "files": 7,
+   "rows": 63038,
+   "bytes": 1909951
+  },
+  "candles|okx|swap|OL-USDT-SWAP": {
+   "files": 9,
+   "rows": 145867,
+   "bytes": 3639234
+  },
+  "candles|okx|swap|PI-USDT-SWAP": {
+   "files": 7,
+   "rows": 95917,
+   "bytes": 2856953
+  },
+  "candles|okx|swap|PROS-USDT-SWAP": {
+   "files": 5,
+   "rows": 63261,
+   "bytes": 1826578
+  },
+  "candles|okx|swap|RAY-USDT-SWAP": {
+   "files": 12,
+   "rows": 222158,
+   "bytes": 6756883
+  },
+  "candles|okx|swap|RLS-USDT-SWAP": {
+   "files": 9,
+   "rows": 130268,
+   "bytes": 3590966
+  },
+  "candles|okx|swap|UP-USDT-SWAP": {
+   "files": 5,
+   "rows": 72438,
+   "bytes": 1809017
+  },
+  "funding|binance|um": {
+   "files": 525,
+   "rows": 2102859,
+   "bytes": 17987220
+  },
+  "oi|binance|um": {
+   "files": 1646,
+   "rows": 123422671,
+   "bytes": 4257043629
+  },
+  "sources|-|-|binance": {
+   "files": 4224,
+   "rows": 1979812,
+   "bytes": 136651234
+  },
+  "sources|-|-|okx": {
+   "files": 1476,
+   "rows": 93146,
+   "bytes": 12008491
+  }
+ },
+ "archive_dir_bytes": 10483507200,
+ "codex_coldhot_by_exchange_period": {
+  "binance|12h": {
+   "symbols": 526,
+   "cold_rows": 920423,
+   "hot_rows": 106513,
+   "merged": 951950,
+   "gap_segments": 72,
+   "missing_slots": 356,
+   "first": "2019-12-31T00:00:00+00:00",
+   "last": "2026-10-14T00:00:00+00:00"
+  },
+  "binance|15m": {
+   "symbols": 526,
+   "cold_rows": 44155533,
+   "hot_rows": 1639791,
+   "merged": 45681237,
+   "gap_segments": 78,
+   "missing_slots": 19399,
+   "first": "2019-12-31T00:00:00+00:00",
+   "last": "2026-10-14T12:00:00+00:00"
+  },
+  "binance|1d": {
+   "symbols": 526,
+   "cold_rows": 468562,
+   "hot_rows": 104078,
+   "merged": 483800,
+   "gap_segments": 2,
+   "missing_slots": 36,
+   "first": "2019-12-31T00:00:00+00:00",
+   "last": "2026-10-13T00:00:00+00:00"
+  },
+  "binance|1h": {
+   "symbols": 526,
+   "cold_rows": 11043929,
+   "hot_rows": 409817,
+   "merged": 11424959,
+   "gap_segments": 9,
+   "missing_slots": 214,
+   "first": "2019-12-31T00:00:00+00:00",
+   "last": "2026-10-14T11:00:00+00:00"
+  },
+  "binance|30m": {
+   "symbols": 526,
+   "cold_rows": 22087213,
+   "hot_rows": 819633,
+   "merged": 22849667,
+   "gap_segments": 9,
+   "missing_slots": 434,
+   "first": "2019-12-31T00:00:00+00:00",
+   "last": "2026-10-14T11:30:00+00:00"
+  },
+  "binance|4h": {
+   "symbols": 526,
+   "cold_rows": 2761334,
+   "hot_rows": 109280,
+   "merged": 2856439,
+   "gap_segments": 9,
+   "missing_slots": 49,
+   "first": "2019-12-31T00:00:00+00:00",
+   "last": "2026-10-14T08:00:00+00:00"
+  },
+  "binance|5m": {
+   "symbols": 231,
+   "cold_rows": 22807424,
+   "hot_rows": 2155973,
+   "merged": 24813797,
+   "gap_segments": 1,
+   "missing_slots": 99559,
+   "first": "2025-10-04T00:00:00+00:00",
+   "last": "2026-10-14T12:15:00+00:00"
+  },
+  "binance|8h": {
+   "symbols": 526,
+   "cold_rows": 1380713,
+   "hot_rows": 106806,
+   "merged": 1428003,
+   "gap_segments": 9,
+   "missing_slots": 117,
+   "first": "2019-12-31T00:00:00+00:00",
+   "last": "2026-10-14T00:00:00+00:00"
+  },
+  "okx|12h": {
+   "symbols": 23,
+   "cold_rows": 0,
+   "hot_rows": 4029,
+   "merged": 4029,
+   "gap_segments": 0,
+   "missing_slots": 0,
+   "first": "2026-07-04T12:00:00+00:00",
+   "last": "2026-10-14T00:00:00+00:00"
+  },
+  "okx|15m": {
+   "symbols": 23,
+   "cold_rows": 514988,
+   "hot_rows": 67139,
+   "merged": 577687,
+   "gap_segments": 0,
+   "missing_slots": 0,
+   "first": "2024-10-05T05:00:00+00:00",
+   "last": "2026-10-14T12:00:00+00:00"
+  },
+  "okx|1d": {
+   "symbols": 23,
+   "cold_rows": 19,
+   "hot_rows": 3003,
+   "merged": 3010,
+   "gap_segments": 7,
+   "missing_slots": 4141,
+   "first": "2022-05-28T00:00:00+00:00",
+   "last": "2026-10-13T00:00:00+00:00"
+  },
+  "okx|1h": {
+   "symbols": 23,
+   "cold_rows": 114186,
+   "hot_rows": 16779,
+   "merged": 129957,
+   "gap_segments": 0,
+   "missing_slots": 0,
+   "first": "2023-02-08T14:00:00+00:00",
+   "last": "2026-10-14T11:00:00+00:00"
+  },
+  "okx|30m": {
+   "symbols": 23,
+   "cold_rows": 398987,
+   "hot_rows": 33558,
+   "merged": 430325,
+   "gap_segments": 0,
+   "missing_slots": 0,
+   "first": "2021-04-08T09:00:00+00:00",
+   "last": "2026-10-14T11:30:00+00:00"
+  },
+  "okx|4h": {
+   "symbols": 23,
+   "cold_rows": 0,
+   "hot_rows": 4456,
+   "merged": 4456,
+   "gap_segments": 0,
+   "missing_slots": 0,
+   "first": "2026-09-09T20:00:00+00:00",
+   "last": "2026-10-14T08:00:00+00:00"
+  },
+  "okx|5m": {
+   "symbols": 17,
+   "cold_rows": 837786,
+   "hot_rows": 159188,
+   "merged": 985669,
+   "gap_segments": 0,
+   "missing_slots": 0,
+   "first": "2025-10-05T05:00:00+00:00",
+   "last": "2026-10-14T12:15:00+00:00"
+  }
+ },
+ "codex_coldhot_metric_rows": 4068,
+ "codex_internal_gaps_by_exchange_period": {
+  "binance|12h": {
+   "segments": 72,
+   "slots": 356
+  },
+  "binance|15m": {
+   "segments": 78,
+   "slots": 19399
+  },
+  "binance|1d": {
+   "segments": 2,
+   "slots": 36
+  },
+  "binance|1h": {
+   "segments": 9,
+   "slots": 214
+  },
+  "binance|30m": {
+   "segments": 9,
+   "slots": 434
+  },
+  "binance|4h": {
+   "segments": 9,
+   "slots": 49
+  },
+  "binance|5m": {
+   "segments": 1,
+   "slots": 99559
+  },
+  "binance|8h": {
+   "segments": 9,
+   "slots": 117
+  },
+  "okx|1d": {
+   "segments": 7,
+   "slots": 4141
+  }
+ },
+ "patch_kline": {
+  "K线_api": {
+   "rows": 149932,
+   "dup": 0,
+   "unique": 149932,
+   "sha_file": "补缺_K线_api_import.csv",
+   "by_exchange_tf": {
+    "binance|12h": {
+     "rows": 663,
+     "symbols": 38,
+     "first_utc": "2019-09-08T12:00:00Z",
+     "last_utc": "2022-04-02T12:00:00Z"
+    },
+    "binance|15m": {
+     "rows": 31741,
+     "symbols": 39,
+     "first_utc": "2019-09-08T17:45:00Z",
+     "last_utc": "2023-09-19T15:45:00Z"
+    },
+    "binance|1d": {
+     "rows": 191,
+     "symbols": 4,
+     "first_utc": "2019-09-08T00:00:00Z",
+     "last_utc": "2024-01-31T00:00:00Z"
+    },
+    "binance|1h": {
+     "rows": 3810,
+     "symbols": 4,
+     "first_utc": "2019-09-08T17:00:00Z",
+     "last_utc": "2023-09-19T15:00:00Z"
+    },
+    "binance|30m": {
+     "rows": 7616,
+     "symbols": 4,
+     "first_utc": "2019-09-08T17:30:00Z",
+     "last_utc": "2023-09-19T15:30:00Z"
+    },
+    "binance|4h": {
+     "rows": 954,
+     "symbols": 4,
+     "first_utc": "2019-09-08T16:00:00Z",
+     "last_utc": "2023-09-19T12:00:00Z"
+    },
+    "binance|8h": {
+     "rows": 478,
+     "symbols": 4,
+     "first_utc": "2019-09-08T16:00:00Z",
+     "last_utc": "2023-09-19T08:00:00Z"
+    },
+    "okx|12h": {
+     "rows": 2117,
+     "symbols": 1,
+     "first_utc": "2023-02-08T12:00:00Z",
+     "last_utc": "2026-01-01T12:00:00Z"
+    },
+    "okx|15m": {
+     "rows": 58045,
+     "symbols": 1,
+     "first_utc": "2023-02-08T13:45:00Z",
+     "last_utc": "2024-10-05T04:45:00Z"
+    },
+    "okx|1d": {
+     "rows": 2870,
+     "symbols": 2,
+     "first_utc": "2021-04-09T00:00:00Z",
+     "last_utc": "2026-03-25T00:00:00Z"
+    },
+    "okx|1h": {
+     "rows": 41447,
+     "symbols": 1,
+     "first_utc": "2021-04-08T08:00:00Z",
+     "last_utc": "2025-12-30T06:00:00Z"
+    }
+   }
+  },
+  "K线_okx补齐": {
+   "rows": 332864,
+   "dup": 0,
+   "unique": 332864,
+   "sha_file": "补缺_K线_okx补齐_import.csv",
+   "by_exchange_tf": {
+    "okx|12h": {
+     "rows": 11806,
+     "symbols": 15,
+     "first_utc": "2021-04-08T12:00:00Z",
+     "last_utc": "2026-07-04T00:00:00Z"
+    },
+    "okx|15m": {
+     "rows": 224953,
+     "symbols": 3,
+     "first_utc": "2021-04-08T08:45:00Z",
+     "last_utc": "2024-10-05T04:45:00Z"
+    },
+    "okx|1d": {
+     "rows": 3000,
+     "symbols": 6,
+     "first_utc": "2022-05-29T00:00:00Z",
+     "last_utc": "2026-03-25T00:00:00Z"
+    },
+    "okx|1h": {
+     "rows": 43762,
+     "symbols": 8,
+     "first_utc": "2022-05-28T13:00:00Z",
+     "last_utc": "2026-09-11T23:00:00Z"
+    },
+    "okx|30m": {
+     "rows": 8,
+     "symbols": 8,
+     "first_utc": "2021-04-08T08:30:00Z",
+     "last_utc": "2025-12-02T15:00:00Z"
+    },
+    "okx|4h": {
+     "rows": 49335,
+     "symbols": 20,
+     "first_utc": "2021-04-08T08:00:00Z",
+     "last_utc": "2026-09-09T16:00:00Z"
+    }
+   }
+  },
+  "K线_okx前端": {
+   "rows": 2117,
+   "dup": 0,
+   "unique": 2117,
+   "sha_file": "补缺_K线_okx前端_import.csv",
+   "by_exchange_tf": {
+    "okx|12h": {
+     "rows": 264,
+     "symbols": 2,
+     "first_utc": "2026-04-29T12:00:00Z",
+     "last_utc": "2026-07-04T00:00:00Z"
+    },
+    "okx|4h": {
+     "rows": 1853,
+     "symbols": 3,
+     "first_utc": "2026-04-29T12:00:00Z",
+     "last_utc": "2026-09-09T16:00:00Z"
+    }
+   }
+  },
+  "K线_官方日包": {
+   "rows": 2016,
+   "dup": 0,
+   "unique": 2016,
+   "sha_file": "补缺_K线_官方日包_import.csv",
+   "by_exchange_tf": {
+    "binance|15m": {
+     "rows": 2016,
+     "symbols": 1,
+     "first_utc": "2022-09-01T00:00:00Z",
+     "last_utc": "2022-09-21T23:45:00Z"
+    }
+   }
+  },
+  "K线_local": {
+   "rows": 93,
+   "dup": 0,
+   "unique": 93,
+   "sha_file": "补缺_K线_local_import.csv",
+   "by_exchange_tf": {
+    "binance|8h": {
+     "rows": 93,
+     "symbols": 1,
+     "first_utc": "2026-01-01T00:00:00Z",
+     "last_utc": "2026-01-31T16:00:00Z"
+    }
+   }
+  }
+ },
+ "patch_funding": {
+  "rows": 11773,
+  "unique": 11773,
+  "dup": 0,
+  "symbols": 420,
+  "mark_price_nonempty": 0,
+  "first_utc": "2026-09-14T08:00:00Z",
+  "last_utc": "2026-09-30T23:00:00Z"
+ },
+ "patch_oi": {
+  "OI_API": {
+   "exists": true,
+   "file": "补缺_OI_API_import.csv",
+   "rows": 13745,
+   "unique": 13745,
+   "symbols": 523,
+   "periods": {
+    "5m": 13745
+   },
+   "first_utc": "2026-10-14T00:30:00Z",
+   "last_utc": "2026-10-14T03:15:00Z",
+   "bytes": 2103320
+  },
+  "OI_官方归档": {
+   "exists": true,
+   "file": "补缺_OI_1008_1013_官方归档_import.csv",
+   "rows": 31,
+   "unique": 31,
+   "symbols": 8,
+   "periods": {
+    "5m": 31
+   },
+   "first_utc": "2026-10-08T01:45:00Z",
+   "last_utc": "2026-10-13T02:10:00Z",
+   "bytes": 3609
+  },
+  "OI_旧7行作废": {
+   "exists": true,
+   "file": "补缺_OI_import.csv",
+   "rows": 7,
+   "unique": 7,
+   "symbols": 7,
+   "periods": {
+    "5m": 7
+   },
+   "first_utc": "2026-10-10T06:15:00Z",
+   "last_utc": "2026-10-13T22:00:00Z",
+   "bytes": 1388
+  }
+ },
+ "raw_archive": {
+  "raw": {
+   "bytes": 11094695936,
+   "files": 464158,
+   "entries": 13,
+   "sample": [
+    ".DS_Store",
+    "12h",
+    "15m"
+   ]
+  },
+  "raw_oi_metrics": {
+   "bytes": 7314198528,
+   "files": 883150,
+   "entries": 526,
+   "sample": [
+    "0GUSDT",
+    "1000000BOBUSDT",
+    "1000000MOGUSDT"
+   ]
+  }
+ },
+ "raw_oi_metrics_date_range": {
+  "min": "2020-09-01",
+  "max": "2026-10-07",
+  "n_zip": 441575
+ }
+}

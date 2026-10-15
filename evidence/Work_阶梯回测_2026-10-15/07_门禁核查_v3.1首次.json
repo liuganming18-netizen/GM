@@ -1,0 +1,18 @@
+{
+  "schema": "wyckoffmaster_gate_verify/v1",
+  "strategy_ready": {
+    "label": "strategy_ready",
+    "path": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_策略优化_2026-10-15/strategy_ready.json",
+    "exists": false,
+    "verdict": "NOT_READY",
+    "reason": "门禁文件尚未发布"
+  },
+  "data_ready": {
+    "label": "data_ready",
+    "path": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_策略数据_2026-10-15/data_ready.json",
+    "exists": false,
+    "verdict": "NOT_READY",
+    "reason": "门禁文件尚未发布"
+  },
+  "overall": "WAITING_INPUT"
+}

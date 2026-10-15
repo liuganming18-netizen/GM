@@ -1,0 +1,36 @@
+{
+  "inst_id": "AEON-USDT-SWAP",
+  "bar": "1h",
+  "status": "done",
+  "rows": 1673,
+  "pages": 17,
+  "errors": 0,
+  "window": [
+    "2026-07-27T11:30:00Z",
+    "2026-10-05T04:58:23Z"
+  ],
+  "source_id": 22640,
+  "api_call_ids": [
+    6482,
+    6483,
+    6484,
+    6486,
+    6487,
+    6488,
+    6489,
+    6490,
+    6491,
+    6493,
+    6494,
+    6495,
+    6496,
+    6497,
+    6498,
+    6499,
+    6501
+  ],
+  "raw_path": "raw/okx/1h/AEON-USDT-SWAP.json",
+  "taker_buy": "空串（欧易无 taker 字段，B 策略数据不足）",
+  "trade_count": "0 占位（欧易无该字段，非真值）",
+  "updated_utc": "2026-10-05T05:18:39Z"
+}

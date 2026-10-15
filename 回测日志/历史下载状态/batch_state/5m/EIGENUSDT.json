@@ -1,0 +1,937 @@
+{
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-12.zip",
+  "bytes": 359714,
+  "sha256": "c0fff1f1329adddfc1cc8d0333b775020dff9716012f284aecd24c18afe701d4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422129,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422129,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-11.zip",
+  "bytes": 361960,
+  "sha256": "5fd553e672d2959c1045c7b2bc3f0a7b33fac0673ebde6b1e5f9ce0f73aba955",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422128,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 422128,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-01.zip",
+  "bytes": 357588,
+  "sha256": "24a70384429bff8735e7838c810c96cbb881cf5695fa98966ffa8f4282286359",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422130,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422130,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-02.zip",
+  "bytes": 314692,
+  "sha256": "d5551a49cbde191b39052f51d51886adea757ba03ac9c85aba1156217142f310",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422131,
+   "新增版本数": 8064,
+   "状态": "已入库"
+  },
+  "source_id": 422131,
+  "rows": 8064
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-03.zip",
+  "bytes": 342342,
+  "sha256": "d2216207ae88c848841629a43c5c5a23be92633b1aa24874d52c4ce7ace48372",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422132,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422132,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-04.zip",
+  "bytes": 326784,
+  "sha256": "7e725d91f850644b9d0c57d2d43472d7b0051b116825b5620ff6c8bd2227831f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422133,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 422133,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-05.zip",
+  "bytes": 351392,
+  "sha256": "e6196889f387b05012fb55ff1f666e205a5030d798ab32e2ce4fc3ca36256af6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422134,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422134,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-06.zip",
+  "bytes": 348203,
+  "sha256": "efe8edda8afa8ef6c54d70d6ed2c16dc5eec8142d095b428546560513cb6012d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422135,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 422135,
+  "rows": 8640
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-07.zip",
+  "bytes": 351232,
+  "sha256": "5fcfabeceb8ba9f8c38e678cb5837f6fd5df0714445686fbbdd425cf84ef028e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422136,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422136,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-08.zip",
+  "bytes": 336433,
+  "sha256": "5ff7f95fb3d4bdab1bff6f4c4363085451e73b6172981d1de215070945550071",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422137,
+   "新增版本数": 8928,
+   "状态": "已入库"
+  },
+  "source_id": 422137,
+  "rows": 8928
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-09.zip",
+  "bytes": 341525,
+  "sha256": "ed675d7fe7169333203a745ee3f4c0078b6669260989aea59c5ab2836da6a5db",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422138,
+   "新增版本数": 8640,
+   "状态": "已入库"
+  },
+  "source_id": 422138,
+  "rows": 8640
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-05.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-05.zip",
+  "kind": "daily",
+  "period": "2025-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-05.zip",
+  "bytes": 13148,
+  "sha256": "85a3096c80a21b43b5be1925883d887010cbe4f9d8c638ef7333b1ceb95b6b08",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422096,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422096,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-06.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-06.zip",
+  "kind": "daily",
+  "period": "2025-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-06.zip",
+  "bytes": 13423,
+  "sha256": "2e5e615e1e7af32bab65a087210880e0529593598b4c49ce09c9d9b156c4be1a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422097,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422097,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-07.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-07.zip",
+  "kind": "daily",
+  "period": "2025-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-07.zip",
+  "bytes": 13317,
+  "sha256": "7022cbc966620db438ab9893ff4b215dc48bd2f5151820b173024cb7e5a1deec",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422098,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422098,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-08.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-08.zip",
+  "kind": "daily",
+  "period": "2025-10-08",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-08.zip",
+  "bytes": 13082,
+  "sha256": "0ca77dd1595859d67122897ec8db161c5169dedd7851664b271f12e776e358ce",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422099,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422099,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-09.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-09.zip",
+  "kind": "daily",
+  "period": "2025-10-09",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-09.zip",
+  "bytes": 13039,
+  "sha256": "c335b4c36e0475085fd2775147e4714f26661f4591b5047c8c546b5a8dab16bb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422100,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422100,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-10.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-10.zip",
+  "kind": "daily",
+  "period": "2025-10-10",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-10.zip",
+  "bytes": 13198,
+  "sha256": "55b19409919e8c5698c9f0ddea820077751b3775a675973d69d0e32e49f3971d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422101,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422101,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-11.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-11.zip",
+  "kind": "daily",
+  "period": "2025-10-11",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-11.zip",
+  "bytes": 13349,
+  "sha256": "028f13f7ee741a078734cbdff4ff59d1219a2d6522063fd40b87e96b8a4f19a2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422102,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422102,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-12.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-12.zip",
+  "kind": "daily",
+  "period": "2025-10-12",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-12.zip",
+  "bytes": 13407,
+  "sha256": "9cb47b880d8fc3b30c823270aa99eab3fe105fcdbe23e13b071ea688bbfebecc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422103,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422103,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-13.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-13.zip",
+  "kind": "daily",
+  "period": "2025-10-13",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-13.zip",
+  "bytes": 13324,
+  "sha256": "b9437af9a28f0138aed141c7fa93e651fbf1dc4ccb9eb379a31fe3fae423f635",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422104,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422104,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-15.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-15.zip",
+  "kind": "daily",
+  "period": "2025-10-15",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-15.zip",
+  "bytes": 13082,
+  "sha256": "e568b8a4d9f9a00d697a9f04a00699a7aa50d63d0d00f749083405f174809883",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422106,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422106,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-14.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-14.zip",
+  "kind": "daily",
+  "period": "2025-10-14",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-14.zip",
+  "bytes": 13272,
+  "sha256": "0368e3d79022e081ccd998feb9e03c4d953abe607c7401b53f44659d1bb34b42",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422105,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422105,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-16.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-16.zip",
+  "kind": "daily",
+  "period": "2025-10-16",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-16.zip",
+  "bytes": 12978,
+  "sha256": "a9cae5f3ba3a01a857690eaf3e54592d12f94c1ef829aa9714a9cca6b268a852",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422107,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422107,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-18.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-18.zip",
+  "kind": "daily",
+  "period": "2025-10-18",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-18.zip",
+  "bytes": 12618,
+  "sha256": "86d5051e75bd926533bfaa0eb6b9189fe5c9a10a22a9ab41e30f799400e93d49",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422109,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422109,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-17.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-17.zip",
+  "kind": "daily",
+  "period": "2025-10-17",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-17.zip",
+  "bytes": 13084,
+  "sha256": "28b95bb870b94b024b351a4602ed3a89b41f8f133ec33ae4d391f7fcd9498432",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422108,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422108,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-19.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-19.zip",
+  "kind": "daily",
+  "period": "2025-10-19",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-19.zip",
+  "bytes": 12995,
+  "sha256": "3578dcb4c40e1b938976af565a4fabf6f446ec94d185f4269b6f8451caeae8e5",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422110,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422110,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-20.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-20.zip",
+  "kind": "daily",
+  "period": "2025-10-20",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-20.zip",
+  "bytes": 13061,
+  "sha256": "51b14a0917b726185059c958c9d97bf7ba86826476c1de3aa8447ba1df8a982e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422111,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422111,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-21.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-21.zip",
+  "kind": "daily",
+  "period": "2025-10-21",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-21.zip",
+  "bytes": 13205,
+  "sha256": "3f17374f56c809ed0de36765d03a9cfdf0dcad39ef11b2971c5c9fa48fc78951",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422112,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422112,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-22.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-22.zip",
+  "kind": "daily",
+  "period": "2025-10-22",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-22.zip",
+  "bytes": 12946,
+  "sha256": "ad09eead15f424c07992131edcf80f7ee15ff6dae52a1af059894a328b9c214e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422113,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422113,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-23.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-23.zip",
+  "kind": "daily",
+  "period": "2025-10-23",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-23.zip",
+  "bytes": 12627,
+  "sha256": "34d82e908a2e56ee1ca1a5f0b14ca75118d614ccbb25ba29ea40945d019f0d87",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422114,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422114,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-24.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-24.zip",
+  "kind": "daily",
+  "period": "2025-10-24",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-24.zip",
+  "bytes": 12751,
+  "sha256": "631ac30cb6d3120443d03b09dd0a99d822222469feeb3e32c00349e1dff70cf1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422115,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422115,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-25.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-25.zip",
+  "kind": "daily",
+  "period": "2025-10-25",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-25.zip",
+  "bytes": 12641,
+  "sha256": "552d2a20e18a2ac797621618bfde4325659ce31fcbd6b8a5f1035c00f45be839",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422116,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422116,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-26.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-26.zip",
+  "kind": "daily",
+  "period": "2025-10-26",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-26.zip",
+  "bytes": 12923,
+  "sha256": "eefd36bc20620569a5915a06cd0b821c3afe2db0fe9f3fc17f1ba4c967133f67",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422117,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422117,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-27.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-27.zip",
+  "kind": "daily",
+  "period": "2025-10-27",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-27.zip",
+  "bytes": 13007,
+  "sha256": "63c29fe71485ac11b3828f6b704a2259a536b0ae2e623f069f157559c746779a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422118,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422118,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-28.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-28.zip",
+  "kind": "daily",
+  "period": "2025-10-28",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-28.zip",
+  "bytes": 12980,
+  "sha256": "c9dd8652cffcc6715a3f2f7b3db2b62998c9d6549e12c3e57ffa9dc2ff1257bf",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422119,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422119,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-29.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-29.zip",
+  "kind": "daily",
+  "period": "2025-10-29",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-29.zip",
+  "bytes": 12723,
+  "sha256": "fd2be8ceb8bcddd1ae5e2be7e4874d965278a9000f8bf0303e078b05b8cb1c68",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422120,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422120,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-30.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-30.zip",
+  "kind": "daily",
+  "period": "2025-10-30",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-30.zip",
+  "bytes": 13194,
+  "sha256": "9637c542a0bd1a4f4dedbcc3eba8ff3db8497382d3b8eb13bc7a79313d63a569",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422121,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422121,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-31.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-31.zip",
+  "kind": "daily",
+  "period": "2025-10-31",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10-31.zip",
+  "bytes": 12845,
+  "sha256": "8488a3fd85661576f5865268f675f8ad542b500bf921230b119a2e79d83c52eb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422122,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422122,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-01.zip",
+  "bytes": 12011,
+  "sha256": "0d48d0ca810ecfad665af6fe8ee6e9424379a2ca71b3e2cfd24074b9b9dbbdbd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422123,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422123,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-03.zip",
+  "bytes": 11886,
+  "sha256": "3d970efffc63c378a194e0d53bee91b901b6ae0eee6552ee25330304f0ac5612",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422125,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422125,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-02.zip",
+  "bytes": 12313,
+  "sha256": "8f19a6ec3ca76906b54583b8f718ac3a4147328134a4d1938c1d21d911ea2990",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422124,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422124,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-04.zip",
+  "bytes": 11668,
+  "sha256": "1eeab6e66485e3473a345dd18e2a3e85d11fc00b65b747fbdcf252aea71363f9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422126,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422126,
+  "rows": 288
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-05.zip",
+  "bytes": 11833,
+  "sha256": "0ec05ade00001e8bd3cf204ca6ac2be869ae4e16342c16d168f27143490ba5d8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 422127,
+   "新增版本数": 288,
+   "状态": "已入库"
+  },
+  "source_id": 422127,
+  "rows": 288
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-11.zip",
+  "bytes": 375461,
+  "sha256": "46700d8a1019832c7c9a8087905fac60f5e81f2946bb99853b9efec4abab78fc",
+  "checksum_ok": true,
+  "size_bytes": 375461,
+  "fetched_at": "2026-10-07T21:47:04Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2024-11.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-11.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-10.zip",
+  "bytes": 360649,
+  "sha256": "1a05bd7812307969157d18be565adcfd6acd6c1bdc29e6613c819f9375593688",
+  "checksum_ok": true,
+  "size_bytes": 360649,
+  "fetched_at": "2026-10-07T21:47:04Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2024-10.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-10.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-12.zip",
+  "bytes": 397532,
+  "sha256": "456ee7d50eac984f75ee925c41695b895d93c4991c58601404c0efe5689d8ed9",
+  "checksum_ok": true,
+  "size_bytes": 397532,
+  "fetched_at": "2026-10-07T21:47:05Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2024-12.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2024-12.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-01.zip",
+  "bytes": 390009,
+  "sha256": "1dad02261c77ebfb3127c7fc27f6901ce1e3aa9d95f459f07204db2b36adb035",
+  "checksum_ok": true,
+  "size_bytes": 390009,
+  "fetched_at": "2026-10-07T21:47:05Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2025-01.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-01.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-02.zip",
+  "bytes": 352621,
+  "sha256": "38923b3fab1f1eeee48b70cd4c5d4e03b2d2a316ec9adbe9e6f2355a2433e313",
+  "checksum_ok": true,
+  "size_bytes": 352621,
+  "fetched_at": "2026-10-07T21:47:06Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2025-02.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-02.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-03.zip",
+  "bytes": 375536,
+  "sha256": "bfbd6c1f5b6810c9da45f5e462e8480b18d0f8d45c51d90bfb557f6980ebf411",
+  "checksum_ok": true,
+  "size_bytes": 375536,
+  "fetched_at": "2026-10-07T21:47:06Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2025-03.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-03.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-04.zip",
+  "bytes": 353064,
+  "sha256": "90961458caa61c4245b2fd59de6670f22d87a6a82b3ce22306391c587be7ade2",
+  "checksum_ok": true,
+  "size_bytes": 353064,
+  "fetched_at": "2026-10-07T21:47:07Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2025-04.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-04.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-05.zip",
+  "bytes": 382207,
+  "sha256": "805a88492b807968a2526110363a180ccc20d4a2918ad65aee8c6be471a0209b",
+  "checksum_ok": true,
+  "size_bytes": 382207,
+  "fetched_at": "2026-10-07T21:47:07Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2025-05.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-05.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-06.zip",
+  "bytes": 367863,
+  "sha256": "de9dbe5556396eb25ff290c8b795cf26d45fb40f159637891fa1109e8abda820",
+  "checksum_ok": true,
+  "size_bytes": 367863,
+  "fetched_at": "2026-10-07T21:47:08Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2025-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-06.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-07.zip",
+  "bytes": 377751,
+  "sha256": "592935c66e3976fc6449fead53328716af10910d7c4ca65d359bd175d104bb61",
+  "checksum_ok": true,
+  "size_bytes": 377751,
+  "fetched_at": "2026-10-07T21:47:08Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2025-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-07.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-08.zip",
+  "bytes": 376660,
+  "sha256": "1dd68c631c53e2e4f68921936b16598903bba060ac91d8e2f77468026656371d",
+  "checksum_ok": true,
+  "size_bytes": 376660,
+  "fetched_at": "2026-10-07T21:47:09Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2025-08.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-08.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-09.zip",
+  "bytes": 373789,
+  "sha256": "083209e1707d222c113d3dcae0025bb9b8b8b6b961b1a4b7c697b47e53b77a9b",
+  "checksum_ok": true,
+  "size_bytes": 373789,
+  "fetched_at": "2026-10-07T21:47:09Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2025-09.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-09.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10.zip",
+  "bytes": 387656,
+  "sha256": "354c70d3e5c8e64e6472f313fb308167c5e4b9bd27f36edd90edf16f62c8c3be",
+  "checksum_ok": true,
+  "size_bytes": 387656,
+  "fetched_at": "2026-10-07T21:47:10Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2025-10.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/EIGENUSDT/5m/EIGENUSDT-5m-2025-10.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-06.zip",
+  "bytes": 11717,
+  "sha256": "a87e180c66ba8ae174531ea773cbe12cc6c18a4e8f643d5e82e265cab5aecd40",
+  "checksum_ok": true,
+  "size_bytes": 11717,
+  "fetched_at": "2026-10-07T21:47:10Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/5m/EIGENUSDT/EIGENUSDT-5m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-06.zip.CHECKSUM",
+  "status": "downloaded"
+ },
+ "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/EIGENUSDT/5m/EIGENUSDT-5m-2026-10-07.zip",
+  "status": "missing_in_archive",
+  "note": "官方归档或 CHECKSUM 不存在（日度按需探测，404 即缺失）；不计为完成"
+ }
+}

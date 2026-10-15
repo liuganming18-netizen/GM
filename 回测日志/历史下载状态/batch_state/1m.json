@@ -1,0 +1,7923 @@
+{
+ "0GUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "1000000BOBUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "1000000MOGUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "1000BONKUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "1000CATUSDT": {
+  "status": "import_pending",
+  "planned_files": 31,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 30,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 30,
+   "missing_in_archive": 1
+  }
+ },
+ "1000CHEEMSUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "1000FLOKIUSDT": {
+  "status": "import_pending",
+  "planned_files": 48,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 47,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 47,
+   "missing_in_archive": 1
+  }
+ },
+ "1000LUNCUSDT": {
+  "status": "import_pending",
+  "planned_files": 56,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 55,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 55,
+   "missing_in_archive": 1
+  }
+ },
+ "1000PEPEUSDT": {
+  "status": "import_pending",
+  "planned_files": 48,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 47,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 21727,
+  "gaps": 972,
+  "files_by_status": {
+   "downloaded": 44,
+   "downloaded_cached": 3,
+   "missing_in_archive": 1
+  }
+ },
+ "1000RATSUSDT": {
+  "status": "import_pending",
+  "planned_files": 41,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 40,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 40,
+   "missing_in_archive": 1
+  }
+ },
+ "1000SATSUSDT": {
+  "status": "import_pending",
+  "planned_files": 41,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 40,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 40,
+   "missing_in_archive": 1
+  }
+ },
+ "1000SHIBUSDT": {
+  "status": "import_pending",
+  "planned_files": 72,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 71,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 71,
+   "missing_in_archive": 1
+  }
+ },
+ "1000XECUSDT": {
+  "status": "import_pending",
+  "planned_files": 68,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 67,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 67,
+   "missing_in_archive": 1
+  }
+ },
+ "1INCHUSDT": {
+  "status": "import_pending",
+  "planned_files": 77,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 76,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 76,
+   "missing_in_archive": 1
+  }
+ },
+ "1MBABYDOGEUSDT": {
+  "status": "import_pending",
+  "planned_files": 32,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 31,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 31,
+   "missing_in_archive": 1
+  }
+ },
+ "2ZUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "4USDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "AAVEUSDT": {
+  "status": "import_pending",
+  "planned_files": 79,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 78,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 78,
+   "missing_in_archive": 1
+  }
+ },
+ "ACEUSDT": {
+  "status": "import_pending",
+  "planned_files": 41,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 40,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 40,
+   "missing_in_archive": 1
+  }
+ },
+ "ACHUSDT": {
+  "status": "import_pending",
+  "planned_files": 51,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 50,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 50,
+   "missing_in_archive": 1
+  }
+ },
+ "ACTUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "ACUUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "ADAUSDT": {
+  "status": "import_pending",
+  "planned_files": 88,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 87,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 87,
+   "missing_in_archive": 1
+  }
+ },
+ "AEROUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "AEVOUSDT": {
+  "status": "import_pending",
+  "planned_files": 38,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 37,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 37,
+   "missing_in_archive": 1
+  }
+ },
+ "AGLDUSDT": {
+  "status": "import_pending",
+  "planned_files": 46,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 45,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 45,
+   "missing_in_archive": 1
+  }
+ },
+ "AGTUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "AIAUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "AIGENSYNUSDT": {
+  "status": "import_pending",
+  "planned_files": 13,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 12,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 12,
+   "missing_in_archive": 1
+  }
+ },
+ "AINUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "AIOTUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "AIOUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "AIXBTUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "AKEUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "AKTUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "ALCHUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "ALGOUSDT": {
+  "status": "import_pending",
+  "planned_files": 83,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 82,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 82,
+   "missing_in_archive": 1
+  }
+ },
+ "ALICEUSDT": {
+  "status": "import_pending",
+  "planned_files": 74,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 73,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 73,
+   "missing_in_archive": 1
+  }
+ },
+ "ALLOUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "ALLUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "ALPINEUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "ALTUSDT": {
+  "status": "import_pending",
+  "planned_files": 40,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 39,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 39,
+   "missing_in_archive": 1
+  }
+ },
+ "ANIMEUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "ANKRUSDT": {
+  "status": "import_pending",
+  "planned_files": 76,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 75,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 75,
+   "missing_in_archive": 1
+  }
+ },
+ "APEUSDT": {
+  "status": "import_pending",
+  "planned_files": 62,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 61,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 61,
+   "missing_in_archive": 1
+  }
+ },
+ "API3USDT": {
+  "status": "import_pending",
+  "planned_files": 63,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 62,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 62,
+   "missing_in_archive": 1
+  }
+ },
+ "APRUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "APTUSDT": {
+  "status": "import_pending",
+  "planned_files": 55,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 54,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 54,
+   "missing_in_archive": 1
+  }
+ },
+ "ARBUSDT": {
+  "status": "import_pending",
+  "planned_files": 50,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 49,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 49,
+   "missing_in_archive": 1
+  }
+ },
+ "ARCUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "ARIAUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "ARKMUSDT": {
+  "status": "import_pending",
+  "planned_files": 46,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 45,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 45,
+   "missing_in_archive": 1
+  }
+ },
+ "ARKUSDT": {
+  "status": "import_pending",
+  "planned_files": 44,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 43,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 43,
+   "missing_in_archive": 1
+  }
+ },
+ "ARPAUSDT": {
+  "status": "import_pending",
+  "planned_files": 67,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 66,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 66,
+   "missing_in_archive": 1
+  }
+ },
+ "ARUSDT": {
+  "status": "import_pending",
+  "planned_files": 68,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 67,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 67,
+   "missing_in_archive": 1
+  }
+ },
+ "ARXUSDT": {
+  "status": "import_pending",
+  "planned_files": 11,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 10,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 10,
+   "missing_in_archive": 1
+  }
+ },
+ "ASRUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "ASTERUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "ASTRUSDT": {
+  "status": "import_pending",
+  "planned_files": 51,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 50,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 50,
+   "missing_in_archive": 1
+  }
+ },
+ "ATHUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "ATOMUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "ATUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "AUCTIONUSDT": {
+  "status": "import_pending",
+  "planned_files": 41,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 40,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 40,
+   "missing_in_archive": 1
+  }
+ },
+ "AUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "AVAAIUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "AVAUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "AVAXUSDT": {
+  "status": "import_pending",
+  "planned_files": 80,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 79,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 79,
+   "missing_in_archive": 1
+  }
+ },
+ "AVNTUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "AWEUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "AXLUSDT": {
+  "status": "import_pending",
+  "planned_files": 38,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 37,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 37,
+   "missing_in_archive": 1
+  }
+ },
+ "AXSUSDT": {
+  "status": "import_pending",
+  "planned_files": 78,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 77,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 77,
+   "missing_in_archive": 1
+  }
+ },
+ "AZTECUSDT": {
+  "status": "import_pending",
+  "planned_files": 15,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 14,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 14,
+   "missing_in_archive": 1
+  }
+ },
+ "B2USDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "BABYUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "BANANAS31USDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "BANANAUSDT": {
+  "status": "import_pending",
+  "planned_files": 33,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 32,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 32,
+   "missing_in_archive": 1
+  }
+ },
+ "BANDUSDT": {
+  "status": "import_pending",
+  "planned_files": 82,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 81,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 81,
+   "missing_in_archive": 1
+  }
+ },
+ "BANKUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "BANUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "BARDUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "BASEDUSDT": {
+  "status": "import_pending",
+  "planned_files": 14,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 13,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 13,
+   "missing_in_archive": 1
+  }
+ },
+ "BASUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "BATUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "BBUSDT": {
+  "status": "import_pending",
+  "planned_files": 36,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 35,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 35,
+   "missing_in_archive": 1
+  }
+ },
+ "BCHUSDT": {
+  "status": "import_pending",
+  "planned_files": 101,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 88,
+  "missing_files": 13,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 88,
+   "missing_in_archive": 13
+  }
+ },
+ "BEAMXUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "BEATUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "BELUSDT": {
+  "status": "import_pending",
+  "planned_files": 78,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 77,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 77,
+   "missing_in_archive": 1
+  }
+ },
+ "BERAUSDT": {
+  "status": "import_pending",
+  "planned_files": 27,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 26,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 26,
+   "missing_in_archive": 1
+  }
+ },
+ "BICOUSDT": {
+  "status": "import_pending",
+  "planned_files": 44,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 43,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 43,
+   "missing_in_archive": 1
+  }
+ },
+ "BIGTIMEUSDT": {
+  "status": "import_pending",
+  "planned_files": 43,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 42,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 42,
+   "missing_in_archive": 1
+  }
+ },
+ "BILLUSDT": {
+  "status": "import_pending",
+  "planned_files": 12,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 11,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 11,
+   "missing_in_archive": 1
+  }
+ },
+ "BIOUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "BIRBUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "BLESSUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "BLUAIUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "BLURUSDT": {
+  "status": "import_pending",
+  "planned_files": 49,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 48,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 48,
+   "missing_in_archive": 1
+  }
+ },
+ "BMTUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "BNBUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "BNTUSDT": {
+  "status": "import_pending",
+  "planned_files": 45,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 44,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 44,
+   "missing_in_archive": 1
+  }
+ },
+ "BOMEUSDT": {
+  "status": "import_pending",
+  "planned_files": 38,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 37,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 37,
+   "missing_in_archive": 1
+  }
+ },
+ "BRETTUSDT": {
+  "status": "import_pending",
+  "planned_files": 33,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 32,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 32,
+   "missing_in_archive": 1
+  }
+ },
+ "BREVUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "BROCCOLI714USDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "BROCCOLIF3BUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "BRUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "BSBUSDT": {
+  "status": "import_pending",
+  "planned_files": 14,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 13,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 13,
+   "missing_in_archive": 1
+  }
+ },
+ "BSVUSDT": {
+  "status": "import_pending",
+  "planned_files": 43,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 42,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 42,
+   "missing_in_archive": 1
+  }
+ },
+ "BTCDOMUSDT": {
+  "status": "import_pending",
+  "planned_files": 71,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 70,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 70,
+   "missing_in_archive": 1
+  }
+ },
+ "BTCUSDT": {
+  "status": "missing_only",
+  "planned_files": 134,
+  "imported_files": 90,
+  "cached_files": 0,
+  "downloaded_files": 0,
+  "missing_files": 44,
+  "failed_files": 0,
+  "rows": 3563656,
+  "gaps": 3,
+  "files_by_status": {
+   "imported": 90,
+   "missing_in_archive": 44
+  }
+ },
+ "BTRUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "BTWUSDT": {
+  "status": "import_pending",
+  "planned_files": 11,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 10,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 10,
+   "missing_in_archive": 1
+  }
+ },
+ "BULLAUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "BUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "C98USDT": {
+  "status": "import_pending",
+  "planned_files": 69,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 68,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 68,
+   "missing_in_archive": 1
+  }
+ },
+ "CAKEUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "CAPUSDT": {
+  "status": "import_pending",
+  "planned_files": 11,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 10,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 10,
+   "missing_in_archive": 1
+  }
+ },
+ "CARVUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "CATIUSDT": {
+  "status": "import_pending",
+  "planned_files": 32,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 31,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 31,
+   "missing_in_archive": 1
+  }
+ },
+ "CCUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "CELOUSDT": {
+  "status": "import_pending",
+  "planned_files": 68,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 67,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 67,
+   "missing_in_archive": 1
+  }
+ },
+ "CELRUSDT": {
+  "status": "import_pending",
+  "planned_files": 74,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 73,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 73,
+   "missing_in_archive": 1
+  }
+ },
+ "CETUSUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "CFGUSDT": {
+  "status": "import_pending",
+  "planned_files": 14,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 13,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 13,
+   "missing_in_archive": 1
+  }
+ },
+ "CFXUSDT": {
+  "status": "import_pending",
+  "planned_files": 51,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 50,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 50,
+   "missing_in_archive": 1
+  }
+ },
+ "CGPTUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "CHILLGUYUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "CHIPUSDT": {
+  "status": "import_pending",
+  "planned_files": 13,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 12,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 12,
+   "missing_in_archive": 1
+  }
+ },
+ "CHRUSDT": {
+  "status": "import_pending",
+  "planned_files": 74,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 73,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 73,
+   "missing_in_archive": 1
+  }
+ },
+ "CHZUSDT": {
+  "status": "import_pending",
+  "planned_files": 76,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 75,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 75,
+   "missing_in_archive": 1
+  }
+ },
+ "CKBUSDT": {
+  "status": "import_pending",
+  "planned_files": 51,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 50,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 50,
+   "missing_in_archive": 1
+  }
+ },
+ "CLANKERUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "CLOUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "COAIUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "COLLECTUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "COMPUSDT": {
+  "status": "import_pending",
+  "planned_files": 83,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 82,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 82,
+   "missing_in_archive": 1
+  }
+ },
+ "COOKIEUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "COTIUSDT": {
+  "status": "import_pending",
+  "planned_files": 74,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 73,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 73,
+   "missing_in_archive": 1
+  }
+ },
+ "COWUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "CROSSUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "CRVUSDT": {
+  "status": "import_pending",
+  "planned_files": 80,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 79,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 79,
+   "missing_in_archive": 1
+  }
+ },
+ "CTKUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "CTRUSDT": {
+  "status": "import_pending",
+  "planned_files": 12,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 11,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 11,
+   "missing_in_archive": 1
+  }
+ },
+ "CTSIUSDT": {
+  "status": "import_pending",
+  "planned_files": 67,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 66,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 66,
+   "missing_in_archive": 1
+  }
+ },
+ "CTUSDT": {
+  "status": "import_pending",
+  "planned_files": 7,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 6,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 6,
+   "missing_in_archive": 1
+  }
+ },
+ "CUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "CVCUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "CVXUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "CYBERUSDT": {
+  "status": "import_pending",
+  "planned_files": 45,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 44,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 44,
+   "missing_in_archive": 1
+  }
+ },
+ "CYSUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "DASHUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "DATAIPUSDT": {
+  "status": "import_pending",
+  "planned_files": 10,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 9,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 9,
+   "missing_in_archive": 1
+  }
+ },
+ "DEEPUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "DEXEUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "DIAUSDT": {
+  "status": "import_pending",
+  "planned_files": 31,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 30,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 30,
+   "missing_in_archive": 1
+  }
+ },
+ "DODOXUSDT": {
+  "status": "import_pending",
+  "planned_files": 45,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 44,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 44,
+   "missing_in_archive": 1
+  }
+ },
+ "DOGEUSDT": {
+  "status": "import_pending",
+  "planned_files": 82,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 81,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 81,
+   "missing_in_archive": 1
+  }
+ },
+ "DOGSUSDT": {
+  "status": "import_pending",
+  "planned_files": 33,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 32,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 32,
+   "missing_in_archive": 1
+  }
+ },
+ "DOLOUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "DOODUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "DOSUSDT": {
+  "status": "import_pending",
+  "planned_files": 9,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 8,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 8,
+   "missing_in_archive": 1
+  }
+ },
+ "DOTUSDT": {
+  "status": "import_pending",
+  "planned_files": 81,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 80,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 80,
+   "missing_in_archive": 1
+  }
+ },
+ "DRIFTUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "DUSKUSDT": {
+  "status": "import_pending",
+  "planned_files": 64,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 63,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 63,
+   "missing_in_archive": 1
+  }
+ },
+ "DYDXUSDT": {
+  "status": "import_pending",
+  "planned_files": 68,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 67,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 67,
+   "missing_in_archive": 1
+  }
+ },
+ "DYMUSDT": {
+  "status": "import_pending",
+  "planned_files": 39,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 38,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 38,
+   "missing_in_archive": 1
+  }
+ },
+ "EDENUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "EDGEUSDT": {
+  "status": "import_pending",
+  "planned_files": 14,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 13,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 13,
+   "missing_in_archive": 1
+  }
+ },
+ "EDUUSDT": {
+  "status": "import_pending",
+  "planned_files": 49,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 48,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 48,
+   "missing_in_archive": 1
+  }
+ },
+ "EGLDUSDT": {
+  "status": "import_pending",
+  "planned_files": 80,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 79,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 79,
+   "missing_in_archive": 1
+  }
+ },
+ "EIGENUSDT": {
+  "status": "import_pending",
+  "planned_files": 31,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 30,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 30,
+   "missing_in_archive": 1
+  }
+ },
+ "ELSAUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "ENAUSDT": {
+  "status": "import_pending",
+  "planned_files": 37,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 36,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 36,
+   "missing_in_archive": 1
+  }
+ },
+ "ENJUSDT": {
+  "status": "import_pending",
+  "planned_files": 80,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 79,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 79,
+   "missing_in_archive": 1
+  }
+ },
+ "ENSOUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "ENSUSDT": {
+  "status": "import_pending",
+  "planned_files": 66,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 65,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 65,
+   "missing_in_archive": 1
+  }
+ },
+ "EPICUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "ERAUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "ESPORTSUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "ESPUSDT": {
+  "status": "import_pending",
+  "planned_files": 15,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 14,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 14,
+   "missing_in_archive": 1
+  }
+ },
+ "ETCUSDT": {
+  "status": "import_pending",
+  "planned_files": 88,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 87,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 87,
+   "missing_in_archive": 1
+  }
+ },
+ "ETHFIUSDT": {
+  "status": "import_pending",
+  "planned_files": 38,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 37,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 37,
+   "missing_in_archive": 1
+  }
+ },
+ "ETHUSDT": {
+  "status": "import_pending",
+  "planned_files": 123,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 88,
+  "missing_files": 35,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 88,
+   "missing_in_archive": 35
+  }
+ },
+ "ETHWUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "EULUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "EVAAUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "FARTCOINUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "FETUSDT": {
+  "status": "import_pending",
+  "planned_files": 52,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 51,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 51,
+   "missing_in_archive": 1
+  }
+ },
+ "FFUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "FHEUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "FIDAUSDT": {
+  "status": "import_pending",
+  "planned_files": 32,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 31,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 31,
+   "missing_in_archive": 1
+  }
+ },
+ "FIGHTUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "FILUSDT": {
+  "status": "import_pending",
+  "planned_files": 79,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 78,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 78,
+   "missing_in_archive": 1
+  }
+ },
+ "FLOCKUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "FLOWUSDT": {
+  "status": "import_pending",
+  "planned_files": 63,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 62,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 62,
+   "missing_in_archive": 1
+  }
+ },
+ "FLUIDUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "FLUXUSDT": {
+  "status": "import_pending",
+  "planned_files": 32,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 31,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 31,
+   "missing_in_archive": 1
+  }
+ },
+ "FOGOUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "FOLKSUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "FORMUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "FRAXUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "FUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "GALAUSDT": {
+  "status": "import_pending",
+  "planned_files": 68,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 67,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 67,
+   "missing_in_archive": 1
+  }
+ },
+ "GASUSDT": {
+  "status": "import_pending",
+  "planned_files": 43,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 42,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 42,
+   "missing_in_archive": 1
+  }
+ },
+ "GENIUSUSDT": {
+  "status": "import_pending",
+  "planned_files": 13,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 12,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 12,
+   "missing_in_archive": 1
+  }
+ },
+ "GIGGLEUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "GLMUSDT": {
+  "status": "import_pending",
+  "planned_files": 39,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 38,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 38,
+   "missing_in_archive": 1
+  }
+ },
+ "GMTUSDT": {
+  "status": "import_pending",
+  "planned_files": 62,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 61,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 61,
+   "missing_in_archive": 1
+  }
+ },
+ "GMXUSDT": {
+  "status": "import_pending",
+  "planned_files": 51,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 50,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 50,
+   "missing_in_archive": 1
+  }
+ },
+ "GOATUSDT": {
+  "status": "import_pending",
+  "planned_files": 31,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 30,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 30,
+   "missing_in_archive": 1
+  }
+ },
+ "GPSUSDT": {
+  "status": "import_pending",
+  "planned_files": 27,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 26,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 26,
+   "missing_in_archive": 1
+  }
+ },
+ "GRAMUSDT": {
+  "status": "import_pending",
+  "planned_files": 10,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 9,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 9,
+   "missing_in_archive": 1
+  }
+ },
+ "GRASSUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "GRIFFAINUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "GRTUSDT": {
+  "status": "import_pending",
+  "planned_files": 77,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 76,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 76,
+   "missing_in_archive": 1
+  }
+ },
+ "GRVTUSDT": {
+  "status": "import_pending",
+  "planned_files": 10,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 9,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 9,
+   "missing_in_archive": 1
+  }
+ },
+ "GTCUSDT": {
+  "status": "import_pending",
+  "planned_files": 116,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 70,
+  "missing_files": 46,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 70,
+   "missing_in_archive": 46
+  }
+ },
+ "GUAUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "GUNUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "GUSDT": {
+  "status": "import_pending",
+  "planned_files": 33,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 32,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 32,
+   "missing_in_archive": 1
+  }
+ },
+ "GWEIUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "HAEDALUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "HANAUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 2,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 2
+  }
+ },
+ "HBARUSDT": {
+  "status": "import_pending",
+  "planned_files": 74,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 73,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 73,
+   "missing_in_archive": 1
+  }
+ },
+ "HEIUSDT": {
+  "status": "import_pending",
+  "planned_files": 27,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 26,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 26,
+   "missing_in_archive": 1
+  }
+ },
+ "HEMIUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "HIVEUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "HMSTRUSDT": {
+  "status": "import_pending",
+  "planned_files": 32,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 31,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 31,
+   "missing_in_archive": 1
+  }
+ },
+ "HOLOUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "HOMEUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 2,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 2
+  }
+ },
+ "HOTUSDT": {
+  "status": "import_pending",
+  "planned_files": 74,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 73,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 73,
+   "missing_in_archive": 1
+  }
+ },
+ "HUMAUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "HUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "HYPERUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "HYPEUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "ICNTUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "ICPUSDT": {
+  "status": "import_pending",
+  "planned_files": 70,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 69,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 69,
+   "missing_in_archive": 1
+  }
+ },
+ "IDOLUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "IDUSDT": {
+  "status": "import_pending",
+  "planned_files": 50,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 49,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 49,
+   "missing_in_archive": 1
+  }
+ },
+ "ILVUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 40,
+  "missing_files": 2,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 40,
+   "missing_in_archive": 2
+  }
+ },
+ "IMXUSDT": {
+  "status": "import_pending",
+  "planned_files": 63,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 62,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 62,
+   "missing_in_archive": 1
+  }
+ },
+ "INITUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "INJUSDT": {
+  "status": "import_pending",
+  "planned_files": 57,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 56,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 56,
+   "missing_in_archive": 1
+  }
+ },
+ "INUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "INXUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "IOSTUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "IOTAUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 85,
+  "missing_files": 2,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 85,
+   "missing_in_archive": 2
+  }
+ },
+ "IOTXUSDT": {
+  "status": "import_pending",
+  "planned_files": 69,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 68,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 68,
+   "missing_in_archive": 1
+  }
+ },
+ "IOUSDT": {
+  "status": "import_pending",
+  "planned_files": 35,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 34,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 34,
+   "missing_in_archive": 1
+  }
+ },
+ "IRYSUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "JASMYUSDT": {
+  "status": "import_pending",
+  "planned_files": 61,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 60,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 60,
+   "missing_in_archive": 1
+  }
+ },
+ "JCTUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 2,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 2
+  }
+ },
+ "JELLYJELLYUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "JOEUSDT": {
+  "status": "import_pending",
+  "planned_files": 50,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 49,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 49,
+   "missing_in_archive": 1
+  }
+ },
+ "JSTUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "JTOUSDT": {
+  "status": "import_pending",
+  "planned_files": 41,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 40,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 40,
+   "missing_in_archive": 1
+  }
+ },
+ "JUPUSDT": {
+  "status": "import_pending",
+  "planned_files": 40,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 39,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 39,
+   "missing_in_archive": 1
+  }
+ },
+ "KAIAUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "KAITOUSDT": {
+  "status": "import_pending",
+  "planned_files": 27,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 26,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 26,
+   "missing_in_archive": 1
+  }
+ },
+ "KASUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "KATUSDT": {
+  "status": "import_pending",
+  "planned_files": 14,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 13,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 13,
+   "missing_in_archive": 1
+  }
+ },
+ "KAVAUSDT": {
+  "status": "import_pending",
+  "planned_files": 82,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 81,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 81,
+   "missing_in_archive": 1
+  }
+ },
+ "KERNELUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "KGENUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "KITEUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "KMNOUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "KNCUSDT": {
+  "status": "import_pending",
+  "planned_files": 83,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 82,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 82,
+   "missing_in_archive": 1
+  }
+ },
+ "KOMAUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "KSMUSDT": {
+  "status": "import_pending",
+  "planned_files": 79,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 78,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 78,
+   "missing_in_archive": 1
+  }
+ },
+ "LABUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 2,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 2
+  }
+ },
+ "LAUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "LAYERUSDT": {
+  "status": "import_pending",
+  "planned_files": 27,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 26,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 26,
+   "missing_in_archive": 1
+  }
+ },
+ "LDOUSDT": {
+  "status": "import_pending",
+  "planned_files": 56,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 55,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 55,
+   "missing_in_archive": 1
+  }
+ },
+ "LIGHTUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "LINEAUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "LINKUSDT": {
+  "status": "import_pending",
+  "planned_files": 88,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 87,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 87,
+   "missing_in_archive": 1
+  }
+ },
+ "LISTAUSDT": {
+  "status": "import_pending",
+  "planned_files": 35,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 34,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 34,
+   "missing_in_archive": 1
+  }
+ },
+ "LITUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "LPTUSDT": {
+  "status": "import_pending",
+  "planned_files": 66,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 65,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 65,
+   "missing_in_archive": 1
+  }
+ },
+ "LQTYUSDT": {
+  "status": "import_pending",
+  "planned_files": 50,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 49,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 49,
+   "missing_in_archive": 1
+  }
+ },
+ "LSKUSDT": {
+  "status": "import_pending",
+  "planned_files": 40,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 39,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 39,
+   "missing_in_archive": 1
+  }
+ },
+ "LTCUSDT": {
+  "status": "import_pending",
+  "planned_files": 88,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 87,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 87,
+   "missing_in_archive": 1
+  }
+ },
+ "LUMIAUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "LUNA2USDT": {
+  "status": "import_pending",
+  "planned_files": 56,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 55,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 55,
+   "missing_in_archive": 1
+  }
+ },
+ "LYNUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "MAGICUSDT": {
+  "status": "import_pending",
+  "planned_files": 52,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 51,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 51,
+   "missing_in_archive": 1
+  }
+ },
+ "MAGMAUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "MANAUSDT": {
+  "status": "import_pending",
+  "planned_files": 74,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 73,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 73,
+   "missing_in_archive": 1
+  }
+ },
+ "MANTAUSDT": {
+  "status": "import_pending",
+  "planned_files": 40,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 39,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 39,
+   "missing_in_archive": 1
+  }
+ },
+ "MANTRAUSDT": {
+  "status": "import_pending",
+  "planned_files": 14,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 13,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 13,
+   "missing_in_archive": 1
+  }
+ },
+ "MARSCOINUSDT": {
+  "status": "import_pending",
+  "planned_files": 8,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 7,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 7,
+   "missing_in_archive": 1
+  }
+ },
+ "MASKUSDT": {
+  "status": "import_pending",
+  "planned_files": 85,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 68,
+  "missing_files": 17,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 68,
+   "missing_in_archive": 17
+  }
+ },
+ "MAVIAUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "MAVUSDT": {
+  "status": "import_pending",
+  "planned_files": 47,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 46,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 46,
+   "missing_in_archive": 1
+  }
+ },
+ "MEGAUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "MELANIAUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "MEMEUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "MERLUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 2,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 2
+  }
+ },
+ "METISUSDT": {
+  "status": "import_pending",
+  "planned_files": 38,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 37,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 37,
+   "missing_in_archive": 1
+  }
+ },
+ "METUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "MEUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "MEWUSDT": {
+  "status": "import_pending",
+  "planned_files": 35,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 34,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 34,
+   "missing_in_archive": 1
+  }
+ },
+ "MINAUSDT": {
+  "status": "import_pending",
+  "planned_files": 51,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 50,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 50,
+   "missing_in_archive": 1
+  }
+ },
+ "MIRAUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "MITOUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "MMTUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "MOCAUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "MONUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "MOODENGUSDT": {
+  "status": "import_pending",
+  "planned_files": 31,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 30,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 30,
+   "missing_in_archive": 1
+  }
+ },
+ "MORPHOUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "MOVEUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "MOVRUSDT": {
+  "status": "import_pending",
+  "planned_files": 41,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 40,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 40,
+   "missing_in_archive": 1
+  }
+ },
+ "MTLUSDT": {
+  "status": "import_pending",
+  "planned_files": 74,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 73,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 73,
+   "missing_in_archive": 1
+  }
+ },
+ "MUBARAKUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "MUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "MYXUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "NAORISUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "NEARUSDT": {
+  "status": "import_pending",
+  "planned_files": 79,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 78,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 78,
+   "missing_in_archive": 1
+  }
+ },
+ "NEIROUSDT": {
+  "status": "import_pending",
+  "planned_files": 32,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 31,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 31,
+   "missing_in_archive": 1
+  }
+ },
+ "NEOUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "NEWTUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "NIGHTUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "NILUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "NMRUSDT": {
+  "status": "import_pending",
+  "planned_files": 47,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 46,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 46,
+   "missing_in_archive": 1
+  }
+ },
+ "NOMUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "NOTUSDT": {
+  "status": "import_pending",
+  "planned_files": 36,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 35,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 35,
+   "missing_in_archive": 1
+  }
+ },
+ "NXPCUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "OGNUSDT": {
+  "status": "import_pending",
+  "planned_files": 74,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 72,
+  "missing_files": 2,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 72,
+   "missing_in_archive": 2
+  }
+ },
+ "OGUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "ONDOUSDT": {
+  "status": "import_pending",
+  "planned_files": 40,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 39,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 39,
+   "missing_in_archive": 1
+  }
+ },
+ "ONEUSDT": {
+  "status": "import_pending",
+  "planned_files": 74,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 73,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 73,
+   "missing_in_archive": 1
+  }
+ },
+ "ONGUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "ONTUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "ONUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "OPENUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "OPGUSDT": {
+  "status": "import_pending",
+  "planned_files": 13,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 12,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 12,
+   "missing_in_archive": 1
+  }
+ },
+ "OPNUSDT": {
+  "status": "import_pending",
+  "planned_files": 15,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 14,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 14,
+   "missing_in_archive": 1
+  }
+ },
+ "OPUSDT": {
+  "status": "import_pending",
+  "planned_files": 59,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 58,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 58,
+   "missing_in_archive": 1
+  }
+ },
+ "ORCAUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "ORDERUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "ORDIUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "OUSDT": {
+  "status": "import_pending",
+  "planned_files": 11,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 10,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 10,
+   "missing_in_archive": 1
+  }
+ },
+ "PARTIUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "PAXGUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "PENDLEUSDT": {
+  "status": "import_pending",
+  "planned_files": 46,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 45,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 45,
+   "missing_in_archive": 1
+  }
+ },
+ "PENGUUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "PEOPLEUSDT": {
+  "status": "import_pending",
+  "planned_files": 65,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 64,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 64,
+   "missing_in_archive": 1
+  }
+ },
+ "PHAROSUSDT": {
+  "status": "import_pending",
+  "planned_files": 12,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 11,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 11,
+   "missing_in_archive": 1
+  }
+ },
+ "PHAUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "PIEVERSEUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "PIPPINUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "PIXELUSDT": {
+  "status": "import_pending",
+  "planned_files": 39,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 38,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 38,
+   "missing_in_archive": 1
+  }
+ },
+ "PLAYUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "PLUMEUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "PNUTUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "POLUSDT": {
+  "status": "import_pending",
+  "planned_files": 32,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 31,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 31,
+   "missing_in_archive": 1
+  }
+ },
+ "POLYXUSDT": {
+  "status": "import_pending",
+  "planned_files": 43,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 42,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 42,
+   "missing_in_archive": 1
+  }
+ },
+ "PONSUSDT": {
+  "status": "import_pending",
+  "planned_files": 8,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 7,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 7,
+   "missing_in_archive": 1
+  }
+ },
+ "POPCATUSDT": {
+  "status": "import_pending",
+  "planned_files": 33,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 32,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 32,
+   "missing_in_archive": 1
+  }
+ },
+ "PORTALUSDT": {
+  "status": "import_pending",
+  "planned_files": 39,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 38,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 38,
+   "missing_in_archive": 1
+  }
+ },
+ "POWERUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "POWRUSDT": {
+  "status": "import_pending",
+  "planned_files": 43,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 42,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 42,
+   "missing_in_archive": 1
+  }
+ },
+ "PRLUSDT": {
+  "status": "import_pending",
+  "planned_files": 13,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 12,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 12,
+   "missing_in_archive": 1
+  }
+ },
+ "PROMPTUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "PROMUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "PROVEUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "PTBUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "PUMPBTCUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "PUMPUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "PUNDIXUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "PYTHUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "QNTUSDT": {
+  "status": "import_pending",
+  "planned_files": 55,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 54,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 54,
+   "missing_in_archive": 1
+  }
+ },
+ "QTUMUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "QUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "RAREUSDT": {
+  "status": "import_pending",
+  "planned_files": 33,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 32,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 32,
+   "missing_in_archive": 1
+  }
+ },
+ "RAVEUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "RAYSOLUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "RECALLUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "REDUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "RENDERUSDT": {
+  "status": "import_pending",
+  "planned_files": 34,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 33,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 33,
+   "missing_in_archive": 1
+  }
+ },
+ "RESOLVUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "REUSDT": {
+  "status": "import_pending",
+  "planned_files": 11,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 10,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 10,
+   "missing_in_archive": 1
+  }
+ },
+ "REZUSDT": {
+  "status": "import_pending",
+  "planned_files": 37,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 36,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 36,
+   "missing_in_archive": 1
+  }
+ },
+ "RIFUSDT": {
+  "status": "import_pending",
+  "planned_files": 43,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 42,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 42,
+   "missing_in_archive": 1
+  }
+ },
+ "RIVERUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "RLCUSDT": {
+  "status": "import_pending",
+  "planned_files": 82,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 81,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 18445,
+  "gaps": 820,
+  "files_by_status": {
+   "downloaded": 81,
+   "missing_in_archive": 1
+  }
+ },
+ "ROBOUSDT": {
+  "status": "import_pending",
+  "planned_files": 15,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 14,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 14,
+   "missing_in_archive": 1
+  }
+ },
+ "RONINUSDT": {
+  "status": "import_pending",
+  "planned_files": 39,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 38,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 38,
+   "missing_in_archive": 1
+  }
+ },
+ "ROSEUSDT": {
+  "status": "import_pending",
+  "planned_files": 65,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 64,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 64,
+   "missing_in_archive": 1
+  }
+ },
+ "RPLUSDT": {
+  "status": "import_pending",
+  "planned_files": 32,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 31,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 31,
+   "missing_in_archive": 1
+  }
+ },
+ "RSRUSDT": {
+  "status": "import_pending",
+  "planned_files": 79,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 78,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 78,
+   "missing_in_archive": 1
+  }
+ },
+ "RUNEUSDT": {
+  "status": "import_pending",
+  "planned_files": 80,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 79,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 79,
+   "missing_in_archive": 1
+  }
+ },
+ "RVNUSDT": {
+  "status": "import_pending",
+  "planned_files": 75,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 74,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 74,
+   "missing_in_archive": 1
+  }
+ },
+ "SAFEUSDT": {
+  "status": "import_pending",
+  "planned_files": 31,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 30,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 30,
+   "missing_in_archive": 1
+  }
+ },
+ "SAGAUSDT": {
+  "status": "import_pending",
+  "planned_files": 37,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 36,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 36,
+   "missing_in_archive": 1
+  }
+ },
+ "SAHARAUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "SANDUSDT": {
+  "status": "import_pending",
+  "planned_files": 76,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 75,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 75,
+   "missing_in_archive": 1
+  }
+ },
+ "SANTOSUSDT": {
+  "status": "import_pending",
+  "planned_files": 31,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 30,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 30,
+   "missing_in_archive": 1
+  }
+ },
+ "SAPIENUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "SCRUSDT": {
+  "status": "import_pending",
+  "planned_files": 31,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 30,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 30,
+   "missing_in_archive": 1
+  }
+ },
+ "SEIUSDT": {
+  "status": "import_pending",
+  "planned_files": 45,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 44,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 44,
+   "missing_in_archive": 1
+  }
+ },
+ "SENTUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "SFPUSDT": {
+  "status": "import_pending",
+  "planned_files": 75,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 74,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 74,
+   "missing_in_archive": 1
+  }
+ },
+ "SHELLUSDT": {
+  "status": "import_pending",
+  "planned_files": 27,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 26,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 26,
+   "missing_in_archive": 1
+  }
+ },
+ "SIGNUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "SIRENUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "SKLUSDT": {
+  "status": "import_pending",
+  "planned_files": 122,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 76,
+  "missing_files": 46,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 76,
+   "missing_in_archive": 46
+  }
+ },
+ "SKRUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "SKYAIUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "SKYUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "SLPUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "SLXUSDT": {
+  "status": "import_pending",
+  "planned_files": 11,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 10,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 10,
+   "missing_in_archive": 1
+  }
+ },
+ "SNXUSDT": {
+  "status": "import_pending",
+  "planned_files": 81,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 80,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 80,
+   "missing_in_archive": 1
+  }
+ },
+ "SOLUSDT": {
+  "status": "import_pending",
+  "planned_files": 80,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 79,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 79,
+   "missing_in_archive": 1
+  }
+ },
+ "SOLVUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "SOMIUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "SONICUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "SOONUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "SOPHUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "SPACEUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "SPELLUSDT": {
+  "status": "import_pending",
+  "planned_files": 56,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 55,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 55,
+   "missing_in_archive": 1
+  }
+ },
+ "SPKUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "SPORTFUNUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "SPXUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "SQDUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "SSVUSDT": {
+  "status": "import_pending",
+  "planned_files": 51,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 50,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 50,
+   "missing_in_archive": 1
+  }
+ },
+ "STABLEUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "STARUSDT": {
+  "status": "import_pending",
+  "planned_files": 12,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 11,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 11,
+   "missing_in_archive": 1
+  }
+ },
+ "STBLUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "STEEMUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "STOUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "STRKUSDT": {
+  "status": "import_pending",
+  "planned_files": 39,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 38,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 38,
+   "missing_in_archive": 1
+  }
+ },
+ "STXUSDT": {
+  "status": "import_pending",
+  "planned_files": 51,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 50,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 50,
+   "missing_in_archive": 1
+  }
+ },
+ "SUIUSDT": {
+  "status": "import_pending",
+  "planned_files": 48,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 47,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 47,
+   "missing_in_archive": 1
+  }
+ },
+ "SUNUSDT": {
+  "status": "import_pending",
+  "planned_files": 33,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 32,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 32,
+   "missing_in_archive": 1
+  }
+ },
+ "SUPERUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "SUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "SUSHIUSDT": {
+  "status": "import_pending",
+  "planned_files": 80,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 79,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 79,
+   "missing_in_archive": 1
+  }
+ },
+ "SWARMSUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "SXTUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "SYNUSDT": {
+  "status": "import_pending",
+  "planned_files": 33,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 32,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 32,
+   "missing_in_archive": 1
+  }
+ },
+ "SYRUPUSDT": {
+  "status": "import_pending",
+  "planned_files": 24,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 23,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 23,
+   "missing_in_archive": 1
+  }
+ },
+ "TACUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "TAGUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "TAIKOUSDT": {
+  "status": "import_pending",
+  "planned_files": 23,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 22,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 22,
+   "missing_in_archive": 1
+  }
+ },
+ "TAKEUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "TAOUSDT": {
+  "status": "import_pending",
+  "planned_files": 37,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 36,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 36,
+   "missing_in_archive": 1
+  }
+ },
+ "TAUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "THETAUSDT": {
+  "status": "import_pending",
+  "planned_files": 84,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 83,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 83,
+   "missing_in_archive": 1
+  }
+ },
+ "THEUSDT": {
+  "status": "import_pending",
+  "planned_files": 30,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 29,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 29,
+   "missing_in_archive": 1
+  }
+ },
+ "TIAUSDT": {
+  "status": "import_pending",
+  "planned_files": 43,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 42,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 42,
+   "missing_in_archive": 1
+  }
+ },
+ "TLMUSDT": {
+  "status": "import_pending",
+  "planned_files": 50,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 49,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 49,
+   "missing_in_archive": 1
+  }
+ },
+ "TNSRUSDT": {
+  "status": "import_pending",
+  "planned_files": 37,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 36,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 36,
+   "missing_in_archive": 1
+  }
+ },
+ "TOSHIUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "TOWNSUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "TRADOORUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "TRBUSDT": {
+  "status": "import_pending",
+  "planned_files": 80,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 79,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 79,
+   "missing_in_archive": 1
+  }
+ },
+ "TREEUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "TRIAUSDT": {
+  "status": "import_pending",
+  "planned_files": 15,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 14,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 14,
+   "missing_in_archive": 1
+  }
+ },
+ "TRUMPUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "TRUSTUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "TRUTHUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "TRXUSDT": {
+  "status": "import_pending",
+  "planned_files": 88,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 87,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 87,
+   "missing_in_archive": 1
+  }
+ },
+ "TSTUSDT": {
+  "status": "import_pending",
+  "planned_files": 27,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 26,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 26,
+   "missing_in_archive": 1
+  }
+ },
+ "TURBOUSDT": {
+  "status": "import_pending",
+  "planned_files": 36,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 35,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 35,
+   "missing_in_archive": 1
+  }
+ },
+ "TURTLEUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "TUSDT": {
+  "status": "import_pending",
+  "planned_files": 52,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 50,
+  "missing_files": 2,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 50,
+   "missing_in_archive": 2
+  }
+ },
+ "TUTUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "TWTUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "UAIUSDT": {
+  "status": "import_pending",
+  "planned_files": 18,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 17,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 17,
+   "missing_in_archive": 1
+  }
+ },
+ "UBUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "UMAUSDT": {
+  "status": "import_pending",
+  "planned_files": 48,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 47,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 47,
+   "missing_in_archive": 1
+  }
+ },
+ "UNIUSDT": {
+  "status": "import_pending",
+  "planned_files": 80,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 79,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 79,
+   "missing_in_archive": 1
+  }
+ },
+ "USDCUSDT": {
+  "status": "import_pending",
+  "planned_files": 50,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 49,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 49,
+   "missing_in_archive": 1
+  }
+ },
+ "USELESSUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "USTCUSDT": {
+  "status": "import_pending",
+  "planned_files": 42,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 41,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 41,
+   "missing_in_archive": 1
+  }
+ },
+ "USUALUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "USUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "VANAUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "VELODROMEUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "VELVETUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "VETUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "VIRTUALUSDT": {
+  "status": "import_pending",
+  "planned_files": 29,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 28,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 28,
+   "missing_in_archive": 1
+  }
+ },
+ "VTHOUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "VVVUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "WALUSDT": {
+  "status": "import_pending",
+  "planned_files": 26,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 25,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 25,
+   "missing_in_archive": 1
+  }
+ },
+ "WAXPUSDT": {
+  "status": "import_pending",
+  "planned_files": 43,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 42,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 42,
+   "missing_in_archive": 1
+  }
+ },
+ "WCTUSDT": {
+  "status": "import_pending",
+  "planned_files": 25,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 24,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 24,
+   "missing_in_archive": 1
+  }
+ },
+ "WETUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "WIFUSDT": {
+  "status": "import_pending",
+  "planned_files": 40,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 39,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 39,
+   "missing_in_archive": 1
+  }
+ },
+ "WLDUSDT": {
+  "status": "import_pending",
+  "planned_files": 46,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 45,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 45,
+   "missing_in_archive": 1
+  }
+ },
+ "WLFIUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "WOOUSDT": {
+  "status": "import_pending",
+  "planned_files": 61,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 60,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 60,
+   "missing_in_archive": 1
+  }
+ },
+ "WUSDT": {
+  "status": "import_pending",
+  "planned_files": 37,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 36,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 36,
+   "missing_in_archive": 1
+  }
+ },
+ "XAIUSDT": {
+  "status": "import_pending",
+  "planned_files": 40,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 39,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 39,
+   "missing_in_archive": 1
+  }
+ },
+ "XANUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "XAUTUSDT": {
+  "status": "import_pending",
+  "planned_files": 14,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 13,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 13,
+   "missing_in_archive": 1
+  }
+ },
+ "XLMUSDT": {
+  "status": "import_pending",
+  "planned_files": 88,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 87,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 87,
+   "missing_in_archive": 1
+  }
+ },
+ "XMRUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "XNYUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "XPINUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "XPLUSDT": {
+  "status": "import_pending",
+  "planned_files": 21,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 20,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 20,
+   "missing_in_archive": 1
+  }
+ },
+ "XRPUSDT": {
+  "status": "import_pending",
+  "planned_files": 88,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 87,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 87,
+   "missing_in_archive": 1
+  }
+ },
+ "XTZUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "XVGUSDT": {
+  "status": "import_pending",
+  "planned_files": 46,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 45,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 45,
+   "missing_in_archive": 1
+  }
+ },
+ "XVSUSDT": {
+  "status": "import_pending",
+  "planned_files": 49,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 48,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 48,
+   "missing_in_archive": 1
+  }
+ },
+ "YBUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "YFIUSDT": {
+  "status": "import_pending",
+  "planned_files": 81,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 80,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 80,
+   "missing_in_archive": 1
+  }
+ },
+ "YGGUSDT": {
+  "status": "import_pending",
+  "planned_files": 45,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 44,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 44,
+   "missing_in_archive": 1
+  }
+ },
+ "ZAMAUSDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "ZBTUSDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "ZECUSDT": {
+  "status": "import_pending",
+  "planned_files": 87,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 86,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 86,
+   "missing_in_archive": 1
+  }
+ },
+ "ZENUSDT": {
+  "status": "import_pending",
+  "planned_files": 78,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 77,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 77,
+   "missing_in_archive": 1
+  }
+ },
+ "ZEREBROUSDT": {
+  "status": "import_pending",
+  "planned_files": 28,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 27,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 27,
+   "missing_in_archive": 1
+  }
+ },
+ "ZESTUSDT": {
+  "status": "import_pending",
+  "planned_files": 11,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 10,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 10,
+   "missing_in_archive": 1
+  }
+ },
+ "ZETAUSDT": {
+  "status": "import_pending",
+  "planned_files": 39,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 38,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 38,
+   "missing_in_archive": 1
+  }
+ },
+ "ZILUSDT": {
+  "status": "import_pending",
+  "planned_files": 83,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 82,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 82,
+   "missing_in_archive": 1
+  }
+ },
+ "ZKCUSDT": {
+  "status": "import_pending",
+  "planned_files": 20,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 19,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 19,
+   "missing_in_archive": 1
+  }
+ },
+ "ZKPUSDT": {
+  "status": "import_pending",
+  "planned_files": 17,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 16,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 16,
+   "missing_in_archive": 1
+  }
+ },
+ "ZKUSDT": {
+  "status": "import_pending",
+  "planned_files": 35,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 34,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 34,
+   "missing_in_archive": 1
+  }
+ },
+ "ZORAUSDT": {
+  "status": "import_pending",
+  "planned_files": 22,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 21,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 21,
+   "missing_in_archive": 1
+  }
+ },
+ "ZROUSDT": {
+  "status": "import_pending",
+  "planned_files": 35,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 34,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 34,
+   "missing_in_archive": 1
+  }
+ },
+ "ZRXUSDT": {
+  "status": "import_pending",
+  "planned_files": 83,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 82,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 82,
+   "missing_in_archive": 1
+  }
+ },
+ "哈基米USDT": {
+  "status": "import_pending",
+  "planned_files": 8,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 7,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 7,
+   "missing_in_archive": 1
+  }
+ },
+ "币安人生USDT": {
+  "status": "import_pending",
+  "planned_files": 19,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 18,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 18,
+   "missing_in_archive": 1
+  }
+ },
+ "我踏马来了USDT": {
+  "status": "import_pending",
+  "planned_files": 16,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 15,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 15,
+   "missing_in_archive": 1
+  }
+ },
+ "牛来USDT": {
+  "status": "import_pending",
+  "planned_files": 9,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 8,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 8,
+   "missing_in_archive": 1
+  }
+ },
+ "龙虾USDT": {
+  "status": "import_pending",
+  "planned_files": 14,
+  "imported_files": 0,
+  "cached_files": 0,
+  "downloaded_files": 13,
+  "missing_files": 1,
+  "failed_files": 0,
+  "rows": 0,
+  "gaps": 0,
+  "files_by_status": {
+   "downloaded": 13,
+   "missing_in_archive": 1
+  }
+ }
+}

@@ -1,0 +1,1737 @@
+{
+ "format": "p12_multi_tf_gap_official_unavailability_evidence",
+ "version": 1,
+ "candidate_source": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/验收证据/PC13_代际缝隙重扫_2026-10-08.json",
+ "candidate_rule": "结构性重扫：洞终点 + 周期步长 == rest_first（不设日期过滤）",
+ "generated_utc": "2026-10-08T13:10:59Z",
+ "rule": "REST 以洞起点为 startTime 请求，最早返回根 > 洞起点；**且**官方日档 ZIP 正文不含洞内根 ⇒ 判 official_not_published（官方未发布，有证），不假补、不合成。",
+ "probes": [
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "AIAUSDT",
+   "timeframe": "4h",
+   "gap_range": [
+    "2026-01-20T00:00:00Z",
+    "2026-01-20T04:00:00Z"
+   ],
+   "gap_bars": 2,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=AIAUSDT&interval=4h&startTime=1768867200000&limit=5",
+    "requested_at_utc": "2026-10-08T13:10:59Z",
+    "http_status": 200,
+    "body_sha256": "6766a708268927881974045010086844278245e0195f7e85d0f0bcc9f78f39ba",
+    "body_bytes": 760,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2026-01-20T08:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/AIAUSDT/4h/AIAUSDT-4h-2026-01-20.zip",
+     "requested_at_utc": "2026-10-08T13:11:00Z",
+     "http_status": 200,
+     "zip_sha256": "f2a7d8563a9f981cadbfc01d3a8278bc3c36ec22070d971006300320f3ca67a7",
+     "zip_bytes": 521,
+     "error": null,
+     "zip_members": [
+      "AIAUSDT-4h-2026-01-20.csv"
+     ],
+     "archive_open_times": [
+      "2026-01-20T08:00:00Z",
+      "2026-01-20T12:00:00Z",
+      "2026-01-20T16:00:00Z",
+      "2026-01-20T20:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "CTKUSDT",
+   "timeframe": "4h",
+   "gap_range": [
+    "2025-04-30T00:00:00Z",
+    "2025-04-30T04:00:00Z"
+   ],
+   "gap_bars": 2,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=CTKUSDT&interval=4h&startTime=1745971200000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:01Z",
+    "http_status": 200,
+    "body_sha256": "1e6abd7b0f44eec3837baed108af89bebd45ba165b92fb5e35cb3f9fb946c170",
+    "body_bytes": 734,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-04-30T08:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/CTKUSDT/4h/CTKUSDT-4h-2025-04-30.zip",
+     "requested_at_utc": "2026-10-08T13:11:01Z",
+     "http_status": 200,
+     "zip_sha256": "c7fae7700d1567935535c5910277858f7f19798397d2df93acf23073e3d784a3",
+     "zip_bytes": 491,
+     "error": null,
+     "zip_members": [
+      "CTKUSDT-4h-2025-04-30.csv"
+     ],
+     "archive_open_times": [
+      "2025-04-30T08:00:00Z",
+      "2025-04-30T12:00:00Z",
+      "2025-04-30T16:00:00Z",
+      "2025-04-30T20:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "CVCUSDT",
+   "timeframe": "4h",
+   "gap_range": [
+    "2025-05-16T00:00:00Z",
+    "2025-05-16T04:00:00Z"
+   ],
+   "gap_bars": 2,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=CVCUSDT&interval=4h&startTime=1747353600000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:02Z",
+    "http_status": 200,
+    "body_sha256": "f6a7b8a206370a1b7b79ef270ddeda7489704f40ce2f5e191a4fc5221f178686",
+    "body_bytes": 733,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-05-16T08:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/CVCUSDT/4h/CVCUSDT-4h-2025-05-16.zip",
+     "requested_at_utc": "2026-10-08T13:11:03Z",
+     "http_status": 200,
+     "zip_sha256": "058ef44ff08939695099af26e77e5b1e072a20e646470c2a5b9e9dcb0fb851b9",
+     "zip_bytes": 498,
+     "error": null,
+     "zip_members": [
+      "CVCUSDT-4h-2025-05-16.csv"
+     ],
+     "archive_open_times": [
+      "2025-05-16T08:00:00Z",
+      "2025-05-16T12:00:00Z",
+      "2025-05-16T16:00:00Z",
+      "2025-05-16T20:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "CVXUSDT",
+   "timeframe": "4h",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T04:00:00Z"
+   ],
+   "gap_bars": 2,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=CVXUSDT&interval=4h&startTime=1753228800000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:04Z",
+    "http_status": 200,
+    "body_sha256": "2e0189f80d20bf606d3f29c4b5e7329fb8facc47ec5f1d1c91b42a3ef51224e4",
+    "body_bytes": 718,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-07-23T08:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/CVXUSDT/4h/CVXUSDT-4h-2025-07-23.zip",
+     "requested_at_utc": "2026-10-08T13:11:05Z",
+     "http_status": 200,
+     "zip_sha256": "1c07aa8e7de71697f0a97bf5ed3651f4943d3435ac84686949f48836c5205c80",
+     "zip_bytes": 500,
+     "error": null,
+     "zip_members": [
+      "CVXUSDT-4h-2025-07-23.csv"
+     ],
+     "archive_open_times": [
+      "2025-07-23T08:00:00Z",
+      "2025-07-23T12:00:00Z",
+      "2025-07-23T16:00:00Z",
+      "2025-07-23T20:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "ICPUSDT",
+   "timeframe": "4h",
+   "gap_range": [
+    "2022-09-22T00:00:00Z",
+    "2022-09-26T20:00:00Z"
+   ],
+   "gap_bars": 30,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=ICPUSDT&interval=4h&startTime=1663804800000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:06Z",
+    "http_status": 200,
+    "body_sha256": "be6341b99c07a81d50a705c750be641309690fb4b90aad2a38609a45d6adcf3a",
+    "body_bytes": 683,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2022-09-27T00:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/4h/ICPUSDT-4h-2022-09-22.zip",
+     "requested_at_utc": "2026-10-08T13:11:06Z",
+     "http_status": 404,
+     "zip_sha256": "5061828cac453af02107d02ef5f1bc37aed3a8eb3c868de414b5760d2f0d2a4b",
+     "zip_bytes": 356,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/4h/ICPUSDT-4h-2022-09-23.zip",
+     "requested_at_utc": "2026-10-08T13:11:07Z",
+     "http_status": 404,
+     "zip_sha256": "0f824dbdea56337d6420bfa554603485bf4a96dafe898193e6d3bba75f3f9848",
+     "zip_bytes": 356,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/4h/ICPUSDT-4h-2022-09-24.zip",
+     "requested_at_utc": "2026-10-08T13:11:08Z",
+     "http_status": 404,
+     "zip_sha256": "4653746ae374fc74a1f9c78dbbf0cdda173e2d29b79b9349598aff6b4be02927",
+     "zip_bytes": 336,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/4h/ICPUSDT-4h-2022-09-25.zip",
+     "requested_at_utc": "2026-10-08T13:11:09Z",
+     "http_status": 404,
+     "zip_sha256": "02e2357428356192087159f98a1bce0499dfcaa3a47ce701d45943bc8d420334",
+     "zip_bytes": 336,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/4h/ICPUSDT-4h-2022-09-26.zip",
+     "requested_at_utc": "2026-10-08T13:11:10Z",
+     "http_status": 404,
+     "zip_sha256": "993658fbb61c77cc32f1f67a29fc58d3de2b04182f3a0048ebf9775936ed1826",
+     "zip_bytes": 356,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "LITUSDT",
+   "timeframe": "4h",
+   "gap_range": [
+    "2025-12-23T00:00:00Z",
+    "2025-12-23T12:00:00Z"
+   ],
+   "gap_bars": 4,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=LITUSDT&interval=4h&startTime=1766448000000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:11Z",
+    "http_status": 200,
+    "body_sha256": "43b240a9d31422fa1e87cd27db4cccc29565d74a54128cc03b3faaa4c96e0608",
+    "body_bytes": 734,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-12-23T16:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/LITUSDT/4h/LITUSDT-4h-2025-12-23.zip",
+     "requested_at_utc": "2026-10-08T13:11:12Z",
+     "http_status": 200,
+     "zip_sha256": "97d2c3ccf3b9dc0246130724a67e5c66c00e7c8ddf6ecc095dde62b51a6bb090",
+     "zip_bytes": 401,
+     "error": null,
+     "zip_members": [
+      "LITUSDT-4h-2025-12-23.csv"
+     ],
+     "archive_open_times": [
+      "2025-12-23T16:00:00Z",
+      "2025-12-23T20:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "MAVIAUSDT",
+   "timeframe": "4h",
+   "gap_range": [
+    "2025-03-26T00:00:00Z",
+    "2025-03-26T12:00:00Z"
+   ],
+   "gap_bars": 4,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=MAVIAUSDT&interval=4h&startTime=1742947200000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:13Z",
+    "http_status": 200,
+    "body_sha256": "600b5c6b07721e6dfce077a133bd0ca73d4d650630d052de7e2bffb63488df6d",
+    "body_bytes": 740,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-03-26T16:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVIAUSDT/4h/MAVIAUSDT-4h-2025-03-26.zip",
+     "requested_at_utc": "2026-10-08T13:11:14Z",
+     "http_status": 200,
+     "zip_sha256": "fd539a295121f53117a6f8f0d130ee784de8082cbfed863a8baf91cc9e5298ec",
+     "zip_bytes": 406,
+     "error": null,
+     "zip_members": [
+      "MAVIAUSDT-4h-2025-03-26.csv"
+     ],
+     "archive_open_times": [
+      "2025-03-26T16:00:00Z",
+      "2025-03-26T20:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "PUMPUSDT",
+   "timeframe": "4h",
+   "gap_range": [
+    "2025-07-10T00:00:00Z",
+    "2025-07-10T00:00:00Z"
+   ],
+   "gap_bars": 1,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=PUMPUSDT&interval=4h&startTime=1752105600000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:15Z",
+    "http_status": 200,
+    "body_sha256": "1589b52ae151ecc072414dd2dd18a4f29b0902ab5559280e3c3af1ba055e00ec",
+    "body_bytes": 765,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-07-10T04:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/PUMPUSDT/4h/PUMPUSDT-4h-2025-07-10.zip",
+     "requested_at_utc": "2026-10-08T13:11:16Z",
+     "http_status": 200,
+     "zip_sha256": "78f247b4f72bb03145a45bbd3fbfff062890590ed40f50b91c9263b3a3ed4037",
+     "zip_bytes": 570,
+     "error": null,
+     "zip_members": [
+      "PUMPUSDT-4h-2025-07-10.csv"
+     ],
+     "archive_open_times": [
+      "2025-07-10T04:00:00Z",
+      "2025-07-10T08:00:00Z",
+      "2025-07-10T12:00:00Z",
+      "2025-07-10T16:00:00Z",
+      "2025-07-10T20:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "SLPUSDT",
+   "timeframe": "4h",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T04:00:00Z"
+   ],
+   "gap_bars": 2,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=SLPUSDT&interval=4h&startTime=1753228800000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:17Z",
+    "http_status": 200,
+    "body_sha256": "c6b74e01439523f9b9a8d8d5cf6877de99899850e5ac9edc3a7c85903dc97242",
+    "body_bytes": 752,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-07-23T08:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/SLPUSDT/4h/SLPUSDT-4h-2025-07-23.zip",
+     "requested_at_utc": "2026-10-08T13:11:18Z",
+     "http_status": 200,
+     "zip_sha256": "2a0abd57d99837ed26f96493fb9f0cd254788e69e387c02e02cbb21e55a61b59",
+     "zip_bytes": 509,
+     "error": null,
+     "zip_members": [
+      "SLPUSDT-4h-2025-07-23.csv"
+     ],
+     "archive_open_times": [
+      "2025-07-23T08:00:00Z",
+      "2025-07-23T12:00:00Z",
+      "2025-07-23T16:00:00Z",
+      "2025-07-23T20:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "AIAUSDT",
+   "timeframe": "1h",
+   "gap_range": [
+    "2026-01-20T00:00:00Z",
+    "2026-01-20T10:00:00Z"
+   ],
+   "gap_bars": 11,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=AIAUSDT&interval=1h&startTime=1768867200000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:19Z",
+    "http_status": 200,
+    "body_sha256": "84be9f7a4ff2fb27bf95fa30e2340b1cb1f7645833dd855dd17c7f7b95974fe9",
+    "body_bytes": 755,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2026-01-20T11:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/AIAUSDT/1h/AIAUSDT-1h-2026-01-20.zip",
+     "requested_at_utc": "2026-10-08T13:11:20Z",
+     "http_status": 200,
+     "zip_sha256": "acd5293a9977d4a486a6f538c2818ad2976011c8eec871de8c93b723e333a567",
+     "zip_bytes": 982,
+     "error": null,
+     "zip_members": [
+      "AIAUSDT-1h-2026-01-20.csv"
+     ],
+     "archive_open_times": [
+      "2026-01-20T11:00:00Z",
+      "2026-01-20T12:00:00Z",
+      "2026-01-20T13:00:00Z",
+      "2026-01-20T14:00:00Z",
+      "2026-01-20T15:00:00Z",
+      "2026-01-20T16:00:00Z",
+      "2026-01-20T17:00:00Z",
+      "2026-01-20T18:00:00Z",
+      "2026-01-20T19:00:00Z",
+      "2026-01-20T20:00:00Z",
+      "2026-01-20T21:00:00Z",
+      "2026-01-20T22:00:00Z",
+      "2026-01-20T23:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "CTKUSDT",
+   "timeframe": "1h",
+   "gap_range": [
+    "2025-04-30T00:00:00Z",
+    "2025-04-30T09:00:00Z"
+   ],
+   "gap_bars": 10,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=CTKUSDT&interval=1h&startTime=1745971200000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:21Z",
+    "http_status": 200,
+    "body_sha256": "807c71581f6dbb168c41f809780b2e957be10201db40a01fb318b08e54638083",
+    "body_bytes": 725,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-04-30T10:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/CTKUSDT/1h/CTKUSDT-1h-2025-04-30.zip",
+     "requested_at_utc": "2026-10-08T13:11:22Z",
+     "http_status": 200,
+     "zip_sha256": "a2146d9fe94193e6113ba552ad0c7be697ccf831102d7e53e9bb6816f1189f93",
+     "zip_bytes": 953,
+     "error": null,
+     "zip_members": [
+      "CTKUSDT-1h-2025-04-30.csv"
+     ],
+     "archive_open_times": [
+      "2025-04-30T10:00:00Z",
+      "2025-04-30T11:00:00Z",
+      "2025-04-30T12:00:00Z",
+      "2025-04-30T13:00:00Z",
+      "2025-04-30T14:00:00Z",
+      "2025-04-30T15:00:00Z",
+      "2025-04-30T16:00:00Z",
+      "2025-04-30T17:00:00Z",
+      "2025-04-30T18:00:00Z",
+      "2025-04-30T19:00:00Z",
+      "2025-04-30T20:00:00Z",
+      "2025-04-30T21:00:00Z",
+      "2025-04-30T22:00:00Z",
+      "2025-04-30T23:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "CVCUSDT",
+   "timeframe": "1h",
+   "gap_range": [
+    "2025-05-16T00:00:00Z",
+    "2025-05-16T07:00:00Z"
+   ],
+   "gap_bars": 8,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=CVCUSDT&interval=1h&startTime=1747353600000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:22Z",
+    "http_status": 200,
+    "body_sha256": "0edd660c1a908269bd02c784afeaf478da0e5917686d3dbc0123e4f00d6896b8",
+    "body_bytes": 727,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-05-16T08:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/CVCUSDT/1h/CVCUSDT-1h-2025-05-16.zip",
+     "requested_at_utc": "2026-10-08T13:11:23Z",
+     "http_status": 200,
+     "zip_sha256": "e1d3068c6a06da80f2a85f37647cc80ddab8149d88d6cef4d57d463d8e0c2eb9",
+     "zip_bytes": 1058,
+     "error": null,
+     "zip_members": [
+      "CVCUSDT-1h-2025-05-16.csv"
+     ],
+     "archive_open_times": [
+      "2025-05-16T08:00:00Z",
+      "2025-05-16T09:00:00Z",
+      "2025-05-16T10:00:00Z",
+      "2025-05-16T11:00:00Z",
+      "2025-05-16T12:00:00Z",
+      "2025-05-16T13:00:00Z",
+      "2025-05-16T14:00:00Z",
+      "2025-05-16T15:00:00Z",
+      "2025-05-16T16:00:00Z",
+      "2025-05-16T17:00:00Z",
+      "2025-05-16T18:00:00Z",
+      "2025-05-16T19:00:00Z",
+      "2025-05-16T20:00:00Z",
+      "2025-05-16T21:00:00Z",
+      "2025-05-16T22:00:00Z",
+      "2025-05-16T23:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "CVXUSDT",
+   "timeframe": "1h",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T10:00:00Z"
+   ],
+   "gap_bars": 11,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=CVXUSDT&interval=1h&startTime=1753228800000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:24Z",
+    "http_status": 200,
+    "body_sha256": "6d56310e0e72f2636089940e95a7e7a30a192fdf3bcf9b842bd2281dfe811b42",
+    "body_bytes": 710,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-07-23T11:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/CVXUSDT/1h/CVXUSDT-1h-2025-07-23.zip",
+     "requested_at_utc": "2026-10-08T13:11:25Z",
+     "http_status": 200,
+     "zip_sha256": "c9ceabb21dbc6c917c278437a655d402d0c12377a6ee1a6f8ac3fb3f907e6e07",
+     "zip_bytes": 904,
+     "error": null,
+     "zip_members": [
+      "CVXUSDT-1h-2025-07-23.csv"
+     ],
+     "archive_open_times": [
+      "2025-07-23T11:00:00Z",
+      "2025-07-23T12:00:00Z",
+      "2025-07-23T13:00:00Z",
+      "2025-07-23T14:00:00Z",
+      "2025-07-23T15:00:00Z",
+      "2025-07-23T16:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-23T18:00:00Z",
+      "2025-07-23T19:00:00Z",
+      "2025-07-23T20:00:00Z",
+      "2025-07-23T21:00:00Z",
+      "2025-07-23T22:00:00Z",
+      "2025-07-23T23:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "ICPUSDT",
+   "timeframe": "1h",
+   "gap_range": [
+    "2022-09-22T00:00:00Z",
+    "2022-09-27T01:00:00Z"
+   ],
+   "gap_bars": 122,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=ICPUSDT&interval=1h&startTime=1663804800000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:26Z",
+    "http_status": 200,
+    "body_sha256": "a4d71e301c7f4fa2fb17bdb774f0f2cca99254b981e3331e1051e10bc1fd51ae",
+    "body_bytes": 676,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2022-09-27T02:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/1h/ICPUSDT-1h-2022-09-22.zip",
+     "requested_at_utc": "2026-10-08T13:11:27Z",
+     "http_status": 404,
+     "zip_sha256": "07c59d9ad8567d203c5728a0c128728c2a38effda8182b16e85eb8e83fe14e60",
+     "zip_bytes": 336,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/1h/ICPUSDT-1h-2022-09-23.zip",
+     "requested_at_utc": "2026-10-08T13:11:29Z",
+     "http_status": 404,
+     "zip_sha256": "38c3da5fada577156d4a49c5be35a8533300d493f6ca545d3617172b7173bc9a",
+     "zip_bytes": 356,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/1h/ICPUSDT-1h-2022-09-24.zip",
+     "requested_at_utc": "2026-10-08T13:11:30Z",
+     "http_status": 404,
+     "zip_sha256": "116be70992431351019a62a92111b6735990780b44566c62f066cd9cc7163aed",
+     "zip_bytes": 356,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/1h/ICPUSDT-1h-2022-09-25.zip",
+     "requested_at_utc": "2026-10-08T13:11:31Z",
+     "http_status": 404,
+     "zip_sha256": "568919a6e79b61b5ba7ffba0b86c26d415b1b4b9bff6af1c305028ae437f2e83",
+     "zip_bytes": 336,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/1h/ICPUSDT-1h-2022-09-26.zip",
+     "requested_at_utc": "2026-10-08T13:11:32Z",
+     "http_status": 404,
+     "zip_sha256": "b9fca5ad0547a9f894ebe517400d45b8f4fd77283fb79cb05f08dc29aca98366",
+     "zip_bytes": 336,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/1h/ICPUSDT-1h-2022-09-27.zip",
+     "requested_at_utc": "2026-10-08T13:11:34Z",
+     "http_status": 200,
+     "zip_sha256": "6ee5459ade76341aefc156904e30ba80233927c279d9be98bc636638d24f47f5",
+     "zip_bytes": 1213,
+     "error": null,
+     "zip_members": [
+      "ICPUSDT-1h-2022-09-27.csv"
+     ],
+     "archive_open_times": [
+      "2022-09-27T02:00:00Z",
+      "2022-09-27T03:00:00Z",
+      "2022-09-27T04:00:00Z",
+      "2022-09-27T05:00:00Z",
+      "2022-09-27T06:00:00Z",
+      "2022-09-27T07:00:00Z",
+      "2022-09-27T08:00:00Z",
+      "2022-09-27T09:00:00Z",
+      "2022-09-27T10:00:00Z",
+      "2022-09-27T11:00:00Z",
+      "2022-09-27T12:00:00Z",
+      "2022-09-27T13:00:00Z",
+      "2022-09-27T14:00:00Z",
+      "2022-09-27T15:00:00Z",
+      "2022-09-27T16:00:00Z",
+      "2022-09-27T17:00:00Z",
+      "2022-09-27T18:00:00Z",
+      "2022-09-27T19:00:00Z",
+      "2022-09-27T20:00:00Z",
+      "2022-09-27T21:00:00Z",
+      "2022-09-27T22:00:00Z",
+      "2022-09-27T23:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "LITUSDT",
+   "timeframe": "1h",
+   "gap_range": [
+    "2025-12-23T00:00:00Z",
+    "2025-12-23T16:00:00Z"
+   ],
+   "gap_bars": 17,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=LITUSDT&interval=1h&startTime=1766448000000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:34Z",
+    "http_status": 200,
+    "body_sha256": "ec7a5ea8eef840d87eda3632f1d97028015d66cfcc03d3d29decca372a98f353",
+    "body_bytes": 721,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-12-23T17:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/LITUSDT/1h/LITUSDT-1h-2025-12-23.zip",
+     "requested_at_utc": "2026-10-08T13:11:35Z",
+     "http_status": 200,
+     "zip_sha256": "de16a98b1e88bd913bd88b2a2e6f3362c685a0b1093396c42eeebdd58f257cb9",
+     "zip_bytes": 632,
+     "error": null,
+     "zip_members": [
+      "LITUSDT-1h-2025-12-23.csv"
+     ],
+     "archive_open_times": [
+      "2025-12-23T17:00:00Z",
+      "2025-12-23T18:00:00Z",
+      "2025-12-23T19:00:00Z",
+      "2025-12-23T20:00:00Z",
+      "2025-12-23T21:00:00Z",
+      "2025-12-23T22:00:00Z",
+      "2025-12-23T23:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "MAVIAUSDT",
+   "timeframe": "1h",
+   "gap_range": [
+    "2025-03-26T00:00:00Z",
+    "2025-03-26T16:00:00Z"
+   ],
+   "gap_bars": 17,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=MAVIAUSDT&interval=1h&startTime=1742947200000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:36Z",
+    "http_status": 200,
+    "body_sha256": "85fd4f1940f99e59e0eee83ccdb393210f00e6fbc7438217d2aa6994c02e8c48",
+    "body_bytes": 730,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-03-26T17:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVIAUSDT/1h/MAVIAUSDT-1h-2025-03-26.zip",
+     "requested_at_utc": "2026-10-08T13:11:37Z",
+     "http_status": 200,
+     "zip_sha256": "d0f3c8cb8ce72a8264ca080773ea7ded8faffe3f1cd03696c1f010d78d67e1e2",
+     "zip_bytes": 635,
+     "error": null,
+     "zip_members": [
+      "MAVIAUSDT-1h-2025-03-26.csv"
+     ],
+     "archive_open_times": [
+      "2025-03-26T17:00:00Z",
+      "2025-03-26T18:00:00Z",
+      "2025-03-26T19:00:00Z",
+      "2025-03-26T20:00:00Z",
+      "2025-03-26T21:00:00Z",
+      "2025-03-26T22:00:00Z",
+      "2025-03-26T23:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "PUMPUSDT",
+   "timeframe": "1h",
+   "gap_range": [
+    "2025-07-10T00:00:00Z",
+    "2025-07-10T06:00:00Z"
+   ],
+   "gap_bars": 7,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=PUMPUSDT&interval=1h&startTime=1752105600000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:39Z",
+    "http_status": 200,
+    "body_sha256": "142a8e96c037df31ef5004a2a9ff34073007f9a44bea2c437b4f666e78bd5bd6",
+    "body_bytes": 754,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-07-10T07:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/PUMPUSDT/1h/PUMPUSDT-1h-2025-07-10.zip",
+     "requested_at_utc": "2026-10-08T13:11:40Z",
+     "http_status": 200,
+     "zip_sha256": "5e854fd5b8bfbd9a031b6ccdc26c8d597694b020ef7ecb1de0895f27f39a0386",
+     "zip_bytes": 1173,
+     "error": null,
+     "zip_members": [
+      "PUMPUSDT-1h-2025-07-10.csv"
+     ],
+     "archive_open_times": [
+      "2025-07-10T07:00:00Z",
+      "2025-07-10T08:00:00Z",
+      "2025-07-10T09:00:00Z",
+      "2025-07-10T10:00:00Z",
+      "2025-07-10T11:00:00Z",
+      "2025-07-10T12:00:00Z",
+      "2025-07-10T13:00:00Z",
+      "2025-07-10T14:00:00Z",
+      "2025-07-10T15:00:00Z",
+      "2025-07-10T16:00:00Z",
+      "2025-07-10T17:00:00Z",
+      "2025-07-10T18:00:00Z",
+      "2025-07-10T19:00:00Z",
+      "2025-07-10T20:00:00Z",
+      "2025-07-10T21:00:00Z",
+      "2025-07-10T22:00:00Z",
+      "2025-07-10T23:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "SLPUSDT",
+   "timeframe": "1h",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T10:00:00Z"
+   ],
+   "gap_bars": 11,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=SLPUSDT&interval=1h&startTime=1753228800000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:40Z",
+    "http_status": 200,
+    "body_sha256": "26be2fbc1434f06102c5cc5048baa9c9674e0450fc63b901e286c82d36bbf7eb",
+    "body_bytes": 745,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-07-23T11:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/SLPUSDT/1h/SLPUSDT-1h-2025-07-23.zip",
+     "requested_at_utc": "2026-10-08T13:11:41Z",
+     "http_status": 200,
+     "zip_sha256": "826c744a9b09bbb0e4e8650a3e8243357cce1e2206729d5c365653c19234045b",
+     "zip_bytes": 964,
+     "error": null,
+     "zip_members": [
+      "SLPUSDT-1h-2025-07-23.csv"
+     ],
+     "archive_open_times": [
+      "2025-07-23T11:00:00Z",
+      "2025-07-23T12:00:00Z",
+      "2025-07-23T13:00:00Z",
+      "2025-07-23T14:00:00Z",
+      "2025-07-23T15:00:00Z",
+      "2025-07-23T16:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-23T18:00:00Z",
+      "2025-07-23T19:00:00Z",
+      "2025-07-23T20:00:00Z",
+      "2025-07-23T21:00:00Z",
+      "2025-07-23T22:00:00Z",
+      "2025-07-23T23:00:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "AIAUSDT",
+   "timeframe": "30m",
+   "gap_range": [
+    "2026-01-20T00:00:00Z",
+    "2026-01-20T10:30:00Z"
+   ],
+   "gap_bars": 22,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=AIAUSDT&interval=30m&startTime=1768867200000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:44Z",
+    "http_status": 200,
+    "body_sha256": "6ff5155929e36a45aad848fff80334241d6fd0d825bd679e6751c0f1b0aa7a61",
+    "body_bytes": 750,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2026-01-20T11:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/AIAUSDT/30m/AIAUSDT-30m-2026-01-20.zip",
+     "requested_at_utc": "2026-10-08T13:11:45Z",
+     "http_status": 200,
+     "zip_sha256": "6a543099c5fea5477f681ebf445adc791284174064b59c4a00be6ec3037502b8",
+     "zip_bytes": 1663,
+     "error": null,
+     "zip_members": [
+      "AIAUSDT-30m-2026-01-20.csv"
+     ],
+     "archive_open_times": [
+      "2026-01-20T11:00:00Z",
+      "2026-01-20T11:30:00Z",
+      "2026-01-20T12:00:00Z",
+      "2026-01-20T12:30:00Z",
+      "2026-01-20T13:00:00Z",
+      "2026-01-20T13:30:00Z",
+      "2026-01-20T14:00:00Z",
+      "2026-01-20T14:30:00Z",
+      "2026-01-20T15:00:00Z",
+      "2026-01-20T15:30:00Z",
+      "2026-01-20T16:00:00Z",
+      "2026-01-20T16:30:00Z",
+      "2026-01-20T17:00:00Z",
+      "2026-01-20T17:30:00Z",
+      "2026-01-20T18:00:00Z",
+      "2026-01-20T18:30:00Z",
+      "2026-01-20T19:00:00Z",
+      "2026-01-20T19:30:00Z",
+      "2026-01-20T20:00:00Z",
+      "2026-01-20T20:30:00Z",
+      "2026-01-20T21:00:00Z",
+      "2026-01-20T21:30:00Z",
+      "2026-01-20T22:00:00Z",
+      "2026-01-20T22:30:00Z",
+      "2026-01-20T23:00:00Z",
+      "2026-01-20T23:30:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "CTKUSDT",
+   "timeframe": "30m",
+   "gap_range": [
+    "2025-04-30T00:00:00Z",
+    "2025-04-30T09:30:00Z"
+   ],
+   "gap_bars": 20,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=CTKUSDT&interval=30m&startTime=1745971200000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:46Z",
+    "http_status": 200,
+    "body_sha256": "62f53a06c713bb41457903fe63b485b4d2ea5a490d7a11a17b371715f08fc9a6",
+    "body_bytes": 721,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-04-30T10:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/CTKUSDT/30m/CTKUSDT-30m-2025-04-30.zip",
+     "requested_at_utc": "2026-10-08T13:11:47Z",
+     "http_status": 200,
+     "zip_sha256": "1abeb298a74e2e3fdcde91f592a0ad95bad683db2341a918f3d4a3c8bf47a12a",
+     "zip_bytes": 1567,
+     "error": null,
+     "zip_members": [
+      "CTKUSDT-30m-2025-04-30.csv"
+     ],
+     "archive_open_times": [
+      "2025-04-30T10:00:00Z",
+      "2025-04-30T10:30:00Z",
+      "2025-04-30T11:00:00Z",
+      "2025-04-30T11:30:00Z",
+      "2025-04-30T12:00:00Z",
+      "2025-04-30T12:30:00Z",
+      "2025-04-30T13:00:00Z",
+      "2025-04-30T13:30:00Z",
+      "2025-04-30T14:00:00Z",
+      "2025-04-30T14:30:00Z",
+      "2025-04-30T15:00:00Z",
+      "2025-04-30T15:30:00Z",
+      "2025-04-30T16:00:00Z",
+      "2025-04-30T16:30:00Z",
+      "2025-04-30T17:00:00Z",
+      "2025-04-30T17:30:00Z",
+      "2025-04-30T18:00:00Z",
+      "2025-04-30T18:30:00Z",
+      "2025-04-30T19:00:00Z",
+      "2025-04-30T19:30:00Z",
+      "2025-04-30T20:00:00Z",
+      "2025-04-30T20:30:00Z",
+      "2025-04-30T21:00:00Z",
+      "2025-04-30T21:30:00Z",
+      "2025-04-30T22:00:00Z",
+      "2025-04-30T22:30:00Z",
+      "2025-04-30T23:00:00Z",
+      "2025-04-30T23:30:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "CVCUSDT",
+   "timeframe": "30m",
+   "gap_range": [
+    "2025-05-16T00:00:00Z",
+    "2025-05-16T08:00:00Z"
+   ],
+   "gap_bars": 17,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=CVCUSDT&interval=30m&startTime=1747353600000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:48Z",
+    "http_status": 200,
+    "body_sha256": "a405219a78d7ac005a35477a5e0b125bf1717357439418c73488372ccd867d85",
+    "body_bytes": 721,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-05-16T08:30:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/CVCUSDT/30m/CVCUSDT-30m-2025-05-16.zip",
+     "requested_at_utc": "2026-10-08T13:11:50Z",
+     "http_status": 200,
+     "zip_sha256": "618aac073bcc29c4294f24bca7a7707a48882539e6082368ddcf816e91213647",
+     "zip_bytes": 1731,
+     "error": null,
+     "zip_members": [
+      "CVCUSDT-30m-2025-05-16.csv"
+     ],
+     "archive_open_times": [
+      "2025-05-16T08:30:00Z",
+      "2025-05-16T09:00:00Z",
+      "2025-05-16T09:30:00Z",
+      "2025-05-16T10:00:00Z",
+      "2025-05-16T10:30:00Z",
+      "2025-05-16T11:00:00Z",
+      "2025-05-16T11:30:00Z",
+      "2025-05-16T12:00:00Z",
+      "2025-05-16T12:30:00Z",
+      "2025-05-16T13:00:00Z",
+      "2025-05-16T13:30:00Z",
+      "2025-05-16T14:00:00Z",
+      "2025-05-16T14:30:00Z",
+      "2025-05-16T15:00:00Z",
+      "2025-05-16T15:30:00Z",
+      "2025-05-16T16:00:00Z",
+      "2025-05-16T16:30:00Z",
+      "2025-05-16T17:00:00Z",
+      "2025-05-16T17:30:00Z",
+      "2025-05-16T18:00:00Z",
+      "2025-05-16T18:30:00Z",
+      "2025-05-16T19:00:00Z",
+      "2025-05-16T19:30:00Z",
+      "2025-05-16T20:00:00Z",
+      "2025-05-16T20:30:00Z",
+      "2025-05-16T21:00:00Z",
+      "2025-05-16T21:30:00Z",
+      "2025-05-16T22:00:00Z",
+      "2025-05-16T22:30:00Z",
+      "2025-05-16T23:00:00Z",
+      "2025-05-16T23:30:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "CVXUSDT",
+   "timeframe": "30m",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T11:00:00Z"
+   ],
+   "gap_bars": 23,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=CVXUSDT&interval=30m&startTime=1753228800000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:51Z",
+    "http_status": 200,
+    "body_sha256": "9f7c47e685f74998eff0d892682bbc1f33324db28505789690bd0876e647dee2",
+    "body_bytes": 709,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-07-23T11:30:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/CVXUSDT/30m/CVXUSDT-30m-2025-07-23.zip",
+     "requested_at_utc": "2026-10-08T13:11:52Z",
+     "http_status": 200,
+     "zip_sha256": "52bc95790370a51f2fc0bd7faa785b63403bd2b30f4b65264515bf8ecd7665de",
+     "zip_bytes": 1430,
+     "error": null,
+     "zip_members": [
+      "CVXUSDT-30m-2025-07-23.csv"
+     ],
+     "archive_open_times": [
+      "2025-07-23T11:30:00Z",
+      "2025-07-23T12:00:00Z",
+      "2025-07-23T12:30:00Z",
+      "2025-07-23T13:00:00Z",
+      "2025-07-23T13:30:00Z",
+      "2025-07-23T14:00:00Z",
+      "2025-07-23T14:30:00Z",
+      "2025-07-23T15:00:00Z",
+      "2025-07-23T15:30:00Z",
+      "2025-07-23T16:00:00Z",
+      "2025-07-23T16:30:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-23T17:30:00Z",
+      "2025-07-23T18:00:00Z",
+      "2025-07-23T18:30:00Z",
+      "2025-07-23T19:00:00Z",
+      "2025-07-23T19:30:00Z",
+      "2025-07-23T20:00:00Z",
+      "2025-07-23T20:30:00Z",
+      "2025-07-23T21:00:00Z",
+      "2025-07-23T21:30:00Z",
+      "2025-07-23T22:00:00Z",
+      "2025-07-23T22:30:00Z",
+      "2025-07-23T23:00:00Z",
+      "2025-07-23T23:30:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "ICPUSDT",
+   "timeframe": "30m",
+   "gap_range": [
+    "2022-09-22T00:00:00Z",
+    "2022-09-27T02:00:00Z"
+   ],
+   "gap_bars": 245,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=ICPUSDT&interval=30m&startTime=1663804800000&limit=5",
+    "requested_at_utc": "2026-10-08T13:11:53Z",
+    "http_status": 200,
+    "body_sha256": "ca3fcde2c9c166e307e8c14615fec0a17f7ce644adb00b24289e169985322243",
+    "body_bytes": 676,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2022-09-27T02:30:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/30m/ICPUSDT-30m-2022-09-22.zip",
+     "requested_at_utc": "2026-10-08T13:11:54Z",
+     "http_status": 404,
+     "zip_sha256": "7c582b85b618a44170ea454c055d31ee39c8a25650d64ff73fbe8c532a372237",
+     "zip_bytes": 338,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/30m/ICPUSDT-30m-2022-09-23.zip",
+     "requested_at_utc": "2026-10-08T13:11:55Z",
+     "http_status": 404,
+     "zip_sha256": "c634e293f0a784aabd7efc9b2a12ca158a9293a3b310847942a82912c058a392",
+     "zip_bytes": 358,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/30m/ICPUSDT-30m-2022-09-24.zip",
+     "requested_at_utc": "2026-10-08T13:11:55Z",
+     "http_status": 404,
+     "zip_sha256": "cd9c4538e5bd5a04f556a6aa0b8ddde1a05224e2932d6fcc0bc5dbe972a82e63",
+     "zip_bytes": 338,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/30m/ICPUSDT-30m-2022-09-25.zip",
+     "requested_at_utc": "2026-10-08T13:11:57Z",
+     "http_status": 404,
+     "zip_sha256": "daea9ecbbc42f28e8c613f2b39cf32002ad0ada3484e1a96e8296a905e68ae88",
+     "zip_bytes": 358,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/30m/ICPUSDT-30m-2022-09-26.zip",
+     "requested_at_utc": "2026-10-08T13:11:58Z",
+     "http_status": 404,
+     "zip_sha256": "b44dcbe129174e791c61660c4cb833107f048f67ecb2041cec2b61122915051c",
+     "zip_bytes": 358,
+     "error": null,
+     "archive_open_times": [],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    },
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/ICPUSDT/30m/ICPUSDT-30m-2022-09-27.zip",
+     "requested_at_utc": "2026-10-08T13:12:00Z",
+     "http_status": 200,
+     "zip_sha256": "6780228c34382d4db682305f250d7204833ac102915ef94d06552d0ca5c45da2",
+     "zip_bytes": 1998,
+     "error": null,
+     "zip_members": [
+      "ICPUSDT-30m-2022-09-27.csv"
+     ],
+     "archive_open_times": [
+      "2022-09-27T02:30:00Z",
+      "2022-09-27T03:00:00Z",
+      "2022-09-27T03:30:00Z",
+      "2022-09-27T04:00:00Z",
+      "2022-09-27T04:30:00Z",
+      "2022-09-27T05:00:00Z",
+      "2022-09-27T05:30:00Z",
+      "2022-09-27T06:00:00Z",
+      "2022-09-27T06:30:00Z",
+      "2022-09-27T07:00:00Z",
+      "2022-09-27T07:30:00Z",
+      "2022-09-27T08:00:00Z",
+      "2022-09-27T08:30:00Z",
+      "2022-09-27T09:00:00Z",
+      "2022-09-27T09:30:00Z",
+      "2022-09-27T10:00:00Z",
+      "2022-09-27T10:30:00Z",
+      "2022-09-27T11:00:00Z",
+      "2022-09-27T11:30:00Z",
+      "2022-09-27T12:00:00Z",
+      "2022-09-27T12:30:00Z",
+      "2022-09-27T13:00:00Z",
+      "2022-09-27T13:30:00Z",
+      "2022-09-27T14:00:00Z",
+      "2022-09-27T14:30:00Z",
+      "2022-09-27T15:00:00Z",
+      "2022-09-27T15:30:00Z",
+      "2022-09-27T16:00:00Z",
+      "2022-09-27T16:30:00Z",
+      "2022-09-27T17:00:00Z",
+      "2022-09-27T17:30:00Z",
+      "2022-09-27T18:00:00Z",
+      "2022-09-27T18:30:00Z",
+      "2022-09-27T19:00:00Z",
+      "2022-09-27T19:30:00Z",
+      "2022-09-27T20:00:00Z",
+      "2022-09-27T20:30:00Z",
+      "2022-09-27T21:00:00Z",
+      "2022-09-27T21:30:00Z",
+      "2022-09-27T22:00:00Z",
+      "2022-09-27T22:30:00Z",
+      "2022-09-27T23:00:00Z",
+      "2022-09-27T23:30:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "LITUSDT",
+   "timeframe": "30m",
+   "gap_range": [
+    "2025-12-23T00:00:00Z",
+    "2025-12-23T17:00:00Z"
+   ],
+   "gap_bars": 35,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=LITUSDT&interval=30m&startTime=1766448000000&limit=5",
+    "requested_at_utc": "2026-10-08T13:12:00Z",
+    "http_status": 200,
+    "body_sha256": "5b7498002f0b47a05de4e01aa9b618ca188018deece2369458994c5c14592a87",
+    "body_bytes": 718,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-12-23T17:30:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/LITUSDT/30m/LITUSDT-30m-2025-12-23.zip",
+     "requested_at_utc": "2026-10-08T13:12:02Z",
+     "http_status": 200,
+     "zip_sha256": "243c2d5a791753788840d386f7e74e9d99c0c394e546bcf3387d411c0038d9b2",
+     "zip_bytes": 905,
+     "error": null,
+     "zip_members": [
+      "LITUSDT-30m-2025-12-23.csv"
+     ],
+     "archive_open_times": [
+      "2025-12-23T17:30:00Z",
+      "2025-12-23T18:00:00Z",
+      "2025-12-23T18:30:00Z",
+      "2025-12-23T19:00:00Z",
+      "2025-12-23T19:30:00Z",
+      "2025-12-23T20:00:00Z",
+      "2025-12-23T20:30:00Z",
+      "2025-12-23T21:00:00Z",
+      "2025-12-23T21:30:00Z",
+      "2025-12-23T22:00:00Z",
+      "2025-12-23T22:30:00Z",
+      "2025-12-23T23:00:00Z",
+      "2025-12-23T23:30:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "MAVIAUSDT",
+   "timeframe": "30m",
+   "gap_range": [
+    "2025-03-26T00:00:00Z",
+    "2025-03-26T16:30:00Z"
+   ],
+   "gap_bars": 34,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=MAVIAUSDT&interval=30m&startTime=1742947200000&limit=5",
+    "requested_at_utc": "2026-10-08T13:12:03Z",
+    "http_status": 200,
+    "body_sha256": "69fba6b78f4369991dbe20793ef5840870bf5a91e1f028a85f1e2dc678dded75",
+    "body_bytes": 725,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-03-26T17:00:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVIAUSDT/30m/MAVIAUSDT-30m-2025-03-26.zip",
+     "requested_at_utc": "2026-10-08T13:12:03Z",
+     "http_status": 200,
+     "zip_sha256": "4b3286cc57ab3d3df7541cba0ec12e9c7e0c5a40dc4bdbf3c86f8ca6048581db",
+     "zip_bytes": 955,
+     "error": null,
+     "zip_members": [
+      "MAVIAUSDT-30m-2025-03-26.csv"
+     ],
+     "archive_open_times": [
+      "2025-03-26T17:00:00Z",
+      "2025-03-26T17:30:00Z",
+      "2025-03-26T18:00:00Z",
+      "2025-03-26T18:30:00Z",
+      "2025-03-26T19:00:00Z",
+      "2025-03-26T19:30:00Z",
+      "2025-03-26T20:00:00Z",
+      "2025-03-26T20:30:00Z",
+      "2025-03-26T21:00:00Z",
+      "2025-03-26T21:30:00Z",
+      "2025-03-26T22:00:00Z",
+      "2025-03-26T22:30:00Z",
+      "2025-03-26T23:00:00Z",
+      "2025-03-26T23:30:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "PUMPUSDT",
+   "timeframe": "30m",
+   "gap_range": [
+    "2025-07-10T00:00:00Z",
+    "2025-07-10T07:00:00Z"
+   ],
+   "gap_bars": 15,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=PUMPUSDT&interval=30m&startTime=1752105600000&limit=5",
+    "requested_at_utc": "2026-10-08T13:12:04Z",
+    "http_status": 200,
+    "body_sha256": "a24e6b3d883fe1f6b4ef07b2296aef3a1fe8683ba95bef96033c8e491712d3c2",
+    "body_bytes": 749,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-07-10T07:30:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/PUMPUSDT/30m/PUMPUSDT-30m-2025-07-10.zip",
+     "requested_at_utc": "2026-10-08T13:12:06Z",
+     "http_status": 200,
+     "zip_sha256": "26f292a39f22adfa86307d0a423f93c3cb4147aca0f9776b07f042f5a8bd29c6",
+     "zip_bytes": 1976,
+     "error": null,
+     "zip_members": [
+      "PUMPUSDT-30m-2025-07-10.csv"
+     ],
+     "archive_open_times": [
+      "2025-07-10T07:30:00Z",
+      "2025-07-10T08:00:00Z",
+      "2025-07-10T08:30:00Z",
+      "2025-07-10T09:00:00Z",
+      "2025-07-10T09:30:00Z",
+      "2025-07-10T10:00:00Z",
+      "2025-07-10T10:30:00Z",
+      "2025-07-10T11:00:00Z",
+      "2025-07-10T11:30:00Z",
+      "2025-07-10T12:00:00Z",
+      "2025-07-10T12:30:00Z",
+      "2025-07-10T13:00:00Z",
+      "2025-07-10T13:30:00Z",
+      "2025-07-10T14:00:00Z",
+      "2025-07-10T14:30:00Z",
+      "2025-07-10T15:00:00Z",
+      "2025-07-10T15:30:00Z",
+      "2025-07-10T16:00:00Z",
+      "2025-07-10T16:30:00Z",
+      "2025-07-10T17:00:00Z",
+      "2025-07-10T17:30:00Z",
+      "2025-07-10T18:00:00Z",
+      "2025-07-10T18:30:00Z",
+      "2025-07-10T19:00:00Z",
+      "2025-07-10T19:30:00Z",
+      "2025-07-10T20:00:00Z",
+      "2025-07-10T20:30:00Z",
+      "2025-07-10T21:00:00Z",
+      "2025-07-10T21:30:00Z",
+      "2025-07-10T22:00:00Z",
+      "2025-07-10T22:30:00Z",
+      "2025-07-10T23:00:00Z",
+      "2025-07-10T23:30:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  },
+  {
+   "exchange": "binance",
+   "market": "um",
+   "symbol": "SLPUSDT",
+   "timeframe": "30m",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T11:00:00Z"
+   ],
+   "gap_bars": 23,
+   "rest": {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=SLPUSDT&interval=30m&startTime=1753228800000&limit=5",
+    "requested_at_utc": "2026-10-08T13:12:06Z",
+    "http_status": 200,
+    "body_sha256": "9877352f18197dc3573d56f20a9fc9865920394833bc2925bd86cfb3875d3cee",
+    "body_bytes": 734,
+    "error": null,
+    "returned_rows": 5,
+    "returned_first_open": "2025-07-23T11:30:00Z",
+    "first_open_after_gap_start": true
+   },
+   "archives": [
+    {
+     "url": "https://data.binance.vision/data/futures/um/daily/klines/SLPUSDT/30m/SLPUSDT-30m-2025-07-23.zip",
+     "requested_at_utc": "2026-10-08T13:12:07Z",
+     "http_status": 200,
+     "zip_sha256": "affb57c8d69ff6217fcdf26ef7bc6ce00b30ffe227ff6fb7a7e579cb9551b5ae",
+     "zip_bytes": 1550,
+     "error": null,
+     "zip_members": [
+      "SLPUSDT-30m-2025-07-23.csv"
+     ],
+     "archive_open_times": [
+      "2025-07-23T11:30:00Z",
+      "2025-07-23T12:00:00Z",
+      "2025-07-23T12:30:00Z",
+      "2025-07-23T13:00:00Z",
+      "2025-07-23T13:30:00Z",
+      "2025-07-23T14:00:00Z",
+      "2025-07-23T14:30:00Z",
+      "2025-07-23T15:00:00Z",
+      "2025-07-23T15:30:00Z",
+      "2025-07-23T16:00:00Z",
+      "2025-07-23T16:30:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-23T17:30:00Z",
+      "2025-07-23T18:00:00Z",
+      "2025-07-23T18:30:00Z",
+      "2025-07-23T19:00:00Z",
+      "2025-07-23T19:30:00Z",
+      "2025-07-23T20:00:00Z",
+      "2025-07-23T20:30:00Z",
+      "2025-07-23T21:00:00Z",
+      "2025-07-23T21:30:00Z",
+      "2025-07-23T22:00:00Z",
+      "2025-07-23T22:30:00Z",
+      "2025-07-23T23:00:00Z",
+      "2025-07-23T23:30:00Z"
+     ],
+     "archive_rows_in_gap": [],
+     "archive_contains_gap_open": false
+    }
+   ],
+   "verdict": "official_not_published",
+   "basis": {
+    "rest_first_return_after_gap": true,
+    "archive_has_no_gap_open": true
+   }
+  }
+ ]
+}

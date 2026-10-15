@@ -1,0 +1,104 @@
+{
+  "db": "/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3",
+  "mode": "read_only_stats + bounded_live_probe",
+  "probe": {
+    "n": 8,
+    "ok_both_present": 8,
+    "fail": 0,
+    "elapsed_s": 11.85,
+    "per_symbol_ms": 1481.8,
+    "extrapolated_full_pool_s": 782.4,
+    "full_pool_symbols": 528,
+    "rows": [
+      {
+        "symbol": "BTCUSDT",
+        "ms": 1359.5,
+        "sumOpenInterest": "95776.69600000",
+        "sumOpenInterestValue": "7948938996.17200000",
+        "timestamp": 1791386700000,
+        "both_present": true
+      },
+      {
+        "symbol": "ETHUSDT",
+        "ms": 983.4,
+        "sumOpenInterest": "2442063.74400000",
+        "sumOpenInterestValue": "6253881042.00960000",
+        "timestamp": 1791386700000,
+        "both_present": true
+      },
+      {
+        "symbol": "BCHUSDT",
+        "ms": 985.7,
+        "sumOpenInterest": "371800.04000000",
+        "sumOpenInterestValue": "111618090.00840000",
+        "timestamp": 1791386700000,
+        "both_present": true
+      },
+      {
+        "symbol": "XRPUSDT",
+        "ms": 1053.1,
+        "sumOpenInterest": "320807627.30000000",
+        "sumOpenInterestValue": "456830061.27520000",
+        "timestamp": 1791386700000,
+        "both_present": true
+      },
+      {
+        "symbol": "LTCUSDT",
+        "ms": 1188.9,
+        "sumOpenInterest": "1363976.02700000",
+        "sumOpenInterestValue": "89845100.89849000",
+        "timestamp": 1791386700000,
+        "both_present": true
+      },
+      {
+        "symbol": "TRXUSDT",
+        "ms": 875.2,
+        "sumOpenInterest": "305407144.00000000",
+        "sumOpenInterestValue": "102180486.57586728",
+        "timestamp": 1791387000000,
+        "both_present": true
+      },
+      {
+        "symbol": "ETCUSDT",
+        "ms": 1257.9,
+        "sumOpenInterest": "3035094.04000000",
+        "sumOpenInterestValue": "25106297.89888000",
+        "timestamp": 1791387000000,
+        "both_present": true
+      },
+      {
+        "symbol": "LINKUSDT",
+        "ms": 1730.4,
+        "sumOpenInterest": "9130684.79000000",
+        "sumOpenInterestValue": "121583730.80735137",
+        "timestamp": 1791387000000,
+        "both_present": true
+      }
+    ]
+  },
+  "db_coverage": {
+    "binance_rows": 95646,
+    "binance_distinct_symbols": 528,
+    "binance_usd_nonnull_rows": 0,
+    "pool_binance_symbols": 528,
+    "latest_has_row": 528,
+    "latest_has_usd": 0,
+    "latest_usd_fresh_le20min": 0,
+    "latest_usd_stale_gt20min": 0,
+    "latest_row_without_usd": 528,
+    "pool_missing_row": 0,
+    "sample_no_usd": [
+      "GIGGLEUSDT",
+      "DOTUSDT",
+      "RLCUSDT",
+      "ZORAUSDT",
+      "AIOTUSDT",
+      "CUSDT",
+      "SLXUSDT",
+      "DOODUSDT"
+    ],
+    "sample_missing": [],
+    "sample_has_usd": []
+  },
+  "generated_at_ms": 1791387035764
+}

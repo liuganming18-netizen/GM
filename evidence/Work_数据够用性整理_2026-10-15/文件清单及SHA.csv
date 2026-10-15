@@ -1,0 +1,74 @@
+﻿类别,绝对路径,bytes,GiB,sha256,说明
+正式热库（生产，只读引用）,/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3,5122670592,4.7709,2186299bac6e102de4e809a010d074fcddbaeea00d517a51609b21429582a589（活动写入中，不可复现；仅代表 2026-10-14T17:52Z 读取序列）,"SQLite 主文件；WAL 46,720,832 B 另行存在，不作为独立迁移文件"
+正式热库（生产，只读引用）,/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3-wal,46720832,0.0435,不适用（活动 WAL，随写入变化）,WAL 活动状态
+正式冷档（parquet 清单）,/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/archive/parquet/_catalog.json,11517570,0.0107,f56b5090f25d1fe058f29debd8f1d30f410c22ee80d12e767519cc33f75d27fc,"32,785 分片清单，逐分片 sha256 内嵌"
+正式冷档（状态）,/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/archive/parquet/_state.json,5808,0.0,d0bbcdc7d574df83d6fead682cf35b3488267d8acd7de642aecf3779193168fd,冷热边界水位
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_api_import.csv,19324568,0.018,36c4ff594b6527d038b9282d316915eaef0a87672e7d20b2fdc9ae6f3c882e99,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_local_import.csv,15591,0.0,b2e982847feff12e0f0c30ac6441db02f2513f04f74b3bc01185bcd7725c5506,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_okx前端_import.csv,255653,0.0002,d9d67545de34b27592cf8cf25426c40fc7cf5df646ee13e5619f4a81da54788e,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_okx补齐_import.csv,39191121,0.0365,07f6834ab353cee969a7dede5cfd34dbe00c82c93e684df1633cee7bd44dba17,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_okx补齐_p0.csv,2594545,0.0024,61a95356e4b185c4a868c942a13a87873e312f253d74752858c1b275aabf5848,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_okx补齐_p1.csv,6527844,0.0061,079ab481d2079ec135ea791833899a6663a751effc71bbf8e4f8447287acdf63,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_okx补齐_p2.csv,6898703,0.0064,819b35550425ac31c38fe93878ae3024939b9cb51bc126b2131d66cc0f536564,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_okx补齐_p3.csv,7021294,0.0065,1da526539782947e342d1177e11056d91ebd569068b4cb9534b19c37ae8eb7a7,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_okx补齐_p4.csv,7206393,0.0067,fde1980c51bb506678ae820ea440e8f5067510747d0f9a1150ca55f721ce1e6b,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_okx补齐_p5.csv,7260000,0.0068,abd109e7c324270acab6522e893d4c383f74ef627b379c2b065665b116809dff,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_K线_官方日包_import.csv,256193,0.0002,b13fddb18a19d22a653e26a80ed6a01c72720829f5c2ae0a90f1b8f906c4d47f,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_OI_1008_1013_官方归档_import.csv,3609,0.0,4eac9aa921191d8de07db4a2ad6858959bc5254ebcab8a16b4fe9aeca12d5dbe,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_OI_1008_1013_逐币核对_2026-10-15.csv,14848,0.0,e9058ee41f1ecaf97f1e6d6e3ed69e5f1119ecd79b3a6c48fae904fbe56ba14a,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_OI_API_import.csv,2103320,0.002,f2cc1ee8db29c0d37a774c7d8819938bad688c3aa01430dae4e775f78149fa7a,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_OI_import.csv,1388,0.0,1fbc2b5953edbb4ec565d0a56ae036e883f9d98e4e19bd342e9d31f714a2cef7,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_OI_官方日包_import.csv,103,0.0,ffda41891221f5926e3f62d07029bd080a99d82816b4ed3482e31a83aa348ddd,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_OI接缝假缺口.csv,81000,0.0001,c2f8c1e8ecdd5a83fdc627c1107e24646d583bc3580a024153d05ed02abe0612,补缺任务交付；本轮只读复核
+独立补件（未落库）,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_补缺_2026-10-14/补缺_资金费_import.csv,1545859,0.0014,28cd910d5fb2ececf05b6a82f49819c088781db1850d2ba7b82056f290aae5ff,补缺任务交付；本轮只读复核
+原始归档（ZIP+CHECKSUM，未入库）,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw,11094695936,10.3327,逐文件官方 .CHECKSUM（未重算全量）,官方K线ZIP（按周期分目录）；文件数 464158
+原始归档（ZIP+CHECKSUM，未入库）,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_oi_metrics,7314198528,6.8119,逐文件官方 .CHECKSUM（未重算全量）,官方日度 metrics ZIP（OI+多空比列）；文件数 883150
+原始归档（ZIP+CHECKSUM，未入库）,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/funding,130457600,0.1215,逐文件官方 .CHECKSUM（未重算全量）,官方资金费ZIP；文件数 31806
+原始归档（ZIP+CHECKSUM，未入库）,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/mark1h,394981376,0.3679,逐文件官方 .CHECKSUM（未重算全量）,官方1h标记价ZIP；文件数 42223
+原始归档（ZIP+CHECKSUM，未入库）,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/mark1d,172670976,0.1608,逐文件官方 .CHECKSUM（未重算全量）,官方1d标记价ZIP；文件数 42156
+原始归档（ZIP+CHECKSUM，未入库）,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/okx,332742656,0.3099,逐文件官方 .CHECKSUM（未重算全量）,OKX JSON原件；文件数 112
+原始归档（ZIP+CHECKSUM，未入库）,/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_rest_gap,6914048,0.0064,逐文件官方 .CHECKSUM（未重算全量）,API补缺原始响应；文件数 16
+本轮交付报告,/Users/boos/Desktop/威科夫因子共振趋势/docs/数据够用性结论与整理清单_2026-10-15.md,54823,5.1e-05,9979fc60b160d195568bac9f1fdee7342aac956da5caa6487e8927592e1de752,本报告（更正版）
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/IS_VAL与预热_库存缺项.csv,4307,4e-06,83bbb8f4e009dafad82d25a6c89a8497b15680463824564436ab5d70aefd0418,IS_VAL与预热_库存缺项.csv
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/IS_VAL与预热_库存缺项.json,2339,2e-06,bec30ddc5b22b5086a5b820173eba6aa445b8906a28b10e8573627ee2051c51d,IS_VAL与预热_库存缺项.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/IS_VAL逐币覆盖_主周期.csv,327968,0.000305,5837e4e306f6755177d10105a9096ee65595883eda2321c335bc325fc2232ef7,IS_VAL逐币覆盖_主周期.csv
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/logs_IS_VAL库存缺项.txt,1340,1e-06,76d21462a3f811f6679e5d22cd514c1fe814c9b33d3b2242056011007f65a87b,logs_IS_VAL库存缺项.txt
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/logs_metrics扫描.txt,1019,1e-06,014dcb4ad24292de735ef7a24dca6b24a2b096c0eb6043c0a278c8fda66780a7,logs_metrics扫描.txt
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/logs_sha.txt,269,0.0,5c0711a7a39c0072ed375d08594136aab5655b4c72dcb74682d4f2b39cfd9e38,logs_sha.txt
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/logs_交付.txt,1262,1e-06,fd3eeb702715164d9f20cd620863daf45e471d3795485b23a13b417126f41f29,logs_交付.txt
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/logs_刷新清单.txt,60,0.0,be2e6d4c150b515baa0d9b86b1818925f5b988df3ac25919dc3e1e767648fc5c,logs_刷新清单.txt
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/logs_多空比逐币.txt,1523,1e-06,2181c69739a7e813618d7e5980a36b429a3aeb109aec87156fbbe779ea779655,logs_多空比逐币.txt
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/logs_盘点.txt,347,0.0,471773e946480960b8652aefdaac40dec4a36a1f77e9c6dc3887aaaa75899a8f,logs_盘点.txt
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/logs_语义核验.txt,1935,2e-06,7ab2bae3cf88cd98e46b1e9518b74ef71b1822bc6ec713c11494e276edf0104d,logs_语义核验.txt
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics原件字段覆盖.csv,64321,6e-05,d97873bd91d1cdab795c04ef09d61a5ef7ad8516fb5d2fd41e8956cfc44dca78,metrics原件字段覆盖.csv
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics原件字段覆盖.json,222324,0.000207,e44b6a3115f32514613770195dc24349df386c72b93ae6cfad2202f22063de1b,metrics原件字段覆盖.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics原件汇总.json,938,1e-06,131f56b383b8aff6bb169ef6309dcdd07ae64528809bec937913ad29ad826328,metrics原件汇总.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics原件连续性汇总.json,1920,2e-06,ac538e4a30cf04408b72bd2ad0fcfb3fe09acfd1eb3c9d4a51bf45b58f2a82d8,metrics原件连续性汇总.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics原件逐币覆盖.csv,92056,8.6e-05,475d511fbf99ff810b186f650ae0239019d3d61a2daf10aab126e81e5ded57a7,metrics原件逐币覆盖.csv
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics原件逐币连续性.csv,36403,3.4e-05,b093204ce3741256dcf7fed3f56acf73dd38f6614557234424e55c968fd4d4b6,metrics原件逐币连续性.csv
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics多空比缺口日历.csv,13302,1.2e-05,43aef48ca7583f3b2fbd4caa06c70503622e00e00c603f0debecc0e2fc471995,metrics多空比缺口日历.csv
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics多空比缺口窗口.json,1111,1e-06,8b85e24ba1f806af70ed87706c5e1e39454490803d2cbf267c479b14b1e2476a,metrics多空比缺口窗口.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics多空比逐币可用性.csv,232451,0.000216,95989e01ca9b5bec2f8bb8128049cdfdc170129cff13603ee7f15d73c568873d,metrics多空比逐币可用性.csv
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics多空比逐币可用性.json,1522,1e-06,68f55a48b8e3e365c492783e0ab63304c08d5f70a80caf2f3a0a1235b17b7916,metrics多空比逐币可用性.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/metrics字段语义核验.json,21276,2e-05,e6dfee2d04bd3bf19cea314d400e42f33210b04b9020495d91a605eedbe2da33,metrics字段语义核验.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/仍缺与处理建议.csv,7973,7e-06,13a06f1ec94d00fee750352f319b1ca39908b07aaa243174b1e3a8c04aae173f,仍缺与处理建议.csv
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_IS_VAL库存缺项_只读.py,9182,9e-06,fa584261a7fbc45c68a1c44ec31b1e48efbb3c1109f998ee50134a04d4999c88,工具_IS_VAL库存缺项_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_metrics原件盘点_只读.py,4353,4e-06,89149c6c878e2ecd269625cb2bd909e1b56d89aee8df2c1c842f95509fe72aa2,工具_metrics原件盘点_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_metrics多空比缺口窗口_只读.py,3799,4e-06,1b4e26eb436790abff16bc89d6821abbcafd31ac2faff2e63b9688d4de85b2a0,工具_metrics多空比缺口窗口_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_metrics多空比逐币可用性_只读.py,6750,6e-06,23c8f9e9c618404c77903ccaae2c34873582abe1b0b012390ed44d5d3648534d,工具_metrics多空比逐币可用性_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_metrics字段全扫_只读.py,5046,5e-06,f0451c3826dd58942a3fac67609d69353545ef6860fd88120fb77e79db0b3d3d,工具_metrics字段全扫_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_metrics衍生字段可用性_只读.py,3859,4e-06,f56c0597dbf8f9abe613847802b34b771c716c1a47215dafeb8deb967d215233,工具_metrics衍生字段可用性_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_metrics语义核验_只读.py,11334,1.1e-05,463d179241e1ee41909766d32d51fa134c30a7f60ba4f02c4acf26e54ad99aa9,工具_metrics语义核验_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_冷档抽样_只读.py,3765,4e-06,b0e92720e67f569d4a22f0eb5910cc4b70fd1868821f42fa899b08f66da964e9,工具_冷档抽样_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_刷新交付清单_只读.py,4596,4e-06,2e5520f14e2f44d5683af860a92a627f38c8f15decbd12f7023bda29370cb58e,工具_刷新交付清单_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_数据够用性盘点_只读.py,14930,1.4e-05,ce329edd83be5f804e9d6478ff29414ce735aec325700e5dbb4bc3003d4b0442,工具_数据够用性盘点_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/工具_生成交付CSV_只读.py,14530,1.4e-05,1f6b1e549a34d82340996d3225bee5f6d162e43eaa9392bd2d3ca7d3f663a8a2,工具_生成交付CSV_只读.py
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/文件清单_SHA_大文件.json,716,1e-06,719bca8e35092364227912e1e98f34fd8bef7c9c663ef3020f980edfc242d57b,文件清单_SHA_大文件.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/本窗_IS_VAL与预热_库存缺项记录_2026-10-15.md,6949,6e-06,289275b29a767c8f2b72e5ced7c015a58caebd358a4d8b2e51e5893074914ffe,本窗_IS_VAL与预热_库存缺项记录_2026-10-15.md
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/本窗_既往读取披露_2026-10-15.md,7132,7e-06,c85cf9c2e8628fb6ed907656fef5970e7b19eaadc29ee564cfe92c90a550ffad,本窗_既往读取披露_2026-10-15.md
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/盘点_冷档抽样.json,4046,4e-06,d6fe5c97987f44da273247c1494ba6ec34ff65419beec70840eaede16c7c327b,盘点_冷档抽样.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/盘点_原始数据.json,121256,0.000113,f521d8a97c27cc4fd740e1017476254189a9c614c8fd26532a6ecaf1f4c5a135,盘点_原始数据.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/逐币逐周期可用范围.csv,623744,0.000581,04bac4628b5d29b2701ef13bbe411e56556f0e6c7d0c98bae0943bac366de637,逐币逐周期可用范围.csv
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/逐币逐周期可用范围_汇总.json,1433,1e-06,03affc4e6ef7c14a1ff9a284d684dfe159c35ad7f5b25e3babd2665018d8aec0,逐币逐周期可用范围_汇总.json
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/文件清单及SHA.csv,,,自引用不列（本清单自身）,文件清单及SHA.csv（本清单）
+本轮证据产物,/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_数据够用性整理_2026-10-15/交付清单_SHA.json,,,自引用不列（同内容 JSON 版）,交付清单_SHA.json（同内容 JSON 版）

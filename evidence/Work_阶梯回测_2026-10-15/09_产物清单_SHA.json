@@ -1,0 +1,163 @@
+{
+  "schema": "wyckoffmaster_deliverable_manifest/v2_v31",
+  "spec_version": "WyckoffMaster_v3.1",
+  "generated_utc": "2026-10-15T02:26:00Z",
+  "n_files": 31,
+  "files": [
+    {
+      "path": "回测日志/WyckoffMaster/README_窗口状态.md",
+      "bytes": 3942,
+      "sha256": "ac2f46720bf336420bff8c11363597d05dc4549aa3b75907ffcc55db7ae9713f"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/adapters/holdout_guard.py",
+      "bytes": 6599,
+      "sha256": "af92f774e8af42ecbbf509d2996abf8a03eb99d084c98042d04baa49b16dfeb5"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/adapters/launch_isolated.sh",
+      "bytes": 1658,
+      "sha256": "e2f189381ea60c14137c66b3a931090567cfe33095548b56f83ebb4494dcf81a"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/adapters/ra_bridge.py",
+      "bytes": 6835,
+      "sha256": "245b7460b1f80ded4a219fcb6ce980debe6c432350935c31a502be4630033880"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/adapters/segment_end_liquidation.py",
+      "bytes": 6503,
+      "sha256": "5301b818833a0ed06772cedfb7d3ae8d2f271a35f8ad83b260db71c2f076969c"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/config/frozen_segments.json",
+      "bytes": 5352,
+      "sha256": "3d0703b848a904568ca600f8a3a62bd5ce595be79d15811511eb0dc4dbfc79a7"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/config/ladder.json",
+      "bytes": 9908,
+      "sha256": "980a7a370f88c38ef49b02c26d957bba583a679f4c19fcb3da9ae885ee59b53f"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/config/m2_rejection.json",
+      "bytes": 2528,
+      "sha256": "8d449104ac8d589c502ea5db61aa05b385a248b76f7bf3a0f6a15c5fae932e8f"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/check_gates_once.py",
+      "bytes": 3080,
+      "sha256": "af2ac2ed1de6a113ad61633f93cd228e0d4bd06fe0a0f9d20fa3a90891bbf9f2"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/freeze_segments.py",
+      "bytes": 6980,
+      "sha256": "19506b70960fe57db2b5f518960530da7094be8ef315362e73cbe82d9b4f52cb"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/run_ladder.py",
+      "bytes": 7970,
+      "sha256": "cbb87d4df65636fd83f974f0b37764491a3662971981e8b7230f8470cd047dbf"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/verify_gates.py",
+      "bytes": 12178,
+      "sha256": "7a5fc72eb24963948f58951e70cfeb7ba837ec14fbafebdb6aaab592dbe65131"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/verify_v31_prep.py",
+      "bytes": 12732,
+      "sha256": "fcbdd3e3c7394326baaadfc932e07c608f11249b8611d3af12817421ad474902"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/gate_probe.json",
+      "bytes": 474,
+      "sha256": "52d8f48e8fa3e1f2105b640df04d75be0891b3c292e9770079925ba4b9f18fd8"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/gate_verify.json",
+      "bytes": 602,
+      "sha256": "d6847912a8775f80bca0faee86e2cebf0d7fac89e7aa666eff6d5e8c95f832cf"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/ladder_status.json",
+      "bytes": 363,
+      "sha256": "91987b134034612afb8b1eb9d70e120c808c29ab5eb862b2104d338431a65524"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/phase.json",
+      "bytes": 3381,
+      "sha256": "209cb3f58c33af3cf4adf9c815ddc3de4427fda5500fb289d269240c2ad6637b"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/v31_prep_verify.json",
+      "bytes": 4446,
+      "sha256": "77b66faeca939ce75bac33404ffbe09db6d7eae342f7eab3acb46766fc2a18ea"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/00_回测窗口准备报告_2026-10-15.md",
+      "bytes": 8530,
+      "sha256": "3c2ea62710bc4c55a494355671acaf35216bd3753b19972d910ff4042ac07a8a"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/01_阶段状态.json",
+      "bytes": 3801,
+      "sha256": "78c5c8afa3074f09c2e7885c1a5bed2d2ad8000e8d1f9ee6484715b7665567db"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/02_依赖清单.json",
+      "bytes": 4741,
+      "sha256": "701b1ce4fe6d33776182c56a5b3de69edbee3299ef29a6fa3f2053c49d704f98"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/03_冻结时间切分_v3.1.json",
+      "bytes": 5352,
+      "sha256": "3d0703b848a904568ca600f8a3a62bd5ce595be79d15811511eb0dc4dbfc79a7"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/04_门禁核查计划.json",
+      "bytes": 3426,
+      "sha256": "f3c9b4c0ed8f0b42ce65dc50908db98521d67cebfe3e94f3dbaa587bfbb77877"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/05_复用组件与SHA.json",
+      "bytes": 5596,
+      "sha256": "dea488ae293eb1c84446ec8e175a2020b46d8080feb5b830cd9eecca478119b5"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/06_命令与run_id登记表.json",
+      "bytes": 2467,
+      "sha256": "28a067692aae60745df3d32e62ad5e027f6f31d9b79a68a7bdb0cf159265ecd2"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/07_门禁核查_v3.1首次.json",
+      "bytes": 602,
+      "sha256": "d6847912a8775f80bca0faee86e2cebf0d7fac89e7aa666eff6d5e8c95f832cf"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/09_产物清单_SHA.json",
+      "bytes": 6170,
+      "sha256": "f218b5b2eabe856dfe9a48196c409cfa655c3c2f0f8861f4f00cdebc75b1c1e0"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/10_此前Holdout区间读取披露_2026-10-15.md",
+      "bytes": 3797,
+      "sha256": "eada4aa4a4bc94970c214449e6281159303cb625f3f373e6ccb97d3c5e2bc495"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/11_M2拒单分母与M2b_v3.1.json",
+      "bytes": 2528,
+      "sha256": "8d449104ac8d589c502ea5db61aa05b385a248b76f7bf3a0f6a15c5fae932e8f"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/12_v3.1准备件自核验.json",
+      "bytes": 4446,
+      "sha256": "77b66faeca939ce75bac33404ffbe09db6d7eae342f7eab3acb46766fc2a18ea"
+    },
+    {
+      "path": "evidence/Work_阶梯回测_2026-10-15/13_段末强平引擎差异核验.json",
+      "bytes": 1264,
+      "sha256": "df091d7ced645eed684c5cfba0b92de219310f452eacdbb260f5e745aa2ebdc7"
+    }
+  ]
+}

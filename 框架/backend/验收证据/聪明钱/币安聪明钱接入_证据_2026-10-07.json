@@ -1,0 +1,350 @@
+{
+ "task": "币安聪明钱 API 真实接入（独立任务）",
+ "date": "2026-10-07",
+ "source": {
+  "host": "www.binance.bh",
+  "base_path": "/bapi/futures/v1/public/future/smart-money/signal",
+  "auth": "无（无 cookie / 无 Authorization / 无验证码；页面自身 XHR）",
+  "page": "https://www.binance.bh/zh-CN/smart-money/signal/{SYMBOL}?timeRange=ALL",
+  "endpoints": [
+   "binance.smart_money_details",
+   "binance.smart_money_list",
+   "binance.smart_money_overview",
+   "binance.smart_money_stats"
+  ],
+  "not_a_substitute_for": [
+   "全市场持仓",
+   "openInterest",
+   "大户/账户数多空比",
+   "taker 买卖量比"
+  ]
+ },
+ "raw_responses": [
+  {
+   "path": "聪明钱/raw/details_ARXUSDT_20261007T192831Z.json",
+   "bytes": 1087,
+   "sha256": "a5415e8b65af03287351366d56beefe2342673c5b92bc6621472f255fd2d8318"
+  },
+  {
+   "path": "聪明钱/raw/list_ARXUSDT_20261007T192205Z.json",
+   "bytes": 414,
+   "sha256": "6dd3d1dd37f822840c0ac15ed7a583a6fe83396efa09294aa83a1763683fc248"
+  },
+  {
+   "path": "聪明钱/raw/overview_ARXUSDT_20261007T192109Z.json",
+   "bytes": 654,
+   "sha256": "d427f6532db58ec79fab9d7715cc764d8b73bf9dfcc7b390d9c3bef75769d366"
+  },
+  {
+   "path": "聪明钱/raw/overview_ARXUSDT_20261007T192831Z.json",
+   "bytes": 653,
+   "sha256": "c0fc3d2e773d0d465b8faac727b46c3700956adf196371aab10f6574f94020bd"
+  },
+  {
+   "path": "聪明钱/raw/overview_BTCUSDT_20261007T192109Z.json",
+   "bytes": 667,
+   "sha256": "c675446ffb86eaa2129006a537617bcffa1988d61e3ef7846b687b2dc629e3d8"
+  },
+  {
+   "path": "聪明钱/raw/stats_ARXUSDT_20261007T192831Z.json",
+   "bytes": 411,
+   "sha256": "b4dfe1e226278cfc0e5f1447dda961c05e06b74b61ba8ed1864d682e7f120e0c"
+  },
+  {
+   "path": "聪明钱/raw/details_ARXUSDT_20261007T192831Z.hdr",
+   "bytes": 701,
+   "sha256": "b3c9bb90fbd90df77e3320b86f440baf2293c7d53b7ceba63cd1637a29eeecf5"
+  },
+  {
+   "path": "聪明钱/raw/overview_ARXUSDT_20261007T192109Z.hdr",
+   "bytes": 700,
+   "sha256": "4bf1db3181a39fa6a400d45d21b80c976e0776cfc5685eafa6f5dca7bbac17c7"
+  },
+  {
+   "path": "聪明钱/raw/overview_ARXUSDT_20261007T192831Z.hdr",
+   "bytes": 699,
+   "sha256": "1fb5528533eb93cdb0faa0105e5929018331f40c4595a694902493af19231d69"
+  },
+  {
+   "path": "聪明钱/raw/overview_BTCUSDT_20261007T192109Z.hdr",
+   "bytes": 699,
+   "sha256": "a3d0636edaba7d53d369185a557766769e17df588796733f6e35a0dfec2ef326"
+  },
+  {
+   "path": "聪明钱/raw/stats_ARXUSDT_20261007T192831Z.hdr",
+   "bytes": 699,
+   "sha256": "22d91be6d71a01826322d7f1f661b8b87a424f5bb35a6e6e2428b56ce4504414"
+  }
+ ],
+ "api_samples": [
+  {
+   "path": "聪明钱/api_samples/ARXUSDT.json",
+   "bytes": 8461,
+   "sha256": "6b74bb79216522a7d6e2eb67b6358a9be25e9d0b5c3074f2c3ed0a3519b2f398"
+  },
+  {
+   "path": "聪明钱/api_samples/BTCUSDT.json",
+   "bytes": 10195,
+   "sha256": "65a3eeb39c7b3cfbece8edb63346cf89a3e8ec543805f285395cf004aae65830"
+  },
+  {
+   "path": "聪明钱/api_samples/ETHUSDT.json",
+   "bytes": 10222,
+   "sha256": "e748a1ad770446e1ea206c12e2e4cfeeccd6850ebb6329ae2c35c7f7a7c48fa7"
+  }
+ ],
+ "endpoint_matrix": {
+  "captured_at": "2026-10-07T19:50:59Z",
+  "host": "www.binance.bh",
+  "probes": [
+   {
+    "path": "overview",
+    "params": {
+     "symbol": "ARXUSDT",
+     "timeRange": "ALL"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(5 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "overview",
+    "params": {
+     "symbol": "ARXUSDT"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(5 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "details/stats",
+    "params": {
+     "symbol": "ARXUSDT",
+     "timeRange": "ALL"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(5 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "ARXUSDT",
+     "timeRange": "ALL",
+     "page": 1,
+     "rows": 10,
+     "sortingField": "TIME",
+     "sortingOrder": "DESC"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(6 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "list",
+    "params": {
+     "symbol": "ARXUSDT",
+     "timeRange": "ALL"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(5 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "overview",
+    "params": {
+     "symbol": "哈基米USDT",
+     "timeRange": "ALL"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(5 keys)",
+    "origin": "共享缓存"
+   },
+   {
+    "path": "overview",
+    "params": {
+     "symbol": "ZZZNOTREAL999",
+     "timeRange": "ALL"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(5 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "1H"
+    },
+    "business_code": "RejectedRequest",
+    "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+    "origin": null
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "4H"
+    },
+    "business_code": "RejectedRequest",
+    "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+    "origin": null
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "12H"
+    },
+    "business_code": "RejectedRequest",
+    "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+    "origin": null
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "1D"
+    },
+    "business_code": "RejectedRequest",
+    "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+    "origin": null
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "3D"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(6 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "7D"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(6 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "14D"
+    },
+    "business_code": "RejectedRequest",
+    "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+    "origin": null
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "30D"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(6 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "90D"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(6 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "ALL"
+    },
+    "business_code": "000000",
+    "data_shape": "dict(6 keys)",
+    "origin": "公共REST"
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "1W"
+    },
+    "business_code": "RejectedRequest",
+    "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+    "origin": null
+   },
+   {
+    "path": "details/list",
+    "params": {
+     "symbol": "BTCUSDT",
+     "timeRange": "1M"
+    },
+    "business_code": "RejectedRequest",
+    "data_shape": "RejectedRequest: HTTP或业务响应未成功，不写入有效缓存",
+    "origin": null
+   }
+  ],
+  "note": "参数域：timeRange 仅 ALL/7D/3D/30D/90D 通过，其余 code=000002；details/* 缺 timeRange ⇒ code=000002；未覆盖合约 ⇒ data:null"
+ },
+ "snapshot_coverage": {
+  "dir": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/快照/smart_money",
+  "symbols": 523,
+  "freshness": {
+   "ok": 203,
+   "stale": 320,
+   "unknown": 0
+  },
+  "api_effective_freshness": {
+   "threshold_s": 1800,
+   "status": {
+    "ok": 523,
+    "stale": 0,
+    "unknown": 0
+   },
+   "note": "`coverage()` 按默认 600s 统计；API 侧随最近一轮索引标记 `full_pool` 放宽到 1800s（全池一轮 ~19 分钟 > 600s，否则误判过期）"
+  },
+  "age_seconds": {
+   "min": 136.7,
+   "max": 1336.5
+  },
+  "last_round": {
+   "updated_at": "2026-10-07T20:11:06Z",
+   "targets": 526,
+   "ok": 523,
+   "skipped": 3,
+   "failed": 0,
+   "time_range": "ALL",
+   "full_pool": true,
+   "elapsed_s": 1179.23,
+   "requests": {
+    "attempts": 1578,
+    "cached": 0,
+    "deferred": 0,
+    "failed": 0,
+    "rejected": 0,
+    "upstream": 1578
+   }
+  }
+ },
+ "shared_gateway_change": {
+  "file": "data_hub/gateway.py（主项目；**唯一**共享入口改动）",
+  "change": "业务成功码白名单追加币安 bapi 成功码 \"000000\"（原为 None/\"0\"）",
+  "backwards_compatible": "已登记端点无返回值等于 \"000000\"；176 项既有单测全绿"
+ },
+ "frontend_contract": {
+  "route": "GET /api/v1/smart-money/{exchange}/{market_id}",
+  "consumed_by": "前端实现-AIStudio/src/api/smartMoney.ts → smartMoneyMapping.ts",
+  "top_level_keys_used": [
+   "overview",
+   "stats"
+  ],
+  "note": "前端**未改动**；用其自身映射代码离线验证 8/8 槽位可读"
+ }
+}

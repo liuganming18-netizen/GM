@@ -1,0 +1,707 @@
+{
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2023-11.zip",
+  "bytes": 771,
+  "sha256": "0de4f83e134e9d0d49f9bdc95e9c0166178fa76271d6e52cec80d78a35d462e6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9888,
+   "新增版本数": 9,
+   "状态": "已入库"
+  },
+  "source_id": 9888,
+  "rows": 9
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2023-12.zip",
+  "bytes": 1942,
+  "sha256": "5d2aebc0beff1f35e5a3a9e2337a72c8af70128ba4d1d4cf8c9ff75bd6b78494",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9889,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9889,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-01.zip",
+  "bytes": 1936,
+  "sha256": "d4cb8a8fb97470d526e0a3122a8ee379a37bf1f0e5cf7a81cfe304cc2d2c4479",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9890,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9890,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-02.zip",
+  "bytes": 1843,
+  "sha256": "a1e6f077803fac4738eedc191e99113d8c4170df4b8c1315ce7beda3f9cdbd03",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9891,
+   "新增版本数": 29,
+   "状态": "已入库"
+  },
+  "source_id": 9891,
+  "rows": 29
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-03.zip",
+  "bytes": 1956,
+  "sha256": "aefe4d461d6929b329fa56481e350ac6be144270a1762fc76d16f4f65002ee64",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9892,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9892,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-04.zip",
+  "bytes": 1882,
+  "sha256": "59fd1748290b5e528673cdb530d5ad03f8974d8a125819feba8afc346083f555",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9893,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9893,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-05.zip",
+  "bytes": 1931,
+  "sha256": "db14cf49e9d7d4fb79e013dfd34b28e75e006087fa3e46954c66424b923cb778",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9894,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9894,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-06.zip",
+  "bytes": 1872,
+  "sha256": "afa512f6f79da54f75b2327f8ff65634177bf13640c7a250538a483faa5a2915",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9895,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9895,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-07.zip",
+  "bytes": 1902,
+  "sha256": "6f8b2cc1803df890897bf98cc53a7dc732bab8200744f780925e67592bfbf141",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9896,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9896,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-08.zip",
+  "bytes": 1876,
+  "sha256": "6d433aa6e9f704b2117c53f263d53cf5be876c24d7325147ec3447a6af0dbe58",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9897,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9897,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-09.zip",
+  "bytes": 1799,
+  "sha256": "4611a1b1c894281004ff0f7170282aa305618cc3172440af60a1d76a6c39c4f6",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9898,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9898,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-10.zip",
+  "bytes": 1862,
+  "sha256": "f25ea25842b4083a04a47f693107fefd1d81b9abf3f38e93b4413cf17ed3465e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9899,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9899,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-11.zip",
+  "bytes": 1872,
+  "sha256": "c158a037faa9a106db9dc17c084de98b525dc7f63eeba9a136487cb80e44afce",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9900,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9900,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2024-12.zip",
+  "bytes": 2006,
+  "sha256": "5d5bb2acf2334a6403a1ad994556f82d2cc89e8aceb3c84be0e6202d1e872524",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9901,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9901,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-02.zip",
+  "bytes": 1822,
+  "sha256": "6ea880153ef8002bae00505470d5f7513a8f876a0fde962c3ac12bcfa7e317e1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9903,
+   "新增版本数": 28,
+   "状态": "已入库"
+  },
+  "source_id": 9903,
+  "rows": 28
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-01.zip",
+  "bytes": 1983,
+  "sha256": "0c7787bad9ded7e13c161e6a4f98bde5b77297f6a3721077263fd188c3236aca",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9902,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9902,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-03.zip",
+  "bytes": 1959,
+  "sha256": "e7ab8a2c26227acd6042eac0a672ac708018b5a97847e0cdd809ca353953d653",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9904,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9904,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-04.zip",
+  "bytes": 1884,
+  "sha256": "7a767bc3d22becbc64b1741b0e786d863b54c1b6d89815a3075230882564d6dc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9905,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9905,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-05.zip",
+  "bytes": 1983,
+  "sha256": "ff1510ff15b0cf4a6262158b6f6a0dc965c29762caa85a3edcb88b63160fa494",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9906,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9906,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-06.zip",
+  "bytes": 1904,
+  "sha256": "638e0d6592a37df891b0a0458f31fbae62aace1a16c7c070bf9109b766e3ad49",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9907,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9907,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-07.zip",
+  "bytes": 1954,
+  "sha256": "985ab7408038b746880957dfbeceda92fb38f2b6a8682611489ce4eed044afdb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9908,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9908,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-08.zip",
+  "bytes": 1971,
+  "sha256": "680d4e00fcd9cbb28301f1a992de8a1195d04167e8625b84fbfd94f7544c6503",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9909,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9909,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-09.zip",
+  "bytes": 1957,
+  "sha256": "81e5c81beb9653136ed8f0ced01c1f574c2cb7d4cd417a273f3cfcfdd61bf679",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9910,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9910,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-10.zip",
+  "bytes": 1985,
+  "sha256": "5a16ad8b56a9b072b28b741167af6ab6c450d579629f371c77cfad6e66992706",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9911,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9911,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-11.zip",
+  "bytes": 1906,
+  "sha256": "de08c3eae340d5f97280c90509b134ff993b3fabc94ce1cf89517bba79fabf59",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9912,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9912,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2025-12.zip",
+  "bytes": 1915,
+  "sha256": "27e63a7bcfc3c4d72a5dcd1ffe2351ded179464aca48fc6ae68c5f1a11356ce2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9913,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9913,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-01.zip",
+  "bytes": 1918,
+  "sha256": "e44fc91c990b32ba7115e24df1218278d05889fb25ca4b4c92bd621d7d1462c0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9914,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9914,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-02.zip",
+  "bytes": 1765,
+  "sha256": "9a6378cd7c9d8aca0b1a818acb6e59c7ed38be00e3f2acff9d37b521deaaaa3f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9915,
+   "新增版本数": 28,
+   "状态": "已入库"
+  },
+  "source_id": 9915,
+  "rows": 28
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-03.zip",
+  "bytes": 1872,
+  "sha256": "4e0ae279dac41fc9a4f838e6671d16484a5e18753c406a6167c6bf81eb520137",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9916,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9916,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-04.zip",
+  "bytes": 1849,
+  "sha256": "5ff883ae860fdd49ef3fe62fdbb816a4a3752d39c8b1b6926638fb6870edb735",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9917,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9917,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-05.zip",
+  "bytes": 1904,
+  "sha256": "3b7144fe1c4092771f49db09a868d6426ba0b9e9f92d5c10a78145b41cfbc96a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9918,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9918,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-06.zip",
+  "bytes": 1862,
+  "sha256": "281261e25b3c8cb3b597a9e913ed76a1426d17209569e1c1ddf02811672251d3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9919,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9919,
+  "rows": 30
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-07.zip",
+  "bytes": 1910,
+  "sha256": "ef13647e05a4a5e14d86eebde226ae20882434a33215ccf7e616cb6909829755",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9920,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9920,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-08.zip",
+  "bytes": 1907,
+  "sha256": "e71971044618766b1f68035e234fafc172ce4c0a523e6ce08eda1465525eb33a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9921,
+   "新增版本数": 31,
+   "状态": "已入库"
+  },
+  "source_id": 9921,
+  "rows": 31
+ },
+ "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-09.zip",
+  "bytes": 1890,
+  "sha256": "d396687756c5ffa8df969638a1b03dda9d5adea68200b6883ae0041ca4d56c74",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9922,
+   "新增版本数": 30,
+   "状态": "已入库"
+  },
+  "source_id": 9922,
+  "rows": 30
+ },
+ "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-01.zip",
+  "bytes": 349,
+  "sha256": "1cf3ce5984060d233282d7c1eedac760f75dc7bd533f36c550d83034526e67cb",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9885,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 9885,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-02.zip",
+  "bytes": 351,
+  "sha256": "5d105d8e530ee1e80c62f905be8ed1a31faf100e05968e71dab7ab48bd3013cc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9886,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 9886,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-04.zip",
+  "bytes": 346,
+  "sha256": "12d22dd5235a2af32c1b74b9468d769e67013e08ba6aa1547d434219668f1a75",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 50841,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 50841,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-03.zip",
+  "bytes": 350,
+  "sha256": "bf340c8f51798d39dadbb130adb977501e3563987da8e6dc0e2a9b1686e3a6df",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 9887,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 9887,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-05.zip",
+  "bytes": 350,
+  "sha256": "2f8b30e310328dac530bff938fa15c3a8100bc512e70e1698e0c0330719f85c4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 246531,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 246531,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-06.zip",
+  "bytes": 350,
+  "sha256": "45aed43a1f1875152cb63b0af1f3106a191a3373b350d0ab48cb5cb31f854ca7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 1590296,
+   "新增版本数": 1,
+   "状态": "已入库"
+  },
+  "source_id": 1590296,
+  "rows": 1
+ },
+ "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/PYTHUSDT/1d/PYTHUSDT-1d-2026-10-07.zip",
+  "status": "missing_in_archive",
+  "note": "官方归档或 CHECKSUM 不存在（日度按需探测，404 即缺失）；不计为完成"
+ }
+}

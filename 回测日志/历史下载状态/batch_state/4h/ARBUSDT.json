@@ -1,0 +1,862 @@
+{
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-03.zip",
+  "bytes": 3125,
+  "sha256": "cc16425850c8d2bd9cfde901129899757bef76ba8eadd7a2626652cbf89d5a55",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62414,
+   "新增版本数": 51,
+   "状态": "已入库"
+  },
+  "source_id": 62414,
+  "rows": 51
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-04.zip",
+  "bytes": 10103,
+  "sha256": "90d87b4a6c48332cf932a416d54409cae0aca64e2226c53039feeee25e6dece0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62415,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62415,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-06.zip",
+  "bytes": 9806,
+  "sha256": "a6a1122548577efa7c4833ac6debe886517453f774cc91edfdc6876c96552e29",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62417,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62417,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-05.zip",
+  "bytes": 10120,
+  "sha256": "0503d2b7ac74e8153f87d17b3b50d748790baab7be60b718b640b843190c2c43",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62416,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62416,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-08.zip",
+  "bytes": 9741,
+  "sha256": "44cf35848667d9d2dd61aa51405b181f601660a4f2111b651809ef8d67d42054",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62419,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62419,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-07.zip",
+  "bytes": 9953,
+  "sha256": "4e3b056d91860997368726708d393c290d63e34a8a388c08c93545407a307f11",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62418,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62418,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-10.zip",
+  "bytes": 9868,
+  "sha256": "5b1392fa9b787c1c1958af791996f192970d0ff7671cd3e443904498aa6bd9ba",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62421,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62421,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-09.zip",
+  "bytes": 9487,
+  "sha256": "51d623e54093583c7ce892b141243127c2979b3771a7b69776c057bf9cfc590b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62420,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62420,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-11.zip",
+  "bytes": 9654,
+  "sha256": "851d91978965401fba2a6103221eb5754906fc4fe8b81f4019da842c19753ad9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62422,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62422,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2023-12.zip",
+  "bytes": 10161,
+  "sha256": "86df3007c563367f4d1b848cee0678d2666e247d603aca86eee74177774b1a83",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62423,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62423,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-01.zip",
+  "bytes": 10414,
+  "sha256": "02bbd4fa6dbc8294b618c7c2906e6e56f8b2f766e930ea61f0975a54cfd91404",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62424,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62424,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-02.zip",
+  "bytes": 9500,
+  "sha256": "b4b8328a0be2508b7377cd9b631c7180d4c54764903f0c8c90aaad5f7a42254d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62425,
+   "新增版本数": 174,
+   "状态": "已入库"
+  },
+  "source_id": 62425,
+  "rows": 174
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-03.zip",
+  "bytes": 10252,
+  "sha256": "313a6251398b63195dd4c11fabe861a9aae35e945be7439b96b971683fdb9d16",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62426,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62426,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-04.zip",
+  "bytes": 9777,
+  "sha256": "1eac70f4dc4da1dea84114a65554d6f3a7318906b74d04768b4dca4c4bd5c5b8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62427,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62427,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-05.zip",
+  "bytes": 10007,
+  "sha256": "23acd7a3a26eb1a8b3d38b3500ba644247204d0f6fabbc8115619c51b971e380",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62428,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62428,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-06.zip",
+  "bytes": 9561,
+  "sha256": "089f82087530f4180ce07c1119652cac3d568501f30f5e604db497857dfe74ab",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62429,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62429,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-07.zip",
+  "bytes": 9909,
+  "sha256": "3bff2ed748d5938b9d2212e29d276da4a8f4176cdb11b5db6752909a714061b7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62430,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62430,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-08.zip",
+  "bytes": 9818,
+  "sha256": "3bfdc393523da853e74270bf5652e954cf9891b3348a6d954ffc94e54d498e1c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62431,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62431,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-09.zip",
+  "bytes": 9438,
+  "sha256": "f814d4a28a80734634f7b816db14b7475137b613d80535c8a4048ce72714a88f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62432,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62432,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-10.zip",
+  "bytes": 9685,
+  "sha256": "dfc4daf1a126e8fcad44c5557af7bb6c4dbfca5fbbe8ee34ce3598edc23e6c80",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62433,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62433,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-11.zip",
+  "bytes": 9813,
+  "sha256": "397aa9c787fda5b0064720da47cd4c0b8255d433bf5bc43c1785cffcb56c564d",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62434,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62434,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2024-12.zip",
+  "bytes": 10170,
+  "sha256": "0a224759f47b9cc8112b4594e14a6c5bc70b8443eba97fa69ea3b064198e2c5e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62435,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62435,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-01.zip",
+  "bytes": 9989,
+  "sha256": "1a0d444e86e362eb33e80408a48b8ad76a930879db685e5964748effb2847aa1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62436,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62436,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-02.zip",
+  "bytes": 8938,
+  "sha256": "4d674b1e0a0a2d37ea3817c412b7c0506cc4f45206a01f8f9a04cfbfb069b7a0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62437,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 62437,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-03.zip",
+  "bytes": 9762,
+  "sha256": "32526e984d52e630fd64e03f5c66dfaa11f7a7dab5996d702aa3fcba87c81800",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62438,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62438,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-04.zip",
+  "bytes": 9377,
+  "sha256": "df4fd23ada4aa4d92c39413322c35daae0aac5d17ac2bcb1e556c922d061072b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62439,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62439,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-05.zip",
+  "bytes": 9844,
+  "sha256": "e152e2ac944b844dd4099347d7b733c18d1ce5a8d51a37d0670541c04785b7c8",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62440,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62440,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-06.zip",
+  "bytes": 9490,
+  "sha256": "5128d1eb25d6a0132724af4901a6936b152394044209bcb5d03a9386a2cf62bc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62441,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62441,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-07.zip",
+  "bytes": 9995,
+  "sha256": "6f1f6039b2b3ccaf9b9cc76e017ee7eaa6a48f1c255a4d3351e876f998ce9a57",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62442,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62442,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-08.zip",
+  "bytes": 10119,
+  "sha256": "c13d79bf959d17a9706c6e7c06e143876dd71f6dd7915d50d25f03d83be9de2c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62443,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62443,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-09.zip",
+  "bytes": 9559,
+  "sha256": "d90a2f3a3ad504f57ab1e49774c0d7a3a2afca680fd7cb7f426b97757c665cda",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62444,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62444,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-10.zip",
+  "bytes": 9868,
+  "sha256": "c406561ba6ffc790e15689845dfe2798dc6b427d3f76fd96ee630480ac9e56f4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62445,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62445,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-11.zip",
+  "bytes": 9493,
+  "sha256": "170a501322f797900b18000afe82a953e64c4ec0ddb1f075edf9004417862307",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62446,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62446,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2025-12.zip",
+  "bytes": 9624,
+  "sha256": "d47354c26b94a8ac0dd7f76643d1d9b0a3b4ca36fa5ce5f99e473473fc0a52a7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62447,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62447,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-01.zip",
+  "bytes": 9646,
+  "sha256": "292b084acbee231daf9a20e0610540844a0d01e3614e435526f3e1022ef5ef31",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62448,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62448,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-02.zip",
+  "bytes": 8734,
+  "sha256": "170a6f8115dff1e5092937f6d494a7e02530af7079e462c9835582de65f50e8e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62449,
+   "新增版本数": 168,
+   "状态": "已入库"
+  },
+  "source_id": 62449,
+  "rows": 168
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-03.zip",
+  "bytes": 9390,
+  "sha256": "88ff8d1848735fe4a716b6867873987d2defd3ca445f71f9424c754ddf422f69",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62450,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62450,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-04.zip",
+  "bytes": 9206,
+  "sha256": "224d9454d56633f9d49f255117104e2da2ab4ed57565198bf8eb502629dfd727",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62451,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62451,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-05.zip",
+  "bytes": 9506,
+  "sha256": "471f45bbfd87c60ad2c119009021039c663cb1acd714b4a71a1e33c8948eb9a1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62452,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62452,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-06.zip",
+  "bytes": 9521,
+  "sha256": "f6d4e4105303cd30654637c7adbc379c0717381db4a397cb9d3b011535697a85",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62453,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62453,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-07.zip",
+  "bytes": 9978,
+  "sha256": "35d0a67bc47c9d97daedf978d9161c05d416dd596160ad979f6377e632316108",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62454,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62454,
+  "rows": 186
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-09.zip",
+  "bytes": 10331,
+  "sha256": "3c45d230390d23766a9339209aacfa80d7557a050458314838218c790bfe70b2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62456,
+   "新增版本数": 180,
+   "状态": "已入库"
+  },
+  "source_id": 62456,
+  "rows": 180
+ },
+ "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/ARBUSDT/4h/ARBUSDT-4h-2026-08.zip",
+  "bytes": 9898,
+  "sha256": "26490cebef3cd29a45a4fcc3ad2638ef4557c89dfe0a16ef782e9089176f6d59",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62455,
+   "新增版本数": 186,
+   "状态": "已入库"
+  },
+  "source_id": 62455,
+  "rows": 186
+ },
+ "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-01.zip",
+  "bytes": 623,
+  "sha256": "3ca30ad915a5df6558ca84e18fa0c1106c2813389b3673dee93ca70d68a4437b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62410,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 62410,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-02.zip",
+  "bytes": 624,
+  "sha256": "cced80fb8719f66f3df2f2f82fa02509d48096fca2e7bf1d78cf290633ea2c70",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62411,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 62411,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-03.zip",
+  "bytes": 614,
+  "sha256": "3065558fdbf5a710453280eaca0e98290b1823fc598c392a329b7b916cd2abb7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62412,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 62412,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-04.zip",
+  "bytes": 613,
+  "sha256": "8ff89a2ea3516f49f2dbc3f6507e1f1505ed56cc60d1f6d9fb3b42c8937fe001",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 62413,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 62413,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-05.zip",
+  "bytes": 620,
+  "sha256": "0582a34e89daa23a6c9539a2593476776fbf3cce99df4a01a1691d14cbc13020",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 306688,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 306688,
+  "rows": 6
+ },
+ "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-06.zip",
+  "bytes": 617,
+  "sha256": "2db87303a1d66d6929a6e76ffabaae113a3efbbc244fbe71c2e6c7e7a7c502d6",
+  "checksum_ok": true,
+  "size_bytes": 617,
+  "fetched_at": "2026-10-07T19:32:00Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/ARBUSDT/ARBUSDT-4h-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836249,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836249,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:30Z"
+ },
+ "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-07.zip",
+  "bytes": 628,
+  "sha256": "442cd253e32476517691c566134c6e4abdef7d743da9e36d737adab19c9447a1",
+  "checksum_ok": true,
+  "size_bytes": 628,
+  "fetched_at": "2026-10-08T08:11:24Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/4h/ARBUSDT/ARBUSDT-4h-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/ARBUSDT/4h/ARBUSDT-4h-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1836250,
+   "新增版本数": 6,
+   "状态": "已入库"
+  },
+  "source_id": 1836250,
+  "rows": 6,
+  "imported_at": "2026-10-08T08:15:31Z"
+ }
+}

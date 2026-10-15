@@ -1,0 +1,964 @@
+{
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-10.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-10.zip",
+  "kind": "monthly",
+  "period": "2022-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-10.zip",
+  "bytes": 62586,
+  "sha256": "1727188d87811abf15031d13e214b1312b9e67efa34b6bc2506509e8527fd079",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97139,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97139,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-09.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-09.zip",
+  "kind": "monthly",
+  "period": "2022-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-09.zip",
+  "bytes": 50805,
+  "sha256": "0516d5ab6491c8d0417b811350a7363d5860049305e6cb29365025f0e42a908a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97138,
+   "新增版本数": 1176,
+   "状态": "已入库"
+  },
+  "source_id": 97138,
+  "rows": 1176
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-11.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-11.zip",
+  "kind": "monthly",
+  "period": "2022-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-11.zip",
+  "bytes": 65600,
+  "sha256": "1f6494727e14e6122b8b00c8e43e8561f3a6649f3f6405d6ad021a31e9279365",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97140,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97140,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-12.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-12.zip",
+  "kind": "monthly",
+  "period": "2022-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2022-12.zip",
+  "bytes": 67723,
+  "sha256": "5fe55251d403cd31cf69b0139fece05225e45ad60f3c55825b396c4f961ea849",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97141,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97141,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-01.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-01.zip",
+  "kind": "monthly",
+  "period": "2023-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-01.zip",
+  "bytes": 68970,
+  "sha256": "8f217553459a74baa50c2a0c15b4eb8f4ae3b00a6fa88116490cba431ad61783",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97142,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97142,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-02.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-02.zip",
+  "kind": "monthly",
+  "period": "2023-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-02.zip",
+  "bytes": 63247,
+  "sha256": "fb538b4990d8394cea1dc2fa7c3132e58f6fee90b529a928eecc74bb6dce4979",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97143,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 97143,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-03.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-03.zip",
+  "kind": "monthly",
+  "period": "2023-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-03.zip",
+  "bytes": 69116,
+  "sha256": "a64ced178e73b6230362183dc49434bc6064382924adc24a0b30b1bfacd315cc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97144,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97144,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-04.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-04.zip",
+  "kind": "monthly",
+  "period": "2023-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-04.zip",
+  "bytes": 67311,
+  "sha256": "e6a86d719e7f59799f9141341ca3855f01074c814baa72b1c8dbde44885187aa",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97145,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97145,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-05.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-05.zip",
+  "kind": "monthly",
+  "period": "2023-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-05.zip",
+  "bytes": 67029,
+  "sha256": "6ae1428854f0126d970a6575f4afe5e1146261cd6510ddab61db8cb94caaa4a3",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97146,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97146,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-06.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-06.zip",
+  "kind": "monthly",
+  "period": "2023-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-06.zip",
+  "bytes": 65944,
+  "sha256": "3cf196601e192d9a35451bf9e366ce766bea9c8cf0ad25a0957f4046a7a8d933",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97147,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97147,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-07.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-07.zip",
+  "kind": "monthly",
+  "period": "2023-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-07.zip",
+  "bytes": 67528,
+  "sha256": "75b7084760587521bd7c4ce3143342ec1adef4c27eac967e6e671978bc462487",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97148,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97148,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-08.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-08.zip",
+  "kind": "monthly",
+  "period": "2023-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-08.zip",
+  "bytes": 67002,
+  "sha256": "f89c78e000949ad9f066f6250d45f401f2fff464cb5292efebf70fe2359a2a2e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97149,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97149,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-09.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-09.zip",
+  "kind": "monthly",
+  "period": "2023-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-09.zip",
+  "bytes": 68438,
+  "sha256": "0fa6eb2a116fa12df5add738da14ed4e2c406970395e4227e16ad8a468235bcc",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97150,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97150,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-10.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-10.zip",
+  "kind": "monthly",
+  "period": "2023-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-10.zip",
+  "bytes": 68620,
+  "sha256": "d1d467d70cb834d76ebcd51bfc1457c2b6e02d6ff5229d21b9463812e3c2388a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97151,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97151,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-12.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-12.zip",
+  "kind": "monthly",
+  "period": "2023-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-12.zip",
+  "bytes": 69885,
+  "sha256": "adfc03c1d0284b23ac186229a7cdeb6409d241751dbaffd4663950f47f0948af",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97153,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97153,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-11.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-11.zip",
+  "kind": "monthly",
+  "period": "2023-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2023-11.zip",
+  "bytes": 67758,
+  "sha256": "3da7982b8dacea5c69d83e72a2a946cd72429c3f3d24b7c12cd24a532d714bf0",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97152,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97152,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-01.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-01.zip",
+  "kind": "monthly",
+  "period": "2024-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-01.zip",
+  "bytes": 68906,
+  "sha256": "6ff720a977c6fd48e49b5b4951cf18e1be2005abf7df200f98380b4b127f6492",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97154,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97154,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-02.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-02.zip",
+  "kind": "monthly",
+  "period": "2024-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-02.zip",
+  "bytes": 66635,
+  "sha256": "b135cd99ce35f2f464a833db7be8c3d755954f5054b4983c03ff9ebca083dc4a",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97155,
+   "新增版本数": 1392,
+   "状态": "已入库"
+  },
+  "source_id": 97155,
+  "rows": 1392
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-03.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-03.zip",
+  "kind": "monthly",
+  "period": "2024-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-03.zip",
+  "bytes": 73495,
+  "sha256": "b7ade1427c0710d27bc7b3df232597b66acdecca9df4dc2b6ce51e6a0d98ce26",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97156,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97156,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-04.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-04.zip",
+  "kind": "monthly",
+  "period": "2024-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-04.zip",
+  "bytes": 68886,
+  "sha256": "1fd68e245bd4dea5a448d3aebe0d07bb2b52622596ca994187ceaabe4cf77d9c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97157,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97157,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-05.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-05.zip",
+  "kind": "monthly",
+  "period": "2024-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-05.zip",
+  "bytes": 69747,
+  "sha256": "07c04bca011bfee89da5acb35a9e96293a546a72458e5561ba9455fd47a6a740",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97158,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97158,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-06.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-06.zip",
+  "kind": "monthly",
+  "period": "2024-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-06.zip",
+  "bytes": 68330,
+  "sha256": "17694e18bc67e37221c9856dbd36cfa48b3c7b14df7325ca6445cb4c91ded5d9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97159,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97159,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-07.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-07.zip",
+  "kind": "monthly",
+  "period": "2024-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-07.zip",
+  "bytes": 68601,
+  "sha256": "619b0724cd663bd04f6efb219e186ffff24fac8ea662eef17ed0b41e7a5e02e2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97160,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97160,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-08.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-08.zip",
+  "kind": "monthly",
+  "period": "2024-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-08.zip",
+  "bytes": 68716,
+  "sha256": "4f0ff57761ce4d99ab52ffa3dfca52798afe09dad82c77f079206133cea13bfe",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97161,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97161,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-09.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-09.zip",
+  "kind": "monthly",
+  "period": "2024-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-09.zip",
+  "bytes": 65674,
+  "sha256": "1087eb312520397d7901c3b32f8c3e2fb43d76c92d2a65f847a723d38ba43ba7",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97162,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97162,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-10.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-10.zip",
+  "kind": "monthly",
+  "period": "2024-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-10.zip",
+  "bytes": 68764,
+  "sha256": "d85ec3b0d5cca25f7a667d5162af01d566c2572e3c5cfd00d688dd9f46098398",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97163,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97163,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-11.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-11.zip",
+  "kind": "monthly",
+  "period": "2024-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-11.zip",
+  "bytes": 69077,
+  "sha256": "2042098a2d41f9d4586aa5dc1d8b90ea00c9e94eada366299a971aaa3cf0cf3c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97164,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97164,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-12.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-12.zip",
+  "kind": "monthly",
+  "period": "2024-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2024-12.zip",
+  "bytes": 70517,
+  "sha256": "0d7712af77264f3558090084c54d350f1f07e8ac17e174d151f86cf90d787dde",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97165,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97165,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-01.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-01.zip",
+  "kind": "monthly",
+  "period": "2025-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-01.zip",
+  "bytes": 73356,
+  "sha256": "03f6342feebb96ee19bf751a0b06d7c664cc0279c8b1f7af7fa9092bafede546",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97166,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97166,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-02.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-02.zip",
+  "kind": "monthly",
+  "period": "2025-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-02.zip",
+  "bytes": 66147,
+  "sha256": "fdf8586c85081ba1a626c27c16ac09fe689a02c36e487eafcad3e191ebd1c6f2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97167,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 97167,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-03.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-03.zip",
+  "kind": "monthly",
+  "period": "2025-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-03.zip",
+  "bytes": 70770,
+  "sha256": "67c25def7b7f04770783e0bc470e510a605f85df486c9e9f7dcf5ae1c8e1b31b",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97168,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97168,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-04.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-04.zip",
+  "kind": "monthly",
+  "period": "2025-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-04.zip",
+  "bytes": 67457,
+  "sha256": "fd6ff4befdadb74ba5898355f8f18858e25680d133da44bde53d303105bcfcf1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97169,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97169,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-05.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-05.zip",
+  "kind": "monthly",
+  "period": "2025-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-05.zip",
+  "bytes": 69121,
+  "sha256": "b0c34b7d8933eb2c97c31267376c4690d79179ef678059eac475d945de017762",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97170,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97170,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-06.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-06.zip",
+  "kind": "monthly",
+  "period": "2025-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-06.zip",
+  "bytes": 65078,
+  "sha256": "fcaf902ef72d53c898e951ed7deb1e6c224a53dda11f57bed30a70379a1d8f74",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97171,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97171,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-07.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-07.zip",
+  "kind": "monthly",
+  "period": "2025-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-07.zip",
+  "bytes": 67683,
+  "sha256": "b3e904ee7d892019eae3ad648681728b014dfe716c337234b4b963745e5e70db",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97172,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97172,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-08.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-08.zip",
+  "kind": "monthly",
+  "period": "2025-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-08.zip",
+  "bytes": 68841,
+  "sha256": "4d08cf4c9f94946991ce042eda17d7dc9036b2669eb22d57165b3069213f5bf9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97173,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97173,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-09.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-09.zip",
+  "kind": "monthly",
+  "period": "2025-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-09.zip",
+  "bytes": 64418,
+  "sha256": "65c716adccb96ecb4845d0fffb7465868dfc75baa6dbed471e4cd49290fdec6f",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97174,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97174,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-10.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-10.zip",
+  "kind": "monthly",
+  "period": "2025-10",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-10.zip",
+  "bytes": 66976,
+  "sha256": "aac1c4adbb6c79fa3d53b9e862807727dd016089e40e941677fc49ab47fdbce4",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97175,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97175,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-11.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-11.zip",
+  "kind": "monthly",
+  "period": "2025-11",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-11.zip",
+  "bytes": 64542,
+  "sha256": "84b8793f080a2f614487b8e89ac8da2f27ce455342e869f171b8cd6b9f41e1c9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97176,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97176,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-12.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-12.zip",
+  "kind": "monthly",
+  "period": "2025-12",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2025-12.zip",
+  "bytes": 64715,
+  "sha256": "28d74ff823000b004a459ccfd34508eef26ad264195f6d8d13a370ae52faf034",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97177,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97177,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-01.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-01.zip",
+  "kind": "monthly",
+  "period": "2026-01",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-01.zip",
+  "bytes": 65672,
+  "sha256": "11ae4816a781d90a907aaa596365f395ef534e09df3b8accab98701da9bf7855",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97178,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97178,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-02.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-02.zip",
+  "kind": "monthly",
+  "period": "2026-02",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-02.zip",
+  "bytes": 58293,
+  "sha256": "2152e2acaa79f4d43132e8d88da0394237170b25de62c09ed1806c1b9988d400",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97179,
+   "新增版本数": 1344,
+   "状态": "已入库"
+  },
+  "source_id": 97179,
+  "rows": 1344
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-03.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-03.zip",
+  "kind": "monthly",
+  "period": "2026-03",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-03.zip",
+  "bytes": 63216,
+  "sha256": "068aeed821af3e7fc20f0c7212d59faf40a27beddc7c975ef214391167010c3e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97180,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97180,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-04.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-04.zip",
+  "kind": "monthly",
+  "period": "2026-04",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-04.zip",
+  "bytes": 61634,
+  "sha256": "597f3622c4e4cc6d82024be19887940c5545c7dd0f825c9d028403ed34793710",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97181,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97181,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-05.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-05.zip",
+  "kind": "monthly",
+  "period": "2026-05",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-05.zip",
+  "bytes": 63493,
+  "sha256": "b92cda3fd4219b0b94cfeee277549e04693174e22590b1a442d25b67a1c98241",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97182,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97182,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-06.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-06.zip",
+  "kind": "monthly",
+  "period": "2026-06",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-06.zip",
+  "bytes": 62563,
+  "sha256": "0b6d472722a07400d62071205ab084ce3e0578f46f10d7f68958f35695d4cf01",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97183,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97183,
+  "rows": 1440
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-07.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-07.zip",
+  "kind": "monthly",
+  "period": "2026-07",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-07.zip",
+  "bytes": 64579,
+  "sha256": "2c06b5966bd44fc5e8940ea8786f7f5843441f954a927d94c46c8bae922c944c",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97184,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97184,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-08.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-08.zip",
+  "kind": "monthly",
+  "period": "2026-08",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-08.zip",
+  "bytes": 62195,
+  "sha256": "04e2cd15e8eab2a640bbf3af5d32918e43abe20f9b08c41de608dda144e783f2",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97185,
+   "新增版本数": 1488,
+   "状态": "已入库"
+  },
+  "source_id": 97185,
+  "rows": 1488
+ },
+ "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-09.zip": {
+  "key": "data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-09.zip",
+  "kind": "monthly",
+  "period": "2026-09",
+  "url": "https://data.binance.vision/data/futures/um/monthly/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-09.zip",
+  "bytes": 61293,
+  "sha256": "e6f99ab1df416a5a8686f90e7a9fd6ead4c3c7ca6fb25dd6cfd0d8bf4a4fe5c9",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97186,
+   "新增版本数": 1440,
+   "状态": "已入库"
+  },
+  "source_id": 97186,
+  "rows": 1440
+ },
+ "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-01.zip": {
+  "key": "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-01.zip",
+  "kind": "daily",
+  "period": "2026-10-01",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-01.zip",
+  "bytes": 2385,
+  "sha256": "b82b9e53b90e0780d2bd5b68c3f13023d6f5c96f6efcabcb804f95da24c346ac",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97134,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 97134,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-02.zip": {
+  "key": "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-02.zip",
+  "kind": "daily",
+  "period": "2026-10-02",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-02.zip",
+  "bytes": 2406,
+  "sha256": "b71f4e2f3e56a5144b051a4f62000bfe3b8333a292d7276e31f8b923f31cea6e",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97135,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 97135,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-03.zip": {
+  "key": "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-03.zip",
+  "kind": "daily",
+  "period": "2026-10-03",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-03.zip",
+  "bytes": 2367,
+  "sha256": "df8308227a11ccc75028511c53a058c700597b29e2ab6f9945174ad9082c37dd",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97136,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 97136,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-04.zip": {
+  "key": "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-04.zip",
+  "kind": "daily",
+  "period": "2026-10-04",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-04.zip",
+  "bytes": 2325,
+  "sha256": "ef0cb312a2c8641df95d0b1316f98f544a96d3e43e236f4e7836d3c7196aecc1",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 97137,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 97137,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-05.zip": {
+  "key": "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-05.zip",
+  "kind": "daily",
+  "period": "2026-10-05",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-05.zip",
+  "bytes": 2336,
+  "sha256": "aa2efd01931597979229c96443438ca1ccb8f115640a44c6fba830b5becb4487",
+  "checksum_ok": true,
+  "status": "imported",
+  "import": {
+   "来源编号": 343534,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 343534,
+  "rows": 48
+ },
+ "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-06.zip": {
+  "key": "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-06.zip",
+  "kind": "daily",
+  "period": "2026-10-06",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-06.zip",
+  "bytes": 2395,
+  "sha256": "739e1b739941bcb7b7a195e6725cdc02527b87c98eaff5231345bed2673516bb",
+  "checksum_ok": true,
+  "size_bytes": 2395,
+  "fetched_at": "2026-10-07T19:49:25Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/SPELLUSDT/SPELLUSDT-30m-2026-10-06.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-06.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940713,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940713,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:07Z"
+ },
+ "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-07.zip": {
+  "key": "data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-07.zip",
+  "kind": "daily",
+  "period": "2026-10-07",
+  "url": "https://data.binance.vision/data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-07.zip",
+  "bytes": 2412,
+  "sha256": "228a982c53633c0ef1f564d08c8ab6873ed121255743f8a109abf5209e2f355a",
+  "checksum_ok": true,
+  "size_bytes": 2412,
+  "fetched_at": "2026-10-08T10:35:47Z",
+  "local_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw/30m/SPELLUSDT/SPELLUSDT-30m-2026-10-07.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/daily/klines/SPELLUSDT/30m/SPELLUSDT-30m-2026-10-07.zip.CHECKSUM",
+  "status": "imported",
+  "import": {
+   "来源编号": 1940714,
+   "新增版本数": 48,
+   "状态": "已入库"
+  },
+  "source_id": 1940714,
+  "rows": 48,
+  "imported_at": "2026-10-08T10:40:07Z"
+ }
+}

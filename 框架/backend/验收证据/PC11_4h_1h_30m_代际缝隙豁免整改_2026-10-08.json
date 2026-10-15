@@ -1,0 +1,284 @@
+{
+ "format": "pc11_multi_tf_gap_exemption_remediation",
+ "version": 2,
+ "generated_utc": "2026-10-08T08:24:59Z",
+ "context": "8h 通过后链条进入 4h。预检发现 4h/1h/30m 存在与 8h **同源**的代际缝隙（新合约上市前无合约窗口）。",
+ "root_cause": "洞区间**全部**落在『库内 pre_rest 段末端 … 官方 REST 最早根 rest_first』之间；洞终点 + 周期步长 = 各周期 rest_first（逐组实测吻合）。",
+ "scope": "**全池扫描**（窗口函数 LAG，洞起点 < 2026-01-01）确定恰为 8 币 × 3 周期 = 24 组：CTK/CVC/CVX/ICP/LIT/MAVIA/PUMP/SLP。（首轮 18 组漏 LIT/PUMP，因扫描时 archive_import 未完成；已更正。）",
+ "evidence": {
+  "file": "验收证据/P12_4h_1h_30m_代际缝隙_官方不可得证据_2026-10-08.json",
+  "sha256": "2f4a4046aece8786c358cd9d440faa182f4377df5cf264bb230ff8133658bf4c",
+  "verdicts": {
+   "official_not_published": 24
+  }
+ },
+ "probes": [
+  {
+   "timeframe": "4h",
+   "symbol": "CTKUSDT",
+   "gap_range": [
+    "2025-04-30T00:00:00Z",
+    "2025-04-30T04:00:00Z"
+   ],
+   "gap_bars": 2,
+   "rest_first": "2025-04-30T08:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "4h",
+   "symbol": "CVCUSDT",
+   "gap_range": [
+    "2025-05-16T00:00:00Z",
+    "2025-05-16T04:00:00Z"
+   ],
+   "gap_bars": 2,
+   "rest_first": "2025-05-16T08:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "4h",
+   "symbol": "CVXUSDT",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T04:00:00Z"
+   ],
+   "gap_bars": 2,
+   "rest_first": "2025-07-23T08:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "4h",
+   "symbol": "SLPUSDT",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T04:00:00Z"
+   ],
+   "gap_bars": 2,
+   "rest_first": "2025-07-23T08:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "4h",
+   "symbol": "MAVIAUSDT",
+   "gap_range": [
+    "2025-03-26T00:00:00Z",
+    "2025-03-26T12:00:00Z"
+   ],
+   "gap_bars": 4,
+   "rest_first": "2025-03-26T16:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "4h",
+   "symbol": "ICPUSDT",
+   "gap_range": [
+    "2022-09-22T00:00:00Z",
+    "2022-09-26T20:00:00Z"
+   ],
+   "gap_bars": 30,
+   "rest_first": "2022-09-27T00:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "1h",
+   "symbol": "CTKUSDT",
+   "gap_range": [
+    "2025-04-30T00:00:00Z",
+    "2025-04-30T09:00:00Z"
+   ],
+   "gap_bars": 10,
+   "rest_first": "2025-04-30T10:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "1h",
+   "symbol": "CVCUSDT",
+   "gap_range": [
+    "2025-05-16T00:00:00Z",
+    "2025-05-16T07:00:00Z"
+   ],
+   "gap_bars": 8,
+   "rest_first": "2025-05-16T08:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "1h",
+   "symbol": "CVXUSDT",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T10:00:00Z"
+   ],
+   "gap_bars": 11,
+   "rest_first": "2025-07-23T11:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "1h",
+   "symbol": "SLPUSDT",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T10:00:00Z"
+   ],
+   "gap_bars": 11,
+   "rest_first": "2025-07-23T11:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "1h",
+   "symbol": "MAVIAUSDT",
+   "gap_range": [
+    "2025-03-26T00:00:00Z",
+    "2025-03-26T16:00:00Z"
+   ],
+   "gap_bars": 17,
+   "rest_first": "2025-03-26T17:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "1h",
+   "symbol": "ICPUSDT",
+   "gap_range": [
+    "2022-09-22T00:00:00Z",
+    "2022-09-27T01:00:00Z"
+   ],
+   "gap_bars": 122,
+   "rest_first": "2022-09-27T02:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "30m",
+   "symbol": "CTKUSDT",
+   "gap_range": [
+    "2025-04-30T00:00:00Z",
+    "2025-04-30T09:30:00Z"
+   ],
+   "gap_bars": 20,
+   "rest_first": "2025-04-30T10:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "30m",
+   "symbol": "CVCUSDT",
+   "gap_range": [
+    "2025-05-16T00:00:00Z",
+    "2025-05-16T08:00:00Z"
+   ],
+   "gap_bars": 17,
+   "rest_first": "2025-05-16T08:30:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "30m",
+   "symbol": "CVXUSDT",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T11:00:00Z"
+   ],
+   "gap_bars": 23,
+   "rest_first": "2025-07-23T11:30:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "30m",
+   "symbol": "SLPUSDT",
+   "gap_range": [
+    "2025-07-23T00:00:00Z",
+    "2025-07-23T11:00:00Z"
+   ],
+   "gap_bars": 23,
+   "rest_first": "2025-07-23T11:30:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "30m",
+   "symbol": "MAVIAUSDT",
+   "gap_range": [
+    "2025-03-26T00:00:00Z",
+    "2025-03-26T16:30:00Z"
+   ],
+   "gap_bars": 34,
+   "rest_first": "2025-03-26T17:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "30m",
+   "symbol": "ICPUSDT",
+   "gap_range": [
+    "2022-09-22T00:00:00Z",
+    "2022-09-27T02:00:00Z"
+   ],
+   "gap_bars": 245,
+   "rest_first": "2022-09-27T02:30:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "4h",
+   "symbol": "LITUSDT",
+   "gap_range": [
+    "2025-12-23T00:00:00Z",
+    "2025-12-23T12:00:00Z"
+   ],
+   "gap_bars": 4,
+   "rest_first": "2025-12-23T16:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "1h",
+   "symbol": "LITUSDT",
+   "gap_range": [
+    "2025-12-23T00:00:00Z",
+    "2025-12-23T16:00:00Z"
+   ],
+   "gap_bars": 17,
+   "rest_first": "2025-12-23T17:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "30m",
+   "symbol": "LITUSDT",
+   "gap_range": [
+    "2025-12-23T00:00:00Z",
+    "2025-12-23T17:00:00Z"
+   ],
+   "gap_bars": 35,
+   "rest_first": "2025-12-23T17:30:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "4h",
+   "symbol": "PUMPUSDT",
+   "gap_range": [
+    "2025-07-10T00:00:00Z",
+    "2025-07-10T00:00:00Z"
+   ],
+   "gap_bars": 1,
+   "rest_first": "2025-07-10T04:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "1h",
+   "symbol": "PUMPUSDT",
+   "gap_range": [
+    "2025-07-10T00:00:00Z",
+    "2025-07-10T06:00:00Z"
+   ],
+   "gap_bars": 7,
+   "rest_first": "2025-07-10T07:00:00Z",
+   "verdict": "official_not_published"
+  },
+  {
+   "timeframe": "30m",
+   "symbol": "PUMPUSDT",
+   "gap_range": [
+    "2025-07-10T00:00:00Z",
+    "2025-07-10T07:00:00Z"
+   ],
+   "gap_bars": 15,
+   "rest_first": "2025-07-10T07:30:00Z",
+   "verdict": "official_not_published"
+  }
+ ],
+ "exemptions_added": 24,
+ "note": "豁免条目**周期绑定**（exchange/symbol/timeframe/准确区间）+ 证据文件实际 sha256；缺证据或哈希不符 ⇒ 未豁免（阻塞）。",
+ "next": "等 4h rest_fill 跑完（其范围探测缓存将保存），再以 _work_6tf_chain --from 4h 重启，4h/1h/30m rest_fill 将复用缓存并仅处理被豁免的代际缝隙。"
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "wyckoffmaster_gate_plan/v2_v31",
+  "spec_version": "WyckoffMaster_v3.1",
+  "generated_utc": "2026-10-15T02:20:00Z",
+  "principle": "不信 ready=true；逐项复算 SHA / 代码 / 配置 / 覆盖 / 证据；任何无法核实项一律 FAIL/MISSING",
+  "version_gate": "策略/数据版本必须**都绑定 v3.1** 才能启动（REQUIRED_VERSION=v3.1）",
+  "strategy_ready": {
+    "path": "evidence/Work_策略优化_2026-10-15/strategy_ready.json",
+    "checks": [
+      {"item": "文件存在且 JSON 可解析"},
+      {"item": "ready 标志为 true（仅必要条件）"},
+      {"item": "**版本绑定 v3.1**", "verdict_if_missing": "FAIL"},
+      {"item": "深度 SHA 复算（递归 {path}+{sha256} 配对逐文件实算）"},
+      {"item": "冻结引擎 SHA 出现且一致 0ede9ce1…"},
+      {"item": "冻结配置视图 SHA 出现且一致 6d18d222…"},
+      {"item": "blocking_items 为空"},
+      {"item": "层级绑定 M0..M4 各含 arm/signal_module/config_sha256/signal_sha256"},
+      {"item": "四件套核验声明：test_no_lookahead / 锚点不覆盖与单次消费 / 最小止损+3.5ATR拒单+M2b自然缩仓+穿底拒单 / 台阶下一根单调上移不回填"}
+    ],
+    "require_backup_evidence": false
+  },
+  "data_ready": {
+    "path": "evidence/Work_策略数据_2026-10-15/data_ready.json",
+    "alternate_path": "evidence/Work_数据_2026-10-15/data_ready.json",
+    "checks": [
+      {"item": "文件存在且 JSON 可解析"},
+      {"item": "ready 标志为 true（仅必要条件）"},
+      {"item": "**版本绑定 v3.1**", "verdict_if_missing": "FAIL"},
+      {"item": "深度 SHA 复算"},
+      {"item": "不可变 manifest SHA 复算"},
+      {"item": "逐字段覆盖：1h/4h/15m OHLCV+quote_volume、30日成交额、funding 结算时刻/rate/mark、合约精度、M4 OI 数量与金额同源同事件"},
+      {"item": "**研究输入物理区分 IS/Val 与 Holdout**", "verdict_if_missing": "FAIL",
+       "note": "当前实测 flat_or_unknown ⇒ FAIL（见 12_v3.1准备件自核验.json）"},
+      {"item": "原件与研究输入备份 SHA"},
+      {"item": "隔离恢复证据：backup_path/restore_path/recovery_path 声明且路径实际存在"},
+      {"item": "blocking_items 为空"},
+      {"item": "冻结研究输入范围用于确认 frozen_segments 边界（不改日期，除非边界不同）"}
+    ],
+    "require_backup_evidence": true
+  },
+  "holdout_redline_checks": [
+    {"item": "选型阶段请求 Holdout 窗口 → 拒绝", "enforced_by": "adapters/holdout_guard.py"},
+    {"item": "选型阶段请求跨 Holdout 边界窗口 → 拒绝", "enforced_by": "同上"},
+    {"item": "--phase holdout 但无 winner_lock.json → 拒绝", "enforced_by": "同上"},
+    {"item": "Holdout 截止未到就做终验 → 拒绝", "enforced_by": "assert_holdout_cutoff_reached"},
+    {"item": "run_ladder 在任何数据读取前先做红线检查", "enforced_by": "scripts/run_ladder.py"}
+  ],
+  "overall_gate": {
+    "both_pass": "两个 v3.1 门禁均 PASS 且健康服务/12GiB 储备持续成立 → 允许启动 IS/Val 选型",
+    "waiting": "任一 NOT_READY → 保持等待，不空转启动假回测",
+    "blocked": "任一 FAIL → 记录未过项，交对应窗口修正，不启动"
+  },
+  "independent_probe_note": "不采信他窗自报的覆盖数字；关键样本另行有界抽验，且抽验范围不得触及 Holdout。"
+}
