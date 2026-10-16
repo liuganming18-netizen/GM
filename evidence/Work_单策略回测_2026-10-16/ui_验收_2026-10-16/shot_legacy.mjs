@@ -1,0 +1,12 @@
+import pw from '/Users/boos/.workbuddy-ai/binaries/node/workspace/node_modules/playwright/index.js';
+const { chromium } = pw;
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
+await page.goto('http://localhost:3000/', { waitUntil: 'domcontentloaded' });
+await page.waitForTimeout(1800);
+await page.getByText('回测复盘', { exact: true }).first().click();
+await page.waitForTimeout(6000);
+await page.getByTestId('review-tab-legacy').click();
+await page.waitForTimeout(5000);
+await page.screenshot({ path: './07_旧通道_可读性对照.png' });
+await browser.close();

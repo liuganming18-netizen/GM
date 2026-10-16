@@ -6,6 +6,7 @@
 import React, { useMemo, useState } from 'react';
 import { CryptoSignal, SignalArm, TokenMarketItem } from '../types/crypto';
 import { TokenIcon } from './TokenIcon';
+import type { PaperPendingView, PaperPositionView } from '../api/liveTrading';
 import {
   Target,
   ArrowRight,
@@ -21,6 +22,15 @@ interface SignalListPanelProps {
   tokens?: TokenMarketItem[];
   selectedSignalId: string | null;
   onSelectSignal: (signal: CryptoSignal) => void;
+  /**
+   * 服务端账本未平仓持仓（用于按 `signal_uid` 关联「实际成交」）。
+   * **「已买入」标记只能来自这里**——浏览器不得自行造仓。
+   */
+  paperPositions?: PaperPositionView[];
+  /** 服务端登记的未成交挂单（用于「计划下单」层）。 */
+  paperPending?: PaperPendingView[];
+  /** 服务端新开仓总闸（fail-closed）；用于如实说明「新开仓已被阻断」。 */
+  newEntryGate?: { allowNewEntries: boolean; reason: string | null } | null;
 }
 
 /** 数字格式化：null / 非有限值一律 '—'，绝不用 0 冒充真实值。 */
@@ -90,40 +100,23 @@ const kindBadge = (
   return null;
 };
 
-/** 格式化信号时间为 `MM-DD HH:mm (1h)`（无年份，紧凑专业） */
+/**
+ * 格式化信号时间：`MM-DD HH:mm (周期)`（无年份，紧凑专业）。
+ *
+ * **2026-10-15 任务四**：删除「无时间就用浏览器当前时刻」的兜底（那是**伪造的确认时刻**）。
+ * 无真实时间 ⇒ 返回 `'—'`；无周期 ⇒ 不补默认 `1h`。
+ */
 const fmtSignalTime = (raw: string | null | undefined, timeframe: string | null | undefined): string => {
-  let timeStr = '';
-  if (raw) {
-    const ms = Date.parse(raw);
-    if (!Number.isNaN(ms)) {
-      const d = new Date(ms);
-      const m = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      const hh = String(d.getHours()).padStart(2, '0');
-      const mm = String(d.getMinutes()).padStart(2, '0');
-      timeStr = `${m}-${day} ${hh}:${mm}`;
-    }
-  }
-  if (!timeStr) {
-    const d = new Date();
-    const m = String(d.getMonth() + 1).padStart(2, '0');
-    const day = String(d.getDate()).padStart(2, '0');
-    const hh = String(d.getHours()).padStart(2, '0');
-    const mm = String(d.getMinutes()).padStart(2, '0');
-    timeStr = `${m}-${day} ${hh}:${mm}`;
-  }
-  const tf = timeframe ? ` (${timeframe})` : ' (1h)';
-  return `${timeStr}${tf}`;
-};
-
-/** 规整交易对格式为标准 `XXX/USDT` */
-const fmtPair = (symbol: string | null | undefined, rawSymbol: string | null | undefined): string => {
-  const sym = (symbol || rawSymbol || 'BTC').toUpperCase();
-  if (sym.includes('/')) return sym;
-  if (sym.endsWith('USDT')) {
-    return `${sym.replace(/USDT$/, '')}/USDT`;
-  }
-  return `${sym}/USDT`;
+  if (!raw) return '—';
+  const ms = Date.parse(raw);
+  if (Number.isNaN(ms)) return '—';
+  const d = new Date(ms);
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  const hh = String(d.getHours()).padStart(2, '0');
+  const mm = String(d.getMinutes()).padStart(2, '0');
+  const tf = timeframe ? ` (${timeframe})` : '';
+  return `${m}-${day} ${hh}:${mm}${tf}`;
 };
 
 /**
@@ -187,6 +180,9 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
   tokens = [],
   selectedSignalId,
   onSelectSignal,
+  paperPositions = [],
+  paperPending = [],
+  newEntryGate = null,
 }) => {
   const [armFilter, setArmFilter] = useState<'ALL' | '3a' | '3b' | '3c' | '3d'>('ALL');
   const [kindFilter, setKindFilter] = useState<'ALL' | 'base' | 'spring' | 'sc'>('ALL');
@@ -202,6 +198,34 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
     s.origin === 'live' &&
     s.executableState === 'enterable' &&
     s.role === 'enterable_arm_entry';
+
+  /**
+   * 账本联动索引：`signal_uid → 持仓 / 挂单`（2026-10-15 任务四）。
+   *
+   * 「已买入」标记只能由**服务端账本成交**（`paperPositions`）产生；
+   * 「计划下单」只能由**服务端登记的挂单**（`paperPending`）产生。前端不造任何一条。
+   */
+  const posBySignalUid = useMemo(() => {
+    const m = new Map<string, PaperPositionView[]>();
+    for (const p of paperPositions) {
+      if (!p.signalUid) continue;
+      const arr = m.get(p.signalUid) ?? [];
+      arr.push(p);
+      m.set(p.signalUid, arr);
+    }
+    return m;
+  }, [paperPositions]);
+
+  const pendBySignalUid = useMemo(() => {
+    const m = new Map<string, PaperPendingView[]>();
+    for (const p of paperPending) {
+      if (!p.signalUid) continue;
+      const arr = m.get(p.signalUid) ?? [];
+      arr.push(p);
+      m.set(p.signalUid, arr);
+    }
+    return m;
+  }, [paperPending]);
 
   const tokenMap = useMemo(() => {
     const map = new Map<string, TokenMarketItem>();
@@ -347,6 +371,48 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
     return '';
   };
 
+  /** 结构类型可读名（结构发现阶段）。 */
+  const kindName = (s: CryptoSignal): string => {
+    const k = (s.structuralKind ?? '').toLowerCase();
+    if (k === 'spring') return 'Spring（威科夫弹簧）';
+    if (k === 'sc') return 'SC（恐慌抛售）';
+    if (k === 'base' || k === 'donchian') return '突破（唐奇安）';
+    return s.structuralKind ?? '—';
+  };
+
+  /**
+   * **四阶段事件链**（2026-10-15 任务四）——逐阶段只引用真实字段：
+   *   ① 结构发现：结构类型 + 结构证据 bar（`barOpenTime`/`barCloseTime`，ms 纪元）
+   *   ② 信号确认：`confirmedAt`/`eventTime` + 六态
+   *   ③ 计划下单：服务端登记的**未成交挂单**（按 `signal_uid` 关联；无 ⇒ 未登记）
+   *   ④ 实际成交：服务端账本**已成交持仓**（按 `signal_uid` 关联；无 ⇒ 未成交）
+   * 任何阶段无真实数据一律显示 `—`，绝不推断下一阶段。
+   */
+  const eventChain = (s: CryptoSignal) => {
+    const pos = posBySignalUid.get(s.id) ?? [];
+    const pend = pendBySignalUid.get(s.id) ?? [];
+    const barOpen = s.barOpenTime ? new Date(s.barOpenTime).toISOString().slice(0, 16).replace('T', ' ') : null;
+    const barClose = s.barCloseTime ? new Date(s.barCloseTime).toISOString().slice(0, 16).replace('T', ' ') : null;
+    return {
+      structure: {
+        text: kindName(s),
+        bar: barOpen || barClose ? `结构bar ${barOpen ?? '—'}→${barClose ?? '—'} UTC` : '结构bar 无记录',
+      },
+      confirm: {
+        text: s.confirmedAt ?? s.eventTime ?? null,
+        status: statusLabel(s).text,
+      },
+      plan: pend.length > 0
+        ? { filled: true, text: `已登记挂单 ${pend.length} 笔（未成交）`, ids: pend.map((p) => `#${p.pendingId}`).join(' ') }
+        : { filled: false, text: '未登记挂单', ids: '' },
+      fill: pos.length > 0
+        ? { filled: true, text: `已成交（账本）`, ids: pos.map((p) => `${p.arm}#${p.positionId}`).join(' ') }
+        : { filled: false, text: '未成交', ids: '' },
+    };
+  };
+
+  const gateBlocked = !!newEntryGate && !newEntryGate.allowNewEntries;
+
   return (
     <div
       className="workbench-side-panel workbench-signal-panel bg-white border-r border-gray-200 flex flex-col justify-between shrink-0 select-none overflow-hidden"
@@ -403,9 +469,12 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
               <p className="text-[10px] leading-relaxed text-gray-400">
                 当前交易信号区只显示实时真实入场的信号，不使用任何演示/兜底样本。
               </p>
-              <p className="text-[10px] leading-relaxed text-amber-600">
-                模拟盘尚未通过闭环验收，服务端已阻断全部新开仓（退出/费用/资金费照常处理）。
-              </p>
+              {gateBlocked && (
+                <p className="text-[10px] leading-relaxed text-amber-600">
+                  服务端已阻断全部新开仓（总闸 fail-closed；原因：{newEntryGate?.reason ?? '未标注'}）；
+                  退出/费用/资金费照常处理。
+                </p>
+              )}
             </div>
           ) : filteredSignals.length === 0 ? (
             <div className="mt-6 mx-1 p-4 rounded-lg border border-dashed border-gray-200 bg-white text-center space-y-1.5">
@@ -434,6 +503,8 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
 
               const prices = resolveSignalPrices(signal, matchedToken?.price);
               const reasonText = resolveReason(signal);
+              const chain = eventChain(signal);
+              const filled = chain.fill.filled;
               const timeDisplay = fmtSignalTime(
                 signal.confirmedAt ?? signal.eventTime ?? signal.triggerTime,
                 signal.timeframe,
@@ -447,19 +518,30 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
                   data-origin={signal.origin ?? ''}
                   data-executable-state={signal.executableState ?? ''}
                   data-symbol={signal.tokenSymbol}
+                  data-signal-uid={signal.id}
+                  data-filled={filled ? '1' : '0'}
                   className={`p-3 rounded-lg border cursor-pointer transition-colors space-y-2.5 ${
                     isSelected
                       ? 'bg-emerald-50/20 border-2 border-emerald-600'
                       : 'bg-white border border-gray-200 hover:border-gray-300'
                   }`}
                 >
-                  {/* 第 1 行：纯粹代币图标 + 代币名称，右侧做多标签 */}
+                  {/* 第 1 行：纯粹代币图标 + 代币名称，右侧「已买入（账本）」+ 做多标签 */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 min-w-0">
                       <TokenIcon symbol={signal.tokenSymbol} size="sm" />
                       <span className="font-bold text-gray-900 text-[14px] font-mono tracking-tight shrink-0">
                         {signal.tokenSymbol}
                       </span>
+                      {/* 「已买入」只能来自服务端账本成交；无成交不显示 */}
+                      {filled && (
+                        <span
+                          className="text-[10px] px-1.5 py-0.5 rounded border border-emerald-300 bg-emerald-50 text-emerald-700 font-sans font-bold shrink-0"
+                          title={chain.fill.ids}
+                        >
+                          已买入（账本）
+                        </span>
+                      )}
                     </div>
                     <span
                       className={`text-[11px] px-2 py-0.5 rounded font-medium border ${
@@ -492,6 +574,26 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
                     <span className={reasonText ? '' : 'text-gray-400'}>
                       {reasonText ?? '—（无结构化理由，缺失即未知）'}
                     </span>
+                  </div>
+
+                  {/* 第 3.5 行：四阶段事件链（结构发现 → 信号确认 → 计划下单 → 实际成交） */}
+                  <div className="text-[10px] bg-gray-50/70 rounded border border-gray-100 p-1.5 space-y-0.5 font-sans">
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-400">① 结构发现</span>
+                      <span className="text-gray-700 truncate max-w-[68%] text-right">{chain.structure.text}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-400">② 信号确认</span>
+                      <span className="text-gray-700">{chain.confirm.status}{chain.confirm.text ? ` · ${chain.confirm.text.replace('T', ' ').replace('Z', '')}` : ''}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-400">③ 计划下单</span>
+                      <span className={chain.plan.filled ? 'text-sky-700' : 'text-gray-400'}>{chain.plan.text}{chain.plan.ids ? ` ${chain.plan.ids}` : ''}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-400">④ 实际成交</span>
+                      <span className={chain.fill.filled ? 'text-emerald-700 font-bold' : 'text-gray-400'}>{chain.fill.text}{chain.fill.ids ? ` ${chain.fill.ids}` : ''}</span>
+                    </div>
                   </div>
 
                   {/* 第 4 行：触发价 现价 止损价 目标价

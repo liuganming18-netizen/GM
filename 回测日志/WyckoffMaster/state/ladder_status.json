@@ -1,9 +1,52 @@
 {
-  "schema": "wyckoffmaster_run_ladder/v2_v31",
-  "generated_utc": "2026-10-14T18:12:13Z",
-  "status": "REFUSED_NOT_READY",
-  "reason": "选型未锁定（缺 winner_lock.json）⇒ 禁止运行 Holdout 段。必须先在 IS/Val 上锁定唯一模型并写 winner_lock。",
-  "dependencies": [
-    "state/winner_lock.json（IS/Val 选型锁定后写入）"
-  ]
+  "schema": "wyckoffmaster_run_ladder/v3_v31",
+  "generated_utc": "2026-10-15T09:35:09Z",
+  "status": "COMPLETED",
+  "phase": "kline",
+  "levels": [
+    "M0",
+    "M1",
+    "M2",
+    "M3_BE",
+    "M3_Step",
+    "M4"
+  ],
+  "segments": {
+    "IS": {
+      "trades": {
+        "M0": 206,
+        "M1": 326,
+        "M2": 210,
+        "M3_BE": 238,
+        "M3_Step": 196,
+        "M4": 207
+      },
+      "net": {
+        "M0": -872.3432926371069,
+        "M1": -976.9618151379011,
+        "M2": -879.4173009542213,
+        "M3_BE": -867.8821149469674,
+        "M3_Step": -878.0912086368829,
+        "M4": -901.6619379202134
+      }
+    },
+    "Val": {
+      "trades": {
+        "M0": 415,
+        "M1": 276,
+        "M2": 222,
+        "M3_BE": 247,
+        "M3_Step": 231,
+        "M4": 227
+      },
+      "net": {
+        "M0": -731.7194847310077,
+        "M1": -604.4263500433921,
+        "M2": -520.7719809514288,
+        "M3_BE": -548.8098362448447,
+        "M3_Step": -540.487477764834,
+        "M4": -605.724836833617
+      }
+    }
+  }
 }

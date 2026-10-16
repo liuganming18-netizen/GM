@@ -40,12 +40,16 @@ import sqlite3
 from pathlib import Path
 
 import live_store as L
+import exec_bridge as EB                     # v3.1 共用执行核心桥（策略/风控/成交唯一来源）
 
 UTC = dt.timezone.utc
 H = 3_600_000
 MIN = 60_000
 
 MODEL_VERSION = "paper_exec_v1_derived_from_effective_view_20261013"
+# 账本口径标识：绑定共用执行核心版本（供任务三核对「回放与实时同口径」）
+LEDGER_MODEL_VERSION = (EB.LEDGER_MODEL_VERSION if EB.CORE_AVAILABLE
+                        else "paper_exec_v1_core_unavailable")
 DETAIL_TF = "15m"
 
 # ── 报价新鲜度配置（本窗口**显式定义**；待人类追认；不用于成交定价）────────────
@@ -158,6 +162,21 @@ FALLBACK = {
 }
 
 
+def _refresh_config_source() -> dict:
+    """加载**共用执行核心**的配置来源（视图核对而非覆盖；缺失只降级不替换）。"""
+    global _CONFIG_SOURCE
+    if not _CONFIG_SOURCE:
+        if EB.CORE_AVAILABLE:
+            _CONFIG_SOURCE = EB.load_exec_config()
+        else:
+            _CONFIG_SOURCE = {"config_source": "exec_core_unavailable", "degraded": True,
+                              "errors": [EB.IMPORT_ERROR], "mismatches": []}
+    return _CONFIG_SOURCE
+
+
+_CONFIG_SOURCE: dict = {}
+
+
 def approved_params() -> dict:
     """只读引用已批准参数（不复制到库、不改字节）。返回扁平 dict + source 标注。
 
@@ -203,8 +222,49 @@ def approved_params() -> dict:
         src = "frozen_view_v2_2_user5000_shared"
     except Exception:                                # noqa: BLE001
         pass
+    _refresh_config_source()
     p["_source"] = src
+    p["_exec_core_crosscheck"] = _crosscheck_with_exec_core(p)
     return p
+
+
+# 生效视图键 ↔ 共用执行核心冻结键的**逐项对照**（不一致即如实报出，不静默择一）
+_CROSSCHECK_MAP = {
+    "initial_equity_USDT": "initial_equity",
+    "max_positions": "max_positions_total",
+    "risk_per_trade_equity_fraction": "risk_per_trade_fraction",
+    "single_name_notional_equity_cap": "single_name_notional_cap",
+    "gross_long_notional_equity_cap": "gross_long_notional_cap",
+    "cash_or_free_margin_reserve_fraction": "cash_reserve_fraction",
+    "portfolio_initial_stop_risk_cap": "portfolio_stop_risk_cap",
+    "entry_participation_previous_15m_quote_cap": "entry_participation_prev15m_cap",
+    "leverage": "leverage",
+    "short_enabled": "short_enabled",
+    "fee_each_side": "fee_each_side",
+    "slippage_each_side": "slippage_each_side",
+    "maximum_account_drawdown_fraction": "max_drawdown_fraction",
+    "uniform_stop_atr_mult": None,          # 由 core 的 stops 段承载（本模块不参与）
+}
+
+
+def _crosscheck_with_exec_core(params: dict) -> dict:
+    if not EB.CORE_AVAILABLE:
+        return {"available": False, "import_error": EB.IMPORT_ERROR}
+    diffs = []
+    for vk, ck in _CROSSCHECK_MAP.items():
+        if ck is None or vk not in params:
+            continue
+        want = getattr(EB.EXEC_FROZEN, ck)
+        got = params[vk]
+        try:
+            same = (bool(got) == want) if isinstance(want, bool) else abs(float(got) - float(want)) < 1e-12
+        except (TypeError, ValueError):
+            same = False
+        if not same:
+            diffs.append({"view_key": vk, "exec_core_key": ck,
+                          "view_value": got, "exec_core_value": want})
+    return {"available": True, "ok": not diffs, "mismatches": diffs,
+            "exec_core_config_hash": EB.EXEC_FROZEN.hash()}
 
 
 # ── 合约规格（已批准**保守执行近似规格**，只读引用）──────────────────────────
@@ -424,6 +484,9 @@ def pre_open_check(con, arm, symbol, notional, stop_distance, qty, con_mkt, para
         return False, "portfolio_stop_risk_cap_exceeded"
     if eq["drawdown_locked"]:
         return False, "account_drawdown_locked"
+    # 本轮**持续锁定**（修复 D02）：一旦触发过 20% 回撤，即使权益回升也**不再开仓**
+    if drawdown_lock_state(arm).get("locked"):
+        return False, "account_drawdown_locked_for_run"
     return True, "ok"
 
 
@@ -614,7 +677,8 @@ def open_position(arm: str, symbol: str, *, signal_uid=None, direction="long",
                   atr=None, stop_price=None, now_ms=None, event_time=None,
                   available_at=None, requested_at=None, signal_payload=None,
                   origin="signal", pending_id=None, epoch_ms=None,
-                  first_request_ms=None) -> dict:
+                  first_request_ms=None, entry_mode=None, stop_mode=None,
+                  struct_low=None, trailing_mode=None) -> dict:
     """按已批准模型开一笔**模拟多仓**。返回结果 dict（含 ok/reason/明细）。
 
     成交时钟见模块头 `FILL_POLICY`。要点：
@@ -631,10 +695,29 @@ def open_position(arm: str, symbol: str, *, signal_uid=None, direction="long",
     `epoch_ms` = 本轮 paper epoch（缺省取 `live_store.get_paper_epoch_ms()`）。
     """
     params = approved_params()
-    if direction not in ("long", "short"):
-        return _reject(arm, symbol, signal_uid, f"invalid_direction_{direction}")
+    # ── 方向归一（任务二重点修复：**绝不**把缺失/非法方向默认成 long）─────────────
+    # 旧实现只判 `direction not in ("long","short")` 后直接继续；上游若把 short 写成
+    # long（或方向缺失），这里无从发现 ⇒ 变成"静默做多"。现改为：归一失败**显式拒单**，
+    # 且 short 在 v3.1 只多口径下**拒单**（不翻转方向）。
+    norm_dir = (EB.normalize_direction(direction) if EB.CORE_AVAILABLE
+                else (direction if direction in ("long", "short") else None))
+    if norm_dir is None:
+        return _reject(arm, symbol, signal_uid, f"illegal_direction_{direction}")
+    direction = norm_dir
     if direction == "short" and not params.get("short_enabled", False):
-        return _reject(arm, symbol, signal_uid, "short_disabled_by_approved_view_only_long")
+        return _reject(arm, symbol, signal_uid, "short_disabled_by_frozen_view_only_long")
+    # ── 模式校验 + 结构低点必需性（缺结构低点**不得**退回固定止损）──────────────
+    if EB.CORE_AVAILABLE:
+        mode_errs = EB.validate_modes(entry_mode=entry_mode or "three_buy_points",
+                                      stop_mode=stop_mode or "uniform",
+                                      trail_mode=trailing_mode or "none",
+                                      direction=direction)
+        if mode_errs:
+            return _reject(arm, symbol, signal_uid, mode_errs[0])
+    if stop_mode in ("structural", "structural_m2b"):
+        _sl = None if struct_low is None else _f(struct_low)
+        if _sl is None or not (_sl == _sl):            # None 或 NaN
+            return _reject(arm, symbol, signal_uid, "missing_struct_low_for_structural_stop")
     # ── 服务端新开仓总闸（阶段A·fail-closed）────────────────────────────────────
     # 覆盖自动 / 手工 / 挂单推进三条路径（它们**都**经由本函数）。
     # 退出、费用、资金费、健康采集与只读 API 不经过此处 ⇒ 不受影响。
@@ -1231,7 +1314,8 @@ def close_position(arm: str, position_id: int, *, now_ms=None, reason="manual") 
 
 
 def close_at_price(arm: str, position_id: int, *, raw_price, now_ms=None, reason="manual",
-                   bar_open_time=None, bar_close_time=None, exit_ts=None) -> dict:
+                   bar_open_time=None, bar_close_time=None, exit_ts=None,
+                   decision_context=None) -> dict:
     """按**给定原始价**平仓（stop/信号退出等确定性触发用；滑点按已批准值不利方向）。
 
     `exit_ts` = **经济出场时刻**（出场 bar 的 open 或 close，由调用方按口径给）。
@@ -1308,7 +1392,7 @@ def close_at_price(arm: str, position_id: int, *, raw_price, now_ms=None, reason
         eq2 = equity(con, arm, con_mkt, params)
         _record_equity(con, arm, eq2)
         con.commit()
-        return {"ok": True, "reason": "closed", "position_id": position_id, "symbol": pos["symbol"],
+        out = {"ok": True, "reason": "closed", "position_id": position_id, "symbol": pos["symbol"],
                 "exit_price": fill, "raw_price": raw, "qty": qty, "gross_pnl": gross,
                 "entry_fee": entry_fee, "exit_fee": fee, "funding_paid": funding_paid,
                 "funding_paid_this_close": new_fund, "n_funding_events": fund_rows,
@@ -1317,10 +1401,145 @@ def close_at_price(arm: str, position_id: int, *, raw_price, now_ms=None, reason
                 "amount_sign_convention": AMOUNT_SIGN_CONVENTION,
                 "net_pnl": net, "entry_ts": int(pos["entry_ts"]), "exit_ts": exit_ms,
                 "exit_reason": reason, "model_version": MODEL_VERSION,
+                "ledger_model_version": LEDGER_MODEL_VERSION,
                 "market_source": MARKET_SOURCE}
+        # 决定记录（条件实际值 / 阈值 / 时间 / 事件身份）：供任务三逐笔核对、任务一展示
+        if EB.CORE_AVAILABLE:
+            out["decision"] = EB.decision(
+                kind="exit", symbol=pos["symbol"], exchange="binance", direction=direction,
+                event_identity=f"exit|{arm}|{position_id}|{exit_ms}", reject_reason=None,
+                condition_values={"raw_price": raw, "fill_price": fill, "qty": qty,
+                                  "entry_price": entry, "gross_pnl": gross,
+                                  "stop_price": (pos["stop_price"] if "stop_price" in pos.keys()
+                                                 else None)},
+                thresholds={"fee_each_side": fee_rate, "slippage_each_side": slip},
+                times={"entry_ts": int(pos["entry_ts"]), "exit_ts": exit_ms,
+                       "bar_open_time": bar_open_time, "bar_close_time": bar_close_time},
+                exit_reason=reason, net_pnl=net, funding_paid=funding_paid,
+                detail=decision_context or {})
+        return out
     finally:
         con.close()
         con_mkt.close()
+
+
+# ── 回撤锁定：四动作**完整执行**（停开仓 / 撤挂单 / 下根15m开盘清仓 / 本轮锁定）─────
+# 修复 D02：旧实现只有「拒绝新开仓」一条（`pre_open_check` 的 `account_drawdown_locked`），
+# 没有「撤未成交挂单、自动清仓、本轮永久锁定」的完整动作，也没有持久化锁定态。
+# 本函数把四动作补齐，锁定态持久化到 `live_run:drawdown_lock`（**只允许不解除**）。
+DRAWDOWN_LOCK_KEY = "drawdown_lock"
+
+
+def drawdown_lock_state(arm: str) -> dict:
+    """读该臂持久化锁定态（只读，不写库）。"""
+    st = L.get_run(DRAWDOWN_LOCK_KEY, {}) or {}
+    v = st.get(arm) if isinstance(st, dict) else None
+    return v if isinstance(v, dict) else {"locked": False}
+
+
+def enforce_drawdown(arm: str, *, T=None, log=None) -> dict:
+    """按 15m 收盘权益执行回撤四动作（幂等；**只锁不解**）。
+
+    ① 停开仓（持久锁定态，`pre_open_check` 与 `open_position` 均读取）；
+    ② 撤未成交挂单（`paper_pending.status='rejected'`，原因 `drawdown_lock_cancel_pending`）；
+    ③ 下一根 15m 开盘清仓（按该 bar 的 open + 不利滑点）；
+    ④ 本轮持续锁定（`live_run:drawdown_lock` 只增不减）。
+    """
+    T = int(T) if T else L.now_ms()
+    con = L.paper_conn(arm)
+    try:
+        con_mkt = L.market_conn()
+    except Exception:                                       # noqa: BLE001
+        con.close()
+        return {"arm": arm, "ok": False, "reason": "market_db_unavailable"}
+    try:
+        params = approved_params()
+        eq = equity(con, arm, con_mkt, params)
+        prev = drawdown_lock_state(arm)
+        st = (EB.drawdown_state(equity=eq["equity"], peak_equity=eq["peak_equity"],
+                               locked_before=bool(prev.get("locked")),
+                               config=EB.EXEC_FROZEN) if EB.CORE_AVAILABLE else
+              {"computable": eq["equity"] is not None, "drawdown": eq["drawdown"],
+               "locked": bool(prev.get("locked")) or eq["drawdown_locked"],
+               "tripped_now": eq["drawdown_locked"] and not prev.get("locked"),
+               "actions": [], "thresholds": {"max_drawdown_fraction":
+                                             params["maximum_account_drawdown_fraction"]}})
+        out = {"arm": arm, "ok": True, "T": T, "drawdown": st.get("drawdown"),
+               "locked": bool(st.get("locked")), "tripped_now": bool(st.get("tripped_now")),
+               "actions": list(st.get("actions") or []), "cancelled_pending": 0,
+               "liquidated": [], "already_locked": bool(prev.get("locked"))}
+        if not st.get("tripped_now"):
+            return out
+        # ② 撤未成交挂单
+        rows = list(con.execute(
+            "SELECT pending_id FROM paper_pending WHERE account_id=? AND status='pending'",
+            (f"paper43_{arm}",)))
+        for r in rows:
+            _resolve_pending(con, int(r[0]), "rejected", "drawdown_lock_cancel_pending", T=T)
+        out["cancelled_pending"] = len(rows)
+        # ④ 持久锁定（只增不减）
+        state = dict(L.get_run(DRAWDOWN_LOCK_KEY, {}) or {})
+        state[arm] = {"locked": True, "since_ms": T, "drawdown": st.get("drawdown"),
+                      "reason": "account_drawdown_fraction_20pct",
+                      "actions": ["disable_new_entries", "cancel_pending_orders",
+                                  "liquidate_all_next_15m_open", "lock_for_run_no_resume"]}
+        L.set_run(DRAWDOWN_LOCK_KEY, state)
+        # ③ 下一根 15m 开盘清仓（**因果**：只认 open_time >= 锁定时刻且**已闭合**的 bar；
+        #    本轮尚无该 bar ⇒ 记为待清仓，下一轮时钟到达后自动执行，绝不使用未来 bar）
+        pending_liquidation = []
+        for p in open_positions(con, arm):
+            nxt = bar_at_or_after(con_mkt, p["symbol"], T)
+            if nxt is None or int(nxt["close_time"]) > T:
+                pending_liquidation.append({"position_id": int(p["position_id"]),
+                                            "symbol": p["symbol"],
+                                            "reason": "awaiting_next_15m_open"})
+                continue
+            r = close_at_price(arm, int(p["position_id"]), raw_price=_f(nxt["open"]),
+                               now_ms=T, reason="drawdown_liquidation_next_15m_open",
+                               bar_open_time=int(nxt["open_time"]),
+                               bar_close_time=int(nxt["close_time"]),
+                               exit_ts=int(nxt["open_time"]),
+                               decision_context={"rule": "drawdown_liquidation_next_15m_open",
+                                                 "drawdown": st.get("drawdown"),
+                                                 "bar_open_time": int(nxt["open_time"])})
+            out["liquidated"].append(r)
+        out["pending_liquidation"] = pending_liquidation
+        if log:
+            log(f"[paper] 回撤锁定 arm={arm} dd={st.get('drawdown')} "
+                f"撤挂单={out['cancelled_pending']} 清仓={len(out['liquidated'])} "
+                f"待清仓={len(pending_liquidation)}")
+        return out
+    finally:
+        con.close()
+        con_mkt.close()
+
+
+def expiry_exit_ts(entry_ts_ms: int) -> int:
+    """720h 到期经济出场时刻 = 入场+720h 之后**首根 15m 开盘**（修复 D01）。
+
+    旧实现取「最后一根已闭合 15m 的**收盘**」，与冻结
+    `fill_time_plus_720h_at_detail_open_no_added_delay` 不符。
+    """
+    if EB.CORE_AVAILABLE:
+        return EB.expiry_exit_ms(int(entry_ts_ms), int(approved_params()["max_holding_hours"]))
+    step = 900_000
+    due = int(entry_ts_ms) + int(approved_params()["max_holding_hours"]) * H
+    return -(-due // step) * step
+
+
+def switches() -> dict:
+    """**两个独立开关**（供任务一展示、任务三核对）。"""
+    g = new_entry_gate()
+    return {
+        "allow_new_entries": g["allow_new_entries"],
+        "new_entry_gate_reason": g["gate_reason"],
+        "new_entry_gate_source": g["gate_file"],
+        "new_entry_default_blocked": True,
+        "maintain_existing": True,
+        "maintenance_scope": ["exits", "funding_settlement", "expiry_720h",
+                             "drawdown_lock", "trailing_stop"],
+        "note": "旧仓维护不受新开仓闸影响；正式候选未选定/未验收 ⇒ 新开仓继续阻断。",
+    }
 
 
 # ── 无持仓信号（record-only，不造仓）────────────────────────────────────────
@@ -1394,6 +1613,12 @@ def snapshot(arm: str) -> dict:
             "n_orders": n_ord, "n_rejected": n_rej, "n_closed": n_closed,
             "realized_history": realized, "funding_history": funding,
             "params_source": params["_source"], "model_version": MODEL_VERSION,
+            "ledger_model_version": LEDGER_MODEL_VERSION,
+            "exec_core": (EB.version_ids() if EB.CORE_AVAILABLE else
+                          {"core_available": False, "import_error": EB.IMPORT_ERROR}),
+            "config_source": _CONFIG_SOURCE.get("config_source"),
+            "config_degraded": _CONFIG_SOURCE.get("degraded"),
+            "switches": switches(),
             "quote_freshness": QUOTE_FRESHNESS, "fill_policy": FILL_POLICY,
         }
     finally:

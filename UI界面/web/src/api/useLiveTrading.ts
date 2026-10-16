@@ -40,6 +40,15 @@ export interface LiveTradingState {
   paperMissingReason: string | null;
   /** 纸面账本口径说明（含实时起点水位线：解释空持仓） */
   paperNote: string | null;
+  /** 服务端**新开仓总闸**（fail-closed）；null = 后端未返回。 */
+  newEntryGate: PaperLedger['newEntryGate'];
+  /** 旧版/未验收账本标记（后端只读追加）。 */
+  legacyLedger: PaperLedger['legacyLedger'];
+  /** 实时起点水位线（UTC）。 */
+  liveStartUtc: string | null;
+  /** 水位线前「仅展示」信号数 / 之后可自动开仓信号数（后端真实计数）。 */
+  nPreWatermarkDisplayOnly: number | null;
+  nAfterWatermark: number | null;
   /** 实盘只读账户快照 */
   liveAccounts: LiveAccountView[];
   /** 实盘账户为空时的真实原因（如未配置凭据 / worker 未运行） */
@@ -54,6 +63,7 @@ export interface LiveTradingState {
   openPosition: (input: {
     arm: string;
     symbol: string;
+    direction?: 'long' | 'short';
     atr?: number | null;
     stopPrice?: number | null;
     signalUid?: string | null;
@@ -66,14 +76,22 @@ export interface LiveTradingState {
   refresh: () => void;
 }
 
+/** 纸面账本空态（字段齐全，避免 undefined 访问）。 */
+const EMPTY_LEDGER: PaperLedger = {
+  accounts: [],
+  positions: [],
+  pending: [],
+  missingReason: null,
+  qualityNote: null,
+  newEntryGate: null,
+  legacyLedger: null,
+  liveStartUtc: null,
+  nPreWatermarkDisplayOnly: null,
+  nAfterWatermark: null,
+};
+
 export function useLiveTrading(): LiveTradingState {
-  const [ledger, setLedger] = useState<PaperLedger>({
-    accounts: [],
-    positions: [],
-    pending: [],
-    missingReason: null,
-    qualityNote: null,
-  });
+  const [ledger, setLedger] = useState<PaperLedger>(EMPTY_LEDGER);
   const [liveAccounts, setLiveAccounts] = useState<LiveAccountView[]>([]);
   const [liveMissingReason, setLiveMissingReason] = useState<string | null>(null);
   const [orderNotice, setOrderNotice] = useState<string | null>(null);
@@ -182,6 +200,11 @@ export function useLiveTrading(): LiveTradingState {
     paperPending: ledger.pending,
     paperMissingReason: ledger.missingReason,
     paperNote: ledger.qualityNote,
+    newEntryGate: ledger.newEntryGate,
+    legacyLedger: ledger.legacyLedger,
+    liveStartUtc: ledger.liveStartUtc,
+    nPreWatermarkDisplayOnly: ledger.nPreWatermarkDisplayOnly,
+    nAfterWatermark: ledger.nAfterWatermark,
     liveAccounts,
     liveMissingReason,
     orderNotice,

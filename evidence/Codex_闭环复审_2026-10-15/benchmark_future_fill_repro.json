@@ -1,0 +1,27 @@
+{
+  "test": "isolated_extracted_pure_function_no_import_no_db",
+  "source": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/live_api.py",
+  "input_price_points": [
+    [
+      3600000,
+      100
+    ],
+    [
+      7200000,
+      110
+    ]
+  ],
+  "query_times": [
+    0,
+    1800000,
+    3600000,
+    7200000
+  ],
+  "actual": {
+    "0": 5000.0,
+    "1800000": 5000.0,
+    "3600000": 5000.0,
+    "7200000": 5500.0
+  },
+  "expected_pre_first_price": "missing; must not backfill future first point"
+}

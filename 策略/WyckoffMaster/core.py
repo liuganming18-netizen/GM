@@ -25,7 +25,7 @@ from dataclasses import dataclass
 import numpy as np
 
 from . import series as S
-from .params import MasterParams, FROZEN
+from .params import MasterParams, FROZEN, STOP_MODES
 
 
 # ══════════════════════════ 结果容器 ══════════════════════════
@@ -113,7 +113,19 @@ def compute_stop(entry_px: float, struct_low, atr_val: float, params: MasterPara
         out["reject"] = "nonpositive_entry"
         return out
 
-    if stop_mode == "uniform" or struct_low is None or not math.isfinite(struct_low):
+    if stop_mode not in STOP_MODES:
+        out["reject"] = f"illegal_stop_mode:{stop_mode}"
+        return out
+    uses_struct = stop_mode in ("structural", "structural_m2b")
+    try:
+        struct_low_valid = struct_low is not None and math.isfinite(float(struct_low))
+    except (TypeError, ValueError, OverflowError):
+        struct_low_valid = False
+    if uses_struct and not struct_low_valid:
+        out["reject"] = "missing_struct_low_for_structural_stop"
+        return out
+
+    if stop_mode == "uniform":
         dist = p.uniform_stop_atr * atr_val
         raw_stop = entry_px - dist
     else:
@@ -197,6 +209,17 @@ def evaluate_entry_fill(*, open_15m, struct_low, atr_val, params: MasterParams =
     """
     out = {"entry_price": None, "entry_raw": None, "stop_price": None,
            "stop_dist": None, "target_price": None, "reject": None}
+    if stop_mode not in STOP_MODES:
+        out["reject"] = f"illegal_stop_mode:{stop_mode}"
+        return out
+    uses_struct = stop_mode in ("structural", "structural_m2b")
+    try:
+        struct_low_valid = struct_low is not None and math.isfinite(float(struct_low))
+    except (TypeError, ValueError, OverflowError):
+        struct_low_valid = False
+    if uses_struct and not struct_low_valid:
+        out["reject"] = "missing_struct_low_for_structural_stop"
+        return out
     if open_15m is None or not math.isfinite(open_15m) or open_15m <= 0:
         out["reject"] = "missing_or_nonpositive_open"
         return out
@@ -204,8 +227,6 @@ def evaluate_entry_fill(*, open_15m, struct_low, atr_val, params: MasterParams =
     entry = _round_buy(entry_raw, price_step)
     out["entry_raw"] = entry_raw
     out["entry_price"] = entry
-    uses_struct = stop_mode in ("structural", "structural_m2b") and \
-        struct_low is not None and math.isfinite(struct_low)
     if uses_struct and entry <= float(struct_low):
         out["reject"] = "entry_below_struct_low"
         return out

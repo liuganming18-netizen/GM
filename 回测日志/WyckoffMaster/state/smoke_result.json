@@ -1,0 +1,119 @@
+{
+  "M0": {
+    "trades": 346,
+    "net": -590.02,
+    "gross": -500.11,
+    "fees": 95.42,
+    "funding": 5.51,
+    "max_dd": 0.2025,
+    "rejects": {
+      "portfolio_stop_risk_cap_exceeded": 181,
+      "qty_below_min_quantity": 61
+    },
+    "kinds": {
+      "donchian_breakout": 588
+    },
+    "secs": 2.8
+  },
+  "M1": {
+    "trades": 286,
+    "net": -582.09,
+    "gross": -545.19,
+    "fees": 89.55,
+    "funding": 52.65,
+    "max_dd": 0.2018,
+    "rejects": {
+      "qty_below_min_quantity": 22,
+      "portfolio_stop_risk_cap_exceeded": 87
+    },
+    "kinds": {
+      "breakout": 273,
+      "spring": 63,
+      "retest": 59
+    },
+    "secs": 2.6
+  },
+  "M2": {
+    "trades": 205,
+    "net": -594.15,
+    "gross": -550.9,
+    "fees": 85.95,
+    "funding": 42.7,
+    "max_dd": 0.2011,
+    "rejects": {
+      "entry_below_struct_low": 46,
+      "structural_stop_too_far": 20,
+      "qty_below_min_quantity": 2,
+      "gross_long_cap_exceeded": 68,
+      "portfolio_stop_risk_cap_exceeded": 7
+    },
+    "kinds": {
+      "breakout": 258,
+      "spring": 50,
+      "retest": 40
+    },
+    "secs": 2.7
+  },
+  "M2b": {
+    "trades": 234,
+    "net": -574.07,
+    "gross": -528.76,
+    "fees": 94.73,
+    "funding": 49.42,
+    "max_dd": 0.2009,
+    "rejects": {
+      "entry_below_struct_low": 48,
+      "gross_long_cap_exceeded": 111,
+      "qty_below_min_quantity": 5,
+      "portfolio_stop_risk_cap_exceeded": 13
+    },
+    "kinds": {
+      "breakout": 314,
+      "spring": 51,
+      "retest": 46
+    },
+    "secs": 2.6
+  },
+  "M3_BE": {
+    "trades": 237,
+    "net": -595.76,
+    "gross": -548.27,
+    "fees": 99.12,
+    "funding": 51.63,
+    "max_dd": 0.2028,
+    "rejects": {
+      "entry_below_struct_low": 48,
+      "structural_stop_too_far": 20,
+      "gross_long_cap_exceeded": 74,
+      "portfolio_stop_risk_cap_exceeded": 5,
+      "qty_below_min_quantity": 2
+    },
+    "kinds": {
+      "breakout": 288,
+      "spring": 51,
+      "retest": 47
+    },
+    "secs": 2.5
+  },
+  "M3_Step": {
+    "trades": 220,
+    "net": -593.38,
+    "gross": -552.77,
+    "fees": 92.1,
+    "funding": 51.49,
+    "max_dd": 0.2027,
+    "rejects": {
+      "entry_below_struct_low": 47,
+      "structural_stop_too_far": 19,
+      "portfolio_stop_risk_cap_exceeded": 7,
+      "gross_long_cap_exceeded": 57,
+      "qty_below_min_quantity": 1
+    },
+    "kinds": {
+      "breakout": 261,
+      "spring": 50,
+      "retest": 40
+    },
+    "secs": 2.6
+  }
+}

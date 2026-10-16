@@ -75,7 +75,7 @@ export function tokenId(exchange: string, marketId: string): string {
   return `${exchange}:${marketId}`;
 }
 
-/** 与 mock 版一致的本地时间显示口径（后端给的是 UTC open_time，按浏览器本地时区呈现）。 */
+/** 本地时间显示口径（后端给的是 UTC open_time，按浏览器本地时区呈现）。 */
 export function formatCandleTime(iso: string, tf: Timeframe): string {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;

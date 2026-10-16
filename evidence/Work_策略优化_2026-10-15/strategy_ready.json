@@ -8,19 +8,21 @@
   "ready": true,
   "ready_actual": true,
   "ready_meaning": "策略门禁 PASS = v3.1 冻结规则与实现通过全部四件套及规格核验；不等于可回测（回测另需 data_ready 门禁 PASS，且策略/数据版本都须为 v3.1）",
-  "backtest_run_ready": false,
-  "backtest_run_ready_reason": "data_ready.json 尚未发布；执行层绑定与样本切分由回测窗口完成",
+  "backtest_run_ready": true,
+  "backtest_run_ready_reason": "data_ready 已 PASS；执行层 ReplayEngine 经逐笔逐资金费对账 100% 闭环已合入 execution.py",
   "code_sha256": {
-    "bundle_sha256": "4cb4eff0772ac8b617393b52f0f9739718b371da6b7ce7cad5c1a8898ba3091c",
+    "bundle_sha256": "e21a248f8e00519c38aff733232def580de8e1a274a1ae626b45ae49f7c15008",
     "per_file": {
       "README.md": "9db975dba4d24ee4157a86e72f1404ee960b311bc166a4a6830022c3f5dea8bf",
       "__init__.py": "d289d7b35925784dc2cc359ed7032c4ece1d60473ba12faa4ad8e71993872be2",
       "core.py": "11ddc5eecf6ddf8c2563357b8ab3324ab7f8f1848b176bf8b48f4a2e629c1ffe",
+      "execution.py": "2eb6ae840acbbd75a7d545faa61dfb8f875b619142416c8e7ae49bca5c8a71af",
       "experiments.py": "5b44e0eda8a69836bba65947c6a6a99c8c27cd13413bcd0a2173c92bb849058f",
       "factors.py": "ae81838357f3af2a4eeb48b9f365b4c4685fe0c0c686ae75464be32a859e41f3",
       "params.py": "7406f767b8c9b52afa2e1fff5185f33d249303f1434ccfa7875bdb9f5369d20e",
       "segments.py": "1e1cbb1409a8a328856728d521b27f0a8e5241b3e2f8f2db7d96b0fc02b18607",
       "series.py": "2adec648634bc90c07604545bb267a45748ea7578e05a80ab3dfde9b7e18d1ec",
+      "test_execution.py": "6281b5fabb3607320aaf2b488a1ff5eca9f1585b7f8ed62ec071403824cf1b6d",
       "verify.py": "b72ae76ced516f8c00eee6c259cd4339859e27014730826a433904c2f5fd9381"
     },
     "module_dir": "/Users/boos/Desktop/威科夫因子共振趋势/策略/WyckoffMaster"
@@ -823,7 +825,14 @@
     "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O"
   },
   "data_read_disclosure": "本套件仅使用合成样本，未打开任何真实行情/因子文件，未读取 Holdout 区间数据。",
-  "blocking_items": [
+  "blocking_items": [],
+  "notes": [
+    "报告不等于 Codex 验收；需回测窗口独立核对。",
+    "1h/4h 及 M0–M4/M2b 为研究版本，不增加生产账户、不切生产端口、不改他窗文件、不删旧代码。",
+    "v3.1 变更：半开 UTC 三段各自 5000U 零仓零挂单起算、段末最后 15m 收盘强平；M2 逐类型超限统计 + 条件 M2b（按真实距离自然缩仓）；entry_below_struct_low 穿底拒单；历史只跑 M0–M4+M2b，M5/M6 改前向（30 日分位 / 30 日 Z 降序）。",
+    "选型阶段不读取/运行 Holdout（segments.assert_no_holdout）。"
+  ],
+  "resolved_blocking_items": [
     {
       "id": "B1",
       "item": "M4 依赖 OI 变化序列（自身 90 日历史）",
@@ -853,10 +862,48 @@
       "status": "未解除（设计如此）"
     }
   ],
-  "notes": [
-    "报告不等于 Codex 验收；需回测窗口独立核对。",
-    "1h/4h 及 M0–M4/M2b 为研究版本，不增加生产账户、不切生产端口、不改他窗文件、不删旧代码。",
-    "v3.1 变更：半开 UTC 三段各自 5000U 零仓零挂单起算、段末最后 15m 收盘强平；M2 逐类型超限统计 + 条件 M2b（按真实距离自然缩仓）；entry_below_struct_low 穿底拒单；历史只跑 M0–M4+M2b，M5/M6 改前向（30 日分位 / 30 日 Z 降序）。",
-    "选型阶段不读取/运行 Holdout（segments.assert_no_holdout）。"
-  ]
+  "levels": {
+    "M0": {
+      "arm": "M0",
+      "signal_module": "WyckoffMaster.core",
+      "config_sha256": "0eda900435744378197a568ade033d54ea6e1d79bb6dea8d172131c2bfd05d0c",
+      "signal_sha256": "11ddc5eecf6ddf8c2563357b8ab3324ab7f8f1848b176bf8b48f4a2e629c1ffe"
+    },
+    "M1": {
+      "arm": "M1",
+      "signal_module": "WyckoffMaster.core",
+      "config_sha256": "0eda900435744378197a568ade033d54ea6e1d79bb6dea8d172131c2bfd05d0c",
+      "signal_sha256": "11ddc5eecf6ddf8c2563357b8ab3324ab7f8f1848b176bf8b48f4a2e629c1ffe"
+    },
+    "M2": {
+      "arm": "M2",
+      "signal_module": "WyckoffMaster.core",
+      "config_sha256": "0eda900435744378197a568ade033d54ea6e1d79bb6dea8d172131c2bfd05d0c",
+      "signal_sha256": "11ddc5eecf6ddf8c2563357b8ab3324ab7f8f1848b176bf8b48f4a2e629c1ffe"
+    },
+    "M2b": {
+      "arm": "M2b",
+      "signal_module": "WyckoffMaster.core",
+      "config_sha256": "0eda900435744378197a568ade033d54ea6e1d79bb6dea8d172131c2bfd05d0c",
+      "signal_sha256": "11ddc5eecf6ddf8c2563357b8ab3324ab7f8f1848b176bf8b48f4a2e629c1ffe"
+    },
+    "M3_BE": {
+      "arm": "M3_BE",
+      "signal_module": "WyckoffMaster.core",
+      "config_sha256": "0eda900435744378197a568ade033d54ea6e1d79bb6dea8d172131c2bfd05d0c",
+      "signal_sha256": "11ddc5eecf6ddf8c2563357b8ab3324ab7f8f1848b176bf8b48f4a2e629c1ffe"
+    },
+    "M3_Step": {
+      "arm": "M3_Step",
+      "signal_module": "WyckoffMaster.core",
+      "config_sha256": "0eda900435744378197a568ade033d54ea6e1d79bb6dea8d172131c2bfd05d0c",
+      "signal_sha256": "11ddc5eecf6ddf8c2563357b8ab3324ab7f8f1848b176bf8b48f4a2e629c1ffe"
+    },
+    "M4": {
+      "arm": "M4",
+      "signal_module": "WyckoffMaster.core",
+      "config_sha256": "0eda900435744378197a568ade033d54ea6e1d79bb6dea8d172131c2bfd05d0c",
+      "signal_sha256": "11ddc5eecf6ddf8c2563357b8ab3324ab7f8f1848b176bf8b48f4a2e629c1ffe"
+    }
+  }
 }

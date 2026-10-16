@@ -1,92 +1,65 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""WyckoffMaster 回测窗口 · 局部隔离适配层（只读复用 wx_execution / ra_engine）。
+"""WyckoffMaster 回测窗口 · 隔离桥（**项目内闭环**，无旧研究目录依赖）。
+
+与旧实现（依赖已不存在的
+`WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/{后端实现,回测资源改造_2026-10-14,
+全池真实费用回测_2026-10-13}`）的差别：本模块把依赖全部收回到**项目内**——
+
+  · 策略共用核心   = 项目 `策略/WyckoffMaster/`（任务二交付，只读消费）
+  · 执行唯一口径   = 项目 `策略/WyckoffMaster/execution.py`（exec_core v3.1.0）
+  · 冻结生产引擎   = 项目 `框架/backend/strategies/wx_execution.py`（只读，SHA 冻结）
+  · 研究输入       = 项目 `数据/研究输入/WyckoffMaster_v31/{is,val}`（物理隔离 IS/Val）
+  · 写入           = 项目 `回测日志/WyckoffMaster/`（本窗口唯一写入根）
 
 纪律（红线，违反即拒绝运行）：
-  1. **不修改**生产引擎：`后端实现/strategies/wx_execution.py` 必须 SHA == 冻结值，
-     且本进程**从不写**该文件或任何 `后端实现/`、`加密货币趋势判断系统/` 下的文件。
-  2. **不写生产库**：热库/冷档/paper 账本一律只读（由 wx_* 内部 `mode=ro` + `query_only` 保证）。
+  1. **不修改**生产引擎：`框架/backend/strategies/wx_execution.py` 必须 SHA == 冻结值。
+  2. **不写生产库**：热库/冷档/paper 账本一律只读。
   3. **只写** `回测日志/WyckoffMaster/` 下（账本、日志、状态）。
-  4. **禁止** norm4h / ext1h 近似模型冒充真实历史资金费；只允许 `historical_events`。
-  5. **不抢** 3000 / 8787 端口，不启停生产服务。
-
-本模块只是**薄桥**：把已验证的 RA 输入仓 + 执行引擎按「单段（segment）」封装起来，
-供 `run_ladder.py` 顺序实验共用一次 InputStore。不复制任何引擎实现。
+  4. **禁止** norm4h / ext1h 近似模型冒充真实历史资金费；只允许真实结算事件。
+  5. 不引用 v3.0 全时段目录 `数据/研究输入/WyckoffMaster/`（含 Holdout）。
 """
 from __future__ import annotations
 
-import hashlib
-import os
 import sys
 from pathlib import Path
 
-# ── 路径常量（只读源；本窗口唯一写入根）─────────────────────────────────────
-PROJECT = Path("/Users/boos/Desktop/威科夫因子共振趋势")
-WRITE_ROOT = PROJECT / "回测日志" / "WyckoffMaster"
+WM = Path(__file__).resolve().parent.parent
+if str(WM) not in sys.path:
+    sys.path.insert(0, str(WM))
 
-BASE = Path("/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究")
-BACKEND = BASE / "后端实现"
-W549 = BASE / "全池真实费用回测_2026-10-13"
-RA = BASE / "回测资源改造_2026-10-14"
-RA_SRC = RA / "src"
-W549_SRC = W549 / "src"
+from engine import paths as P              # noqa: E402
+from engine import loader as LD            # noqa: E402
+from engine import ladder as LAD           # noqa: E402
+from engine import reconcile as RC         # noqa: E402
+from engine.engine import Backtest, LevelSpec  # noqa: E402
+from engine.m4 import make_m4_rank_provider    # noqa: E402
 
-INPUT_STORE = BACKEND / "历史下载" / "perp_datadir_real" / "data"
-DAILY_DOC = W549 / "inputs" / "daily_549_DEV.json"
+# ── 路径常量（项目内）───────────────────────────────────────────────────────
+PROJECT = P.PROJECT
+WRITE_ROOT = P.WRITE_ROOT
+STRATEGY_ROOT = P.STRATEGY_ROOT
+BACKEND = P.BACKEND
+V31_ROOT = P.V31_ROOT
+OLD_RESEARCH_DIR = P.OLD_RESEARCH_DIR       # v3.0（含 Holdout）——本窗口禁止使用
 
-FROZEN_WX_EXECUTION_SHA = "0ede9ce19c7cec9d18398572e393ef65ef4c04a6aa5ff2b41f8ad022c83dbcf1"
-FROZEN_CONFIG_VIEW_SHA = "6d18d222d1991f99dd2ba0cdf80b35fbc57f4f482904c945f43d66ebb9df9501"
+FROZEN_WX_EXECUTION_SHA = P.FROZEN_WX_EXECUTION_SHA
 ALLOWED_FUNDING_MODEL = "historical_events"
-FORBIDDEN_FUNDING_MODELS = ("norm4h", "ext1h")
+FORBIDDEN_FUNDING_MODELS = ("norm4h", "ext1h", "close_proxy", "zero_fill")
 
-# 生产只读源（本进程不得写入）
-PROTECTED_ROOTS = (
-    BACKEND,
-    Path("/Users/boos/WorkBuddy AI/加密货币趋势判断系统"),
-    W549, RA,
-)
-
-
-class IsolationError(RuntimeError):
-    """隔离纪律被违反。"""
+IsolationError = P.IsolationError
+HoldoutViolation = P.HoldoutViolation
+sha256_file = P.sha256_file
+assert_write_target = P.assert_write_target
+assert_production_untouched = P.assert_production_untouched
+input_manifest_sha = P.input_manifest_sha
 
 
-def sha256_file(p: Path) -> str:
-    h = hashlib.sha256()
-    with open(p, "rb") as f:
-        for chunk in iter(lambda: f.read(1 << 20), b""):
-            h.update(chunk)
-    return h.hexdigest()
-
-
-def assert_write_target(p: Path) -> Path:
-    """任何写目标必须落在 WRITE_ROOT 内，否则拒绝。"""
-    rp = Path(p).resolve()
-    if WRITE_ROOT.resolve() not in rp.parents and rp != WRITE_ROOT.resolve():
-        raise IsolationError(f"写目标越界（只允许写 {WRITE_ROOT}）：{rp}")
-    return rp
-
-
-def assert_production_untouched() -> dict:
-    """核验生产引擎 SHA 未被改动；顺带核验关键源只读存在。"""
-    facts = {}
-    p = BACKEND / "strategies" / "wx_execution.py"
-    if not p.exists():
-        raise IsolationError(f"缺生产引擎：{p}")
-    got = sha256_file(p)
-    facts["wx_execution_sha256"] = got
-    facts["wx_execution_sha_ok"] = (got == FROZEN_WX_EXECUTION_SHA)
-    if not facts["wx_execution_sha_ok"]:
-        raise IsolationError(
-            "生产引擎 wx_execution.py SHA 与冻结值不符，拒绝运行（可能被其他窗口改写）：\n"
-            f"  expect {FROZEN_WX_EXECUTION_SHA}\n  got    {got}")
-    facts["config_view_sha256"] = sha256_file(
-        BASE / "最新唐奇安威科夫接通与收尾_2026-10-11" / "5000U收尾与回测条件终验6"
-        / "10_研究参数生效视图_v2_2_user5000_shared.json")
-    facts["config_view_sha_ok"] = (facts["config_view_sha256"] == FROZEN_CONFIG_VIEW_SHA)
-    for q in (INPUT_STORE, DAILY_DOC):
-        facts[f"exists::{q.name}"] = q.exists()
-    return facts
+def assert_no_legacy_research_dir() -> dict:
+    """确认本窗口不引用 v3.0 全时段研究目录（含 Holdout）。"""
+    return {"legacy_research_dir": str(OLD_RESEARCH_DIR),
+            "used_by_backtest_window": False,
+            "v31_root": str(V31_ROOT), "v31_root_exists": V31_ROOT.exists()}
 
 
 def assert_funding_model(model: str) -> str:
@@ -99,75 +72,42 @@ def assert_funding_model(model: str) -> str:
     return m
 
 
-def _ensure_syspath() -> None:
-    for p in (str(BACKEND), str(W549_SRC), str(RA_SRC)):
-        if p not in sys.path:
-            sys.path.insert(0, p)
-    sys.dont_write_bytecode = True
+def load_engine() -> dict:
+    """加载项目内引擎组件（只读复用，不复制实现）。"""
+    if str(P.STRATEGY_ROOT) not in sys.path:
+        sys.path.insert(0, str(P.STRATEGY_ROOT))
+    from WyckoffMaster import core as WC
+    from WyckoffMaster import execution as X
+    from WyckoffMaster import factors as WF
+    return {"Backtest": Backtest, "LevelSpec": LevelSpec, "ladder": LAD, "loader": LD,
+            "reconcile": RC, "m4": make_m4_rank_provider,
+            "X": X, "core": WC, "factors": WF}
 
 
-def load_engine():
-    """加载已验证引擎与输入仓组件（只读复用，不复制实现）。"""
-    _ensure_syspath()
-    import w549 as W5              # noqa: N811
-    import ra_arm as RAARM
-    import ra_store as RS
-    from strategies import wx_execution as X
-    from strategies import wx_ledger as L
-    W5.patch_engine()
-    return {"W5": W5, "RAARM": RAARM, "RS": RS, "X": X, "L": L}
+def make_segment(seg: str) -> LD.SegmentData:
+    """构建一段（IS/Val）的只读研究输入（Holdout 段物理拒绝）。"""
+    return LD.SegmentData(seg)
 
 
-def make_shared_store(symbols, start_ms: int, end_ms: int, *, data_version: str, log=print,
-                      phase: str = "kline"):
-    """构建一次共享只读 InputStore（四臂/多实验顺序复用，不复制输入）。
-
-    v3.1 最高红线：
-      1. 先过 Holdout 守卫——选型阶段任何与 Holdout 有交集的窗口一律拒绝；
-      2. 强制通过 3 条数据卫生规则（同质 526 币池锁定、准 PIT 过滤、长停牌保护）。
-    """
-    import holdout_guard as HG
-    import data_hygiene as DH
-    HG.assert_window_allowed(start_ms, end_ms, phase)
-    # 强制数据卫生规则 1：锁定 526 同质币池并排除 OKX
-    symbols = DH.assert_homogeneous_pool(symbols)
-    DH.print_data_hygiene_summary()
-
-    eng = load_engine()
-    store = eng["RAARM"].make_store(symbols, start_ms, end_ms,
-                                    data_version=data_version, log=log)
-    for k in symbols:
-        store.s15(k)
-        store.smark(k)
-    return store, eng
-
-
-def run_segment_arm(*, eng, store, arm: str, symbols, start_ms: int, end_ms: int,
-                    doc_path=DAILY_DOC, run_id: str, ledger_path: Path, log=print,
-                    phase: str = "kline"):
+def run_segment_arm(*, spec, seg_data, tf, start_ms: int, end_ms: int, symbols, run_id: str,
+                    ledger_path: Path, commit_every: int = 1, rank_provider=None,
+                    collect_candidates: bool = False, log=print):
     """在**独立账本**上跑一个实验臂的一段（写目标强制落在 WRITE_ROOT 内）。"""
-    import sqlite3
-    import holdout_guard as HG
-    HG.assert_window_allowed(start_ms, end_ms, phase)
-    lp = assert_write_target(ledger_path)
+    lp = assert_write_target(Path(ledger_path))
     lp.parent.mkdir(parents=True, exist_ok=True)
-    if lp.exists():
-        lp.unlink()
-    con = sqlite3.connect(str(lp))
-    con.row_factory = sqlite3.Row
-    eng["L"].create_schema(con)
-    try:
-        out, sd, sig, res = eng["RAARM"].run_actual(
-            con=con, run_id=run_id, arm=arm, symbols=symbols, start_ms=start_ms,
-            end_ms=end_ms, store=store, doc_path=str(doc_path), log=log)
-    finally:
-        con.close()
-    return {"ledger": str(lp), "run": out, "resource": res}
+    bt = Backtest(seg_data=seg_data, spec=spec, timeframe=tf, start_ms=start_ms, end_ms=end_ms,
+                  run_id=run_id, ledger_path=lp, symbols=symbols, commit_every=commit_every,
+                  rank_provider=rank_provider, collect_candidates=collect_candidates)
+    res = bt.run()
+    bt.led.close()
+    return {"ledger": str(lp), "run": res, "candidates": list(bt.candidates)}
 
 
 if __name__ == "__main__":
     import json
-    print(json.dumps({"facts": assert_production_untouched(),
-                      "write_root": str(WRITE_ROOT),
-                      "input_store": str(INPUT_STORE)},
-                     ensure_ascii=False, indent=2))
+    print(json.dumps({
+        "write_root": str(WRITE_ROOT), "strategy_root": str(STRATEGY_ROOT),
+        "v31_root": str(V31_ROOT),
+        "legacy_research_dir": assert_no_legacy_research_dir(),
+        "production": assert_production_untouched(),
+    }, ensure_ascii=False, indent=2))

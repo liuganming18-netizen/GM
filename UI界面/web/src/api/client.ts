@@ -13,11 +13,21 @@ export const API_PREFIX = '/api/v1';
 
 export class ApiError extends Error {
   readonly status: number;
+  /**
+   * 后端**原始响应体**（解析后的 JSON；无法解析则为 `null`）。
+   *
+   * 为什么需要：研究回测 `POST /api/v1/backtests` 以 `400 + {missing_reason, errors[]}`
+   * 返回**逐条参数校验原因**，而 `quality.note` 为空 ⇒ 调用方若只看 `message`
+   * 会把「哪个参数不合法」丢掉。保留原始体让调用方能原样展示后台原因。
+   * 既有调用方不使用该字段，行为不变。
+   */
+  readonly body: unknown;
 
-  constructor(message: string, status: number) {
+  constructor(message: string, status: number, body: unknown = null) {
     super(message);
     this.name = 'ApiError';
     this.status = status;
+    this.body = body;
   }
 }
 
@@ -52,9 +62,9 @@ export async function apiGet<T>(path: string, signal?: AbortSignal): Promise<T> 
   }
 
   if (body && typeof body === 'object' && !Array.isArray(body) && '错误' in (body as Record<string, unknown>)) {
-    throw new ApiError(String((body as Record<string, unknown>)['错误']), res.status);
+    throw new ApiError(String((body as Record<string, unknown>)['错误']), res.status, body);
   }
-  if (!res.ok) throw new ApiError(describeStatus(res.status), res.status);
+  if (!res.ok) throw new ApiError(describeStatus(res.status), res.status, body);
   return body as T;
 }
 
@@ -99,7 +109,7 @@ export async function apiPost<T>(path: string, body: unknown, signal?: AbortSign
   }
 
   if (parsed && typeof parsed === 'object' && !Array.isArray(parsed) && '错误' in (parsed as Record<string, unknown>)) {
-    throw new ApiError(String((parsed as Record<string, unknown>)['错误']), res.status);
+    throw new ApiError(String((parsed as Record<string, unknown>)['错误']), res.status, parsed);
   }
   // 409 = 服务端账本**明确拒绝**（原因在 quality.note / items[0].reason），同样按错误抛出，
   // 让调用方显示真实原因，而不是把拒绝当成功。
@@ -107,7 +117,7 @@ export async function apiPost<T>(path: string, body: unknown, signal?: AbortSign
     const note =
       (parsed as { quality?: { note?: string | null } } | null)?.quality?.note ??
       describeStatus(res.status);
-    throw new ApiError(note ?? describeStatus(res.status), res.status);
+    throw new ApiError(note ?? describeStatus(res.status), res.status, parsed);
   }
   return parsed as T;
 }

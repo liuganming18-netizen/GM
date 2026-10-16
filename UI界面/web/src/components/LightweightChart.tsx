@@ -1153,12 +1153,24 @@ export interface CandleVolumeChartProps extends SharedChartProps {
   bars: Candle[];
   timeframe: Timeframe;
   priceLines?: ChartPriceLine[];
+  /**
+   * **可选**额外标记：与 `signalTag` 派生的标记**合并**后一起下发给官方 markers 插件。
+   *
+   * 为什么加（必要性）：回测工作台需要把「真实开仓 / 平仓」以及「选中那笔交易的
+   * 高亮」画在同一张 K 线上，而 `signalTag` 只能表达单一圆点标记。标记数据由调用方
+   * 从 `GET /backtests/{id}/chart` 的**真实** trades 构造，本组件只负责渲染。
+   *
+   * **默认行为不变**：不传（`undefined`）时 marker 集与扩展前**逐字一致**
+   * （仅 `buildSignalMarkers(bars)`）；交易工作台等既有调用方不传该 prop。
+   */
+  extraMarkers?: SeriesMarker<Time>[];
 }
 
 const CandleVolumeChartInner: React.FC<CandleVolumeChartProps> = ({
   bars,
   timeframe,
   priceLines,
+  extraMarkers,
   gridTimes,
   viewKey,
   initialViewport,
@@ -1303,7 +1315,13 @@ const CandleVolumeChartInner: React.FC<CandleVolumeChartProps> = ({
     const candleData = buildCandleData(bars);
     const volumeData = buildVolumeData(bars);
     const gridData = buildGridAnchor(gridTimes, buildCandleGrid(bars));
-    const markerData = buildSignalMarkers(bars);
+    // 标记 = signalTag 派生的真实标记（默认唯一来源）+ 调用方传入的**可选**额外标记。
+    // 两段各自升序；合并后按时间升序（官方 markers 插件要求时间升序）。
+    const markerData = extraMarkers && extraMarkers.length > 0
+      ? [...buildSignalMarkers(bars), ...extraMarkers].sort(
+          (a, b) => Number(a.time) - Number(b.time),
+        )
+      : buildSignalMarkers(bars);
     const bySec = new Map<number, Candle>();
     for (const candle of bars) {
       if (Number.isFinite(candle.timestamp) && candle.timestamp > 0) {
@@ -1403,7 +1421,7 @@ const CandleVolumeChartInner: React.FC<CandleVolumeChartProps> = ({
     lifecycle.alignPriceScales();
     // 实时刷新/追加历史：仍走静默窗内的去抖上报（程序化范围变化不写缓存）
     lifecycle.scheduleReport();
-  }, [bars, timeframe, gridTimes, viewKey, initialViewport, syncHub, lifecycle]);
+  }, [bars, timeframe, gridTimes, viewKey, initialViewport, syncHub, lifecycle, extraMarkers]);
 
   return (
     <div ref={lifecycle.containerRef} className="w-full h-full" data-chart="lightweight-candles" />

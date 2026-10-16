@@ -1,0 +1,641 @@
+{
+  "version": "3.1",
+  "all_passed": true,
+  "checks": {
+    "T1_test_no_lookahead": {
+      "passed": true,
+      "cuts": [
+        60,
+        120,
+        200,
+        333,
+        500,
+        700,
+        899
+      ],
+      "mismatches": [],
+      "trail_prefix_insensitive": true,
+      "note": "信号逐位一致 + 台阶判定前缀一致（无前视/无回填）"
+    },
+    "T2_test_anchor_no_overwrite_single_confirm": {
+      "passed": "True",
+      "spring": {
+        "register_bars": [
+          25
+        ],
+        "confirm_bars": [
+          27
+        ],
+        "struct_low_at_confirm": 99.5,
+        "no_reconfirm_at_28": true
+      },
+      "retest": {
+        "register_bars": [
+          25
+        ],
+        "overlap_ignored_bars": [
+          26
+        ],
+        "confirm_bars": [
+          27
+        ],
+        "kept_level": 100.3,
+        "struct_low_at_confirm": 100.5
+      },
+      "single_confirm_per_register": true,
+      "note": "先到先得、不覆盖未决锚点；每根母线/锚点最多确认一次并立即消费"
+    },
+    "T3_test_stop_limits_m2b_and_below_struct": {
+      "passed": true,
+      "cases": [
+        {
+          "name": "m2_min_1.5atr",
+          "reject": null,
+          "passed": true
+        },
+        {
+          "name": "m2_reject_gt_3.5atr",
+          "reject": "structural_stop_too_far",
+          "passed": true
+        },
+        {
+          "name": "m2_round_then_recheck",
+          "reject": "structural_stop_too_far_after_round",
+          "passed": true
+        },
+        {
+          "name": "m2b_no_reject_natural_shrink",
+          "reject": null,
+          "stop_dist": 21.599999999999994,
+          "raw_dist": 21.599999999999994,
+          "passed": true
+        },
+        {
+          "name": "m2b_floor_1.5atr",
+          "passed": true
+        },
+        {
+          "name": "entry_below_struct_low_m2",
+          "reject": "entry_below_struct_low",
+          "entry_price": 95.94795,
+          "passed": true
+        },
+        {
+          "name": "entry_below_struct_low_m2b",
+          "reject": "entry_below_struct_low",
+          "passed": true
+        },
+        {
+          "name": "entry_equal_struct_after_slippage_allowed",
+          "reject": null,
+          "passed": true
+        },
+        {
+          "name": "open_through_stop_defensive",
+          "reject": "open_already_through_stop",
+          "passed": true
+        },
+        {
+          "name": "normal_fill_ok",
+          "passed": true
+        },
+        {
+          "name": "uniform_3atr_target_2r",
+          "passed": true
+        }
+      ],
+      "note": "M2 过远拒单；M2b 不设上限、按真实距离自然缩仓；穿底拒单 M2/M2b 均适用"
+    },
+    "T4_test_step_trail_next_bar_monotonic": {
+      "passed": true,
+      "monotone_non_decreasing": true,
+      "effective_next_15m": true,
+      "min_bars_gate": true,
+      "raise_formula_ok": true,
+      "raised_count": 3,
+      "naive_be_stop": 100.0,
+      "steps": [
+        {
+          "k": 1,
+          "close_time": 1700000000000,
+          "effective_from_open_time": 1700000000001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "hold",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 2,
+          "close_time": 1700003600000,
+          "effective_from_open_time": 1700003600001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "insufficient_bars_after_entry",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 3,
+          "close_time": 1700007200000,
+          "effective_from_open_time": 1700007200001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "insufficient_bars_after_entry",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 4,
+          "close_time": 1700010800000,
+          "effective_from_open_time": 1700010800001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "insufficient_bars_after_entry",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 5,
+          "close_time": 1700014400000,
+          "effective_from_open_time": 1700014400001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "insufficient_bars_after_entry",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 6,
+          "close_time": 1700018000000,
+          "effective_from_open_time": 1700018000001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "insufficient_bars_after_entry",
+          "cand": null,
+          "swing_low": null
+        },
+        {
+          "k": 7,
+          "close_time": 1700021600000,
+          "effective_from_open_time": 1700021600001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "candidate_below_entry_plus_buffer",
+          "cand": 98.9,
+          "swing_low": 100.5
+        },
+        {
+          "k": 8,
+          "close_time": 1700025200000,
+          "effective_from_open_time": 1700025200001,
+          "stop_before": 94.0,
+          "stop_after": 94.0,
+          "updated": false,
+          "reason": "candidate_below_entry_plus_buffer",
+          "cand": 99.9,
+          "swing_low": 101.5
+        },
+        {
+          "k": 9,
+          "close_time": 1700028800000,
+          "effective_from_open_time": 1700028800001,
+          "stop_before": 94.0,
+          "stop_after": 100.9,
+          "updated": true,
+          "reason": "step_swing_raise",
+          "cand": 100.9,
+          "swing_low": 102.5
+        },
+        {
+          "k": 10,
+          "close_time": 1700032400000,
+          "effective_from_open_time": 1700032400001,
+          "stop_before": 100.9,
+          "stop_after": 101.9,
+          "updated": true,
+          "reason": "step_swing_raise",
+          "cand": 101.9,
+          "swing_low": 103.5
+        },
+        {
+          "k": 11,
+          "close_time": 1700036000000,
+          "effective_from_open_time": 1700036000001,
+          "stop_before": 101.9,
+          "stop_after": 102.9,
+          "updated": true,
+          "reason": "step_swing_raise",
+          "cand": 102.9,
+          "swing_low": 104.5
+        }
+      ],
+      "note": "下一根 15m 生效、只升不降、不回填；回看 5 根须全属持仓后"
+    },
+    "T5_test_atr_consistency": {
+      "passed": true,
+      "compared_points": 881,
+      "first_finite_index": 19,
+      "note": "Wilder 式递归 alpha=1/20, adjust=False, min_periods=20"
+    },
+    "T6_test_segments_spec": {
+      "passed": true,
+      "checks": {
+        "IS_bounds": true,
+        "Val_bounds": true,
+        "Holdout_bounds": true,
+        "half_open_IS_end_is_Val": true,
+        "half_open_Holdout_start": true,
+        "no_gap_no_overlap": true,
+        "segment_end_rule": true,
+        "reset_state_complete": true,
+        "initial_equity_5000": true,
+        "holdout_guard_rejects": true,
+        "holdout_cutoff_utc": true
+      },
+      "spec": {
+        "version": "3.1",
+        "segments": {
+          "IS": {
+            "start_ms": 1640995200000,
+            "end_ms": 1735689600000,
+            "start_utc": "2022-01-01T00:00:00Z",
+            "end_utc": "2025-01-01T00:00:00Z",
+            "length_days": 1096.0
+          },
+          "Val": {
+            "start_ms": 1735689600000,
+            "end_ms": 1776211200000,
+            "start_utc": "2025-01-01T00:00:00Z",
+            "end_utc": "2026-04-15T00:00:00Z",
+            "length_days": 469.0
+          },
+          "Holdout": {
+            "start_ms": 1776211200000,
+            "end_ms": 1792022400000,
+            "start_utc": "2026-04-15T00:00:00Z",
+            "end_utc": "2026-10-15T00:00:00Z",
+            "length_days": 183.0
+          }
+        },
+        "initial_equity": 5000.0,
+        "segment_reset_state": [
+          "cash",
+          "orders",
+          "positions",
+          "execution_state",
+          "equity_peak"
+        ],
+        "segment_end_rule": "segment_end_force_close_last_15m_close",
+        "exec_cost": {
+          "fee_each_side": 0.0005,
+          "slippage_each_side": 0.0005,
+          "max_holding_hours": 720,
+          "entry_participation_prev15m_quote_cap": 0.01,
+          "stop_checked_per": "15m",
+          "negative_funding_income_retained": true,
+          "forbidden_funding_mark_substitutes": [
+            "norm4h",
+            "ext1h",
+            "zero_fill",
+            "ordinary_close"
+          ]
+        },
+        "holdout_cutoff_utc": "2026-10-15T00:00:00Z",
+        "holdout_cutoff_beijing": "2026-10-15 08:00 (UTC+8)"
+      },
+      "note": "半开 UTC、独立 5000U、段末最后 15m 收盘强平、段界重置"
+    },
+    "T7_test_execution_fee_spec": {
+      "passed": true,
+      "checks": {
+        "fee_each_side_0.05": true,
+        "slippage_each_side_0.05": true,
+        "max_holding_720h": true,
+        "participation_1pct": true,
+        "stop_checked_15m": true,
+        "negative_funding_retained": true,
+        "forbid_mark_substitutes": true
+      },
+      "note": "M0–M4 及 M2b 全程双边每边 0.05% 费 + 0.05% 滑点 + 全部真实结算资金费"
+    },
+    "T8_test_m2_reject_stats_and_m2b_trigger": {
+      "passed": true,
+      "is_by_type": {
+        "spring": {
+          "denominator": 2,
+          "over_limit": 1,
+          "rate": 0.5,
+          "na": false
+        },
+        "breakout": {
+          "denominator": 2,
+          "over_limit": 1,
+          "rate": 0.5,
+          "na": false
+        },
+        "retest": {
+          "denominator": 1,
+          "over_limit": 0,
+          "rate": 0.0,
+          "na": false
+        }
+      },
+      "val_by_type": {
+        "spring": {
+          "denominator": 2,
+          "over_limit": 1,
+          "rate": 0.5,
+          "na": false
+        },
+        "breakout": {
+          "denominator": 1,
+          "over_limit": 0,
+          "rate": 0.0,
+          "na": false
+        }
+      },
+      "trigger": {
+        "triggered": true,
+        "threshold": 0.3,
+        "by_type": {
+          "breakout": {
+            "denominator": 3,
+            "over_limit": 1,
+            "rate": 0.3333333333333333,
+            "na": false
+          },
+          "retest": {
+            "denominator": 1,
+            "over_limit": 0,
+            "rate": 0.0,
+            "na": false
+          },
+          "spring": {
+            "denominator": 4,
+            "over_limit": 2,
+            "rate": 0.5,
+            "na": false
+          }
+        }
+      },
+      "na_case": {
+        "denominator": 0,
+        "over_limit": 0,
+        "rate": null,
+        "na": true
+      },
+      "note": "分母=到达超限判断且具备有效结构与执行价的唯一候选；0 分母记 N/A；任一类型 IS+Val 合并 >30% 触发 M2b"
+    },
+    "T9_test_forward_gate_m5_m6": {
+      "passed": true,
+      "gate_cases": {
+        "29d_200": false,
+        "30d_89": false,
+        "30d_90": true
+      },
+      "m6_order": [
+        "b",
+        "a",
+        "c",
+        "d"
+      ],
+      "m6_no_gate_order": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "note": "M5 30 日分位>90% 过滤；M6 30 日 Z 降序排序；未达门槛 M5 不跳过、M6 不改序"
+    },
+    "T10_test_config_validity": {
+      "passed": true,
+      "param_errors": [],
+      "experiment_errors": [],
+      "historical_ladder": [
+        "M0",
+        "M1",
+        "M2",
+        "M2b",
+        "M3_BE",
+        "M3_Step",
+        "M4"
+      ],
+      "forward_validation": [
+        "M5",
+        "M6"
+      ]
+    },
+    "T11_test_experiments_run": {
+      "passed": true,
+      "per_experiment": {
+        "M0": {
+          "entry_mode": "donchian_only",
+          "stop_mode": "uniform",
+          "historical": true,
+          "conditional": false,
+          "master_count": 78,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M1": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "uniform",
+          "historical": true,
+          "conditional": false,
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M2": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "historical": true,
+          "conditional": false,
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M2b": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural_m2b",
+          "historical": true,
+          "conditional": true,
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M3_BE": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "historical": true,
+          "conditional": false,
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M3_Step": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "historical": true,
+          "conditional": false,
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M4": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "historical": true,
+          "conditional": false,
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M5": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "historical": false,
+          "conditional": false,
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        },
+        "M6": {
+          "entry_mode": "three_buy_points",
+          "stop_mode": "structural",
+          "historical": false,
+          "conditional": false,
+          "master_count": 4,
+          "reject_count": 0,
+          "reject_breakdown": {}
+        }
+      },
+      "historical": [
+        "M0",
+        "M1",
+        "M2",
+        "M2b",
+        "M3_BE",
+        "M3_Step",
+        "M4"
+      ],
+      "forward": [
+        "M5",
+        "M6"
+      ],
+      "note": "历史阶梯只 M0–M4+M2b；M5/M6 为前向验证"
+    },
+    "T12_test_holdout_guard_synthetic": {
+      "passed": true,
+      "synthetic_timestamps": 900,
+      "error": null,
+      "note": "纯合成；未读任何真实 Holdout 数据（本套件不打开任何行情文件）"
+    }
+  },
+  "experiment_config_hash": "0eda900435744378197a568ade033d54ea6e1d79bb6dea8d172131c2bfd05d0c",
+  "params": {
+    "don_entry": 20,
+    "don_exit": 10,
+    "atr_n": 20,
+    "vol_n": 20,
+    "tr_atr_mult": 4.0,
+    "spring_vol_mult": 1.5,
+    "spring_close_pos": 0.5,
+    "spring_depth_atr": 0.6,
+    "spring_confirm_bars": 3,
+    "breakout_vol_mult": 1.5,
+    "overheat_range_atr": 2.5,
+    "overheat_ext_atr": 1.2,
+    "retest_window_bars": 5,
+    "uniform_stop_atr": 3.0,
+    "wick_buffer_atr": 0.8,
+    "min_stop_atr": 1.5,
+    "max_stop_atr": 3.5,
+    "target_rr": 2.0,
+    "trail_activate_atr": 2.0,
+    "trail_lookback_bars": 5,
+    "trail_min_bars_after_entry": 5,
+    "trail_min_above_entry_atr": 0.3,
+    "be_trigger_r": 1.0,
+    "max_holding_hours": 720
+  },
+  "segments": {
+    "version": "3.1",
+    "segments": {
+      "IS": {
+        "start_ms": 1640995200000,
+        "end_ms": 1735689600000,
+        "start_utc": "2022-01-01T00:00:00Z",
+        "end_utc": "2025-01-01T00:00:00Z",
+        "length_days": 1096.0
+      },
+      "Val": {
+        "start_ms": 1735689600000,
+        "end_ms": 1776211200000,
+        "start_utc": "2025-01-01T00:00:00Z",
+        "end_utc": "2026-04-15T00:00:00Z",
+        "length_days": 469.0
+      },
+      "Holdout": {
+        "start_ms": 1776211200000,
+        "end_ms": 1792022400000,
+        "start_utc": "2026-04-15T00:00:00Z",
+        "end_utc": "2026-10-15T00:00:00Z",
+        "length_days": 183.0
+      }
+    },
+    "initial_equity": 5000.0,
+    "segment_reset_state": [
+      "cash",
+      "orders",
+      "positions",
+      "execution_state",
+      "equity_peak"
+    ],
+    "segment_end_rule": "segment_end_force_close_last_15m_close",
+    "exec_cost": {
+      "fee_each_side": 0.0005,
+      "slippage_each_side": 0.0005,
+      "max_holding_hours": 720,
+      "entry_participation_prev15m_quote_cap": 0.01,
+      "stop_checked_per": "15m",
+      "negative_funding_income_retained": true,
+      "forbidden_funding_mark_substitutes": [
+        "norm4h",
+        "ext1h",
+        "zero_fill",
+        "ordinary_close"
+      ]
+    },
+    "holdout_cutoff_utc": "2026-10-15T00:00:00Z",
+    "holdout_cutoff_beijing": "2026-10-15 08:00 (UTC+8)"
+  },
+  "environment": {
+    "python": "3.13.12",
+    "numpy": "2.5.4",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O"
+  },
+  "data_read_disclosure": "本套件仅使用合成样本，未打开任何真实行情/因子文件，未读取 Holdout 区间数据。",
+  "code_sha": {
+    "bundle_sha256": "4cb4eff0772ac8b617393b52f0f9739718b371da6b7ce7cad5c1a8898ba3091c",
+    "per_file": {
+      "README.md": "9db975dba4d24ee4157a86e72f1404ee960b311bc166a4a6830022c3f5dea8bf",
+      "__init__.py": "d289d7b35925784dc2cc359ed7032c4ece1d60473ba12faa4ad8e71993872be2",
+      "core.py": "11ddc5eecf6ddf8c2563357b8ab3324ab7f8f1848b176bf8b48f4a2e629c1ffe",
+      "experiments.py": "5b44e0eda8a69836bba65947c6a6a99c8c27cd13413bcd0a2173c92bb849058f",
+      "factors.py": "ae81838357f3af2a4eeb48b9f365b4c4685fe0c0c686ae75464be32a859e41f3",
+      "params.py": "7406f767b8c9b52afa2e1fff5185f33d249303f1434ccfa7875bdb9f5369d20e",
+      "segments.py": "1e1cbb1409a8a328856728d521b27f0a8e5241b3e2f8f2db7d96b0fc02b18607",
+      "series.py": "2adec648634bc90c07604545bb267a45748ea7578e05a80ab3dfde9b7e18d1ec",
+      "verify.py": "b72ae76ced516f8c00eee6c259cd4339859e27014730826a433904c2f5fd9381"
+    }
+  }
+}

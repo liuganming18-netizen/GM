@@ -1,0 +1,21 @@
+import pw from '/Users/boos/.workbuddy-ai/binaries/node/workspace/node_modules/playwright/index.js';
+const { chromium } = pw;
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1280, height: 1000 }, deviceScaleFactor: 2 });
+await page.goto('http://localhost:3000/', { waitUntil: 'domcontentloaded' });
+await page.waitForTimeout(2000);
+await page.getByText('回测复盘', { exact: true }).first().click();
+await page.waitForTimeout(9000);
+const host = page.locator('[data-testid="lab-funding-chart"]');
+await host.scrollIntoViewIfNeeded();
+await page.waitForTimeout(3000);
+const info = await page.evaluate(() => {
+  const el = document.querySelector('[data-testid="lab-funding-chart"]');
+  const r = el.getBoundingClientRect();
+  const canvases = [...el.querySelectorAll('canvas')].map((c) => ({ w: c.width, h: c.height, cw: Math.round(c.getBoundingClientRect().width), ch: Math.round(c.getBoundingClientRect().height) }));
+  const tables = el.querySelectorAll('table').length;
+  return { hostW: Math.round(r.width), hostH: Math.round(r.height), canvases, tables, html: el.innerHTML.slice(0, 300) };
+});
+console.log(JSON.stringify(info, null, 1));
+await host.screenshot({ path: './fundchart_clip.png' });
+await browser.close();

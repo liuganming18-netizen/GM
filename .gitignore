@@ -75,3 +75,9 @@ _backup/
 **/迁移_逐文件清单.csv
 **/逐文件迁移编号.csv
 **/逐文件库存.csv
+
+# 本地临时回测快照、工具记忆与前端备份
+回测日志/oi_resonance_v1/runs/
+.workbuddy-ai/
+UI界面/web/_archive/
+

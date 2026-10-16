@@ -59,6 +59,8 @@ export default function App() {
     paperPending,
     paperMissingReason,
     paperNote,
+    newEntryGate,
+    legacyLedger,
     liveAccounts,
     liveMissingReason,
     orderNotice,
@@ -227,6 +229,9 @@ export default function App() {
               tokens={tokens}
               selectedSignalId={selectedSignal?.id || null}
               onSelectSignal={handleSelectSignal}
+              paperPositions={paperPositions}
+              paperPending={paperPending}
+              newEntryGate={newEntryGate}
             />
 
             {/* 3B. Center Column: 全市场代币排序表 + 行内展开K线 */}
@@ -246,6 +251,8 @@ export default function App() {
               paperPending={paperPending}
               paperMissingReason={paperMissingReason}
               paperNote={paperNote}
+              newEntryGate={newEntryGate}
+              legacyLedger={legacyLedger}
               liveAccounts={liveAccounts}
               liveMissingReason={liveMissingReason}
               orderBusy={orderBusy}

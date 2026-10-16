@@ -90,6 +90,17 @@ else
 fi
 export MARKET_DB="${MARKET_DB:-$DEFAULT_DB}"
 export MARKET_ARCHIVE="${MARKET_ARCHIVE:-$PROJECT_ROOT/数据/市场数据/parquet}"
+# ── 纸面账本目录（**唯一权威，显式注入**）──────────────────────────────────────
+# 历史缺陷：账本路径由 `HERE.parent` 相对推导 + `create=True` 自动建库，源码迁移后
+# 解析到**另一个空目录**，凭空建出 4 份空账本并当成原账户读（等同新开四个 5000U 假账户）。
+# 现纪律：目录**只来自本变量**，缺省 = 工程根 `数据/paper`（迁移清单 M002–M005 目标）。
+# 缺库 ⇒ 后端 fail-closed（纸面/复盘端点返回 unavailable），**绝不自动建库冒充**。
+export PAPER_LEDGER_DIR="${PAPER_LEDGER_DIR:-$PROJECT_ROOT/数据/paper}"
+# 仅隔离测试/受控建档才置 1；正式运行**必须**为 0。
+export PAPER_LEDGER_ALLOW_INIT="${PAPER_LEDGER_ALLOW_INIT:-0}"
+# worker 实际调度间隔（`live_worker.py --interval`）：健康 TTL **绑定**它，
+# 不因「进程在」或「接口 200」误报健康。
+export LIVE_WORKER_INTERVAL_SEC="${LIVE_WORKER_INTERVAL_SEC:-900}"
 # 冷档「已对账归档」固定水位（毫秒）。**不再写死**：读侧以归档
 # `archive/parquet/_state.json` 的 `watermark_ms` 为单一事实源（由归档器校验
 # 通过后推进）；此处只在状态文件缺失时兜底，避免「读侧旧水位 / 归档器新水位」
@@ -120,6 +131,7 @@ fi
 
 echo "已启动 pid=$PID port=${PORT} (监听 127.0.0.1 与 ::1)"
 echo "  数据库: $MARKET_DB"
+echo "  账本:   $PAPER_LEDGER_DIR （缺库 ⇒ 纸面/复盘端点 unavailable，不自动建档）"
 echo "  日志:   $HERE/logs/backend.log"
 echo "  验证:   curl -s --noproxy '*' $HEALTH_URL"
 echo "          curl -s --noproxy '*' http://127.0.0.1:${PORT}/api/v1/pool/status"

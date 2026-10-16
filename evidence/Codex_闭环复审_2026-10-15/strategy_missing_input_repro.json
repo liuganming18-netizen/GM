@@ -1,0 +1,50 @@
+[
+  {
+    "mode": "structural",
+    "struct_low": null,
+    "actual": {
+      "entry_price": 100.05,
+      "entry_raw": 100.05,
+      "stop_price": 97.05,
+      "stop_dist": 3.0,
+      "target_price": 106.05,
+      "reject": null
+    }
+  },
+  {
+    "mode": "structural_m2b",
+    "struct_low": null,
+    "actual": {
+      "entry_price": 100.05,
+      "entry_raw": 100.05,
+      "stop_price": 97.05,
+      "stop_dist": 3.0,
+      "target_price": 106.05,
+      "reject": null
+    }
+  },
+  {
+    "mode": "garbage",
+    "struct_low": 95.0,
+    "actual": {
+      "entry_price": 100.05,
+      "entry_raw": 100.05,
+      "stop_price": 97.05,
+      "stop_dist": 3.0,
+      "target_price": 106.05,
+      "reject": null
+    }
+  },
+  {
+    "mode": "structural",
+    "struct_low": "NaN",
+    "actual": {
+      "entry_price": 100.05,
+      "entry_raw": 100.05,
+      "stop_price": 97.05,
+      "stop_dist": 3.0,
+      "target_price": 106.05,
+      "reject": null
+    }
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "profile_name": "binance_vip0_standard",
+  "exchange": "binance",
+  "market": "um",
+  "description": "币安 U 本位永续合约普通用户 (VIP 0) 官方标准成本与风控配置",
+  "cost_model": {
+    "tier": "Binance_VIP0",
+    "maker_fee_rate": 0.0002,
+    "taker_fee_rate": 0.0005,
+    "default_fee_rate": 0.0005,
+    "slippage_bps": 3.0,
+    "funding_model": "settlement_events",
+    "funding_description": "严格按标的物历史上实际发生结算周期与真实费率实时结算 (settlement_events)，不写死 8 小时；缺失时 Fail-Closed"
+  },
+  "risk_and_sizing": {
+    "initial_equity": 100000.0,
+    "risk_per_trade": 0.008,
+    "max_portfolio_risk": 0.04,
+    "max_portfolio_margin_pct": 0.40,
+    "max_concurrent_trades": 3,
+    "max_leverage_per_symbol": 2.0
+  },
+  "execution_causality": {
+    "fill_timing": "next_bar_open",
+    "same_bar_conflict": "stop_first",
+    "enable_trailing_exit": true,
+    "force_close_at_end": true
+  }
+}

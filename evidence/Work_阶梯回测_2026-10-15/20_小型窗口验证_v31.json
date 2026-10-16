@@ -1,0 +1,1203 @@
+{
+  "schema": "wyckoffmaster_small_window_validation/v3",
+  "generated_utc": "2026-10-15T09:13:01Z",
+  "timeframe": "1h",
+  "params_identity": {
+    "atr_n": 20,
+    "be_trigger_r": 1.0,
+    "breakout_vol_mult": 1.5,
+    "don_entry": 20,
+    "don_exit": 10,
+    "max_holding_hours": 720,
+    "max_stop_atr": 3.5,
+    "min_stop_atr": 1.5,
+    "overheat_ext_atr": 1.2,
+    "overheat_range_atr": 2.5,
+    "retest_window_bars": 5,
+    "spring_close_pos": 0.5,
+    "spring_confirm_bars": 3,
+    "spring_depth_atr": 0.6,
+    "spring_vol_mult": 1.5,
+    "target_rr": 2.0,
+    "tr_atr_mult": 4.0,
+    "trail_activate_atr": 2.0,
+    "trail_lookback_bars": 5,
+    "trail_min_above_entry_atr": 0.3,
+    "trail_min_bars_after_entry": 5,
+    "uniform_stop_atr": 3.0,
+    "vol_n": 20,
+    "wick_buffer_atr": 0.8
+  },
+  "code_sha256": "05947b2870ed8a742e98c7135678306185a645c69d3dcce69fdf806a0fe6e52e",
+  "config_sha256": "0eda900435744378197a568ade033d54ea6e1d79bb6dea8d172131c2bfd05d0c",
+  "input_manifest_sha256": "28800c42ac9afaa46cad24804524e1170eece9eaf9931b14e05a84dfc27b30c0",
+  "core_version": "exec_core_v3.1.0",
+  "strategy_version": "3.1",
+  "ledger_model_version": "paper_exec_v2_shared_5000",
+  "exec_config_hash": "fb3e617f6732bf746ec780d4d511ce4ae9121c0631a204ec9ac11329f021f737",
+  "strategy_params_hash": "a51015a498c5edc88eac96021cc8308c8e6fe4f242cb0ad9c76bdafb4ccfd046",
+  "execution_core_module": "策略/WyckoffMaster/execution.py",
+  "production": {
+    "wx_execution_sha256": "0ede9ce19c7cec9d18398572e393ef65ef4c04a6aa5ff2b41f8ad022c83dbcf1",
+    "wx_execution_sha_ok": true
+  },
+  "segments": {
+    "IS": {
+      "window": [
+        1640995200000,
+        1648771200000
+      ],
+      "window_utc": [
+        "2022-01-01T00:00:00+00:00",
+        "2022-04-01T00:00:00+00:00"
+      ],
+      "n_symbols_used": 263,
+      "results": {
+        "M0": {
+          "trades": 206,
+          "net": -872.3432926371069,
+          "gross": -833.0935017000006,
+          "fees": 56.736063068349964,
+          "funding": 17.48627213124376,
+          "max_dd": 0.20085014059440823,
+          "halted": true,
+          "rejects": {
+            "portfolio_stop_risk_cap_exceeded": 75,
+            "qty_below_min_quantity": 52,
+            "gross_long_cap_exceeded": 2
+          },
+          "kinds": {
+            "donchian_breakout": 335
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 335,
+            "orders": 6544,
+            "funding": 527,
+            "positions": 206,
+            "review": 1
+          }
+        },
+        "M1": {
+          "trades": 326,
+          "net": -976.9618151379011,
+          "gross": -907.7623304000002,
+          "fees": 91.26604959070004,
+          "funding": 22.066564852799203,
+          "max_dd": 0.2012337981570861,
+          "halted": true,
+          "rejects": {
+            "qty_below_min_quantity": 60,
+            "portfolio_stop_risk_cap_exceeded": 86
+          },
+          "kinds": {
+            "retest": 81,
+            "breakout": 339,
+            "spring": 52
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 472,
+            "orders": 4658,
+            "funding": 873,
+            "positions": 326,
+            "review": 1
+          }
+        },
+        "M2": {
+          "trades": 210,
+          "net": -879.4173009542213,
+          "gross": -832.4819803999999,
+          "fees": 78.4306284392,
+          "funding": 31.4953078849786,
+          "max_dd": 0.20051897909684704,
+          "halted": true,
+          "rejects": {
+            "gross_long_cap_exceeded": 163,
+            "qty_below_min_quantity": 21,
+            "entry_below_struct_low": 86,
+            "structural_stop_too_far": 6,
+            "portfolio_stop_risk_cap_exceeded": 6
+          },
+          "kinds": {
+            "donchian_breakout": 492
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 492,
+            "orders": 7115,
+            "funding": 395,
+            "positions": 210,
+            "review": 1
+          }
+        },
+        "M3_BE": {
+          "trades": 238,
+          "net": -867.8821149469674,
+          "gross": -809.3266549999996,
+          "fees": 93.02485636719999,
+          "funding": 34.46939642023225,
+          "max_dd": 0.20052641402827673,
+          "halted": true,
+          "rejects": {
+            "gross_long_cap_exceeded": 536,
+            "qty_below_min_quantity": 28,
+            "entry_below_struct_low": 172,
+            "structural_stop_too_far": 5,
+            "portfolio_stop_risk_cap_exceeded": 15
+          },
+          "kinds": {
+            "donchian_breakout": 994
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 994,
+            "orders": 7313,
+            "funding": 429,
+            "positions": 238,
+            "review": 1
+          }
+        },
+        "M3_Step": {
+          "trades": 196,
+          "net": -878.0912086368829,
+          "gross": -830.3002519000005,
+          "fees": 77.55088950785004,
+          "funding": 29.75993277096754,
+          "max_dd": 0.2002616888742953,
+          "halted": true,
+          "rejects": {
+            "gross_long_cap_exceeded": 429,
+            "qty_below_min_quantity": 7,
+            "entry_below_struct_low": 141,
+            "structural_stop_too_far": 6,
+            "portfolio_stop_risk_cap_exceeded": 6
+          },
+          "kinds": {
+            "donchian_breakout": 785
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 785,
+            "orders": 7498,
+            "funding": 378,
+            "positions": 196,
+            "review": 1
+          }
+        },
+        "M4": {
+          "trades": 207,
+          "net": -901.6619379202134,
+          "gross": -853.1668324999998,
+          "fees": 79.37965722735004,
+          "funding": 30.884551807136354,
+          "max_dd": 0.2010710300939493,
+          "halted": true,
+          "rejects": {
+            "qty_below_min_quantity": 37,
+            "entry_below_struct_low": 151,
+            "gross_long_cap_exceeded": 310,
+            "portfolio_stop_risk_cap_exceeded": 37,
+            "structural_stop_too_far": 7
+          },
+          "kinds": {
+            "donchian_breakout": 749
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 749,
+            "orders": 7382,
+            "funding": 388,
+            "positions": 207,
+            "review": 1
+          }
+        }
+      },
+      "reconcile": {
+        "M0": {
+          "ok": true,
+          "n_positions": 206,
+          "n_mismatch": 0,
+          "n_funding_rows": 527,
+          "funding_blocked_rows": 0
+        },
+        "M1": {
+          "ok": true,
+          "n_positions": 326,
+          "n_mismatch": 0,
+          "n_funding_rows": 873,
+          "funding_blocked_rows": 0
+        },
+        "M2": {
+          "ok": true,
+          "n_positions": 210,
+          "n_mismatch": 0,
+          "n_funding_rows": 395,
+          "funding_blocked_rows": 0
+        },
+        "M3_BE": {
+          "ok": true,
+          "n_positions": 238,
+          "n_mismatch": 0,
+          "n_funding_rows": 429,
+          "funding_blocked_rows": 0
+        },
+        "M3_Step": {
+          "ok": true,
+          "n_positions": 196,
+          "n_mismatch": 0,
+          "n_funding_rows": 378,
+          "funding_blocked_rows": 0
+        },
+        "M4": {
+          "ok": true,
+          "n_positions": 207,
+          "n_mismatch": 0,
+          "n_funding_rows": 388,
+          "funding_blocked_rows": 0
+        }
+      },
+      "invariants": {
+        "M0": {
+          "n_positions": 206,
+          "trail_mode": "none",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": true,
+          "funding_mark_source": {
+            "event_mark": 527
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        },
+        "M1": {
+          "n_positions": 326,
+          "trail_mode": "none",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": true,
+          "funding_mark_source": {
+            "event_mark": 873
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        },
+        "M2": {
+          "n_positions": 210,
+          "trail_mode": "none",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": true,
+          "funding_mark_source": {
+            "event_mark": 395
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        },
+        "M3_BE": {
+          "n_positions": 238,
+          "trail_mode": "naive_be",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": false,
+          "funding_mark_source": {
+            "event_mark": 429
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        },
+        "M3_Step": {
+          "n_positions": 196,
+          "trail_mode": "step_swing",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": false,
+          "funding_mark_source": {
+            "event_mark": 378
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        },
+        "M4": {
+          "n_positions": 207,
+          "trail_mode": "none",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": true,
+          "funding_mark_source": {
+            "event_mark": 388
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        }
+      }
+    },
+    "Val": {
+      "window": [
+        1735689600000,
+        1743465600000
+      ],
+      "window_utc": [
+        "2025-01-01T00:00:00+00:00",
+        "2025-04-01T00:00:00+00:00"
+      ],
+      "n_symbols_used": 502,
+      "results": {
+        "M0": {
+          "trades": 415,
+          "net": -731.7194847310077,
+          "gross": -800.3292559600004,
+          "fees": 110.84678062335996,
+          "funding": 179.45655185235276,
+          "max_dd": 0.20232728584672494,
+          "halted": true,
+          "rejects": {
+            "qty_below_min_quantity": 56,
+            "open_already_through_stop": 27,
+            "portfolio_stop_risk_cap_exceeded": 595
+          },
+          "kinds": {
+            "donchian_breakout": 1093
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 1093,
+            "orders": 5677,
+            "positions": 415,
+            "funding": 1587,
+            "review": 1
+          }
+        },
+        "M1": {
+          "trades": 276,
+          "net": -604.4263500433921,
+          "gross": -597.1131399000002,
+          "fees": 75.88323878372,
+          "funding": 68.57002864032815,
+          "max_dd": 0.20045168810485195,
+          "halted": true,
+          "rejects": {
+            "portfolio_stop_risk_cap_exceeded": 119,
+            "qty_below_min_quantity": 41,
+            "gross_long_cap_exceeded": 3,
+            "open_already_through_stop": 7
+          },
+          "kinds": {
+            "breakout": 281,
+            "retest": 83,
+            "spring": 82
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 446,
+            "orders": 6294,
+            "funding": 1049,
+            "positions": 276,
+            "review": 1
+          }
+        },
+        "M2": {
+          "trades": 222,
+          "net": -520.7719809514288,
+          "gross": -582.5846107500003,
+          "fees": 89.54616475610507,
+          "funding": 151.35879455467656,
+          "max_dd": 0.20242667176718634,
+          "halted": true,
+          "rejects": {
+            "entry_below_struct_low": 413,
+            "structural_stop_too_far": 41,
+            "gross_long_cap_exceeded": 839,
+            "qty_below_min_quantity": 15,
+            "portfolio_stop_risk_cap_exceeded": 8
+          },
+          "kinds": {
+            "donchian_breakout": 1538
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 1538,
+            "orders": 8477,
+            "positions": 222,
+            "funding": 600,
+            "review": 1
+          }
+        },
+        "M3_BE": {
+          "trades": 247,
+          "net": -548.8098362448447,
+          "gross": -589.1587704899999,
+          "fees": 98.08034410279497,
+          "funding": 138.42927834795017,
+          "max_dd": 0.2006837696330429,
+          "halted": true,
+          "rejects": {
+            "entry_below_struct_low": 398,
+            "structural_stop_too_far": 37,
+            "gross_long_cap_exceeded": 1041,
+            "qty_below_min_quantity": 27,
+            "portfolio_stop_risk_cap_exceeded": 4
+          },
+          "kinds": {
+            "donchian_breakout": 1754
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 1754,
+            "orders": 8775,
+            "positions": 247,
+            "funding": 577,
+            "review": 1
+          }
+        },
+        "M3_Step": {
+          "trades": 231,
+          "net": -540.487477764834,
+          "gross": -601.3748230900002,
+          "fees": 90.02275520555497,
+          "funding": 150.91010053072114,
+          "max_dd": 0.20250488890776255,
+          "halted": true,
+          "rejects": {
+            "entry_below_struct_low": 460,
+            "structural_stop_too_far": 40,
+            "gross_long_cap_exceeded": 1020,
+            "qty_below_min_quantity": 13,
+            "portfolio_stop_risk_cap_exceeded": 2
+          },
+          "kinds": {
+            "donchian_breakout": 1766
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 1766,
+            "orders": 8714,
+            "positions": 231,
+            "funding": 607,
+            "review": 1
+          }
+        },
+        "M4": {
+          "trades": 227,
+          "net": -605.724836833617,
+          "gross": -645.3666970599999,
+          "fees": 88.46816231087004,
+          "funding": 128.11002253725286,
+          "max_dd": 0.20194737579996344,
+          "halted": true,
+          "rejects": {
+            "entry_below_struct_low": 326,
+            "structural_stop_too_far": 35,
+            "gross_long_cap_exceeded": 827,
+            "qty_below_min_quantity": 11,
+            "portfolio_stop_risk_cap_exceeded": 11
+          },
+          "kinds": {
+            "donchian_breakout": 1437
+          },
+          "counts": {
+            "equity": 8640,
+            "signals": 1437,
+            "orders": 8326,
+            "positions": 227,
+            "funding": 654,
+            "review": 1
+          }
+        }
+      },
+      "reconcile": {
+        "M0": {
+          "ok": true,
+          "n_positions": 415,
+          "n_mismatch": 0,
+          "n_funding_rows": 1587,
+          "funding_blocked_rows": 0
+        },
+        "M1": {
+          "ok": true,
+          "n_positions": 276,
+          "n_mismatch": 0,
+          "n_funding_rows": 1049,
+          "funding_blocked_rows": 0
+        },
+        "M2": {
+          "ok": true,
+          "n_positions": 222,
+          "n_mismatch": 0,
+          "n_funding_rows": 600,
+          "funding_blocked_rows": 0
+        },
+        "M3_BE": {
+          "ok": true,
+          "n_positions": 247,
+          "n_mismatch": 0,
+          "n_funding_rows": 577,
+          "funding_blocked_rows": 0
+        },
+        "M3_Step": {
+          "ok": true,
+          "n_positions": 231,
+          "n_mismatch": 0,
+          "n_funding_rows": 607,
+          "funding_blocked_rows": 0
+        },
+        "M4": {
+          "ok": true,
+          "n_positions": 227,
+          "n_mismatch": 0,
+          "n_funding_rows": 654,
+          "funding_blocked_rows": 0
+        }
+      },
+      "invariants": {
+        "M0": {
+          "n_positions": 415,
+          "trail_mode": "none",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": true,
+          "funding_mark_source": {
+            "event_mark": 1587
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        },
+        "M1": {
+          "n_positions": 276,
+          "trail_mode": "none",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": true,
+          "funding_mark_source": {
+            "event_mark": 1049
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        },
+        "M2": {
+          "n_positions": 222,
+          "trail_mode": "none",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": true,
+          "funding_mark_source": {
+            "event_mark": 600
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        },
+        "M3_BE": {
+          "n_positions": 247,
+          "trail_mode": "naive_be",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": false,
+          "funding_mark_source": {
+            "event_mark": 577
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        },
+        "M3_Step": {
+          "n_positions": 231,
+          "trail_mode": "step_swing",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": false,
+          "funding_mark_source": {
+            "event_mark": 607
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        },
+        "M4": {
+          "n_positions": 227,
+          "trail_mode": "none",
+          "entry_clock_violations": 0,
+          "segment_bounds_violations": 0,
+          "per_position_recompute_bad": 0,
+          "stop_not_below_entry": 0,
+          "stop_check_applicable": true,
+          "funding_mark_source": {
+            "event_mark": 654
+          },
+          "funding_missing_rows": 0,
+          "ok": true
+        }
+      }
+    }
+  },
+  "specs": {
+    "M0": {
+      "level": "M0",
+      "entry_mode": "donchian_only",
+      "stop_mode": "uniform",
+      "trail_mode": "none",
+      "rank_mode": "quote_vol_30d_median",
+      "parent": ""
+    },
+    "M1": {
+      "level": "M1",
+      "entry_mode": "three_buy_points",
+      "stop_mode": "uniform",
+      "trail_mode": "none",
+      "rank_mode": "quote_vol_30d_median",
+      "parent": "M0"
+    },
+    "M2": {
+      "level": "M2",
+      "entry_mode": "donchian_only",
+      "stop_mode": "structural",
+      "trail_mode": "none",
+      "rank_mode": "quote_vol_30d_median",
+      "parent": "M0"
+    },
+    "M3_BE": {
+      "level": "M3_BE",
+      "entry_mode": "donchian_only",
+      "stop_mode": "structural",
+      "trail_mode": "naive_be",
+      "rank_mode": "quote_vol_30d_median",
+      "parent": "M2"
+    },
+    "M3_Step": {
+      "level": "M3_Step",
+      "entry_mode": "donchian_only",
+      "stop_mode": "structural",
+      "trail_mode": "step_swing",
+      "rank_mode": "quote_vol_30d_median",
+      "parent": "M2"
+    },
+    "M4": {
+      "level": "M4",
+      "entry_mode": "donchian_only",
+      "stop_mode": "structural",
+      "trail_mode": "none",
+      "rank_mode": "oi_change_90d_pct",
+      "parent": "M2"
+    }
+  },
+  "inheritance": {
+    "M0": {
+      "level": "M0",
+      "parent": null,
+      "ok": true,
+      "diff_dims": []
+    },
+    "M1": {
+      "level": "M1",
+      "parent": "M0",
+      "diff_dims": [
+        "entry_mode"
+      ],
+      "expected": [
+        "entry_mode"
+      ],
+      "ok": true,
+      "child": {
+        "level": "M1",
+        "entry_mode": "three_buy_points",
+        "stop_mode": "uniform",
+        "trail_mode": "none",
+        "rank_mode": "quote_vol_30d_median",
+        "parent": "M0"
+      },
+      "parent_cfg": {
+        "level": "M0",
+        "entry_mode": "donchian_only",
+        "stop_mode": "uniform",
+        "trail_mode": "none",
+        "rank_mode": "quote_vol_30d_median",
+        "parent": ""
+      }
+    },
+    "M2": {
+      "level": "M2",
+      "parent": "M0",
+      "diff_dims": [
+        "stop_mode"
+      ],
+      "expected": [
+        "stop_mode"
+      ],
+      "ok": true,
+      "child": {
+        "level": "M2",
+        "entry_mode": "donchian_only",
+        "stop_mode": "structural",
+        "trail_mode": "none",
+        "rank_mode": "quote_vol_30d_median",
+        "parent": "M0"
+      },
+      "parent_cfg": {
+        "level": "M0",
+        "entry_mode": "donchian_only",
+        "stop_mode": "uniform",
+        "trail_mode": "none",
+        "rank_mode": "quote_vol_30d_median",
+        "parent": ""
+      }
+    },
+    "M3_BE": {
+      "level": "M3_BE",
+      "parent": "M2",
+      "diff_dims": [
+        "trail_mode"
+      ],
+      "expected": [
+        "trail_mode"
+      ],
+      "ok": true,
+      "child": {
+        "level": "M3_BE",
+        "entry_mode": "donchian_only",
+        "stop_mode": "structural",
+        "trail_mode": "naive_be",
+        "rank_mode": "quote_vol_30d_median",
+        "parent": "M2"
+      },
+      "parent_cfg": {
+        "level": "M2",
+        "entry_mode": "donchian_only",
+        "stop_mode": "structural",
+        "trail_mode": "none",
+        "rank_mode": "quote_vol_30d_median",
+        "parent": "M0"
+      }
+    },
+    "M3_Step": {
+      "level": "M3_Step",
+      "parent": "M2",
+      "diff_dims": [
+        "trail_mode"
+      ],
+      "expected": [
+        "trail_mode"
+      ],
+      "ok": true,
+      "child": {
+        "level": "M3_Step",
+        "entry_mode": "donchian_only",
+        "stop_mode": "structural",
+        "trail_mode": "step_swing",
+        "rank_mode": "quote_vol_30d_median",
+        "parent": "M2"
+      },
+      "parent_cfg": {
+        "level": "M2",
+        "entry_mode": "donchian_only",
+        "stop_mode": "structural",
+        "trail_mode": "none",
+        "rank_mode": "quote_vol_30d_median",
+        "parent": "M0"
+      }
+    },
+    "M4": {
+      "level": "M4",
+      "parent": "M2",
+      "diff_dims": [
+        "rank_mode"
+      ],
+      "expected": [
+        "rank_mode"
+      ],
+      "ok": true,
+      "child": {
+        "level": "M4",
+        "entry_mode": "donchian_only",
+        "stop_mode": "structural",
+        "trail_mode": "none",
+        "rank_mode": "oi_change_90d_pct",
+        "parent": "M2"
+      },
+      "parent_cfg": {
+        "level": "M2",
+        "entry_mode": "donchian_only",
+        "stop_mode": "structural",
+        "trail_mode": "none",
+        "rank_mode": "quote_vol_30d_median",
+        "parent": "M0"
+      }
+    }
+  },
+  "consumed": {
+    "M0": {
+      "IS": {
+        "level": {
+          "level": "M0",
+          "entry_mode": "donchian_only",
+          "stop_mode": "uniform",
+          "trail_mode": "none",
+          "rank_mode": "quote_vol_30d_median",
+          "parent": ""
+        },
+        "kinds": {
+          "donchian_breakout": 335
+        }
+      },
+      "Val": {
+        "level": {
+          "level": "M0",
+          "entry_mode": "donchian_only",
+          "stop_mode": "uniform",
+          "trail_mode": "none",
+          "rank_mode": "quote_vol_30d_median",
+          "parent": ""
+        },
+        "kinds": {
+          "donchian_breakout": 1093
+        }
+      }
+    },
+    "M1": {
+      "IS": {
+        "level": {
+          "level": "M1",
+          "entry_mode": "three_buy_points",
+          "stop_mode": "uniform",
+          "trail_mode": "none",
+          "rank_mode": "quote_vol_30d_median",
+          "parent": "M0"
+        },
+        "kinds": {
+          "retest": 81,
+          "breakout": 339,
+          "spring": 52
+        }
+      },
+      "Val": {
+        "level": {
+          "level": "M1",
+          "entry_mode": "three_buy_points",
+          "stop_mode": "uniform",
+          "trail_mode": "none",
+          "rank_mode": "quote_vol_30d_median",
+          "parent": "M0"
+        },
+        "kinds": {
+          "breakout": 281,
+          "retest": 83,
+          "spring": 82
+        }
+      }
+    },
+    "M2": {
+      "IS": {
+        "level": {
+          "level": "M2",
+          "entry_mode": "donchian_only",
+          "stop_mode": "structural",
+          "trail_mode": "none",
+          "rank_mode": "quote_vol_30d_median",
+          "parent": "M0"
+        },
+        "kinds": {
+          "donchian_breakout": 492
+        }
+      },
+      "Val": {
+        "level": {
+          "level": "M2",
+          "entry_mode": "donchian_only",
+          "stop_mode": "structural",
+          "trail_mode": "none",
+          "rank_mode": "quote_vol_30d_median",
+          "parent": "M0"
+        },
+        "kinds": {
+          "donchian_breakout": 1538
+        }
+      }
+    },
+    "M3_BE": {
+      "IS": {
+        "level": {
+          "level": "M3_BE",
+          "entry_mode": "donchian_only",
+          "stop_mode": "structural",
+          "trail_mode": "naive_be",
+          "rank_mode": "quote_vol_30d_median",
+          "parent": "M2"
+        },
+        "kinds": {
+          "donchian_breakout": 994
+        }
+      },
+      "Val": {
+        "level": {
+          "level": "M3_BE",
+          "entry_mode": "donchian_only",
+          "stop_mode": "structural",
+          "trail_mode": "naive_be",
+          "rank_mode": "quote_vol_30d_median",
+          "parent": "M2"
+        },
+        "kinds": {
+          "donchian_breakout": 1754
+        }
+      }
+    },
+    "M3_Step": {
+      "IS": {
+        "level": {
+          "level": "M3_Step",
+          "entry_mode": "donchian_only",
+          "stop_mode": "structural",
+          "trail_mode": "step_swing",
+          "rank_mode": "quote_vol_30d_median",
+          "parent": "M2"
+        },
+        "kinds": {
+          "donchian_breakout": 785
+        }
+      },
+      "Val": {
+        "level": {
+          "level": "M3_Step",
+          "entry_mode": "donchian_only",
+          "stop_mode": "structural",
+          "trail_mode": "step_swing",
+          "rank_mode": "quote_vol_30d_median",
+          "parent": "M2"
+        },
+        "kinds": {
+          "donchian_breakout": 1766
+        }
+      }
+    },
+    "M4": {
+      "IS": {
+        "level": {
+          "level": "M4",
+          "entry_mode": "donchian_only",
+          "stop_mode": "structural",
+          "trail_mode": "none",
+          "rank_mode": "oi_change_90d_pct",
+          "parent": "M2"
+        },
+        "kinds": {
+          "donchian_breakout": 749
+        }
+      },
+      "Val": {
+        "level": {
+          "level": "M4",
+          "entry_mode": "donchian_only",
+          "stop_mode": "structural",
+          "trail_mode": "none",
+          "rank_mode": "oi_change_90d_pct",
+          "parent": "M2"
+        },
+        "kinds": {
+          "donchian_breakout": 1437
+        }
+      }
+    }
+  },
+  "decisions": [
+    {
+      "step": "M2_parent",
+      "rule": "M1 promoted ? M1 : M0",
+      "m1_vs_m0": {
+        "promoted": false,
+        "reasons": {
+          "trades_ge_60pct_parent": true,
+          "win_months_gt_50pct": false,
+          "diff_months": 4,
+          "win_months": 2,
+          "calmar_rel_ge_15pct": null,
+          "improve_branch": "sharpe(no_positive_baseline_calmar)",
+          "sharpe_abs_ge_0p15": true,
+          "dd_worsen_le_10pct": true,
+          "val_positive_and_better": false
+        }
+      },
+      "chosen": "M0"
+    },
+    {
+      "step": "M2b_trigger",
+      "stats_IS": {
+        "by_type": {
+          "donchian_breakout": {
+            "denominator": 150370,
+            "over_limit": 4747,
+            "rate": 0.03156879696748022,
+            "na": false
+          }
+        },
+        "total": {
+          "denominator": 150370,
+          "over_limit": 4747,
+          "rate": 0.03156879696748022,
+          "na": false
+        }
+      },
+      "stats_Val": {
+        "by_type": {
+          "donchian_breakout": {
+            "denominator": 182038,
+            "over_limit": 6704,
+            "rate": 0.03682747558202134,
+            "na": false
+          }
+        },
+        "total": {
+          "denominator": 182038,
+          "over_limit": 6704,
+          "rate": 0.03682747558202134,
+          "na": false
+        }
+      },
+      "trigger": {
+        "triggered": false,
+        "threshold": 0.3,
+        "by_type": {
+          "donchian_breakout": {
+            "denominator": 332408,
+            "over_limit": 11451,
+            "rate": 0.03444862939520108,
+            "na": false
+          }
+        }
+      },
+      "ran": false
+    },
+    {
+      "step": "M3_parent",
+      "rule": "M2b 未触发 ⇒ 父 = M2",
+      "chosen": "M2"
+    },
+    {
+      "step": "M4_parent",
+      "rule": "M3_Step > (父层 且 M3_BE) ? M3_Step : (M3_BE 晋级 ? M3_BE : 父层)",
+      "m3_be_vs_parent": {
+        "promoted": false,
+        "reasons": {
+          "trades_ge_60pct_parent": true,
+          "win_months_gt_50pct": true,
+          "diff_months": 3,
+          "win_months": 2,
+          "calmar_rel_ge_15pct": null,
+          "improve_branch": "sharpe(no_positive_baseline_calmar)",
+          "sharpe_abs_ge_0p15": false,
+          "dd_worsen_le_10pct": true,
+          "val_positive_and_better": false
+        }
+      },
+      "m3_step_vs_parent": {
+        "promoted": false,
+        "reasons": {
+          "trades_ge_60pct_parent": true,
+          "win_months_gt_50pct": true,
+          "diff_months": 3,
+          "win_months": 2,
+          "calmar_rel_ge_15pct": null,
+          "improve_branch": "sharpe(no_positive_baseline_calmar)",
+          "sharpe_abs_ge_0p15": false,
+          "dd_worsen_le_10pct": true,
+          "val_positive_and_better": false
+        }
+      },
+      "m3_step_vs_m3_be": {
+        "promoted": false,
+        "reasons": {
+          "trades_ge_60pct_parent": true,
+          "win_months_gt_50pct": false,
+          "diff_months": 3,
+          "win_months": 1,
+          "calmar_rel_ge_15pct": null,
+          "improve_branch": "sharpe(no_positive_baseline_calmar)",
+          "sharpe_abs_ge_0p15": false,
+          "dd_worsen_le_10pct": true,
+          "val_positive_and_better": false
+        }
+      },
+      "chosen": "M2"
+    }
+  ],
+  "levels_run": [
+    "M0",
+    "M1",
+    "M2",
+    "M3_BE",
+    "M3_Step",
+    "M4"
+  ],
+  "m2_over_limit": {
+    "IS": {
+      "by_type": {
+        "donchian_breakout": {
+          "denominator": 150370,
+          "over_limit": 4747,
+          "rate": 0.03156879696748022,
+          "na": false
+        }
+      },
+      "total": {
+        "denominator": 150370,
+        "over_limit": 4747,
+        "rate": 0.03156879696748022,
+        "na": false
+      }
+    },
+    "Val": {
+      "by_type": {
+        "donchian_breakout": {
+          "denominator": 182038,
+          "over_limit": 6704,
+          "rate": 0.03682747558202134,
+          "na": false
+        }
+      },
+      "total": {
+        "denominator": 182038,
+        "over_limit": 6704,
+        "rate": 0.03682747558202134,
+        "na": false
+      }
+    },
+    "merged_trigger": {
+      "triggered": false,
+      "threshold": 0.3,
+      "by_type": {
+        "donchian_breakout": {
+          "denominator": 332408,
+          "over_limit": 11451,
+          "rate": 0.03444862939520108,
+          "na": false
+        }
+      }
+    }
+  },
+  "m2_candidates_n": {
+    "IS": 150370,
+    "Val": 182038
+  },
+  "elapsed_sec": 335.3,
+  "all_reconcile_ok": true,
+  "all_invariants_ok": true,
+  "all_inheritance_ok": true,
+  "all_ok": true
+}

@@ -1,0 +1,146 @@
+{
+  "schema": "wyckoffmaster_gate_verify/v2_v31",
+  "strategy_ready": {
+    "label": "strategy_ready",
+    "exists": true,
+    "verdict": "FAIL",
+    "checks": [
+      {
+        "item": "strategy:ready",
+        "verdict": "OK",
+        "note": null
+      },
+      {
+        "item": "strategy:version_v3.1",
+        "verdict": "OK",
+        "note": null
+      },
+      {
+        "item": "strategy:per_file_sha_recomputed",
+        "verdict": "FAIL",
+        "note": {
+          "mismatch": [],
+          "missing": [],
+          "extra": [
+            "execution.py",
+            "test_execution.py"
+          ],
+          "n_files": 11
+        }
+      },
+      {
+        "item": "strategy:bundle_sha_recomputed",
+        "verdict": "FAIL",
+        "note": {
+          "declared": "4cb4eff0772ac8b617393b52f0f9739718b371da6b7ce7cad5c1a8898ba3091c",
+          "actual": "d0668abfa1e4fcea02b3d1a30f8a1aaf666cd1b9e50abdda16bfae70d19c2199"
+        }
+      },
+      {
+        "item": "strategy:blocking_empty",
+        "verdict": "FAIL",
+        "note": {
+          "blocking": [
+            {
+              "id": "B1",
+              "item": "M4 依赖 OI 变化序列（自身 90 日历史）",
+              "owner": "策略数据窗口（data_ready.json）",
+              "impact": "M4 真实回测不可运行；M0–M3、M2b 不依赖该因子",
+              "status": "未解除"
+            },
+            {
+              "id": "B2",
+              "item": "执行层按 SHA 绑定既有引擎（15m 成交/滑点/费用/真实资金费/回撤停机/段末最后 15m 收盘强平/三段独立账户）",
+              "owner": "回测窗口",
+              "impact": "回测运行前必须完成",
+              "status": "未解除（属回测窗口职责）"
+            },
+            {
+              "id": "B3",
+              "item": "1h/4h 信号数据、15m 执行数据、IS/Val 物理隔离研究输入",
+              "owner": "策略数据窗口",
+              "impact": "无物理隔离输入则无法按 v3.1 运行",
+              "status": "未解除（属数据窗口职责）"
+            },
+            {
+              "id": "B4",
+              "item": "M5/M6 前向验证需真实前向采集 ≥30 自然日且 ≥90 唯一有效快照",
+              "owner": "策略数据窗口（前向队列，Holdout 截止后开始）",
+              "impact": "M5/M6 本轮不参与历史选型，属预期内",
+              "status": "未解除（设计如此）"
+            }
+          ]
+        }
+      }
+    ],
+    "blocking_checks": [
+      "strategy:per_file_sha_recomputed",
+      "strategy:bundle_sha_recomputed",
+      "strategy:blocking_empty"
+    ],
+    "code_bundle_sha256": "d0668abfa1e4fcea02b3d1a30f8a1aaf666cd1b9e50abdda16bfae70d19c2199"
+  },
+  "data_ready": {
+    "label": "data_ready",
+    "exists": true,
+    "verdict": "PASS",
+    "checks": [
+      {
+        "item": "data:ready",
+        "verdict": "OK",
+        "note": null
+      },
+      {
+        "item": "data:version_v3.1",
+        "verdict": "OK",
+        "note": null
+      },
+      {
+        "item": "data:manifest_sha_recomputed",
+        "verdict": "OK",
+        "note": {
+          "declared": "28800c42ac9afaa46cad24804524e1170eece9eaf9931b14e05a84dfc27b30c0",
+          "actual": "28800c42ac9afaa46cad24804524e1170eece9eaf9931b14e05a84dfc27b30c0"
+        }
+      },
+      {
+        "item": "data:is_val_dirs_exist",
+        "verdict": "OK",
+        "note": {
+          "is": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster_v31/is",
+          "val": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster_v31/val"
+        }
+      },
+      {
+        "item": "data:holdout_absent",
+        "verdict": "OK",
+        "note": {
+          "holdout_dir": null,
+          "holdout_read": false
+        }
+      },
+      {
+        "item": "data:backup_restore_present",
+        "verdict": "OK",
+        "note": {
+          "type": "dict"
+        }
+      },
+      {
+        "item": "data:blocking_empty",
+        "verdict": "OK",
+        "note": {
+          "blocking": []
+        }
+      }
+    ],
+    "blocking_checks": []
+  },
+  "production": {
+    "item": "production:wx_execution_sha",
+    "verdict": "OK",
+    "declared": "0ede9ce19c7cec9d18398572e393ef65ef4c04a6aa5ff2b41f8ad022c83dbcf1",
+    "actual": "0ede9ce19c7cec9d18398572e393ef65ef4c04a6aa5ff2b41f8ad022c83dbcf1"
+  },
+  "overall": "BLOCKED"
+}

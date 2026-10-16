@@ -8,8 +8,9 @@
   1. 跑 `verify_gates.py`；**两个门禁都实际 PASS 且都绑定 v3.1 才继续**（不信 ready=true）。
   2. 读 `config/frozen_segments.json`（v3.1 IS/Val/Holdout）与 `config/ladder.json`。
   3. 从 `strategy_ready.json` 读**层级→臂绑定**（代码/配置 SHA 已在门禁里核过）。
-  4. 顺序实验共用**一次** InputStore，逐层逐段写独立账本（只写 `回测日志/WyckoffMaster/`）。
-  5. 每段结束后跑 **v3.1 段末强平局部适配**（最后 15m 收盘，不改生产引擎）。
+  4. 顺序实验共用**一次** `SegmentData`（项目内 v3.1 研究输入），逐层逐段写独立账本
+     （只写 `回测日志/WyckoffMaster/`）。
+  5. 段末强平由引擎内置（本段最后 15m 收盘；`segment_end_force_close_last_15m_close`）。
 
 v3.1 最高红线（由 `adapters/holdout_guard.py` 物理强制）：
   · 选型阶段（kline/factor）任何与 Holdout 有交集的窗口一律拒绝；
@@ -17,7 +18,7 @@ v3.1 最高红线（由 `adapters/holdout_guard.py` 物理强制）：
 
 运行：
     python3 run_ladder.py --phase kline      # M0→M1→M2(+M2b)→M3_BE/M3_Step（IS/Val）
-    python3 run_ladder.py --phase factor     # M4（IS/Val；仅 M0–M3 有 IS/Val 正 Calmar）
+    python3 run_ladder.py --phase factor     # M4（IS/Val；继承 kline 阶段父配置）
     python3 run_ladder.py --phase holdout    # 最终配置冻结后仅一次
 """
 from __future__ import annotations
@@ -31,11 +32,12 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 WM = HERE.parent
+sys.path.insert(0, str(WM))
 sys.path.insert(0, str(WM / "adapters"))
 
 UTC = dt.timezone.utc
 PHASE_LEVELS = {
-    "kline": ["M0", "M1", "M2", "M3_BE", "M3_Step"],
+    "kline": ["M0", "M1", "M2", "M2b", "M3_BE", "M3_Step"],
     "factor": ["M4"],
     "holdout": ["FINAL"],
 }
@@ -64,8 +66,8 @@ def load_json(p: Path) -> dict:
     return json.loads(p.read_text(encoding="utf-8"))
 
 
-def refuse(reason: str, deps: list[str]) -> int:
-    doc = {"schema": "wyckoffmaster_run_ladder/v2_v31", "generated_utc": _now(),
+def refuse(reason: str, deps: list) -> int:
+    doc = {"schema": "wyckoffmaster_run_ladder/v3_v31", "generated_utc": _now(),
            "status": "REFUSED_NOT_READY", "reason": reason, "dependencies": deps}
     (WM / "state" / "ladder_status.json").write_text(
         json.dumps(doc, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -83,6 +85,7 @@ def main() -> int:
     a = ap.parse_args()
 
     import holdout_guard as HG
+    import ra_bridge as B
 
     # ── 0. Holdout 红线（最先检查，先于任何数据读取）──────────────────────────
     try:
@@ -98,9 +101,12 @@ def main() -> int:
                        "evidence/Work_策略数据_2026-10-15/data_ready.json (v3.1)",
                        "（scripts/verify_gates.py 查看逐项未过项）"])
 
+    # ── 2. 配置与隔离前置核验 ───────────────────────────────────────────────
     seg_doc = load_json(WM / "config" / "frozen_segments.json")
     load_json(WM / "config" / "ladder.json")
     load_json(WM / "config" / "m2_rejection.json")
+    B.assert_production_untouched()
+    B.assert_no_legacy_research_dir()
     strat = load_json(Path(g["report"]["strategy_ready"]["path"]))
     levels = strat.get("levels") or {}
     need = PHASE_LEVELS[a.phase]
@@ -111,7 +117,7 @@ def main() -> int:
                           [f"levels[{m}]（arm/signal_module/config_sha256/signal_sha256）"
                            for m in missing])
 
-    # ── 2. 段选择（选型阶段绝不含 Holdout）──────────────────────────────────
+    # ── 3. 段选择（选型阶段绝不含 Holdout）──────────────────────────────────
     if a.phase == "holdout":
         segs = [s for s in seg_doc["segments"] if s["name"] == "Holdout"]
     else:
@@ -123,47 +129,85 @@ def main() -> int:
         print(f"  段末强平：{seg_doc['segment_end_liquidation']['reason_code']}")
         return 0
 
-    # ── 3. 顺序实验：共用一次 InputStore；逐段独立账户 ───────────────────────
-    import ra_bridge as B
-    import segment_end_liquidation as SEL
-    B.assert_production_untouched()
-    eng = B.load_engine()
-    rk, adm, meta = eng["W5"].load_daily_maps(doc_path=str(B.DAILY_DOC), panel="DEV")
-    symbols = sorted({k for m in adm.values() for k, v in m.items() if v})
+    # ── 4. 顺序实验：逐段独立账户；逐层独立账本 ─────────────────────────────
+    from engine import ladder as LAD
+    from engine.m4 import make_m4_rank_provider
+    from WyckoffMaster import experiments as EX
+
+    engine_files = list((WM / "engine").glob("*.py"))
+    strat_files = list((WM.parent.parent / "策略" / "WyckoffMaster").glob("*.py"))
+
+    def bundle_sha(files):
+        import hashlib
+        h = hashlib.sha256()
+        for p in sorted(files):
+            h.update(p.name.encode())
+            h.update(B.sha256_file(p).encode())
+        return h.hexdigest()
+
+    code_sha = bundle_sha(engine_files + strat_files)
+    config_sha = EX.experiment_config_hash()
+    input_sha = B.input_manifest_sha()
+    parent_specs = None
+    if a.phase == "factor":
+        kline_state = WM / "state" / "ladder_kline.json"
+        if not kline_state.exists():
+            return refuse("factor 阶段需要 kline 阶段结果以继承父配置",
+                          [str(kline_state)])
+        parent_specs = json.loads(kline_state.read_text(encoding="utf-8"))["specs"]
+
     led_dir = WM / "ledgers"
     led_dir.mkdir(parents=True, exist_ok=True)
-    results = []
+
+    from engine import loader as LD
+    tf = "1h"
+    segments, rank_by_seg = {}, {}
     for seg in segs:
         s_ms, e_ms = _ms(seg["start_utc"]), _ms(seg["end_excl_utc"])
-        dv = f"dv:wm31:{a.phase}:{seg['name']}:{seg['start_utc']}"
-        store, _ = B.make_shared_store(symbols, s_ms, e_ms, data_version=dv,
-                                       log=print, phase=a.phase)
-        bars = SEL.make_store_bars(store)
-        for lv in need:
-            bind = levels.get(lv) or levels.get("FINAL", {})
-            arm = bind.get("arm", lv)
-            run_id = f"wm31_{a.phase}_{seg['name']}_{lv}"
-            raw_lp = led_dir / f"raw_{seg['name']}_{lv}.sqlite3"
-            fin_lp = led_dir / f"ledger_{seg['name']}_{lv}.sqlite3"
-            out = B.run_segment_arm(eng=eng, store=store, arm=arm, symbols=symbols,
-                                    start_ms=s_ms, end_ms=e_ms, run_id=run_id,
-                                    ledger_path=raw_lp, log=print, phase=a.phase)
-            rep = SEL.apply_v31_segment_end(
-                src_ledger=raw_lp, dst_ledger=fin_lp, bars=bars, ex_module=eng["X"],
-                segment_end_ms=e_ms)
-            results.append({"segment": seg["name"], "level": lv, "run_id": run_id,
-                            "raw_ledger": str(raw_lp), "ledger": str(fin_lp),
-                            "trades": (out["run"] or {}).get("trades"),
-                            "funding_rows": (out["run"] or {}).get("funding_rows"),
-                            "segment_end_v31": {"n": rep["n_terminal_liquidations"],
-                                                "cash_delta": rep["cash_delta"]}})
-        del store
+        sd = LD.SegmentData(seg["name"])
+        segments[seg["name"]] = (sd, s_ms, e_ms)
+        rank_by_seg[seg["name"]] = make_m4_rank_provider(sd, tf)
+
+    res = LAD.run_ladder(segments=segments, tf=tf, run_tag=f"wm31_{a.phase}", led_dir=led_dir,
+                         code_sha=code_sha, config_sha=config_sha, input_sha=input_sha,
+                         m2_collect=(a.phase == "kline"), rank_provider_by_seg=rank_by_seg,
+                         log=print)
+
+    seg_names = [s["name"] for s in segs]
+    results = {}
+    for seg_name in seg_names:
+        results[seg_name] = {
+            "n_symbols": res["n_symbols"][seg_name],
+            "specs": res["specs"],
+            "inheritance": res["inheritance"],
+            "consumed": {lv: res["consumed"][lv][seg_name] for lv in res["consumed"]},
+            "metrics": {lv: res["metrics"][lv][seg_name] for lv in res["metrics"]},
+            "trades": {lv: res["results"][lv][seg_name]["trades"] for lv in res["results"]},
+            "net": {lv: res["results"][lv][seg_name]["net"] for lv in res["results"]},
+        }
+        (WM / "state" / f"ladder_{a.phase}_{seg_name}.json").write_text(
+            json.dumps(results[seg_name], ensure_ascii=False, indent=2), encoding="utf-8")
+
+    (WM / "state" / f"ladder_{a.phase}.json").write_text(
+        json.dumps({"schema": "wyckoffmaster_ladder_phase/v1", "generated_utc": _now(),
+                    "phase": a.phase, "levels": res["levels_run"], "code_sha256": code_sha,
+                    "config_sha256": config_sha, "input_manifest_sha256": input_sha,
+                    "decisions": res.get("decisions"), "combined": res.get("combined"),
+                    "final_winner": res.get("final_winner"),
+                    "segments": results}, ensure_ascii=False, indent=2), encoding="utf-8")
+
     (WM / "state" / "ladder_status.json").write_text(json.dumps(
-        {"schema": "wyckoffmaster_run_ladder/v2_v31", "generated_utc": _now(),
-         "status": "COMPLETED", "phase": a.phase, "results": results},
+        {"schema": "wyckoffmaster_run_ladder/v3_v31", "generated_utc": _now(),
+         "status": "COMPLETED", "phase": a.phase, "levels": res["levels_run"],
+         "segments": {k: {"trades": v["trades"], "net": v["net"]} for k, v in results.items()}},
         ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[DONE] phase={a.phase} 段×层 = {len(results)}")
+    print(f"[DONE] phase={a.phase} levels={res['levels_run']}")
     return 0
+
+
+def _input_sha():
+    from engine import paths as P
+    return P.input_manifest_sha()
 
 
 if __name__ == "__main__":

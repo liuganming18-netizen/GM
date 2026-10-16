@@ -1,0 +1,170 @@
+{
+ "generated_utc": "2026-10-15T08:27:36Z",
+ "owner": "work_账本保全与身份统一_2026-10-15（本任务独占服务切换/重载）",
+ "before": {
+  "pid": 87244,
+  "port": 8787,
+  "cwd": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend",
+  "note": "旧进程加载的是**修复前**代码",
+  "observed": {
+   "/api/v1/paper/accounts": {
+    "http": 200,
+    "quality.status": "ok",
+    "items": 4,
+    "items_detail": [
+     {
+      "arm": "3a",
+      "account_id": "paper43_3a",
+      "equity": 5000.0,
+      "positions": 0
+     },
+     {
+      "arm": "3b",
+      "account_id": "paper43_3b",
+      "equity": 5000.0,
+      "positions": 0
+     },
+     {
+      "arm": "3c",
+      "account_id": "paper43_3c",
+      "equity": 5000.0,
+      "positions": 0
+     },
+     {
+      "arm": "3d",
+      "account_id": "paper43_3d",
+      "equity": 5000.0,
+      "positions": 0
+     }
+    ],
+    "verdict": "四臂各报 5000.0/0 持仓且 quality=ok ⇒ 把**凭空新建的空账户**当原账户展示"
+   },
+   "/api/v1/paper/positions": {
+    "http": 200,
+    "quality.status": "ok",
+    "items": 0
+   },
+   "/api/v1/live/health": {
+    "http": 200,
+    "quality.status": "ok",
+    "verdict": "策略 worker 心跳已停 5h+ 仍报 ok ⇒ 假健康"
+   },
+   "/api/v1/backtests?mode=history": {
+    "http": 200,
+    "quality.status": "ok",
+    "items": 0,
+    "verdict": "无回测账本却报 ok"
+   },
+   "identity_fields": "全部为 None（rule_version / param_hash / ledger_source 均缺失）"
+  }
+ },
+ "action": {
+  "step1": "PORT=8799 sh start.sh —— 备用端口预检新代码（不碰 8787）",
+  "step2": "PORT=8787 sh stop.sh —— 身份校验通过后停止旧后端 pid=87244（端口释放）",
+  "step3": "sh start.sh —— 以新代码启动 8787",
+  "identity_guard": "start.sh/stop.sh 均校验「端口监听者 cwd == 本目录」；不符则拒绝，不杀未知进程",
+  "untouched": {
+   "collector_pid": 87696,
+   "collector_alive": true,
+   "collector_cwd": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend",
+   "frontend_pid": 87486,
+   "frontend_port": 3000,
+   "frontend_http": 200
+  }
+ },
+ "after": {
+  "pid": 1615,
+  "port": 8787,
+  "health_http": 200,
+  "env_injected": {
+   "PAPER_LEDGER_DIR": "/Users/boos/Desktop/威科夫因子共振趋势/数据/paper",
+   "PAPER_LEDGER_ALLOW_INIT": "0",
+   "LIVE_WORKER_INTERVAL_SEC": "900"
+  },
+  "observed": {
+   "/api/v1/paper/accounts": {
+    "http": 200,
+    "quality.status": "unavailable",
+    "ledger_source.kind": "paper_ledger"
+   },
+   "/api/v1/paper/positions": {
+    "http": 200,
+    "quality.status": "unavailable",
+    "ledger_source.kind": "paper_ledger"
+   },
+   "/api/v1/paper/orders": {
+    "http": 200,
+    "quality.status": "unavailable",
+    "ledger_source.kind": "paper_ledger"
+   },
+   "/api/v1/paper/funding-audit": {
+    "http": 200,
+    "quality.status": "unavailable",
+    "ledger_source.kind": "paper_ledger"
+   },
+   "/api/v1/paper/legacy-audit": {
+    "http": 200,
+    "quality.status": "ok",
+    "items": 1,
+    "side_table": {
+     "legacy_position_audit": 25,
+     "legacy_signal_audit": 2
+    },
+    "legacy_ledger.preserved": false,
+    "legacy_ledger.preservation_status": "LOST_ON_DISK__NOT_PRESERVED"
+   },
+   "/api/v1/live/health": {
+    "http": 200,
+    "quality.status": "down",
+    "worker_status": "down",
+    "heartbeat_age_seconds": 19119.4,
+    "ledger_available": false,
+    "verdict": "真实健康：策略 worker 心跳 5h+ 未更新 ⇒ down（不再因「进程在/接口 200」报 ok）"
+   },
+   "/api/v1/backtests?mode=history": {
+    "http": 200,
+    "quality.status": "missing",
+    "ledger_source.kind": "backtest_ledger",
+    "missing_reason": "历史回测账本缺失（迁移清单 M042–M046 未迁入）"
+   },
+   "/api/v1/reviews?mode=paper_review": {
+    "http": 200,
+    "quality.status": "unavailable"
+   },
+   "/api/v1/signals?scope=current": {
+    "http": 200,
+    "quality.status": "ok",
+    "items": 63,
+    "ledger_source.kind": "live_signal_db",
+    "data_version": "live:369e7ff81d1a9760a7397470edbb2be6"
+   },
+   "/api/v1/accounts": {
+    "http": 200,
+    "quality.status": "ok",
+    "items": 2,
+    "ledger_source.kind": "exchange_readonly"
+   },
+   "identity_fields": "全部端点注入 rule_version / param_hash / ledger_source"
+  },
+  "param_hash": "fb3e617f6732bf746ec780d4d511ce4ae9121c0631a204ec9ac11329f021f737",
+  "param_hash_basis": "exec_core_frozen_config_hash",
+  "rule_view_available": false,
+  "rule_view_note": "冻结参数视图文件随旧工作区一并丢失 ⇒ param_hash 退回共用执行核心冻结配置 hash（basis 已标注，不冒充视图哈希）",
+  "exec_core_crosscheck": {
+   "available": true,
+   "ok": true,
+   "mismatch_n": 0
+  }
+ },
+ "checks": {
+  "empty_ledgers_still_present_untouched": true,
+  "no_ledger_auto_created": true,
+  "data_paper_dir_absent": true,
+  "empty_ledgers_sha_unchanged": {
+   "paper_3a.sqlite3": "a7db3ac9762c1aaa654a42ea446375086397d254ae464712ef89a1ea1405296a",
+   "paper_3b.sqlite3": "85dd16ab9965219ac7fcf82e0e5b2885cac4dd98dfa8e9a4f6253daf52b5c2c5",
+   "paper_3c.sqlite3": "44a849576d03b50a2774b48e969df17385032ff48eb14686b2ff202a6a675870",
+   "paper_3d.sqlite3": "a426b54060a760edb9ea196206dec6dc21d4da9c56e503a7eba1398c4ff9cb71"
+  }
+ }
+}

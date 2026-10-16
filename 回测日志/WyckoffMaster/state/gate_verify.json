@@ -1,144 +1,111 @@
 {
-  "schema": "wyckoffmaster_gate_verify/v1",
+  "schema": "wyckoffmaster_gate_verify/v2_v31",
   "strategy_ready": {
     "label": "strategy_ready",
-    "path": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_策略优化_2026-10-15/strategy_ready.json",
     "exists": true,
-    "ready_flag": true,
-    "deep_sha": {
-      "n_pairs": 0,
-      "n_ok": 0,
-      "n_mismatch": 0,
-      "n_missing_file": 0,
-      "details": []
-    },
+    "verdict": "PASS",
     "checks": [
       {
-        "item": "strategy_ready:ready_flag",
+        "item": "strategy:ready",
         "verdict": "OK",
-        "note": "ready=true 仅为必要条件，不是充分条件"
+        "note": null
       },
       {
-        "item": "strategy_ready:version_bound_v3.1",
+        "item": "strategy:version_v3.1",
         "verdict": "OK",
-        "note": "文档须绑定 v3.1（策略/数据版本都必须 v3.1 才启动）"
+        "note": null
       },
       {
-        "item": "strategy_ready:frozen_engine_sha_present",
-        "verdict": "MISSING",
-        "note": "需在文档中出现冻结引擎 SHA 0ede9ce19c7cec9d…"
-      },
-      {
-        "item": "strategy_ready:frozen_config_view_sha_present",
-        "verdict": "MISSING",
-        "note": "需出现冻结配置视图 SHA 6d18d222d1991f99…"
-      },
-      {
-        "item": "strategy_ready:blocking_items_empty",
+        "item": "strategy:per_file_sha_recomputed",
         "verdict": "OK",
-        "note": "blocking_items=None"
+        "note": {
+          "mismatch": [],
+          "missing": [],
+          "extra": [],
+          "n_files": 11
+        }
+      },
+      {
+        "item": "strategy:bundle_sha_recomputed",
+        "verdict": "OK",
+        "note": {
+          "declared": "e21a248f8e00519c38aff733232def580de8e1a274a1ae626b45ae49f7c15008",
+          "actual": "e21a248f8e00519c38aff733232def580de8e1a274a1ae626b45ae49f7c15008"
+        }
+      },
+      {
+        "item": "strategy:blocking_empty",
+        "verdict": "OK",
+        "note": {
+          "blocking": []
+        }
       }
     ],
-    "verdict": "FAIL",
-    "blocking_checks": [
-      "strategy_ready:frozen_engine_sha_present",
-      "strategy_ready:frozen_config_view_sha_present"
-    ]
+    "blocking_checks": [],
+    "code_bundle_sha256": "e21a248f8e00519c38aff733232def580de8e1a274a1ae626b45ae49f7c15008",
+    "path": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_策略优化_2026-10-15/strategy_ready.json"
   },
   "data_ready": {
     "label": "data_ready",
-    "path": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_策略数据_2026-10-15/data_ready.json",
     "exists": true,
-    "ready_flag": true,
-    "deep_sha": {
-      "n_pairs": 2,
-      "n_ok": 2,
-      "n_mismatch": 0,
-      "n_missing_file": 0,
-      "details": [
-        {
-          "declared_path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster/manifest.json",
-          "declared_sha256": "6838a05e53b4e15dae759de5e3461b61f2f926c72b087fccb1ef6d1500e3cfb9",
-          "ctx": "/manifest",
-          "resolved": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster/manifest.json",
-          "actual": "6838a05e53b4e15dae759de5e3461b61f2f926c72b087fccb1ef6d1500e3cfb9",
-          "verdict": "OK"
-        },
-        {
-          "declared_path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster/schema.json",
-          "declared_sha256": "e43356654676ccd895e17ed62a512129e307dacd908e5834a581cfc1c44827b9",
-          "ctx": "/schema",
-          "resolved": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster/schema.json",
-          "actual": "e43356654676ccd895e17ed62a512129e307dacd908e5834a581cfc1c44827b9",
-          "verdict": "OK"
-        }
-      ]
-    },
+    "verdict": "PASS",
     "checks": [
       {
-        "item": "data_ready:ready_flag",
+        "item": "data:ready",
         "verdict": "OK",
-        "note": "ready=true 仅为必要条件，不是充分条件"
+        "note": null
       },
       {
-        "item": "data_ready:version_bound_v3.1",
-        "verdict": "FAIL",
-        "note": "文档须绑定 v3.1（策略/数据版本都必须 v3.1 才启动）"
-      },
-      {
-        "item": "data_ready:frozen_engine_sha_present",
-        "verdict": "MISSING",
-        "note": "需在文档中出现冻结引擎 SHA 0ede9ce19c7cec9d…"
-      },
-      {
-        "item": "data_ready:frozen_config_view_sha_present",
-        "verdict": "MISSING",
-        "note": "需出现冻结配置视图 SHA 6d18d222d1991f99…"
-      },
-      {
-        "item": "data_ready:blocking_items_empty",
+        "item": "data:version_v3.1",
         "verdict": "OK",
-        "note": "blocking_items=None"
+        "note": null
       },
       {
-        "item": "data_ready:mentions::backup",
-        "verdict": "OK"
+        "item": "data:manifest_sha_recomputed",
+        "verdict": "OK",
+        "note": {
+          "declared": "28800c42ac9afaa46cad24804524e1170eece9eaf9931b14e05a84dfc27b30c0",
+          "actual": "28800c42ac9afaa46cad24804524e1170eece9eaf9931b14e05a84dfc27b30c0"
+        }
       },
       {
-        "item": "data_ready:mentions::restore",
-        "verdict": "OK"
+        "item": "data:is_val_dirs_exist",
+        "verdict": "OK",
+        "note": {
+          "is": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster_v31/is",
+          "val": "/Users/boos/Desktop/威科夫因子共振趋势/数据/研究输入/WyckoffMaster_v31/val"
+        }
       },
       {
-        "item": "data_ready:mentions::isolat",
-        "verdict": "OK"
+        "item": "data:holdout_absent",
+        "verdict": "OK",
+        "note": {
+          "holdout_dir": null,
+          "holdout_read": false
+        }
       },
       {
-        "item": "data_ready:mentions::备份",
-        "verdict": "OK"
+        "item": "data:backup_restore_present",
+        "verdict": "OK",
+        "note": {
+          "type": "dict"
+        }
       },
       {
-        "item": "data_ready:mentions::恢复",
-        "verdict": "OK"
-      },
-      {
-        "item": "data_ready:backup_path_declared",
-        "verdict": "MISSING",
-        "note": "未见 backup_path/restore_path/recovery_path 字段"
-      },
-      {
-        "item": "data_ready:research_input_isolation",
-        "verdict": "FAIL",
-        "note": "flat_or_unknown"
+        "item": "data:blocking_empty",
+        "verdict": "OK",
+        "note": {
+          "blocking": []
+        }
       }
     ],
-    "verdict": "FAIL",
-    "blocking_checks": [
-      "data_ready:version_bound_v3.1",
-      "data_ready:frozen_engine_sha_present",
-      "data_ready:frozen_config_view_sha_present",
-      "data_ready:backup_path_declared",
-      "data_ready:research_input_isolation"
-    ]
+    "blocking_checks": []
   },
-  "overall": "BLOCKED"
+  "production": {
+    "item": "production:wx_execution_sha",
+    "verdict": "OK",
+    "declared": "0ede9ce19c7cec9d18398572e393ef65ef4c04a6aa5ff2b41f8ad022c83dbcf1",
+    "actual": "0ede9ce19c7cec9d18398572e393ef65ef4c04a6aa5ff2b41f8ad022c83dbcf1"
+  },
+  "overall": "BOTH_PASS"
 }

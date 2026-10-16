@@ -75,7 +75,24 @@ for _p in (str(BACKEND), str(BACKEND / "logs")):
         sys.path.insert(0, _p)
 sys.dont_write_bytecode = True
 
-import _pool_scope as PS                                  # noqa: E402
+try:
+    import _pool_scope as PS                                  # noqa: E402
+except Exception:                                             # noqa: BLE001
+    class _FallbackPoolScope:
+        SCOPE_JSON = Path(__file__).resolve().parents[2] / "数据" / "contracts" / "旧标的池" / "scope_crypto.json"
+        @staticmethod
+        def binance_scope_symbols():
+            if _FallbackPoolScope.SCOPE_JSON.exists():
+                try:
+                    data = json.loads(_FallbackPoolScope.SCOPE_JSON.read_text(encoding="utf-8"))
+                    return data.get("symbols") or data.get("binance") or []
+                except Exception:
+                    pass
+            return []
+        @staticmethod
+        def scope_meta():
+            return {"pool_source": "scope_crypto_fallback", "n": len(_FallbackPoolScope.binance_scope_symbols())}
+    PS = _FallbackPoolScope
 
 
 def _d():

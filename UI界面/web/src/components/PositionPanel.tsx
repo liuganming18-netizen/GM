@@ -41,6 +41,10 @@ interface PositionPanelProps {
    * 空持仓时必须展示，否则会被误读成「没接通」。
    */
   paperNote?: string | null;
+  /** 服务端**新开仓总闸**（fail-closed）；null = 后端未返回。 */
+  newEntryGate?: { allowNewEntries: boolean; reason: string | null; exitsFeesFundingHealthUnaffected: boolean } | null;
+  /** 旧版/未验收账本标记（后端只读追加）。 */
+  legacyLedger?: { preserved: boolean; verificationStatus: string | null; label: string | null; excludedFromOfficial: boolean } | null;
   /** 实盘只读账户快照 */
   liveAccounts: LiveAccountView[];
   /** 实盘账户为空时的真实原因（未配置凭据 / worker 未运行） */
@@ -119,6 +123,8 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
   paperPending,
   paperMissingReason,
   paperNote,
+  newEntryGate,
+  legacyLedger,
   liveAccounts,
   liveMissingReason,
   orderBusy,
@@ -178,6 +184,7 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
         nOrders: null,
         nRejected: null,
         nClosed: null,
+        paramsSource: null as string | null,
       };
     }
     const initialEquity = scopedAccounts.reduce((s, a) => s + a.initialEquity, 0);
@@ -194,6 +201,9 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
     const nOrders = scopedAccounts.reduce((s, a) => s + a.nOrders, 0);
     const nRejected = scopedAccounts.reduce((s, a) => s + a.nRejected, 0);
     const nClosed = scopedAccounts.reduce((s, a) => s + (a.nClosed || 0), 0);
+    // 参数来源：直接取自服务端（逐臂可能不同）；用于暴露「是否走了冻结视图外的兜底」。
+    const sources = Array.from(new Set(scopedAccounts.map((a) => a.paramsSource).filter((v): v is string => !!v)));
+    const paramsSource = sources.length > 0 ? sources.join(' / ') : null;
     return {
       initialEquity,
       equity,
@@ -209,6 +219,7 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
       nOrders,
       nRejected,
       nClosed,
+      paramsSource,
     };
   }, [paperConnected, scopedAccounts]);
 
@@ -278,8 +289,17 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
               </span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-neutral-400 whitespace-nowrap">滑点:</span>
-              <span className="text-neutral-200 whitespace-nowrap">0.05%</span>
+              <span className="text-neutral-400 whitespace-nowrap">参数来源:</span>
+              <span
+                className={`whitespace-nowrap ${
+                  viewStats.paramsSource && viewStats.paramsSource.includes('fallback')
+                    ? 'text-amber-400'
+                    : 'text-neutral-200'
+                }`}
+                title="服务端返回的生效参数来源；含 fallback 表示未走冻结视图"
+              >
+                {viewStats.paramsSource ?? '—'}
+              </span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-neutral-400 whitespace-nowrap">盈亏多少:</span>
@@ -319,6 +339,26 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
             </div>
           </div>
 
+          {/* 服务端真实门禁 / 旧版账本 状态（来源：/paper/accounts 的 quality，非前端硬编码） */}
+          {paperConnected && newEntryGate && !newEntryGate.allowNewEntries && (
+            <div
+              className="p-2 rounded-lg bg-rose-500/10 border border-rose-500/30 text-[10px] text-rose-300 leading-relaxed flex gap-1.5"
+              data-testid="new-entry-gate"
+            >
+              <Lock className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+              <span className="break-all">
+                服务端已阻断全部新开仓（总闸 fail-closed；原因：{newEntryGate.reason ?? '未标注'}）
+                {newEntryGate.exitsFeesFundingHealthUnaffected ? '；退出/费用/资金费/健康采集不受影响' : ''}
+              </span>
+            </div>
+          )}
+          {paperConnected && legacyLedger && legacyLedger.excludedFromOfficial && (
+            <div className="p-2 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[10px] text-amber-300 leading-relaxed">
+              既有持仓为 <b>{legacyLedger.label ?? '旧版/未验收'}</b>，已排除正式策略表现
+              （原账本{legacyLedger.preserved ? '未修改' : '状态未知'}）。
+            </div>
+          )}
+
           {/* Quick Trade —— 按「当前选中信号」开仓 */}
           <div className="flex gap-2">
             <button
@@ -357,25 +397,25 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
             </div>
           )}
 
-          {/* Positions List Header */}
+          {/* Positions List Header —— 明确这是「实际成交」层（只能来自服务端账本） */}
           <div className="flex items-center justify-between text-[10px] text-neutral-400 pt-0.5">
             <span className="flex items-center gap-1 font-medium text-neutral-300">
               <Layers className="w-3 h-3 text-emerald-400" />
               {selectedArm === 'ALL'
-                ? `在持仓位明细 (${scopedPositions.length})`
-                : `${selectedArm} 臂在持仓位 (${scopedPositions.length})`}
+                ? `实际成交 · 在持仓位 (${scopedPositions.length})`
+                : `${selectedArm} 臂实际成交持仓 (${scopedPositions.length})`}
             </span>
-            <span className="font-mono text-neutral-500">点击卡片定位 K 线</span>
+            <span className="font-mono text-neutral-500">账本口径 · 点击定位 K 线</span>
           </div>
 
-          {/* Positions List —— 服务端账本持仓 */}
+          {/* Positions List —— 服务端账本持仓（「已买入」标记只能来自此处） */}
           <div className="space-y-2">
             {scopedPositions.length === 0 ? (
               <>
                 <div className="p-3 rounded-lg bg-neutral-950/60 border border-neutral-800 border-dashed text-center text-[11px] text-neutral-500">
                   {paperConnected
                     ? selectedArm === 'ALL'
-                      ? '当前无模拟持仓'
+                      ? '当前无模拟持仓（无账本成交 ⇒ 不显示任何「已买入」标记）'
                       : `策略臂 ${selectedArm} 当前无未平仓持仓`
                     : '账本未接通'}
                 </div>
@@ -391,27 +431,58 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
                 const isLong = pos.direction === 'long';
                 const cleanSym = pos.symbol.replace('USDT', '');
                 const pnl = pos.unrealizedPnl;
-                // 建议止损位计算：基于入场 2.0 倍 ATR
-                const suggestedStop =
-                  pos.atrAtEntry !== null && pos.atrAtEntry > 0
-                    ? isLong
-                      ? pos.entryPrice - 2.0 * pos.atrAtEntry
-                      : pos.entryPrice + 2.0 * pos.atrAtEntry
-                    : pos.stopPrice;
+
+                /**
+                 * **真实止损状态**（2026-10-15 任务四）。
+                 *
+                 * 旧实现在这里用 `entryPrice ∓ 2.0×ATR` **前端自行推导**一个「建议止损位」——
+                 * 该值与账本/冻结规则（3×ATR 结构止损）无关，属凭空建议，已删除。
+                 * 现只展示**账本真实记录的 `stop_price`**，并按真实 `mark_price` 如实说明现价与止损的位置关系
+                 * （纯数值比较，不预测、不生成新价位）。
+                 */
+                const stopState = (() => {
+                  if (pos.stopPrice === null || pos.stopPrice === undefined) {
+                    return { text: '账本未记录止损', cls: 'text-neutral-400' };
+                  }
+                  if (pos.markPrice === null || pos.markPrice === undefined) {
+                    return { text: '账本止损价（现价未知）', cls: 'text-amber-500' };
+                  }
+                  const through = isLong ? pos.markPrice <= pos.stopPrice : pos.markPrice >= pos.stopPrice;
+                  return through
+                    ? { text: '现价已在止损之外（账本尚未触发）', cls: 'text-rose-400' }
+                    : { text: '现价在止损内', cls: 'text-emerald-400' };
+                })();
+
+                /** 旧版/未验收/规则违规 标注（后端只读追加；缺失则不标）。 */
+                const isLegacy =
+                  pos.excludedFromOfficial ||
+                  (pos.verificationStatus !== null && pos.verificationStatus !== 'verified');
 
                 return (
                   <div
                     key={pos.key}
                     onClick={() => onSelectTokenSymbol(cleanSym)}
                     className="p-3 rounded-lg bg-neutral-950 border border-neutral-800 hover:border-emerald-500/40 cursor-pointer space-y-2 transition-all text-xs"
+                    data-testid="paper-position-row"
+                    data-position-id={pos.positionId}
+                    data-signal-uid={pos.signalUid ?? ''}
+                    data-verification-status={pos.verificationStatus ?? ''}
                   >
-                    {/* 头部：代币图标 + 代币名称（不截断） + 平仓按钮 */}
+                    {/* 头部：代币图标 + 代币名称 + 旧版标记 + 平仓按钮 */}
                     <div className="flex items-center justify-between gap-2">
                       <div className="flex items-center gap-2 min-w-0">
                         <TokenIcon symbol={cleanSym} size="sm" />
                         <span className="text-sm font-bold text-neutral-100 whitespace-nowrap">
                           {cleanSym}
                         </span>
+                        {isLegacy && (
+                          <span
+                            className="text-[9px] px-1.5 py-0.5 rounded border border-amber-500/40 bg-amber-500/10 text-amber-300 font-sans shrink-0"
+                            title={`${pos.label ?? '旧版/未验收'}${pos.violations.length ? ' · 违规：' + pos.violations.join('、') : ''}`}
+                          >
+                            {pos.label ?? '旧版/未验收'}
+                          </span>
+                        )}
                       </div>
 
                       <button
@@ -431,7 +502,15 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
                       </button>
                     </div>
 
-                    {/* 核心信息列表：整行横向平铺，杜绝任何折行竖排 */}
+                    {/* 旧版/未验收 说明：排除正式策略表现 */}
+                    {isLegacy && (
+                      <div className="text-[9px] text-amber-400/80 leading-relaxed font-sans">
+                        旧版/未验收：已排除正式策略表现；原账本未修改
+                        {pos.violations.length > 0 && <span> · 违规项 {pos.violations.join('、')}</span>}
+                      </div>
+                    )}
+
+                    {/* 核心信息列表 */}
                     <div className="space-y-1.5 text-xs font-mono bg-neutral-900/60 p-2.5 rounded border border-neutral-800/80">
                       <div className="flex justify-between items-center">
                         <span className="text-neutral-400 whitespace-nowrap">开仓价格:</span>
@@ -462,13 +541,24 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
                             : ''}
                         </span>
                       </div>
+                      {/* 真实止损：只展示账本记录的 stop_price 与入场 ATR 基数（无前端推导） */}
                       <div className="flex justify-between items-center">
-                        <span className="text-neutral-400 whitespace-nowrap">建议止损位:</span>
-                        <span className="text-amber-500 font-medium whitespace-nowrap">{fmtPriceSmart(suggestedStop)}</span>
+                        <span className="text-neutral-400 whitespace-nowrap">账本止损价:</span>
+                        <span className="text-amber-500 font-medium whitespace-nowrap">{fmtPriceSmart(pos.stopPrice)}</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-neutral-400 whitespace-nowrap">持仓止损位:</span>
-                        <span className="text-amber-500 font-medium whitespace-nowrap">{fmtPriceSmart(pos.stopPrice)}</span>
+                        <span className="text-neutral-400 whitespace-nowrap">止损基数(ATR@入场):</span>
+                        <span className="text-neutral-300 font-medium whitespace-nowrap">{fmtPriceSmart(pos.atrAtEntry)}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-neutral-400 whitespace-nowrap">止损状态:</span>
+                        <span className={`font-medium whitespace-nowrap ${stopState.cls}`}>{stopState.text}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-neutral-400 whitespace-nowrap">信号身份(signal_uid):</span>
+                        <span className="text-neutral-300 font-medium whitespace-nowrap truncate max-w-[60%]" title={pos.signalUid ?? ''}>
+                          {pos.signalUid ?? '—'}
+                        </span>
                       </div>
                       <div className="flex justify-between items-center pt-1 border-t border-neutral-800/60 text-[11px]">
                         <span className="text-neutral-400 whitespace-nowrap">开仓时间:</span>
@@ -481,16 +571,16 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
             )}
           </div>
 
-          {/* 未来待成交挂单（服务端登记，真实进程时钟推进）——**不是**持仓，不冒充已成交 */}
+          {/* 未来待成交挂单（服务端登记）——**计划下单**层：未成交，不冒充已买入 */}
           {paperConnected && scopedPending.length > 0 && (
             <div className="space-y-1.5 pt-1" data-testid="paper-pending-block">
               <div className="text-[10px] text-neutral-300 flex items-center justify-between">
                 <span className="flex items-center gap-1 font-medium">
                   <Clock className="w-3 h-3 text-amber-400" />
-                  <span>待成交挂单 ({scopedPending.length} 笔)</span>
+                  <span>计划下单 · 待成交挂单 ({scopedPending.length} 笔)</span>
                 </span>
                 <span className="text-[9px] text-amber-400/80 font-mono">
-                  等真实 15m 闭合 · 防旧价回填
+                  未成交 · 等真实 15m 闭合 · 防旧价回填
                 </span>
               </div>
               {scopedPending.map((p) => (

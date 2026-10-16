@@ -1,0 +1,33 @@
+{
+ "baseline": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Codex_闭环复审_2026-10-15/legacy_ledger_preservation_baseline.json",
+ "baseline_at_utc": "2026-10-15T06:32:02.221384+00:00",
+ "target_dir": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43",
+ "target_exists": false,
+ "arms": {
+  "3a": {
+   "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3a.sqlite3",
+   "exists": false,
+   "tables": {},
+   "verdict": "LEDGER_MISSING"
+  },
+  "3b": {
+   "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3b.sqlite3",
+   "exists": false,
+   "tables": {},
+   "verdict": "LEDGER_MISSING"
+  },
+  "3c": {
+   "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3c.sqlite3",
+   "exists": false,
+   "tables": {},
+   "verdict": "LEDGER_MISSING"
+  },
+  "3d": {
+   "path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43/paper_3d.sqlite3",
+   "exists": false,
+   "tables": {},
+   "verdict": "LEDGER_MISSING"
+  }
+ },
+ "overall": "LEDGER_MISSING"
+}

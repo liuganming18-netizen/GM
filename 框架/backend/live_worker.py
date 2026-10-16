@@ -36,6 +36,7 @@ sys.dont_write_bytecode = True
 
 import live_store as L                                     # noqa: E402
 import paper_engine as PE                                  # noqa: E402
+import exec_bridge as EB                                   # noqa: E402（v3.1 共用执行核心桥）
 import live_signal_engine as SE                            # noqa: E402
 import live_account as LA                                  # noqa: E402
 import _warmup43 as W                                      # noqa: E402
@@ -47,6 +48,15 @@ H = 3_600_000
 DAY = 24 * H
 ARMS = L.ARMS
 MIN = 60_000
+M15 = 900_000
+
+# ── 两个**独立**开关（任务二验收重点）────────────────────────────────────────
+# · `MAINTAIN_EXISTING`：旧仓维护（退出 / 资金费 / 到期 / 回撤 / 台阶）—— 常开，
+#   **不受**新开仓闸影响；
+# · 新开仓闸：读服务端控制文件（`PE.new_entry_gate()`，fail-closed）——正式候选未选定/
+#   未经最终验收 ⇒ 继续阻断（默认 False）。
+MAINTAIN_EXISTING = True
+TRAIL_MODE = "step_swing"          # 台阶锁利（下一根 15m 生效；单调不降、不回填）
 
 
 def _now():
@@ -54,7 +64,7 @@ def _now():
 
 
 def _arm_exits(sym, arm, resolved, T, window_hours=SE.WINDOW_HOURS):
-    """冻结策略在该币上的 Donchian 退出事件（1h open_time）。
+    """冻结策略在该币上的 Donchian 退出事件（1h open_time）+ 装配好的 1h bar（供台阶锁利）。
 
     装配长度用 `SE.ASSEMBLY_LOOKBACK_HOURS`（= 冻结策略自带 `warmup_contiguous_bars`，
     **不是准入门槛**），否则冻结策略算不出状态。
@@ -64,7 +74,106 @@ def _arm_exits(sym, arm, resolved, T, window_hours=SE.WINDOW_HOURS):
     bars = pack[0]
     r = WX.run(bars, resolved, arm_id=resolved.get("registered_config_id"),
                identity=("binance", sym), require_identity=True)
-    return r.get("exits") or []
+    return (r.get("exits") or []), bars
+
+
+def _trail_schedule(bars_1h, *, entry_ts, entry_price, entry_atr, initial_stop,
+                    params, trail_mode=TRAIL_MODE):
+    """台阶锁利时间表：[(effective_from_ms, stop)]（下一根 15m 生效；单调不降、不回填）。
+
+    评估点 = 入场后的**信号周期（1h）收盘**；生效点 = 紧随其后的 15m 开盘。
+    回看低点/新高只用**已收盘** 1h bar（`core.evaluate_trail_stop` 保证无前视）。
+    """
+    if not EB.CORE_AVAILABLE or trail_mode == "none" or entry_atr is None or entry_atr <= 0:
+        return []
+    # 入场信号 bar（含）起的 1h 序列
+    seq = [b for b in bars_1h if int(b["open_time"]) + H - 1 >= int(entry_ts)]
+    if not seq:
+        return []
+    closes = [float(b["close"]) for b in seq]
+    lows = [float(b["low"]) for b in seq]
+    out = []
+    stop = float(initial_stop)
+    for k in range(1, len(seq) + 1):
+        close_t = int(seq[k - 1]["close_time"])
+        eff = EB.next_15m_open_at_or_after(close_t + 1)
+        res = EB.apply_trail(closes=closes[:k], lows=lows[:k], current_stop=stop,
+                             entry_price=float(entry_price), entry_atr=float(entry_atr),
+                             evaluate_close_time=close_t, next_15m_open_time=eff,
+                             mode=trail_mode)
+        if res.get("updated"):
+            stop = float(res["stop"])
+            out.append((int(eff), stop, res.get("reason")))
+    return out
+
+
+def _scan_position_exit(p, *, mkt, arm_exits, bars_1h, params, T, trail_mode=TRAIL_MODE):
+    """逐根已闭合 15m 扫描一笔持仓的出场（**同刻顺序固定**，全部只用已闭合 bar）。
+
+    同一根 15m 内的判定顺序（与共用执行核心的相位顺序一致）：
+      ① 台阶止损在**本根开盘**生效（`effective_from_ms <= bar.open_time`，单调不降、不回填）；
+      ② **开盘已穿 stop** ⇒ 按更差 open 成交（止损优先，缺口）；
+      ③ 到期 720h ⇒ 本根开盘（= 入场+720h 后首根 15m 开盘，修复 D01）；
+      ④ 预约信号退出 ⇒ 本根开盘（冻结 Donchian 退出事件 + 已批准 15m 延迟）；
+      ⑤ bar 内触 stop ⇒ 按 stop 价成交（止损优先于同根其它价量事件）。
+
+    返回 `(raw_price, bar_open_time, bar_close_time, reason, exit_ts, decision_ctx)`；无出场 ⇒ None。
+    """
+    entry_ts = int(p["entry_ts"])
+    direction = (p.get("direction") or "long")
+    base_stop = p["stop_price"]
+    stop = None if base_stop is None else float(base_stop)
+    entry_price = float(p["entry_price"])
+    entry_atr = p.get("atr_at_entry")
+    # ① 台阶止损时间表（下一根 15m 生效）
+    trail = _trail_schedule(bars_1h, entry_ts=entry_ts, entry_price=entry_price,
+                            entry_atr=(float(entry_atr) if entry_atr else None),
+                            initial_stop=(stop if stop is not None else entry_price),
+                            params=params, trail_mode=trail_mode)
+    trail = sorted(trail, key=lambda x: x[0])
+    trail_i = 0
+    due_expiry = PE.expiry_exit_ts(entry_ts) if EB.CORE_AVAILABLE else \
+        ((entry_ts + int(params["max_holding_hours"]) * H + M15 - 1) // M15) * M15
+    delay_ms = int(params["signal_exit_delay_minutes"]) * MIN
+    bars = PE.closed_15m(mkt, p["symbol"], entry_ts, T)
+    for b in bars:
+        ot, ct = int(b["open_time"]), int(b["close_time"])
+        # ① 台阶止损：本根开盘起生效（取所有 effective<=ot 的最大值 ⇒ 单调不降）
+        while trail_i < len(trail) and trail[trail_i][0] <= ot:
+            if stop is None or trail[trail_i][1] > stop:
+                stop = trail[trail_i][1]
+            trail_i += 1
+        op = PE._f(b["open"]); hi = PE._f(b["high"]); lo = PE._f(b["low"])
+        # ② 开盘已穿 stop（止损优先，缺口用更差 open）
+        if stop is not None and op is not None:
+            if direction == "long" and op <= stop:
+                return (op, ot, ct, "stop_loss", ot,
+                        {"rule": "gap_open_worse_than_stop", "stop": stop, "bar_open": op})
+            if direction == "short" and op >= stop:
+                return (op, ot, ct, "stop_loss", ot,
+                        {"rule": "gap_open_worse_than_stop", "stop": stop, "bar_open": op})
+        # ③ 720h 到期：本根开盘
+        if ot >= due_expiry:
+            return (op, ot, ct, "max_holding_720h_at_first_15m_open", ot,
+                    {"due_ms": due_expiry, "rule": "entry_plus_720h_first_15m_open"})
+        # ④ 预约信号退出：本根开盘（信号事件 + 延迟 <= 本根开盘）
+        for ex in arm_exits:
+            ex_ot = int(ex["open_time"])
+            if ex_ot + delay_ms <= entry_ts:
+                continue
+            if ex_ot + delay_ms <= ot:
+                return (op, ot, ct, "signal_exit_donchian", ot,
+                        {"signal_event_open_time": ex_ot, "delay_ms": delay_ms,
+                         "rule": "signal_exit_at_15m_open"})
+        # ⑤ bar 内触 stop
+        if stop is not None:
+            if direction == "long" and lo is not None and lo <= stop:
+                return (stop, ot, ct, "stop_loss", ot,
+                        {"rule": "stop_price_touched_intrabar", "stop": stop, "bar_low": lo})
+            if direction == "short" and hi is not None and hi >= stop:
+                return (stop, ot, ct, "stop_loss", ot,
+                        {"rule": "stop_price_touched_intrabar", "stop": stop, "bar_high": hi})
+    return None
 
 
 def advance_paper(*, T=None, log=print) -> dict:
@@ -160,7 +269,19 @@ def advance_paper(*, T=None, log=print) -> dict:
     finally:
         con.close()
 
-    opened, rejected = [], []
+    # ── 新开仓闸（**独立开关**；fail-closed）──────────────────────────────────
+    # 旧仓维护（下面的挂单推进/资金费/退出/回撤）**不经过**本闸。
+    gate = PE.new_entry_gate()
+    opened: list = []
+    rejected: list = []
+    if not gate["allow_new_entries"]:
+        log(f"[paper] 新开仓已阻断（{gate['gate_reason']}，来源 {gate['gate_file']}）："
+            f"候选 {len(todo)} 条仅登记为阻断，不写 paper_processed ⇒ 可重试；"
+            f"旧仓维护（退出/资金费/到期/回撤）继续执行。")
+        rejected = [{"signal_uid": d["signal_uid"], "symbol": d["symbol"],
+                     "reason": PE.GATE_REASON} for d in todo]
+        todo = []
+
     for d in todo:
         try:
             payload = json.loads(d.get("payload_json") or "{}")
@@ -170,6 +291,26 @@ def advance_paper(*, T=None, log=print) -> dict:
         if not atr:
             rejected.append({"signal_uid": d["signal_uid"], "reason": "missing_atr"})
             PE.log_no_fill(d["strategy_key"], d["symbol"], d["signal_uid"], "missing_atr")
+            continue
+        # **方向原样传递，绝不改写**（任务二重点修复：short 曾被写成 long 并做多）。
+        # v3.1 只多 ⇒ 非 long 显式拒单（不翻转、不静默丢弃）。
+        raw_dir = payload.get("direction") if payload.get("direction") is not None \
+            else d.get("direction")
+        direction = (EB.normalize_direction(raw_dir) if EB.CORE_AVAILABLE
+                     else (raw_dir if raw_dir in ("long", "short") else None))
+        if direction is None:
+            rejected.append({"signal_uid": d["signal_uid"], "symbol": d["symbol"],
+                             "reason": "illegal_direction_missing_or_unknown",
+                             "raw_direction": raw_dir})
+            PE.log_no_fill(d["strategy_key"], d["symbol"], d["signal_uid"],
+                           "illegal_direction_missing_or_unknown")
+            continue
+        if direction == "short":
+            rejected.append({"signal_uid": d["signal_uid"], "symbol": d["symbol"],
+                             "reason": "short_disabled_by_frozen_view_only_long",
+                             "direction": direction})
+            PE.log_no_fill(d["strategy_key"], d["symbol"], d["signal_uid"],
+                           "short_disabled_by_frozen_view_only_long")
             continue
         # **因果修正（2026-10-13 / 2026-10-14 09 契约）**：把信号的**经济时刻 / 可用时刻 /
         # 真实首次请求墙钟**全部交给 `open_position`；成交绝不早于这些时刻，错过的成交时刻
@@ -181,12 +322,16 @@ def advance_paper(*, T=None, log=print) -> dict:
         try:
             anchor = PE.first_request_anchor(d["strategy_key"], d["signal_uid"], T)
             res = PE.open_position(d["strategy_key"], d["symbol"], signal_uid=d["signal_uid"],
-                                  direction="long", atr=float(atr),
+                                  direction=direction, atr=float(atr),
                                   now_ms=T,
                                   event_time=int(d["confirmed_at"]),
                                   available_at=int(d.get("available_at") or d["confirmed_at"]),
                                   requested_at=anchor, origin="live",
-                                  epoch_ms=epoch, first_request_ms=anchor)
+                                  epoch_ms=epoch, first_request_ms=anchor,
+                                  stop_mode=payload.get("stop_mode"),
+                                  entry_mode=payload.get("entry_mode"),
+                                  struct_low=payload.get("struct_low"),
+                                  trailing_mode=payload.get("trailing_mode"))
         except Exception as exc:                            # noqa: BLE001
             # **单笔异常不拖垮整轮**（2026-10-14 加固）：行情库/账本临时不可用时
             # 该信号下一轮仍会重试（异常路径**不写** `paper_processed`）。
@@ -216,9 +361,19 @@ def advance_paper(*, T=None, log=print) -> dict:
             log(f"[paper] 资金费入账 {arm} 失败：{type(exc).__name__}: {exc}")
             funding[arm] = {"error": f"{type(exc).__name__}: {exc}"}
 
-    # 退出管理
+    # ── 退出管理（旧仓维护；**不受**新开仓闸影响）──────────────────────────────
+    # 相位顺序（与共用执行核心一致）：①资金费已在上方逐笔记账 →
+    # ②回撤锁定（撤挂单/下一根 15m 开盘清仓/本轮锁定）→ 到期 720h / 台阶止损 / 信号退出 / 固定止损。
+    # 止损逐根 15m 检查、止损优先；开盘穿 stop 用**更差 open**；台阶止损在**下一根 15m 开盘**生效。
     exits = []
+    drawdown = {}
     for arm in ARMS:
+        # ② 回撤锁定（先做，清仓后下面的止损扫描自然无仓可扫）
+        try:
+            drawdown[arm] = PE.enforce_drawdown(arm, T=T, log=log)
+        except Exception as exc:                            # noqa: BLE001
+            log(f"[paper] 回撤检查 {arm} 失败：{type(exc).__name__}: {exc}")
+            drawdown[arm] = {"error": f"{type(exc).__name__}: {exc}"}
         con = L.paper_conn(arm)
         try:
             positions = [dict(p) for p in PE.open_positions(con, arm)]
@@ -235,7 +390,7 @@ def advance_paper(*, T=None, log=print) -> dict:
                 exit_map[sym] = _arm_exits(sym, arm, resolved[arm], T)
             except Exception as exc:                    # noqa: BLE001
                 log(f"[paper] exits {arm} {sym} 失败：{type(exc).__name__}: {exc}")
-                exit_map[sym] = []
+                exit_map[sym] = ([], [])
         for sym, plist in by_sym.items():
             # **行情库不可用时只跳过该币的退出判定**，不让整轮 `advance_paper` 抛崩
             # （2026-10-14 加固；与上面 snapshot 同一原则）。
@@ -245,60 +400,20 @@ def advance_paper(*, T=None, log=print) -> dict:
                 log(f"[paper] exits {arm} {sym} 跳过（行情库不可用）：{type(exc).__name__}: {exc}")
                 continue
             try:
+                arm_exits, bars_1h = exit_map.get(sym) or ([], [])
                 for p in plist:
-                    entry_ts = int(p["entry_ts"])
-                    stop = p["stop_price"]
-                    direction = p.get("direction") or "long"
-                    bars = PE.closed_15m(mkt, sym, entry_ts, T)
-                    hit = None
-                    for b in bars:
-                        lo = PE._f(b["low"]); hi = PE._f(b["high"]); op = PE._f(b["open"])
-                        if direction == "short":
-                            if stop is not None and hi is not None and hi >= float(stop):
-                                # 做空缺口：开盘已涨破 ⇒ 按更差开盘成交；否则按止损价
-                                raw = op if (op is not None and op >= float(stop)) else float(stop)
-                                hit = (raw, int(b["open_time"]), int(b["close_time"]), "stop_loss")
-                                break
-                        else:
-                            if stop is not None and lo is not None and lo <= float(stop):
-                                # 做多缺口：开盘已跌破 ⇒ 按更差开盘成交；否则按止损价
-                                raw = op if (op is not None and op <= float(stop)) else float(stop)
-                                hit = (raw, int(b["open_time"]), int(b["close_time"]), "stop_loss")
-                                break
-                    if hit is None:
-                        # 信号退出：冻结 Donchian 退出事件（1h open_time）+ 已批准 15m 延迟
-                        for ex in exit_map.get(sym, []):
-                            ex_ot = int(ex["open_time"])
-                            if ex_ot + int(params["signal_exit_delay_minutes"]) * MIN <= entry_ts:
-                                continue
-                            eb = PE.bar_at_or_after(mkt, sym,
-                                                    ex_ot + int(params["signal_exit_delay_minutes"]) * MIN)
-                            if eb is None:
-                                continue
-                            hit = (PE._f(eb["open"]), int(eb["open_time"]), int(eb["close_time"]),
-                                   "signal_exit_donchian")
-                            break
-                    if hit is None:
-                        held_h = (T - entry_ts) / H
-                        if held_h >= float(params["max_holding_hours"]):
-                            last = PE.last_closed_15m(mkt, sym)
-                            if last is not None:
-                                hit = (PE._f(last["close"]), int(last["open_time"]),
-                                       int(last["close_time"]), "max_holding")
+                    hit = _scan_position_exit(p, mkt=mkt, arm_exits=arm_exits,
+                                              bars_1h=bars_1h, params=params, T=T)
                     if hit is None:
                         continue
-                    raw, bot, bct, why = hit
-                    # 经济出场时刻与入场同轴（bar 时刻）：
-                    #   · 止损/信号退出成交在该 bar 的**开盘** ⇒ 用 bar_open_time；
-                    #   · 最长持仓成交在最后一根已闭合 bar 的**收盘** ⇒ 用 bar_close_time。
-                    exit_ts = bct if why == "max_holding" else bot
+                    raw, bot, bct, why, exit_ts, dctx = hit
                     r = PE.close_at_price(arm, int(p["position_id"]), raw_price=raw, now_ms=T,
                                           reason=why, bar_open_time=bot, bar_close_time=bct,
-                                          exit_ts=exit_ts)
+                                          exit_ts=exit_ts, decision_context=dctx)
                     exits.append(r)
             finally:
                 mkt.close()
-    log(f"[paper] exits={len(exits)}")
+    log(f"[paper] exits={len(exits)} drawdown={ {a: (v or {}).get('actions') for a, v in drawdown.items()} }")
     # **逐臂单独 try/except（2026-10-14 加固）**：`PE.snapshot` 需要读行情库估市值。
     # 行情库缺失/不可打开时**只让该臂快照降级**，绝不能把整轮 `advance_paper` 抛崩
     # （否则开仓/挂单/资金费/退出的既有结果全部丢失，且 worker 无法常驻）。
@@ -313,9 +428,14 @@ def advance_paper(*, T=None, log=print) -> dict:
             log(f"[paper] snapshot {a} 降级（行情库不可用？）：{type(exc).__name__}: {exc}")
             snap[a] = {"error": f"{type(exc).__name__}: {exc}"}
     return {"opened": opened, "rejected": rejected, "exits": exits,
-            "pending": pend_res, "funding": funding,
+            "pending": pend_res, "funding": funding, "drawdown": drawdown,
             "live_start_ms": L.get_live_start_ms(), "paper_epoch_ms": epoch,
             "effective_floor_ms": floor_ms, "n_pre_watermark_display_only": n_pre,
+            "switches": PE.switches(),
+            "maintain_existing": MAINTAIN_EXISTING,
+            "allow_new_entries": gate["allow_new_entries"],
+            "exec_core": (EB.version_ids() if EB.CORE_AVAILABLE
+                          else {"core_available": False, "import_error": EB.IMPORT_ERROR}),
             "snapshot": snap}
 
 
@@ -373,6 +493,10 @@ def run_once(*, T=None, limit=0, force=False, with_signals=True, with_accounts=T
                                     "assembly_lookback_hours"),
                                 "n_opened": len(out.get("paper", {}).get("opened", [])),
                                 "n_exits": len(out.get("paper", {}).get("exits", [])),
+                                "allow_new_entries": (out.get("paper", {}) or {}).get(
+                                    "allow_new_entries"),
+                                "maintain_existing": MAINTAIN_EXISTING,
+                                "exec_core": (out.get("paper", {}) or {}).get("exec_core"),
                                 "n_pending": (out.get("paper", {}).get("pending") or {}).get(
                                     "still_pending"),
                                 "funding_events_this_cycle": sum(

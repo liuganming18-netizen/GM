@@ -46,14 +46,29 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlsplit
 
-PROJECT_ROOT = os.environ.get(
-    "DATA_HUB_PROJECT", "/Users/boos/WorkBuddy AI/加密货币趋势判断系统")
-# P3 切流（2026-10-13）：默认库 = 新热库 market_v2.sqlite3（旧 market.sqlite3 已退役）。
-# 冷档路由由 MARKET_ARCHIVE 环境变量启用（见下方 _REPO 装配）。
-DB_PATH = os.environ.get("MARKET_DB", os.path.join(PROJECT_ROOT, "data", "market_v2.sqlite3"))
-PORT = int(os.environ.get("PORT", "8787"))
 HERE = os.path.dirname(os.path.abspath(__file__))
 FRAMEWORK_ROOT = os.path.dirname(HERE)
+DESKTOP_ROOT = os.path.dirname(FRAMEWORK_ROOT)
+
+# 自动优先探测真实存在的本地项目目录与数据库文件
+_CANDIDATE_DBS = [
+    os.environ.get("MARKET_DB"),
+    os.path.join(HERE, "data", "market_v2.sqlite3"),
+    os.path.join(FRAMEWORK_ROOT, "data_hub", "market_v2.sqlite3"),
+    os.path.join(DESKTOP_ROOT, "数据", "市场数据", "db", "market_v2.sqlite3"),
+    os.path.join(DESKTOP_ROOT, "data", "market_v2.sqlite3"),
+    "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
+]
+DB_PATH = next((p for p in _CANDIDATE_DBS if p and os.path.exists(p)), _CANDIDATE_DBS[1])
+
+_CANDIDATE_PROJECTS = [
+    os.environ.get("DATA_HUB_PROJECT"),
+    DESKTOP_ROOT,
+    "/Users/boos/WorkBuddy AI/加密货币趋势判断系统",
+]
+PROJECT_ROOT = next((p for p in _CANDIDATE_PROJECTS if p and os.path.exists(p)), DESKTOP_ROOT)
+PORT = int(os.environ.get("PORT", "8787"))
+
 if FRAMEWORK_ROOT not in sys.path:
     sys.path.insert(0, FRAMEWORK_ROOT)
 if PROJECT_ROOT not in sys.path:
@@ -85,6 +100,23 @@ try:                                                 # noqa: E402
 except Exception as _exc:                            # noqa: BLE001
     live = None
     _LIVE_IMPORT_ERROR = f"{type(_exc).__name__}: {_exc}"
+
+# ── 单一策略真实回测接入（2026-10-16，**加性**）──────────────────────────────
+# 独立模块：研究回测任务/持久化/API 适配。**不改** live_signal_engine / paper_engine，
+# 不启 worker、不写 paper 账户、不碰旧 ledger/state/manifest。
+# 依赖 numpy/pandas（候选包执行核心）⇒ 导入失败只影响 `/api/v1/backtests` 新通道，
+# 不影响既有行情/信号/纸面端点。
+try:                                                 # noqa: E402
+    import backtest_api as backtest                 # noqa: E402
+    _BACKTEST_IMPORT_ERROR = None
+except Exception as _exc:                            # noqa: BLE001
+    backtest = None
+    _BACKTEST_IMPORT_ERROR = f"{type(_exc).__name__}: {_exc}"
+
+
+def _backtest_missing(reason):
+    return missing(reason, "not_connected", items=[], has_more=False, next_cursor=None,
+                   total=None)
 
 
 def _live_missing(reason):
@@ -2658,9 +2690,15 @@ def v1_strategies():
         current = registry.list_current(con)
         legacy = registry.list_legacy(con)
     ctx = _current_run_ctx()
+    try:
+        current_backtest = registry.describe_current_backtest(None)
+    except Exception as _exc:                            # noqa: BLE001
+        current_backtest = {"available": False,
+                            "import_error": f"{type(_exc).__name__}: {_exc}"}
     return envelope(items=current + legacy, current=current, legacy=legacy,
                     current_run_keys=sorted(CURRENT_RUN_KEYS),
                     legacy_keys=sorted(LEGACY_RUN_KEYS),
+                    current_backtest=current_backtest,
                     run_binding={"gates": ctx.get("gates"),
                                  "all_pass": ctx.get("gates_all_pass"),
                                  "source": ctx.get("gates_source")},
@@ -3121,7 +3159,16 @@ def route_v1(path, params):
         if live is None:
             return _live_missing(f"实盘只读模块导入失败：{_LIVE_IMPORT_ERROR}"), 200
         return live.live_accounts(params), 200
-    if seg and seg[0] in ("backtests", "reviews"):
+    if seg and seg[0] == "backtests":
+        # 新通道（研究回测）：**不带 mode** 时走 backtest_api（实验列表 / {id} / 子资源）。
+        # 带 mode（history / paper_review）时**保持旧契约**，仍走 live.backtest_review。
+        mode = (params.get("mode") or [None])[0]
+        if mode is None and backtest is not None:
+            return backtest.route(seg[1:], params)
+        if live is None:
+            return _live_missing(f"回测复盘模块导入失败：{_LIVE_IMPORT_ERROR}"), 200
+        return live.backtest_review(params), 200
+    if seg and seg[0] == "reviews":
         if live is None:
             return _live_missing(f"回测复盘模块导入失败：{_LIVE_IMPORT_ERROR}"), 200
         return live.backtest_review(params), 200
@@ -3171,6 +3218,20 @@ def _v1_signals_merged(params):
         return base
     scope = live._scope_of(params)
     is_current = scope == live.CURRENT_SCOPE
+    # **运行身份 / 账本来源 / 数据版本透传**（2026-10-15 身份统一）：
+    # 合并层此前只搬 items/total/has_more/quality，把实时层的身份字段整块丢掉
+    # ⇒ 信号接口无法追溯「哪个策略版本、哪套规则、哪个库、哪份数据」。
+    _ident_keys = ("strategy_version", "rule_version", "param_hash", "param_hash_basis",
+                   "params_source", "rule_view_available", "rule_view_spec_version",
+                   "rule_view_note", "exec_core_crosscheck", "data_version",
+                   "daily_list_version", "pool_rule_identity", "ledger_source", "as_of")
+    try:
+        _id = live._runtime_identity()
+        for _k, _v in _id.items():
+            if _k in _ident_keys and _v is not None:
+                base[_k] = _v
+    except Exception:                                 # noqa: BLE001
+        pass
     try:
         lv = live.live_signals(params)
     except Exception as exc:                          # noqa: BLE001
@@ -3179,6 +3240,10 @@ def _v1_signals_merged(params):
                            "note": f"实时信号层读取失败：{type(exc).__name__}: {exc}"}
         return base
     live_items = lv.get("items") or []
+    # 实时层自报的身份**优先**（它绑定的是这次真实读库所用的口径）
+    for _k in _ident_keys:
+        if lv.get(_k) is not None:
+            base[_k] = lv[_k]
     # 当前交易信号区**不含**库内 `signals` 表（历史研究路径）；审计通道才合并。
     db_items = [] if is_current else (base.get("items") or [])
     merged = live_items + db_items
@@ -3245,7 +3310,7 @@ class Handler(BaseHTTPRequestHandler):
     _HEAVY_SEM = threading.BoundedSemaphore(_HEAVY_SLOTS)
     # 轻量（实时/纸面/健康）路径前缀：这些接口是「页面轮询 + 验收探针」的主路径
     _LIGHT_PREFIXES = ("/api/v1/health", "/api/v1/live/", "/api/v1/paper/",
-                       "/api/v1/accounts", "/api/health", "/health")
+                       "/api/v1/accounts", "/api/v1/backtests", "/api/health", "/health")
     # 观测计数（供 /api/v1/health 暴露；只增不改任何业务语义）
     CLIENT_ABORTS = 0
     REQUESTS = 0
@@ -3397,10 +3462,15 @@ class Handler(BaseHTTPRequestHandler):
         self._emit(body, status)
 
     def do_POST(self):  # noqa: N802
-        """**唯一写入口**：`POST /api/v1/paper/orders` → 服务端纸面账本开/平仓。
+        """写入口（**仅两处**）：
 
-        仅此一路由允许写入，且写入对象是**纸面账本**（`paper_engine`），
-        不触碰实盘、不提交任何真实订单。浏览器不得自行造仓。
+        · `POST /api/v1/paper/orders` → 服务端**纸面账本**开/平仓（`paper_engine`），
+          不触碰实盘、不提交任何真实订单；
+        · `POST /api/v1/backtests`    → **创建研究回测任务**（2026-10-16 新增）。
+          只写 `runs/<run_id>/`（原子独占目录），**不写 paper 账户、不启 worker**、
+          不碰旧 ledger/state/manifest；策略为纯合成模拟，`live_order_enabled` 恒 False。
+
+        浏览器不得自行造仓；除上述两路外一律 404。
         """
         parsed = urlsplit(self.path)
         type(self).REQUESTS += 1
@@ -3417,7 +3487,11 @@ class Handler(BaseHTTPRequestHandler):
                 self._emit({"错误": f"请求体解析失败：{exc}"}, 400)
                 return
             try:
-                if parsed.path == "/api/v1/paper/orders":
+                bt_res = (backtest.route_post(parsed.path, payload)
+                          if backtest is not None else None)
+                if bt_res is not None:
+                    body, status = bt_res
+                elif parsed.path == "/api/v1/paper/orders":
                     if live is None:
                         body, status = _live_missing(
                             f"纸面模块导入失败：{_LIVE_IMPORT_ERROR}"), 200
@@ -3542,6 +3616,14 @@ def main():
         threading.Thread(target=srv.serve_forever, daemon=True).start()
     # 后台预热最贵的库级索引，避免重启后首轮请求触发前端轮询堆积（见 _prewarm 注释）
     threading.Thread(target=_prewarm, daemon=True).start()
+    # 回测任务启动钩子：把遗留 queued/running 标 interrupted（**不冒充成功**，保留原因）
+    if backtest is not None:
+        try:
+            _touched = backtest.startup()
+            if _touched:
+                print(f"[adapter] 回测遗留运行标 interrupted：{_touched}", flush=True)
+        except Exception as _exc:                     # noqa: BLE001
+            print(f"[adapter] 回测启动钩子失败（不影响服务）：{_exc}", flush=True)
     print(f"[adapter] {','.join(bound)}:{PORT} db={DB_PATH}", flush=True)
     servers[0].serve_forever()
 

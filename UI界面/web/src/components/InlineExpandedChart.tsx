@@ -979,7 +979,7 @@ const InlineExpandedChartInner: React.FC<InlineExpandedChartProps> = ({
         </div>
       </div>
 
-      {/* Candlestick & Volume Subplot Area（主 K 线区增高至 420px，舒展专业） */}
+      {/* Candlestick & Volume Subplot Area（主 K 线区 340px） */}
       <div className="space-y-2">
         {/* Canvas Toolbar & Ticker Stats */}
         <div className="flex flex-wrap items-center justify-between text-xs text-gray-500 gap-2 px-1">
@@ -999,9 +999,12 @@ const InlineExpandedChartInner: React.FC<InlineExpandedChartProps> = ({
           </div>
         </div>
 
-        {/* Candlestick / Volume Chart Container（高度提升至 420px，白底清爽） */}
+        {/* Candlestick / Volume Chart Container（340px，白底清爽）
+            2026-10-15 收敛：原 420px 时展开一整块（K线 420 + OI 140）高达 ~660px，
+            把下方行情表挤到只剩 1 行可见。收至 340px 后仍保留完整 K 线主图与
+            缩放/平移/悬停交互，展开状态下可多看到约 1.5 行行情。 */}
         <div
-          className="relative w-full h-[420px] bg-white rounded-md border border-gray-200 p-1 overflow-hidden"
+          className="relative w-full h-[340px] bg-white rounded-md border border-gray-200 p-1 overflow-hidden"
           title="滚轮缩放、拖动平移；K线、成交量与OI联动。"
           onWheelCapture={markUserViewport}
           onPointerDown={markUserViewport}
@@ -1028,7 +1031,7 @@ const InlineExpandedChartInner: React.FC<InlineExpandedChartProps> = ({
         </div>
       </div>
 
-      {/* OI Section: total open interest（副图高度 140px） */}
+      {/* OI Section: total open interest（副图高度 116px） */}
       <div className="space-y-1.5 pt-1">
         <div className="flex flex-wrap items-center justify-between text-xs gap-2">
           <div className="flex items-center gap-3">
@@ -1082,9 +1085,9 @@ const InlineExpandedChartInner: React.FC<InlineExpandedChartProps> = ({
           </div>
         </div>
 
-        {/* OI 柱形图容器（高度 140px，白底清爽） */}
+        {/* OI 柱形图容器（116px，白底清爽；2026-10-15 由 140px 收敛） */}
         <div
-          className="w-full h-[140px] bg-white rounded-md border border-gray-200 p-1 relative overflow-hidden"
+          className="w-full h-[116px] bg-white rounded-md border border-gray-200 p-1 relative overflow-hidden"
           onWheelCapture={markUserViewport}
           onPointerDown={markUserViewport}
           onTouchStart={markUserViewport}

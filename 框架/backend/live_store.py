@@ -25,17 +25,55 @@ import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-BASE = HERE.parent                                   # outputs/网站逆向研究
-W43 = BASE / "最新唐奇安威科夫接通与收尾_2026-10-11" / "量价信号接入与模拟历史并行43"
-PAPER_DIR = Path(os.environ.get("PAPER_DIR", str(W43 / "纸面模拟43")))
+# 工程根：框架/backend → 框架 → 工程根（桌面工程 `威科夫因子共振趋势/`）
+PROJECT_ROOT = HERE.parents[1] if len(HERE.parents) >= 2 else HERE.parent
+BASE = PROJECT_ROOT                                  # 兼容旧名（调用方仍引用 L.BASE）
+W43 = HERE.parent / "最新唐奇安威科夫接通与收尾_2026-10-11" / "量价信号接入与模拟历史并行43"
+
+# ── 纸面账本身份与路径（**唯一权威**；fail-closed）────────────────────────────
+# 历史缺陷（2026-10-15 独立核验确认）：旧实现 `BASE = HERE.parent` +
+# `PAPER_DIR = BASE/最新唐奇安…/纸面模拟43`，且 `_connect(create=True)` 会
+# **自动创建**目录与库文件。源码迁到桌面工程后，同一相对式解析到**另一个空目录**，
+# 于是接口读到 4 份空账本却报 `quality=ok` —— 等同于**凭空新开四份 5000U 假账户
+# 冒充原账户**，且原账本（含 177 条持仓 / 25 笔未作废在持仓）被彻底绕开。
+#
+# 现纪律（不可回退）：
+#   · 账本目录**显式**来自启动配置 `PAPER_LEDGER_DIR`；缺省 = 工程根 `数据/paper`
+#     （= 迁移清单 M002–M005 的目标相对范围，**不是**任何相对推导目录）；
+#   · **缺库 ⇒ 抛 `LedgerUnavailable`**；**身份不符 ⇒ 抛 `LedgerIdentityMismatch`**；
+#     绝不自动创建、绝不换目录、绝不用空库冒充；
+#   · 仅当显式 `PAPER_LEDGER_ALLOW_INIT=1`（供隔离测试/受控建档）才允许创建空库；
+#   · 账本身份以 `ledger_identity.json`（本目录内）为权威声明，并与库内
+#     `paper_state/paper_account.account_id` 交叉核对。
+LEDGER_DIR = Path(os.environ.get("PAPER_LEDGER_DIR", str(PROJECT_ROOT / "数据" / "paper")))
+PAPER_DIR = LEDGER_DIR                               # 兼容旧名（调用方仍引用 L.PAPER_DIR）
+LEDGER_MANIFEST = LEDGER_DIR / "ledger_identity.json"
+LEDGER_ALLOW_INIT = os.environ.get("PAPER_LEDGER_ALLOW_INIT", "0") == "1"
+LEDGER_SPEC_VERSION = os.environ.get(
+    "PAPER_LEDGER_SPEC", "F_WX_v2.2_project_closure_user_5000_shared")
+# 冻结的历史回测账本目录（迁移清单 M042–M046 的目标相对范围）；不存在 ⇒ 缺失态
+BACKTEST_LEDGER_DIRS = (
+    PROJECT_ROOT / "回测日志" / "回测资源改造_2026-10-14" / "ledgers_ra",
+    PROJECT_ROOT / "回测日志" / "全池真实费用回测_2026-10-13" / "ledgers",
+)
+
 LIVE_DIR = Path(os.environ.get("LIVE_DIR", str(HERE / "live")))
 LIVE_DB = Path(os.environ.get("LIVE_DB", str(LIVE_DIR / "live_signals.sqlite3")))
-# P3 切流（2026-10-13）：只读行情库默认 = 新热库 market_v2.sqlite3（旧库已退役）
+# 只读行情库默认 = 桌面工程热库（旧绝对路径已随旧工作区清理，不再作为默认；
+# 启动脚本会显式注入 MARKET_DB）。
 MARKET_DB = Path(os.environ.get(
-    "MARKET_DB", "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3"))
+    "MARKET_DB", str(PROJECT_ROOT / "数据" / "市场数据" / "db" / "market_v2.sqlite3")))
 
 ARMS = ("3a", "3b", "3c", "3d")
 INIT_EQUITY = 5000.0
+
+
+class LedgerUnavailable(RuntimeError):
+    """纸面账本缺失 / 不可读 ⇒ 调用方必须如实报 `unavailable`，**不得**创建或换库。"""
+
+
+class LedgerIdentityMismatch(RuntimeError):
+    """纸面账本存在但身份与预期不符 ⇒ 拒绝读写，不得冒充原账户。"""
 
 # ── 实盘只读账户状态取值（前后端同一枚举；禁止用「未实现接口的空态」冒充「未配置」）──
 ACC_STATUSES = (
@@ -409,12 +447,169 @@ PAPER_COLUMNS = (
 )
 
 
-def paper_conn(arm: str, *, ro: bool = False) -> sqlite3.Connection:
-    """复用既有 `paper_{arm}.sqlite3`；写模式自动做**加性** schema 升级。"""
+def ledger_path(arm: str) -> Path:
+    """某臂账本**权威**路径（不做任何相对推导）。"""
     if arm not in ARMS:
         raise ValueError("未知臂：%r" % (arm,))
-    path = PAPER_DIR / f"paper_{arm}.sqlite3"
-    con = _connect(path, ro=ro, create=not ro)
+    return LEDGER_DIR / f"paper_{arm}.sqlite3"
+
+
+def expected_account_id(arm: str) -> str:
+    return f"paper43_{arm}"
+
+
+def _sha256_file(path: Path) -> str | None:
+    try:
+        import hashlib
+        h = hashlib.sha256()
+        with open(path, "rb") as f:
+            for chunk in iter(lambda: f.read(1 << 20), b""):
+                h.update(chunk)
+        return h.hexdigest()
+    except OSError:
+        return None
+
+
+def read_manifest() -> dict:
+    """账本目录身份声明（`ledger_identity.json`）；缺失返回 `{}`（不视为错误）。"""
+    import json
+    try:
+        doc = json.loads(LEDGER_MANIFEST.read_text(encoding="utf-8"))
+        return doc if isinstance(doc, dict) else {}
+    except Exception:                                    # noqa: BLE001
+        return {}
+
+
+def _db_identity(con: sqlite3.Connection) -> dict:
+    """从库内读**可交叉核对**的身份（account_id / 初始权益 / 规格）。"""
+    ident = {"account_id": None, "initial_equity": None, "spec_version": None}
+    for sql, keys in (
+        ("SELECT account_id, initial_equity FROM paper_account LIMIT 1",
+         ("account_id", "initial_equity")),
+        ("SELECT account_id FROM paper_state LIMIT 1", ("account_id",)),
+    ):
+        try:
+            r = con.execute(sql).fetchone()
+        except sqlite3.OperationalError:
+            continue
+        if r:
+            for i, k in enumerate(keys):
+                if ident.get(k) is None:
+                    ident[k] = r[i]
+    try:
+        r = con.execute("SELECT value_json FROM live_run WHERE key='ledger_spec_version'"
+                        ).fetchone()
+        if r:
+            import json as _json
+            ident["spec_version"] = _json.loads(r[0]) if r[0] else None
+    except sqlite3.OperationalError:
+        pass
+    return ident
+
+
+def verify_ledger_identity(con: sqlite3.Connection, arm: str, *, strict: bool = True) -> dict:
+    """核对账本身份。返回身份 dict；不符且 `strict` ⇒ 抛 `LedgerIdentityMismatch`。
+
+    判据（**任一不符即拒绝**）：
+      · 库内若已声明 `account_id`，必须 == `paper43_{arm}`；
+      · 目录 `ledger_identity.json` 若声明该臂，其 `account_id` 必须一致，
+        且（若给 `sha256`）与库文件摘要一致。
+    """
+    ident = _db_identity(con)
+    db_acc = ident.get("account_id")
+    if db_acc and db_acc != expected_account_id(arm):
+        if strict:
+            raise LedgerIdentityMismatch(
+                f"账本身份不符：{LEDGER_DIR}/paper_{arm}.sqlite3 内 account_id="
+                f"{db_acc!r}，期望 {expected_account_id(arm)!r}")
+        ident["identity_mismatch"] = True
+    man = read_manifest()
+    man_arms = (man.get("accounts") or {}) if isinstance(man, dict) else {}
+    m = man_arms.get(arm)
+    if isinstance(m, dict):
+        ma = m.get("account_id")
+        if ma and db_acc and ma != db_acc:
+            if strict:
+                raise LedgerIdentityMismatch(
+                    f"账本清单与库内身份不一致：manifest[{arm}].account_id={ma!r} "
+                    f"vs 库内 {db_acc!r}")
+            ident["manifest_mismatch"] = True
+        if m.get("spec_version"):
+            ident["spec_version"] = m.get("spec_version")
+        ident["manifest_declared"] = True
+    return ident
+
+
+def _provision_ledger(arm: str, path: Path) -> sqlite3.Connection:
+    """**受控建档**（仅 `PAPER_LEDGER_ALLOW_INIT=1` 时可达）：创建空账本 + 声明身份。"""
+    import json
+    path.parent.mkdir(parents=True, exist_ok=True)
+    con = _connect(path, ro=False, create=True)
+    con.executescript(PAPER_ADDITIVE)
+    for stmt in PAPER_INDEXES_GUARDED:
+        try:
+            con.execute(stmt)
+        except sqlite3.OperationalError:
+            pass
+    for table, col, decl in PAPER_COLUMNS:
+        try:
+            cols = {r[1] for r in con.execute(f"PRAGMA table_info({table})")}
+        except sqlite3.OperationalError:
+            continue
+        if not cols or col in cols:
+            continue
+        try:
+            con.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl}")
+        except sqlite3.OperationalError:
+            pass
+    con.execute("INSERT OR IGNORE INTO paper_account(account_id,arm,initial_equity,cash,"
+                "leverage,dry_run,created_at) VALUES(?,?,?,?,1,1,?)",
+                (expected_account_id(arm), arm, INIT_EQUITY, INIT_EQUITY, now_ms()))
+    con.execute("INSERT OR IGNORE INTO paper_state(account_id,cash,realized_pnl,fees_paid,"
+                "funding_paid,updated_at) VALUES(?,?,0,0,0,?)",
+                (expected_account_id(arm), INIT_EQUITY, now_ms()))
+    con.commit()
+    # 落身份清单（**追加式**：保留既有其它臂声明）
+    try:
+        man = read_manifest() or {}
+        man.setdefault("spec_version", LEDGER_SPEC_VERSION)
+        man.setdefault("created_utc", None)
+        man.setdefault("accounts", {})
+        man["accounts"][arm] = {
+            "account_id": expected_account_id(arm),
+            "initial_equity": INIT_EQUITY,
+            "provisioned_at_ms": now_ms(),
+        }
+        man["note"] = ("受控建档（PAPER_LEDGER_ALLOW_INIT=1）；"
+                       "正式账本须按迁移清单 M002–M005 迁入，不得用空库冒充原账户。")
+        LEDGER_MANIFEST.write_text(json.dumps(man, ensure_ascii=False, indent=1),
+                                   encoding="utf-8")
+    except OSError:
+        pass
+    return con
+
+
+def paper_conn(arm: str, *, ro: bool = False, create: bool | None = None,
+               strict_identity: bool = True) -> sqlite3.Connection:
+    """复用既有 `paper_{arm}.sqlite3`；**缺库即报错，绝不自动创建**。
+
+    · `ro=True`  → 只读打开（并核对身份）；
+    · `ro=False` → 读写打开并做**加性** schema 升级（不删、不重建、不改既有列语义）；
+    · 库文件不存在 ⇒ `LedgerUnavailable`（除非显式 `create=True` 且允许建档）；
+    · 身份不符 ⇒ `LedgerIdentityMismatch`。
+    """
+    path = ledger_path(arm)
+    allow_create = (create is True) or (create is None and LEDGER_ALLOW_INIT)
+    if not path.exists():
+        if not allow_create:
+            raise LedgerUnavailable(
+                f"纸面账本缺失：{path} —— 拒绝自动创建（不得用空库冒充原账户）。"
+                f"请按迁移清单 M00{ARMS.index(arm) + 2} 受控迁入，或显式设置 "
+                f"PAPER_LEDGER_DIR / PAPER_LEDGER_ALLOW_INIT=1（仅隔离建档）。")
+        con = _provision_ledger(arm, path)
+        verify_ledger_identity(con, arm, strict=strict_identity)
+        return con
+    con = _connect(path, ro=ro, create=False)
     if not ro:
         con.executescript(PAPER_ADDITIVE)
         for stmt in PAPER_INDEXES_GUARDED:
@@ -433,16 +628,71 @@ def paper_conn(arm: str, *, ro: bool = False) -> sqlite3.Connection:
                 con.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl}")
             except sqlite3.OperationalError:
                 pass
-        con.execute("INSERT OR IGNORE INTO paper_state(account_id,cash,realized_pnl,fees_paid,"
-                    "funding_paid,updated_at) VALUES(?,?,0,0,0,?)",
-                    (f"paper43_{arm}", INIT_EQUITY, now_ms()))
         con.commit()
+    try:
+        verify_ledger_identity(con, arm, strict=strict_identity)
+    except (LedgerIdentityMismatch, sqlite3.OperationalError):
+        con.close()
+        raise
     return con
 
 
 def paper_conns(*, ro: bool = False):
-    """四臂账本连接（dict arm→con）。"""
-    return {a: paper_conn(a, ro=ro) for a in ARMS}
+    """四臂账本连接（dict arm→con）；**缺库的臂直接缺席**（由调用方如实报缺）。"""
+    out = {}
+    for a in ARMS:
+        try:
+            out[a] = paper_conn(a, ro=ro)
+        except (LedgerUnavailable, LedgerIdentityMismatch):
+            continue
+    return out
+
+
+def ledger_status() -> dict:
+    """**只读**账本状态（供 API/UI 追溯「接口到底读的哪个库」）。"""
+    man = read_manifest()
+    out = {
+        "ledger_dir": str(LEDGER_DIR),
+        "manifest_path": str(LEDGER_MANIFEST),
+        "manifest_present": LEDGER_MANIFEST.exists(),
+        "spec_version": man.get("spec_version") or LEDGER_SPEC_VERSION,
+        "allow_init": LEDGER_ALLOW_INIT,
+        "arms": {},
+    }
+    for a in ARMS:
+        p = ledger_path(a)
+        info = {"path": str(p), "exists": p.exists(), "account_id_expected":
+                expected_account_id(a)}
+        if p.exists():
+            try:
+                con = _connect(p, ro=True)
+                try:
+                    rows = {}
+                    for t in ("paper_position", "paper_fill", "paper_funding",
+                              "paper_equity", "paper_realized", "paper_order", "paper_state"):
+                        try:
+                            rows[t] = int(con.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0])
+                        except sqlite3.OperationalError:
+                            rows[t] = None
+                    try:
+                        info["open_nonvoid"] = int(con.execute(
+                            "SELECT COUNT(*) FROM paper_position "
+                            "WHERE COALESCE(voided,0)=0 AND status='open'").fetchone()[0])
+                    except sqlite3.OperationalError:
+                        info["open_nonvoid"] = None
+                    info["rows"] = rows
+                    info["identity"] = _db_identity(con)
+                    info["readable"] = True
+                finally:
+                    con.close()
+                info["sha256"] = _sha256_file(p)
+            except Exception as exc:                     # noqa: BLE001
+                info["readable"] = False
+                info["error"] = f"{type(exc).__name__}: {exc}"
+        out["arms"][a] = info
+    out["all_present"] = all(v["exists"] for v in out["arms"].values())
+    out["any_present"] = any(v["exists"] for v in out["arms"].values())
+    return out
 
 
 # ── 实时起点水位线（**因果闸门**）─────────────────────────────────────────────
@@ -556,9 +806,22 @@ def get_run(key: str, default=None):
 
 
 if __name__ == "__main__":
+    import json as _json
     ensure_live_schema()
-    for a in ARMS:
-        con = paper_conn(a)
-        con.close()
     print("live_store: schema ready ->", LIVE_DB)
-    print("paper ledgers ->", PAPER_DIR)
+    st = ledger_status()
+    print("paper ledger dir ->", st["ledger_dir"])
+    for a, info in st["arms"].items():
+        print(f"  {a}: exists={info['exists']} "
+              + (f"rows={info.get('rows')} identity={info.get('identity')}"
+                 if info["exists"] else "MISSING（拒绝自动创建）"))
+    # 缺库不静默建档；仅显式允许时才建档
+    if st["all_present"] or LEDGER_ALLOW_INIT:
+        for a in ARMS:
+            try:
+                paper_conn(a).close()
+            except (LedgerUnavailable, LedgerIdentityMismatch) as exc:
+                print(f"  {a}: {type(exc).__name__}: {exc}")
+    else:
+        print("  缺库 ⇒ 不自动创建（如需受控建档：PAPER_LEDGER_ALLOW_INIT=1）")
+    print(_json.dumps({"ledger_status": st}, ensure_ascii=False, indent=1)[:2000])

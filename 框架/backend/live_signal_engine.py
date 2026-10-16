@@ -52,24 +52,25 @@ sys.dont_write_bytecode = True
 
 import live_store as L                                   # noqa: E402
 import paper_engine as PE                                # noqa: E402
+import exec_bridge as EB                                 # noqa: E402（v3.1 共用执行核心桥）
 import live_pool as LP                                   # noqa: E402（在线候选入口 = 当前币池）
-import _接入43 as I                                       # noqa: E402
-import _warmup43 as W                                    # noqa: E402
+LEGACY_PIPELINE_AVAILABLE = False
+try:
+    import _接入43 as I                                       # noqa: E402
+    import _warmup43 as W                                    # noqa: E402
+    LEGACY_PIPELINE_AVAILABLE = True
+except Exception:                                            # noqa: BLE001
+    I = None
+    W = None
+
 from strategies import wx_daily_375 as D                 # noqa: E402
 from strategies import wx_config as CFG                  # noqa: E402
 from strategies import wx_donchian_wyckoff as WX         # noqa: E402
 
 # ── P3 冷热切流对齐（2026-10-14 生产接通专项）────────────────────────────────
-# `_warmup43` 是**冻结模块**，其 `MARKET_DB` 硬编码为**已退役旧库**
-# `data/market.sqlite3`（该库 1h 已冻结在 2026-10-13T15:00:00Z）。实时引擎的 1h 读路径
-# 全部经 `_warmup43.open_ro()`，于是每轮 `_latest_closed_1h` 都返回同一个 15:00:00Z，
-# 与增量水位 `signal_engine_state.last_bar_by_symbol` 相等 ⇒ **526 全跳过、零信号**。
-# 按既有纪律「改冻结工具用 importlib + **运行期覆盖常量**」，在此把读库指向
-# `live_store.MARKET_DB`（P3 切流后的新热库 `market_v2.sqlite3`），**不编辑冻结文件**。
-# 该覆盖对进程内所有 `_warmup43` 使用者生效（含 `live_worker._arm_exits`），因为
-# `live_worker` 在 `import live_signal_engine`（本行）之后才使用 `_warmup43`。
-if Path(W.MARKET_DB).resolve() != Path(L.MARKET_DB).resolve():
-    W.MARKET_DB = Path(L.MARKET_DB)
+if W is not None and hasattr(W, "MARKET_DB"):
+    if Path(W.MARKET_DB).resolve() != Path(L.MARKET_DB).resolve():
+        W.MARKET_DB = Path(L.MARKET_DB)
 
 UTC = dt.timezone.utc
 H = 3_600_000
@@ -133,9 +134,41 @@ def read_admission_arrays(con, sym, start_ms, end_ms):
     return ts, o, hi, lo, cl, vol, q
 
 
+# ── 新策略 WX_OI_RESONANCE_V1 当前计算入口（2026-10-16 任务三对接）──
+NEW_STRATEGY_AVAILABLE = False
+try:
+    from WyckoffMaster.oi_resonance_v1 import registry_entry as NEW_STRAT
+    NEW_STRATEGY_AVAILABLE = True
+except Exception:
+    NEW_STRAT = None
+
+CURRENT_CALC_STRATEGY = "WX_OI_RESONANCE_V1"
+LEGACY_ARMS = ("3a", "3b", "3c", "3d")
+
+
+def oi_resonance_events_for(sym, bars, window_start_ms=None, T_ms=None):
+    """新策略 WX_OI_RESONANCE_V1 当前计算入口。
+
+    调用新策略核心（含当期未平移通道、SC 优先、突破锚点提前与入场成本本金风险）。
+    """
+    if not NEW_STRATEGY_AVAILABLE or NEW_STRAT is None:
+        raise RuntimeError("new_strategy_unavailable: WyckoffMaster.oi_resonance_v1 未就绪")
+    r = NEW_STRAT.run(bars, identity=(EXCHANGE, sym), require_identity=True)
+    events = r.get("events") or []
+    if window_start_ms is not None and T_ms is not None:
+        events = [e for e in events if window_start_ms <= int(e.get("event_time", 0)) <= T_ms]
+    return events, {"status": r.get("status"), "events_total": len(r.get("events", [])),
+                     "events_in_window": len(events), "strategy_id": CURRENT_CALC_STRATEGY}
+
+
 def arm_events_for(sym, bars, resolved, window_start_ms, T_ms):
+    """【旧 F_WX 3a–3d 历史追溯计算入口】当前已由 oi_resonance_events_for 取代为当前主入口。
+
+    保留本函数以保持历史接口完全兼容，不破坏已有测试与追溯工具。
+    """
     r = WX.run(bars, resolved, arm_id=resolved.get("registered_config_id"),
                identity=(EXCHANGE, sym), require_identity=True)
+
     out = []
     for e in r["events"]:
         et = int(e.event_time)
@@ -143,7 +176,8 @@ def arm_events_for(sym, bars, resolved, window_start_ms, T_ms):
             continue
         evd = e.evidence
         out.append({"event_time": et, "confirmed_at": int(e.confirmed_at),
-                    "direction": e.direction, "atr": evd.get("atr_signal_bar"),
+                    "direction": e.direction,                    # 真实方向：**原样携带**
+                    "atr": evd.get("atr_signal_bar"),
                     "execution_label": evd.get("execution_label"),
                     "source_masks": evd.get("source_masks"),
                     "event_uid": evd.get("event_uid"),
@@ -192,10 +226,19 @@ def _arm_entry_prompts(sym, arm, events, *, daily_list_version, data_version,
             status, block = "prompt_blocked_not_admitted", "daily_not_admitted"
         elif admitted is None:
             status, block = "prompt_blocked_missing_daily_list", "missing_daily_list"
+        # **方向原样携带，绝不改写**（任务二重点修复：short 曾被写成 long）。
+        # v3.1 只多 ⇒ 非 long 一律**显式阻断**，不翻转方向、也不静默丢弃。
+        direction = e.get("direction")
+        if direction not in ("long", "short"):
+            status, block = "prompt_blocked_unknown_direction", "unknown_direction"
+        elif direction == "short":
+            status, block = ("prompt_blocked_short_disabled_only_long",
+                             "short_disabled_by_frozen_view_only_long")
         out.append({
             "schema": "w43_accumulation_prompt/v1",
             "symbol": sym, "exchange": EXCHANGE, "timeframe": "1h",
             "structural_kind": kind,
+            "direction": direction,
             "structural_event_uid": e.get("event_uid"),
             "detect_open_time": None, "detect_open_time_utc": None,
             "confirm_bar_open_time": open_ms,
@@ -250,6 +293,10 @@ def upsert_prompts(prompts, *, data_version, daily_list_version) -> dict:
             arm = p["arm"]
             sig_uid = f"structure_prototype_39|{kind}|{p['structural_event_uid']}|{arm}"
             status = p["status"]
+            # **方向原样落库**（v3.1 只多；非 long 显式阻断，**不**默认成 long）
+            direction = p.get("direction")
+            if direction not in ("long", "short"):
+                direction = None
             # 展示态：**恒可展示**（真实事件即展示）；可执行态：单独表达，不受正式回测门禁影响
             display_state = "displayable"
             if status == "prompt_enterable":
@@ -262,12 +309,21 @@ def upsert_prompts(prompts, *, data_version, daily_list_version) -> dict:
                 exec_state, exec_reason = "blocked_not_admitted", "当日未准入"
             elif status == "prompt_blocked_missing_daily_list":
                 exec_state, exec_reason = "blocked_missing_daily_list", "缺当日名单"
+            elif status == "prompt_blocked_short_disabled_only_long":
+                exec_state, exec_reason = ("blocked_short_disabled_only_long",
+                                           "v3.1 只多：short 信号仅展示，不自动开仓（不翻转方向）")
+            elif status == "prompt_blocked_unknown_direction":
+                exec_state, exec_reason = ("blocked_unknown_direction", "方向缺失/非法")
             else:
                 exec_state, exec_reason = "not_this_arm_structure", "非该臂结构"
+            # 非 long 的展示行**恒不可执行**（双保险，防止上游状态被改回 enterable）
+            if direction != "long" and exec_state == "enterable":
+                exec_state = "blocked_short_disabled_only_long"
+                exec_reason = "v3.1 只多：非 long 方向一律不自动开仓"
             row = (
                 sig_uid, "structure_prototype_39", "live", EXCHANGE, "um", p["symbol"], "1h",
                 arm, p.get("arm_config_version"), p.get("arm_config_hash"), data_version,
-                kind, "long",                                  # 已批准只多
+                kind, direction,                               # ← 真实方向（此前恒写 "long"）
                 int(p["confirm_bar_close_time"]),              # event_time = 确认 bar 收盘
                 int(p["confirm_bar_close_time"]),              # confirmed_at
                 int(p["confirm_bar_close_time"]),              # available_at（生效即收盘时刻）
@@ -314,6 +370,8 @@ def import_historical_research(path: Path, *, limit: int = 0) -> dict:
             p = json.loads(line)
             kind = p["structural_kind"]; arm = p["arm"]
             uid = f"historical|{kind}|{p['structural_event_uid']}|{arm}"
+            # **方向原样携带**（缺失才落 "long"，因为旧研究件未记录方向；该态恒不可执行）
+            hist_dir = p.get("direction") if p.get("direction") in ("long", "short") else "long"
             # **历史研究信号恒不可执行**：它们是 43 窗口的历史事实，不是当前可交易信号。
             # 若沿用 `prompt_enterable → enterable`，会与实时信号混淆（并可能被页面误开仓）。
             # 故统一置为专用态 `historical_not_executable`，只展示、不参与任何下单判定。
@@ -327,7 +385,7 @@ def import_historical_research(path: Path, *, limit: int = 0) -> dict:
                 "VALUES(" + ",".join("?" * 29) + ")",
                 (uid, "structure_prototype_39", "historical_research", p["exchange"], "um",
                  p["symbol"], "1h", arm, p.get("arm_config_version"), p.get("arm_config_hash"),
-                 p.get("data_version"), kind, "long",
+                 p.get("data_version"), kind, hist_dir,
                  int(p["confirm_bar_close_time"]), int(p["confirm_bar_close_time"]),
                  int(p["confirm_bar_close_time"]), int(p["confirm_bar_open_time"]),
                  int(p["confirm_bar_close_time"]), p.get("detection_low"), p.get("detection_atr"),
@@ -520,6 +578,7 @@ def run_cycle(*, T=None, limit=0, force=False, assembly_hours=ASSEMBLY_LOOKBACK_
                           "pool_rule_identity": LP.rule_identity(),
                           "pool_missing": pool_missing,
                           "data_version": data_version, "daily_list_version": daily_list_version,
+                          "exec_core": EB.version_ids(),
                           "updated_real_utc": dt.datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")})
     _write_pool_diagnostics(pool_meta, pool_missing, pool_diag, T)
     out = {"T_utc": _iso(T), "symbols_total": len(symbols), "symbols_run": len(payload),
@@ -537,8 +596,12 @@ def run_cycle(*, T=None, limit=0, force=False, assembly_hours=ASSEMBLY_LOOKBACK_
            "n_structure_prompts": n_struct_prompts,
            "n_structure_prompts_suppressed": n_struct_suppressed,
            "n_arm_entry_prompts": n_arm_entries,
+           "n_blocked_short_only_long": sum(
+               1 for p in prompts_all
+               if p.get("status") == "prompt_blocked_short_disabled_only_long"),
            "prompts": I.summarize_prompts(prompts_all), "write": wr,
            "data_version": data_version, "daily_list_version": daily_list_version,
+           "exec_core": EB.version_ids(),
            "elapsed_s": round(time.time() - t0, 1)}
     return out
 

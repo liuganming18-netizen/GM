@@ -17,6 +17,32 @@ export interface EnvelopeQuality {
   status: string | null;
   age_seconds: number | null;
   note: string | null;
+  // ── 纸面账本端点（/paper/accounts）附加的真实字段（其他端点不返回，缺失即 undefined）──
+  /** 实时起点水位线（ms 纪元）。 */
+  live_start_ms?: number | null;
+  live_start_utc?: string | null;
+  /** 水位线之前「仅展示不自动开仓」的入场合规信号数。 */
+  n_pre_watermark_display_only?: number | null;
+  /** 水位线之后可自动开仓的入场合规信号数。 */
+  n_after_watermark?: number | null;
+  n_pending_orders?: number | null;
+  /** 服务端**新开仓总闸**（fail-closed）；`allow_new_entries=false` ⇒ 全部新开仓被阻断。 */
+  new_entry_gate?: {
+    allow_new_entries?: boolean;
+    reason?: string | null;
+    gate_reason?: string | null;
+    gate_scope?: string | null;
+    exits_fees_funding_health_unaffected?: boolean;
+  } | null;
+  /** 旧版/未验收账本标记（原账本未被修改）。 */
+  legacy_ledger?: {
+    preserved?: boolean;
+    verification_status?: string | null;
+    label?: string | null;
+    excluded_from_official_strategy_performance?: boolean;
+  } | null;
+  /** 成交时钟口径（后端显式定义）。 */
+  fill_policy?: Record<string, unknown> | null;
 }
 
 export interface Envelope<T> {
@@ -562,6 +588,141 @@ export interface RawStubList extends Envelope<never> {
   total: number | null;
 }
 
+// ── 回测复盘（GET /backtests?mode=history|paper_review|signal_logs）──────────────
+// 后端 `live_api.backtest_review` 真实返回：零硬编码兜底。前端只透传，不重算、不补默认。
+
+/** 逐笔成交行（`items[]`）。字段名与后端一致；缺失即 null，不用 0/占位值冒充。 */
+export interface RawBacktestTrade {
+  id: string;
+  time: string | null;
+  timestamp: number | null;
+  exit_time?: string | null;
+  exit_timestamp?: number | null;
+  duration_str?: string | null;
+  symbol: string;
+  raw_symbol?: string | null;
+  arm: string;
+  direction: string;
+  entry_price: number | null;
+  exit_price: number | null;
+  qty?: number | null;
+  gross_pnl?: number | null;
+  pnl?: number | null;
+  pnl_pct?: number | null;
+  fee?: number | null;
+  funding_paid?: number | null;
+  status: string | null;
+  exit_reason: string | null;
+}
+
+/** 净值曲线点（`equity_curve[]`）。`benchmark_equity` 来自真实 BTCUSDT 1h 收盘归一化；无来源时后端不给该键。 */
+export interface RawEquityPoint {
+  timestamp: number;
+  time: string | null;
+  equity: number;
+  drawdown_pct: number;
+  benchmark_equity?: number | null;
+}
+
+/** 单臂横向对标行（`arm_comparison[]`，含 `arm="ALL"` 汇总行）。**无定义 ⇒ `null`（显示 —）**。 */
+export interface RawArmComparison {
+  arm: string;
+  /** 仅 `arm="ALL"` 行给出：本汇总覆盖的臂（受 `?arm=` 过滤影响） */
+  scope_arms?: string[];
+  label: string;
+  rule: string;
+  initial_equity: number;
+  final_equity: number;
+  net_profit: number;
+  net_return_pct: number | null;
+  gross_profit_raw: number;
+  total_fees: number;
+  total_funding_paid: number;
+  max_drawdown_pct: number | null;
+  closed_trades: number;
+  open_positions?: number;
+  wins: number;
+  losses: number;
+  win_rate_pct: number | null;
+  profit_factor: number | null;
+  win_loss_ratio: number | null;
+  expectancy_usd: number | null;
+  signals_count: number;
+  intents_count: number;
+  rejected_count: number;
+  halted_at: string | null;
+}
+
+/** 单币种盈亏归因行（`symbol_attribution.top_winners|top_losers[]`）。 */
+export interface RawSymbolAttribution {
+  symbol: string;
+  trades: number;
+  wins: number;
+  gross_pnl: number;
+  fees: number;
+  net_pnl: number;
+}
+
+/** 信号 → 成交漏斗（`funnel`）。 */
+export interface RawFunnel {
+  signals_count: number;
+  intents_count: number;
+  rejected_count: number;
+  filled_positions: number;
+}
+
+/** 回测/复盘汇总（`summary`）。全部为后端真实计算值，无兜底。**无定义 ⇒ `null`（显示 —）**。 */
+export interface RawBacktestSummary {
+  initial_equity: number;
+  current_equity: number;
+  realized_pnl: number;
+  gross_profit_raw: number;
+  trading_fees: number;
+  funding_paid: number;
+  net_return_pct: number | null;
+  max_drawdown_pct: number | null;
+  sharpe_ratio: number | null;
+  profit_factor: number | null;
+  win_loss_ratio: number | null;
+  win_rate_pct: number | null;
+  total_trades: number;
+  closed_trades: number;
+  open_positions: number;
+  total_fees: number;
+}
+
+/**
+ * `GET /backtests` 响应。`mode`：
+ *  - `history`      = 历史研究回测账本（研究窗口产出，**非正式生产策略收益**）；
+ *  - `paper_review` = 服务端模拟盘复盘；
+ *  - `signal_logs`  = 实时信号审计流。
+ */
+export interface RawBacktestReview extends Envelope<RawBacktestTrade> {
+  equity_curve?: RawEquityPoint[] | null;
+  arm_comparison?: RawArmComparison[] | null;
+  /**
+   * 自然月收益（**账户月界净值**口径）。
+   * `pnl` = 该月月界净值 / 上月月界净值 − 1（%）；首月无上月月界 ⇒ `null`（显示 —）。
+   * `pnl_usd` = 月界净值变化额；`count` = 该月**平仓笔数**（按平仓时间，补充事实）。
+   * `basis` / `month_end_equity` / `realized_pnl_by_close_month` 为口径自述与补充事实。
+   */
+  monthly_returns?: Record<string, Record<string, {
+    pnl: number | null;
+    pnl_usd: number | null;
+    count: number;
+    basis?: string;
+    month_end_equity?: number | null;
+    realized_pnl_by_close_month?: number | null;
+  }>> | null;
+  symbol_attribution?: {
+    top_winners?: RawSymbolAttribution[] | null;
+    top_losers?: RawSymbolAttribution[] | null;
+  } | null;
+  halted_info?: Record<string, string | null> | null;
+  funnel?: RawFunnel | null;
+  summary?: RawBacktestSummary | null;
+}
+
 // ── 模拟盘 / 实盘只读（2026-10-13 信号与持仓接通）─────────────────────────────
 
 /** `/paper/positions` 行内的**未平仓持仓**（服务端账本口径）。 */
@@ -583,6 +744,15 @@ export interface RawPaperPositionRow {
   leverage: number;
   notional: number;
   opened_by: string | null;
+  // ── 旧版/未验收/规则违规 追加审计标注（后端只读追加，原账本未改）──────────────
+  /** 追加审计结论：`legacy_unverified` / `verified` 等（后端给出，前端不推断）。 */
+  verification_status?: string | null;
+  /** 展示标签，如「旧版/未验收/规则违规」。 */
+  label?: string | null;
+  /** 命中的违规项列表（如 `entry_delay_lt_15m`）；空数组 = 无追加违规记录。 */
+  violations?: string[] | null;
+  /** 是否已排除在正式策略表现之外（旧版持仓恒 true）。 */
+  excluded_from_official_strategy_performance?: boolean | null;
 }
 
 /** `/paper/positions` 行（在持仓字段上追加所属臂）。 */

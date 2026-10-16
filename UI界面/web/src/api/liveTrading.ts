@@ -63,6 +63,15 @@ export interface PaperPositionView {
   entryTs: number;
   signalUid: string | null;
   openedBy: string | null;
+  // ── 旧版/未验收/规则违规 追加审计标注（后端只读追加，原账本未改）──────────────
+  /** 追加审计结论（如 `legacy_unverified`）；后端未给 ⇒ null。 */
+  verificationStatus: string | null;
+  /** 展示标签（如「旧版/未验收/规则违规」）；后端未给 ⇒ null。 */
+  label: string | null;
+  /** 命中的违规项列表；空数组 = 无追加违规记录（不等于「已验收通过」）。 */
+  violations: string[];
+  /** 是否已排除在正式策略表现之外。 */
+  excludedFromOfficial: boolean;
 }
 
 export interface PaperAccountView {
@@ -149,6 +158,24 @@ export interface PaperLedger {
   /** 账本不可用时的真实原因（如 live worker 未跑）；可用时为 null */
   missingReason: string | null;
   qualityNote: string | null;
+  /** 服务端**新开仓总闸**（fail-closed）；null = 未返回。 */
+  newEntryGate: {
+    allowNewEntries: boolean;
+    reason: string | null;
+    exitsFeesFundingHealthUnaffected: boolean;
+  } | null;
+  /** 旧版/未验收账本标记（后端只读追加）。 */
+  legacyLedger: {
+    preserved: boolean;
+    verificationStatus: string | null;
+    label: string | null;
+    excludedFromOfficial: boolean;
+  } | null;
+  /** 实时起点水位线（UTC）；解释「为何自动持仓可能为空」。 */
+  liveStartUtc: string | null;
+  /** 水位线之前「仅展示」信号数 / 之后可自动开仓信号数（后端真实计数）。 */
+  nPreWatermarkDisplayOnly: number | null;
+  nAfterWatermark: number | null;
 }
 
 export interface LiveAccountsResult {
@@ -189,6 +216,10 @@ function mapPaperPosition(
     entryTs: num(row.entry_ts) ?? 0,
     signalUid: row.signal_uid ?? null,
     openedBy: row.opened_by ?? null,
+    verificationStatus: row.verification_status ?? null,
+    label: row.label ?? null,
+    violations: Array.isArray(row.violations) ? row.violations.filter((v): v is string => typeof v === 'string') : [],
+    excludedFromOfficial: row.excluded_from_official_strategy_performance === true,
   };
 }
 
@@ -270,12 +301,33 @@ export async function fetchPaperLedger(signal?: AbortSignal): Promise<PaperLedge
   const accounts = unwrapItems(env).map(mapPaperAccount);
   const positions = accounts.flatMap((a) => a.positions);
   const pending = accounts.flatMap((a) => a.pending);
+  const q = env.quality ?? null;
+  const gate = q?.new_entry_gate ?? null;
+  const legacy = q?.legacy_ledger ?? null;
   return {
     accounts,
     positions,
     pending,
     missingReason: env.missing_reason ?? null,
-    qualityNote: env.quality?.note ?? null,
+    qualityNote: q?.note ?? null,
+    newEntryGate: gate
+      ? {
+          allowNewEntries: gate.allow_new_entries === true,
+          reason: gate.reason ?? gate.gate_reason ?? null,
+          exitsFeesFundingHealthUnaffected: gate.exits_fees_funding_health_unaffected === true,
+        }
+      : null,
+    legacyLedger: legacy
+      ? {
+          preserved: legacy.preserved === true,
+          verificationStatus: legacy.verification_status ?? null,
+          label: legacy.label ?? null,
+          excludedFromOfficial: legacy.excluded_from_official_strategy_performance === true,
+        }
+      : null,
+    liveStartUtc: q?.live_start_utc ?? null,
+    nPreWatermarkDisplayOnly: num(q?.n_pre_watermark_display_only),
+    nAfterWatermark: num(q?.n_after_watermark),
   };
 }
 

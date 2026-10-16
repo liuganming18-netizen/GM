@@ -1,0 +1,161 @@
+{
+  "ui": "http://127.0.0.1:3000/",
+  "generated_utc": "2026-10-15T07:53:39.253Z",
+  "checks": [
+    {
+      "name": "G 信号区计数 == API items 长度",
+      "pass": true,
+      "detail": {
+        "dom": 153,
+        "api": 153
+      }
+    },
+    {
+      "name": "D 信号区含「结构发现」",
+      "pass": true,
+      "detail": {
+        "rows": 153,
+        "hasStructure": true,
+        "hasConfirm": true,
+        "hasPlan": true,
+        "hasFill": true
+      }
+    },
+    {
+      "name": "D 信号区含「信号确认」",
+      "pass": true,
+      "detail": {
+        "rows": 153,
+        "hasStructure": true,
+        "hasConfirm": true,
+        "hasPlan": true,
+        "hasFill": true
+      }
+    },
+    {
+      "name": "D 信号区含「计划下单」",
+      "pass": true,
+      "detail": {
+        "rows": 153,
+        "hasStructure": true,
+        "hasConfirm": true,
+        "hasPlan": true,
+        "hasFill": true
+      }
+    },
+    {
+      "name": "D 信号区含「实际成交」",
+      "pass": true,
+      "detail": {
+        "rows": 153,
+        "hasStructure": true,
+        "hasConfirm": true,
+        "hasPlan": true,
+        "hasFill": true
+      }
+    },
+    {
+      "name": "E 已买入行数 == 账本命中信号数",
+      "pass": true,
+      "detail": {
+        "dom": 0,
+        "expected": 0
+      }
+    },
+    {
+      "name": "E 已买入徽标数 == 已买入行数",
+      "pass": true,
+      "detail": {
+        "filledRows": 0,
+        "badge": 0
+      }
+    },
+    {
+      "name": "F 刷新后信号集合一致",
+      "pass": true,
+      "detail": {
+        "before_n": 153,
+        "after_n": 153
+      }
+    },
+    {
+      "name": "F 刷新后无重复 signal_uid",
+      "pass": true,
+      "detail": {
+        "n": 153,
+        "unique": 153
+      }
+    },
+    {
+      "name": "A 回测页无已删除的假数值",
+      "pass": true,
+      "detail": {
+        "foundFake": []
+      }
+    },
+    {
+      "name": "C 回测页无「参数调优」按钮",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "C 回测页无「运行回测」按钮",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "B 空曲线显示显式空态（不画合成线）",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "A 空月度显示显式空态",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "A 无成交时夏普/胜率等派生量为 —（非 0）",
+      "pass": true,
+      "detail": {
+        "metricsText": "净收益率 (Net Return) 0.00% 已平仓净收益 / 初始权益 最大回撤 (Max DD) -0.00% 峰值动态水线 夏普比率 (Sharpe) — 无曲线 ⇒ — 卡尔玛比率 (Calmar) — 无回撤 ⇒ — 交易胜率 (Win Rate) — 已平 0 笔 盈亏比 (W/L Ratio) — 无成交 ⇒ — 收益因子 (Profit Factor) — 无成交 ⇒ — 累计摩擦费用 (Fees) $0.00 手续费 + 资金费"
+      }
+    }
+  ],
+  "api": {
+    "signals_current_total_items": 153,
+    "signals_current_total_field": 6128,
+    "ledger_open_positions": 0,
+    "ledger_signal_uids": [],
+    "backtest": {
+      "curve_points": 0,
+      "monthly_years": 0,
+      "closed_trades": 0
+    }
+  },
+  "dom": {
+    "signal_count": 153,
+    "signal_chain": {
+      "rows": 153,
+      "hasStructure": true,
+      "hasConfirm": true,
+      "hasPlan": true,
+      "hasFill": true
+    },
+    "filled": {
+      "filledRows": 0,
+      "badge": 0
+    },
+    "refresh": {
+      "before_n": 153,
+      "after_n": 153,
+      "unique_after": 153
+    },
+    "backtest_text_len": 1342,
+    "metrics_text": "净收益率 (Net Return) 0.00% 已平仓净收益 / 初始权益 最大回撤 (Max DD) -0.00% 峰值动态水线 夏普比率 (Sharpe) — 无曲线 ⇒ — 卡尔玛比率 (Calmar) — 无回撤 ⇒ — 交易胜率 (Win Rate) — 已平 0 笔 盈亏比 (W/L Ratio) — 无成交 ⇒ — 收益因子 (Profit Factor) — 无成交 ⇒ — 累计摩擦费用 (Fees) $0.00 手续费 + 资金费"
+  },
+  "console_errors": [],
+  "summary": {
+    "pass": 15,
+    "fail": 0
+  }
+}

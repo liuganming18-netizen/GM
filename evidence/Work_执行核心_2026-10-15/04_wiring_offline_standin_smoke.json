@@ -1,0 +1,67 @@
+{
+ "core_available": true,
+ "ledger_model_version": "paper_exec_v2_shared_5000",
+ "switches": {
+  "allow_new_entries": false,
+  "new_entry_gate_reason": "new_entry_blocked_pending_closure_review",
+  "new_entry_gate_source": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/live/paper_new_entry_gate.json",
+  "new_entry_default_blocked": true,
+  "maintain_existing": true,
+  "maintenance_scope": [
+   "exits",
+   "funding_settlement",
+   "expiry_720h",
+   "drawdown_lock",
+   "trailing_stop"
+  ],
+  "note": "旧仓维护不受新开仓闸影响；正式候选未选定/未验收 ⇒ 新开仓继续阻断。"
+ },
+ "data_read_disclosure": "本脚本零真实行情读取（MARKET_DB 指向不存在路径）",
+ "A_trail_schedule": {
+  "n_steps": 50,
+  "monotone_non_decreasing": true,
+  "effective_aligned_15m": true,
+  "effective_after_signal_close": true,
+  "first": [
+   1700190000000,
+   101.10000000000001,
+   "step_swing_raise"
+  ],
+  "last": [
+   1700719200000,
+   108.45,
+   "step_swing_raise"
+  ]
+ },
+ "B_exit_scan": {
+  "hit": null,
+  "T": 1700719199999,
+  "entry_ts": 1700053200000
+ },
+ "B2_expiry": {
+  "due_ms": 1700715600000,
+  "due_aligned_15m": true,
+  "hit_reason": "max_holding_720h_at_first_15m_open",
+  "hit_exit_ts": 1700715600000,
+  "hit_at_due_bar_open": true
+ },
+ "B3_gap": {
+  "raw": 90.0,
+  "reason": "stop_loss",
+  "used_worse_open_90": true,
+  "ctx_rule": "gap_open_worse_than_stop"
+ },
+ "C_guards": {
+  "illegal_direction": "illegal_direction_sideways",
+  "short_not_rewritten": "short_disabled_by_frozen_view_only_long",
+  "missing_struct_low": "missing_struct_low_for_structural_stop",
+  "illegal_stop_mode": "illegal_stop_mode:nonsense"
+ },
+ "C_new_entry_blocked_by_gate": "new_entry_blocked_pending_closure_review",
+ "C_expiry_720h": {
+  "example_entry": 1699999200000,
+  "expiry_exit_ts": 1702591200000,
+  "aligned_15m": true,
+  "equals_entry_plus_720h": true
+ }
+}
