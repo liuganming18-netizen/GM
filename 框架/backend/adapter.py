@@ -50,21 +50,22 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 FRAMEWORK_ROOT = os.path.dirname(HERE)
 DESKTOP_ROOT = os.path.dirname(FRAMEWORK_ROOT)
 
-# 自动优先探测真实存在的本地项目目录与数据库文件
+# 自动优先探测真实存在的本地项目目录与数据库文件。
+# W1（2026-10-16）：**删除**工程外兜底 旧工作区路径（已删）——该目录已随旧工作区
+# 删除；保留它会让「找不到本工程库」时静默落到一个不存在的路径上。现在候选**只**来自
+# 显式环境变量与工程内相对位置（`MARKET_DB` 由 `start.sh` / `启动系统.command` 注入）。
 _CANDIDATE_DBS = [
     os.environ.get("MARKET_DB"),
     os.path.join(HERE, "data", "market_v2.sqlite3"),
     os.path.join(FRAMEWORK_ROOT, "data_hub", "market_v2.sqlite3"),
     os.path.join(DESKTOP_ROOT, "数据", "市场数据", "db", "market_v2.sqlite3"),
     os.path.join(DESKTOP_ROOT, "data", "market_v2.sqlite3"),
-    "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
 ]
 DB_PATH = next((p for p in _CANDIDATE_DBS if p and os.path.exists(p)), _CANDIDATE_DBS[1])
 
 _CANDIDATE_PROJECTS = [
     os.environ.get("DATA_HUB_PROJECT"),
     DESKTOP_ROOT,
-    "/Users/boos/WorkBuddy AI/加密货币趋势判断系统",
 ]
 PROJECT_ROOT = next((p for p in _CANDIDATE_PROJECTS if p and os.path.exists(p)), DESKTOP_ROOT)
 PORT = int(os.environ.get("PORT", "8787"))
@@ -3214,6 +3215,9 @@ def route_v1(path, params):
     if seg == ["data", "feeds"]:
         feeds = datacenter.get_data_feeds_status() if datacenter else []
         return envelope(feeds=feeds, total=len(feeds)), 200
+    if seg in (["data", "whitelist"], ["data", "backfill"]):
+        summary = datacenter.get_backfill_and_whitelist_summary() if datacenter else {}
+        return envelope(**summary), 200
     if len(seg) == 3 and seg[0] == "markets":
 
         return v1_market(seg[1], seg[2]), 200

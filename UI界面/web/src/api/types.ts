@@ -645,6 +645,11 @@ export interface RawDataFeedItem {
   name: string;
   category: string;
   frequency: string;
+  fetch_mode?: string;
+  strategy_usage?: string;
+  retention_days?: string;
+  storage_size?: string;
+  daily_increment?: string;
   status: 'normal' | 'abnormal' | 'warning';
   status_light: 'green' | 'red' | 'yellow';
   status_label: string;
@@ -657,6 +662,54 @@ export interface RawDataFeedItem {
   delay_min: number | null;
   diagnostic: string;
   usage?: string;
+}
+
+export interface RawWhitelistGapItem {
+  exchange: string;
+  market: string;
+  symbol: string;
+  timeframe: string;
+  from_utc: string;
+  to_utc: string;
+  missing_bars: number;
+  cause: string;
+  evidence: string;
+  need_backfill: boolean;
+  status_tag: string;
+}
+
+export interface RawDelistedSymbolItem {
+  symbol: string;
+  data_type: string;
+  last_time: string;
+  reason: string;
+  need_backfill: boolean;
+  status_tag: string;
+}
+
+export interface RawNativeSkipItem {
+  exchange: string;
+  symbol_count: number;
+  timeframe: string;
+  reason: string;
+  need_backfill: boolean;
+  status_tag: string;
+}
+
+export interface RawBackfillWhitelistResponse {
+  summary?: {
+    actual_to_backfill_bars: number;
+    actual_to_backfill_desc: string;
+    whitelist_missing_bars: number;
+    whitelist_missing_combos: number;
+    delisted_symbols_count: number;
+    native_skip_symbols_count: number;
+    last_patch_batch: string;
+    overall_conclusion: string;
+  };
+  whitelist_gaps?: RawWhitelistGapItem[];
+  delisted_symbols?: RawDelistedSymbolItem[];
+  native_skip_symbols?: RawNativeSkipItem[];
 }
 
 export interface RawDataStatus extends Envelope<never> {
