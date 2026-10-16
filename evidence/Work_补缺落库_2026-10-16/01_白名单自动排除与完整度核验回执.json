@@ -1,0 +1,496 @@
+{
+  "timestamp": "2026-10-16T07:00:22.769566+00:00",
+  "database": "/Users/boos/Desktop/威科夫因子共振趋势/数据/市场数据/db/market_v2.sqlite3",
+  "total_series": 4385,
+  "clean_series": 4337,
+  "series_with_gaps": 48,
+  "total_missing_bars": 3625,
+  "whitelisted_missing_bars": 3625,
+  "abnormal_missing_bars": 0,
+  "abnormal_series_count": 0,
+  "unmatched_whitelist_count": 0,
+  "is_clean": true,
+  "abnormal_details": [],
+  "gap_details": [
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "AIAUSDT",
+      "timeframe": "15m",
+      "missing": 45,
+      "allowed": 45,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "AIAUSDT",
+      "timeframe": "1h",
+      "missing": 11,
+      "allowed": 11,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "AIAUSDT",
+      "timeframe": "30m",
+      "missing": 22,
+      "allowed": 22,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "AIAUSDT",
+      "timeframe": "4h",
+      "missing": 2,
+      "allowed": 2,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "AIAUSDT",
+      "timeframe": "8h",
+      "missing": 1,
+      "allowed": 1,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CTKUSDT",
+      "timeframe": "15m",
+      "missing": 41,
+      "allowed": 41,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CTKUSDT",
+      "timeframe": "1h",
+      "missing": 10,
+      "allowed": 10,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CTKUSDT",
+      "timeframe": "30m",
+      "missing": 20,
+      "allowed": 20,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CTKUSDT",
+      "timeframe": "4h",
+      "missing": 2,
+      "allowed": 2,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CTKUSDT",
+      "timeframe": "8h",
+      "missing": 1,
+      "allowed": 1,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CVCUSDT",
+      "timeframe": "15m",
+      "missing": 34,
+      "allowed": 34,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CVCUSDT",
+      "timeframe": "1h",
+      "missing": 8,
+      "allowed": 8,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CVCUSDT",
+      "timeframe": "30m",
+      "missing": 17,
+      "allowed": 17,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CVCUSDT",
+      "timeframe": "4h",
+      "missing": 2,
+      "allowed": 2,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CVCUSDT",
+      "timeframe": "8h",
+      "missing": 1,
+      "allowed": 1,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CVXUSDT",
+      "timeframe": "15m",
+      "missing": 46,
+      "allowed": 46,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CVXUSDT",
+      "timeframe": "1h",
+      "missing": 11,
+      "allowed": 11,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CVXUSDT",
+      "timeframe": "30m",
+      "missing": 23,
+      "allowed": 23,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CVXUSDT",
+      "timeframe": "4h",
+      "missing": 2,
+      "allowed": 2,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "CVXUSDT",
+      "timeframe": "8h",
+      "missing": 1,
+      "allowed": 1,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "ICPUSDT",
+      "timeframe": "12h",
+      "missing": 10,
+      "allowed": 10,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "ICPUSDT",
+      "timeframe": "15m",
+      "missing": 2506,
+      "allowed": 2506,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "ICPUSDT",
+      "timeframe": "1d",
+      "missing": 5,
+      "allowed": 5,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "ICPUSDT",
+      "timeframe": "1h",
+      "missing": 122,
+      "allowed": 122,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "ICPUSDT",
+      "timeframe": "30m",
+      "missing": 245,
+      "allowed": 245,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "ICPUSDT",
+      "timeframe": "4h",
+      "missing": 30,
+      "allowed": 30,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "ICPUSDT",
+      "timeframe": "8h",
+      "missing": 15,
+      "allowed": 15,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "LITUSDT",
+      "timeframe": "12h",
+      "missing": 1,
+      "allowed": 1,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "LITUSDT",
+      "timeframe": "15m",
+      "missing": 70,
+      "allowed": 70,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "LITUSDT",
+      "timeframe": "1h",
+      "missing": 17,
+      "allowed": 17,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "LITUSDT",
+      "timeframe": "30m",
+      "missing": 35,
+      "allowed": 35,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "LITUSDT",
+      "timeframe": "4h",
+      "missing": 4,
+      "allowed": 4,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "LITUSDT",
+      "timeframe": "8h",
+      "missing": 2,
+      "allowed": 2,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "MAVIAUSDT",
+      "timeframe": "12h",
+      "missing": 1,
+      "allowed": 1,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "MAVIAUSDT",
+      "timeframe": "15m",
+      "missing": 68,
+      "allowed": 68,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "MAVIAUSDT",
+      "timeframe": "1h",
+      "missing": 17,
+      "allowed": 17,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "MAVIAUSDT",
+      "timeframe": "30m",
+      "missing": 34,
+      "allowed": 34,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "MAVIAUSDT",
+      "timeframe": "4h",
+      "missing": 4,
+      "allowed": 4,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "MAVIAUSDT",
+      "timeframe": "8h",
+      "missing": 2,
+      "allowed": 2,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "PUMPUSDT",
+      "timeframe": "15m",
+      "missing": 30,
+      "allowed": 30,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "PUMPUSDT",
+      "timeframe": "1h",
+      "missing": 7,
+      "allowed": 7,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "PUMPUSDT",
+      "timeframe": "30m",
+      "missing": 15,
+      "allowed": 15,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "PUMPUSDT",
+      "timeframe": "4h",
+      "missing": 1,
+      "allowed": 1,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "SLPUSDT",
+      "timeframe": "15m",
+      "missing": 47,
+      "allowed": 47,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "SLPUSDT",
+      "timeframe": "1h",
+      "missing": 11,
+      "allowed": 11,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "SLPUSDT",
+      "timeframe": "30m",
+      "missing": 23,
+      "allowed": 23,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "SLPUSDT",
+      "timeframe": "4h",
+      "missing": 2,
+      "allowed": 2,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    },
+    {
+      "exchange": "binance",
+      "market": "um",
+      "symbol": "SLPUSDT",
+      "timeframe": "8h",
+      "missing": 1,
+      "allowed": 1,
+      "status": "WHITELISTED_OK",
+      "abnormal": 0
+    }
+  ]
+}

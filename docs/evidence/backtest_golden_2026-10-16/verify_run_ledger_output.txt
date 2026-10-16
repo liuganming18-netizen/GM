@@ -1,0 +1,51 @@
+=== run_id bt_20261016T063427Z_810f1a3b · status succeeded ===
+  窗口 2026-10-09T00:00:00Z .. 2026-10-16T00:00:00Z（auto_recent_days）  预热 240 根  交易 7 笔
+  资金费快照 21 条（毫秒）：2026-10-09T00:00:00Z .. 2026-10-15T16:00:00Z
+  [PASS] ① 逐笔 net = gross − entry_fee − exit_fee − funding
+  [PASS] ② funding_fee == Σ逐事件 amount（毫秒区间）
+  [PASS] ②b 逐事件时间 ∈ (entry_ms, exit_ms] 且计数一致
+  [PASS] ③ 独立毫秒重算 == 账本 funding_fee（含计数）
+  [PASS] ③b 独立重推应有结算数 == run.json expected
+  [PASS] ③c 每个应有网格时刻都有真实 settled 事件命中（非仅比次数）
+  [PASS] ③d 窗口左端点恰在结算网格上时**不得漏算**该笔
+  [PASS] ④ 现金恒等式
+  [PASS] ⑤ 权益恒等式 final = init + Σnet（无未平仓）
+  [PASS] ⑥ 权益曲线等间隔 15m
+  [PASS] ⑥b 首点=初始权益 & 末点=final_equity
+  [PASS] ⑦ 净收益 %
+  [PASS] ⑦b 最大回撤 %（峰含初始权益）
+  [PASS] ⑦c 交易数
+  [PASS] ⑦d 胜率
+  [PASS] ⑦e profit_factor
+  [PASS] ⑦f 平均盈亏比（与 profit_factor 分列）
+  [PASS] ⑦g run.json 自带「账本重算指标」且标记一致
+  [PASS] ⑦h open_positions_last == 末行持仓数（≠ 整段持仓行数）
+  [PASS] ⑧ 预热不交易（全部成交在窗口内）
+  [PASS] ⑧b 窗口外信号未被交易
+  [PASS] ⑧c 每笔 trade.signal_id 可联结回 signals 表
+  [PASS] ⑨ 输入快照文件 SHA == manifest
+  [PASS] ⑨b 代码 SHA == 账本 meta == manifest
+  [PASS] ⑨c 代码 hash 覆盖后端文件
+  [PASS] ⑩ quality=ok ⇒ 覆盖/对账/指标一致全部为真
+  [PASS] ⑪ 同成本基准存在且逐点长度 == 权益曲线
+  [PASS] ⑪d 基准末点 == final_equity（含出场滑点/费）
+  [PASS] ⑪e 基准 net_return_pct 与末点自洽
+  [PASS] ⑪f 基准回撤在**含末点**的同一序列上算得
+  [PASS] ⑪b 图表信号 confirm ∈ [win_start, win_end)
+  [PASS] ⑪c 图表无止盈规则时显式声明
+
+=== 结果：32 PASS / 0 FAIL ===
+{
+  "run_id": "bt_20261016T063427Z_810f1a3b",
+  "status": "succeeded",
+  "trades": 7,
+  "net_return_pct": -3.0814082344785856,
+  "final_equity": 96918.59176552141,
+  "total_fees": 389.5084557467661,
+  "total_funding_fee": 7.038892807413944,
+  "max_drawdown_pct": 3.1234770061238812,
+  "quality": "ok",
+  "signal_frame_sha256": "d466ca7cdb9413d8bae2114a8952f3857d5943b855330157490caf7469a14207",
+  "input_sha256": "169d3a6b9e898a7b62c0e4524f857e4a7e3629b018ceaf6ec4bcaa4b3a0c5794",
+  "code_sha256": "364aacfcd65c45e18106b9d2bac3200f21aa1bbdb4750a3f598ad07045fa338a"
+}

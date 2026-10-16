@@ -1,0 +1,1968 @@
+{
+ "fixed": [
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "PENGUUSDT",
+   "tf": "5m",
+   "from": 1761436800000,
+   "to": 1791304200000,
+   "was": 99559,
+   "now": 0
+  },
+  {
+   "ex": "okx",
+   "mk": "swap",
+   "sym": "LUNA-USDT-SWAP",
+   "tf": "1d",
+   "from": 1653782400000,
+   "to": 1774396800000,
+   "was": 1397,
+   "now": 0
+  },
+  {
+   "ex": "okx",
+   "mk": "swap",
+   "sym": "CORE-USDT-SWAP",
+   "tf": "1d",
+   "from": 1675900800000,
+   "to": 1774396800000,
+   "was": 1141,
+   "now": 0
+  },
+  {
+   "ex": "okx",
+   "mk": "swap",
+   "sym": "RAY-USDT-SWAP",
+   "tf": "1d",
+   "from": 1710288000000,
+   "to": 1774396800000,
+   "was": 743,
+   "now": 0
+  },
+  {
+   "ex": "okx",
+   "mk": "swap",
+   "sym": "PI-USDT-SWAP",
+   "tf": "1d",
+   "from": 1740096000000,
+   "to": 1774396800000,
+   "was": 398,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "FILUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "FLOWUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "GRTUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "GTCUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "HBARUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "HOTUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "IMXUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "IOTAUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "KNCUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "KSMUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "LTCUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MANAUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MASKUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "NEARUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "OGNUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ONEUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "PEOPLEUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RLCUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ROSEUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RSRUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RVNUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SANDUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SKLUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SOLUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SUSHIUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "TRBUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "TRXUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "VETUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "XLMUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "XRPUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "YFIUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZECUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZENUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZILUSDT",
+   "tf": "15m",
+   "from": 1645833600000,
+   "to": 1646091900000,
+   "was": 288,
+   "now": 0
+  },
+  {
+   "ex": "okx",
+   "mk": "swap",
+   "sym": "OKB-USDT-SWAP",
+   "tf": "1d",
+   "from": 1757030400000,
+   "to": 1774396800000,
+   "was": 202,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "FILUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "FLOWUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "GMTUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "GRTUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "GTCUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "HBARUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "HOTUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "IMXUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "IOTAUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "KNCUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "KSMUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "LTCUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MANAUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MASKUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "NEARUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "OGNUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ONEUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "PEOPLEUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RLCUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ROSEUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RSRUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RVNUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SANDUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SKLUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SOLUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SUSHIUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "TRBUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "TRXUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "VETUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "XLMUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "XRPUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "YFIUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZECUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZENUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZILUSDT",
+   "tf": "15m",
+   "from": 1648771200000,
+   "to": 1648943100000,
+   "was": 192,
+   "now": 0
+  },
+  {
+   "ex": "okx",
+   "mk": "swap",
+   "sym": "OL-USDT-SWAP",
+   "tf": "1d",
+   "from": 1761782400000,
+   "to": 1774396800000,
+   "was": 147,
+   "now": 0
+  },
+  {
+   "ex": "okx",
+   "mk": "swap",
+   "sym": "RLS-USDT-SWAP",
+   "tf": "1d",
+   "from": 1764720000000,
+   "to": 1774396800000,
+   "was": 113,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "VETUSDT",
+   "tf": "8h",
+   "from": 1767225600000,
+   "to": 1769875200000,
+   "was": 93,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "1000PEPEUSDT",
+   "tf": "1d",
+   "from": 1704067200000,
+   "to": 1706659200000,
+   "was": 31,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "FILUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "FLOWUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "GRTUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "GTCUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "HBARUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "HOTUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "IMXUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "IOTAUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "KNCUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "KSMUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "LTCUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MANAUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MASKUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "NEARUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "OGNUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ONEUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "PEOPLEUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RLCUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ROSEUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RSRUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RVNUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SANDUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SKLUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SOLUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SUSHIUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "TRBUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "TRXUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "VETUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "XLMUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "XRPUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "YFIUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZECUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZENUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZILUSDT",
+   "tf": "12h",
+   "from": 1645833600000,
+   "to": 1646049600000,
+   "was": 6,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "FILUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "FLOWUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "GMTUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "GRTUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "GTCUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "HBARUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "HOTUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "IMXUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "IOTAUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "KNCUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "KSMUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "LTCUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MANAUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MASKUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "NEARUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "OGNUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ONEUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "PEOPLEUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RLCUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ROSEUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RSRUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "RVNUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SANDUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SKLUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SOLUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SUSHIUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "TRBUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "TRXUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "VETUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "XLMUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "XRPUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "YFIUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZECUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZENUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ZILUSDT",
+   "tf": "12h",
+   "from": 1648771200000,
+   "to": 1648900800000,
+   "was": 4,
+   "now": 0
+  }
+ ],
+ "remain": [
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ICPUSDT",
+   "tf": "15m",
+   "from": 1661990400000,
+   "to": 1664244900000,
+   "was": 2506,
+   "now": 2506
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ICPUSDT",
+   "tf": "30m",
+   "from": 1663804800000,
+   "to": 1664244000000,
+   "was": 245,
+   "now": 245
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ICPUSDT",
+   "tf": "1h",
+   "from": 1663804800000,
+   "to": 1664240400000,
+   "was": 122,
+   "now": 122
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "LITUSDT",
+   "tf": "15m",
+   "from": 1766448000000,
+   "to": 1766510100000,
+   "was": 70,
+   "now": 70
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MAVIAUSDT",
+   "tf": "15m",
+   "from": 1742947200000,
+   "to": 1743007500000,
+   "was": 68,
+   "now": 68
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SLPUSDT",
+   "tf": "15m",
+   "from": 1753228800000,
+   "to": 1753270200000,
+   "was": 47,
+   "now": 47
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CVXUSDT",
+   "tf": "15m",
+   "from": 1753228800000,
+   "to": 1753269300000,
+   "was": 46,
+   "now": 46
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "AIAUSDT",
+   "tf": "15m",
+   "from": 1768867200000,
+   "to": 1768906800000,
+   "was": 45,
+   "now": 45
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CTKUSDT",
+   "tf": "15m",
+   "from": 1745971200000,
+   "to": 1746007200000,
+   "was": 41,
+   "now": 41
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "LITUSDT",
+   "tf": "30m",
+   "from": 1766448000000,
+   "to": 1766509200000,
+   "was": 35,
+   "now": 35
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CVCUSDT",
+   "tf": "15m",
+   "from": 1747353600000,
+   "to": 1747383300000,
+   "was": 34,
+   "now": 34
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MAVIAUSDT",
+   "tf": "30m",
+   "from": 1742947200000,
+   "to": 1743006600000,
+   "was": 34,
+   "now": 34
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "PUMPUSDT",
+   "tf": "15m",
+   "from": 1752105600000,
+   "to": 1752131700000,
+   "was": 30,
+   "now": 30
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ICPUSDT",
+   "tf": "4h",
+   "from": 1663804800000,
+   "to": 1664222400000,
+   "was": 30,
+   "now": 30
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CVXUSDT",
+   "tf": "30m",
+   "from": 1753228800000,
+   "to": 1753268400000,
+   "was": 23,
+   "now": 23
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SLPUSDT",
+   "tf": "30m",
+   "from": 1753228800000,
+   "to": 1753268400000,
+   "was": 23,
+   "now": 23
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "AIAUSDT",
+   "tf": "30m",
+   "from": 1768867200000,
+   "to": 1768905000000,
+   "was": 22,
+   "now": 22
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CTKUSDT",
+   "tf": "30m",
+   "from": 1745971200000,
+   "to": 1746005400000,
+   "was": 20,
+   "now": 20
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CVCUSDT",
+   "tf": "30m",
+   "from": 1747353600000,
+   "to": 1747382400000,
+   "was": 17,
+   "now": 17
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "LITUSDT",
+   "tf": "1h",
+   "from": 1766448000000,
+   "to": 1766505600000,
+   "was": 17,
+   "now": 17
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MAVIAUSDT",
+   "tf": "1h",
+   "from": 1742947200000,
+   "to": 1743004800000,
+   "was": 17,
+   "now": 17
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "PUMPUSDT",
+   "tf": "30m",
+   "from": 1752105600000,
+   "to": 1752130800000,
+   "was": 15,
+   "now": 15
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ICPUSDT",
+   "tf": "8h",
+   "from": 1663804800000,
+   "to": 1664208000000,
+   "was": 15,
+   "now": 15
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "AIAUSDT",
+   "tf": "1h",
+   "from": 1768867200000,
+   "to": 1768903200000,
+   "was": 11,
+   "now": 11
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CVXUSDT",
+   "tf": "1h",
+   "from": 1753228800000,
+   "to": 1753264800000,
+   "was": 11,
+   "now": 11
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SLPUSDT",
+   "tf": "1h",
+   "from": 1753228800000,
+   "to": 1753264800000,
+   "was": 11,
+   "now": 11
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CTKUSDT",
+   "tf": "1h",
+   "from": 1745971200000,
+   "to": 1746003600000,
+   "was": 10,
+   "now": 10
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ICPUSDT",
+   "tf": "12h",
+   "from": 1663804800000,
+   "to": 1664193600000,
+   "was": 10,
+   "now": 10
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CVCUSDT",
+   "tf": "1h",
+   "from": 1747353600000,
+   "to": 1747378800000,
+   "was": 8,
+   "now": 8
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "PUMPUSDT",
+   "tf": "1h",
+   "from": 1752105600000,
+   "to": 1752127200000,
+   "was": 7,
+   "now": 7
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "ICPUSDT",
+   "tf": "1d",
+   "from": 1663804800000,
+   "to": 1664150400000,
+   "was": 5,
+   "now": 5
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "LITUSDT",
+   "tf": "4h",
+   "from": 1766448000000,
+   "to": 1766491200000,
+   "was": 4,
+   "now": 4
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MAVIAUSDT",
+   "tf": "4h",
+   "from": 1742947200000,
+   "to": 1742990400000,
+   "was": 4,
+   "now": 4
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "AIAUSDT",
+   "tf": "4h",
+   "from": 1768867200000,
+   "to": 1768881600000,
+   "was": 2,
+   "now": 2
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CTKUSDT",
+   "tf": "4h",
+   "from": 1745971200000,
+   "to": 1745985600000,
+   "was": 2,
+   "now": 2
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CVCUSDT",
+   "tf": "4h",
+   "from": 1747353600000,
+   "to": 1747368000000,
+   "was": 2,
+   "now": 2
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CVXUSDT",
+   "tf": "4h",
+   "from": 1753228800000,
+   "to": 1753243200000,
+   "was": 2,
+   "now": 2
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SLPUSDT",
+   "tf": "4h",
+   "from": 1753228800000,
+   "to": 1753243200000,
+   "was": 2,
+   "now": 2
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "LITUSDT",
+   "tf": "8h",
+   "from": 1766448000000,
+   "to": 1766476800000,
+   "was": 2,
+   "now": 2
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MAVIAUSDT",
+   "tf": "8h",
+   "from": 1742947200000,
+   "to": 1742976000000,
+   "was": 2,
+   "now": 2
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "PUMPUSDT",
+   "tf": "4h",
+   "from": 1752105600000,
+   "to": 1752105600000,
+   "was": 1,
+   "now": 1
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "AIAUSDT",
+   "tf": "8h",
+   "from": 1768867200000,
+   "to": 1768867200000,
+   "was": 1,
+   "now": 1
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CTKUSDT",
+   "tf": "8h",
+   "from": 1745971200000,
+   "to": 1745971200000,
+   "was": 1,
+   "now": 1
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CVCUSDT",
+   "tf": "8h",
+   "from": 1747353600000,
+   "to": 1747353600000,
+   "was": 1,
+   "now": 1
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "CVXUSDT",
+   "tf": "8h",
+   "from": 1753228800000,
+   "to": 1753228800000,
+   "was": 1,
+   "now": 1
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "SLPUSDT",
+   "tf": "8h",
+   "from": 1753228800000,
+   "to": 1753228800000,
+   "was": 1,
+   "now": 1
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "LITUSDT",
+   "tf": "12h",
+   "from": 1766448000000,
+   "to": 1766448000000,
+   "was": 1,
+   "now": 1
+  },
+  {
+   "ex": "binance",
+   "mk": "um",
+   "sym": "MAVIAUSDT",
+   "tf": "12h",
+   "from": 1742947200000,
+   "to": 1742947200000,
+   "was": 1,
+   "now": 1
+  }
+ ],
+ "tot_was": 124305,
+ "tot_now": 3625
+}

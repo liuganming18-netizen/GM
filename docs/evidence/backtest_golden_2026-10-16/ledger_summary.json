@@ -1,0 +1,448 @@
+{
+  "run_id": "bt_20261016T063427Z_810f1a3b",
+  "tables": {
+    "equity": {
+      "rows": 672,
+      "columns": [
+        "run_id",
+        "ts_ms",
+        "cash_equity",
+        "unrealized_pnl",
+        "total_equity",
+        "open_positions_count",
+        "open_risk_pct"
+      ]
+    },
+    "funding": {
+      "rows": 7,
+      "columns": [
+        "run_id",
+        "trade_id",
+        "funding_time_ms",
+        "rate",
+        "mark",
+        "qty",
+        "amount",
+        "source"
+      ]
+    },
+    "meta": {
+      "rows": 8,
+      "columns": [
+        "run_id",
+        "key",
+        "value"
+      ]
+    },
+    "orders": {
+      "rows": 14,
+      "columns": [
+        "run_id",
+        "order_id",
+        "trade_id",
+        "signal_id",
+        "symbol",
+        "side",
+        "phase",
+        "ts_ms",
+        "action",
+        "reason",
+        "price",
+        "qty",
+        "fee",
+        "stop_price",
+        "signal_type"
+      ]
+    },
+    "rejected": {
+      "rows": 5,
+      "columns": [
+        "run_id",
+        "ts_ms",
+        "symbol",
+        "phase",
+        "reason"
+      ]
+    },
+    "signals": {
+      "rows": 30,
+      "columns": [
+        "run_id",
+        "signal_id",
+        "symbol",
+        "signal_bar_open_ms",
+        "confirm_ms",
+        "kind",
+        "direction",
+        "stop_price",
+        "atr",
+        "oi_score",
+        "oi_available",
+        "oi_quality",
+        "rank_key",
+        "in_window"
+      ]
+    },
+    "trades": {
+      "rows": 7,
+      "columns": [
+        "run_id",
+        "trade_id",
+        "signal_id",
+        "symbol",
+        "direction",
+        "signal_type",
+        "entry_time_ms",
+        "exit_time_ms",
+        "entry_price",
+        "exit_price",
+        "qty",
+        "gross_pnl",
+        "entry_fee",
+        "exit_fee",
+        "fees",
+        "funding_fee",
+        "net_pnl",
+        "exit_reason",
+        "mfe",
+        "mae",
+        "holding_hours",
+        "funding_events",
+        "funding_gaps_json",
+        "stop_trace_json"
+      ]
+    }
+  },
+  "distributions": {
+    "orders.side": {
+      "sell": 7,
+      "buy": 7
+    },
+    "orders.phase": {
+      "C_entry": 7,
+      "D_intrabar": 6,
+      "EOD": 1
+    },
+    "orders.action": {
+      "entry": 7,
+      "exit": 6,
+      "force_close_eod": 1
+    },
+    "orders.reason": {
+      "": 7,
+      "intrabar_stop": 6,
+      "force_close_eod": 1
+    },
+    "signals.kind": {
+      "donchian_breakout": 16,
+      "lps_pullback": 8,
+      "sc_reversal": 4,
+      "spring": 2
+    },
+    "signals.direction": {
+      "long": 30
+    },
+    "signals.in_window": {
+      "0": 18,
+      "1": 12
+    },
+    "signals.oi_available": {
+      "0": 17,
+      "1": 13
+    },
+    "signals.oi_quality": {
+      "partial_insufficient_history": 30
+    },
+    "trades.exit_reason": {
+      "intrabar_stop": 6,
+      "force_close_eod": 1
+    },
+    "funding.source": {
+      "binance.fapi.settled": 7
+    }
+  },
+  "meta": {
+    "strategy_id": "WX_OI_RESONANCE_V1",
+    "code_sha256": "364aacfcd65c45e18106b9d2bac3200f21aa1bbdb4750a3f598ad07045fa338a",
+    "signal_frame_sha256": "a2c0090ec97aba6b2e795b85961a73ee8b8b323d96120ad72789dbb627a48fc2",
+    "reconcile_json": "{\"initial_equity\": 100000.0, \"final_cash\": 96918.59176552141, \"sum_gross_pnl\": -2684.8608859243955, \"sum_entry_fee\": 195.42544309486414, \"sum_exit_fee\": 194.08301265190198, \"sum_fees\": 389.5084557467661, \"sum_slippage_loss\": 233.70485284398183, \"sum_funding_fee\": 7.038892807413944, \"funding_settlement_model\": \"settlement_events\", \"fee_model\": {\"tier\": \"Binance_VIP0\", \"maker_fee_rate\": 0.0002, \"taker_fee_rate\": 0.0005}, \"risk_model\": {\"risk_per_trade\": 0.008, \"max_concurrent_trades\": 3, \"max_portfolio_margin_pct\": 0.4, \"max_leverage\": 2.0}, \"sum_net_pnl_closed\": -3081.408234478575, \"unrealized_net_open\": 0.0, \"final_equity\": 96918.59176552141, \"expected_cash\": 96918.59176552143, \"cash_identity_ok\": true, \"equity_identity_ok\": true, \"equity_curve_tail_matches_final\": true}",
+    "trade_start_sec": "1791504000",
+    "initial_equity": "100000.0",
+    "fee_rate": "0.0005",
+    "slippage_bps": "3.0"
+  },
+  "trade_fingerprints": [
+    {
+      "trade_id": "trd_74bcbaaf154565e9",
+      "entry_time_ms": 1791547200000,
+      "exit_time_ms": 1791570600000,
+      "entry_price": 83224.95999999999,
+      "exit_price": 82340.39047000001,
+      "qty": 0.5479936930572503,
+      "net_pnl": -530.6867832853071,
+      "exit_reason": "intrabar_stop"
+    },
+    {
+      "trade_id": "trd_b8c2314cd024be69",
+      "entry_time_ms": 1791644400000,
+      "exit_time_ms": 1791680400000,
+      "entry_price": 82977.58580999999,
+      "exit_price": 82863.93336000001,
+      "qty": 0.9589993465895915,
+      "net_pnl": -186.7154785197038,
+      "exit_reason": "intrabar_stop"
+    },
+    {
+      "trade_id": "trd_1356ddc4278947c9",
+      "entry_time_ms": 1791734400000,
+      "exit_time_ms": 1791753300000,
+      "entry_price": 83893.96064,
+      "exit_price": 83203.8670373654,
+      "qty": 0.9467436938802269,
+      "net_pnl": -733.5107209221528,
+      "exit_reason": "intrabar_stop"
+    },
+    {
+      "trade_id": "trd_44c1b4a1a5b1e486",
+      "entry_time_ms": 1791813600000,
+      "exit_time_ms": 1791816300000,
+      "entry_price": 82946.8766,
+      "exit_price": 82398.97289,
+      "qty": 0.9504790637748769,
+      "net_pnl": -599.3498894307388,
+      "exit_reason": "intrabar_stop"
+    },
+    {
+      "trade_id": "trd_de74914ad8a8eeb9",
+      "entry_time_ms": 1791871200000,
+      "exit_time_ms": 1791913500000,
+      "entry_price": 83672.0941,
+      "exit_price": 83038.48098,
+      "qty": 0.45150596582253466,
+      "net_pnl": -328.1765525374355,
+      "exit_reason": "intrabar_stop"
+    },
+    {
+      "trade_id": "trd_4c15a79ecbc7e488",
+      "entry_time_ms": 1792033200000,
+      "exit_time_ms": 1792069200000,
+      "entry_price": 81524.55003,
+      "exit_price": 80430.8635,
+      "qty": 0.5048840466441531,
+      "net_pnl": -595.7917649310036,
+      "exit_reason": "intrabar_stop"
+    },
+    {
+      "trade_id": "trd_9b931c0181f3ccb0",
+      "entry_time_ms": 1792080000000,
+      "exit_time_ms": 1792107900000,
+      "entry_price": 82398.7122,
+      "exit_price": 82170.74137999999,
+      "qty": 0.34544763489684494,
+      "net_pnl": -107.17704485223369,
+      "exit_reason": "force_close_eod"
+    }
+  ],
+  "order_fingerprints": [
+    {
+      "order_id": "ord_0ed440766a574558",
+      "trade_id": "trd_74bcbaaf154565e9",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1791547200000,
+      "action": "entry",
+      "reason": "",
+      "price": 83224.95999999999,
+      "qty": 0.5479936930572503,
+      "fee": 22.803376592470965
+    },
+    {
+      "order_id": "ord_064d35d770eb49d6",
+      "trade_id": "trd_74bcbaaf154565e9",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1791570600000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 82340.39047000001,
+      "qty": null,
+      "fee": null
+    },
+    {
+      "order_id": "ord_ca87a5053cfcd27c",
+      "trade_id": "trd_b8c2314cd024be69",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1791644400000,
+      "action": "entry",
+      "reason": "",
+      "price": 82977.58580999999,
+      "qty": 0.9589993465895915,
+      "fee": 39.78772528668588
+    },
+    {
+      "order_id": "ord_65957d4972c84365",
+      "trade_id": "trd_b8c2314cd024be69",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1791680400000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 82863.93336000001,
+      "qty": null,
+      "fee": null
+    },
+    {
+      "order_id": "ord_3af2430d4e056c70",
+      "trade_id": "trd_1356ddc4278947c9",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1791734400000,
+      "action": "entry",
+      "reason": "",
+      "price": 83893.96064,
+      "qty": 0.9467436938802269,
+      "fee": 39.713039095277985
+    },
+    {
+      "order_id": "ord_919e6b761c85d491",
+      "trade_id": "trd_1356ddc4278947c9",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1791753300000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 83203.8670373654,
+      "qty": null,
+      "fee": null
+    },
+    {
+      "order_id": "ord_78b6c7716cb68fae",
+      "trade_id": "trd_44c1b4a1a5b1e486",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1791813600000,
+      "action": "entry",
+      "reason": "",
+      "price": 82946.8766,
+      "qty": 0.9504790637748769,
+      "fee": 39.41963480690912
+    },
+    {
+      "order_id": "ord_23fab544e0e056c0",
+      "trade_id": "trd_44c1b4a1a5b1e486",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1791816300000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 82398.97289,
+      "qty": null,
+      "fee": null
+    },
+    {
+      "order_id": "ord_e5ecda7a36a705fa",
+      "trade_id": "trd_de74914ad8a8eeb9",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1791871200000,
+      "action": "entry",
+      "reason": "",
+      "price": 83672.0941,
+      "qty": 0.45150596582253466,
+      "fee": 18.889224829507253
+    },
+    {
+      "order_id": "ord_b4f6390d300a4d48",
+      "trade_id": "trd_de74914ad8a8eeb9",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1791913500000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 83038.48098,
+      "qty": null,
+      "fee": null
+    },
+    {
+      "order_id": "ord_c9065f9846b78af9",
+      "trade_id": "trd_4c15a79ecbc7e488",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1792033200000,
+      "action": "entry",
+      "reason": "",
+      "price": 81524.55003,
+      "qty": 0.5048840466441531,
+      "fee": 20.580222359995055
+    },
+    {
+      "order_id": "ord_8323c5fc7bbeddd4",
+      "trade_id": "trd_4c15a79ecbc7e488",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1792069200000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 80430.8635,
+      "qty": null,
+      "fee": null
+    },
+    {
+      "order_id": "ord_a18937809af723c0",
+      "trade_id": "trd_9b931c0181f3ccb0",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1792080000000,
+      "action": "entry",
+      "reason": "",
+      "price": 82398.7122,
+      "qty": 0.34544763489684494,
+      "fee": 14.2322201240179
+    },
+    {
+      "order_id": "ord_c6de9e298d6d0793",
+      "trade_id": "trd_9b931c0181f3ccb0",
+      "side": "sell",
+      "phase": "EOD",
+      "ts_ms": 1792107900000,
+      "action": "force_close_eod",
+      "reason": "force_close_eod",
+      "price": 82170.74137999999,
+      "qty": null,
+      "fee": null
+    }
+  ],
+  "rejected": [
+    {
+      "ts_ms": 1791558000000,
+      "symbol": "BTCUSDT",
+      "phase": "C_entry",
+      "reason": "duplicate_symbol_active"
+    },
+    {
+      "ts_ms": 1791648000000,
+      "symbol": "BTCUSDT",
+      "phase": "C_entry",
+      "reason": "duplicate_symbol_active"
+    },
+    {
+      "ts_ms": 1791655200000,
+      "symbol": "BTCUSDT",
+      "phase": "C_entry",
+      "reason": "duplicate_symbol_active"
+    },
+    {
+      "ts_ms": 1791874800000,
+      "symbol": "BTCUSDT",
+      "phase": "C_entry",
+      "reason": "duplicate_symbol_active"
+    },
+    {
+      "ts_ms": 1792087200000,
+      "symbol": "BTCUSDT",
+      "phase": "C_entry",
+      "reason": "duplicate_symbol_active"
+    }
+  ]
+}

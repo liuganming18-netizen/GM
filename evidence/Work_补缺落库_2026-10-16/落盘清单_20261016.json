@@ -1,0 +1,252 @@
+{
+ "tag": "20261016",
+ "ts": "2026-10-16T06:15:53.097402+00:00",
+ "rows_in": 4141,
+ "rows_new": 4141,
+ "rows_skipped_existing": 0,
+ "combos": 7,
+ "files_created": 40,
+ "sources_id_range": [
+  12000001,
+  12000007
+ ],
+ "per_combo": [
+  {
+   "key": "okx/swap/CORE-USDT-SWAP/1d",
+   "sid": 12000001,
+   "n": 1141
+  },
+  {
+   "key": "okx/swap/LUNA-USDT-SWAP/1d",
+   "sid": 12000002,
+   "n": 1397
+  },
+  {
+   "key": "okx/swap/OKB-USDT-SWAP/1d",
+   "sid": 12000003,
+   "n": 202
+  },
+  {
+   "key": "okx/swap/OL-USDT-SWAP/1d",
+   "sid": 12000004,
+   "n": 147
+  },
+  {
+   "key": "okx/swap/PI-USDT-SWAP/1d",
+   "sid": 12000005,
+   "n": 398
+  },
+  {
+   "key": "okx/swap/RAY-USDT-SWAP/1d",
+   "sid": 12000006,
+   "n": 743
+  },
+  {
+   "key": "okx/swap/RLS-USDT-SWAP/1d",
+   "sid": 12000007,
+   "n": 113
+  }
+ ],
+ "created": [
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/CORE-USDT-SWAP/1d/2023_补缺20261016.parquet",
+   "rows": 326
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/CORE-USDT-SWAP/1d/2023_补缺20261016.parquet",
+   "rows": 326
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/CORE-USDT-SWAP/1d/2024_补缺20261016.parquet",
+   "rows": 366
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/CORE-USDT-SWAP/1d/2024_补缺20261016.parquet",
+   "rows": 366
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/CORE-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 365
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/CORE-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 365
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/CORE-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/CORE-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/LUNA-USDT-SWAP/1d/2022_补缺20261016.parquet",
+   "rows": 217
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/LUNA-USDT-SWAP/1d/2022_补缺20261016.parquet",
+   "rows": 217
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/LUNA-USDT-SWAP/1d/2023_补缺20261016.parquet",
+   "rows": 365
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/LUNA-USDT-SWAP/1d/2023_补缺20261016.parquet",
+   "rows": 365
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/LUNA-USDT-SWAP/1d/2024_补缺20261016.parquet",
+   "rows": 366
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/LUNA-USDT-SWAP/1d/2024_补缺20261016.parquet",
+   "rows": 366
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/LUNA-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 365
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/LUNA-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 365
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/LUNA-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/LUNA-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/OKB-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 118
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/OKB-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 118
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/OKB-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/OKB-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/OL-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 63
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/OL-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 63
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/OL-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/OL-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/PI-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 314
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/PI-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 314
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/PI-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/PI-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/RAY-USDT-SWAP/1d/2024_补缺20261016.parquet",
+   "rows": 294
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/RAY-USDT-SWAP/1d/2024_补缺20261016.parquet",
+   "rows": 294
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/RAY-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 365
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/RAY-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 365
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/RAY-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/RAY-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/RLS-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 29
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/RLS-USDT-SWAP/1d/2025_补缺20261016.parquet",
+   "rows": 29
+  },
+  {
+   "metric": "candles",
+   "path": "数据/市场数据/parquet/candles/okx/swap/RLS-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  },
+  {
+   "metric": "candle_heads",
+   "path": "数据/市场数据/parquet/candle_heads/okx/swap/RLS-USDT-SWAP/1d/2026_补缺20261016.parquet",
+   "rows": 84
+  }
+ ]
+}

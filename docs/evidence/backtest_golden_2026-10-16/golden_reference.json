@@ -1,0 +1,5582 @@
+{
+  "schema": "backtest_golden_reference/v1",
+  "generated_at_utc": "2026-10-16T06:58:46Z",
+  "purpose": "WX_OI_RESONANCE_V1 Backtest 黄金基准。任何 Trading Core 重构后必须复跑同一案例并逐项 diff。",
+  "provenance": {
+    "run_id": "bt_20261016T063427Z_810f1a3b",
+    "run_dir": "/Users/boos/Desktop/威科夫因子共振趋势/回测日志/oi_resonance_v1/runs/bt_20261016T063427Z_810f1a3b",
+    "run_status": "succeeded",
+    "requested_at": "2026-10-16T06:34:27Z",
+    "created_at": "2026-10-16T06:34:27Z",
+    "started_at": "2026-10-16T06:34:27Z",
+    "finished_at": "2026-10-16T06:34:28Z",
+    "contract_version": "bt_api_v1",
+    "live_order_enabled": false,
+    "note": "研究回测（非正式 M4）；预热不交易；真实 settled 资金费（毫秒口径）；不写 paper 账户"
+  },
+  "repo": {
+    "branch": "wyckoff-v3.1-main",
+    "commit": "622020526bef8dae20fc76446aeb7147eca7f27f",
+    "commit_short": "6220205",
+    "commit_subject": "docs(blueprint): 落地系统架构收敛与施工蓝图，确立单核交易核心与六大验收关卡",
+    "origin_commit": "622020526bef8dae20fc76446aeb7147eca7f27f",
+    "dirty_tracked_files": 126
+  },
+  "strategy": {
+    "strategy_id": "WX_OI_RESONANCE_V1",
+    "strategy_key": "wx_oi_resonance_v1",
+    "family": "F_OI_RES",
+    "package_dir": "/Users/boos/Desktop/威科夫因子共振趋势/策略/WyckoffMaster/oi_resonance_v1",
+    "signal_version": "oi_res_v1.0.0",
+    "core_version": "oi_res_core_v1.0.0",
+    "exec_core_version": "oi_res_exec_v1.0.0",
+    "experiment_id": "exp_oi_resonance_v1_2026-10-16",
+    "code_sha256": "364aacfcd65c45e18106b9d2bac3200f21aa1bbdb4750a3f598ad07045fa338a",
+    "signal_params_hash": "0ba4b7918356b66415416504ae63f9f99786c73ee410fcc69182e9678aee21db",
+    "exec_params_hash": "a92639c0a2b51e3df59e1d7fc78362611fcc91f0a97ba5310c06f0f24e5b99a5",
+    "spec_sha256": "810f1a3b84739e9ae83f4574ca0a6e4d79babd8c5c0b1af79bb9ef61ee46229e"
+  },
+  "market": {
+    "exchange": "binance",
+    "market": "um",
+    "symbol": "BTCUSDT",
+    "signal_timeframe": "1h",
+    "exec_timeframe": "15m",
+    "window_mode": "auto_recent_days",
+    "data_end_ms": 1792130400000,
+    "win_start_ms": 1791504000000,
+    "sig_end_ms": 1792130400000,
+    "exec_end_ms": 1792132200000,
+    "signal_series_start_ms": 1790640000000,
+    "start_utc": null,
+    "end_utc": null,
+    "window_raw": {
+      "symbol": "BTCUSDT",
+      "exchange": "binance",
+      "market": "um",
+      "signal_timeframe": "1h",
+      "exec_timeframe": "15m",
+      "window_source": "auto_recent_days",
+      "data_end_ms": 1792130400000,
+      "sig_end_ms": 1792130400000,
+      "exec_end_ms": 1792132200000,
+      "signal_series_start_ms": 1790640000000,
+      "win_start_ms": 1791504000000,
+      "win_end_ms": 1792108800000,
+      "window_days": 7,
+      "warmup_bars_requested": 240,
+      "warmup_bars": 240,
+      "trade_start_sec": 1791504000,
+      "convention": "UTC 半开区间 [win_start, win_end)；预热段（warmup_bars 根信号 bar）只喂数据不交易；bar 均须已收盘且连续、且**全窗覆盖**"
+    }
+  },
+  "cost_model": {
+    "initial_equity": 100000.0,
+    "risk_per_trade": 0.008,
+    "max_portfolio_risk": 0.04,
+    "max_portfolio_margin_pct": 0.4,
+    "max_concurrent_trades": 3,
+    "max_leverage_per_symbol": 2.0,
+    "fee_rate": 0.0005,
+    "maker_fee_rate": 0.0002,
+    "taker_fee_rate": 0.0005,
+    "slippage_bps": 3.0,
+    "enable_trailing_exit": true,
+    "force_close_at_end": true,
+    "funding_model": "settlement_events",
+    "fee_tier": "Binance_VIP0",
+    "cost_summary": {
+      "sum_fees": 389.5084557467661,
+      "sum_entry_fee": 195.42544309486414,
+      "sum_exit_fee": 194.08301265190198,
+      "sum_slippage_loss": 233.70485284398183,
+      "sum_funding_fee": 7.038892807413944,
+      "fee_tier": "Binance_VIP0",
+      "maker_fee_rate": 0.0002,
+      "taker_fee_rate": 0.0005,
+      "funding_model": "settlement_events"
+    }
+  },
+  "signal_params": {
+    "donchian_entry_window": 20,
+    "donchian_exit_window": 10,
+    "atr_period": 14,
+    "atr_mult": 3.0,
+    "structural_buffer_atr": 0.2,
+    "pullback_window": 8,
+    "pullback_proximity_atr": 0.5,
+    "enable_sc": true,
+    "sc_vol_mult": 2.0,
+    "sc_range_atr_mult": 1.5,
+    "sc_lower_wick_frac": 0.5,
+    "enable_short": false,
+    "oi_min_resonance": 0.0,
+    "bars_per_day": 24,
+    "signal_bar_seconds": 3600,
+    "oi_chg_window": 20,
+    "oi_rank_days": 90,
+    "oi_rank_min_days": 7,
+    "oi_price_div_window": 12,
+    "oi_mom_flux_window": 48,
+    "oi_vol_ma_window": 48,
+    "oi_vol_ratio_clip": 5.0,
+    "price_step": 0.0
+  },
+  "exec_params": {
+    "initial_equity": 100000.0,
+    "risk_per_trade": 0.008,
+    "max_portfolio_risk": 0.04,
+    "max_portfolio_margin_pct": 0.4,
+    "max_concurrent_trades": 3,
+    "max_leverage_per_symbol": 2.0,
+    "fee_rate": 0.0005,
+    "maker_fee_rate": 0.0002,
+    "taker_fee_rate": 0.0005,
+    "slippage_bps": 3.0,
+    "enable_trailing_exit": true,
+    "force_close_at_end": true,
+    "funding_model": "settlement_events",
+    "allow_new_entries": true,
+    "live_order_enabled": false
+  },
+  "counts": {
+    "signal_count": 30,
+    "order_count": 14,
+    "fill_count": 14,
+    "trade_count": 7,
+    "rejected_count": 5,
+    "funding_event_count": 7,
+    "equity_points": 672
+  },
+  "ledger_tables": {
+    "equity": {
+      "rows": 672,
+      "columns": [
+        "run_id",
+        "ts_ms",
+        "cash_equity",
+        "unrealized_pnl",
+        "total_equity",
+        "open_positions_count",
+        "open_risk_pct"
+      ]
+    },
+    "funding": {
+      "rows": 7,
+      "columns": [
+        "run_id",
+        "trade_id",
+        "funding_time_ms",
+        "rate",
+        "mark",
+        "qty",
+        "amount",
+        "source"
+      ]
+    },
+    "meta": {
+      "rows": 8,
+      "columns": [
+        "run_id",
+        "key",
+        "value"
+      ]
+    },
+    "orders": {
+      "rows": 14,
+      "columns": [
+        "run_id",
+        "order_id",
+        "trade_id",
+        "signal_id",
+        "symbol",
+        "side",
+        "phase",
+        "ts_ms",
+        "action",
+        "reason",
+        "price",
+        "qty",
+        "fee",
+        "stop_price",
+        "signal_type"
+      ]
+    },
+    "rejected": {
+      "rows": 5,
+      "columns": [
+        "run_id",
+        "ts_ms",
+        "symbol",
+        "phase",
+        "reason"
+      ]
+    },
+    "signals": {
+      "rows": 30,
+      "columns": [
+        "run_id",
+        "signal_id",
+        "symbol",
+        "signal_bar_open_ms",
+        "confirm_ms",
+        "kind",
+        "direction",
+        "stop_price",
+        "atr",
+        "oi_score",
+        "oi_available",
+        "oi_quality",
+        "rank_key",
+        "in_window"
+      ]
+    },
+    "trades": {
+      "rows": 7,
+      "columns": [
+        "run_id",
+        "trade_id",
+        "signal_id",
+        "symbol",
+        "direction",
+        "signal_type",
+        "entry_time_ms",
+        "exit_time_ms",
+        "entry_price",
+        "exit_price",
+        "qty",
+        "gross_pnl",
+        "entry_fee",
+        "exit_fee",
+        "fees",
+        "funding_fee",
+        "net_pnl",
+        "exit_reason",
+        "mfe",
+        "mae",
+        "holding_hours",
+        "funding_events",
+        "funding_gaps_json",
+        "stop_trace_json"
+      ]
+    }
+  },
+  "signals_by_kind": null,
+  "equity": {
+    "first": {
+      "ts_ms": 1791504000000,
+      "cash_equity": 100000.0,
+      "unrealized_pnl": 0.0,
+      "total_equity": 100000.0,
+      "open_positions_count": 0,
+      "open_risk_pct": 0.0
+    },
+    "last": {
+      "ts_ms": 1792107900000,
+      "cash_equity": 96918.59176552141,
+      "unrealized_pnl": 0.0,
+      "total_equity": 96918.59176552141,
+      "open_positions_count": 0,
+      "open_risk_pct": 0.0
+    }
+  },
+  "result": {
+    "initial_equity": 100000.0,
+    "final_equity": 96918.59176552141,
+    "net_pnl_realized": -3081.4082344785857,
+    "net_return_pct": -3.0814082344785856,
+    "gross_pnl": -2684.8608859243955,
+    "unrealized_pnl_at_end": 0.0,
+    "total_fees": 389.5084557467661,
+    "total_entry_fee": 195.42544309486414,
+    "total_exit_fee": 194.08301265190198,
+    "total_funding_fee": 7.038892807413944,
+    "trades_count": 7,
+    "wins": 0,
+    "losses": 7,
+    "flats": 0,
+    "win_rate_pct": 0.0,
+    "avg_win": null,
+    "avg_loss": 440.2011763540822,
+    "avg_win_loss_ratio": null,
+    "profit_factor": 0.0,
+    "expectancy_usd": -440.2011763540822,
+    "max_drawdown_pct": 3.1234770061238812,
+    "metrics_raw": {
+      "initial_equity": 100000.0,
+      "final_equity": 96918.59176552141,
+      "net_pnl": -3081.4082344785857,
+      "net_return_pct": -3.0814082344785856,
+      "gross_pnl": -2684.8608859243955,
+      "total_entry_fee": 195.42544309486414,
+      "total_exit_fee": 194.08301265190198,
+      "total_fees": 389.5084557467661,
+      "total_funding_fee": 7.038892807413944,
+      "trades_count": 7,
+      "wins": 0,
+      "losses": 7,
+      "flats": 0,
+      "win_rate_pct": 0.0,
+      "avg_win": null,
+      "avg_loss": 440.2011763540822,
+      "avg_win_loss_ratio": null,
+      "profit_factor": 0.0,
+      "expectancy_usd": -440.2011763540822,
+      "max_drawdown_pct": 3.1234770061238812,
+      "sharpe_annualized_sqrt365": -24.7836549157945,
+      "sharpe_basis": "完整等间隔 UTC 逐日净值收益（保留平盘日），年化 sqrt(365)",
+      "daily_points": 7,
+      "open_positions_remaining": [],
+      "note": "指标由账本/权益曲线独立计算；profit_factor=Σ盈/|Σ亏|（聚合），avg_win_loss_ratio=平均盈/平均亏（均值），二者不同口径、分别给出",
+      "funding_events_total": 7,
+      "metrics_from_ledger": {
+        "available": true,
+        "initial_equity": 100000.0,
+        "final_equity": 96918.59176552141,
+        "net_pnl": -3081.4082344785857,
+        "net_return_pct": -3.0814082344785856,
+        "trades_count": 7,
+        "wins": 0,
+        "losses": 7,
+        "win_rate_pct": 0.0,
+        "avg_win": null,
+        "avg_loss": 440.2011763540822,
+        "avg_win_loss_ratio": null,
+        "profit_factor": 0.0,
+        "max_drawdown_pct": 3.1234770061238812,
+        "total_fees": 389.5084557467661,
+        "total_funding_fee": 7.038892807413944,
+        "cash_identity_ok": true,
+        "expected_cash": 96918.59176552143,
+        "final_cash": 96918.59176552141,
+        "equity_identity_ok": true,
+        "open_positions_last": 0,
+        "open_positions_rows": 208,
+        "source": "ledger.sqlite3（trades/equity/meta 只读重算）"
+      },
+      "metrics_match": true,
+      "metrics_match_diffs": []
+    }
+  },
+  "ledger_reconcile": {
+    "initial_equity": 100000.0,
+    "final_cash": 96918.59176552141,
+    "sum_gross_pnl": -2684.8608859243955,
+    "sum_entry_fee": 195.42544309486414,
+    "sum_exit_fee": 194.08301265190198,
+    "sum_fees": 389.5084557467661,
+    "sum_slippage_loss": 233.70485284398183,
+    "sum_funding_fee": 7.038892807413944,
+    "funding_settlement_model": "settlement_events",
+    "fee_model": {
+      "tier": "Binance_VIP0",
+      "maker_fee_rate": 0.0002,
+      "taker_fee_rate": 0.0005
+    },
+    "risk_model": {
+      "risk_per_trade": 0.008,
+      "max_concurrent_trades": 3,
+      "max_portfolio_margin_pct": 0.4,
+      "max_leverage": 2.0
+    },
+    "sum_net_pnl_closed": -3081.408234478575,
+    "unrealized_net_open": 0.0,
+    "final_equity": 96918.59176552141,
+    "expected_cash": 96918.59176552143,
+    "cash_identity_ok": true,
+    "equity_identity_ok": true,
+    "equity_curve_tail_matches_final": true
+  },
+  "data_quality": {
+    "status": "ok",
+    "reasons": [],
+    "signal_full_window_ok": true,
+    "exec_full_window_ok": true,
+    "signal_contiguous": true,
+    "exec_contiguous": true,
+    "all_closed": true,
+    "signal_expected_bars": 414,
+    "signal_actual_bars": 414,
+    "exec_expected_bars": 672,
+    "exec_actual_bars": 672,
+    "oi_bars_missing": 0,
+    "oi_fake_fill": "无",
+    "funding_model": "settlement_events",
+    "funding_is_assumption": false,
+    "funding_frequency": {
+      "interval_ms": 28800000,
+      "interval_hours": 8.0,
+      "frequency": "8h",
+      "source": "observed_from_settled_events",
+      "n_intervals": 41,
+      "mode_count": 41,
+      "distinct_intervals_sec": [
+        28800
+      ],
+      "note": "频率由该标的**真实结算事件间隔**的众数得到（不假设 8h）"
+    },
+    "funding_expected_settlements": 21,
+    "funding_actual_settlements": 21,
+    "funding_missing_settlements_count": 0,
+    "funding_missing_settlements": [],
+    "funding_match_tolerance_ms": 60000,
+    "funding_coverage_ok": true,
+    "funding_events_missing_fields": [],
+    "funding_gaps": [],
+    "funding_events_used": 21,
+    "funding_events_recomputed": 7,
+    "funding_evidence_reconcile": "逐事件独立重算(毫秒) == 引擎累计值（已通过）",
+    "oi_min_resonance": 0.0,
+    "oi_gate_enabled": false,
+    "oi_gate_note": "默认 oi_min_resonance=0.0 ⇒ **因子门槛未启用**（因子只作证据记录，不拒单）；本运行**未擅自改阈值**",
+    "reconcile": {
+      "initial_equity": 100000.0,
+      "final_cash": 96918.59176552141,
+      "sum_gross_pnl": -2684.8608859243955,
+      "sum_entry_fee": 195.42544309486414,
+      "sum_exit_fee": 194.08301265190198,
+      "sum_fees": 389.5084557467661,
+      "sum_slippage_loss": 233.70485284398183,
+      "sum_funding_fee": 7.038892807413944,
+      "funding_settlement_model": "settlement_events",
+      "fee_model": {
+        "tier": "Binance_VIP0",
+        "maker_fee_rate": 0.0002,
+        "taker_fee_rate": 0.0005
+      },
+      "risk_model": {
+        "risk_per_trade": 0.008,
+        "max_concurrent_trades": 3,
+        "max_portfolio_margin_pct": 0.4,
+        "max_leverage": 2.0
+      },
+      "sum_net_pnl_closed": -3081.408234478575,
+      "unrealized_net_open": 0.0,
+      "final_equity": 96918.59176552141,
+      "expected_cash": 96918.59176552143,
+      "cash_identity_ok": true,
+      "equity_identity_ok": true,
+      "equity_curve_tail_matches_final": true
+    },
+    "reconcile_ok": true,
+    "metrics_match": true,
+    "metrics_match_diffs": [],
+    "ledger_counts": {
+      "signals": 30,
+      "funding": 7,
+      "trades": 7,
+      "orders": 14,
+      "rejected": 5,
+      "equity": 672
+    },
+    "time_precision_note": "入场/退出时刻均为 15m bar **开盘**毫秒；bar 内止损的真实成交时刻在 OHLC 下不可知 ⇒ 退出时刻属**显式 bar 级假设**（不隐瞒、不伪造 tick 时刻）",
+    "actual_config": {
+      "signal_params_hash": "0ba4b7918356b66415416504ae63f9f99786c73ee410fcc69182e9678aee21db",
+      "exec_params_hash": "a92639c0a2b51e3df59e1d7fc78362611fcc91f0a97ba5310c06f0f24e5b99a5",
+      "initial_equity": 100000.0,
+      "fee_rate": 0.0005,
+      "maker_fee_rate": 0.0002,
+      "taker_fee_rate": 0.0005,
+      "slippage_bps": 3.0,
+      "max_concurrent_trades": 3,
+      "max_portfolio_margin_pct": 0.4
+    }
+  },
+  "benchmark_buy_hold": {
+    "benchmark_kind": "perp_buy_and_hold_same_cost",
+    "symbol": "BTCUSDT",
+    "entry_time_ms": 1791504000000,
+    "exit_time_ms": 1792107900000,
+    "entry_price": 81711.0,
+    "exit_price": 82195.4,
+    "qty": 1.2228469725350861,
+    "cum_funding": 35.76247476568463,
+    "gross_return_pct": 0.5928210400068412,
+    "net_return_pct": 0.39623873156709305,
+    "final_equity": 100396.2387315671,
+    "series_last_equity": 100396.2387315671,
+    "max_drawdown_pct": 4.91584356479261,
+    "price_only_return_pct": 0.5928210400068412,
+    "cost_model": "双边手续费 0.0005 + 双边滑点 0.00030000000000000003 + **真实 settled 资金费**（逐事件 mark×qty×rate，与策略同口径）",
+    "note": "同期同标的买入持有（同成本：手续费+滑点+真实资金费）⇒ 可与策略净值直接对比；price_only_return_pct 为**纯价格**参考（无成本、无资金费），不可直接与策略比",
+    "equity_series": [
+      {
+        "t": 1791504000000,
+        "equity": 99978.86791219337,
+        "cum_funding": 0.0,
+        "mark": 81800.0
+      },
+      {
+        "t": 1791504900000,
+        "equity": 99871.9223016516,
+        "cum_funding": 0.0,
+        "mark": 81712.5
+      },
+      {
+        "t": 1791505800000,
+        "equity": 99987.79023170142,
+        "cum_funding": 0.0,
+        "mark": 81807.3
+      },
+      {
+        "t": 1791506700000,
+        "equity": 99947.0897879181,
+        "cum_funding": 0.0,
+        "mark": 81774.0
+      },
+      {
+        "t": 1791507600000,
+        "equity": 99856.52213373357,
+        "cum_funding": 0.0,
+        "mark": 81699.9
+      },
+      {
+        "t": 1791508500000,
+        "equity": 99960.04548473803,
+        "cum_funding": 0.0,
+        "mark": 81784.6
+      },
+      {
+        "t": 1791509400000,
+        "equity": 100163.30325654482,
+        "cum_funding": 0.0,
+        "mark": 81950.9
+      },
+      {
+        "t": 1791510300000,
+        "equity": 100157.19207879958,
+        "cum_funding": 0.0,
+        "mark": 81945.9
+      },
+      {
+        "t": 1791511200000,
+        "equity": 100204.61481810268,
+        "cum_funding": 0.0,
+        "mark": 81984.7
+      },
+      {
+        "t": 1791512100000,
+        "equity": 100074.3245085741,
+        "cum_funding": 0.0,
+        "mark": 81878.1
+      },
+      {
+        "t": 1791513000000,
+        "equity": 100229.42619974837,
+        "cum_funding": 0.0,
+        "mark": 82005.0
+      },
+      {
+        "t": 1791513900000,
+        "equity": 100325.37169034871,
+        "cum_funding": 0.0,
+        "mark": 82083.5
+      },
+      {
+        "t": 1791514800000,
+        "equity": 100284.79347012028,
+        "cum_funding": 0.0,
+        "mark": 82050.3
+      },
+      {
+        "t": 1791515700000,
+        "equity": 100454.07309366355,
+        "cum_funding": 0.0,
+        "mark": 82188.8
+      },
+      {
+        "t": 1791516600000,
+        "equity": 100663.4420432156,
+        "cum_funding": 0.0,
+        "mark": 82360.1
+      },
+      {
+        "t": 1791517500000,
+        "equity": 100693.99793194183,
+        "cum_funding": 0.0,
+        "mark": 82385.1
+      },
+      {
+        "t": 1791518400000,
+        "equity": 100801.67688381304,
+        "cum_funding": 0.0,
+        "mark": 82473.2
+      },
+      {
+        "t": 1791519300000,
+        "equity": 100708.66475853043,
+        "cum_funding": 0.0,
+        "mark": 82397.1
+      },
+      {
+        "t": 1791520200000,
+        "equity": 100599.03022978074,
+        "cum_funding": 0.0,
+        "mark": 82307.4
+      },
+      {
+        "t": 1791521100000,
+        "equity": 100479.98448730339,
+        "cum_funding": 0.0,
+        "mark": 82210.0
+      },
+      {
+        "t": 1791522000000,
+        "equity": 100626.89720029903,
+        "cum_funding": 0.0,
+        "mark": 82330.2
+      },
+      {
+        "t": 1791522900000,
+        "equity": 100825.75492412927,
+        "cum_funding": 0.0,
+        "mark": 82492.9
+      },
+      {
+        "t": 1791523800000,
+        "equity": 100807.05472022886,
+        "cum_funding": 0.0,
+        "mark": 82477.6
+      },
+      {
+        "t": 1791524700000,
+        "equity": 100618.95266923023,
+        "cum_funding": 0.0,
+        "mark": 82323.7
+      },
+      {
+        "t": 1791525600000,
+        "equity": 100758.16529826689,
+        "cum_funding": 0.0,
+        "mark": 82437.6
+      },
+      {
+        "t": 1791526500000,
+        "equity": 100768.55430043381,
+        "cum_funding": 0.0,
+        "mark": 82446.1
+      },
+      {
+        "t": 1791527400000,
+        "equity": 100906.1780232567,
+        "cum_funding": 0.0,
+        "mark": 82558.7
+      },
+      {
+        "t": 1791528300000,
+        "equity": 100876.1110287501,
+        "cum_funding": 0.0,
+        "mark": 82534.1
+      },
+      {
+        "t": 1791529200000,
+        "equity": 100825.26602990968,
+        "cum_funding": 0.0,
+        "mark": 82492.5
+      },
+      {
+        "t": 1791530100000,
+        "equity": 100805.9547082347,
+        "cum_funding": 0.0,
+        "mark": 82476.7
+      },
+      {
+        "t": 1791531000000,
+        "equity": 100836.63282051582,
+        "cum_funding": 0.0,
+        "mark": 82501.8
+      },
+      {
+        "t": 1791531900000,
+        "equity": 100977.67880287606,
+        "cum_funding": 0.0,
+        "mark": 82617.2
+      },
+      {
+        "t": 1791532800000,
+        "equity": 101018.54788440489,
+        "cum_funding": 5.209198670299586,
+        "mark": 82654.9
+      },
+      {
+        "t": 1791533700000,
+        "equity": 100863.81286389532,
+        "cum_funding": 5.209198670299586,
+        "mark": 82528.3
+      },
+      {
+        "t": 1791534600000,
+        "equity": 100873.22407762299,
+        "cum_funding": 5.209198670299586,
+        "mark": 82536.0
+      },
+      {
+        "t": 1791535500000,
+        "equity": 101019.64789639905,
+        "cum_funding": 5.209198670299586,
+        "mark": 82655.8
+      },
+      {
+        "t": 1791536400000,
+        "equity": 100865.64621721889,
+        "cum_funding": 5.209198670299586,
+        "mark": 82529.8
+      },
+      {
+        "t": 1791537300000,
+        "equity": 100955.84720073869,
+        "cum_funding": 5.209198670299586,
+        "mark": 82603.6
+      },
+      {
+        "t": 1791538200000,
+        "equity": 100921.1357111457,
+        "cum_funding": 5.209198670299586,
+        "mark": 82575.2
+      },
+      {
+        "t": 1791539100000,
+        "equity": 100975.28074596857,
+        "cum_funding": 5.209198670299586,
+        "mark": 82619.5
+      },
+      {
+        "t": 1791540000000,
+        "equity": 101058.8816575235,
+        "cum_funding": 5.209198670299586,
+        "mark": 82687.9
+      },
+      {
+        "t": 1791540900000,
+        "equity": 100969.16956822333,
+        "cum_funding": 5.209198670299586,
+        "mark": 82614.5
+      },
+      {
+        "t": 1791541800000,
+        "equity": 100719.10017488794,
+        "cum_funding": 5.209198670299586,
+        "mark": 82409.9
+      },
+      {
+        "t": 1791542700000,
+        "equity": 100853.54608528329,
+        "cum_funding": 5.209198670299586,
+        "mark": 82519.9
+      },
+      {
+        "t": 1791543600000,
+        "equity": 100808.07892285868,
+        "cum_funding": 5.209198670299586,
+        "mark": 82482.7
+      },
+      {
+        "t": 1791544500000,
+        "equity": 100902.55773080015,
+        "cum_funding": 5.209198670299586,
+        "mark": 82560.0
+      },
+      {
+        "t": 1791545400000,
+        "equity": 101391.69639752951,
+        "cum_funding": 5.209198670299586,
+        "mark": 82960.2
+      },
+      {
+        "t": 1791546300000,
+        "equity": 101684.91070574631,
+        "cum_funding": 5.209198670299586,
+        "mark": 83200.1
+      },
+      {
+        "t": 1791547200000,
+        "equity": 101733.80012770828,
+        "cum_funding": 5.209198670299586,
+        "mark": 83240.1
+      },
+      {
+        "t": 1791548100000,
+        "equity": 101530.90902656617,
+        "cum_funding": 5.209198670299586,
+        "mark": 83074.1
+      },
+      {
+        "t": 1791549000000,
+        "equity": 101433.37462975207,
+        "cum_funding": 5.209198670299586,
+        "mark": 82994.3
+      },
+      {
+        "t": 1791549900000,
+        "equity": 101425.67454579305,
+        "cum_funding": 5.209198670299586,
+        "mark": 82988.0
+      },
+      {
+        "t": 1791550800000,
+        "equity": 101457.20822295852,
+        "cum_funding": 5.209198670299586,
+        "mark": 83013.8
+      },
+      {
+        "t": 1791551700000,
+        "equity": 101353.31820128938,
+        "cum_funding": 5.209198670299586,
+        "mark": 82928.8
+      },
+      {
+        "t": 1791552600000,
+        "equity": 100870.16848875037,
+        "cum_funding": 5.209198670299586,
+        "mark": 82533.5
+      },
+      {
+        "t": 1791553500000,
+        "equity": 100935.80253773429,
+        "cum_funding": 5.209198670299586,
+        "mark": 82587.2
+      },
+      {
+        "t": 1791554400000,
+        "equity": 101223.51678598039,
+        "cum_funding": 5.209198670299586,
+        "mark": 82822.6
+      },
+      {
+        "t": 1791555300000,
+        "equity": 101597.64308754423,
+        "cum_funding": 5.209198670299586,
+        "mark": 83128.7
+      },
+      {
+        "t": 1791556200000,
+        "equity": 101467.1083309058,
+        "cum_funding": 5.209198670299586,
+        "mark": 83021.9
+      },
+      {
+        "t": 1791557100000,
+        "equity": 101440.46359593656,
+        "cum_funding": 5.209198670299586,
+        "mark": 83000.1
+      },
+      {
+        "t": 1791558000000,
+        "equity": 101207.99439450746,
+        "cum_funding": 5.209198670299586,
+        "mark": 82809.9
+      },
+      {
+        "t": 1791558900000,
+        "equity": 101270.20618395405,
+        "cum_funding": 5.209198670299586,
+        "mark": 82860.8
+      },
+      {
+        "t": 1791559800000,
+        "equity": 101405.50765923376,
+        "cum_funding": 5.209198670299586,
+        "mark": 82971.5
+      },
+      {
+        "t": 1791560700000,
+        "equity": 101244.05034320439,
+        "cum_funding": 5.209198670299586,
+        "mark": 82839.4
+      },
+      {
+        "t": 1791561600000,
+        "equity": 101304.22587337486,
+        "cum_funding": 6.512116616999412,
+        "mark": 82889.7
+      },
+      {
+        "t": 1791562500000,
+        "equity": 101061.00099911414,
+        "cum_funding": 6.512116616999412,
+        "mark": 82690.7
+      },
+      {
+        "t": 1791563400000,
+        "equity": 101065.76771775544,
+        "cum_funding": 6.512116616999412,
+        "mark": 82694.6
+      },
+      {
+        "t": 1791564300000,
+        "equity": 101082.14567411269,
+        "cum_funding": 6.512116616999412,
+        "mark": 82708.0
+      },
+      {
+        "t": 1791565200000,
+        "equity": 100931.32180736007,
+        "cum_funding": 6.512116616999412,
+        "mark": 82584.6
+      },
+      {
+        "t": 1791566100000,
+        "equity": 101000.13366877151,
+        "cum_funding": 6.512116616999412,
+        "mark": 82640.9
+      },
+      {
+        "t": 1791567000000,
+        "equity": 101020.30055533082,
+        "cum_funding": 6.512116616999412,
+        "mark": 82657.4
+      },
+      {
+        "t": 1791567900000,
+        "equity": 101047.92307873933,
+        "cum_funding": 6.512116616999412,
+        "mark": 82680.0
+      },
+      {
+        "t": 1791568800000,
+        "equity": 100979.23344088279,
+        "cum_funding": 6.512116616999412,
+        "mark": 82623.8
+      },
+      {
+        "t": 1791569700000,
+        "equity": 100786.4868947978,
+        "cum_funding": 6.512116616999412,
+        "mark": 82466.1
+      },
+      {
+        "t": 1791570600000,
+        "equity": 100747.49758078312,
+        "cum_funding": 6.512116616999412,
+        "mark": 82434.2
+      },
+      {
+        "t": 1791571500000,
+        "equity": 100725.98623511987,
+        "cum_funding": 6.512116616999412,
+        "mark": 82416.6
+      },
+      {
+        "t": 1791572400000,
+        "equity": 100805.79821647276,
+        "cum_funding": 6.512116616999412,
+        "mark": 82481.9
+      },
+      {
+        "t": 1791573300000,
+        "equity": 100724.1528817963,
+        "cum_funding": 6.512116616999412,
+        "mark": 82415.1
+      },
+      {
+        "t": 1791574200000,
+        "equity": 100644.58534755322,
+        "cum_funding": 6.512116616999412,
+        "mark": 82350.0
+      },
+      {
+        "t": 1791575100000,
+        "equity": 100589.70697140094,
+        "cum_funding": 6.512116616999412,
+        "mark": 82305.1
+      },
+      {
+        "t": 1791576000000,
+        "equity": 100675.14123627944,
+        "cum_funding": 6.512116616999412,
+        "mark": 82375.0
+      },
+      {
+        "t": 1791576900000,
+        "equity": 100664.141116338,
+        "cum_funding": 6.512116616999412,
+        "mark": 82366.0
+      },
+      {
+        "t": 1791577800000,
+        "equity": 100690.17473353274,
+        "cum_funding": 6.512116616999412,
+        "mark": 82387.3
+      },
+      {
+        "t": 1791578700000,
+        "equity": 100797.60923829411,
+        "cum_funding": 6.512116616999412,
+        "mark": 82475.2
+      },
+      {
+        "t": 1791579600000,
+        "equity": 100868.37667658406,
+        "cum_funding": 6.512116616999412,
+        "mark": 82533.1
+      },
+      {
+        "t": 1791580500000,
+        "equity": 100876.9323254274,
+        "cum_funding": 6.512116616999412,
+        "mark": 82540.1
+      },
+      {
+        "t": 1791581400000,
+        "equity": 100836.10965808916,
+        "cum_funding": 6.512116616999412,
+        "mark": 82506.7
+      },
+      {
+        "t": 1791582300000,
+        "equity": 100830.73182167335,
+        "cum_funding": 6.512116616999412,
+        "mark": 82502.3
+      },
+      {
+        "t": 1791583200000,
+        "equity": 100719.2639396001,
+        "cum_funding": 6.512116616999412,
+        "mark": 82411.1
+      },
+      {
+        "t": 1791584100000,
+        "equity": 100810.80938222384,
+        "cum_funding": 6.512116616999412,
+        "mark": 82486.0
+      },
+      {
+        "t": 1791585000000,
+        "equity": 100940.73302108776,
+        "cum_funding": 6.512116616999412,
+        "mark": 82592.3
+      },
+      {
+        "t": 1791585900000,
+        "equity": 100946.47752816828,
+        "cum_funding": 6.512116616999412,
+        "mark": 82597.0
+      },
+      {
+        "t": 1791586800000,
+        "equity": 100925.69952383445,
+        "cum_funding": 6.512116616999412,
+        "mark": 82580.0
+      },
+      {
+        "t": 1791587700000,
+        "equity": 100927.16620649329,
+        "cum_funding": 6.512116616999412,
+        "mark": 82581.2
+      },
+      {
+        "t": 1791588600000,
+        "equity": 100958.82210721367,
+        "cum_funding": 6.512116616999412,
+        "mark": 82607.1
+      },
+      {
+        "t": 1791589500000,
+        "equity": 100923.86617051088,
+        "cum_funding": 6.512116616999412,
+        "mark": 82578.5
+      },
+      {
+        "t": 1791590400000,
+        "equity": 100951.977588139,
+        "cum_funding": 6.512116616999412,
+        "mark": 82601.5
+      },
+      {
+        "t": 1791591300000,
+        "equity": 100902.5715001481,
+        "cum_funding": 11.795501287216432,
+        "mark": 82565.4
+      },
+      {
+        "t": 1791592200000,
+        "equity": 100833.27074451705,
+        "cum_funding": 11.795501287216432,
+        "mark": 82508.7
+      },
+      {
+        "t": 1791593100000,
+        "equity": 100858.93769104707,
+        "cum_funding": 11.795501287216432,
+        "mark": 82529.7
+      },
+      {
+        "t": 1791594000000,
+        "equity": 100988.25021213644,
+        "cum_funding": 11.795501287216432,
+        "mark": 82635.5
+      },
+      {
+        "t": 1791594900000,
+        "equity": 100920.0494684995,
+        "cum_funding": 11.795501287216432,
+        "mark": 82579.7
+      },
+      {
+        "t": 1791595800000,
+        "equity": 100975.66118598123,
+        "cum_funding": 11.795501287216432,
+        "mark": 82625.2
+      },
+      {
+        "t": 1791596700000,
+        "equity": 101007.1948631467,
+        "cum_funding": 11.795501287216432,
+        "mark": 82651.0
+      },
+      {
+        "t": 1791597600000,
+        "equity": 100997.78364941901,
+        "cum_funding": 11.795501287216432,
+        "mark": 82643.3
+      },
+      {
+        "t": 1791598500000,
+        "equity": 100927.3828817938,
+        "cum_funding": 11.795501287216432,
+        "mark": 82585.7
+      },
+      {
+        "t": 1791599400000,
+        "equity": 100936.06075419206,
+        "cum_funding": 11.795501287216432,
+        "mark": 82592.8
+      },
+      {
+        "t": 1791600300000,
+        "equity": 100933.00516531944,
+        "cum_funding": 11.795501287216432,
+        "mark": 82590.3
+      },
+      {
+        "t": 1791601200000,
+        "equity": 100873.72674119058,
+        "cum_funding": 11.795501287216432,
+        "mark": 82541.8
+      },
+      {
+        "t": 1791602100000,
+        "equity": 100892.30472153611,
+        "cum_funding": 11.795501287216432,
+        "mark": 82557.0
+      },
+      {
+        "t": 1791603000000,
+        "equity": 100846.95978266638,
+        "cum_funding": 11.795501287216432,
+        "mark": 82519.9
+      },
+      {
+        "t": 1791603900000,
+        "equity": 100895.84920462835,
+        "cum_funding": 11.795501287216432,
+        "mark": 82559.9
+      },
+      {
+        "t": 1791604800000,
+        "equity": 101030.66178568844,
+        "cum_funding": 11.795501287216432,
+        "mark": 82670.2
+      },
+      {
+        "t": 1791605700000,
+        "equity": 100970.77224378505,
+        "cum_funding": 11.795501287216432,
+        "mark": 82621.2
+      },
+      {
+        "t": 1791606600000,
+        "equity": 100998.63921430336,
+        "cum_funding": 11.795501287216432,
+        "mark": 82644.0
+      },
+      {
+        "t": 1791607500000,
+        "equity": 101003.65038005447,
+        "cum_funding": 11.795501287216432,
+        "mark": 82648.1
+      },
+      {
+        "t": 1791608400000,
+        "equity": 101023.20614883925,
+        "cum_funding": 11.795501287216432,
+        "mark": 82664.1
+      },
+      {
+        "t": 1791609300000,
+        "equity": 100980.55012817743,
+        "cum_funding": 11.795501287216432,
+        "mark": 82629.2
+      },
+      {
+        "t": 1791610200000,
+        "equity": 101127.95173539272,
+        "cum_funding": 11.795501287216432,
+        "mark": 82749.8
+      },
+      {
+        "t": 1791611100000,
+        "equity": 101189.55240706478,
+        "cum_funding": 11.795501287216432,
+        "mark": 82800.2
+      },
+      {
+        "t": 1791612000000,
+        "equity": 101092.14023380559,
+        "cum_funding": 11.795501287216432,
+        "mark": 82720.5
+      },
+      {
+        "t": 1791612900000,
+        "equity": 101110.47376704132,
+        "cum_funding": 11.795501287216432,
+        "mark": 82735.5
+      },
+      {
+        "t": 1791613800000,
+        "equity": 101206.54148119657,
+        "cum_funding": 11.795501287216432,
+        "mark": 82814.1
+      },
+      {
+        "t": 1791614700000,
+        "equity": 101066.96218149518,
+        "cum_funding": 11.795501287216432,
+        "mark": 82699.9
+      },
+      {
+        "t": 1791615600000,
+        "equity": 100981.52791661667,
+        "cum_funding": 11.795501287216432,
+        "mark": 82630.0
+      },
+      {
+        "t": 1791616500000,
+        "equity": 100944.24973237069,
+        "cum_funding": 11.795501287216432,
+        "mark": 82599.5
+      },
+      {
+        "t": 1791617400000,
+        "equity": 101075.15115967381,
+        "cum_funding": 11.795501287216432,
+        "mark": 82706.6
+      },
+      {
+        "t": 1791618300000,
+        "equity": 101140.41853799301,
+        "cum_funding": 11.795501287216432,
+        "mark": 82760.0
+      },
+      {
+        "t": 1791619200000,
+        "equity": 101179.40785200767,
+        "cum_funding": 11.795501287216432,
+        "mark": 82791.9
+      },
+      {
+        "t": 1791620100000,
+        "equity": 101164.19943302157,
+        "cum_funding": 11.359305245501348,
+        "mark": 82779.1
+      },
+      {
+        "t": 1791621000000,
+        "equity": 101141.22140469946,
+        "cum_funding": 11.359305245501348,
+        "mark": 82760.3
+      },
+      {
+        "t": 1791621900000,
+        "equity": 101194.38865108308,
+        "cum_funding": 11.359305245501348,
+        "mark": 82803.8
+      },
+      {
+        "t": 1791622800000,
+        "equity": 101242.17806105087,
+        "cum_funding": 11.359305245501348,
+        "mark": 82842.9
+      },
+      {
+        "t": 1791623700000,
+        "equity": 101272.24505555748,
+        "cum_funding": 11.359305245501348,
+        "mark": 82867.5
+      },
+      {
+        "t": 1791624600000,
+        "equity": 101251.71149833346,
+        "cum_funding": 11.359305245501348,
+        "mark": 82850.7
+      },
+      {
+        "t": 1791625500000,
+        "equity": 101208.19991278733,
+        "cum_funding": 11.359305245501348,
+        "mark": 82815.1
+      },
+      {
+        "t": 1791626400000,
+        "equity": 101179.72182449448,
+        "cum_funding": 11.359305245501348,
+        "mark": 82791.8
+      },
+      {
+        "t": 1791627300000,
+        "equity": 101127.654590105,
+        "cum_funding": 11.359305245501348,
+        "mark": 82749.2
+      },
+      {
+        "t": 1791628200000,
+        "equity": 101157.23269039197,
+        "cum_funding": 11.359305245501348,
+        "mark": 82773.4
+      },
+      {
+        "t": 1791629100000,
+        "equity": 101217.3666794052,
+        "cum_funding": 11.359305245501348,
+        "mark": 82822.6
+      },
+      {
+        "t": 1791630000000,
+        "equity": 101147.0881353349,
+        "cum_funding": 11.359305245501348,
+        "mark": 82765.1
+      },
+      {
+        "t": 1791630900000,
+        "equity": 101156.25490195277,
+        "cum_funding": 11.359305245501348,
+        "mark": 82772.6
+      },
+      {
+        "t": 1791631800000,
+        "equity": 101269.55613734957,
+        "cum_funding": 11.359305245501348,
+        "mark": 82865.3
+      },
+      {
+        "t": 1791632700000,
+        "equity": 101234.60020064678,
+        "cum_funding": 11.359305245501348,
+        "mark": 82836.7
+      },
+      {
+        "t": 1791633600000,
+        "equity": 101228.48902290153,
+        "cum_funding": 11.359305245501348,
+        "mark": 82831.7
+      },
+      {
+        "t": 1791634500000,
+        "equity": 101201.72206437738,
+        "cum_funding": 11.359305245501348,
+        "mark": 82809.8
+      },
+      {
+        "t": 1791635400000,
+        "equity": 101214.06664342275,
+        "cum_funding": 11.359305245501348,
+        "mark": 82819.9
+      },
+      {
+        "t": 1791636300000,
+        "equity": 101146.84368822507,
+        "cum_funding": 11.359305245501348,
+        "mark": 82764.9
+      },
+      {
+        "t": 1791637200000,
+        "equity": 101157.96603172141,
+        "cum_funding": 11.359305245501348,
+        "mark": 82774.0
+      },
+      {
+        "t": 1791638100000,
+        "equity": 101210.3999367756,
+        "cum_funding": 11.359305245501348,
+        "mark": 82816.9
+      },
+      {
+        "t": 1791639000000,
+        "equity": 101130.46573186782,
+        "cum_funding": 11.359305245501348,
+        "mark": 82751.5
+      },
+      {
+        "t": 1791639900000,
+        "equity": 101177.64402406111,
+        "cum_funding": 11.359305245501348,
+        "mark": 82790.1
+      },
+      {
+        "t": 1791640800000,
+        "equity": 101132.05463808158,
+        "cum_funding": 11.359305245501348,
+        "mark": 82752.8
+      },
+      {
+        "t": 1791641700000,
+        "equity": 101333.84572722953,
+        "cum_funding": 11.359305245501348,
+        "mark": 82917.9
+      },
+      {
+        "t": 1791642600000,
+        "equity": 101422.45780453557,
+        "cum_funding": 11.359305245501348,
+        "mark": 82990.4
+      },
+      {
+        "t": 1791643500000,
+        "equity": 101376.37952433643,
+        "cum_funding": 11.359305245501348,
+        "mark": 82952.7
+      },
+      {
+        "t": 1791644400000,
+        "equity": 101352.42370757509,
+        "cum_funding": 11.359305245501348,
+        "mark": 82933.1
+      },
+      {
+        "t": 1791645300000,
+        "equity": 101373.56838257362,
+        "cum_funding": 11.359305245501348,
+        "mark": 82950.4
+      },
+      {
+        "t": 1791646200000,
+        "equity": 101432.23568892796,
+        "cum_funding": 11.359305245501348,
+        "mark": 82998.4
+      },
+      {
+        "t": 1791647100000,
+        "equity": 101444.33582086356,
+        "cum_funding": 11.359305245501348,
+        "mark": 83008.3
+      },
+      {
+        "t": 1791648000000,
+        "equity": 101424.65782852388,
+        "cum_funding": 11.359305245501348,
+        "mark": 82992.2
+      },
+      {
+        "t": 1791648900000,
+        "equity": 101392.04913219993,
+        "cum_funding": 11.82320662944734,
+        "mark": 82965.9
+      },
+      {
+        "t": 1791649800000,
+        "equity": 101446.80528479733,
+        "cum_funding": 11.82320662944734,
+        "mark": 83010.7
+      },
+      {
+        "t": 1791650700000,
+        "equity": 101403.538146361,
+        "cum_funding": 11.82320662944734,
+        "mark": 82975.3
+      },
+      {
+        "t": 1791651600000,
+        "equity": 101461.34988783102,
+        "cum_funding": 11.82320662944734,
+        "mark": 83022.6
+      },
+      {
+        "t": 1791652500000,
+        "equity": 101460.9832171663,
+        "cum_funding": 11.82320662944734,
+        "mark": 83022.3
+      },
+      {
+        "t": 1791653400000,
+        "equity": 101545.43969360556,
+        "cum_funding": 11.82320662944734,
+        "mark": 83091.4
+      },
+      {
+        "t": 1791654300000,
+        "equity": 101517.69494664215,
+        "cum_funding": 11.82320662944734,
+        "mark": 83068.7
+      },
+      {
+        "t": 1791655200000,
+        "equity": 101452.42756832295,
+        "cum_funding": 11.82320662944734,
+        "mark": 83015.3
+      },
+      {
+        "t": 1791656100000,
+        "equity": 101409.77154766115,
+        "cum_funding": 11.82320662944734,
+        "mark": 82980.4
+      },
+      {
+        "t": 1791657000000,
+        "equity": 101416.00494896129,
+        "cum_funding": 11.82320662944734,
+        "mark": 82985.5
+      },
+      {
+        "t": 1791657900000,
+        "equity": 101417.96052583978,
+        "cum_funding": 11.82320662944734,
+        "mark": 82987.1
+      },
+      {
+        "t": 1791658800000,
+        "equity": 101408.67153566699,
+        "cum_funding": 11.82320662944734,
+        "mark": 82979.5
+      },
+      {
+        "t": 1791659700000,
+        "equity": 101435.07182352646,
+        "cum_funding": 11.82320662944734,
+        "mark": 83001.1
+      },
+      {
+        "t": 1791660600000,
+        "equity": 101474.91670242544,
+        "cum_funding": 11.82320662944734,
+        "mark": 83033.7
+      },
+      {
+        "t": 1791661500000,
+        "equity": 101478.33896196279,
+        "cum_funding": 11.82320662944734,
+        "mark": 83036.5
+      },
+      {
+        "t": 1791662400000,
+        "equity": 101445.46082569337,
+        "cum_funding": 11.82320662944734,
+        "mark": 83009.6
+      },
+      {
+        "t": 1791663300000,
+        "equity": 101421.13833826731,
+        "cum_funding": 11.82320662944734,
+        "mark": 82989.7
+      },
+      {
+        "t": 1791664200000,
+        "equity": 101465.62771225268,
+        "cum_funding": 11.82320662944734,
+        "mark": 83026.1
+      },
+      {
+        "t": 1791665100000,
+        "equity": 101426.39395112821,
+        "cum_funding": 11.82320662944734,
+        "mark": 82994.0
+      },
+      {
+        "t": 1791666000000,
+        "equity": 101396.2047330667,
+        "cum_funding": 11.82320662944734,
+        "mark": 82969.3
+      },
+      {
+        "t": 1791666900000,
+        "equity": 101439.71631861285,
+        "cum_funding": 11.82320662944734,
+        "mark": 83004.9
+      },
+      {
+        "t": 1791667800000,
+        "equity": 101475.28337309016,
+        "cum_funding": 11.82320662944734,
+        "mark": 83034.0
+      },
+      {
+        "t": 1791668700000,
+        "equity": 101433.9718115323,
+        "cum_funding": 11.82320662944734,
+        "mark": 83000.2
+      },
+      {
+        "t": 1791669600000,
+        "equity": 101417.47163162015,
+        "cum_funding": 11.82320662944734,
+        "mark": 82986.7
+      },
+      {
+        "t": 1791670500000,
+        "equity": 101436.17183552061,
+        "cum_funding": 11.82320662944734,
+        "mark": 83002.0
+      },
+      {
+        "t": 1791671400000,
+        "equity": 101441.79411904623,
+        "cum_funding": 11.82320662944734,
+        "mark": 83006.6
+      },
+      {
+        "t": 1791672300000,
+        "equity": 101489.82797612384,
+        "cum_funding": 11.82320662944734,
+        "mark": 83045.9
+      },
+      {
+        "t": 1791673200000,
+        "equity": 101443.5052488149,
+        "cum_funding": 11.82320662944734,
+        "mark": 83008.0
+      },
+      {
+        "t": 1791674100000,
+        "equity": 101433.84958797741,
+        "cum_funding": 11.82320662944734,
+        "mark": 83000.1
+      },
+      {
+        "t": 1791675000000,
+        "equity": 101402.19368725704,
+        "cum_funding": 11.82320662944734,
+        "mark": 82974.2
+      },
+      {
+        "t": 1791675900000,
+        "equity": 101361.61546702862,
+        "cum_funding": 11.82320662944734,
+        "mark": 82941.0
+      },
+      {
+        "t": 1791676800000,
+        "equity": 101417.83830228487,
+        "cum_funding": 11.82320662944734,
+        "mark": 82987.0
+      },
+      {
+        "t": 1791677700000,
+        "equity": 101351.66092777248,
+        "cum_funding": 9.066496175480676,
+        "mark": 82930.6
+      },
+      {
+        "t": 1791678600000,
+        "equity": 101338.58300739765,
+        "cum_funding": 9.066496175480676,
+        "mark": 82919.9
+      },
+      {
+        "t": 1791679500000,
+        "equity": 101345.54975002723,
+        "cum_funding": 9.066496175480676,
+        "mark": 82925.6
+      },
+      {
+        "t": 1791680400000,
+        "equity": 101386.25019381056,
+        "cum_funding": 9.066496175480676,
+        "mark": 82958.9
+      },
+      {
+        "t": 1791681300000,
+        "equity": 101420.83945984865,
+        "cum_funding": 9.066496175480676,
+        "mark": 82987.2
+      },
+      {
+        "t": 1791682200000,
+        "equity": 101406.90597458949,
+        "cum_funding": 9.066496175480676,
+        "mark": 82975.8
+      },
+      {
+        "t": 1791683100000,
+        "equity": 101424.3839429409,
+        "cum_funding": 9.066496175480676,
+        "mark": 82990.1
+      },
+      {
+        "t": 1791684000000,
+        "equity": 101441.86191129228,
+        "cum_funding": 9.066496175480676,
+        "mark": 83004.4
+      },
+      {
+        "t": 1791684900000,
+        "equity": 101444.79527661,
+        "cum_funding": 9.066496175480676,
+        "mark": 83006.8
+      },
+      {
+        "t": 1791685800000,
+        "equity": 101530.59621215324,
+        "cum_funding": 9.066496175480676,
+        "mark": 83077.0
+      },
+      {
+        "t": 1791686700000,
+        "equity": 101497.59585232892,
+        "cum_funding": 9.066496175480676,
+        "mark": 83050.0
+      },
+      {
+        "t": 1791687600000,
+        "equity": 101359.84990595111,
+        "cum_funding": 9.066496175480676,
+        "mark": 82937.3
+      },
+      {
+        "t": 1791688500000,
+        "equity": 101293.72696274756,
+        "cum_funding": 9.066496175480676,
+        "mark": 82883.2
+      },
+      {
+        "t": 1791689400000,
+        "equity": 101350.92758644304,
+        "cum_funding": 9.066496175480676,
+        "mark": 82930.0
+      },
+      {
+        "t": 1791690300000,
+        "equity": 101164.16999454839,
+        "cum_funding": 9.066496175480676,
+        "mark": 82777.2
+      },
+      {
+        "t": 1791691200000,
+        "equity": 101221.98173601841,
+        "cum_funding": 9.066496175480676,
+        "mark": 82824.5
+      },
+      {
+        "t": 1791692100000,
+        "equity": 101270.01559309603,
+        "cum_funding": 9.066496175480676,
+        "mark": 82863.8
+      },
+      {
+        "t": 1791693000000,
+        "equity": 101382.46126360851,
+        "cum_funding": 9.066496175480676,
+        "mark": 82955.8
+      },
+      {
+        "t": 1791693900000,
+        "equity": 101413.38382299944,
+        "cum_funding": 9.066496175480676,
+        "mark": 82981.1
+      },
+      {
+        "t": 1791694800000,
+        "equity": 101436.23962776666,
+        "cum_funding": 9.066496175480676,
+        "mark": 82999.8
+      },
+      {
+        "t": 1791695700000,
+        "equity": 101462.88436273593,
+        "cum_funding": 9.066496175480676,
+        "mark": 83021.6
+      },
+      {
+        "t": 1791696600000,
+        "equity": 101469.9733289204,
+        "cum_funding": 9.066496175480676,
+        "mark": 83027.4
+      },
+      {
+        "t": 1791697500000,
+        "equity": 101441.86191129228,
+        "cum_funding": 9.066496175480676,
+        "mark": 83004.4
+      },
+      {
+        "t": 1791698400000,
+        "equity": 101436.48407487647,
+        "cum_funding": 9.066496175480676,
+        "mark": 83000.0
+      },
+      {
+        "t": 1791699300000,
+        "equity": 101466.18439871835,
+        "cum_funding": 9.066496175480676,
+        "mark": 83024.3
+      },
+      {
+        "t": 1791700200000,
+        "equity": 101541.84077920447,
+        "cum_funding": 9.066496175480676,
+        "mark": 83086.2
+      },
+      {
+        "t": 1791701100000,
+        "equity": 101586.69682385457,
+        "cum_funding": 9.066496175480676,
+        "mark": 83122.9
+      },
+      {
+        "t": 1791702000000,
+        "equity": 101564.9410310815,
+        "cum_funding": 9.066496175480676,
+        "mark": 83105.1
+      },
+      {
+        "t": 1791702900000,
+        "equity": 101476.81784799507,
+        "cum_funding": 9.066496175480676,
+        "mark": 83033.0
+      },
+      {
+        "t": 1791703800000,
+        "equity": 101400.18367906971,
+        "cum_funding": 9.066496175480676,
+        "mark": 82970.3
+      },
+      {
+        "t": 1791704700000,
+        "equity": 101413.01715233474,
+        "cum_funding": 9.066496175480676,
+        "mark": 82980.8
+      },
+      {
+        "t": 1791705600000,
+        "equity": 101448.49181992108,
+        "cum_funding": 8.058871072299379,
+        "mark": 83009.0
+      },
+      {
+        "t": 1791706500000,
+        "equity": 101441.40285373661,
+        "cum_funding": 8.058871072299379,
+        "mark": 83003.2
+      },
+      {
+        "t": 1791707400000,
+        "equity": 101493.4700881261,
+        "cum_funding": 8.058871072299379,
+        "mark": 83045.8
+      },
+      {
+        "t": 1791708300000,
+        "equity": 101437.85837064438,
+        "cum_funding": 8.058871072299379,
+        "mark": 83000.3
+      },
+      {
+        "t": 1791709200000,
+        "equity": 101433.09165200307,
+        "cum_funding": 8.058871072299379,
+        "mark": 82996.4
+      },
+      {
+        "t": 1791710100000,
+        "equity": 101440.18061818756,
+        "cum_funding": 8.058871072299379,
+        "mark": 83002.2
+      },
+      {
+        "t": 1791711000000,
+        "equity": 101445.55845460338,
+        "cum_funding": 8.058871072299379,
+        "mark": 83006.6
+      },
+      {
+        "t": 1791711900000,
+        "equity": 101437.36947642475,
+        "cum_funding": 8.058871072299379,
+        "mark": 82999.9
+      },
+      {
+        "t": 1791712800000,
+        "equity": 101424.29155604992,
+        "cum_funding": 8.058871072299379,
+        "mark": 82989.2
+      },
+      {
+        "t": 1791713700000,
+        "equity": 101372.95766298987,
+        "cum_funding": 8.058871072299379,
+        "mark": 82947.2
+      },
+      {
+        "t": 1791714600000,
+        "equity": 101356.45748307771,
+        "cum_funding": 8.058871072299379,
+        "mark": 82933.7
+      },
+      {
+        "t": 1791715500000,
+        "equity": 101386.76892469412,
+        "cum_funding": 8.058871072299379,
+        "mark": 82958.5
+      },
+      {
+        "t": 1791716400000,
+        "equity": 101395.81346775708,
+        "cum_funding": 8.058871072299379,
+        "mark": 82965.9
+      },
+      {
+        "t": 1791717300000,
+        "equity": 101470.36983624907,
+        "cum_funding": 8.058871072299379,
+        "mark": 83026.9
+      },
+      {
+        "t": 1791718200000,
+        "equity": 101459.00304564292,
+        "cum_funding": 8.058871072299379,
+        "mark": 83017.6
+      },
+      {
+        "t": 1791719100000,
+        "equity": 101586.8488840734,
+        "cum_funding": 8.058871072299379,
+        "mark": 83122.2
+      },
+      {
+        "t": 1791720000000,
+        "equity": 101652.60515661225,
+        "cum_funding": 8.058871072299379,
+        "mark": 83176.0
+      },
+      {
+        "t": 1791720900000,
+        "equity": 101550.05959404707,
+        "cum_funding": 8.058871072299379,
+        "mark": 83092.1
+      },
+      {
+        "t": 1791721800000,
+        "equity": 101595.52675647168,
+        "cum_funding": 8.058871072299379,
+        "mark": 83129.3
+      },
+      {
+        "t": 1791722700000,
+        "equity": 101527.32601283475,
+        "cum_funding": 8.058871072299379,
+        "mark": 83073.5
+      },
+      {
+        "t": 1791723600000,
+        "equity": 101517.42590488744,
+        "cum_funding": 8.058871072299379,
+        "mark": 83065.4
+      },
+      {
+        "t": 1791724500000,
+        "equity": 101500.92572497528,
+        "cum_funding": 8.058871072299379,
+        "mark": 83051.9
+      },
+      {
+        "t": 1791725400000,
+        "equity": 101495.18121789474,
+        "cum_funding": 8.058871072299379,
+        "mark": 83047.2
+      },
+      {
+        "t": 1791726300000,
+        "equity": 101488.33669882009,
+        "cum_funding": 8.058871072299379,
+        "mark": 83041.6
+      },
+      {
+        "t": 1791727200000,
+        "equity": 101493.71453523591,
+        "cum_funding": 8.058871072299379,
+        "mark": 83046.0
+      },
+      {
+        "t": 1791728100000,
+        "equity": 101507.64802049505,
+        "cum_funding": 8.058871072299379,
+        "mark": 83057.4
+      },
+      {
+        "t": 1791729000000,
+        "equity": 101556.78188956683,
+        "cum_funding": 8.058871072299379,
+        "mark": 83097.6
+      },
+      {
+        "t": 1791729900000,
+        "equity": 101548.47068783328,
+        "cum_funding": 8.058871072299379,
+        "mark": 83090.8
+      },
+      {
+        "t": 1791730800000,
+        "equity": 101546.02621673519,
+        "cum_funding": 8.058871072299379,
+        "mark": 83088.8
+      },
+      {
+        "t": 1791731700000,
+        "equity": 101560.81526687868,
+        "cum_funding": 8.058871072299379,
+        "mark": 83100.9
+      },
+      {
+        "t": 1791732600000,
+        "equity": 101896.8078193122,
+        "cum_funding": 8.058871072299379,
+        "mark": 83375.8
+      },
+      {
+        "t": 1791733500000,
+        "equity": 102499.24772143835,
+        "cum_funding": 8.058871072299379,
+        "mark": 83868.7
+      },
+      {
+        "t": 1791734400000,
+        "equity": 102445.95825149983,
+        "cum_funding": 8.058871072299379,
+        "mark": 83825.1
+      },
+      {
+        "t": 1791735300000,
+        "equity": 102530.01105222646,
+        "cum_funding": 9.440335224176437,
+        "mark": 83895.0
+      },
+      {
+        "t": 1791736200000,
+        "equity": 102527.07768690874,
+        "cum_funding": 9.440335224176437,
+        "mark": 83892.6
+      },
+      {
+        "t": 1791737100000,
+        "equity": 102499.45516350024,
+        "cum_funding": 9.440335224176437,
+        "mark": 83870.0
+      },
+      {
+        "t": 1791738000000,
+        "equity": 102409.62085064515,
+        "cum_funding": 9.440335224176437,
+        "mark": 83796.5
+      },
+      {
+        "t": 1791738900000,
+        "equity": 102603.7118558341,
+        "cum_funding": 9.440335224176437,
+        "mark": 83955.3
+      },
+      {
+        "t": 1791739800000,
+        "equity": 102609.33413935972,
+        "cum_funding": 9.440335224176437,
+        "mark": 83959.9
+      },
+      {
+        "t": 1791740700000,
+        "equity": 102390.92064674471,
+        "cum_funding": 9.440335224176437,
+        "mark": 83781.2
+      },
+      {
+        "t": 1791741600000,
+        "equity": 102413.40978084721,
+        "cum_funding": 9.440335224176437,
+        "mark": 83799.6
+      },
+      {
+        "t": 1791742500000,
+        "equity": 102463.2769912484,
+        "cum_funding": 9.440335224176437,
+        "mark": 83840.4
+      },
+      {
+        "t": 1791743400000,
+        "equity": 102313.67536004483,
+        "cum_funding": 9.440335224176437,
+        "mark": 83718.0
+      },
+      {
+        "t": 1791744300000,
+        "equity": 102222.12991742106,
+        "cum_funding": 9.440335224176437,
+        "mark": 83643.1
+      },
+      {
+        "t": 1791745200000,
+        "equity": 102246.45240484714,
+        "cum_funding": 9.440335224176437,
+        "mark": 83663.0
+      },
+      {
+        "t": 1791746100000,
+        "equity": 102224.45216496426,
+        "cum_funding": 9.440335224176437,
+        "mark": 83645.0
+      },
+      {
+        "t": 1791747000000,
+        "equity": 102261.60812565534,
+        "cum_funding": 9.440335224176437,
+        "mark": 83675.4
+      },
+      {
+        "t": 1791747900000,
+        "equity": 102200.4963482029,
+        "cum_funding": 9.440335224176437,
+        "mark": 83625.4
+      },
+      {
+        "t": 1791748800000,
+        "equity": 102262.21924342986,
+        "cum_funding": 9.440335224176437,
+        "mark": 83675.9
+      },
+      {
+        "t": 1791749700000,
+        "equity": 102156.98476265676,
+        "cum_funding": 9.440335224176437,
+        "mark": 83589.8
+      },
+      {
+        "t": 1791750600000,
+        "equity": 102216.62985745036,
+        "cum_funding": 9.440335224176437,
+        "mark": 83638.6
+      },
+      {
+        "t": 1791751500000,
+        "equity": 102214.67428057187,
+        "cum_funding": 9.440335224176437,
+        "mark": 83637.0
+      },
+      {
+        "t": 1791752400000,
+        "equity": 102057.12811829949,
+        "cum_funding": 9.440335224176437,
+        "mark": 83508.1
+      },
+      {
+        "t": 1791753300000,
+        "equity": 101931.48230385726,
+        "cum_funding": 9.440335224176437,
+        "mark": 83405.3
+      },
+      {
+        "t": 1791754200000,
+        "equity": 102045.51688058351,
+        "cum_funding": 9.440335224176437,
+        "mark": 83498.6
+      },
+      {
+        "t": 1791755100000,
+        "equity": 102027.30557090268,
+        "cum_funding": 9.440335224176437,
+        "mark": 83483.7
+      },
+      {
+        "t": 1791756000000,
+        "equity": 102135.2289698837,
+        "cum_funding": 9.440335224176437,
+        "mark": 83572.0
+      },
+      {
+        "t": 1791756900000,
+        "equity": 102169.45156525706,
+        "cum_funding": 9.440335224176437,
+        "mark": 83600.0
+      },
+      {
+        "t": 1791757800000,
+        "equity": 102230.5633427095,
+        "cum_funding": 9.440335224176437,
+        "mark": 83650.0
+      },
+      {
+        "t": 1791758700000,
+        "equity": 102175.3182958925,
+        "cum_funding": 9.440335224176437,
+        "mark": 83604.8
+      },
+      {
+        "t": 1791759600000,
+        "equity": 102223.84104718974,
+        "cum_funding": 9.440335224176437,
+        "mark": 83644.5
+      },
+      {
+        "t": 1791760500000,
+        "equity": 102261.73034921024,
+        "cum_funding": 9.440335224176437,
+        "mark": 83675.5
+      },
+      {
+        "t": 1791761400000,
+        "equity": 102238.50787377832,
+        "cum_funding": 9.440335224176437,
+        "mark": 83656.5
+      },
+      {
+        "t": 1791762300000,
+        "equity": 102319.78653779006,
+        "cum_funding": 9.440335224176437,
+        "mark": 83723.0
+      },
+      {
+        "t": 1791763200000,
+        "equity": 102331.88666972563,
+        "cum_funding": 9.440335224176437,
+        "mark": 83732.9
+      },
+      {
+        "t": 1791764100000,
+        "equity": 102419.44061769311,
+        "cum_funding": 10.009570343149882,
+        "mark": 83805.0
+      },
+      {
+        "t": 1791765000000,
+        "equity": 102438.87416292298,
+        "cum_funding": 10.009570343149882,
+        "mark": 83820.9
+      },
+      {
+        "t": 1791765900000,
+        "equity": 102561.83105915728,
+        "cum_funding": 10.009570343149882,
+        "mark": 83921.5
+      },
+      {
+        "t": 1791766800000,
+        "equity": 102566.8422249084,
+        "cum_funding": 10.009570343149882,
+        "mark": 83925.6
+      },
+      {
+        "t": 1791767700000,
+        "equity": 102361.9955468878,
+        "cum_funding": 10.009570343149882,
+        "mark": 83758.0
+      },
+      {
+        "t": 1791768600000,
+        "equity": 102211.53835079989,
+        "cum_funding": 10.009570343149882,
+        "mark": 83634.9
+      },
+      {
+        "t": 1791769500000,
+        "equity": 102205.30494949975,
+        "cum_funding": 10.009570343149882,
+        "mark": 83629.8
+      },
+      {
+        "t": 1791770400000,
+        "equity": 102343.29534298736,
+        "cum_funding": 10.009570343149882,
+        "mark": 83742.7
+      },
+      {
+        "t": 1791771300000,
+        "equity": 102435.81857405035,
+        "cum_funding": 10.009570343149882,
+        "mark": 83818.4
+      },
+      {
+        "t": 1791772200000,
+        "equity": 102491.79696219678,
+        "cum_funding": 10.009570343149882,
+        "mark": 83864.2
+      },
+      {
+        "t": 1791773100000,
+        "equity": 102408.31827419676,
+        "cum_funding": 10.009570343149882,
+        "mark": 83795.9
+      },
+      {
+        "t": 1791774000000,
+        "equity": 102247.71652305174,
+        "cum_funding": 10.009570343149882,
+        "mark": 83664.5
+      },
+      {
+        "t": 1791774900000,
+        "equity": 102188.9269931425,
+        "cum_funding": 10.009570343149882,
+        "mark": 83616.4
+      },
+      {
+        "t": 1791775800000,
+        "equity": 102125.73741525666,
+        "cum_funding": 10.009570343149882,
+        "mark": 83564.7
+      },
+      {
+        "t": 1791776700000,
+        "equity": 102134.65973476473,
+        "cum_funding": 10.009570343149882,
+        "mark": 83572.0
+      },
+      {
+        "t": 1791777600000,
+        "equity": 102062.18116670614,
+        "cum_funding": 10.009570343149882,
+        "mark": 83512.7
+      },
+      {
+        "t": 1791778500000,
+        "equity": 102242.33868663594,
+        "cum_funding": 10.009570343149882,
+        "mark": 83660.1
+      },
+      {
+        "t": 1791779400000,
+        "equity": 102740.88856709294,
+        "cum_funding": 10.009570343149882,
+        "mark": 84068.0
+      },
+      {
+        "t": 1791780300000,
+        "equity": 102780.0001046625,
+        "cum_funding": 10.009570343149882,
+        "mark": 84100.0
+      },
+      {
+        "t": 1791781200000,
+        "equity": 102887.55683297881,
+        "cum_funding": 10.009570343149882,
+        "mark": 84188.0
+      },
+      {
+        "t": 1791782100000,
+        "equity": 102620.25391840182,
+        "cum_funding": 10.009570343149882,
+        "mark": 83969.3
+      },
+      {
+        "t": 1791783000000,
+        "equity": 102567.82001334762,
+        "cum_funding": 10.009570343149882,
+        "mark": 83926.4
+      },
+      {
+        "t": 1791783900000,
+        "equity": 102620.00947129201,
+        "cum_funding": 10.009570343149882,
+        "mark": 83969.1
+      },
+      {
+        "t": 1791784800000,
+        "equity": 102431.7851967385,
+        "cum_funding": 10.009570343149882,
+        "mark": 83815.1
+      },
+      {
+        "t": 1791785700000,
+        "equity": 102330.70631683215,
+        "cum_funding": 10.009570343149882,
+        "mark": 83732.4
+      },
+      {
+        "t": 1791786600000,
+        "equity": 102588.10912346185,
+        "cum_funding": 10.009570343149882,
+        "mark": 83943.0
+      },
+      {
+        "t": 1791787500000,
+        "equity": 102876.06781881776,
+        "cum_funding": 10.009570343149882,
+        "mark": 84178.6
+      },
+      {
+        "t": 1791788400000,
+        "equity": 103009.78038788369,
+        "cum_funding": 10.009570343149882,
+        "mark": 84288.0
+      },
+      {
+        "t": 1791789300000,
+        "equity": 102772.3000207035,
+        "cum_funding": 10.009570343149882,
+        "mark": 84093.7
+      },
+      {
+        "t": 1791790200000,
+        "equity": 102573.80896753796,
+        "cum_funding": 10.009570343149882,
+        "mark": 83931.3
+      },
+      {
+        "t": 1791791100000,
+        "equity": 102609.98713978981,
+        "cum_funding": 10.009570343149882,
+        "mark": 83960.9
+      },
+      {
+        "t": 1791792000000,
+        "equity": 102274.72792868574,
+        "cum_funding": 10.009570343149882,
+        "mark": 83686.6
+      },
+      {
+        "t": 1791792900000,
+        "equity": 102216.95591931387,
+        "cum_funding": 11.925415123459583,
+        "mark": 83640.9
+      },
+      {
+        "t": 1791793800000,
+        "equity": 102132.25499576479,
+        "cum_funding": 11.925415123459583,
+        "mark": 83571.6
+      },
+      {
+        "t": 1791794700000,
+        "equity": 102006.97585198728,
+        "cum_funding": 11.925415123459583,
+        "mark": 83469.1
+      },
+      {
+        "t": 1791795600000,
+        "equity": 102118.19928695074,
+        "cum_funding": 11.925415123459583,
+        "mark": 83560.1
+      },
+      {
+        "t": 1791796500000,
+        "equity": 101955.76418248213,
+        "cum_funding": 11.925415123459583,
+        "mark": 83427.2
+      },
+      {
+        "t": 1791797400000,
+        "equity": 101843.68518263436,
+        "cum_funding": 11.925415123459583,
+        "mark": 83335.5
+      },
+      {
+        "t": 1791798300000,
+        "equity": 102061.73200458466,
+        "cum_funding": 11.925415123459583,
+        "mark": 83513.9
+      },
+      {
+        "t": 1791799200000,
+        "equity": 102031.29833941336,
+        "cum_funding": 11.925415123459583,
+        "mark": 83489.0
+      },
+      {
+        "t": 1791800100000,
+        "equity": 102004.16471022448,
+        "cum_funding": 11.925415123459583,
+        "mark": 83466.8
+      },
+      {
+        "t": 1791801000000,
+        "equity": 102032.5205749624,
+        "cum_funding": 11.925415123459583,
+        "mark": 83490.0
+      },
+      {
+        "t": 1791801900000,
+        "equity": 102009.54254664028,
+        "cum_funding": 11.925415123459583,
+        "mark": 83471.2
+      },
+      {
+        "t": 1791802800000,
+        "equity": 101893.06349881593,
+        "cum_funding": 11.925415123459583,
+        "mark": 83375.9
+      },
+      {
+        "t": 1791803700000,
+        "equity": 101938.40843768565,
+        "cum_funding": 11.925415123459583,
+        "mark": 83413.0
+      },
+      {
+        "t": 1791804600000,
+        "equity": 101871.06325893305,
+        "cum_funding": 11.925415123459583,
+        "mark": 83357.9
+      },
+      {
+        "t": 1791805500000,
+        "equity": 101872.89661225662,
+        "cum_funding": 11.925415123459583,
+        "mark": 83359.4
+      },
+      {
+        "t": 1791806400000,
+        "equity": 101840.75181731665,
+        "cum_funding": 11.925415123459583,
+        "mark": 83333.1
+      },
+      {
+        "t": 1791807300000,
+        "equity": 101588.97129421259,
+        "cum_funding": 11.925415123459583,
+        "mark": 83127.1
+      },
+      {
+        "t": 1791808200000,
+        "equity": 101225.23399481567,
+        "cum_funding": 11.925415123459583,
+        "mark": 82829.5
+      },
+      {
+        "t": 1791809100000,
+        "equity": 101096.77703861063,
+        "cum_funding": 11.925415123459583,
+        "mark": 82724.4
+      },
+      {
+        "t": 1791810000000,
+        "equity": 100863.2078251874,
+        "cum_funding": 11.925415123459583,
+        "mark": 82533.3
+      },
+      {
+        "t": 1791810900000,
+        "equity": 100844.26317417715,
+        "cum_funding": 11.925415123459583,
+        "mark": 82517.8
+      },
+      {
+        "t": 1791811800000,
+        "equity": 101018.55396347151,
+        "cum_funding": 11.925415123459583,
+        "mark": 82660.4
+      },
+      {
+        "t": 1791812700000,
+        "equity": 101338.29078310268,
+        "cum_funding": 11.925415123459583,
+        "mark": 82922.0
+      },
+      {
+        "t": 1791813600000,
+        "equity": 101290.37914957997,
+        "cum_funding": 11.925415123459583,
+        "mark": 82882.8
+      },
+      {
+        "t": 1791814500000,
+        "equity": 101331.5684875829,
+        "cum_funding": 11.925415123459583,
+        "mark": 82916.5
+      },
+      {
+        "t": 1791815400000,
+        "equity": 100991.17588717281,
+        "cum_funding": 11.925415123459583,
+        "mark": 82638.0
+      },
+      {
+        "t": 1791816300000,
+        "equity": 100873.96349801903,
+        "cum_funding": 11.925415123459583,
+        "mark": 82542.1
+      },
+      {
+        "t": 1791817200000,
+        "equity": 101069.64340942174,
+        "cum_funding": 11.925415123459583,
+        "mark": 82702.2
+      },
+      {
+        "t": 1791818100000,
+        "equity": 100976.02016636461,
+        "cum_funding": 11.925415123459583,
+        "mark": 82625.6
+      },
+      {
+        "t": 1791819000000,
+        "equity": 101031.75410740124,
+        "cum_funding": 11.925415123459583,
+        "mark": 82671.2
+      },
+      {
+        "t": 1791819900000,
+        "equity": 101042.87645089759,
+        "cum_funding": 11.925415123459583,
+        "mark": 82680.3
+      },
+      {
+        "t": 1791820800000,
+        "equity": 101247.96757602798,
+        "cum_funding": 11.925415123459583,
+        "mark": 82848.1
+      },
+      {
+        "t": 1791821700000,
+        "equity": 101165.21229489625,
+        "cum_funding": 13.890926463044268,
+        "mark": 82782.0
+      },
+      {
+        "t": 1791822600000,
+        "equity": 101146.26764388599,
+        "cum_funding": 13.890926463044268,
+        "mark": 82766.5
+      },
+      {
+        "t": 1791823500000,
+        "equity": 100788.3970751245,
+        "cum_funding": 13.890926463044268,
+        "mark": 82473.7
+      },
+      {
+        "t": 1791824400000,
+        "equity": 100925.04300950815,
+        "cum_funding": 13.890926463044268,
+        "mark": 82585.5
+      },
+      {
+        "t": 1791825300000,
+        "equity": 100714.32960085216,
+        "cum_funding": 13.890926463044268,
+        "mark": 82413.1
+      },
+      {
+        "t": 1791826200000,
+        "equity": 100756.49672729435,
+        "cum_funding": 13.890926463044268,
+        "mark": 82447.6
+      },
+      {
+        "t": 1791827100000,
+        "equity": 100777.51917873797,
+        "cum_funding": 13.890926463044268,
+        "mark": 82464.8
+      },
+      {
+        "t": 1791828000000,
+        "equity": 100783.99702714794,
+        "cum_funding": 13.890926463044268,
+        "mark": 82470.1
+      },
+      {
+        "t": 1791828900000,
+        "equity": 100771.53022454763,
+        "cum_funding": 13.890926463044268,
+        "mark": 82459.9
+      },
+      {
+        "t": 1791829800000,
+        "equity": 100734.12981674673,
+        "cum_funding": 13.890926463044268,
+        "mark": 82429.3
+      },
+      {
+        "t": 1791830700000,
+        "equity": 100713.229588858,
+        "cum_funding": 13.890926463044268,
+        "mark": 82412.2
+      },
+      {
+        "t": 1791831600000,
+        "equity": 100646.25108077012,
+        "cum_funding": 13.890926463044268,
+        "mark": 82357.4
+      },
+      {
+        "t": 1791832500000,
+        "equity": 101046.53322308362,
+        "cum_funding": 13.890926463044268,
+        "mark": 82684.9
+      },
+      {
+        "t": 1791833400000,
+        "equity": 101129.27856975423,
+        "cum_funding": 13.890926463044268,
+        "mark": 82752.6
+      },
+      {
+        "t": 1791834300000,
+        "equity": 101228.03520211736,
+        "cum_funding": 13.890926463044268,
+        "mark": 82833.4
+      },
+      {
+        "t": 1791835200000,
+        "equity": 101363.70334806177,
+        "cum_funding": 13.890926463044268,
+        "mark": 82944.4
+      },
+      {
+        "t": 1791836100000,
+        "equity": 101484.70466741761,
+        "cum_funding": 13.890926463044268,
+        "mark": 83043.4
+      },
+      {
+        "t": 1791837000000,
+        "equity": 101535.91633692278,
+        "cum_funding": 13.890926463044268,
+        "mark": 83085.3
+      },
+      {
+        "t": 1791837900000,
+        "equity": 101504.3826597573,
+        "cum_funding": 13.890926463044268,
+        "mark": 83059.5
+      },
+      {
+        "t": 1791838800000,
+        "equity": 101277.53574185383,
+        "cum_funding": 13.890926463044268,
+        "mark": 82873.9
+      },
+      {
+        "t": 1791839700000,
+        "equity": 101305.76938303687,
+        "cum_funding": 13.890926463044268,
+        "mark": 82897.0
+      },
+      {
+        "t": 1791840600000,
+        "equity": 101055.57776614657,
+        "cum_funding": 13.890926463044268,
+        "mark": 82692.3
+      },
+      {
+        "t": 1791841500000,
+        "equity": 100873.95356355792,
+        "cum_funding": 13.890926463044268,
+        "mark": 82543.7
+      },
+      {
+        "t": 1791842400000,
+        "equity": 101052.52217727396,
+        "cum_funding": 13.890926463044268,
+        "mark": 82689.8
+      },
+      {
+        "t": 1791843300000,
+        "equity": 100901.82053407624,
+        "cum_funding": 13.890926463044268,
+        "mark": 82566.5
+      },
+      {
+        "t": 1791844200000,
+        "equity": 100894.60934433684,
+        "cum_funding": 13.890926463044268,
+        "mark": 82560.6
+      },
+      {
+        "t": 1791845100000,
+        "equity": 100364.15911604968,
+        "cum_funding": 13.890926463044268,
+        "mark": 82126.6
+      },
+      {
+        "t": 1791846000000,
+        "equity": 100228.49097010524,
+        "cum_funding": 13.890926463044268,
+        "mark": 82015.6
+      },
+      {
+        "t": 1791846900000,
+        "equity": 100231.30211186805,
+        "cum_funding": 13.890926463044268,
+        "mark": 82017.9
+      },
+      {
+        "t": 1791847800000,
+        "equity": 99984.2883074053,
+        "cum_funding": 13.890926463044268,
+        "mark": 81815.8
+      },
+      {
+        "t": 1791848700000,
+        "equity": 99981.35494208756,
+        "cum_funding": 13.890926463044268,
+        "mark": 81813.4
+      },
+      {
+        "t": 1791849600000,
+        "equity": 99639.1289883539,
+        "cum_funding": 13.890926463044268,
+        "mark": 81533.4
+      },
+      {
+        "t": 1791850500000,
+        "equity": 99505.88355747756,
+        "cum_funding": 20.634978012818152,
+        "mark": 81429.9
+      },
+      {
+        "t": 1791851400000,
+        "equity": 99394.66012251412,
+        "cum_funding": 20.634978012818152,
+        "mark": 81338.9
+      },
+      {
+        "t": 1791852300000,
+        "equity": 99462.49419548635,
+        "cum_funding": 20.634978012818152,
+        "mark": 81394.4
+      },
+      {
+        "t": 1791853200000,
+        "equity": 99982.67764516152,
+        "cum_funding": 20.634978012818152,
+        "mark": 81820.0
+      },
+      {
+        "t": 1791854100000,
+        "equity": 100252.6694779464,
+        "cum_funding": 20.634978012818152,
+        "mark": 82040.9
+      },
+      {
+        "t": 1791855000000,
+        "equity": 100599.78437387626,
+        "cum_funding": 20.634978012818152,
+        "mark": 82324.9
+      },
+      {
+        "t": 1791855900000,
+        "equity": 100705.01885464936,
+        "cum_funding": 20.634978012818152,
+        "mark": 82411.0
+      },
+      {
+        "t": 1791856800000,
+        "equity": 101037.58914754556,
+        "cum_funding": 20.634978012818152,
+        "mark": 82683.1
+      },
+      {
+        "t": 1791857700000,
+        "equity": 101082.56741575054,
+        "cum_funding": 20.634978012818152,
+        "mark": 82719.9
+      },
+      {
+        "t": 1791858600000,
+        "equity": 101238.28022469937,
+        "cum_funding": 20.634978012818152,
+        "mark": 82847.3
+      },
+      {
+        "t": 1791859500000,
+        "equity": 101291.32524752809,
+        "cum_funding": 20.634978012818152,
+        "mark": 82890.7
+      },
+      {
+        "t": 1791860400000,
+        "equity": 101232.41349406393,
+        "cum_funding": 20.634978012818152,
+        "mark": 82842.5
+      },
+      {
+        "t": 1791861300000,
+        "equity": 101360.87045026898,
+        "cum_funding": 20.634978012818152,
+        "mark": 82947.6
+      },
+      {
+        "t": 1791862200000,
+        "equity": 101648.82914562487,
+        "cum_funding": 20.634978012818152,
+        "mark": 83183.2
+      },
+      {
+        "t": 1791863100000,
+        "equity": 101791.46403419886,
+        "cum_funding": 20.634978012818152,
+        "mark": 83299.9
+      },
+      {
+        "t": 1791864000000,
+        "equity": 101770.80825341993,
+        "cum_funding": 20.634978012818152,
+        "mark": 83283.0
+      },
+      {
+        "t": 1791864900000,
+        "equity": 101846.09796324137,
+        "cum_funding": 20.634978012818152,
+        "mark": 83344.6
+      },
+      {
+        "t": 1791865800000,
+        "equity": 101944.73237204959,
+        "cum_funding": 20.634978012818152,
+        "mark": 83425.3
+      },
+      {
+        "t": 1791866700000,
+        "equity": 101938.37674719453,
+        "cum_funding": 20.634978012818152,
+        "mark": 83420.1
+      },
+      {
+        "t": 1791867600000,
+        "equity": 102269.35813387694,
+        "cum_funding": 20.634978012818152,
+        "mark": 83690.9
+      },
+      {
+        "t": 1791868500000,
+        "equity": 102281.09159514782,
+        "cum_funding": 20.634978012818152,
+        "mark": 83700.5
+      },
+      {
+        "t": 1791869400000,
+        "equity": 102104.96745252988,
+        "cum_funding": 20.634978012818152,
+        "mark": 83556.4
+      },
+      {
+        "t": 1791870300000,
+        "equity": 102215.70199327372,
+        "cum_funding": 20.634978012818152,
+        "mark": 83647.0
+      },
+      {
+        "t": 1791871200000,
+        "equity": 102145.6678963132,
+        "cum_funding": 20.634978012818152,
+        "mark": 83589.7
+      },
+      {
+        "t": 1791872100000,
+        "equity": 102253.95796595895,
+        "cum_funding": 20.634978012818152,
+        "mark": 83678.3
+      },
+      {
+        "t": 1791873000000,
+        "equity": 102268.38034543773,
+        "cum_funding": 20.634978012818152,
+        "mark": 83690.1
+      },
+      {
+        "t": 1791873900000,
+        "equity": 102319.59201494286,
+        "cum_funding": 20.634978012818152,
+        "mark": 83732.0
+      },
+      {
+        "t": 1791874800000,
+        "equity": 102308.2252243367,
+        "cum_funding": 20.634978012818152,
+        "mark": 83722.7
+      },
+      {
+        "t": 1791875700000,
+        "equity": 102267.28033344356,
+        "cum_funding": 20.634978012818152,
+        "mark": 83689.2
+      },
+      {
+        "t": 1791876600000,
+        "equity": 102414.92638776868,
+        "cum_funding": 20.634978012818152,
+        "mark": 83810.0
+      },
+      {
+        "t": 1791877500000,
+        "equity": 102438.3933103104,
+        "cum_funding": 20.634978012818152,
+        "mark": 83829.2
+      },
+      {
+        "t": 1791878400000,
+        "equity": 102809.70847011144,
+        "cum_funding": 20.634978012818152,
+        "mark": 84133.0
+      },
+      {
+        "t": 1791879300000,
+        "equity": 102504.51305492644,
+        "cum_funding": 29.193825443674974,
+        "mark": 83890.3
+      },
+      {
+        "t": 1791880200000,
+        "equity": 102361.02260146811,
+        "cum_funding": 29.193825443674974,
+        "mark": 83772.9
+      },
+      {
+        "t": 1791881100000,
+        "equity": 102095.0641459951,
+        "cum_funding": 29.193825443674974,
+        "mark": 83555.3
+      },
+      {
+        "t": 1791882000000,
+        "equity": 102069.03052880034,
+        "cum_funding": 29.193825443674974,
+        "mark": 83534.0
+      },
+      {
+        "t": 1791882900000,
+        "equity": 101912.3399314123,
+        "cum_funding": 29.193825443674974,
+        "mark": 83405.8
+      },
+      {
+        "t": 1791883800000,
+        "equity": 102109.36430191896,
+        "cum_funding": 29.193825443674974,
+        "mark": 83567.0
+      },
+      {
+        "t": 1791884700000,
+        "equity": 102139.06462576085,
+        "cum_funding": 29.193825443674974,
+        "mark": 83591.3
+      },
+      {
+        "t": 1791885600000,
+        "equity": 101998.62976117514,
+        "cum_funding": 29.193825443674974,
+        "mark": 83476.4
+      },
+      {
+        "t": 1791886500000,
+        "equity": 101934.82906551479,
+        "cum_funding": 29.193825443674974,
+        "mark": 83424.2
+      },
+      {
+        "t": 1791887400000,
+        "equity": 101721.54896220576,
+        "cum_funding": 29.193825443674974,
+        "mark": 83249.7
+      },
+      {
+        "t": 1791888300000,
+        "equity": 101795.37198936833,
+        "cum_funding": 29.193825443674974,
+        "mark": 83310.1
+      },
+      {
+        "t": 1791889200000,
+        "equity": 101681.70408330679,
+        "cum_funding": 29.193825443674974,
+        "mark": 83217.1
+      },
+      {
+        "t": 1791890100000,
+        "equity": 102028.0856379072,
+        "cum_funding": 29.193825443674974,
+        "mark": 83500.5
+      },
+      {
+        "t": 1791891000000,
+        "equity": 102041.40800539183,
+        "cum_funding": 29.193825443674974,
+        "mark": 83511.4
+      },
+      {
+        "t": 1791891900000,
+        "equity": 101813.82774615895,
+        "cum_funding": 29.193825443674974,
+        "mark": 83325.2
+      },
+      {
+        "t": 1791892800000,
+        "equity": 101726.92679862159,
+        "cum_funding": 29.193825443674974,
+        "mark": 83254.1
+      },
+      {
+        "t": 1791893700000,
+        "equity": 101872.61727606821,
+        "cum_funding": 29.193825443674974,
+        "mark": 83373.3
+      },
+      {
+        "t": 1791894600000,
+        "equity": 101646.62592304907,
+        "cum_funding": 29.193825443674974,
+        "mark": 83188.4
+      },
+      {
+        "t": 1791895500000,
+        "equity": 101813.46107549424,
+        "cum_funding": 29.193825443674974,
+        "mark": 83324.9
+      },
+      {
+        "t": 1791896400000,
+        "equity": 101648.45927637264,
+        "cum_funding": 29.193825443674974,
+        "mark": 83189.9
+      },
+      {
+        "t": 1791897300000,
+        "equity": 101899.13978748256,
+        "cum_funding": 29.193825443674974,
+        "mark": 83395.0
+      },
+      {
+        "t": 1791898200000,
+        "equity": 101751.12706249274,
+        "cum_funding": 29.193825443674974,
+        "mark": 83273.9
+      },
+      {
+        "t": 1791899100000,
+        "equity": 101699.9153929876,
+        "cum_funding": 29.193825443674974,
+        "mark": 83232.0
+      },
+      {
+        "t": 1791900000000,
+        "equity": 102211.90986448416,
+        "cum_funding": 29.193825443674974,
+        "mark": 83650.9
+      },
+      {
+        "t": 1791900900000,
+        "equity": 102165.5871371752,
+        "cum_funding": 29.193825443674974,
+        "mark": 83613.0
+      },
+      {
+        "t": 1791901800000,
+        "equity": 102201.76530942705,
+        "cum_funding": 29.193825443674974,
+        "mark": 83642.6
+      },
+      {
+        "t": 1791902700000,
+        "equity": 102018.91887128935,
+        "cum_funding": 29.193825443674974,
+        "mark": 83493.0
+      },
+      {
+        "t": 1791903600000,
+        "equity": 102180.74285798341,
+        "cum_funding": 29.193825443674974,
+        "mark": 83625.4
+      },
+      {
+        "t": 1791904500000,
+        "equity": 102035.78572186622,
+        "cum_funding": 29.193825443674974,
+        "mark": 83506.8
+      },
+      {
+        "t": 1791905400000,
+        "equity": 101795.49421292322,
+        "cum_funding": 29.193825443674974,
+        "mark": 83310.2
+      },
+      {
+        "t": 1791906300000,
+        "equity": 101896.81753993938,
+        "cum_funding": 29.193825443674974,
+        "mark": 83393.1
+      },
+      {
+        "t": 1791907200000,
+        "equity": 101922.13898412873,
+        "cum_funding": 32.71714021185437,
+        "mark": 83416.7
+      },
+      {
+        "t": 1791908100000,
+        "equity": 101991.4397397598,
+        "cum_funding": 32.71714021185437,
+        "mark": 83473.4
+      },
+      {
+        "t": 1791909000000,
+        "equity": 101920.42785436007,
+        "cum_funding": 32.71714021185437,
+        "mark": 83415.3
+      },
+      {
+        "t": 1791909900000,
+        "equity": 101833.6491303776,
+        "cum_funding": 32.71714021185437,
+        "mark": 83344.3
+      },
+      {
+        "t": 1791910800000,
+        "equity": 101604.23551782114,
+        "cum_funding": 32.71714021185437,
+        "mark": 83156.6
+      },
+      {
+        "t": 1791911700000,
+        "equity": 101659.11389397344,
+        "cum_funding": 32.71714021185437,
+        "mark": 83201.5
+      },
+      {
+        "t": 1791912600000,
+        "equity": 101616.33564975673,
+        "cum_funding": 32.71714021185437,
+        "mark": 83166.5
+      },
+      {
+        "t": 1791913500000,
+        "equity": 101489.71204687525,
+        "cum_funding": 32.71714021185437,
+        "mark": 83062.9
+      },
+      {
+        "t": 1791914400000,
+        "equity": 101567.07955713006,
+        "cum_funding": 32.71714021185437,
+        "mark": 83126.2
+      },
+      {
+        "t": 1791915300000,
+        "equity": 101460.74506436281,
+        "cum_funding": 32.71714021185437,
+        "mark": 83039.2
+      },
+      {
+        "t": 1791916200000,
+        "equity": 101483.35642202021,
+        "cum_funding": 32.71714021185437,
+        "mark": 83057.7
+      },
+      {
+        "t": 1791917100000,
+        "equity": 101569.40180467325,
+        "cum_funding": 32.71714021185437,
+        "mark": 83128.1
+      },
+      {
+        "t": 1791918000000,
+        "equity": 101605.21330626037,
+        "cum_funding": 32.71714021185437,
+        "mark": 83157.4
+      },
+      {
+        "t": 1791918900000,
+        "equity": 101673.78072056202,
+        "cum_funding": 32.71714021185437,
+        "mark": 83213.5
+      },
+      {
+        "t": 1791919800000,
+        "equity": 101581.25748949901,
+        "cum_funding": 32.71714021185437,
+        "mark": 83137.8
+      },
+      {
+        "t": 1791920700000,
+        "equity": 101721.93680119453,
+        "cum_funding": 32.71714021185437,
+        "mark": 83252.9
+      },
+      {
+        "t": 1791921600000,
+        "equity": 101683.5586049544,
+        "cum_funding": 32.71714021185437,
+        "mark": 83221.5
+      },
+      {
+        "t": 1791922500000,
+        "equity": 101631.61359411983,
+        "cum_funding": 32.71714021185437,
+        "mark": 83179.0
+      },
+      {
+        "t": 1791923400000,
+        "equity": 101809.08219584171,
+        "cum_funding": 32.71714021185437,
+        "mark": 83324.2
+      },
+      {
+        "t": 1791924300000,
+        "equity": 101861.1494302312,
+        "cum_funding": 32.71714021185437,
+        "mark": 83366.8
+      },
+      {
+        "t": 1791925200000,
+        "equity": 101815.6822678066,
+        "cum_funding": 32.71714021185437,
+        "mark": 83329.6
+      },
+      {
+        "t": 1791926100000,
+        "equity": 101779.62631910965,
+        "cum_funding": 32.71714021185437,
+        "mark": 83300.1
+      },
+      {
+        "t": 1791927000000,
+        "equity": 101932.03909207604,
+        "cum_funding": 32.71714021185437,
+        "mark": 83424.8
+      },
+      {
+        "t": 1791927900000,
+        "equity": 102008.30659033668,
+        "cum_funding": 32.71714021185437,
+        "mark": 83487.2
+      },
+      {
+        "t": 1791928800000,
+        "equity": 101882.66077589444,
+        "cum_funding": 32.71714021185437,
+        "mark": 83384.4
+      },
+      {
+        "t": 1791929700000,
+        "equity": 101906.61659265582,
+        "cum_funding": 32.71714021185437,
+        "mark": 83404.0
+      },
+      {
+        "t": 1791930600000,
+        "equity": 102010.75106143477,
+        "cum_funding": 32.71714021185437,
+        "mark": 83489.2
+      },
+      {
+        "t": 1791931500000,
+        "equity": 102004.028765915,
+        "cum_funding": 32.71714021185437,
+        "mark": 83483.7
+      },
+      {
+        "t": 1791932400000,
+        "equity": 101705.43662128237,
+        "cum_funding": 32.71714021185437,
+        "mark": 83239.4
+      },
+      {
+        "t": 1791933300000,
+        "equity": 101576.49077085772,
+        "cum_funding": 32.71714021185437,
+        "mark": 83133.9
+      },
+      {
+        "t": 1791934200000,
+        "equity": 101663.51394195,
+        "cum_funding": 32.71714021185437,
+        "mark": 83205.1
+      },
+      {
+        "t": 1791935100000,
+        "equity": 101566.46843935552,
+        "cum_funding": 32.71714021185437,
+        "mark": 83125.7
+      },
+      {
+        "t": 1791936000000,
+        "equity": 101847.70483919168,
+        "cum_funding": 32.71714021185437,
+        "mark": 83355.8
+      },
+      {
+        "t": 1791936900000,
+        "equity": 101924.15563567616,
+        "cum_funding": 31.678277103677104,
+        "mark": 83417.5
+      },
+      {
+        "t": 1791937800000,
+        "equity": 102110.5465569061,
+        "cum_funding": 31.678277103677104,
+        "mark": 83570.0
+      },
+      {
+        "t": 1791938700000,
+        "equity": 101874.04397816514,
+        "cum_funding": 31.678277103677104,
+        "mark": 83376.5
+      },
+      {
+        "t": 1791939600000,
+        "equity": 101766.97614406847,
+        "cum_funding": 31.678277103677104,
+        "mark": 83288.9
+      },
+      {
+        "t": 1791940500000,
+        "equity": 101755.1204592427,
+        "cum_funding": 31.678277103677104,
+        "mark": 83279.2
+      },
+      {
+        "t": 1791941400000,
+        "equity": 101746.80925750916,
+        "cum_funding": 31.678277103677104,
+        "mark": 83272.4
+      },
+      {
+        "t": 1791942300000,
+        "equity": 101757.44270678589,
+        "cum_funding": 31.678277103677104,
+        "mark": 83281.1
+      },
+      {
+        "t": 1791943200000,
+        "equity": 101793.13198481813,
+        "cum_funding": 31.678277103677104,
+        "mark": 83310.3
+      },
+      {
+        "t": 1791944100000,
+        "equity": 101732.7535486951,
+        "cum_funding": 31.678277103677104,
+        "mark": 83260.9
+      },
+      {
+        "t": 1791945000000,
+        "equity": 101851.79929117247,
+        "cum_funding": 31.678277103677104,
+        "mark": 83358.3
+      },
+      {
+        "t": 1791945900000,
+        "equity": 102157.48040198955,
+        "cum_funding": 31.678277103677104,
+        "mark": 83608.4
+      },
+      {
+        "t": 1791946800000,
+        "equity": 102246.45914996033,
+        "cum_funding": 31.678277103677104,
+        "mark": 83681.2
+      },
+      {
+        "t": 1791947700000,
+        "equity": 102316.37102336591,
+        "cum_funding": 31.678277103677104,
+        "mark": 83738.4
+      },
+      {
+        "t": 1791948600000,
+        "equity": 102374.42721194573,
+        "cum_funding": 31.678277103677104,
+        "mark": 83785.9
+      },
+      {
+        "t": 1791949500000,
+        "equity": 102224.82558074217,
+        "cum_funding": 31.678277103677104,
+        "mark": 83663.5
+      },
+      {
+        "t": 1791950400000,
+        "equity": 102251.47031571141,
+        "cum_funding": 31.678277103677104,
+        "mark": 83685.3
+      },
+      {
+        "t": 1791951300000,
+        "equity": 102342.77131122537,
+        "cum_funding": 31.678277103677104,
+        "mark": 83760.0
+      },
+      {
+        "t": 1791952200000,
+        "equity": 102264.30378897644,
+        "cum_funding": 31.678277103677104,
+        "mark": 83695.8
+      },
+      {
+        "t": 1791953100000,
+        "equity": 102274.44834403355,
+        "cum_funding": 31.678277103677104,
+        "mark": 83704.1
+      },
+      {
+        "t": 1791954000000,
+        "equity": 102022.05670315496,
+        "cum_funding": 31.678277103677104,
+        "mark": 83497.6
+      },
+      {
+        "t": 1791954900000,
+        "equity": 102107.61319158839,
+        "cum_funding": 31.678277103677104,
+        "mark": 83567.6
+      },
+      {
+        "t": 1791955800000,
+        "equity": 102034.89017641998,
+        "cum_funding": 31.678277103677104,
+        "mark": 83508.1
+      },
+      {
+        "t": 1791956700000,
+        "equity": 101945.05586356489,
+        "cum_funding": 31.678277103677104,
+        "mark": 83434.6
+      },
+      {
+        "t": 1791957600000,
+        "equity": 102083.65737482703,
+        "cum_funding": 31.678277103677104,
+        "mark": 83548.0
+      },
+      {
+        "t": 1791958500000,
+        "equity": 101965.467197234,
+        "cum_funding": 31.678277103677104,
+        "mark": 83451.3
+      },
+      {
+        "t": 1791959400000,
+        "equity": 101972.8006105283,
+        "cum_funding": 31.678277103677104,
+        "mark": 83457.3
+      },
+      {
+        "t": 1791960300000,
+        "equity": 101900.93316024423,
+        "cum_funding": 31.678277103677104,
+        "mark": 83398.5
+      },
+      {
+        "t": 1791961200000,
+        "equity": 101989.91190821498,
+        "cum_funding": 31.678277103677104,
+        "mark": 83471.3
+      },
+      {
+        "t": 1791962100000,
+        "equity": 101957.88933682989,
+        "cum_funding": 31.678277103677104,
+        "mark": 83445.1
+      },
+      {
+        "t": 1791963000000,
+        "equity": 101918.77779926034,
+        "cum_funding": 31.678277103677104,
+        "mark": 83413.1
+      },
+      {
+        "t": 1791963900000,
+        "equity": 102074.49060820916,
+        "cum_funding": 31.678277103677104,
+        "mark": 83540.5
+      },
+      {
+        "t": 1791964800000,
+        "equity": 102500.68414416247,
+        "cum_funding": 31.678277103677104,
+        "mark": 83889.2
+      },
+      {
+        "t": 1791965700000,
+        "equity": 102404.76656927292,
+        "cum_funding": 33.23926760666699,
+        "mark": 83812.0
+      },
+      {
+        "t": 1791966600000,
+        "equity": 101938.7281544206,
+        "cum_funding": 33.23926760666699,
+        "mark": 83430.7
+      },
+      {
+        "t": 1791967500000,
+        "equity": 101892.77209777638,
+        "cum_funding": 33.23926760666699,
+        "mark": 83393.1
+      },
+      {
+        "t": 1791968400000,
+        "equity": 101952.66163967978,
+        "cum_funding": 33.23926760666699,
+        "mark": 83442.1
+      },
+      {
+        "t": 1791969300000,
+        "equity": 101690.9810086284,
+        "cum_funding": 33.23926760666699,
+        "mark": 83228.0
+      },
+      {
+        "t": 1791970200000,
+        "equity": 101740.72599547468,
+        "cum_funding": 33.23926760666699,
+        "mark": 83268.7
+      },
+      {
+        "t": 1791971100000,
+        "equity": 101681.0809006811,
+        "cum_funding": 33.23926760666699,
+        "mark": 83219.9
+      },
+      {
+        "t": 1791972000000,
+        "equity": 101748.42607943372,
+        "cum_funding": 33.23926760666699,
+        "mark": 83275.0
+      },
+      {
+        "t": 1791972900000,
+        "equity": 101785.21536946009,
+        "cum_funding": 33.23926760666699,
+        "mark": 83305.1
+      },
+      {
+        "t": 1791973800000,
+        "equity": 101847.42715890666,
+        "cum_funding": 33.23926760666699,
+        "mark": 83356.0
+      },
+      {
+        "t": 1791974700000,
+        "equity": 101938.48370731079,
+        "cum_funding": 33.23926760666699,
+        "mark": 83430.5
+      },
+      {
+        "t": 1791975600000,
+        "equity": 101930.17250557725,
+        "cum_funding": 33.23926760666699,
+        "mark": 83423.7
+      },
+      {
+        "t": 1791976500000,
+        "equity": 101808.0711742273,
+        "cum_funding": 33.23926760666699,
+        "mark": 83323.8
+      },
+      {
+        "t": 1791977400000,
+        "equity": 101918.4390443064,
+        "cum_funding": 33.23926760666699,
+        "mark": 83414.1
+      },
+      {
+        "t": 1791978300000,
+        "equity": 101930.78362335179,
+        "cum_funding": 33.23926760666699,
+        "mark": 83424.2
+      },
+      {
+        "t": 1791979200000,
+        "equity": 102388.14416580586,
+        "cum_funding": 33.23926760666699,
+        "mark": 83798.4
+      },
+      {
+        "t": 1791980100000,
+        "equity": 102435.32245799915,
+        "cum_funding": 33.23926760666699,
+        "mark": 83837.0
+      },
+      {
+        "t": 1791981000000,
+        "equity": 101174.7087127102,
+        "cum_funding": 33.23926760666699,
+        "mark": 82805.6
+      },
+      {
+        "t": 1791981900000,
+        "equity": 101045.15174451102,
+        "cum_funding": 33.23926760666699,
+        "mark": 82699.6
+      },
+      {
+        "t": 1791982800000,
+        "equity": 100646.9474026309,
+        "cum_funding": 33.23926760666699,
+        "mark": 82373.8
+      },
+      {
+        "t": 1791983700000,
+        "equity": 100940.77282862224,
+        "cum_funding": 33.23926760666699,
+        "mark": 82614.2
+      },
+      {
+        "t": 1791984600000,
+        "equity": 101234.23158394887,
+        "cum_funding": 33.23926760666699,
+        "mark": 82854.3
+      },
+      {
+        "t": 1791985500000,
+        "equity": 100534.99062633803,
+        "cum_funding": 33.23926760666699,
+        "mark": 82282.2
+      },
+      {
+        "t": 1791986400000,
+        "equity": 100282.96565612417,
+        "cum_funding": 33.23926760666699,
+        "mark": 82076.0
+      },
+      {
+        "t": 1791987300000,
+        "equity": 100210.7315351754,
+        "cum_funding": 33.23926760666699,
+        "mark": 82016.9
+      },
+      {
+        "t": 1791988200000,
+        "equity": 99955.40652897909,
+        "cum_funding": 33.23926760666699,
+        "mark": 81808.0
+      },
+      {
+        "t": 1791989100000,
+        "equity": 100100.11921798646,
+        "cum_funding": 33.23926760666699,
+        "mark": 81926.4
+      },
+      {
+        "t": 1791990000000,
+        "equity": 99967.38443735977,
+        "cum_funding": 33.23926760666699,
+        "mark": 81817.8
+      },
+      {
+        "t": 1791990900000,
+        "equity": 100089.36354515485,
+        "cum_funding": 33.23926760666699,
+        "mark": 81917.6
+      },
+      {
+        "t": 1791991800000,
+        "equity": 99766.57113665105,
+        "cum_funding": 33.23926760666699,
+        "mark": 81653.5
+      },
+      {
+        "t": 1791992700000,
+        "equity": 99701.30375833185,
+        "cum_funding": 33.23926760666699,
+        "mark": 81600.1
+      },
+      {
+        "t": 1791993600000,
+        "equity": 99678.93684778425,
+        "cum_funding": 33.23926760666699,
+        "mark": 81581.8
+      },
+      {
+        "t": 1791994500000,
+        "equity": 99830.56713742482,
+        "cum_funding": 31.455056279471258,
+        "mark": 81704.4
+      },
+      {
+        "t": 1791995400000,
+        "equity": 100092.98110980561,
+        "cum_funding": 31.455056279471258,
+        "mark": 81919.1
+      },
+      {
+        "t": 1791996300000,
+        "equity": 100154.21511081295,
+        "cum_funding": 31.455056279471258,
+        "mark": 81969.2
+      },
+      {
+        "t": 1791997200000,
+        "equity": 100086.01436717602,
+        "cum_funding": 31.455056279471258,
+        "mark": 81913.4
+      },
+      {
+        "t": 1791998100000,
+        "equity": 100009.99131602519,
+        "cum_funding": 31.455056279471258,
+        "mark": 81851.2
+      },
+      {
+        "t": 1791999000000,
+        "equity": 99880.80101849072,
+        "cum_funding": 31.455056279471258,
+        "mark": 81745.5
+      },
+      {
+        "t": 1791999900000,
+        "equity": 99649.3096055009,
+        "cum_funding": 31.455056279471258,
+        "mark": 81556.1
+      },
+      {
+        "t": 1792000800000,
+        "equity": 99738.77724769125,
+        "cum_funding": 31.455056279471258,
+        "mark": 81629.3
+      },
+      {
+        "t": 1792001700000,
+        "equity": 99711.39917139255,
+        "cum_funding": 31.455056279471258,
+        "mark": 81606.9
+      },
+      {
+        "t": 1792002600000,
+        "equity": 99635.49834379664,
+        "cum_funding": 31.455056279471258,
+        "mark": 81544.8
+      },
+      {
+        "t": 1792003500000,
+        "equity": 99800.25569580842,
+        "cum_funding": 31.455056279471258,
+        "mark": 81679.6
+      },
+      {
+        "t": 1792004400000,
+        "equity": 99892.29003265178,
+        "cum_funding": 31.455056279471258,
+        "mark": 81754.9
+      },
+      {
+        "t": 1792005300000,
+        "equity": 99898.27898684212,
+        "cum_funding": 31.455056279471258,
+        "mark": 81759.8
+      },
+      {
+        "t": 1792006200000,
+        "equity": 99826.28931300314,
+        "cum_funding": 31.455056279471258,
+        "mark": 81700.9
+      },
+      {
+        "t": 1792007100000,
+        "equity": 99935.80161819793,
+        "cum_funding": 31.455056279471258,
+        "mark": 81790.5
+      },
+      {
+        "t": 1792008000000,
+        "equity": 100070.12530503838,
+        "cum_funding": 31.455056279471258,
+        "mark": 81900.4
+      },
+      {
+        "t": 1792008900000,
+        "equity": 100018.30251775873,
+        "cum_funding": 31.455056279471258,
+        "mark": 81858.0
+      },
+      {
+        "t": 1792009800000,
+        "equity": 99839.61168048778,
+        "cum_funding": 31.455056279471258,
+        "mark": 81711.8
+      },
+      {
+        "t": 1792010700000,
+        "equity": 99868.33421589043,
+        "cum_funding": 31.455056279471258,
+        "mark": 81735.3
+      },
+      {
+        "t": 1792011600000,
+        "equity": 99838.38944493873,
+        "cum_funding": 31.455056279471258,
+        "mark": 81710.8
+      },
+      {
+        "t": 1792012500000,
+        "equity": 99975.524273542,
+        "cum_funding": 31.455056279471258,
+        "mark": 81823.0
+      },
+      {
+        "t": 1792013400000,
+        "equity": 99931.89046444098,
+        "cum_funding": 31.455056279471258,
+        "mark": 81787.3
+      },
+      {
+        "t": 1792014300000,
+        "equity": 99868.94533366496,
+        "cum_funding": 31.455056279471258,
+        "mark": 81735.8
+      },
+      {
+        "t": 1792015200000,
+        "equity": 99800.13347225351,
+        "cum_funding": 31.455056279471258,
+        "mark": 81679.5
+      },
+      {
+        "t": 1792016100000,
+        "equity": 99665.68756185813,
+        "cum_funding": 31.455056279471258,
+        "mark": 81569.5
+      },
+      {
+        "t": 1792017000000,
+        "equity": 99518.53040175267,
+        "cum_funding": 31.455056279471258,
+        "mark": 81449.1
+      },
+      {
+        "t": 1792017900000,
+        "equity": 99728.87713974396,
+        "cum_funding": 31.455056279471258,
+        "mark": 81621.2
+      },
+      {
+        "t": 1792018800000,
+        "equity": 99784.9777514453,
+        "cum_funding": 31.455056279471258,
+        "mark": 81667.1
+      },
+      {
+        "t": 1792019700000,
+        "equity": 99585.02001562092,
+        "cum_funding": 31.455056279471258,
+        "mark": 81503.5
+      },
+      {
+        "t": 1792020600000,
+        "equity": 99657.74303078932,
+        "cum_funding": 31.455056279471258,
+        "mark": 81563.0
+      },
+      {
+        "t": 1792021500000,
+        "equity": 99753.68852138966,
+        "cum_funding": 31.455056279471258,
+        "mark": 81641.5
+      },
+      {
+        "t": 1792022400000,
+        "equity": 99918.2962287566,
+        "cum_funding": 27.326876502646225,
+        "mark": 81772.8
+      },
+      {
+        "t": 1792023300000,
+        "equity": 99881.87360939493,
+        "cum_funding": 27.326876502646225,
+        "mark": 81743.0
+      },
+      {
+        "t": 1792024200000,
+        "equity": 99596.84827935675,
+        "cum_funding": 27.326876502646225,
+        "mark": 81509.8
+      },
+      {
+        "t": 1792025100000,
+        "equity": 99737.28314394246,
+        "cum_funding": 27.326876502646225,
+        "mark": 81624.7
+      },
+      {
+        "t": 1792026000000,
+        "equity": 99814.16175997764,
+        "cum_funding": 27.326876502646225,
+        "mark": 81687.6
+      },
+      {
+        "t": 1792026900000,
+        "equity": 99638.64873513422,
+        "cum_funding": 27.326876502646225,
+        "mark": 81544.0
+      },
+      {
+        "t": 1792027800000,
+        "equity": 99963.15227340668,
+        "cum_funding": 27.326876502646225,
+        "mark": 81809.5
+      },
+      {
+        "t": 1792028700000,
+        "equity": 99709.53839697906,
+        "cum_funding": 27.326876502646225,
+        "mark": 81602.0
+      },
+      {
+        "t": 1792029600000,
+        "equity": 99478.29143109902,
+        "cum_funding": 27.326876502646225,
+        "mark": 81412.8
+      },
+      {
+        "t": 1792030500000,
+        "equity": 98734.4388759479,
+        "cum_funding": 27.326876502646225,
+        "mark": 80804.2
+      },
+      {
+        "t": 1792031400000,
+        "equity": 99331.86761232298,
+        "cum_funding": 27.326876502646225,
+        "mark": 81293.0
+      },
+      {
+        "t": 1792032300000,
+        "equity": 99584.87037097607,
+        "cum_funding": 27.326876502646225,
+        "mark": 81500.0
+      },
+      {
+        "t": 1792033200000,
+        "equity": 99254.74454917798,
+        "cum_funding": 27.326876502646225,
+        "mark": 81229.9
+      },
+      {
+        "t": 1792034100000,
+        "equity": 98979.8637741969,
+        "cum_funding": 27.326876502646225,
+        "mark": 81005.0
+      },
+      {
+        "t": 1792035000000,
+        "equity": 98723.56097956137,
+        "cum_funding": 27.326876502646225,
+        "mark": 80795.3
+      },
+      {
+        "t": 1792035900000,
+        "equity": 98825.86209501675,
+        "cum_funding": 27.326876502646225,
+        "mark": 80879.0
+      },
+      {
+        "t": 1792036800000,
+        "equity": 98834.78441452481,
+        "cum_funding": 27.326876502646225,
+        "mark": 80886.3
+      },
+      {
+        "t": 1792037700000,
+        "equity": 99390.65714223222,
+        "cum_funding": 27.326876502646225,
+        "mark": 81341.1
+      },
+      {
+        "t": 1792038600000,
+        "equity": 99672.87133050758,
+        "cum_funding": 27.326876502646225,
+        "mark": 81572.0
+      },
+      {
+        "t": 1792039500000,
+        "equity": 99658.57117458372,
+        "cum_funding": 27.326876502646225,
+        "mark": 81560.3
+      },
+      {
+        "t": 1792040400000,
+        "equity": 99155.49902259522,
+        "cum_funding": 27.326876502646225,
+        "mark": 81148.7
+      },
+      {
+        "t": 1792041300000,
+        "equity": 99074.95369991292,
+        "cum_funding": 27.326876502646225,
+        "mark": 81082.8
+      },
+      {
+        "t": 1792042200000,
+        "equity": 98958.96354630816,
+        "cum_funding": 27.326876502646225,
+        "mark": 80987.9
+      },
+      {
+        "t": 1792043100000,
+        "equity": 98424.47994070913,
+        "cum_funding": 27.326876502646225,
+        "mark": 80550.6
+      },
+      {
+        "t": 1792044000000,
+        "equity": 98653.28243549107,
+        "cum_funding": 27.326876502646225,
+        "mark": 80737.8
+      },
+      {
+        "t": 1792044900000,
+        "equity": 98901.02958128326,
+        "cum_funding": 27.326876502646225,
+        "mark": 80940.5
+      },
+      {
+        "t": 1792045800000,
+        "equity": 98881.35158894357,
+        "cum_funding": 27.326876502646225,
+        "mark": 80924.4
+      },
+      {
+        "t": 1792046700000,
+        "equity": 98799.95070137693,
+        "cum_funding": 27.326876502646225,
+        "mark": 80857.8
+      },
+      {
+        "t": 1792047600000,
+        "equity": 98887.34054313392,
+        "cum_funding": 27.326876502646225,
+        "mark": 80929.3
+      },
+      {
+        "t": 1792048500000,
+        "equity": 99125.55425164352,
+        "cum_funding": 27.326876502646225,
+        "mark": 81124.2
+      },
+      {
+        "t": 1792049400000,
+        "equity": 99429.52423269197,
+        "cum_funding": 27.326876502646225,
+        "mark": 81372.9
+      },
+      {
+        "t": 1792050300000,
+        "equity": 99575.70360435822,
+        "cum_funding": 27.326876502646225,
+        "mark": 81492.5
+      },
+      {
+        "t": 1792051200000,
+        "equity": 99308.16224699382,
+        "cum_funding": 33.92094414511613,
+        "mark": 81279.0
+      },
+      {
+        "t": 1792052100000,
+        "equity": 99252.18385884739,
+        "cum_funding": 33.92094414511613,
+        "mark": 81233.2
+      },
+      {
+        "t": 1792053000000,
+        "equity": 99215.88346304063,
+        "cum_funding": 33.92094414511613,
+        "mark": 81203.5
+      },
+      {
+        "t": 1792053900000,
+        "equity": 99387.24088701728,
+        "cum_funding": 33.92094414511613,
+        "mark": 81343.7
+      },
+      {
+        "t": 1792054800000,
+        "equity": 99419.26345840236,
+        "cum_funding": 33.92094414511613,
+        "mark": 81369.9
+      },
+      {
+        "t": 1792055700000,
+        "equity": 99261.83951968489,
+        "cum_funding": 33.92094414511613,
+        "mark": 81241.1
+      },
+      {
+        "t": 1792056600000,
+        "equity": 99223.33909988984,
+        "cum_funding": 33.92094414511613,
+        "mark": 81209.6
+      },
+      {
+        "t": 1792057500000,
+        "equity": 99242.2837509001,
+        "cum_funding": 33.92094414511613,
+        "mark": 81225.1
+      },
+      {
+        "t": 1792058400000,
+        "equity": 99039.392649758,
+        "cum_funding": 33.92094414511613,
+        "mark": 81059.1
+      },
+      {
+        "t": 1792059300000,
+        "equity": 98938.55821696146,
+        "cum_funding": 33.92094414511613,
+        "mark": 80976.6
+      },
+      {
+        "t": 1792060200000,
+        "equity": 98804.6012007857,
+        "cum_funding": 33.92094414511613,
+        "mark": 80867.0
+      },
+      {
+        "t": 1792061100000,
+        "equity": 98967.28075236411,
+        "cum_funding": 33.92094414511613,
+        "mark": 81000.1
+      },
+      {
+        "t": 1792062000000,
+        "equity": 98967.52519947392,
+        "cum_funding": 33.92094414511613,
+        "mark": 81000.3
+      },
+      {
+        "t": 1792062900000,
+        "equity": 98973.26970655443,
+        "cum_funding": 33.92094414511613,
+        "mark": 81005.0
+      },
+      {
+        "t": 1792063800000,
+        "equity": 99052.3483465779,
+        "cum_funding": 33.92094414511613,
+        "mark": 81069.7
+      },
+      {
+        "t": 1792064700000,
+        "equity": 98896.8799847389,
+        "cum_funding": 33.92094414511613,
+        "mark": 80942.5
+      },
+      {
+        "t": 1792065600000,
+        "equity": 98917.41354196292,
+        "cum_funding": 33.92094414511613,
+        "mark": 80959.3
+      },
+      {
+        "t": 1792066500000,
+        "equity": 99002.84780684143,
+        "cum_funding": 33.92094414511613,
+        "mark": 81029.2
+      },
+      {
+        "t": 1792067400000,
+        "equity": 98791.7677275207,
+        "cum_funding": 33.92094414511613,
+        "mark": 80856.5
+      },
+      {
+        "t": 1792068300000,
+        "equity": 98374.86318174013,
+        "cum_funding": 33.92094414511613,
+        "mark": 80515.4
+      },
+      {
+        "t": 1792069200000,
+        "equity": 98374.37428752052,
+        "cum_funding": 33.92094414511613,
+        "mark": 80515.0
+      },
+      {
+        "t": 1792070100000,
+        "equity": 97980.3255465072,
+        "cum_funding": 33.92094414511613,
+        "mark": 80192.6
+      },
+      {
+        "t": 1792071000000,
+        "equity": 98576.04315311357,
+        "cum_funding": 33.92094414511613,
+        "mark": 80680.0
+      },
+      {
+        "t": 1792071900000,
+        "equity": 97945.9807275789,
+        "cum_funding": 33.92094414511613,
+        "mark": 80164.5
+      },
+      {
+        "t": 1792072800000,
+        "equity": 99006.27006637875,
+        "cum_funding": 33.92094414511613,
+        "mark": 81032.0
+      },
+      {
+        "t": 1792073700000,
+        "equity": 99129.9603039425,
+        "cum_funding": 33.92094414511613,
+        "mark": 81133.2
+      },
+      {
+        "t": 1792074600000,
+        "equity": 99532.809140909,
+        "cum_funding": 33.92094414511613,
+        "mark": 81462.8
+      },
+      {
+        "t": 1792075500000,
+        "equity": 99994.44750778473,
+        "cum_funding": 33.92094414511613,
+        "mark": 81840.5
+      },
+      {
+        "t": 1792076400000,
+        "equity": 100502.0419313047,
+        "cum_funding": 33.92094414511613,
+        "mark": 82255.8
+      },
+      {
+        "t": 1792077300000,
+        "equity": 100568.16487450825,
+        "cum_funding": 33.92094414511613,
+        "mark": 82309.9
+      },
+      {
+        "t": 1792078200000,
+        "equity": 100613.38758982305,
+        "cum_funding": 33.92094414511613,
+        "mark": 82346.9
+      },
+      {
+        "t": 1792079100000,
+        "equity": 100646.51017320227,
+        "cum_funding": 33.92094414511613,
+        "mark": 82374.0
+      },
+      {
+        "t": 1792080000000,
+        "equity": 100720.32502306782,
+        "cum_funding": 35.76247476568463,
+        "mark": 82435.9
+      },
+      {
+        "t": 1792080900000,
+        "equity": 100247.31986558593,
+        "cum_funding": 35.76247476568463,
+        "mark": 82048.9
+      },
+      {
+        "t": 1792081800000,
+        "equity": 100297.43152309694,
+        "cum_funding": 35.76247476568463,
+        "mark": 82089.9
+      },
+      {
+        "t": 1792082700000,
+        "equity": 100286.7980738202,
+        "cum_funding": 35.76247476568463,
+        "mark": 82081.2
+      },
+      {
+        "t": 1792083600000,
+        "equity": 100526.11179432397,
+        "cum_funding": 35.76247476568463,
+        "mark": 82277.0
+      },
+      {
+        "t": 1792084500000,
+        "equity": 100615.33498940454,
+        "cum_funding": 35.76247476568463,
+        "mark": 82350.0
+      },
+      {
+        "t": 1792085400000,
+        "equity": 100725.70285948364,
+        "cum_funding": 35.76247476568463,
+        "mark": 82440.3
+      },
+      {
+        "t": 1792086300000,
+        "equity": 100668.38001223325,
+        "cum_funding": 35.76247476568463,
+        "mark": 82393.4
+      },
+      {
+        "t": 1792087200000,
+        "equity": 100321.26511630339,
+        "cum_funding": 35.76247476568463,
+        "mark": 82109.4
+      },
+      {
+        "t": 1792088100000,
+        "equity": 100381.3991053166,
+        "cum_funding": 35.76247476568463,
+        "mark": 82158.6
+      },
+      {
+        "t": 1792089000000,
+        "equity": 100545.91201021856,
+        "cum_funding": 35.76247476568463,
+        "mark": 82293.2
+      },
+      {
+        "t": 1792089900000,
+        "equity": 100644.301971917,
+        "cum_funding": 35.76247476568463,
+        "mark": 82373.7
+      },
+      {
+        "t": 1792090800000,
+        "equity": 100725.09174170913,
+        "cum_funding": 35.76247476568463,
+        "mark": 82439.8
+      },
+      {
+        "t": 1792091700000,
+        "equity": 100738.41410919373,
+        "cum_funding": 35.76247476568463,
+        "mark": 82450.7
+      },
+      {
+        "t": 1792092600000,
+        "equity": 100650.65759677204,
+        "cum_funding": 35.76247476568463,
+        "mark": 82378.9
+      },
+      {
+        "t": 1792093500000,
+        "equity": 100616.55722495359,
+        "cum_funding": 35.76247476568463,
+        "mark": 82351.0
+      },
+      {
+        "t": 1792094400000,
+        "equity": 100516.7005805963,
+        "cum_funding": 35.76247476568463,
+        "mark": 82269.3
+      },
+      {
+        "t": 1792095300000,
+        "equity": 100618.63502538696,
+        "cum_funding": 35.76247476568463,
+        "mark": 82352.7
+      },
+      {
+        "t": 1792096200000,
+        "equity": 100601.76817481009,
+        "cum_funding": 35.76247476568463,
+        "mark": 82338.9
+      },
+      {
+        "t": 1792097100000,
+        "equity": 100287.40919159472,
+        "cum_funding": 35.76247476568463,
+        "mark": 82081.7
+      },
+      {
+        "t": 1792098000000,
+        "equity": 100330.67633003107,
+        "cum_funding": 35.76247476568463,
+        "mark": 82117.1
+      },
+      {
+        "t": 1792098900000,
+        "equity": 100517.55614548063,
+        "cum_funding": 35.76247476568463,
+        "mark": 82270.0
+      },
+      {
+        "t": 1792099800000,
+        "equity": 100480.64463189935,
+        "cum_funding": 35.76247476568463,
+        "mark": 82239.8
+      },
+      {
+        "t": 1792100700000,
+        "equity": 100659.09102206049,
+        "cum_funding": 35.76247476568463,
+        "mark": 82385.8
+      },
+      {
+        "t": 1792101600000,
+        "equity": 100696.00253564175,
+        "cum_funding": 35.76247476568463,
+        "mark": 82416.0
+      },
+      {
+        "t": 1792102500000,
+        "equity": 100753.32538289214,
+        "cum_funding": 35.76247476568463,
+        "mark": 82462.9
+      },
+      {
+        "t": 1792103400000,
+        "equity": 100714.09162176769,
+        "cum_funding": 35.76247476568463,
+        "mark": 82430.8
+      },
+      {
+        "t": 1792104300000,
+        "equity": 100691.23581700047,
+        "cum_funding": 35.76247476568463,
+        "mark": 82412.1
+      },
+      {
+        "t": 1792105200000,
+        "equity": 100385.55470618336,
+        "cum_funding": 35.76247476568463,
+        "mark": 82162.0
+      },
+      {
+        "t": 1792106100000,
+        "equity": 100432.61077482173,
+        "cum_funding": 35.76247476568463,
+        "mark": 82200.5
+      },
+      {
+        "t": 1792107000000,
+        "equity": 100357.07661789052,
+        "cum_funding": 35.76247476568463,
+        "mark": 82138.7
+      },
+      {
+        "t": 1792107900000,
+        "equity": 100396.2387315671,
+        "cum_funding": 35.76247476568463,
+        "mark": 82195.4,
+        "is_exit": true,
+        "exit_fill": 82170.74137999999
+      }
+    ]
+  },
+  "monthly_returns": {
+    "months": [
+      {
+        "month": "2026-10",
+        "month_end_equity": 96918.59176552141,
+        "basis_equity": 100000.0,
+        "return_pct": -3.0814082344785887,
+        "partial_month": true,
+        "basis_note": "首月以窗口起点初始权益为基准（区间内不完整月）"
+      }
+    ],
+    "initial_equity": 100000.0,
+    "note": "账户月界净值（本月末/上月末 − 1）；首月以**窗口起点初始权益**为基准并标 partial_month，不再恒为 null"
+  },
+  "hashes": {
+    "code_sha256": "364aacfcd65c45e18106b9d2bac3200f21aa1bbdb4750a3f598ad07045fa338a",
+    "signal_params_hash": "0ba4b7918356b66415416504ae63f9f99786c73ee410fcc69182e9678aee21db",
+    "exec_params_hash": "a92639c0a2b51e3df59e1d7fc78362611fcc91f0a97ba5310c06f0f24e5b99a5",
+    "input_sha256": "169d3a6b9e898a7b62c0e4524f857e4a7e3629b018ceaf6ec4bcaa4b3a0c5794",
+    "spec_sha256": "810f1a3b84739e9ae83f4574ca0a6e4d79babd8c5c0b1af79bb9ef61ee46229e",
+    "signal_frame_sha256": "a2c0090ec97aba6b2e795b85961a73ee8b8b323d96120ad72789dbb627a48fc2"
+  },
+  "formal_m4_gate": {
+    "strategy_id": "WX_OI_RESONANCE_V1",
+    "formal_run_allowed": false,
+    "run_frozen": false,
+    "gate_status": {
+      "G01": "pending",
+      "G02": "pending",
+      "G03": "pending",
+      "G04": "pending",
+      "G05": "pending"
+    },
+    "requirements": [
+      "唯一合格父赢家（同一父规格下唯一通过 G01–G05 的父配置）",
+      "共同样本（父子必须在同一时间样本上比较，样本须逐根可核）",
+      "同样本父级对照（同一份样本上父级基准的净值/回撤/夏普）"
+    ],
+    "blocking_reasons": [
+      "父规格 G01–G05 未全部 pass",
+      "唯一合格父赢家未确定",
+      "共同样本与同样本父级对照尚未产出",
+      "本轮不引入外部数据源 ⇒ 无法补齐 OI/结算事件缺项"
+    ],
+    "ai_role": "AI 只能生成候选；确定性风控有最终权限",
+    "live_order_enabled": false,
+    "new_entry_switch_default": false
+  },
+  "m4_disclaimer": "本运行是 **WX_OI_RESONANCE_V1 独立候选研究**，非正式 M4；不继承 3a–3d / M0–M6 任何成绩，不冒称 M4 已通过；正式 M4 仍需唯一合格父赢家 + 共同样本 + 同样本父级对照，G01–G05 未过。",
+  "snapshot_files": [
+    "inputs/funding_events.json",
+    "inputs/funding_events_lookback.json",
+    "inputs/intrabar_bars.csv",
+    "inputs/oi_5m.csv",
+    "inputs/signal_bars.csv",
+    "inputs/signal_frame.csv"
+  ],
+  "trades": [
+    {
+      "trade_id": "trd_74bcbaaf154565e9",
+      "signal_id": "3c47fcc43d54f45e",
+      "direction": "long",
+      "signal_type": 3,
+      "entry_time_ms": 1791547200000,
+      "exit_time_ms": 1791570600000,
+      "entry_price": 83224.95999999999,
+      "exit_price": 82340.39047000001,
+      "qty": 0.5479936930572503,
+      "gross_pnl": -484.7385235106046,
+      "entry_fee": 22.803376592470965,
+      "exit_fee": 22.561007330715665,
+      "funding_fee": 0.5838758515159355,
+      "net_pnl": -530.6867832853071,
+      "exit_reason": "intrabar_stop",
+      "mfe": 0.001860499542445092,
+      "mae": 0.011427581340982294,
+      "holding_hours": 6.5
+    },
+    {
+      "trade_id": "trd_b8c2314cd024be69",
+      "signal_id": "45cd7f594f1ecd22",
+      "direction": "long",
+      "signal_type": 3,
+      "entry_time_ms": 1791644400000,
+      "exit_time_ms": 1791680400000,
+      "entry_price": 82977.58580999999,
+      "exit_price": 82863.93336000001,
+      "qty": 0.9589993465895915,
+      "gross_pnl": -108.99262528828663,
+      "entry_fee": 39.78772528668588,
+      "exit_fee": 39.73322897404174,
+      "funding_fee": -1.7981010293104565,
+      "net_pnl": -186.7154785197038,
+      "exit_reason": "intrabar_stop",
+      "mfe": 0.0019235819943651785,
+      "mae": 0.0012808978347882676,
+      "holding_hours": 10.0
+    },
+    {
+      "trade_id": "trd_1356ddc4278947c9",
+      "signal_id": "0e3e46be0bf363e3",
+      "direction": "long",
+      "signal_type": 3,
+      "entry_time_ms": 1791734400000,
+      "exit_time_ms": 1791753300000,
+      "entry_price": 83893.96064,
+      "exit_price": 83203.8670373654,
+      "qty": 0.9467436938802269,
+      "gross_pnl": -653.3417664813971,
+      "entry_fee": 39.713039095277985,
+      "exit_fee": 39.38636821203729,
+      "funding_fee": 1.069547133440422,
+      "net_pnl": -733.5107209221528,
+      "exit_reason": "intrabar_stop",
+      "mfe": 0.003409534581725467,
+      "mae": 0.007932163828282988,
+      "holding_hours": 5.25
+    },
+    {
+      "trade_id": "trd_44c1b4a1a5b1e486",
+      "signal_id": "59b06addb9304616",
+      "direction": "long",
+      "signal_type": 2,
+      "entry_time_ms": 1791813600000,
+      "exit_time_ms": 1791816300000,
+      "entry_price": 82946.8766,
+      "exit_price": 82398.97289,
+      "qty": 0.9504790637748769,
+      "gross_pnl": -520.7710053195804,
+      "entry_fee": 39.41963480690912,
+      "exit_fee": 39.159249304249336,
+      "funding_fee": 0.0,
+      "net_pnl": -599.3498894307388,
+      "exit_reason": "intrabar_stop",
+      "mfe": 0.0015639335116327043,
+      "mae": 0.007206740319863923,
+      "holding_hours": 0.75
+    },
+    {
+      "trade_id": "trd_de74914ad8a8eeb9",
+      "signal_id": "aa2a295765c48068",
+      "direction": "long",
+      "signal_type": 3,
+      "entry_time_ms": 1791871200000,
+      "exit_time_ms": 1791913500000,
+      "entry_price": 83672.0941,
+      "exit_price": 83038.48098,
+      "qty": 0.45150596582253466,
+      "gross_pnl": -286.0801037034337,
+      "entry_fee": 18.889224829507253,
+      "exit_fee": 18.746184777655536,
+      "funding_fee": 4.461039226839026,
+      "net_pnl": -328.1765525374355,
+      "exit_reason": "intrabar_stop",
+      "mfe": 0.005522819823867597,
+      "mae": 0.009074639617511367,
+      "holding_hours": 11.75
+    },
+    {
+      "trade_id": "trd_4c15a79ecbc7e488",
+      "signal_id": "823d423204a66cfb",
+      "direction": "long",
+      "signal_type": 2,
+      "entry_time_ms": 1792033200000,
+      "exit_time_ms": 1792069200000,
+      "entry_price": 81524.55003,
+      "exit_price": 80430.8635,
+      "qty": 0.5048840466441531,
+      "gross_pnl": -552.1848810265977,
+      "entry_fee": 20.580222359995055,
+      "exit_fee": 20.30412991948176,
+      "funding_fee": 2.7225316249290166,
+      "net_pnl": -595.7917649310036,
+      "exit_reason": "intrabar_stop",
+      "mfe": 0.002408476586840913,
+      "mae": 0.014506673505892447,
+      "holding_hours": 10.0
+    },
+    {
+      "trade_id": "trd_9b931c0181f3ccb0",
+      "signal_id": "be38b8b021d7b343",
+      "direction": "long",
+      "signal_type": 3,
+      "entry_time_ms": 1792080000000,
+      "exit_time_ms": 1792107900000,
+      "entry_price": 82398.7122,
+      "exit_price": 82170.74137999999,
+      "qty": 0.34544763489684494,
+      "gross_pnl": -78.75198059449514,
+      "entry_fee": 14.2322201240179,
+      "exit_fee": 14.192844133720653,
+      "funding_fee": 0.0,
+      "net_pnl": -107.17704485223369,
+      "exit_reason": "force_close_eod",
+      "mfe": 0.00291858687568181,
+      "mae": 0.006183497125092174,
+      "holding_hours": 7.75
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "ord_0ed440766a574558",
+      "trade_id": "trd_74bcbaaf154565e9",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1791547200000,
+      "action": "entry",
+      "reason": "",
+      "price": 83224.95999999999,
+      "qty": 0.5479936930572503,
+      "fee": 22.803376592470965,
+      "signal_type": 3
+    },
+    {
+      "order_id": "ord_064d35d770eb49d6",
+      "trade_id": "trd_74bcbaaf154565e9",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1791570600000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 82340.39047000001,
+      "qty": null,
+      "fee": null,
+      "signal_type": null
+    },
+    {
+      "order_id": "ord_ca87a5053cfcd27c",
+      "trade_id": "trd_b8c2314cd024be69",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1791644400000,
+      "action": "entry",
+      "reason": "",
+      "price": 82977.58580999999,
+      "qty": 0.9589993465895915,
+      "fee": 39.78772528668588,
+      "signal_type": 3
+    },
+    {
+      "order_id": "ord_65957d4972c84365",
+      "trade_id": "trd_b8c2314cd024be69",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1791680400000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 82863.93336000001,
+      "qty": null,
+      "fee": null,
+      "signal_type": null
+    },
+    {
+      "order_id": "ord_3af2430d4e056c70",
+      "trade_id": "trd_1356ddc4278947c9",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1791734400000,
+      "action": "entry",
+      "reason": "",
+      "price": 83893.96064,
+      "qty": 0.9467436938802269,
+      "fee": 39.713039095277985,
+      "signal_type": 3
+    },
+    {
+      "order_id": "ord_919e6b761c85d491",
+      "trade_id": "trd_1356ddc4278947c9",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1791753300000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 83203.8670373654,
+      "qty": null,
+      "fee": null,
+      "signal_type": null
+    },
+    {
+      "order_id": "ord_78b6c7716cb68fae",
+      "trade_id": "trd_44c1b4a1a5b1e486",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1791813600000,
+      "action": "entry",
+      "reason": "",
+      "price": 82946.8766,
+      "qty": 0.9504790637748769,
+      "fee": 39.41963480690912,
+      "signal_type": 2
+    },
+    {
+      "order_id": "ord_23fab544e0e056c0",
+      "trade_id": "trd_44c1b4a1a5b1e486",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1791816300000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 82398.97289,
+      "qty": null,
+      "fee": null,
+      "signal_type": null
+    },
+    {
+      "order_id": "ord_e5ecda7a36a705fa",
+      "trade_id": "trd_de74914ad8a8eeb9",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1791871200000,
+      "action": "entry",
+      "reason": "",
+      "price": 83672.0941,
+      "qty": 0.45150596582253466,
+      "fee": 18.889224829507253,
+      "signal_type": 3
+    },
+    {
+      "order_id": "ord_b4f6390d300a4d48",
+      "trade_id": "trd_de74914ad8a8eeb9",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1791913500000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 83038.48098,
+      "qty": null,
+      "fee": null,
+      "signal_type": null
+    },
+    {
+      "order_id": "ord_c9065f9846b78af9",
+      "trade_id": "trd_4c15a79ecbc7e488",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1792033200000,
+      "action": "entry",
+      "reason": "",
+      "price": 81524.55003,
+      "qty": 0.5048840466441531,
+      "fee": 20.580222359995055,
+      "signal_type": 2
+    },
+    {
+      "order_id": "ord_8323c5fc7bbeddd4",
+      "trade_id": "trd_4c15a79ecbc7e488",
+      "side": "sell",
+      "phase": "D_intrabar",
+      "ts_ms": 1792069200000,
+      "action": "exit",
+      "reason": "intrabar_stop",
+      "price": 80430.8635,
+      "qty": null,
+      "fee": null,
+      "signal_type": null
+    },
+    {
+      "order_id": "ord_a18937809af723c0",
+      "trade_id": "trd_9b931c0181f3ccb0",
+      "side": "buy",
+      "phase": "C_entry",
+      "ts_ms": 1792080000000,
+      "action": "entry",
+      "reason": "",
+      "price": 82398.7122,
+      "qty": 0.34544763489684494,
+      "fee": 14.2322201240179,
+      "signal_type": 3
+    },
+    {
+      "order_id": "ord_c6de9e298d6d0793",
+      "trade_id": "trd_9b931c0181f3ccb0",
+      "side": "sell",
+      "phase": "EOD",
+      "ts_ms": 1792107900000,
+      "action": "force_close_eod",
+      "reason": "force_close_eod",
+      "price": 82170.74137999999,
+      "qty": null,
+      "fee": null,
+      "signal_type": null
+    }
+  ],
+  "rejected": [
+    {
+      "ts_ms": 1791558000000,
+      "symbol": "BTCUSDT",
+      "phase": "C_entry",
+      "reason": "duplicate_symbol_active"
+    },
+    {
+      "ts_ms": 1791648000000,
+      "symbol": "BTCUSDT",
+      "phase": "C_entry",
+      "reason": "duplicate_symbol_active"
+    },
+    {
+      "ts_ms": 1791655200000,
+      "symbol": "BTCUSDT",
+      "phase": "C_entry",
+      "reason": "duplicate_symbol_active"
+    },
+    {
+      "ts_ms": 1791874800000,
+      "symbol": "BTCUSDT",
+      "phase": "C_entry",
+      "reason": "duplicate_symbol_active"
+    },
+    {
+      "ts_ms": 1792087200000,
+      "symbol": "BTCUSDT",
+      "phase": "C_entry",
+      "reason": "duplicate_symbol_active"
+    }
+  ],
+  "inputs_manifest": {
+    "run_id": "bt_20261016T063427Z_810f1a3b",
+    "generated_at": "2026-10-16T06:34:28Z",
+    "window": {
+      "symbol": "BTCUSDT",
+      "exchange": "binance",
+      "market": "um",
+      "signal_timeframe": "1h",
+      "exec_timeframe": "15m",
+      "window_source": "auto_recent_days",
+      "data_end_ms": 1792130400000,
+      "sig_end_ms": 1792130400000,
+      "exec_end_ms": 1792132200000,
+      "signal_series_start_ms": 1790640000000,
+      "win_start_ms": 1791504000000,
+      "win_end_ms": 1792108800000,
+      "window_days": 7,
+      "warmup_bars_requested": 240,
+      "warmup_bars": 240,
+      "trade_start_sec": 1791504000,
+      "convention": "UTC 半开区间 [win_start, win_end)；预热段（warmup_bars 根信号 bar）只喂数据不交易；bar 均须已收盘且连续、且**全窗覆盖**"
+    },
+    "market_db": "/Users/boos/Desktop/威科夫因子共振趋势/数据/市场数据/db/market_v2.sqlite3",
+    "market_db_stat": {
+      "path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/市场数据/db/market_v2.sqlite3",
+      "size": 6381580288,
+      "mtime_utc": "2026-10-16T06:34:25Z"
+    },
+    "archive_root": "/Users/boos/Desktop/威科夫因子共振趋势/数据/市场数据/parquet",
+    "archive_state": {
+      "watermark_ms": 1791880577632,
+      "reconcile_watermark_ms": 1791763200000,
+      "reconcile_watermark_iso": "2026-10-12T00:00:00Z",
+      "reconcile_watermark_note": "已对账归档固定水位（沿用多版本核对证据的固定截止），用于冷档/源库对账与热层下界推导",
+      "last_run": {
+        "ts": 1791885110,
+        "watermark_ms": 1791880577632,
+        "combos_total": 551,
+        "combos_done": 385,
+        "stopped": "free 11.958 GiB < reserve 12.0",
+        "shards_written": 22917,
+        "shards_skipped": 263,
+        "bytes_written": 7700184023,
+        "rows_written": 254233632,
+        "free_gib_end": 12.039,
+        "elapsed_s": 2115.1
+      },
+      "last_run_p2b": {
+        "ts": 1791888895,
+        "tag": "p2b",
+        "combos_remaining_at_start": 165,
+        "combos_done_this_run": 165,
+        "combos_total": 551,
+        "shards_written": 9217,
+        "shards_skipped": 0,
+        "bytes_written": 2986454749,
+        "rows_written": 100501908,
+        "stopped": null,
+        "free_gib_end": 9.643,
+        "elapsed_s": 630.6,
+        "budget": {
+          "base_reserve_gib": 2.25,
+          "hot_pending_gib": 4.2,
+          "os_floor_gib": 1.0,
+          "wal_headroom_gib": 0.5,
+          "bg_headroom_gib": 0.7,
+          "temp_peak_gib": 0.05
+        },
+        "batch_log": [
+          {
+            "i": 1,
+            "combo": "binance/um/RLCUSDT",
+            "free_gib": 11.41,
+            "wal_gib": 1.045,
+            "written_bytes": 47083144,
+            "elapsed_s": 7.4
+          },
+          {
+            "i": 2,
+            "combo": "binance/um/ROBOUSDT",
+            "free_gib": 11.393,
+            "wal_gib": 1.045,
+            "written_bytes": 51997777,
+            "elapsed_s": 8.9
+          },
+          {
+            "i": 3,
+            "combo": "binance/um/RONINUSDT",
+            "free_gib": 11.388,
+            "wal_gib": 1.045,
+            "written_bytes": 77196105,
+            "elapsed_s": 13.0
+          },
+          {
+            "i": 4,
+            "combo": "binance/um/ROSEUSDT",
+            "free_gib": 11.365,
+            "wal_gib": 1.045,
+            "written_bytes": 118427046,
+            "elapsed_s": 19.2
+          },
+          {
+            "i": 5,
+            "combo": "binance/um/RPLUSDT",
+            "free_gib": 11.244,
+            "wal_gib": 1.045,
+            "written_bytes": 138230997,
+            "elapsed_s": 23.5
+          },
+          {
+            "i": 6,
+            "combo": "binance/um/RSRUSDT",
+            "free_gib": 11.307,
+            "wal_gib": 1.045,
+            "written_bytes": 185883415,
+            "elapsed_s": 31.4
+          },
+          {
+            "i": 7,
+            "combo": "binance/um/RUNEUSDT",
+            "free_gib": 11.262,
+            "wal_gib": 1.045,
+            "written_bytes": 229861437,
+            "elapsed_s": 39.5
+          },
+          {
+            "i": 8,
+            "combo": "binance/um/RVNUSDT",
+            "free_gib": 11.217,
+            "wal_gib": 1.045,
+            "written_bytes": 273495459,
+            "elapsed_s": 47.3
+          },
+          {
+            "i": 9,
+            "combo": "binance/um/SAFEUSDT",
+            "free_gib": 11.176,
+            "wal_gib": 1.045,
+            "written_bytes": 287536788,
+            "elapsed_s": 50.2
+          },
+          {
+            "i": 10,
+            "combo": "binance/um/SAGAUSDT",
+            "free_gib": 11.163,
+            "wal_gib": 1.045,
+            "written_bytes": 312633191,
+            "elapsed_s": 54.3
+          },
+          {
+            "i": 20,
+            "combo": "binance/um/SIGNUSDT",
+            "free_gib": 10.959,
+            "wal_gib": 1.045,
+            "written_bytes": 516081901,
+            "elapsed_s": 90.5
+          },
+          {
+            "i": 30,
+            "combo": "binance/um/SOMIUSDT",
+            "free_gib": 10.8,
+            "wal_gib": 1.045,
+            "written_bytes": 680061702,
+            "elapsed_s": 120.6
+          },
+          {
+            "i": 40,
+            "combo": "binance/um/SSVUSDT",
+            "free_gib": 10.682,
+            "wal_gib": 1.045,
+            "written_bytes": 829374698,
+            "elapsed_s": 149.9
+          },
+          {
+            "i": 50,
+            "combo": "binance/um/SUPERUSDT",
+            "free_gib": 10.518,
+            "wal_gib": 1.045,
+            "written_bytes": 1026029428,
+            "elapsed_s": 192.9
+          },
+          {
+            "i": 60,
+            "combo": "binance/um/TAKEUSDT",
+            "free_gib": 10.364,
+            "wal_gib": 1.045,
+            "written_bytes": 1178038096,
+            "elapsed_s": 231.2
+          },
+          {
+            "i": 70,
+            "combo": "binance/um/TRADOORUSDT",
+            "free_gib": 10.142,
+            "wal_gib": 1.045,
+            "written_bytes": 1393666687,
+            "elapsed_s": 281.9
+          },
+          {
+            "i": 80,
+            "combo": "binance/um/TURTLEUSDT",
+            "free_gib": 9.966,
+            "wal_gib": 1.045,
+            "written_bytes": 1577441223,
+            "elapsed_s": 316.9
+          },
+          {
+            "i": 90,
+            "combo": "binance/um/USTCUSDT",
+            "free_gib": 9.782,
+            "wal_gib": 1.045,
+            "written_bytes": 1800382863,
+            "elapsed_s": 362.2
+          },
+          {
+            "i": 100,
+            "combo": "binance/um/WALUSDT",
+            "free_gib": 9.57,
+            "wal_gib": 1.045,
+            "written_bytes": 1976067226,
+            "elapsed_s": 402.0
+          },
+          {
+            "i": 110,
+            "combo": "binance/um/XANUSDT",
+            "free_gib": 10.386,
+            "wal_gib": 1.045,
+            "written_bytes": 2186593418,
+            "elapsed_s": 441.4
+          },
+          {
+            "i": 120,
+            "combo": "binance/um/XVSUSDT",
+            "free_gib": 10.13,
+            "wal_gib": 1.045,
+            "written_bytes": 2471707105,
+            "elapsed_s": 501.0
+          },
+          {
+            "i": 130,
+            "combo": "binance/um/ZETAUSDT",
+            "free_gib": 9.913,
+            "wal_gib": 1.045,
+            "written_bytes": 2696335908,
+            "elapsed_s": 546.5
+          },
+          {
+            "i": 140,
+            "combo": "binance/um/我踏马来了USDT",
+            "free_gib": 9.733,
+            "wal_gib": 1.045,
+            "written_bytes": 2875245439,
+            "elapsed_s": 587.0
+          },
+          {
+            "i": 150,
+            "combo": "okx/swap/CRO-USDT-SWAP",
+            "free_gib": 9.716,
+            "wal_gib": 1.045,
+            "written_bytes": 2925352289,
+            "elapsed_s": 606.4
+          },
+          {
+            "i": 160,
+            "combo": "okx/swap/PROS-USDT-SWAP",
+            "free_gib": 9.665,
+            "wal_gib": 1.045,
+            "written_bytes": 2965722504,
+            "elapsed_s": 623.5
+          }
+        ]
+      },
+      "archive_verified_upto_ms": 1789370400000,
+      "last_rebuild_run": {
+        "ts": 1791975449,
+        "cutoff_ms": 1789370634343,
+        "metrics": [
+          "funding",
+          "oi",
+          "okx",
+          "sources"
+        ],
+        "per_metric": {
+          "funding": {
+            "rows": 2102859,
+            "shards": 525,
+            "err": 0,
+            "stopped": 0
+          },
+          "oi": {
+            "rows": 123422671,
+            "shards": 1646,
+            "err": 0,
+            "stopped": 0
+          },
+          "okx": {
+            "rows": 1865966,
+            "shards": 278,
+            "err": 0,
+            "stopped": 0
+          },
+          "sources": {
+            "rows": 2072958,
+            "shards": 5700
+          }
+        },
+        "free_gib_end": 54.983,
+        "stops": [],
+        "shards_total": 32785,
+        "watermark_ms_unchanged": 1791880577632
+      }
+    },
+    "snapshot_root": "inputs/（相对本 run 目录）",
+    "series": {
+      "signal_bars": {
+        "file": "inputs/signal_bars.csv",
+        "sha256": "f3fa0a114d86b9205ba1f6ab15dfaf944c797f4bd5574bef2285a26e2b45b20a",
+        "bytes": 47696,
+        "rows": 414,
+        "columns": [
+          "timestamp",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "open_interest"
+        ],
+        "first_utc": "2026-09-29T00:00:00Z",
+        "last_utc": "2026-10-16T05:00:00Z",
+        "note": "信号周期 bar（含预热）+ as-of 对齐后的 open_interest"
+      },
+      "intrabar_bars": {
+        "file": "inputs/intrabar_bars.csv",
+        "sha256": "a7d62377b889f70782e7342cdfbc1e3182193158978221f44112eb16969cf5d6",
+        "bytes": 65504,
+        "rows": 672,
+        "columns": [
+          "timestamp",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume"
+        ],
+        "first_utc": "2026-10-09T00:00:00Z",
+        "last_utc": "2026-10-15T23:45:00Z",
+        "note": "执行周期 bar（窗口内）"
+      },
+      "oi_5m": {
+        "file": "inputs/oi_5m.csv",
+        "sha256": "ff88649d3f539d29659d694523506b50d8efece66746dd05f32e115b15afa287",
+        "bytes": 167359,
+        "rows": 4921,
+        "note": "原始 5m OI 切片（未对齐前）"
+      },
+      "funding_events": {
+        "file": "inputs/funding_events.json",
+        "sha256": "531302115ad7aec91b58ba9d3aeaafad52875ada0899dab29176b56a18a9633e",
+        "bytes": 2529,
+        "rows": 21,
+        "time_unit": "ms",
+        "first_utc": "2026-10-09T00:00:00Z",
+        "last_utc": "2026-10-15T16:00:00Z",
+        "note": "窗口内真实 settled 资金费事件（**原始毫秒**，未截秒）"
+      },
+      "funding_events_lookback": {
+        "file": "inputs/funding_events_lookback.json",
+        "sha256": "da6e5494114941cf49f3129ad0a65eb73f6345a33de49ea47e111e797ceceee8",
+        "bytes": 5050,
+        "rows": 42,
+        "time_unit": "ms",
+        "first_utc": "2026-10-02T00:00:00Z",
+        "last_utc": "2026-10-15T16:00:00Z",
+        "note": "资金费**频率/锚点观测**回看窗（win_start-7d .. win_end）全部 settled 事件，供独立审计重推应有结算网格（含窗口左端点）"
+      },
+      "signal_frame": {
+        "file": "inputs/signal_frame.csv",
+        "sha256": "d466ca7cdb9413d8bae2114a8952f3857d5943b855330157490caf7469a14207",
+        "bytes": 149280,
+        "rows": 414,
+        "columns": [
+          "timestamp",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "open_interest",
+          "oi_chg_20",
+          "f_oi_price_div",
+          "f_oi_mom_flux",
+          "f_oi_level_rank",
+          "f_oi_price_div_rank",
+          "f_oi_mom_flux_rank",
+          "oi_resonance_score",
+          "oi_resonance_available",
+          "oi_resonance_quality",
+          "atr",
+          "dc_high_prev",
+          "dc_low_prev",
+          "exit_low_prev",
+          "exit_high_prev",
+          "exit_low_curr",
+          "exit_high_curr",
+          "signal",
+          "signal_name",
+          "direction",
+          "stop_price",
+          "structural_ref",
+          "stop_mode",
+          "stop_atr_mult",
+          "reject_reason",
+          "confirm_time"
+        ],
+        "note": "候选包 compute_signals 输出帧（同一纯函数、同一输入）"
+      }
+    },
+    "coverage": {
+      "signal": {
+        "label": "BTCUSDT@1h 信号序列(含预热)",
+        "rows": 414,
+        "interval_ms": 3600000,
+        "first_ms": 1790640000000,
+        "last_ms": 1792126800000,
+        "first_utc": "2026-09-29T00:00:00Z",
+        "last_utc": "2026-10-16T05:00:00Z",
+        "n_unclosed": 0,
+        "n_gaps": 0,
+        "gap_samples": [],
+        "contiguous": true,
+        "all_closed": true,
+        "expect_start_ms": 1790640000000,
+        "expect_end_ms": 1792130400000,
+        "expected_bars": 414,
+        "empty": false,
+        "head_ok": true,
+        "tail_ok": true,
+        "count_ok": true,
+        "full_window_ok": true,
+        "warmup_bars_requested": 240,
+        "warmup_bars_actual": 240,
+        "warmup_shortfall_bars": 0,
+        "oi_factor_min_periods": 168,
+        "oi_factor_ready_at_win_start": true
+      },
+      "exec": {
+        "label": "BTCUSDT@15m 执行序列(窗口)",
+        "rows": 672,
+        "interval_ms": 900000,
+        "first_ms": 1791504000000,
+        "last_ms": 1792107900000,
+        "first_utc": "2026-10-09T00:00:00Z",
+        "last_utc": "2026-10-15T23:45:00Z",
+        "n_unclosed": 0,
+        "n_gaps": 0,
+        "gap_samples": [],
+        "contiguous": true,
+        "all_closed": true,
+        "expect_start_ms": 1791504000000,
+        "expect_end_ms": 1792108800000,
+        "expected_bars": 672,
+        "empty": false,
+        "head_ok": true,
+        "tail_ok": true,
+        "count_ok": true,
+        "full_window_ok": true
+      },
+      "oi": {
+        "source_period": "5m",
+        "rows": 4921,
+        "first_ms": 1790640000000,
+        "last_ms": 1792130400000,
+        "first_utc": "2026-09-29T00:00:00Z",
+        "last_utc": "2026-10-16T06:00:00Z",
+        "align_rule": "as-of：bar 收盘时刻(open_time+tf) 之前最近一条 OI（ts <= close）",
+        "bars": 414,
+        "bars_with_oi": 414,
+        "bars_missing_oi": 0,
+        "fake_fill": "无（缺 OI 记 NaN，不写 0 / 0.5）"
+      },
+      "funding": {
+        "rows_settled_in_window": 21,
+        "rows_settled_lookback_total": 42,
+        "rate_type_filter": "settled",
+        "time_unit": "ms（原始 funding_time，未截秒）",
+        "lookback_ms": 604800000,
+        "first_ms": 1791504000000,
+        "last_ms": 1792080000000,
+        "first_utc": "2026-10-09T00:00:00Z",
+        "last_utc": "2026-10-15T16:00:00Z",
+        "frequency": {
+          "interval_ms": 28800000,
+          "interval_hours": 8.0,
+          "frequency": "8h",
+          "source": "observed_from_settled_events",
+          "n_intervals": 41,
+          "mode_count": 41,
+          "distinct_intervals_sec": [
+            28800
+          ],
+          "note": "频率由该标的**真实结算事件间隔**的众数得到（不假设 8h）"
+        },
+        "expected_settlements_in_window": 21,
+        "actual_settlements_in_window": 21,
+        "grid_points_in_window": 21,
+        "missing_settlements_in_window": [],
+        "missing_settlements_count": 0,
+        "match_tolerance_ms": 60000,
+        "events_missing_rate_or_mark": [],
+        "coverage_ok": true,
+        "note": "只认真实 settled 事件（毫秒）；缺 rate/mark 记 funding_gap，不补 0；结算覆盖 = 按观测频率推算的**每个网格时刻**都要有真实事件命中（含窗口左端点，容差内），不只是次数 ≥ 期望"
+      }
+    },
+    "spec": {
+      "strategy_id": "WX_OI_RESONANCE_V1",
+      "exchange": "binance",
+      "market": "um",
+      "symbols": [
+        "BTCUSDT"
+      ],
+      "signal_timeframe": "1h",
+      "exec_timeframe": "15m",
+      "window": {
+        "mode": "auto",
+        "window_days": 7
+      },
+      "warmup_bars": null,
+      "params": {
+        "maker_fee_rate": 0.0002,
+        "taker_fee_rate": 0.0005,
+        "fee_rate": 0.0005,
+        "slippage_bps": 3.0,
+        "risk_per_trade": 0.008,
+        "max_concurrent_trades": 3,
+        "max_portfolio_margin_pct": 0.4,
+        "max_leverage_per_symbol": 2.0
+      },
+      "signal_overrides": {},
+      "exec_overrides": {
+        "maker_fee_rate": 0.0002,
+        "taker_fee_rate": 0.0005,
+        "fee_rate": 0.0005,
+        "slippage_bps": 3.0,
+        "risk_per_trade": 0.008,
+        "max_concurrent_trades": 3,
+        "max_portfolio_margin_pct": 0.4,
+        "max_leverage_per_symbol": 2.0
+      },
+      "note": null
+    },
+    "spec_sha256": "810f1a3b84739e9ae83f4574ca0a6e4d79babd8c5c0b1af79bb9ef61ee46229e",
+    "config": {
+      "signal_params": {
+        "donchian_entry_window": 20,
+        "donchian_exit_window": 10,
+        "atr_period": 14,
+        "atr_mult": 3.0,
+        "structural_buffer_atr": 0.2,
+        "pullback_window": 8,
+        "pullback_proximity_atr": 0.5,
+        "enable_sc": true,
+        "sc_vol_mult": 2.0,
+        "sc_range_atr_mult": 1.5,
+        "sc_lower_wick_frac": 0.5,
+        "enable_short": false,
+        "oi_min_resonance": 0.0,
+        "bars_per_day": 24,
+        "signal_bar_seconds": 3600,
+        "oi_chg_window": 20,
+        "oi_rank_days": 90,
+        "oi_rank_min_days": 7,
+        "oi_price_div_window": 12,
+        "oi_mom_flux_window": 48,
+        "oi_vol_ma_window": 48,
+        "oi_vol_ratio_clip": 5.0,
+        "price_step": 0.0
+      },
+      "exec_params": {
+        "initial_equity": 100000.0,
+        "risk_per_trade": 0.008,
+        "max_portfolio_risk": 0.04,
+        "max_portfolio_margin_pct": 0.4,
+        "max_concurrent_trades": 3,
+        "max_leverage_per_symbol": 2.0,
+        "fee_rate": 0.0005,
+        "maker_fee_rate": 0.0002,
+        "taker_fee_rate": 0.0005,
+        "slippage_bps": 3.0,
+        "enable_trailing_exit": true,
+        "force_close_at_end": true,
+        "funding_model": "settlement_events",
+        "allow_new_entries": true,
+        "live_order_enabled": false
+      },
+      "signal_params_hash": "0ba4b7918356b66415416504ae63f9f99786c73ee410fcc69182e9678aee21db",
+      "exec_params_hash": "a92639c0a2b51e3df59e1d7fc78362611fcc91f0a97ba5310c06f0f24e5b99a5",
+      "note": "**请求覆盖后实际生效**的参数（非冻结默认值）"
+    },
+    "code_sha256": "364aacfcd65c45e18106b9d2bac3200f21aa1bbdb4750a3f598ad07045fa338a",
+    "code_files": {
+      "strategy/__init__.py": "cb2ac404d59ba2ece36de17a2d17e8b9221dabe80a00386d6164e84e86ef1eb2",
+      "strategy/config.py": "65874efd0c257c67458b1835d0151dc7f0c6c1b05beb6af5622127e913c9f58b",
+      "strategy/core.py": "afcd331a2058a14bece3a35ddd39b0bdacb54a3d565275a85bf7e9a7a4db5a3c",
+      "strategy/execution.py": "815c23359d92ada791d83d923112d62673a3a31a3f37bf0b259689ed37aa9e21",
+      "strategy/factors.py": "562b6b2ed1a07445fe9037c59c517adedbafdebb39c475c2f41bf666a68a4e9e",
+      "strategy/registry_entry.py": "f0f8b77ce985f3a773fc7628d458f1d10ad065e15ef42a7fba182ddbdb07e654",
+      "backend/oi_resonance_bridge.py": "96ecd001bda9aa2ad65c48bfbea16462fa1324af59595e4c4c15c87e9927336c",
+      "backend/backtest_runner.py": "27ba45f6cb0a3cd1fc63120eef72a4783b4e79474b177ab3dee2f0d20f55ddc8",
+      "backend/backtest_store.py": "905e3983cfc4dc79fb20a6d6b7261d743f77495b4d3fee35c67954ad9b9c52f4",
+      "backend/backtest_api.py": "9c9601ea6fac8bb16e9ffa295634dcdb29b1fcd29a5bea6c7731db9e94f480ed"
+    },
+    "engine": {
+      "strategy_id": "WX_OI_RESONANCE_V1",
+      "strategy_key": "wx_oi_resonance_v1",
+      "family": "F_OI_RES",
+      "package_dir": "/Users/boos/Desktop/威科夫因子共振趋势/策略/WyckoffMaster/oi_resonance_v1",
+      "code_sha256": "364aacfcd65c45e18106b9d2bac3200f21aa1bbdb4750a3f598ad07045fa338a",
+      "signal_version": "oi_res_v1.0.0",
+      "core_version": "oi_res_core_v1.0.0",
+      "exec_core_version": "oi_res_exec_v1.0.0",
+      "experiment_id": "exp_oi_resonance_v1_2026-10-16",
+      "signal_params_hash": "0ba4b7918356b66415416504ae63f9f99786c73ee410fcc69182e9678aee21db",
+      "exec_params_hash": "a92639c0a2b51e3df59e1d7fc78362611fcc91f0a97ba5310c06f0f24e5b99a5",
+      "contract_version": "bt_api_v1",
+      "core_available": true,
+      "import_error": null
+    }
+  }
+}

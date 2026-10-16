@@ -1,0 +1,434 @@
+[
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "ICPUSDT",
+  "timeframe": "15m",
+  "from_utc": "2022-08-31 23:45",
+  "to_utc": "2022-09-27 02:30",
+  "missing": 2506
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "ICPUSDT",
+  "timeframe": "30m",
+  "from_utc": "2022-09-21 23:30",
+  "to_utc": "2022-09-27 02:30",
+  "missing": 245
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "ICPUSDT",
+  "timeframe": "1h",
+  "from_utc": "2022-09-21 23:00",
+  "to_utc": "2022-09-27 02:00",
+  "missing": 122
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "LITUSDT",
+  "timeframe": "15m",
+  "from_utc": "2025-12-22 23:45",
+  "to_utc": "2025-12-23 17:30",
+  "missing": 70
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "MAVIAUSDT",
+  "timeframe": "15m",
+  "from_utc": "2025-03-25 23:45",
+  "to_utc": "2025-03-26 17:00",
+  "missing": 68
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "SLPUSDT",
+  "timeframe": "15m",
+  "from_utc": "2025-07-22 23:45",
+  "to_utc": "2025-07-23 11:45",
+  "missing": 47
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CVXUSDT",
+  "timeframe": "15m",
+  "from_utc": "2025-07-22 23:45",
+  "to_utc": "2025-07-23 11:30",
+  "missing": 46
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "AIAUSDT",
+  "timeframe": "15m",
+  "from_utc": "2026-01-19 23:45",
+  "to_utc": "2026-01-20 11:15",
+  "missing": 45
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CTKUSDT",
+  "timeframe": "15m",
+  "from_utc": "2025-04-29 23:45",
+  "to_utc": "2025-04-30 10:15",
+  "missing": 41
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "LITUSDT",
+  "timeframe": "30m",
+  "from_utc": "2025-12-22 23:30",
+  "to_utc": "2025-12-23 17:30",
+  "missing": 35
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CVCUSDT",
+  "timeframe": "15m",
+  "from_utc": "2025-05-15 23:45",
+  "to_utc": "2025-05-16 08:30",
+  "missing": 34
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "MAVIAUSDT",
+  "timeframe": "30m",
+  "from_utc": "2025-03-25 23:30",
+  "to_utc": "2025-03-26 17:00",
+  "missing": 34
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "PUMPUSDT",
+  "timeframe": "15m",
+  "from_utc": "2025-07-09 23:45",
+  "to_utc": "2025-07-10 07:30",
+  "missing": 30
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "ICPUSDT",
+  "timeframe": "4h",
+  "from_utc": "2022-09-21 20:00",
+  "to_utc": "2022-09-27 00:00",
+  "missing": 30
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "SLPUSDT",
+  "timeframe": "30m",
+  "from_utc": "2025-07-22 23:30",
+  "to_utc": "2025-07-23 11:30",
+  "missing": 23
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CVXUSDT",
+  "timeframe": "30m",
+  "from_utc": "2025-07-22 23:30",
+  "to_utc": "2025-07-23 11:30",
+  "missing": 23
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "AIAUSDT",
+  "timeframe": "30m",
+  "from_utc": "2026-01-19 23:30",
+  "to_utc": "2026-01-20 11:00",
+  "missing": 22
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CTKUSDT",
+  "timeframe": "30m",
+  "from_utc": "2025-04-29 23:30",
+  "to_utc": "2025-04-30 10:00",
+  "missing": 20
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "LITUSDT",
+  "timeframe": "1h",
+  "from_utc": "2025-12-22 23:00",
+  "to_utc": "2025-12-23 17:00",
+  "missing": 17
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CVCUSDT",
+  "timeframe": "30m",
+  "from_utc": "2025-05-15 23:30",
+  "to_utc": "2025-05-16 08:30",
+  "missing": 17
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "MAVIAUSDT",
+  "timeframe": "1h",
+  "from_utc": "2025-03-25 23:00",
+  "to_utc": "2025-03-26 17:00",
+  "missing": 17
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "ICPUSDT",
+  "timeframe": "8h",
+  "from_utc": "2022-09-21 16:00",
+  "to_utc": "2022-09-27 00:00",
+  "missing": 15
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "PUMPUSDT",
+  "timeframe": "30m",
+  "from_utc": "2025-07-09 23:30",
+  "to_utc": "2025-07-10 07:30",
+  "missing": 15
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "SLPUSDT",
+  "timeframe": "1h",
+  "from_utc": "2025-07-22 23:00",
+  "to_utc": "2025-07-23 11:00",
+  "missing": 11
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CVXUSDT",
+  "timeframe": "1h",
+  "from_utc": "2025-07-22 23:00",
+  "to_utc": "2025-07-23 11:00",
+  "missing": 11
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "AIAUSDT",
+  "timeframe": "1h",
+  "from_utc": "2026-01-19 23:00",
+  "to_utc": "2026-01-20 11:00",
+  "missing": 11
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CTKUSDT",
+  "timeframe": "1h",
+  "from_utc": "2025-04-29 23:00",
+  "to_utc": "2025-04-30 10:00",
+  "missing": 10
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "ICPUSDT",
+  "timeframe": "12h",
+  "from_utc": "2022-09-21 12:00",
+  "to_utc": "2022-09-27 00:00",
+  "missing": 10
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CVCUSDT",
+  "timeframe": "1h",
+  "from_utc": "2025-05-15 23:00",
+  "to_utc": "2025-05-16 08:00",
+  "missing": 8
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "PUMPUSDT",
+  "timeframe": "1h",
+  "from_utc": "2025-07-09 23:00",
+  "to_utc": "2025-07-10 07:00",
+  "missing": 7
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "ICPUSDT",
+  "timeframe": "1d",
+  "from_utc": "2022-09-21 00:00",
+  "to_utc": "2022-09-27 00:00",
+  "missing": 5
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "LITUSDT",
+  "timeframe": "4h",
+  "from_utc": "2025-12-22 20:00",
+  "to_utc": "2025-12-23 16:00",
+  "missing": 4
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "MAVIAUSDT",
+  "timeframe": "4h",
+  "from_utc": "2025-03-25 20:00",
+  "to_utc": "2025-03-26 16:00",
+  "missing": 4
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "SLPUSDT",
+  "timeframe": "4h",
+  "from_utc": "2025-07-22 20:00",
+  "to_utc": "2025-07-23 08:00",
+  "missing": 2
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CVCUSDT",
+  "timeframe": "4h",
+  "from_utc": "2025-05-15 20:00",
+  "to_utc": "2025-05-16 08:00",
+  "missing": 2
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "AIAUSDT",
+  "timeframe": "4h",
+  "from_utc": "2026-01-19 20:00",
+  "to_utc": "2026-01-20 08:00",
+  "missing": 2
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "LITUSDT",
+  "timeframe": "8h",
+  "from_utc": "2025-12-22 16:00",
+  "to_utc": "2025-12-23 16:00",
+  "missing": 2
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "MAVIAUSDT",
+  "timeframe": "8h",
+  "from_utc": "2025-03-25 16:00",
+  "to_utc": "2025-03-26 16:00",
+  "missing": 2
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CTKUSDT",
+  "timeframe": "4h",
+  "from_utc": "2025-04-29 20:00",
+  "to_utc": "2025-04-30 08:00",
+  "missing": 2
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CVXUSDT",
+  "timeframe": "4h",
+  "from_utc": "2025-07-22 20:00",
+  "to_utc": "2025-07-23 08:00",
+  "missing": 2
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "LITUSDT",
+  "timeframe": "12h",
+  "from_utc": "2025-12-22 12:00",
+  "to_utc": "2025-12-23 12:00",
+  "missing": 1
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "PUMPUSDT",
+  "timeframe": "4h",
+  "from_utc": "2025-07-09 20:00",
+  "to_utc": "2025-07-10 04:00",
+  "missing": 1
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CVCUSDT",
+  "timeframe": "8h",
+  "from_utc": "2025-05-15 16:00",
+  "to_utc": "2025-05-16 08:00",
+  "missing": 1
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "SLPUSDT",
+  "timeframe": "8h",
+  "from_utc": "2025-07-22 16:00",
+  "to_utc": "2025-07-23 08:00",
+  "missing": 1
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "MAVIAUSDT",
+  "timeframe": "12h",
+  "from_utc": "2025-03-25 12:00",
+  "to_utc": "2025-03-26 12:00",
+  "missing": 1
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CTKUSDT",
+  "timeframe": "8h",
+  "from_utc": "2025-04-29 16:00",
+  "to_utc": "2025-04-30 08:00",
+  "missing": 1
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "CVXUSDT",
+  "timeframe": "8h",
+  "from_utc": "2025-07-22 16:00",
+  "to_utc": "2025-07-23 08:00",
+  "missing": 1
+ },
+ {
+  "exchange": "binance",
+  "market": "um",
+  "symbol": "AIAUSDT",
+  "timeframe": "8h",
+  "from_utc": "2026-01-19 16:00",
+  "to_utc": "2026-01-20 08:00",
+  "missing": 1
+ }
+]
