@@ -639,11 +639,32 @@ export interface RawAllInOneItem {
 }
 
 
+export interface RawDataFeedItem {
+  id: string;
+  code: string;
+  name: string;
+  category: string;
+  frequency: string;
+  status: 'normal' | 'abnormal' | 'warning';
+  status_light: 'green' | 'red' | 'yellow';
+  status_label: string;
+  covered_symbols: number;
+  total_symbols: number;
+  total_records: number;
+  records_unit: string;
+  latest_ts: number | null;
+  latest_time: string;
+  delay_min: number | null;
+  diagnostic: string;
+  usage?: string;
+}
+
 export interface RawDataStatus extends Envelope<never> {
   database: string | null;
   source_files: number | null;
   coverage: RawDataStatusRow[] | null;
   metrics_summary?: DataCenterMetricsSummary | null;
+  feeds?: RawDataFeedItem[] | null;
   external_calls: number | null;
   external_calls_ok: number | null;
   external_calls_failed: number | null;

@@ -2610,9 +2610,11 @@ def v1_coverage():
 def v1_data_status():
     st = api_stats()
     metrics_summary = datacenter.get_datacenter_metrics_summary() if datacenter else None
+    feeds = datacenter.get_data_feeds_status() if datacenter else None
     return envelope(database=DB_PATH, source_files=st["sources"],
                     coverage=covered(), external_calls=st["calls"],
                     metrics_summary=metrics_summary,
+                    feeds=feeds,
                     external_calls_ok=st["ok_calls"],
                     external_calls_failed=st["failed_calls"],
                     scope_state=st["scope_state"],
@@ -3209,6 +3211,9 @@ def route_v1(path, params):
         q = (params.get("q") or [None])[0]
         items = datacenter.get_all_in_one_table(limit, q) if datacenter else []
         return envelope(items=items, total=len(items)), 200
+    if seg == ["data", "feeds"]:
+        feeds = datacenter.get_data_feeds_status() if datacenter else []
+        return envelope(feeds=feeds, total=len(feeds)), 200
     if len(seg) == 3 and seg[0] == "markets":
 
         return v1_market(seg[1], seg[2]), 200
