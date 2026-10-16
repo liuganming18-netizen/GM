@@ -3204,6 +3204,11 @@ def route_v1(path, params):
         q = (params.get("q") or [None])[0]
         items = datacenter.get_smart_money_items(limit, q) if datacenter else []
         return envelope(items=items, total=len(items)), 200
+    if seg == ["data", "all-in-one"]:
+        limit = int((params.get("limit") or [150])[0])
+        q = (params.get("q") or [None])[0]
+        items = datacenter.get_all_in_one_table(limit, q) if datacenter else []
+        return envelope(items=items, total=len(items)), 200
     if len(seg) == 3 and seg[0] == "markets":
 
         return v1_market(seg[1], seg[2]), 200

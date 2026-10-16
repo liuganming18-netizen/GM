@@ -619,6 +619,26 @@ export interface RawSmartMoneyItem {
   status: string;
 }
 
+export interface RawAllInOneItem {
+  symbol: string;
+  exchange: string;
+  market: string;
+  kline_tfs_count: number;
+  kline_desc: string;
+  open_interest: number;
+  oi_usd: number;
+  funding_rate: number | null;
+  funding_rate_pct: string;
+  annual_rate_pct: string;
+  mark_price: number;
+  smart_ls_ratio: number | null;
+  smart_tr_ratio: number | null;
+  whale_share_percent: number | null;
+  circulating_supply: number;
+  status: string;
+}
+
+
 export interface RawDataStatus extends Envelope<never> {
   database: string | null;
   source_files: number | null;

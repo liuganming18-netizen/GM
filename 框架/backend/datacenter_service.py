@@ -312,3 +312,134 @@ def get_smart_money_items(limit: int = 150, query: str | None = None) -> list[di
 
     _set_cache(cache_key, res)
     return res
+
+
+def get_all_in_one_table(limit: int = 150, query: str | None = None) -> list[dict]:
+    """获取全资产多维数据库协同矩阵（全景大表）。
+    
+    同屏联动聚合：
+      · K线覆盖周期数 (5m~1d 8大周期完整度)
+      · 持仓量 (OI) 币数量与名义美元估值 (USD)
+      · 当期真实资金费率 (%) 与折合年化 (%)
+      · 聪明钱大户持仓多空比 (L/S Ratio) 与鲸鱼持仓比例 (%)
+      · CMC 官方流通供应量 (Circulating Supply)
+    按全网持仓总额 USD 降序排序，主流币（BTC/ETH/SOL/BNB）优先呈现。
+    """
+    cache_key = f"all_in_one_table_{limit}_{query}"
+    cached = _get_cache(cache_key)
+    if cached is not None:
+        return cached
+
+    con = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True, timeout=10)
+    con.execute("PRAGMA query_only = ON")
+
+    # 1. 供应量字典
+    supp_dict = {
+        r[0]: float(r[1]) if r[1] else 0.0
+        for r in con.execute("SELECT symbol, circulating_supply FROM symbol_supply").fetchall()
+    }
+
+    # 2. 覆盖周期数字典
+    cov_dict = {}
+    for r in con.execute("SELECT symbol, count(distinct timeframe) FROM coverage_cache GROUP BY symbol").fetchall():
+        cov_dict[r[0]] = r[1]
+
+    # 3. 最新资金费率字典
+    fund_dict = {}
+    for r in con.execute("""
+        SELECT f.symbol, f.funding_rate, f.funding_time, f.mark_price
+        FROM funding_history f
+        INNER JOIN (
+            SELECT symbol, max(funding_time) as max_ft FROM funding_history GROUP BY symbol
+        ) m ON f.symbol=m.symbol AND f.funding_time=m.max_ft
+    """).fetchall():
+        fr_float = float(r[1]) if r[1] else 0.0
+        fund_dict[r[0]] = {
+            "rate": fr_float,
+            "rate_pct": f"{fr_float * 100:+.4f}%",
+            "annual_pct": f"{fr_float * 3 * 365 * 100:+.2f}%",
+            "time": r[2],
+            "mark_price": float(r[3]) if r[3] else 0.0
+        }
+
+    # 4. 最新 OI 字典
+    oi_dict = {}
+    for r in con.execute("""
+        SELECT o.symbol, o.open_interest, o.oi_usd, o.ts
+        FROM oi_history o
+        INNER JOIN (
+            SELECT symbol, max(ts) as max_ts FROM oi_history WHERE period='snapshot' GROUP BY symbol
+        ) m ON o.symbol=m.symbol AND o.ts=m.max_ts AND o.period='snapshot'
+    """).fetchall():
+        oi_dict[r[0]] = {
+            "oi": float(r[1]) if r[1] else 0.0,
+            "oi_usd": float(r[2]) if r[2] else 0.0,
+            "ts": r[3]
+        }
+
+    con.close()
+
+    # 5. 聪明钱快照字典
+    sm_dict = {}
+    for fp in glob.glob(str(SMART_MONEY_DIR / "binance__*.json")):
+        sym = Path(fp).name.replace("binance__", "").replace(".json", "")
+        try:
+            with open(fp, "r", encoding="utf-8") as f:
+                d = json.load(f)
+            ratios = d.get("ratios") or {}
+            ls_val = (ratios.get("long_short_ratio") or {}).get("value")
+            tr_val = (ratios.get("traders_long_short_ratio") or {}).get("value")
+            whale_share = (d.get("short") or {}).get("whale_share_percent") or (d.get("long") or {}).get("whale_share_percent") or 0.0
+            sm_dict[sym] = {
+                "ls_ratio": float(ls_val) if ls_val is not None else None,
+                "tr_ratio": float(tr_val) if tr_val is not None else None,
+                "whale_share": float(whale_share)
+            }
+        except Exception:
+            pass
+
+    # 合并全量标的集合
+    all_syms = set(cov_dict.keys()) | set(oi_dict.keys()) | set(fund_dict.keys())
+    if query:
+        clean_q = query.strip().upper()
+        all_syms = {s for s in all_syms if clean_q in s}
+
+    matrix = []
+    for s in all_syms:
+        oi_info = oi_dict.get(s, {})
+        fund_info = fund_dict.get(s, {})
+        sm_info = sm_dict.get(s, {})
+        kline_cnt = cov_dict.get(s, 0)
+        oi_usd = oi_info.get("oi_usd", 0.0)
+        oi_qty = oi_info.get("oi", 0.0)
+        supply = supp_dict.get(s, 0.0)
+
+        # 判定是否全维就绪
+        is_ready = kline_cnt >= 7 and oi_usd > 0 and fund_info.get("rate") is not None
+
+        matrix.append({
+            "symbol": s,
+            "exchange": "binance",
+            "market": "um",
+            "kline_tfs_count": kline_cnt,
+            "kline_desc": f"{kline_cnt}/8 周期",
+            "open_interest": oi_qty,
+            "oi_usd": oi_usd,
+            "funding_rate": fund_info.get("rate"),
+            "funding_rate_pct": fund_info.get("rate_pct") or "—",
+            "annual_rate_pct": fund_info.get("annual_pct") or "—",
+            "mark_price": fund_info.get("mark_price") or 0.0,
+            "smart_ls_ratio": sm_info.get("ls_ratio"),
+            "smart_tr_ratio": sm_info.get("tr_ratio"),
+            "whale_share_percent": sm_info.get("whale_share"),
+            "circulating_supply": supply,
+            "status": "全维就绪 🟢" if is_ready else "部分就绪 🟡"
+        })
+
+    # 按持仓总名义额 USD 降序排序
+    matrix.sort(key=lambda x: x["oi_usd"], reverse=True)
+    res = matrix[:limit]
+
+    _set_cache(cache_key, res)
+    return res
+
