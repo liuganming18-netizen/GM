@@ -1,0 +1,1201 @@
+/* ============================================================================
+ * 设计规范系统 · 组件层 (Component Layer)
+ * ----------------------------------------------------------------------------
+ * 纯 CSS 实现（不依赖 Tailwind 的 @apply），因此同一份文件既能被 Vite 打包进
+ * 应用，也能被独立的《设计规范》预览页直接 <link> 引用 —— 规范页与线上页面
+ * 天然同源，不会出现「文档一套、代码另一套」的漂移。
+ *
+ * 命名：`.ds-块` / `.ds-块__元素` / `.ds-块--修饰`（BEM 简化版）。
+ * 纪律：所有颜色 / 字号 / 间距 / 圆角 / 阴影**只能**引用 tokens.css 的变量。
+ * ========================================================================== */
+
+/* ============================ 基础 ============================ */
+
+.ds-scope *,
+.ds-scope *::before,
+.ds-scope *::after {
+  box-sizing: border-box;
+}
+
+/* 数字一律等宽 + 表格数字，保证列对齐、刷新时不抖动 */
+.ds-num {
+  font-family: var(--ds-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* ============================ 页面骨架 ============================ */
+
+.ds-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  gap: var(--ds-3);
+  padding: var(--ds-3);
+  background: var(--ds-canvas);
+  color: var(--ds-text-2);
+}
+
+/* 页面顶部固定区（标题 + 主操作 + 区块导航） */
+.ds-pagehead {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-2);
+  padding: var(--ds-3) var(--ds-4);
+  background: var(--ds-overlay);
+  backdrop-filter: blur(14px) saturate(150%);
+  border-bottom: 1px solid var(--ds-border);
+}
+
+.ds-pagehead__row {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-3);
+  flex-wrap: wrap;
+}
+
+.ds-pagehead__title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--ds-2);
+  min-width: 0;
+}
+
+.ds-pagehead__title h1 {
+  margin: 0;
+  font-size: var(--ds-fs-lg);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ds-text);
+}
+
+.ds-pagehead__sub {
+  font-size: var(--ds-fs-xs);
+  color: var(--ds-text-3);
+}
+
+.ds-pagehead__spacer {
+  flex: 1 1 auto;
+}
+
+/* ============================ 卡片 ============================ */
+
+.ds-card {
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-r-lg);
+  box-shadow: var(--ds-shadow-xs);
+  overflow: hidden;
+  color: var(--ds-text-2);
+  /* 锚点跳转时预留「容器内 sticky 工具条」的高度，标题不被遮住 */
+  scroll-margin-top: calc(var(--ds-toolbar-h) + var(--ds-4));
+}
+
+/* 锚点容器：给「非卡片」区块（图表面板等）预留顶部固定区高度，
+ * 使区块导航跳转后标题不被页头遮住。 */
+.ds-anchor {
+  scroll-margin-top: calc(var(--ds-toolbar-h) + var(--ds-4));
+}
+
+.ds-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-2);
+  flex-wrap: wrap;
+  padding: 9px var(--ds-3);
+  background: linear-gradient(180deg, var(--ds-surface), var(--ds-surface-2));
+  border-bottom: 1px solid var(--ds-border-subtle);
+}
+
+/* 可折叠卡片：`<details class="ds-card">` + `<summary class="ds-card__head">`。
+ * 收起态不显示底边（否则会留一条悬空的线）。 */
+details.ds-card > summary.ds-card__head {
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+
+details.ds-card > summary.ds-card__head::-webkit-details-marker {
+  display: none;
+}
+
+details.ds-card > summary.ds-card__head::after {
+  content: "▾";
+  font-size: 9px;
+  color: var(--ds-text-4);
+  transition: transform var(--ds-dur-fast) var(--ds-ease);
+}
+
+details.ds-card:not([open]) > summary.ds-card__head {
+  border-bottom-color: transparent;
+}
+
+details.ds-card:not([open]) > summary.ds-card__head::after {
+  transform: rotate(-90deg);
+}
+
+details.ds-card > summary.ds-card__head:hover {
+  background: var(--ds-surface-3);
+}
+
+.ds-card__title {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-2);
+  font-size: var(--ds-fs-md);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--ds-text);
+  min-width: 0;
+}
+
+/* 标题左侧品牌竖条：用伪元素承载，不占 DOM 节点 */
+.ds-card__title::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 3px;
+  height: 13px;
+  border-radius: 2px;
+  background: var(--ds-accent);
+}
+
+/* 次要区块（如「⑤b 订单明细」这类附属块）用灰色竖条降级 */
+.ds-card--sub .ds-card__title::before {
+  background: var(--ds-border-strong);
+}
+
+.ds-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-2);
+  flex-wrap: wrap;
+  font-size: var(--ds-fs-xs);
+  color: var(--ds-text-3);
+}
+
+.ds-card__body {
+  padding: var(--ds-3);
+}
+
+.ds-card__foot {
+  padding: 6px var(--ds-3);
+  border-top: 1px solid var(--ds-border-subtle);
+  background: var(--ds-surface-2);
+  font-size: var(--ds-fs-2xs);
+  color: var(--ds-text-4);
+  line-height: 1.45;
+}
+
+/* ============================ 按钮 ============================ */
+
+.ds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: var(--ds-r-md);
+  font-family: var(--ds-font);
+  font-size: var(--ds-fs-sm);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--ds-dur-fast) var(--ds-ease),
+    border-color var(--ds-dur-fast) var(--ds-ease),
+    box-shadow var(--ds-dur-fast) var(--ds-ease), color var(--ds-dur-fast) var(--ds-ease);
+}
+
+.ds-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--ds-ring);
+}
+
+.ds-btn--primary {
+  background: var(--ds-accent);
+  color: #fff;
+  box-shadow: var(--ds-shadow-xs);
+}
+.ds-btn--primary:hover {
+  background: var(--ds-accent-600);
+}
+
+.ds-btn--secondary {
+  background: var(--ds-surface);
+  border-color: var(--ds-border);
+  color: var(--ds-text-2);
+}
+.ds-btn--secondary:hover {
+  background: var(--ds-surface-2);
+  border-color: var(--ds-border-strong);
+  color: var(--ds-text);
+}
+
+.ds-btn--ghost {
+  background: transparent;
+  color: var(--ds-text-3);
+}
+.ds-btn--ghost:hover {
+  background: var(--ds-surface-3);
+  color: var(--ds-text);
+}
+
+.ds-btn--danger {
+  background: var(--ds-neg);
+  color: #fff;
+}
+
+.ds-btn:disabled,
+.ds-btn[aria-disabled="true"] {
+  background: var(--ds-surface-3);
+  border-color: var(--ds-border);
+  color: var(--ds-text-4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.ds-btn--sm {
+  height: 24px;
+  padding: 0 8px;
+  font-size: var(--ds-fs-xs);
+  gap: 4px;
+}
+
+.ds-btn--lg {
+  height: 32px;
+  padding: 0 14px;
+  font-size: var(--ds-fs-md);
+}
+
+.ds-btn--icon {
+  width: 28px;
+  padding: 0;
+}
+.ds-btn--icon.ds-btn--sm {
+  width: 24px;
+}
+
+/* ============================ 输入 ============================ */
+
+.ds-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.ds-field__label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--ds-fs-2xs);
+  font-weight: 600;
+  color: var(--ds-text-3);
+  white-space: nowrap;
+}
+
+.ds-field__hint {
+  font-size: var(--ds-fs-2xs);
+  color: var(--ds-text-4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ds-input,
+.ds-select {
+  width: 100%;
+  height: 28px;
+  padding: 0 8px;
+  font-family: var(--ds-mono);
+  font-size: var(--ds-fs-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--ds-text);
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-r-md);
+  transition: border-color var(--ds-dur-fast) var(--ds-ease),
+    box-shadow var(--ds-dur-fast) var(--ds-ease);
+}
+
+.ds-input::placeholder {
+  color: var(--ds-text-4);
+}
+
+.ds-input:hover,
+.ds-select:hover {
+  border-color: var(--ds-border-strong);
+}
+
+.ds-input:focus,
+.ds-select:focus {
+  outline: none;
+  border-color: var(--ds-border-focus);
+  box-shadow: var(--ds-ring);
+}
+
+.ds-input:disabled {
+  background: var(--ds-surface-3);
+  color: var(--ds-text-4);
+  cursor: not-allowed;
+}
+
+/* ============================ 分段控件 ============================ */
+
+.ds-seg {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  background: var(--ds-surface-3);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-r-md);
+}
+
+.ds-seg__item {
+  height: 24px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: calc(var(--ds-r-md) - 2px);
+  background: transparent;
+  font-family: var(--ds-font);
+  font-size: var(--ds-fs-xs);
+  font-weight: 600;
+  color: var(--ds-text-3);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--ds-dur-fast) var(--ds-ease),
+    color var(--ds-dur-fast) var(--ds-ease), box-shadow var(--ds-dur-fast) var(--ds-ease);
+}
+
+.ds-seg__item:hover {
+  color: var(--ds-text);
+}
+
+.ds-seg__item[aria-selected="true"] {
+  background: var(--ds-surface);
+  color: var(--ds-accent-700);
+  box-shadow: var(--ds-shadow-xs);
+}
+
+/* 紧凑选项行（配置表单里的交易所 / 市场 / 周期） */
+.ds-optrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.ds-optrow__label {
+  font-size: var(--ds-fs-2xs);
+  font-weight: 600;
+  color: var(--ds-text-3);
+  white-space: nowrap;
+}
+
+.ds-opt {
+  height: 22px;
+  padding: 0 7px;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-r-sm);
+  background: var(--ds-surface);
+  font-family: var(--ds-mono);
+  font-size: var(--ds-fs-2xs);
+  color: var(--ds-text-2);
+  cursor: pointer;
+  transition: background var(--ds-dur-fast) var(--ds-ease),
+    border-color var(--ds-dur-fast) var(--ds-ease), color var(--ds-dur-fast) var(--ds-ease);
+}
+
+.ds-opt:hover:not(:disabled) {
+  background: var(--ds-surface-2);
+  border-color: var(--ds-border-strong);
+  color: var(--ds-text);
+}
+
+.ds-opt[aria-pressed="true"] {
+  background: var(--ds-accent);
+  border-color: var(--ds-accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+.ds-opt:disabled {
+  background: var(--ds-surface-3);
+  border-color: var(--ds-border-subtle);
+  color: var(--ds-text-4);
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+/* ============================ 徽标 / 芯片 ============================ */
+
+.ds-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  /* 宽度由内容决定：窄表格列会把徽标压到比文字还窄，导致中文竖排 */
+  width: max-content;
+  min-width: max-content;
+  height: 18px;
+  padding: 0 6px;
+  border: 1px solid;
+  border-radius: var(--ds-r-sm);
+  font-family: var(--ds-mono);
+  font-size: var(--ds-fs-2xs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.ds-badge--neutral {
+  color: var(--ds-neutral-fg);
+  background: var(--ds-neutral-bg);
+  border-color: var(--ds-neutral-border);
+}
+.ds-badge--pos {
+  color: var(--ds-pos);
+  background: var(--ds-pos-bg);
+  border-color: var(--ds-pos-border);
+}
+.ds-badge--neg {
+  color: var(--ds-neg);
+  background: var(--ds-neg-bg);
+  border-color: var(--ds-neg-border);
+}
+.ds-badge--warn {
+  color: var(--ds-warn);
+  background: var(--ds-warn-bg);
+  border-color: var(--ds-warn-border);
+}
+.ds-badge--info {
+  color: var(--ds-info);
+  background: var(--ds-info-bg);
+  border-color: var(--ds-info-border);
+}
+.ds-badge--accent {
+  color: var(--ds-accent-700);
+  background: var(--ds-accent-50);
+  border-color: var(--ds-accent-100);
+}
+
+.ds-badge--lg {
+  height: 22px;
+  padding: 0 8px;
+  font-size: var(--ds-fs-xs);
+}
+
+/* ============================ 指标卡 ============================ */
+
+.ds-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 10px 12px;
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-r-md);
+  box-shadow: var(--ds-shadow-xs);
+  transition: border-color var(--ds-dur-fast) var(--ds-ease),
+    box-shadow var(--ds-dur-fast) var(--ds-ease);
+}
+
+.ds-stat:hover {
+  border-color: var(--ds-border-strong);
+  box-shadow: var(--ds-shadow-sm);
+}
+
+/* 主指标（净收益率 / 最大回撤）用左侧色条区分 */
+.ds-stat--lead {
+  border-left: 3px solid var(--ds-accent);
+}
+.ds-stat--lead.ds-stat--pos {
+  border-left-color: var(--ds-pos);
+}
+.ds-stat--lead.ds-stat--neg {
+  border-left-color: var(--ds-neg);
+}
+
+.ds-stat__label {
+  font-size: var(--ds-fs-xs);
+  font-weight: 600;
+  color: var(--ds-text-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ds-stat__value {
+  font-family: var(--ds-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--ds-fs-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--ds-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ds-stat__value--pos {
+  color: var(--ds-pos);
+}
+.ds-stat__value--neg {
+  color: var(--ds-neg);
+}
+.ds-stat__value--muted {
+  color: var(--ds-text-4);
+}
+
+.ds-stat__sub {
+  font-size: var(--ds-fs-2xs);
+  color: var(--ds-text-4);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================ 表格 ============================ */
+
+.ds-tablewrap {
+  border: 1px solid var(--ds-border-subtle);
+  border-radius: var(--ds-r-md);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.ds-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: var(--ds-mono);
+  font-size: var(--ds-fs-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.ds-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 6px 8px;
+  background: var(--ds-surface-3);
+  border-bottom: 1px solid var(--ds-border);
+  font-weight: 700;
+  color: var(--ds-text-3);
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* 刻意**不设 color**：单元格颜色必须留给盈亏语义（`text-emerald-600` 之类）。
+ * 本文件是未分层规则，一旦在此声明 color 就会压过所有工具类，把「正收益绿色」
+ * 一并抹平。未声明时 td 继承 `.ds-page` 的 --ds-text-2，效果相同且不误伤。 */
+.ds-table tbody td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--ds-border-subtle);
+  white-space: nowrap;
+}
+
+.ds-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.ds-table tbody tr:hover td {
+  background: var(--ds-accent-50);
+}
+
+.ds-table tbody tr[aria-selected="true"] td {
+  background: var(--ds-accent-50);
+  box-shadow: inset 2px 0 0 0 var(--ds-accent);
+}
+
+.ds-table--clickable tbody tr {
+  cursor: pointer;
+}
+
+.ds-table__num {
+  text-align: right;
+}
+
+.ds-table__muted {
+  color: var(--ds-text-4);
+}
+
+.ds-table__strong {
+  font-weight: 700;
+  color: var(--ds-text);
+}
+
+.ds-table__pos {
+  color: var(--ds-pos);
+  font-weight: 700;
+}
+
+.ds-table__neg {
+  color: var(--ds-neg);
+  font-weight: 700;
+}
+
+.ds-table__empty {
+  padding: 28px 8px !important;
+  text-align: center;
+  font-family: var(--ds-font);
+  color: var(--ds-text-4);
+  white-space: normal;
+}
+
+/* ── 次要列：默认隐藏，`--all` 时显示 ────────────────────────────────────────
+ * 用 CSS 隐藏而非删 DOM：数据一个不少（验收脚本仍能查到这些单元格），
+ * 只是默认不出现在视野里 —— 这是「渐进披露」，不是「删信息」。 */
+.ds-table [data-secondary] {
+  display: none;
+}
+
+.ds-table--all [data-secondary] {
+  display: table-cell;
+}
+
+/* ── 次要信息：默认隐藏，`.is-open` 时显示 ──────────────────────────────────
+ * 用于「说明文字 / 审计详情」这类重要但不需要常驻视野的内容。 */
+.ds-more {
+  display: none;
+}
+
+.ds-more.is-open {
+  display: block;
+}
+
+/* ── 主指标行 ────────────────────────────────────────────────────────────────
+ * 只有 4 张卡：净收益率 / 最大回撤 / 胜率 / 交易次数。
+ * 这 4 个决定「这次回测值不值得继续看」，其余指标降到下面的紧凑条里。 */
+.ds-statrow {
+  display: grid;
+  gap: var(--ds-2);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .ds-statrow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ── 紧凑指标条 ──────────────────────────────────────────────────────────────
+ * 次要指标不配大卡片，用一行小字横排。卡片只留给「决定要不要继续看下去」的
+ * 那几个数（收益 / 回撤 / 胜率 / 笔数），其余降级到这里。 */
+.ds-metrics-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px var(--ds-5);
+  padding: 8px 12px;
+  background: var(--ds-surface-2);
+  border: 1px solid var(--ds-border-subtle);
+  border-radius: var(--ds-r-md);
+}
+
+.ds-mi {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: var(--ds-fs-xs);
+}
+
+.ds-mi__k {
+  color: var(--ds-text-4);
+}
+
+.ds-mi__v {
+  font-family: var(--ds-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--ds-text-2);
+}
+
+/* ============================ 键值对 ============================ */
+
+.ds-kv {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  font-size: var(--ds-fs-xs);
+}
+
+.ds-kv__k {
+  flex: 0 0 auto;
+  color: var(--ds-text-4);
+}
+
+.ds-kv__v {
+  min-width: 0;
+  font-family: var(--ds-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--ds-text-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ds-kvgrid {
+  display: grid;
+  gap: 3px var(--ds-4);
+  font-size: var(--ds-fs-xs);
+}
+.ds-kvgrid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.ds-kvgrid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.ds-kvgrid--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1280px) {
+  .ds-kvgrid--4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1024px) {
+  .ds-kvgrid--4,
+  .ds-kvgrid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ============================ 提示条 ============================ */
+
+.ds-note {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 1px solid var(--ds-neutral-border);
+  border-radius: var(--ds-r-md);
+  font-size: var(--ds-fs-xs);
+  line-height: 1.5;
+  /* 默认中性态；四种语义修饰类在下方覆盖（同特异性、后者胜） */
+  color: var(--ds-neutral-fg);
+  background: var(--ds-neutral-bg);
+}
+
+.ds-note--info {
+  color: var(--ds-info);
+  background: var(--ds-info-bg);
+  border-color: var(--ds-info-border);
+}
+.ds-note--pos {
+  color: var(--ds-pos);
+  background: var(--ds-pos-bg);
+  border-color: var(--ds-pos-border);
+}
+.ds-note--neg {
+  color: var(--ds-neg);
+  background: var(--ds-neg-bg);
+  border-color: var(--ds-neg-border);
+}
+.ds-note--warn {
+  color: var(--ds-warn);
+  background: var(--ds-warn-bg);
+  border-color: var(--ds-warn-border);
+}
+
+.ds-note__title {
+  font-weight: 700;
+}
+
+/* 纵向提示条：内容为「标题 + 列表」这类块级结构时使用，避免标题与列表并排。 */
+.ds-note--col {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+}
+
+/* ============================ 空态 / 加载态 ============================ */
+
+.ds-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 30px 16px;
+  text-align: center;
+  color: var(--ds-text-3);
+  font-size: var(--ds-fs-sm);
+}
+
+.ds-empty__icon {
+  width: 26px;
+  height: 26px;
+  color: var(--ds-text-4);
+}
+
+.ds-empty__title {
+  font-weight: 600;
+  color: var(--ds-text-2);
+}
+
+.ds-empty__hint {
+  font-size: var(--ds-fs-xs);
+  color: var(--ds-text-4);
+  max-width: 42rem;
+  line-height: 1.5;
+}
+
+.ds-skeleton {
+  border-radius: var(--ds-r-sm);
+  background: linear-gradient(
+    90deg,
+    var(--ds-surface-3) 25%,
+    var(--ds-border-subtle) 37%,
+    var(--ds-surface-3) 63%
+  );
+  background-size: 400% 100%;
+  animation: ds-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes ds-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-skeleton {
+    animation: none;
+  }
+}
+
+/* ============================ 折叠区 ============================ */
+
+.ds-details {
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-r-md);
+  background: var(--ds-surface-2);
+  overflow: hidden;
+}
+
+.ds-details > summary {
+  padding: 6px 10px;
+  font-size: var(--ds-fs-xs);
+  font-weight: 600;
+  color: var(--ds-text-3);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ds-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.ds-details > summary::before {
+  content: "▸";
+  font-size: 9px;
+  color: var(--ds-text-4);
+  transition: transform var(--ds-dur-fast) var(--ds-ease);
+}
+
+.ds-details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.ds-details > summary:hover {
+  color: var(--ds-text);
+  background: var(--ds-surface-3);
+}
+
+.ds-details__body {
+  padding: 8px 10px;
+  border-top: 1px solid var(--ds-border);
+  font-size: var(--ds-fs-xs);
+  color: var(--ds-text-3);
+}
+
+/* ============================ 区块导航（锚点） ============================ */
+
+.ds-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.ds-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.ds-nav__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 26px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: var(--ds-r-md);
+  background: transparent;
+  font-family: var(--ds-font);
+  font-size: var(--ds-fs-xs);
+  font-weight: 600;
+  color: var(--ds-text-3);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background var(--ds-dur-fast) var(--ds-ease),
+    color var(--ds-dur-fast) var(--ds-ease);
+}
+
+.ds-nav__item:hover {
+  background: var(--ds-surface-3);
+  color: var(--ds-text);
+}
+
+.ds-nav__item[aria-current="true"] {
+  background: var(--ds-accent-50);
+  color: var(--ds-accent-700);
+}
+
+.ds-nav__idx {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: var(--ds-r-sm);
+  background: var(--ds-surface-3);
+  font-family: var(--ds-mono);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--ds-text-3);
+}
+
+.ds-nav__item[aria-current="true"] .ds-nav__idx {
+  background: var(--ds-accent);
+  color: #fff;
+}
+
+/* ============================ 工具条（sticky 上下文） ============================ */
+
+.ds-toolbar {
+  position: sticky;
+  /* 容器内 sticky：只需一点点间隙，不能再叠加页头高度（见 tokens.css 坐标说明） */
+  top: var(--ds-sticky-gap);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: var(--ds-3);
+  flex-wrap: wrap;
+  padding: 8px var(--ds-3);
+  background: var(--ds-overlay);
+  backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-r-lg);
+  box-shadow: var(--ds-shadow-sm);
+}
+
+/* 紧凑变体：条目多（身份 + 指标 + 视图开关）时用 8px 间距，避免换行成两行 */
+.ds-toolbar--dense {
+  gap: var(--ds-2);
+}
+
+.ds-toolbar__divider {
+  width: 1px;
+  height: 18px;
+  background: var(--ds-border);
+  flex: 0 0 auto;
+}
+
+.ds-toolbar__label {
+  font-size: var(--ds-fs-2xs);
+  font-weight: 600;
+  color: var(--ds-text-4);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ============================ 分隔线 ============================ */
+
+.ds-hr {
+  height: 1px;
+  background: var(--ds-border-subtle);
+  border: 0;
+  margin: var(--ds-2) 0;
+}
+
+/* ============================ 工具类 ============================ */
+
+.ds-row {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-2);
+  flex-wrap: wrap;
+}
+
+.ds-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-2);
+}
+
+/* 指标卡栅格：宽屏 8 列铺满一行，窄屏降为 4 / 2 列。
+ * 用固定列数而非 auto-fill：指标卡数量固定为 8，auto-fill 会排出 7+1 这种断行。 */
+.ds-grid-auto {
+  display: grid;
+  gap: var(--ds-2);
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+@media (max-width: 1500px) {
+  .ds-grid-auto {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .ds-grid-auto {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.ds-truncate {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ======================= 单屏仪表盘栅格（2026-10-16 第三轮） =======================
+ * 用户要求「一眼全部能看」⇒ 页面从「长页 + 折叠」改为「一屏网格」。
+ * 12 列栅格：`.ds-col-7` / `.ds-col-5` 左右并排，`.ds-col-12` 整行。
+ * 窄屏（<1200px）一律退化为整行堆叠 —— 不隐藏任何内容。
+ */
+.ds-dash {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--ds-3);
+  /* 同排卡片**自动等高**：矮的那张被拉伸到与高的一致，卡片外框对齐，
+     不会在下方留出一道「一张高一张矮」的缺口。 */
+  align-items: stretch;
+}
+
+.ds-dash > * {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* 卡片撑满栅格单元，等高由本行最高的那张决定 */
+.ds-dash > * > * {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.ds-dash > .ds-col-7 {
+  grid-column: span 7;
+}
+
+.ds-dash > .ds-col-5 {
+  grid-column: span 5;
+}
+
+@media (max-width: 1200px) {
+  .ds-dash > .ds-col-7,
+  .ds-dash > .ds-col-5 {
+    grid-column: span 12;
+  }
+}
+
+/* 单行工具条（配置行 / 指标行）：一行放完，标签在左、控件在右。 */
+.ds-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--ds-2) var(--ds-3);
+  padding: var(--ds-2) var(--ds-3);
+}
+
+.ds-bar__label {
+  font-size: var(--ds-fs-xs);
+  font-weight: 700;
+  color: var(--ds-text-3);
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+
+.ds-bar__sep {
+  width: 1px;
+  align-self: stretch;
+  background: var(--ds-border-subtle);
+  margin: 2px var(--ds-1);
+}
+
+/* 表格限高：一屏内只给 N 行，其余表内滚动（不是隐藏）。 */
+.ds-tablewrap--tight {
+  max-height: 8.25rem;
+}
+
+.ds-tablewrap--mid {
+  max-height: 11rem;
+}
+
+/* 行内指标数值的语义色（`.ds-mi__v` 默认用 --ds-text-2）。 */
+.ds-mi__v--pos {
+  color: var(--ds-pos);
+}
+
+.ds-mi__v--neg {
+  color: var(--ds-neg);
+}
+
+.ds-mi__v--muted {
+  color: var(--ds-text-4);
+}
+
+/* 底部「按需展开」面板切换按钮组：一行放下，单选展开，默认不占高度。 */
+.ds-panelbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ds-2);
+  padding: var(--ds-2) var(--ds-3);
+}
+
+.ds-panelbar__label {
+  font-size: var(--ds-fs-xs);
+  font-weight: 700;
+  color: var(--ds-text-3);
+  margin-right: var(--ds-1);
+}
+
+/* 6/6 等宽并排（净值曲线 | 逐笔明细）。 */
+.ds-dash > .ds-col-6 {
+  grid-column: span 6;
+}
+
+@media (max-width: 1200px) {
+  .ds-dash > .ds-col-6 {
+    grid-column: span 12;
+  }
+}
+
+/* 表格限高（宽松档）：并排布局下左列更高时，右列表格可以用满剩余高度。 */
+.ds-tablewrap--tall {
+  max-height: 12rem;
+}

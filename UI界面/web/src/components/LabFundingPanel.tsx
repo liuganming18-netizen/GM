@@ -203,8 +203,10 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
       lineWidth: 1,
       lineStyle: LineStyle.Dashed,
       priceLineVisible: false,
-      lastValueVisible: true,
-      title: '买入持有基准',
+      /* 图上不再挂标签：价格轴右侧同时出现「策略净值 / 买入持有基准」两个色块会压住
+         轴上的刻度数字。两条线在下方读数条里都有同色标记 + 末值，此处留白更干净。 */
+      lastValueVisible: false,
+      title: '',
     });
     // 回撤：负值 + 独立价格轴；`invertFilledArea` ⇒ 填充到 0 线一侧（经典水下图观感）
     const dd = chart.addSeries(AreaSeries, {
@@ -413,7 +415,9 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
       <div className="px-3 py-2 border-b border-neutral-200 bg-neutral-50 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2 flex-wrap">
           <TrendingUp className="w-4 h-4 text-emerald-600" />
-          <h3 className="text-xs font-bold text-neutral-100">资金分析 · 策略净值 vs 买入持有基准（同标的同期 · 同成本）</h3>
+          <h3 className="text-xs font-bold text-neutral-100" title="基准为同标的、同期、同成本（手续费 + 滑点 + 真实资金费）的买入持有">
+            ③ 资金分析 · 策略净值 vs 买入持有基准
+          </h3>
           {ddCheck && (
             <span
               className={`px-1.5 py-0.5 rounded border text-[10px] font-mono ${
@@ -423,14 +427,16 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
                     ? 'bg-rose-50 text-rose-700 border-rose-200'
                     : 'bg-neutral-100 text-neutral-700 border-neutral-200'
               }`}
-              title="回撤曲线由后台权益序列展开（初始峰值取 /metrics.initial_equity）；峰值与 /metrics.max_drawdown_pct 实时核对"
+              title={`回撤核对：曲线由后台权益序列展开（初始峰值取 /metrics.initial_equity），峰值与 /metrics.max_drawdown_pct 实时核对 —— ${
+                ddCheck.match === true
+                  ? '与 /metrics 一致'
+                  : ddCheck.match === false
+                    ? `不一致（曲线 ${ddCheck.seriesMax.toFixed(6)}% vs 后台 ${fmtNum(ddCheck.backend, 6)}%）`
+                    : '后台未给 max_drawdown_pct'
+              }`}
             >
-              回撤核对：
-              {ddCheck.match === true
-                ? '与 /metrics 一致'
-                : ddCheck.match === false
-                  ? `不一致（曲线 ${ddCheck.seriesMax.toFixed(6)}% vs 后台 ${fmtNum(ddCheck.backend, 6)}%）`
-                  : '后台未给 max_drawdown_pct'}
+              {/* 正常时极简（只报异常），完整口径在 title */}
+              回撤 {ddCheck.match === true ? '✓' : ddCheck.match === false ? '✗ 不一致' : '无后台值'}
             </span>
           )}
           {tailCheck && (
@@ -440,49 +446,57 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
                   ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
                   : 'bg-rose-50 text-rose-700 border-rose-200'
               }`}
-              title="曲线末点必须等于 /metrics 的汇总值"
+              title="末点核对：曲线末点必须等于 /metrics 的汇总值"
             >
-              末点核对：{tailCheck.stratOk === true ? '策略=汇总' : '策略≠汇总'}
-              {tailCheck.benchOk === null ? '' : tailCheck.benchOk ? ' · 基准=汇总' : ' · 基准≠汇总'}
+              末点{' '}
+              {tailCheck.stratOk === true ? '✓' : '✗ 策略≠汇总'}
+              {tailCheck.benchOk === null ? '' : tailCheck.benchOk ? '' : ' · 基准≠汇总'}
             </span>
           )}
         </div>
-        <div className="flex items-center gap-2">
-          <div className="flex items-center bg-white border border-neutral-200 rounded p-0.5 text-[11px]">
+        <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center bg-white border border-neutral-200 rounded p-0.5 text-[11px] shrink-0">
             <button
               onClick={() => setMode('both')}
-              className={`px-2 py-0.5 rounded font-medium ${mode === 'both' ? 'bg-emerald-600 text-white font-bold' : 'text-neutral-400 hover:text-neutral-100'}`}
+              className={`px-2 py-0.5 rounded font-medium whitespace-nowrap ${mode === 'both' ? 'bg-emerald-600 text-white font-bold' : 'text-neutral-400 hover:text-neutral-100'}`}
             >
               净值对比
             </button>
             <button
               onClick={() => setMode('underwater')}
-              className={`px-2 py-0.5 rounded font-medium ${mode === 'underwater' ? 'bg-emerald-600 text-white font-bold' : 'text-neutral-400 hover:text-neutral-100'}`}
+              className={`px-2 py-0.5 rounded font-medium whitespace-nowrap ${mode === 'underwater' ? 'bg-emerald-600 text-white font-bold' : 'text-neutral-400 hover:text-neutral-100'}`}
             >
               水下回撤
             </button>
           </div>
-          <div className="flex items-center bg-white border border-neutral-200 rounded p-0.5 text-[11px]">
-            <button onClick={() => applyQuickRange(null)} className="px-2 py-0.5 rounded text-neutral-400 hover:text-neutral-100">
+          <div className="flex items-center bg-white border border-neutral-200 rounded p-0.5 text-[11px] shrink-0">
+            <button
+              onClick={() => applyQuickRange(null)}
+              className="px-2 py-0.5 rounded text-neutral-400 hover:text-neutral-100 whitespace-nowrap"
+            >
               全部
             </button>
             <button
               onClick={() => applyQuickRange(96)}
-              className="px-2 py-0.5 rounded text-neutral-400 hover:text-neutral-100"
+              className="px-2 py-0.5 rounded text-neutral-400 hover:text-neutral-100 whitespace-nowrap"
               title="最近 96 根 15m（约 1 天）"
             >
               最近1天
             </button>
             <button
               onClick={() => applyQuickRange(288)}
-              className="px-2 py-0.5 rounded text-neutral-400 hover:text-neutral-100"
+              className="px-2 py-0.5 rounded text-neutral-400 hover:text-neutral-100 whitespace-nowrap"
               title="最近 288 根 15m（约 3 天）"
             >
               最近3天
             </button>
           </div>
-          <span className="text-[10px] text-neutral-400 font-mono">
-            {viewLabel ? `视窗 ${viewLabel}` : `${merged.length} 点`} · 滚轮缩放 · 拖动平移（官方时间轴）
+          {/* 视窗范围常显；交互提示移到 title，避免挤压分段控件 */}
+          <span
+            className="text-[10px] text-neutral-400 font-mono whitespace-nowrap"
+            title="滚轮缩放 / 拖动平移（走项目既有 lightweight-charts 官方时间轴）"
+          >
+            {viewLabel ? `视窗 ${viewLabel}` : `${merged.length} 点`}
           </span>
         </div>
       </div>
@@ -514,31 +528,42 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
         </span>
       </div>
 
-      <div ref={containerRef} className="w-full h-[260px] bg-white" data-testid="lab-funding-chart" />
+      <div ref={containerRef} className="w-full h-[195px] bg-white" data-testid="lab-funding-chart" />
 
-      {/* 口径 / 一致性说明 */}
-      <div className="px-3 py-2 border-t border-neutral-200 bg-neutral-50 text-[10px] text-neutral-400 space-y-0.5">
-        <div>
-          基准：{benchmarkMeta?.benchmark_kind ?? '—'} · 净收益 {fmtPct(benchmarkMeta?.net_return_pct, 4)} · 最终权益 $
-          {fmtNum(benchmarkMeta?.final_equity, 2)} · 最大回撤 -{fmtNum(benchmarkMeta?.max_drawdown_pct, 4)}%
-          {benchmarkMeta?.cost_model ? ` · 成本口径：${benchmarkMeta.cost_model}` : ''}
-        </div>
+      {/* 口径 / 一致性说明：**异常默认可见，明细默认收起**（渐进披露） */}
+      <div className="px-3 py-1.5 border-t border-neutral-200 bg-neutral-50 text-[10px] text-neutral-400 space-y-0.5">
         {!hasBench && <div className="text-amber-700">后台未返回基准序列 ⇒ 只画策略线，不合成基准。</div>}
         {hasBench && !benchComplete && (
-          <div className="text-amber-700">基准序列存在缺时点 ⇒ **不插值、不连线**，缺时点处基准为空。</div>
+          <div className="text-amber-700">
+            基准序列存在缺时点 ⇒ <b>不插值、不连线</b>，缺时点处基准为空。
+          </div>
         )}
-        <div>
-          策略末点 ${fmtNum(tailCheck?.last.strat, 2)}（/metrics.final_equity ${fmtNum(metrics?.final_equity, 2)}）· 回撤曲线峰值 -
-          {fmtNum(ddCheck?.seriesMax, 6)}%（/metrics.max_drawdown_pct -{fmtNum(ddCheck?.backend, 6)}%）
-        </div>
-        <div className="text-neutral-400">
-          回撤曲线由**后台权益序列**按峰值口径展开（初始峰值 = /metrics.initial_equity；不重算交易/止损）；
-          图形与缩放/平移走项目既有 lightweight-charts 官方实现。颜色沿用本项目既有约定：盈/正为绿、亏/负为红。
-        </div>
+        <details className="ds-details" data-testid="lab-funding-basis-details">
+          <summary>口径与一致性核对（基准 / 末点 / 回撤展开）</summary>
+          <div className="ds-details__body space-y-0.5">
+            <div>
+              基准：{benchmarkMeta?.benchmark_kind ?? '—'} · 净收益 {fmtPct(benchmarkMeta?.net_return_pct, 4)} · 最终权益 $
+              {fmtNum(benchmarkMeta?.final_equity, 2)} · 最大回撤 -{fmtNum(benchmarkMeta?.max_drawdown_pct, 4)}%
+              {benchmarkMeta?.cost_model ? ` · 成本口径：${benchmarkMeta.cost_model}` : ''}
+            </div>
+            <div>
+              策略末点 ${fmtNum(tailCheck?.last.strat, 2)}（/metrics.final_equity ${fmtNum(metrics?.final_equity, 2)}）· 回撤曲线峰值 -
+              {fmtNum(ddCheck?.seriesMax, 6)}%（/metrics.max_drawdown_pct -{fmtNum(ddCheck?.backend, 6)}%）
+            </div>
+            <div className="text-neutral-400">
+              回撤曲线由<b>后台权益序列</b>按峰值口径展开（初始峰值 = /metrics.initial_equity；不重算交易/止损）；
+              图形与缩放/平移走项目既有 lightweight-charts 官方实现。颜色沿用本项目既有约定：盈/正为绿、亏/负为红。
+            </div>
+          </div>
+        </details>
       </div>
 
-      {/* 月度收益：复用旧热力图（**复合年累计口径**）+ 后台完整性/基准说明 */}
-      <div className="px-3 py-2 border-t border-neutral-200 space-y-2">
+      {/* 月度收益：复用旧热力图（**复合年累计口径**）+ 后台完整性/基准说明。
+          一屏布局下默认收起，点开才是完整热力图与逐月明细。 */}
+      <div className="px-3 py-1.5 border-t border-neutral-200">
+        <details className="ds-details" data-testid="lab-monthly-panel">
+          <summary>月度收益热力图与逐月完整性核对（{monthRows.length} 个月）</summary>
+          <div className="ds-details__body space-y-2">
         {compoundCheck && (
           <div
             className={`rounded px-2 py-1 border text-[10px] font-mono flex flex-wrap items-center gap-2 ${
@@ -576,41 +601,46 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
           basisNoteOverride="月度% = 该月**月界净值 / 上月月界净值 − 1**（后台月界口径，同一账户净值）；首月以**窗口起点初始权益**为基准并标 partial_month；YTD = 各月**复合** Π(1+r)−1（月界净值为乘性序列，相加会得出错误的年累计）。"
         />
 
-        <div className="text-[10px] text-neutral-500 font-mono space-y-1">
-          <div>来源 `/metrics.monthly_returns.months`：{monthly?.note ?? '—'}</div>
-          {monthRows.map(({ row: m, effStart, effEnd, cutStart, cutEnd, isFull }) => (
-            <div key={m.month} className="flex flex-wrap items-center gap-2">
-              <span className="font-bold text-neutral-300">{m.month}</span>
-              <span>区间收益 {fmtPct(m.return_pct, 6)}</span>
-              <span
-                className={`px-1.5 py-0.5 rounded border ${
-                  isFull ? 'bg-neutral-100 text-neutral-700 border-neutral-200' : 'bg-amber-50 text-amber-800 border-amber-200'
-                }`}
-              >
-                {isFull
-                  ? '完整自然月'
-                  : `部分月：${cutStart ? '起点在月中（区间从 ' + fmtUtcDay(windowStartMs as number) + ' 开始）' : ''}${cutStart && cutEnd ? '；' : ''}${cutEnd ? '终点在月中（区间到 ' + fmtUtcDay(windowEndMs as number) + ' 结束）' : ''}`}
-              </span>
-              {effStart !== null && effEnd !== null && (
-                <span className="text-neutral-500">
-                  实际覆盖 {fmtUtcDay(effStart)} → {fmtUtcDay(effEnd)} UTC
+        <details className="ds-details" data-testid="lab-monthly-details">
+          <summary>月度明细与完整性核对（{monthRows.length} 个月）</summary>
+          <div className="ds-details__body text-[10px] text-neutral-500 font-mono space-y-1">
+            <div>来源 `/metrics.monthly_returns.months`：{monthly?.note ?? '—'}</div>
+            {monthRows.map(({ row: m, effStart, effEnd, cutStart, cutEnd, isFull }) => (
+              <div key={m.month} className="flex flex-wrap items-center gap-2">
+                <span className="font-bold text-neutral-300">{m.month}</span>
+                <span>区间收益 {fmtPct(m.return_pct, 6)}</span>
+                <span
+                  className={`px-1.5 py-0.5 rounded border ${
+                    isFull ? 'bg-neutral-100 text-neutral-700 border-neutral-200' : 'bg-amber-50 text-amber-800 border-amber-200'
+                  }`}
+                >
+                  {isFull
+                    ? '完整自然月'
+                    : `部分月：${cutStart ? '起点在月中（区间从 ' + fmtUtcDay(windowStartMs as number) + ' 开始）' : ''}${cutStart && cutEnd ? '；' : ''}${cutEnd ? '终点在月中（区间到 ' + fmtUtcDay(windowEndMs as number) + ' 结束）' : ''}`}
                 </span>
-              )}
-              <span className="text-neutral-400">后台 partial_month={String(m.partial_month)}</span>
-              <span className="text-neutral-500">{m.basis_note ?? '—'}</span>
-            </div>
-          ))}
-          {monthCloseCounts && Object.keys(monthCloseCounts).length > 0 && (
-            <div className="text-neutral-400">
-              热力图「笔数」= 该月**平仓笔数**（按平仓时间，来自逐笔账本）；净值变化额 = 期末净值 − 基准净值（均为后台字段）。
-            </div>
-          )}
-          {monthRows.length > 0 && (
-            <div className="text-neutral-400">
-              完整性由所选 run 的**真实窗口**与自然月边界推出（不只信后台 partial_month）：30 天窗口通常首月被起点、末月被终点各截一次，末月不得标成完整月。
-            </div>
-          )}
-        </div>
+                {effStart !== null && effEnd !== null && (
+                  <span className="text-neutral-500">
+                    实际覆盖 {fmtUtcDay(effStart)} → {fmtUtcDay(effEnd)} UTC
+                  </span>
+                )}
+                <span className="text-neutral-400">后台 partial_month={String(m.partial_month)}</span>
+                <span className="text-neutral-500">{m.basis_note ?? '—'}</span>
+              </div>
+            ))}
+            {monthCloseCounts && Object.keys(monthCloseCounts).length > 0 && (
+              <div className="text-neutral-400">
+                热力图「笔数」= 该月<b>平仓笔数</b>（按平仓时间，来自逐笔账本）；净值变化额 = 期末净值 − 基准净值（均为后台字段）。
+              </div>
+            )}
+            {monthRows.length > 0 && (
+              <div className="text-neutral-400">
+                完整性由所选 run 的<b>真实窗口</b>与自然月边界推出（不只信后台 partial_month）：30 天窗口通常首月被起点、末月被终点各截一次，末月不得标成完整月。
+              </div>
+            )}
+          </div>
+        </details>
+          </div>
+        </details>
       </div>
     </div>
   );

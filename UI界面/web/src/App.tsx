@@ -14,7 +14,7 @@ import { TokenTable } from './components/TokenTable';
 import { PositionPanel } from './components/PositionPanel';
 import { DataCenterView } from './components/DataCenterView';
 import { StrategyManagementView } from './components/StrategyManagementView';
-import { BacktestReviewView } from './components/BacktestReviewView';
+import { BacktestView } from './components/BacktestView';
 import {
   Database,
   Sliders,
@@ -305,8 +305,8 @@ export default function App() {
           /* 策略管理 (按策略管理全页面草图.svg渲染) */
           <StrategyManagementView />
         ) : (
-          /* 回测复盘 (按回测复盘全页面草图.svg渲染) */
-          <BacktestReviewView />
+          /* 回测复盘 (WORK-05：完整回测工作台 + 验收复盘) */
+          <BacktestView />
         )}
       </div>
 

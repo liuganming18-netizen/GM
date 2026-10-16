@@ -144,16 +144,44 @@ function toIsoUtcZ(ms: number): string {
   return `${d.getUTCFullYear()}-${p(d.getUTCMonth() + 1)}-${p(d.getUTCDate())}T${p(d.getUTCHours())}:${p(d.getUTCMinutes())}:${p(d.getUTCSeconds())}Z`;
 }
 
-const STATUS_STYLE: Record<string, string> = {
-  succeeded: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  queued: 'bg-sky-50 text-sky-700 border-sky-200',
-  running: 'bg-sky-50 text-sky-700 border-sky-200',
-  failed: 'bg-rose-50 text-rose-700 border-rose-200',
-  interrupted: 'bg-amber-50 text-amber-800 border-amber-200',
+/** 运行状态 → 徽标色调（《设计规范》第 09 节：徽标只承载状态，六种色调不外扩）。 */
+const STATUS_TONE: Record<string, string> = {
+  succeeded: 'ds-badge--pos',
+  queued: 'ds-badge--info',
+  running: 'ds-badge--info',
+  failed: 'ds-badge--neg',
+  interrupted: 'ds-badge--warn',
 };
 
-const statusStyle = (s: string | null | undefined): string =>
-  STATUS_STYLE[s ?? ''] ?? 'bg-neutral-100 text-neutral-700 border-neutral-200';
+const statusTone = (s: string | null | undefined): string =>
+  STATUS_TONE[s ?? ''] ?? 'ds-badge--neutral';
+
+/** 数值 → 盈亏色调。`null` / 非有限值一律走中性，不用颜色冒充方向。 */
+const pnlTone = (v: number | null | undefined): string =>
+  v === null || v === undefined || !Number.isFinite(v)
+    ? 'ds-badge--neutral'
+    : v >= 0
+      ? 'ds-badge--pos'
+      : 'ds-badge--neg';
+
+/**
+ * 退出原因短标签。
+ * 一屏并排布局下「退出原因」列只有 ~90px，后端英文原值（`intrabar_stop`）会被截断成
+ * `intrabar…`。这里映射为等义中文短标签；**未知值原样显示**，且 `title` 始终带后端原值，
+ * 不改动也不隐藏任何后端字段。
+ */
+const EXIT_REASON_LABEL: Record<string, string> = {
+  intrabar_stop: '盘中止损',
+  force_close_eod: '收盘强平',
+  protective_stop: '保护止损',
+  trailing_stop: '移动止损',
+  take_profit: '止盈',
+  signal_flip: '信号反转',
+  time_stop: '超时退出',
+};
+
+const exitReasonLabel = (r: string | null | undefined): string =>
+  r === null || r === undefined ? '—' : (EXIT_REASON_LABEL[r] ?? r);
 
 /* ══════════════════════════ 只读取数 hook ══════════════════════════ */
 
@@ -238,50 +266,113 @@ function expectRunId<T extends { run_id?: string | null }>(env: T, expected: str
 
 /* ══════════════════════════ 小构件 ══════════════════════════ */
 
+/**
+ * 设计规范组件（详见《设计规范》第 09 / 10 / 12 节）。
+ *
+ * 全部改用 `.ds-*` 类：颜色 / 字号 / 间距 / 圆角一律由令牌层决定，页面不再硬编码。
+ * 实现要点：`components.css` 是**未分层**规则，优先级高于 Tailwind 的 `@layer utilities`，
+ * 因此 `.ds-badge` / `.ds-table` 等会覆盖残留的旧工具类 —— 这正是「统一观感」的机制，
+ * 也是为什么这里可以安全地只替换组件类、而不必逐处清理旧 className。
+ */
 const Chip: React.FC<{ children: React.ReactNode; tone?: 'neutral' | 'ok' | 'warn' | 'bad' | 'info' }> = ({
   children,
   tone = 'neutral',
 }) => {
   const map: Record<string, string> = {
-    neutral: 'bg-neutral-100 text-neutral-700 border-neutral-200',
-    ok: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-    warn: 'bg-amber-50 text-amber-800 border-amber-200',
-    bad: 'bg-rose-50 text-rose-700 border-rose-200',
-    info: 'bg-sky-50 text-sky-700 border-sky-200',
+    neutral: 'ds-badge--neutral',
+    ok: 'ds-badge--pos',
+    warn: 'ds-badge--warn',
+    bad: 'ds-badge--neg',
+    info: 'ds-badge--info',
   };
-  return <span className={`px-1.5 py-0.5 rounded border text-[10px] font-mono whitespace-nowrap ${map[tone]}`}>{children}</span>;
+  return <span className={`ds-badge ${map[tone]}`}>{children}</span>;
 };
 
 const KV: React.FC<{ k: string; v: React.ReactNode; mono?: boolean }> = ({ k, v, mono = true }) => (
-  <div className="flex items-baseline gap-1.5 min-w-0">
-    <span className="text-neutral-500 shrink-0">{k}</span>
-    <span className={`text-neutral-200 truncate ${mono ? 'font-mono' : ''}`} title={typeof v === 'string' ? v : undefined}>
+  <div className="ds-kv">
+    <span className="ds-kv__k">{k}</span>
+    <span
+      className="ds-kv__v"
+      style={mono ? undefined : { fontFamily: 'var(--ds-font)' }}
+      title={typeof v === 'string' ? v : undefined}
+    >
       {v}
     </span>
   </div>
 );
 
-const SectionCard: React.FC<{ title: string; right?: React.ReactNode; children: React.ReactNode; testid?: string }> = ({
-  title,
-  right,
-  children,
-  testid,
-}) => (
+const SectionCard: React.FC<{
+  title: string;
+  right?: React.ReactNode;
+  children: React.ReactNode;
+  testid?: string;
+  /** 区块锚点 id：与 `BacktestView` 的区块导航一一对应（《设计规范》第 17 节）。 */
+  section?: string;
+  /** 附属区块（⑤b / ⑤c / ⑤d）：标题竖条降级为灰色，视觉上从属于主区块。 */
+  sub?: boolean;
+  /** 可折叠：用于「重要但不必常驻视野」的附属明细。标题行仍显示条数徽标。 */
+  collapsible?: boolean;
+  /** 折叠时是否默认展开（默认收起）。 */
+  defaultOpen?: boolean;
+}> = ({ title, right, children, testid, section, sub = false, collapsible = false, defaultOpen = false }) => {
+  const cls = `ds-card${sub ? ' ds-card--sub' : ''}`;
   /**
-   * 卡片容器**显式**声明深色文字：Lab 根容器是深色画布（`bg-neutral-100`）且带浅色文字，
-   * 若卡内不覆盖就会继承成「近白字落白底」。本项目 index.css 把中性色阶整体反转，
-   * 因此「浅底上的深字」对应 `text-neutral-100/200/300/400`。
+   * 折叠态用原生 `<details>`，但**不**把 `open` 交给 React 受控 ——
+   * 本页有 5s 轮询，受控的 `open` 会在每次轮询渲染时把用户刚展开的面板弹回去。
+   * 因此只在挂载时设一次初值，之后完全交给浏览器。
    */
-  <div
-    className="bg-white border border-neutral-200 rounded-lg shadow-sm overflow-hidden text-neutral-100"
-    data-testid={testid}
+  const ref = useRef<HTMLDetailsElement>(null);
+  useEffect(() => {
+    if (ref.current) ref.current.open = defaultOpen;
+  }, [defaultOpen]);
+
+  if (collapsible) {
+    return (
+      <details ref={ref} className={cls} data-testid={testid} data-lab-section={section}>
+        <summary className="ds-card__head">
+          <h3 className="ds-card__title">{title}</h3>
+          {right}
+        </summary>
+        <div className="ds-card__body">{children}</div>
+      </details>
+    );
+  }
+
+  return (
+    <section className={cls} data-testid={testid} data-lab-section={section}>
+      <div className="ds-card__head">
+        <h3 className="ds-card__title">{title}</h3>
+        {right}
+      </div>
+      <div className="ds-card__body">{children}</div>
+    </section>
+  );
+};
+
+/**
+ * 「显示全部列」开关。
+ * 表格默认只给「决策必需的列」，其余列用 `data-secondary` 由 CSS 隐藏 ——
+ * DOM 与数据一个不少（验收脚本仍可查到），只是默认不出现在视野里。
+ */
+const ColToggle: React.FC<{ on: boolean; onToggle: () => void; total: number }> = ({
+  on,
+  onToggle,
+  total,
+}) => (
+  <button
+    type="button"
+    className="ds-btn ds-btn--ghost ds-btn--sm"
+    aria-pressed={on}
+    onClick={(e) => {
+      // 本按钮可能位于可折叠卡片的 <summary> 内 —— 不拦截会连带把卡片开合。
+      e.preventDefault();
+      e.stopPropagation();
+      onToggle();
+    }}
+    title={on ? '收起次要列' : `展开全部 ${total} 列`}
   >
-    <div className="px-3 py-2 border-b border-neutral-200 bg-neutral-50 flex flex-wrap items-center justify-between gap-2">
-      <h3 className="text-xs font-bold text-neutral-100">{title}</h3>
-      {right}
-    </div>
-    <div className="p-3">{children}</div>
-  </div>
+    {on ? '收起次要列' : '更多列'}
+  </button>
 );
 
 /* ══════════════════════════ 配置表单 ══════════════════════════ */
@@ -323,23 +414,18 @@ const OptionRow: React.FC<{
   /** 紧凑模式：标签与按钮同一行（默认 true） */
   inline?: boolean;
 }> = ({ label, value, options, onChange, inline = true }) => (
-  <div className={inline ? 'flex items-center gap-1.5 min-w-0' : 'space-y-0.5'}>
-    <div className="text-[10px] text-neutral-500 shrink-0">{label}</div>
-    <div className="flex flex-wrap items-center gap-1">
+  <div className={inline ? 'ds-optrow' : 'space-y-0.5'}>
+    <div className="ds-optrow__label">{label}</div>
+    <div className="ds-row" style={{ gap: 4 }}>
       {options.map((o) => (
         <button
           key={o.value}
           type="button"
           disabled={!o.enabled}
           title={o.enabled ? `${label} = ${o.value}` : o.reason}
+          aria-pressed={value === o.value}
           onClick={() => o.enabled && onChange(o.value)}
-          className={`px-1.5 py-0.5 rounded border text-[10px] font-mono transition-colors ${
-            !o.enabled
-              ? 'bg-neutral-50 text-neutral-300 border-neutral-200 cursor-not-allowed line-through'
-              : value === o.value
-                ? 'bg-emerald-600 text-white border-emerald-600 font-bold'
-                : 'bg-white text-neutral-300 border-neutral-200 hover:bg-neutral-50'
-          }`}
+          className="ds-opt"
         >
           {o.label}
         </button>
@@ -366,9 +452,9 @@ const ParamField: React.FC<{
   const bounds =
     spec.min !== null || spec.max !== null ? `[${spec.min ?? '-∞'}, ${spec.max ?? '+∞'}]` : null;
   return (
-    <label className="block space-y-0.5 min-w-0" title={`${spec.key}${spec.hint ? ` · ${spec.hint}` : ''}`}>
-      <span className="text-[10px] text-neutral-400 flex items-center gap-1">
-        <span className="truncate">{spec.label}</span>
+    <label className="ds-field" title={`${spec.key}${spec.hint ? ` · ${spec.hint}` : ''}`}>
+      <span className="ds-field__label">
+        <span className="ds-truncate">{spec.label}</span>
         <Chip tone={spec.unit === 'percent' ? 'info' : 'neutral'}>{LAB_UNIT_LABEL[spec.unit]}</Chip>
       </span>
       <input
@@ -377,11 +463,11 @@ const ParamField: React.FC<{
         value={value}
         placeholder={spec.type === 'int' ? '整数' : '数值'}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full px-1.5 py-1 text-xs rounded border border-neutral-200 bg-white text-neutral-200 focus:outline-none focus:border-emerald-500 font-mono"
+        className="ds-input"
         data-param-key={spec.key}
       />
       {(equiv || bounds) && (
-        <span className="text-[10px] text-neutral-400 block truncate">
+        <span className="ds-field__hint">
           {equiv}
           {equiv && bounds ? ' · ' : ''}
           {bounds}
@@ -477,7 +563,7 @@ const LabTradeDetailPanel: React.FC<{ detail: LabTradeDetail | null; loading: bo
           <div className="text-neutral-400">无订单行</div>
         ) : (
           <table className="w-full text-left font-mono">
-            <thead className="text-neutral-500 border-b border-neutral-200">
+            <thead>
               <tr>
                 <th className="py-1 pr-2">时点</th>
                 <th className="py-1 px-2">phase</th>
@@ -490,7 +576,7 @@ const LabTradeDetailPanel: React.FC<{ detail: LabTradeDetail | null; loading: bo
                 <th className="py-1 px-2">原因</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-neutral-100">
+            <tbody>
               {orders.map((o) => (
                 <tr key={o.order_id}>
                   <td className="py-1 pr-2 text-neutral-500">{fmtUtc(o.ts_ms)}</td>
@@ -515,16 +601,16 @@ const LabTradeDetailPanel: React.FC<{ detail: LabTradeDetail | null; loading: bo
           {trace.length === 0 ? (
             <div className="text-neutral-400">无止损轨迹记录</div>
           ) : (
-            <div className="max-h-40 overflow-auto">
+            <div className="ds-tablewrap" style={{ maxHeight: '10rem' }}>
               <table className="w-full text-left font-mono">
-                <thead className="text-neutral-500 border-b border-neutral-200">
+                <thead>
                   <tr>
                     <th className="py-1 pr-2">时点</th>
                     <th className="py-1 px-2 text-right">止损价</th>
                     <th className="py-1 px-2">原因</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-neutral-100">
+                <tbody>
                   {trace.map((p, i) => (
                     <tr key={`${p.ts}-${i}`}>
                       <td className="py-1 pr-2 text-neutral-500">{fmtUtc(p.ts)}</td>
@@ -543,7 +629,7 @@ const LabTradeDetailPanel: React.FC<{ detail: LabTradeDetail | null; loading: bo
             <div className="text-neutral-400">该笔无资金费事件</div>
           ) : (
             <table className="w-full text-left font-mono">
-              <thead className="text-neutral-500 border-b border-neutral-200">
+              <thead>
                 <tr>
                   <th className="py-1 pr-2">结算时点</th>
                   <th className="py-1 px-2 text-right">rate</th>
@@ -553,7 +639,7 @@ const LabTradeDetailPanel: React.FC<{ detail: LabTradeDetail | null; loading: bo
                   <th className="py-1 px-2">来源</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-neutral-100">
+              <tbody>
                 {funding.map((f) => (
                   <tr key={`${f.funding_time_ms}-${f.amount}`}>
                     <td className="py-1 pr-2 text-neutral-500">{fmtUtc(f.funding_time_ms)}</td>
@@ -618,12 +704,35 @@ const LabQualityPanel: React.FC<{ q: LabQualityResponse | null; loading: boolean
   if (error && !q) return <div className="text-[11px] text-rose-600">质量报告取数失败：{error}</div>;
   if (!q) return <div className="text-[11px] text-neutral-400">选择一次运行查看质量报告</div>;
 
+  /**
+   * 「只报异常」：按 `BoolFlag` 完全相同的判定把**异常项**挑出来抬到视野里，
+   * 全部核对项仍完整保留在折叠区（DOM 一个不少，只是默认不占视野）。
+   */
+  const flag = (label: string, v: boolean | null | undefined, good = true): string | null => {
+    if (v === null || v === undefined) return null;
+    const ok = good ? v : !v;
+    return ok ? null : label;
+  };
+  const dqBad: string[] = dq
+    ? [
+        flag('信号全窗覆盖', dq.signal_full_window_ok),
+        flag('执行全窗覆盖', dq.exec_full_window_ok),
+        flag('信号连续', dq.signal_contiguous),
+        flag('执行连续', dq.exec_contiguous),
+        flag('全部已收盘', dq.all_closed),
+        flag('资金费为假设值', dq.funding_is_assumption, false),
+        flag('资金费覆盖 ok', dq.funding_coverage_ok),
+        flag('OI 门禁启用', dq.oi_gate_enabled, false),
+        flag('对账 ok', dq.reconcile_ok),
+        flag('指标与账本一致', dq.metrics_match),
+      ].filter((x): x is string => x !== null)
+    : [];
+
   return (
     <div className="space-y-2 text-[11px]" data-testid="lab-quality-panel">
       <div
-        className={`rounded px-2 py-1.5 border flex flex-wrap items-center gap-2 ${
-          qualityOk ? 'bg-emerald-50 border-emerald-200 text-emerald-800' : 'bg-rose-50 border-rose-200 text-rose-800'
-        }`}
+        className={`ds-note ${qualityOk ? 'ds-note--pos' : 'ds-note--neg'}`}
+        style={{ gap: 8, alignItems: 'center' }}
         data-testid="lab-quality-verdict"
       >
         <span className="font-bold flex items-center gap-1">
@@ -642,80 +751,102 @@ const LabQualityPanel: React.FC<{ q: LabQualityResponse | null; loading: boolean
 
       {dq ? (
         <>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-1 font-mono">
-            <BoolFlag label="信号全窗覆盖" v={dq.signal_full_window_ok} />
-            <BoolFlag label="执行全窗覆盖" v={dq.exec_full_window_ok} />
-            <BoolFlag label="信号连续" v={dq.signal_contiguous} />
-            <BoolFlag label="执行连续" v={dq.exec_contiguous} />
-            <BoolFlag label="全部已收盘" v={dq.all_closed} />
-            <KV k="信号 bar expected/actual" v={`${dq.signal_expected_bars ?? '—'} / ${dq.signal_actual_bars ?? '—'}`} />
-            <KV k="执行 bar expected/actual" v={`${dq.exec_expected_bars ?? '—'} / ${dq.exec_actual_bars ?? '—'}`} />
-            <KV k="OI 缺根" v={String(dq.oi_bars_missing ?? '—')} />
-            <KV k="OI 假填充" v={dq.oi_fake_fill ?? '—'} />
-            <KV k="资金费模型" v={dq.funding_model ?? '—'} />
-            <BoolFlag label="资金费为假设值" v={dq.funding_is_assumption} good={false} />
-            <KV k="资金费 expected/actual" v={`${dq.funding_expected_settlements ?? '—'} / ${dq.funding_actual_settlements ?? '—'}`} />
-            <KV k="资金费缺事件" v={String(dq.funding_missing_settlements_count ?? '—')} />
-            <BoolFlag label="资金费覆盖 ok" v={dq.funding_coverage_ok} />
-            <KV k="资金费 used/recomputed" v={`${dq.funding_events_used ?? '—'} / ${dq.funding_events_recomputed ?? '—'}`} />
-            <BoolFlag label="OI 门禁启用" v={dq.oi_gate_enabled} good={false} />
-            <KV k="OI 门槛值" v={String(dq.oi_min_resonance ?? '—')} />
-            <BoolFlag label="对账 ok" v={dq.reconcile_ok} />
-            <BoolFlag label="指标与账本一致" v={dq.metrics_match} />
-            <KV k="指标差异" v={dq.metrics_match_diffs && dq.metrics_match_diffs.length ? dq.metrics_match_diffs.join(' | ') : '无'} />
-          </div>
-
-          {dq.oi_gate_note && <div className="text-[10px] text-amber-800 bg-amber-50 border border-amber-200 rounded px-2 py-1">OI 门禁：{dq.oi_gate_note}</div>}
-          {dq.funding_evidence_reconcile && (
-            <div className="text-[10px] text-neutral-400">资金费证据对账：{dq.funding_evidence_reconcile}</div>
+          {/* 默认只报**异常项**；通过项与对账明细收进折叠区 */}
+          {dqBad.length > 0 ? (
+            <div className="flex flex-wrap items-center gap-1.5">
+              <span className="text-neutral-500">异常项：</span>
+              {dqBad.map((k) => (
+                <span key={k} className="ds-badge ds-badge--neg" data-testid="lab-quality-bad">
+                  {k}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <div className="text-emerald-700">核对项无异常</div>
           )}
-          {dq.time_precision_note && <div className="text-[10px] text-neutral-500">时间精度：{dq.time_precision_note}</div>}
 
-          {dq.reconcile && (
-            <div className="border-t border-neutral-100 pt-2">
-              <div className="font-bold text-neutral-200 mb-1">现金恒等式对账（reconcile）</div>
-              <div className="grid grid-cols-2 gap-x-4 gap-y-1 font-mono">
-                {Object.entries(dq.reconcile).map(([k, v]) => (
-                  <KV key={k} k={k} v={typeof v === 'boolean' ? String(v) : fmtNum(v as number, 6)} />
-                ))}
+          <details className="ds-details" data-testid="lab-quality-details">
+            <summary>数据质量核对明细（全部核对项 · 现金恒等式对账 · 账本行数）</summary>
+            <div className="ds-details__body space-y-2">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-1 font-mono">
+                <BoolFlag label="信号全窗覆盖" v={dq.signal_full_window_ok} />
+                <BoolFlag label="执行全窗覆盖" v={dq.exec_full_window_ok} />
+                <BoolFlag label="信号连续" v={dq.signal_contiguous} />
+                <BoolFlag label="执行连续" v={dq.exec_contiguous} />
+                <BoolFlag label="全部已收盘" v={dq.all_closed} />
+                <KV k="信号 bar expected/actual" v={`${dq.signal_expected_bars ?? '—'} / ${dq.signal_actual_bars ?? '—'}`} />
+                <KV k="执行 bar expected/actual" v={`${dq.exec_expected_bars ?? '—'} / ${dq.exec_actual_bars ?? '—'}`} />
+                <KV k="OI 缺根" v={String(dq.oi_bars_missing ?? '—')} />
+                <KV k="OI 假填充" v={dq.oi_fake_fill ?? '—'} />
+                <KV k="资金费模型" v={dq.funding_model ?? '—'} />
+                <BoolFlag label="资金费为假设值" v={dq.funding_is_assumption} good={false} />
+                <KV k="资金费 expected/actual" v={`${dq.funding_expected_settlements ?? '—'} / ${dq.funding_actual_settlements ?? '—'}`} />
+                <KV k="资金费缺事件" v={String(dq.funding_missing_settlements_count ?? '—')} />
+                <BoolFlag label="资金费覆盖 ok" v={dq.funding_coverage_ok} />
+                <KV k="资金费 used/recomputed" v={`${dq.funding_events_used ?? '—'} / ${dq.funding_events_recomputed ?? '—'}`} />
+                <BoolFlag label="OI 门禁启用" v={dq.oi_gate_enabled} good={false} />
+                <KV k="OI 门槛值" v={String(dq.oi_min_resonance ?? '—')} />
+                <BoolFlag label="对账 ok" v={dq.reconcile_ok} />
+                <BoolFlag label="指标与账本一致" v={dq.metrics_match} />
+                <KV k="指标差异" v={dq.metrics_match_diffs && dq.metrics_match_diffs.length ? dq.metrics_match_diffs.join(' | ') : '无'} />
               </div>
-            </div>
-          )}
 
-          {dq.ledger_counts && (
-            <div className="font-mono text-[10px] text-neutral-400">
-              账本行数：{Object.entries(dq.ledger_counts).map(([k, v]) => `${k}=${v}`).join(' · ')}
+              {dq.oi_gate_note && <div className="ds-note ds-note--warn">OI 门禁：{dq.oi_gate_note}</div>}
+              {dq.funding_evidence_reconcile && (
+                <div className="text-[10px] text-neutral-400">资金费证据对账：{dq.funding_evidence_reconcile}</div>
+              )}
+              {dq.time_precision_note && <div className="text-[10px] text-neutral-500">时间精度：{dq.time_precision_note}</div>}
+
+              {dq.reconcile && (
+                <div className="border-t border-neutral-100 pt-2">
+                  <div className="font-bold text-neutral-200 mb-1">现金恒等式对账（reconcile）</div>
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-1 font-mono">
+                    {Object.entries(dq.reconcile).map(([k, v]) => (
+                      <KV key={k} k={k} v={typeof v === 'boolean' ? String(v) : fmtNum(v as number, 6)} />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {dq.ledger_counts && (
+                <div className="font-mono text-[10px] text-neutral-400">
+                  账本行数：{Object.entries(dq.ledger_counts).map(([k, v]) => `${k}=${v}`).join(' · ')}
+                </div>
+              )}
             </div>
-          )}
+          </details>
         </>
       ) : (
         <div className="text-neutral-400">后台未返回 data_quality（不编造缺口数字）</div>
       )}
 
-      <div className="border-t border-neutral-100 pt-2 grid grid-cols-1 md:grid-cols-2 gap-3">
-        <div>
-          <div className="font-bold text-neutral-200 mb-1">代码 / 输入 hash</div>
-          {hashes ? (
-            <div className="space-y-0.5 font-mono">
-              {Object.entries(hashes).map(([k, v]) => (
-                <KV key={k} k={k} v={v} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-neutral-400">无 hash</div>
-          )}
+      <details className="ds-details" data-testid="lab-quality-hashes">
+        <summary>代码 / 输入 hash · 输入快照（snapshot_files）</summary>
+        <div className="ds-details__body grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div>
+            <div className="font-bold text-neutral-200 mb-1">代码 / 输入 hash</div>
+            {hashes ? (
+              <div className="space-y-0.5 font-mono">
+                {Object.entries(hashes).map(([k, v]) => (
+                  <KV key={k} k={k} v={v} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-neutral-400">无 hash</div>
+            )}
+          </div>
+          <div>
+            <div className="font-bold text-neutral-200 mb-1">输入快照（snapshot_files）</div>
+            {q.window ? (
+              <div className="space-y-0.5 font-mono text-[10px]">
+                <KV k="窗口" v={`${fmtUtc(q.window.win_start_ms)} → ${fmtUtc(q.window.win_end_ms)} UTC（${q.window.window_days} 天）`} />
+                <KV k="预热" v={`${q.window.warmup_bars ?? '—'} 根信号 bar`} />
+                <KV k="约定" v={q.window.convention} mono={false} />
+              </div>
+            ) : null}
+          </div>
         </div>
-        <div>
-          <div className="font-bold text-neutral-200 mb-1">输入快照（snapshot_files）</div>
-          {q.window ? (
-            <div className="space-y-0.5 font-mono text-[10px]">
-              <KV k="窗口" v={`${fmtUtc(q.window.win_start_ms)} → ${fmtUtc(q.window.win_end_ms)} UTC（${q.window.window_days} 天）`} />
-              <KV k="预热" v={`${q.window.warmup_bars ?? '—'} 根信号 bar`} />
-              <KV k="约定" v={q.window.convention} mono={false} />
-            </div>
-          ) : null}
-        </div>
-      </div>
+      </details>
     </div>
   );
 };
@@ -727,6 +858,51 @@ export const BacktestWorkbench: React.FC = () => {
   const [selectedRunId, setSelectedRunId] = useState<string | null>(null);
   const [selectedTradeId, setSelectedTradeId] = useState<string | null>(null);
   const [showSignalParams, setShowSignalParams] = useState(false);
+  /** 高级设置：交易所 / 市场 / 周期 / 预热 / 成本 / 风险参数。默认收起 —— 这些项
+   *  一次定好就很少改，常驻只会把「选标的 + 定窗口 + 点运行」这条主线淹掉。 */
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  /** 次要列开关（按表 key 记忆）：默认只显示「决策必需的列」，
+   *  其余列仍渲染在 DOM 中（`data-secondary` 由 CSS 隐藏），点「更多列」才显示。 */
+  const [allCols, setAllCols] = useState<Record<string, boolean>>({});
+  const toggleCols = (k: string) => setAllCols((v) => ({ ...v, [k]: !v[k] }));
+  /**
+   * 底部「更多视图」面板（执行视图 / 结果身份 / 订单 / 拒单 / 资金费 / 口径与审计）。
+   * 一屏布局下这些内容不常驻视野，但**一个字段都不删** —— 点开就能看。
+   * 单选：同一时间只展开一个，避免把「一屏」又撑回长页。
+   */
+  const [openPanel, setOpenPanel] = useState<string | null>(null);
+  const togglePanel = (k: string) => setOpenPanel((v) => (v === k ? null : k));
+  /**
+   * 「更多指标」开关。
+   *
+   * 指标原先单占一条满宽横条，与顶部「当前结果」条**重复**显示净收益 / 回撤 / 笔数。
+   * 现并入同一条：4 个主指标常显，4 个次要指标（盈亏比 / PF / 手续费 / 资金费）默认收起。
+   */
+  const [showMoreMetrics, setShowMoreMetrics] = useState(false);
+  /**
+   * 「更多视图」面板宿主 testid。
+   *
+   * 一屏布局下页面本身**不滚动**（内容 ≈ 容器高），而 identity 之外的按需面板渲染在
+   * ⑤⑥ 之后、即首屏之外 —— 点按钮后若不平移，用户会「点了没反应」。
+   * 展开后把该面板滚进视野（`block:'nearest'`：已可见时不动，避免无谓跳动）。
+   */
+  const PANEL_HOST_TESTID: Record<string, string> = {
+    identity: 'lab-run-identity',
+    orders: 'lab-orders',
+    rejected: 'lab-rejected',
+    funding: 'lab-funding',
+    audit: 'lab-audit',
+  };
+  useEffect(() => {
+    if (!openPanel) return;
+    const tid = PANEL_HOST_TESTID[openPanel];
+    if (!tid) return;
+    const id = window.setTimeout(() => {
+      document.querySelector(`[data-testid="${tid}"]`)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }, 60);
+    return () => window.clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [openPanel]);
   const [creating, setCreating] = useState(false);
   const [createNotice, setCreateNotice] = useState<string | null>(null);
   const [createErrors, setCreateErrors] = useState<string[]>([]);
@@ -1004,63 +1180,91 @@ export const BacktestWorkbench: React.FC = () => {
   /* ── 指标卡 ── */
   const m = metrics.data?.metrics ?? null;
   const wins = m?.wins ?? null;
+  /**
+   * 指标卡数据。三处与旧版不同（《设计规范》第 10 节）：
+   *   ① `tone` 取代原来的 `color`（Tailwind 类）—— 色调只由**数据方向**决定，
+   *      缺失一律中性，不用颜色冒充方向；修饰类由令牌层给色值。
+   *   ② `lead` 标出主指标（净收益 / 回撤），加左侧色条区分主次。
+   *   ③ 平均盈亏比 / Profit Factor 改用 `fmtNum(..., 4)` 限长 ——
+   *      旧版直接 `${m.avg_win_loss_ratio}` 会输出 1.29048909413528 把卡片撑变形。
+   */
   const metricCards = useMemo(() => {
     const noWin = wins === 0;
+    const toneOf = (v: number | null | undefined): 'pos' | 'neg' | 'muted' =>
+      v === null || v === undefined || !Number.isFinite(v) ? 'muted' : v >= 0 ? 'pos' : 'neg';
     return [
+      /* ── 主指标（4 张卡）：决定「这次回测值不值得继续往下看」 ── */
       {
         title: '净收益率',
         value: fmtPct(m?.net_return_pct, 4),
         sub: `净盈亏 ${fmtSignedUsd(m?.net_pnl, 2)} / 初始 ${fmtUsd(m?.initial_equity, 2)}`,
-        color: m?.net_return_pct === null || m?.net_return_pct === undefined ? 'text-neutral-400' : m.net_return_pct >= 0 ? 'text-emerald-600' : 'text-rose-600',
+        tone: toneOf(m?.net_return_pct),
+        lead: true,
+        primary: true,
       },
       {
         title: '最大回撤',
         value: m?.max_drawdown_pct === null || m?.max_drawdown_pct === undefined ? '—' : `-${m.max_drawdown_pct.toFixed(4)}%`,
-        sub: '峰值动态水线（后台 /metrics）',
-        color: m?.max_drawdown_pct === null || m?.max_drawdown_pct === undefined ? 'text-neutral-400' : 'text-rose-600',
+        sub: '峰值动态水线',
+        tone: (m?.max_drawdown_pct === null || m?.max_drawdown_pct === undefined ? 'muted' : 'neg') as 'neg' | 'muted',
+        lead: true,
+        primary: true,
       },
       {
         title: '胜率',
         value: m?.win_rate_pct === null || m?.win_rate_pct === undefined ? '—' : `${m.win_rate_pct.toFixed(2)}%`,
         sub: m ? `盈 ${m.wins ?? '—'} / 亏 ${m.losses ?? '—'} / 平 ${m.flats ?? '—'}` : '后台未返回',
-        color: 'text-neutral-100',
+        tone: 'plain' as const,
+        lead: false,
+        primary: true,
       },
       {
+        title: '交易次数',
+        value: m?.trades_count === null || m?.trades_count === undefined ? '—' : String(m.trades_count),
+        sub: m?.open_positions_remaining && m.open_positions_remaining.length > 0
+          ? `期末未平仓 ${m.open_positions_remaining.length} 笔`
+          : '已平仓笔数',
+        tone: 'plain' as const,
+        lead: false,
+        primary: true,
+      },
+      /* ── 次要指标（紧凑条）：需要核对时再扫一眼，不占卡片 ── */
+      {
         title: '平均盈亏比',
-        value: m?.avg_win_loss_ratio === null || m?.avg_win_loss_ratio === undefined ? '—' : `${m.avg_win_loss_ratio}`,
+        value: fmtNum(m?.avg_win_loss_ratio, 4),
         sub:
           m?.avg_win_loss_ratio === null || m?.avg_win_loss_ratio === undefined
             ? noWin
               ? '无盈利单 ⇒ 未定义（不填假盈利比）'
               : '后台未给出'
             : '平均盈利 / 平均亏损（均值口径）',
-        color: 'text-neutral-100',
+        tone: 'plain' as const,
+        lead: false,
+        primary: false,
       },
       {
         title: 'Profit Factor',
-        value: m?.profit_factor === null || m?.profit_factor === undefined ? '—' : `${m.profit_factor}`,
+        value: fmtNum(m?.profit_factor, 4),
         sub: noWin ? '0：无盈利单；Σ盈 / |Σ亏|（聚合口径）' : 'Σ盈 / |Σ亏|（聚合口径）',
-        color: 'text-neutral-100',
+        tone: 'plain' as const,
+        lead: false,
+        primary: false,
       },
       {
-        title: '交易次数',
-        value: m?.trades_count === null || m?.trades_count === undefined ? '—' : String(m.trades_count),
-        sub: m?.open_positions_remaining && m.open_positions_remaining.length > 0
-          ? `期末仍有未平仓 ${m.open_positions_remaining.length} 笔`
-          : '已平仓笔数',
-        color: 'text-neutral-100',
-      },
-      {
-        title: '手续费合计',
+        title: '手续费',
         value: fmtUsd(m?.total_fees, 2),
         sub: `入场 ${fmtNum(m?.total_entry_fee, 2)} + 出场 ${fmtNum(m?.total_exit_fee, 2)}`,
-        color: 'text-neutral-300',
+        tone: 'muted' as const,
+        lead: false,
+        primary: false,
       },
       {
-        title: '资金费合计',
+        title: '资金费',
         value: fmtUsd(m?.total_funding_fee, 2),
         sub: `${m?.funding_events_total ?? '—'} 笔真实结算事件（settled）`,
-        color: 'text-neutral-300',
+        tone: 'muted' as const,
+        lead: false,
+        primary: false,
       },
     ];
   }, [m, wins]);
@@ -1089,6 +1293,13 @@ export const BacktestWorkbench: React.FC = () => {
     return Object.entries(out).sort((a, b) => b[1] - a[1]);
   }, [rejectedRows]);
 
+  /** 资金费结算事件（chart 载荷内真实账本 funding 事件；与 /metrics 资金费合计同源）。 */
+  const fundingEvents = useMemo(() => chartPayload?.funding_events ?? [], [chartPayload]);
+  const fundingSum = useMemo(() => {
+    if (fundingEvents.length === 0) return null;
+    return fundingEvents.reduce((s, f) => s + (Number.isFinite(f.amount) ? f.amount : 0), 0);
+  }, [fundingEvents]);
+
   /** 运行列表新旧归属（来自列表响应 `retirement`；缺失 ⇒ 不推断）。 */
   const retirement: LabRetirementInfo | null = list.data?.retirement ?? null;
   const excludedLegacy = list.data?.excluded_legacy ?? [];
@@ -1108,55 +1319,147 @@ export const BacktestWorkbench: React.FC = () => {
   const formVersions = registry?.signal_versions ?? null;
 
   return (
-    <div
-      className="flex flex-col min-h-full gap-2.5 p-3 bg-neutral-100 text-neutral-800"
-      data-testid="lab-workbench"
-    >
-      {/* ══ ① 配置与运行 ══ */}
-      <SectionCard
-        title="① 运行配置（唯一策略 · 唯一标的 · UTC 半开区间）"
-        testid="lab-config"
-        right={
-          <div className="flex flex-wrap items-center gap-2">
-            <Chip tone="info">{LAB_STRATEGY_ID}</Chip>
-            {formVersions && (
-              <Chip>
-                信号 {formVersions.signal ?? '—'} · 核心 {formVersions.core ?? '—'} · 执行 {formVersions.exec_core ?? '—'}
-              </Chip>
+    <div className="ds-page" data-testid="lab-workbench">
+      {/*
+        当前结果工具条（《设计规范》第 16 节）。
+        选中的 run 会决定下面 ③④⑤ 全部内容，但配置区在页首、结果区在页中，
+        不常驻就会「滚到中间忘了在看哪一次运行」。sticky 在页头之下，随时可见。
+      */}
+      {/*
+        当前结果工具条（《设计规范》第 16 节）。
+        选中的 run 会决定下面 ③④⑤ 全部内容，但配置区在页首、结果区在页中，
+        不常驻就会「滚到中间忘了在看哪一次运行」。sticky 在页头之下，随时可见。
+
+        2026-10-16 精简：原「收益指标」独立横条**并入本条** —— 两者都在讲同一个 run 的
+        净收益 / 回撤 / 笔数，属于重复；现为「4 个主指标常显 + 4 个次要指标一键展开」。
+      */}
+      <div className="ds-toolbar ds-toolbar--dense" data-testid="lab-run-context">
+        <span className="ds-toolbar__label">当前结果</span>
+        {!selectedRunId ? (
+          <span className="text-[11px] text-neutral-500">
+            未选择运行 · 在下方「实验记录」点一行，或点上方「运行回测」。
+          </span>
+        ) : (
+          <>
+            <span className="ds-badge ds-badge--accent" title={selectedRunId}>
+              {selectedRunId}
+            </span>
+            <span className={`ds-badge ${statusTone(detailStatus)}`}>{detailStatus ?? '—'}</span>
+            <span className={`ds-badge ${qualityOkOfRun ? 'ds-badge--pos' : 'ds-badge--neg'}`}>
+              质量：{qualityOkOfRun ? '通过' : (qualityStatusOfRun ?? (quality.loading ? '读取中' : '未通过'))}
+            </span>
+            <span className="ds-toolbar__divider" />
+            {detailStatus !== 'succeeded' ? (
+              <>
+                <span className="ds-badge ds-badge--warn">结果未就绪</span>
+                {detail.data?.failure_reason && (
+                  <span className="text-[11px] text-rose-600">失败原因：{detail.data.failure_reason}</span>
+                )}
+                {(detailStatus === 'queued' || detailStatus === 'running') && (
+                  <span className="text-[11px] text-neutral-400">正在轮询…</span>
+                )}
+              </>
+            ) : metrics.error ? (
+              <span className="ds-badge ds-badge--neg">指标取数失败（不得视为成绩）：{metrics.error}</span>
+            ) : metrics.loading && !metrics.data ? (
+              <span className="text-[11px] text-neutral-500">正在读取该 run 的真实指标…</span>
+            ) : (
+              <>
+                {metricCards
+                  .filter((c) => c.primary)
+                  .map((c) => (
+                    <span key={c.title} className="ds-mi" title={c.sub}>
+                      <span className="ds-mi__k">{c.title}</span>
+                      <span className={c.tone === 'plain' ? 'ds-mi__v' : `ds-mi__v ds-mi__v--${c.tone}`}>
+                        {c.value}
+                      </span>
+                    </span>
+                  ))}
+                <button
+                  type="button"
+                  className="ds-btn ds-btn--ghost ds-btn--sm"
+                  aria-pressed={showMoreMetrics}
+                  onClick={() => setShowMoreMetrics((v) => !v)}
+                  data-testid="lab-metrics-more"
+                  title="平均盈亏比 / Profit Factor / 手续费 / 资金费"
+                >
+                  {showMoreMetrics ? '▾' : '▸'} 更多指标
+                </button>
+                {showMoreMetrics &&
+                  metricCards
+                    .filter((c) => !c.primary)
+                    .map((c) => (
+                      <span key={c.title} className="ds-mi" title={c.sub}>
+                        <span className="ds-mi__k">{c.title}</span>
+                        <span className={c.tone === 'plain' ? 'ds-mi__v' : `ds-mi__v ds-mi__v--${c.tone}`}>
+                          {c.value}
+                        </span>
+                      </span>
+                    ))}
+                {metrics.loading && <span className="text-[10px] text-neutral-400">刷新中…</span>}
+              </>
             )}
-            <button
-              type="button"
-              onClick={() => void list.reload()}
-              className="flex items-center gap-1 px-2 py-1 rounded border border-neutral-200 bg-white text-[11px] text-neutral-300 hover:bg-neutral-50"
-            >
-              <RefreshCw className={`w-3 h-3 ${list.loading ? 'animate-spin' : ''}`} /> 刷新实验列表
-            </button>
-          </div>
-        }
-      >
-        {/* ── 第 1 行：交易对 / 交易所 / 市场 / 周期 ── */}
-        <div className="flex flex-wrap items-end gap-x-3 gap-y-2">
+          </>
+        )}
+
+        <span className="ds-toolbar__divider" />
+
+        {/* 更多视图：原先单占一条满宽横条，与「当前结果」同属"本页看什么"的控件 ⇒ 并入本条。
+            放在指标条件分支**之外**，保证任何状态下这排按钮都在。 */}
+        <span className="ds-toolbar__label">更多视图</span>
+        {(
+          [
+            ['identity', '结果身份'],
+            ['orders', `订单明细${orderRows.length ? ` (${orderRows.length})` : ''}`],
+            ['rejected', `拒单明细${rejectedRows.length ? ` (${rejectedRows.length})` : ''}`],
+            ['funding', `资金费结算${fundingEvents.length ? ` (${fundingEvents.length})` : ''}`],
+            ['audit', '口径与审计'],
+          ] as [string, string][]
+        ).map(([key, label]) => (
+          <button
+            key={key}
+            type="button"
+            className="ds-btn ds-btn--ghost ds-btn--sm"
+            aria-pressed={openPanel === key}
+            onClick={() => togglePanel(key)}
+            data-testid={`lab-panel-${key}`}
+          >
+            {openPanel === key ? '▾ ' : '▸ '}
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {/* ══ ① 运行配置（**单行**：选标的 + 定窗口 + 点运行；其余进「高级设置」）══ */}
+      <div className="ds-card" data-testid="lab-config" data-lab-section="lab-config">
+        <div className="ds-bar">
+          <span className="ds-bar__label">运行配置</span>
           <label
-            className="block space-y-0.5 w-32"
+            className="block w-32"
             title="单标的；建议取自工作台活动池，也可手工输入（后台按真实数据独立校验）"
           >
             <span className="text-[10px] text-neutral-500 flex items-center gap-1 whitespace-nowrap">
               交易对
-              <span className={`font-mono ${symbolInPool ? 'text-emerald-600' : 'text-amber-700'}`}>
-                {pool.loading
-                  ? '池读取中'
-                  : poolSymbols.length > 0
-                    ? symbolInPool
-                      ? '在池内'
-                      : '不在池内'
-                    : '池未取到'}
-              </span>
+              <span
+                className={`w-1.5 h-1.5 rounded-full ${
+                  pool.loading ? 'bg-neutral-400' : symbolInPool ? 'bg-emerald-500' : 'bg-amber-500'
+                }`}
+                title={
+                  pool.loading
+                    ? '活动池读取中'
+                    : poolSymbols.length === 0
+                      ? '池未取到'
+                      : symbolInPool
+                        ? '在活动池内'
+                        : '不在活动池内（后台仍会独立校验）'
+                }
+              />
             </span>
             <input
               list="lab-symbol-options"
               value={form.symbol}
               onChange={(e) => setForm((f) => ({ ...f, symbol: e.target.value.toUpperCase() }))}
-              className="w-full px-1.5 py-1 text-xs rounded border border-neutral-200 bg-white text-neutral-200 focus:outline-none focus:border-emerald-500 font-mono"
+              className="ds-input"
               data-testid="lab-symbol-input"
             />
             <datalist id="lab-symbol-options">
@@ -1166,119 +1469,140 @@ export const BacktestWorkbench: React.FC = () => {
             </datalist>
           </label>
 
-          <OptionRow
-            label="交易所"
-            value={form.exchange}
-            options={LAB_EXCHANGE_OPTIONS}
-            onChange={(v) => setForm((f) => ({ ...f, exchange: v }))}
-          />
-          <OptionRow
-            label="市场"
-            value={form.market}
-            options={LAB_MARKET_OPTIONS}
-            onChange={(v) => setForm((f) => ({ ...f, market: v }))}
-          />
-          <OptionRow
-            label="信号周期"
-            value={form.signalTf}
-            options={LAB_SIGNAL_TF_OPTIONS}
-            onChange={(v) => setForm((f) => ({ ...f, signalTf: v }))}
-          />
-          <OptionRow
-            label="执行周期"
-            value={form.execTf}
-            options={LAB_EXEC_TF_OPTIONS}
-            onChange={(v) => setForm((f) => ({ ...f, execTf: v }))}
-          />
-        </div>
+          {showAdvanced && (
+            <>
+              <OptionRow
+                label="交易所"
+                value={form.exchange}
+                options={LAB_EXCHANGE_OPTIONS}
+                onChange={(v) => setForm((f) => ({ ...f, exchange: v }))}
+              />
+              <OptionRow
+                label="市场"
+                value={form.market}
+                options={LAB_MARKET_OPTIONS}
+                onChange={(v) => setForm((f) => ({ ...f, market: v }))}
+              />
+              <OptionRow
+                label="信号周期"
+                value={form.signalTf}
+                options={LAB_SIGNAL_TF_OPTIONS}
+                onChange={(v) => setForm((f) => ({ ...f, signalTf: v }))}
+              />
+              <OptionRow
+                label="执行周期"
+                value={form.execTf}
+                options={LAB_EXEC_TF_OPTIONS}
+                onChange={(v) => setForm((f) => ({ ...f, execTf: v }))}
+              />
+            </>
+          )}
 
-        {/* ── 第 2 行：UTC 起止 / 预热 / 运行 ── */}
-        <div className="flex flex-wrap items-end gap-x-3 gap-y-2 mt-2.5">
-          <label className="block space-y-0.5 w-40" title="半开区间左端（含）；须对齐 15m 网格（分钟 00/15/30/45）">
+          <span className="ds-bar__sep" />
+
+          <label className="block w-40" title="半开区间左端（含）；须对齐 15m 网格（分钟 00/15/30/45）">
             <span className="text-[10px] text-neutral-500">窗口起点 UTC</span>
             <input
               value={form.windowStart}
               onChange={(e) => setForm((f) => ({ ...f, windowStart: e.target.value }))}
               placeholder="2026-10-09T00:00"
-              className="w-full px-1.5 py-1 text-xs rounded border border-neutral-200 bg-white text-neutral-200 focus:outline-none focus:border-emerald-500 font-mono"
+              className="ds-input"
               data-testid="lab-window-start"
             />
-            <span className="text-[10px] text-neutral-400 block truncate">{fmtUtc(windowStartMs)} UTC</span>
           </label>
-          <label className="block space-y-0.5 w-40" title="半开区间右端（不含）；须对齐 15m 网格；跨度至少 1 天">
+          <span className="text-neutral-400 text-[11px] pb-2">→</span>
+          <label className="block w-40" title="半开区间右端（不含）；须对齐 15m 网格；跨度至少 1 天">
             <span className="text-[10px] text-neutral-500">窗口终点 UTC</span>
             <input
               value={form.windowEnd}
               onChange={(e) => setForm((f) => ({ ...f, windowEnd: e.target.value }))}
               placeholder="2026-10-16T00:00"
-              className="w-full px-1.5 py-1 text-xs rounded border border-neutral-200 bg-white text-neutral-200 focus:outline-none focus:border-emerald-500 font-mono"
+              className="ds-input"
               data-testid="lab-window-end"
             />
-            <span className="text-[10px] text-neutral-400 block truncate">{fmtUtc(windowEndMs)} UTC</span>
           </label>
-          <label className="block space-y-0.5 w-24" title="信号 bar 根数；留空 = 后台自动。预热段只喂数据不交易，后台会拒绝静默降级">
-            <span className="text-[10px] text-neutral-500">预热根数</span>
-            <input
-              value={form.warmup}
-              onChange={(e) => setForm((f) => ({ ...f, warmup: e.target.value }))}
-              placeholder="自动"
-              className="w-full px-1.5 py-1 text-xs rounded border border-neutral-200 bg-white text-neutral-200 focus:outline-none focus:border-emerald-500 font-mono"
-            />
-          </label>
-          <span className="text-[10px] text-neutral-400 pb-1.5 whitespace-nowrap" title="执行周期明确为 15m bar（相位 A→E，见执行视图口径）">
-            执行按 15m bar 级
-          </span>
-          <div className="flex flex-col gap-1">
-            <button
-              type="button"
-              onClick={() => void onSubmit()}
-              disabled={runLocked || blockingErrors.length > 0}
-              className={`flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-bold border transition-colors ${
-                runLocked || blockingErrors.length > 0
-                  ? 'bg-neutral-50 text-neutral-400 border-neutral-200 cursor-not-allowed'
-                  : 'bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700'
-              }`}
-              data-testid="lab-run-button"
-            >
-              <Play className="w-3.5 h-3.5" />
-              {creating ? '提交中…' : submittedPending ? `运行中（${submittedStatus}）…` : '运行回测'}
-            </button>
-            {submittedRunId ? (
-              <div
-                className={`text-[10px] rounded border px-1.5 py-1 max-w-[22rem] ${
-                  submittedPending
-                    ? 'bg-sky-50 border-sky-200 text-sky-800'
-                    : 'bg-neutral-50 border-neutral-200 text-neutral-400'
-                }`}
-                data-testid="lab-run-progress"
-              >
-                本页提交：<span className="font-mono">{submittedRunId}</span> · 状态 <b>{submittedStatus ?? '—'}</b>
-                {submittedPending ? '（轮询中；进入终态前按钮保持禁用）' : '（已进入终态，可再次运行）'}
-              </div>
-            ) : (
-              <span className="text-[10px] text-neutral-400">结果永久保存为实验记录</span>
-            )}
+
+          {showAdvanced && (
+            <label className="block w-24" title="信号 bar 根数；留空 = 后台自动。预热段只喂数据不交易">
+              <span className="text-[10px] text-neutral-500">预热根数</span>
+              <input
+                value={form.warmup}
+                onChange={(e) => setForm((f) => ({ ...f, warmup: e.target.value }))}
+                placeholder="自动"
+                className="ds-input"
+              />
+            </label>
+          )}
+
+          <button
+            type="button"
+            onClick={() => void onSubmit()}
+            disabled={runLocked || blockingErrors.length > 0}
+            className="ds-btn ds-btn--primary"
+            data-testid="lab-run-button"
+          >
+            <Play className="w-3.5 h-3.5" />
+            {creating ? '提交中…' : submittedPending ? `运行中（${submittedStatus}）…` : '运行回测'}
+          </button>
+
+          <span className="ds-pagehead__spacer" />
+
+          <button
+            type="button"
+            className="ds-btn ds-btn--ghost ds-btn--sm"
+            aria-pressed={showAdvanced}
+            onClick={() => setShowAdvanced((v) => !v)}
+            data-testid="lab-advanced-toggle"
+            title={
+              formVersions
+                ? `信号 ${formVersions.signal ?? '—'} · 核心 ${formVersions.core ?? '—'} · 执行 ${formVersions.exec_core ?? '—'}`
+                : undefined
+            }
+          >
+            {showAdvanced ? '收起高级设置' : '高级设置'}
+          </button>
+          <button
+            type="button"
+            onClick={() => void list.reload()}
+            className="ds-btn ds-btn--secondary ds-btn--sm"
+          >
+            <RefreshCw className={`w-3 h-3 ${list.loading ? 'animate-spin' : ''}`} /> 刷新
+          </button>
+        </div>
+
+        {submittedRunId && (
+          <div
+            className={`ds-note ${submittedPending ? 'ds-note--info' : ''}`}
+            style={{ margin: '0 12px 8px' }}
+            data-testid="lab-run-progress"
+          >
+            本页提交：<span className="font-mono">{submittedRunId}</span> · 状态 <b>{submittedStatus ?? '—'}</b>
+            {submittedPending ? '（轮询中；进入终态前按钮保持禁用）' : '（已进入终态，可再次运行）'}
           </div>
-        </div>
+        )}
 
-        {/* ── 第 3 行：成本（一行，单位与等价换算已标注）── */}
-        <div className="mt-2.5 pt-2.5 border-t border-neutral-100 flex flex-wrap items-end gap-x-3 gap-y-2">
-          <span className="text-[10px] font-bold text-neutral-300 pb-1 shrink-0" title="单位已标注；参数留空 = 沿用后台冻结默认值">
-            成本
-          </span>
-          {LAB_PARAM_SPECS.filter((s) => s.group === 'exec_cost').map((spec) => (
-            <div key={spec.key} className="w-48">
-              <ParamField spec={spec} value={form.params[spec.key] ?? ''} onChange={(v) => setParam(spec.key, v)} />
-            </div>
-          ))}
-        </div>
+        {/* ── 高级设置区（成本 / 风险与策略参数）── */}
+        {showAdvanced && (
+          <div className="ds-card__body" style={{ paddingTop: 0 }}>
+        {/* ── 成本（高级设置内；单位与等价换算已标注）── */}
+        <div className="pt-2.5 border-t border-neutral-100 flex flex-wrap items-end gap-x-3 gap-y-2">
+            <span className="text-[10px] font-bold text-neutral-300 pb-1 shrink-0" title="参数留空 = 沿用后台冻结默认值">
+              成本
+            </span>
+            {LAB_PARAM_SPECS.filter((s) => s.group === 'exec_cost').map((spec) => (
+              <div key={spec.key} className="w-48">
+                <ParamField spec={spec} value={form.params[spec.key] ?? ''} onChange={(v) => setParam(spec.key, v)} />
+              </div>
+            ))}
+          </div>
 
-        {/* ── 风险与策略参数（默认折叠；标题行保留风险边界摘要）── */}
+        {/* ── 风险与策略参数（高级设置内；标题行保留风险边界摘要）── */}
         <div className="mt-2.5 pt-2.5 border-t border-neutral-100">
           <button
             type="button"
             onClick={() => setShowSignalParams((s) => !s)}
-            className="w-full text-left text-[11px] font-bold text-neutral-200 hover:text-emerald-700"
+            className="ds-btn ds-btn--ghost"
+            style={{ width: '100%', justifyContent: 'flex-start', height: 'auto', padding: '4px 6px' }}
             data-testid="lab-params-toggle"
           >
             {showSignalParams ? '▾' : '▸'} 风险与策略参数（白名单校验）
@@ -1312,13 +1636,585 @@ export const BacktestWorkbench: React.FC = () => {
             </div>
           )}
         </div>
+          </div>
+        )}
 
-        {/* ── 运行配置与审计详情（默认折叠：不挡指标与曲线）── */}
-        <details className="mt-2.5 border border-neutral-200 rounded bg-neutral-50" data-testid="lab-audit-details">
-          <summary className="cursor-pointer select-none px-2 py-1 text-[11px] font-bold text-neutral-300">
+        {blockingErrors.length > 0 && (
+          <div className="ds-note ds-note--neg ds-note--col" style={{ margin: '8px 12px 10px' }} data-testid="lab-form-errors">
+            <div className="font-bold">提交前校验未通过（后台仍会独立校验）：</div>
+            <ul className="list-disc pl-4">
+              {blockingErrors.map((e, i) => (
+                <li key={i}>{e}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {createErrors.length > 0 && (
+          <div className="ds-note ds-note--neg ds-note--col" style={{ margin: '8px 12px 10px' }} data-testid="lab-create-errors">
+            <div className="font-bold">后台拒绝创建（原样显示后台原因，失败保留）：</div>
+            <ul className="list-disc pl-4">
+              {createErrors.map((e, i) => (
+                <li key={i}>{e}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {createNotice && (
+          <div className="ds-note ds-note--info" style={{ margin: '8px 12px 10px' }} data-testid="lab-create-notice">
+            {createNotice}
+          </div>
+        )}
+      </div>
+
+      {/* ══ ② 收益指标 已并入顶部「当前结果」工具条（见页首注释）——
+             原先单占一条满宽横条，且与工具条重复显示净收益 / 回撤 / 笔数。 ══ */}
+
+      {/* ══ 更多视图（按需展开，单选）已并入 ① 运行配置条 ——
+             两者都是「控件」，同一条更省一行，也不影响按需面板的字段完整性。 ══ */}
+
+      {/* ══ 结果身份：所选 run 的实际时间 / 配置 / 版本（不是表单未运行的值）══ */}
+      {openPanel === 'identity' && selectedRunId && detail.data && (
+        <SectionCard title="结果身份" testid="lab-run-identity">
+          {/* 只留 4 个「对不上就会出事」的字段：run_id / 窗口 / 初始资金 / engine 版本 */}
+          <div className="ds-kvgrid ds-kvgrid--4">
+            <KV k="run_id" v={selectedRunId} />
+            <KV k="窗口（UTC）" v={`${fmtUtc(detail.data.window?.win_start_ms)} → ${fmtUtc(detail.data.window?.win_end_ms)}`} />
+            <KV k="初始资金（生效）" v={fmtUsd((detail.data.config?.actual_config?.['initial_equity'] as number) ?? null, 2)} />
+            <KV
+              k="engine"
+              v={`${(detail.data.engine?.['signal_version'] as string) ?? '—'} / ${(detail.data.engine?.['core_version'] as string) ?? '—'} / ${(detail.data.engine?.['exec_core_version'] as string) ?? '—'}`}
+            />
+          </div>
+
+          <details className="ds-details" style={{ marginTop: 8 }} data-testid="lab-run-identity-more">
+            <summary>其余身份字段（状态 / 时间 / 标的 / 周期 / 费率 / 滑点）</summary>
+            <div className="ds-details__body">
+              <div className="ds-kvgrid ds-kvgrid--4">
+                <KV k="status" v={detail.data.status ?? '—'} />
+                <KV k="created_at" v={fmtIsoUtc(detail.data.created_at)} />
+                <KV k="finished_at" v={fmtIsoUtc(detail.data.finished_at)} />
+                <KV
+                  k="标的 / 所 / 市场"
+                  v={`${detail.data.window?.symbol ?? '—'} · ${detail.data.window?.exchange ?? '—'} / ${detail.data.window?.market ?? '—'}`}
+                />
+                <KV
+                  k="周期（信号 / 执行）"
+                  v={`${detail.data.window?.signal_timeframe ?? '—'} / ${detail.data.window?.exec_timeframe ?? '—'}`}
+                />
+                <KV
+                  k="窗口天数 / 预热"
+                  v={`${fmtNum(detail.data.window?.window_days, 2)} 天 / ${detail.data.window?.warmup_bars ?? '—'} 根`}
+                />
+                <KV k="手续费率（生效）" v={String((detail.data.config?.actual_config?.['fee_rate'] as number) ?? '—')} />
+                <KV k="滑点 bps（生效）" v={String((detail.data.config?.actual_config?.['slippage_bps'] as number) ?? '—')} />
+              </div>
+            </div>
+          </details>
+
+          {/* 审计明细：hash / 账本行数 / 原始参数 JSON / 输入快照 —— 默认折叠，不挡指标与曲线 */}
+          <details className="ds-details" style={{ marginTop: 8 }} data-testid="lab-run-audit">
+            <summary>代码 / 输入 hash · 账本行数 · 生效参数原始 JSON · 输入快照</summary>
+            <div className="ds-details__body space-y-1">
+              <div className="ds-kvgrid ds-kvgrid--3">
+                <KV k="signal_params_hash" v={detail.data.hashes?.['signal_params_hash'] ?? '—'} />
+                <KV k="exec_params_hash" v={detail.data.hashes?.['exec_params_hash'] ?? '—'} />
+                <KV k="spec_sha256" v={detail.data.hashes?.['spec_sha256'] ?? '—'} />
+                <KV k="code_sha256" v={detail.data.hashes?.['code_sha256'] ?? '—'} />
+                <KV k="input_sha256" v={detail.data.hashes?.['input_sha256'] ?? '—'} />
+                <KV k="signal_frame_sha256" v={detail.data.hashes?.['signal_frame_sha256'] ?? '—'} />
+                <KV k="experiment_id" v={(detail.data.engine?.['experiment_id'] as string) ?? '—'} />
+                <KV
+                  k="账本行数"
+                  v={detail.data.ledger_counts ? Object.entries(detail.data.ledger_counts).map(([k, v]) => `${k}=${v}`).join(' ') : '—'}
+                />
+              </div>
+              {detail.data.config?.config?.signal_params && (
+                <div className="text-[10px] text-neutral-400 font-mono break-all">
+                  生效 signal_params：{JSON.stringify(detail.data.config.config.signal_params)}
+                </div>
+              )}
+              {detail.data.config?.config?.exec_params && (
+                <div className="text-[10px] text-neutral-400 font-mono break-all">
+                  生效 exec_params：{JSON.stringify(detail.data.config.config.exec_params)}
+                </div>
+              )}
+              {detail.data.snapshot_files && detail.data.snapshot_files.length > 0 && (
+                <div className="text-[10px] text-neutral-400 font-mono break-all">
+                  输入快照：{detail.data.snapshot_files.join(' · ')}
+                </div>
+              )}
+            </div>
+          </details>
+        </SectionCard>
+      )}
+
+      {/* ══ ④ 执行视图 + ③ 资金分析（**左右并排 · 置于页面上部**）══ */}
+      {selectedRunId && detailStatus === 'succeeded' && (
+        <div className="ds-dash">
+          <div className="ds-col-7" data-lab-section="lab-chart">
+            <LabChartPanel
+              chart={chartPayload}
+              loading={chart.loading}
+              error={chart.error}
+              missingReason={chart.data?.missing_reason ?? null}
+              selectedTradeId={selectedTradeId}
+              onSelectTrade={setSelectedTradeId}
+              orders={orderRows}
+            />
+          </div>
+          <div className="ds-col-5" data-lab-section="lab-funding">
+            <LabFundingPanel
+              points={equityPoints}
+              benchmarkSeries={equity.data?.benchmark_equity ?? null}
+              benchmarkMeta={equity.data?.benchmark ?? metrics.data?.benchmark_buy_hold ?? null}
+              metrics={m}
+              monthly={metrics.data?.monthly_returns ?? null}
+              loading={equity.loading}
+              error={equity.error}
+              monthCloseCounts={monthCloseCounts}
+              windowStartMs={detail.data?.window?.win_start_ms ?? null}
+              windowEndMs={detail.data?.window?.win_end_ms ?? null}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* ══ ⑤ 逐笔明细 + ⑥ 实验记录（**左右并排**）══ */}
+      <div className="ds-dash">
+        {selectedRunId && detailStatus === 'succeeded' && (
+          <div className="ds-col-5">
+
+          {/* ⑤ 逐笔明细（点击行 ⇒ 图表定位 + 下方单笔详情） */}
+          <SectionCard
+            title="⑤ 逐笔明细"
+            testid="lab-trades"
+            section="lab-trades"
+            right={
+              <div className="flex items-center gap-2 text-[10px] font-mono">
+                <Chip>共 {tradeRows.length} 笔</Chip>
+                <ColToggle on={!!allCols.trades} onToggle={() => toggleCols('trades')} total={13} />
+                {trades.error && <span className="text-rose-600">逐笔取数错误：{trades.error}</span>}
+              </div>
+            }
+          >
+          <div className="ds-tablewrap" style={{ maxHeight: '17.25rem' }} title="点击任意行 ⇒ 图表定位该笔成交 + 显示单笔详情">
+            <table className={`ds-table ds-table--clickable${allCols.trades ? ' ds-table--all' : ''}`}>
+              <thead>
+                <tr>
+                  <th className="py-1.5 px-2">进场时间</th>
+                  <th className="py-1.5 px-2" data-secondary>出场时间</th>
+                  <th className="py-1.5 px-2">标的</th>
+                  <th className="py-1.5 px-2">方向</th>
+                  <th className="py-1.5 px-2 text-right">开仓价</th>
+                  <th className="py-1.5 px-2 text-right">出场价</th>
+                  <th className="py-1.5 px-2 text-right" data-secondary>数量</th>
+                  <th className="py-1.5 px-2 text-right" data-secondary>毛盈亏</th>
+                  <th className="py-1.5 px-2 text-right" data-secondary>双边手续费</th>
+                  <th className="py-1.5 px-2 text-right" data-secondary>资金费</th>
+                  <th className="py-1.5 px-2 text-right">净盈亏</th>
+                  <th className="py-1.5 px-2 whitespace-nowrap">退出原因</th>
+                  <th className="py-1.5 px-2" data-secondary>trade_id</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tradeRows.length === 0 ? (
+                  <tr>
+                    <td colSpan={allCols.trades ? 13 : 7} className="ds-table__empty">
+                      {trades.loading ? '读取中…' : '无真实成交记录（后台账本为空）——不显示任何演示成绩'}
+                    </td>
+                  </tr>
+                ) : (
+                  tradeRows.map((t) => {
+                    const sel = t.trade_id === selectedTradeId;
+                    return (
+                      <tr
+                        key={t.trade_id}
+                        data-trade-id={t.trade_id}
+                        onClick={() => setSelectedTradeId(t.trade_id)}
+                        aria-selected={sel}
+                      >
+                        <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(t.entry_time_ms)}</td>
+                        <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap" data-secondary>{fmtUtc(t.exit_time_ms)}</td>
+                        <td className="py-1.5 px-2 font-bold text-neutral-100">{t.symbol}</td>
+                        <td className="py-1.5 px-2">
+                          <span className={`ds-badge ${t.direction === 'long' ? 'ds-badge--pos' : 'ds-badge--neg'}`}>
+                            {t.direction === 'long' ? '做多' : t.direction === 'short' ? '做空' : t.direction}
+                          </span>
+                        </td>
+                        <td className="py-1.5 px-2 text-right text-neutral-300">{fmtNum(t.entry_price, 4)}</td>
+                        <td className="py-1.5 px-2 text-right text-neutral-100 font-semibold">{fmtNum(t.exit_price, 4)}</td>
+                        <td className="py-1.5 px-2 text-right" data-secondary>{fmtNum(t.qty, 6)}</td>
+                        <td className="py-1.5 px-2 text-right" data-secondary>{fmtSignedUsd(t.gross_pnl, 2)}</td>
+                        <td className="py-1.5 px-2 text-right text-neutral-400" data-secondary>{fmtUsd(t.fees, 2)}</td>
+                        <td className="py-1.5 px-2 text-right text-neutral-400" data-secondary>{fmtUsd(t.funding_fee, 2)}</td>
+                        <td className={`py-1.5 px-2 text-right font-bold ${t.net_pnl >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
+                          {fmtSignedUsd(t.net_pnl, 2)}
+                        </td>
+                        <td className="py-1.5 px-2 text-neutral-400 whitespace-nowrap" title={t.exit_reason ?? undefined}>
+                          {exitReasonLabel(t.exit_reason)}
+                        </td>
+                        <td className="py-1.5 px-2 text-neutral-400" data-secondary>{t.trade_id}</td>
+                      </tr>
+                    );
+                  })
+                )}
+              </tbody>
+            </table>
+          </div>
+
+          <details className="ds-details" style={{ marginTop: 8 }} open={false} data-testid="lab-trade-detail-fold">
+            <summary>单笔详情（选中某一笔后展开）</summary>
+            <div className="ds-details__body">
+              <LabTradeDetailPanel
+                detail={tradeDetail.data}
+                loading={tradeDetail.loading}
+                error={tradeDetail.error}
+              />
+            </div>
+          </details>
+          </SectionCard>
+          </div>
+        )}
+
+        <div className={selectedRunId && detailStatus === 'succeeded' ? 'ds-col-7' : undefined}>
+      {/* ══ ⑥ 实验记录（永久保存 · 可选择历史 run）══ */}
+      <SectionCard
+        title="⑥ 实验记录"
+        testid="lab-runs"
+        section="lab-runs"
+        right={
+          <div className="flex items-center gap-2 text-[10px] font-mono">
+            <Chip>共 {runs.length} 条</Chip>
+            <ColToggle on={!!allCols.runs} onToggle={() => toggleCols('runs')} total={10} />
+            {activeRun && <Chip tone="info">轮询中：{activeRun.run_id} · {activeRun.status}</Chip>}
+            {list.error && <span className="text-rose-600">列表取数错误：{list.error}</span>}
+          </div>
+        }
+      >
+        {/* 新旧归属：本列表仅含当前策略；旧策略 run 已退役并排除 */}
+        <div
+          className="ds-note ds-note--warn"
+          style={{ marginBottom: 8, columnGap: 12, rowGap: 4, alignItems: 'center' }}
+          data-testid="lab-run-attribution"
+        >
+          <span className="font-bold">新旧归属</span>
+          <span>
+            仅含当前策略 <span className="font-mono">{retirement?.successor_strategy_id ?? LAB_STRATEGY_ID}</span>
+          </span>
+          <span
+            className="text-amber-700"
+            title={
+              (retirement?.retired_strategy_keys
+                ? `已退役旧策略：${retirement.retired_strategy_keys.join(' / ')}${retirement.retired_at ? `（${retirement.retired_at}）` : ''}\n`
+                : '') +
+              (excludedLegacy.length > 0
+                ? `被排除的旧/身份存疑 run：${excludedLegacy.map((x) => x.run_id).join('、')}`
+                : '无被排除 run')
+            }
+          >
+            已退役旧策略与身份存疑 run 共排除 {excludedLegacy.length} 条 · 旧结果不得当成新策略成绩（悬停看明细）
+          </span>
+        </div>
+
+        <div className="ds-tablewrap" style={{ maxHeight: '14.75rem' }}>
+            <table className={`ds-table ds-table--clickable${allCols.runs ? ' ds-table--all' : ''}`}>
+              <thead>
+                <tr>
+                  <th className="py-1.5 px-2">run_id</th>
+                  <th className="py-1.5 px-2">状态</th>
+                  <th className="py-1.5 px-2" data-secondary>归属</th>
+                  <th className="py-1.5 px-2">创建时间（UTC）</th>
+                  <th className="py-1.5 px-2" data-secondary>标的 / 窗口</th>
+                  <th className="py-1.5 px-2 text-right">净收益</th>
+                  <th className="py-1.5 px-2 text-right">回撤</th>
+                  <th className="py-1.5 px-2 text-right">笔数</th>
+                  <th className="py-1.5 px-2" data-secondary>配置 hash</th>
+                  <th className="py-1.5 px-2">失败原因</th>
+                </tr>
+              </thead>
+              <tbody>
+                {runs.length === 0 ? (
+                  <tr>
+                    <td colSpan={allCols.runs ? 10 : 7} className="ds-table__empty">
+                      {list.loading ? '读取中…' : '暂无实验记录'}
+                    </td>
+                  </tr>
+                ) : (
+                  runs.map((r) => {
+                    const sel = r.run_id === selectedRunId;
+                    const h = hashMap[r.run_id];
+                    return (
+                      <tr
+                        key={r.run_id}
+                        data-run-id={r.run_id}
+                        onClick={() => {
+                          didPick.current = true;
+                          setSelectedRunId(r.run_id);
+                        }}
+                        aria-selected={sel}
+                      >
+                        <td className="py-1.5 px-2 text-neutral-200 whitespace-nowrap">{r.run_id}</td>
+                        <td className="py-1.5 px-2">
+                          <span className={`ds-badge ${statusTone(r.status)}`}>{r.status}</span>
+                        </td>
+                        <td className="py-1.5 px-2" data-secondary>
+                          {r.attribution === 'current_strategy' ? (
+                            <span className="ds-badge ds-badge--pos">
+                              当前策略
+                            </span>
+                          ) : (
+                            <span className="ds-badge ds-badge--warn">
+                              身份存疑
+                            </span>
+                          )}
+                        </td>
+                        <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtIsoUtc(r.created_at)}</td>
+                        <td className="py-1.5 px-2 text-neutral-400 whitespace-nowrap" data-secondary>
+                          {(r.symbols ?? []).join(',') || '—'}
+                          {r.window ? ` · ${fmtUtc(r.window.win_start_ms)}→${fmtUtc(r.window.win_end_ms)}` : ''}
+                        </td>
+                        <td className={`py-1.5 px-2 text-right ${(r.net_return_pct ?? 0) >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
+                          {fmtPct(r.net_return_pct, 4)}
+                        </td>
+                        <td className="py-1.5 px-2 text-right text-rose-600">
+                          {r.max_drawdown_pct === null || r.max_drawdown_pct === undefined ? '—' : `-${r.max_drawdown_pct.toFixed(4)}%`}
+                        </td>
+                        <td className="py-1.5 px-2 text-right">{r.trades_count ?? '—'}</td>
+                        <td className="py-1.5 px-2 text-neutral-500" data-secondary title={h?.spec_sha256 ?? '未取到'}>
+                          {h ? shortHash(h.spec_sha256, 10) : '—'}
+                        </td>
+                        <td className="py-1.5 px-2 text-rose-600 max-w-[16rem] truncate" title={r.failure_reason ?? undefined}>
+                          {r.failure_reason ?? '—'}
+                        </td>
+                      </tr>
+                    );
+                  })
+                )}
+              </tbody>
+            </table>
+            <details className="ds-details" style={{ marginTop: 6 }} data-testid="lab-runs-hashnote">
+              <summary>「配置 hash」列为何可能为 —（端点缺口说明）</summary>
+              <div className="ds-details__body text-[10px] text-neutral-400">
+                列表端点 `GET /backtests` 的 summary <b>不含配置 hash</b>（精确缺口：`backtest_api._summary()` 未带
+                `spec_sha256`/`*_params_hash`）⇒ 这里用只读 `GET /backtests/{'{id}'}` 补齐（并发上限 4，最多 30 条）；
+                未取到的显示 —，不伪造。
+              </div>
+            </details>
+        </div>
+
+        {metrics.data?.m4_disclaimer && (
+          /* 边界声明：整段黄色文字太占视野 ⇒ 保留一行结论常显，全文一键展开（信息不删） */
+          <details className="ds-details" style={{ marginTop: 8 }} data-testid="lab-m4-disclaimer">
+            <summary>边界声明 · 本工作台输出不代表正式 M4 通过（展开全文）</summary>
+            <div className="ds-details__body text-[10px] text-amber-800">{metrics.data.m4_disclaimer}</div>
+          </details>
+        )}
+      </SectionCard>
+        </div>
+      </div>
+
+      {/* ══ ⑤b 全局订单 / 成交明细（按需展开）══ */}
+      {openPanel === 'orders' && selectedRunId && detailStatus === 'succeeded' && (
+        <SectionCard
+          title="⑤b 订单 / 成交明细"
+          testid="lab-orders"
+          sub
+          right={
+            <div className="flex items-center gap-2 text-[10px] font-mono">
+              <Chip>共 {orderRows.length} 行</Chip>
+              <ColToggle on={!!allCols.orders} onToggle={() => toggleCols('orders')} total={11} />
+              {orders.error && <span className="text-rose-600">订单取数错误：{orders.error}</span>}
+              {orders.data?.missing_reason && <span className="text-amber-700">{orders.data.missing_reason}</span>}
+            </div>
+          }
+        >
+          <div className="ds-tablewrap" style={{ maxHeight: '18rem' }}>
+            <table className={`ds-table ds-table--clickable${allCols.orders ? ' ds-table--all' : ''}`}>
+              <thead>
+                <tr>
+                  <th className="py-1.5 px-2">时点</th>
+                  <th className="py-1.5 px-2">phase</th>
+                  <th className="py-1.5 px-2" data-secondary>side</th>
+                  <th className="py-1.5 px-2">action</th>
+                  <th className="py-1.5 px-2">标的</th>
+                  <th className="py-1.5 px-2 text-right">价格</th>
+                  <th className="py-1.5 px-2 text-right" data-secondary>数量</th>
+                  <th className="py-1.5 px-2 text-right" data-secondary>手续费</th>
+                  <th className="py-1.5 px-2 text-right" data-secondary>止损价</th>
+                  <th className="py-1.5 px-2" data-secondary>trade_id</th>
+                  <th className="py-1.5 px-2">原因</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orderRows.length === 0 ? (
+                  <tr>
+                    <td colSpan={allCols.orders ? 11 : 6} className="ds-table__empty">
+                      {orders.loading ? '读取中…' : '无真实订单记录（账本 orders 为空）——不显示任何演示数据'}
+                    </td>
+                  </tr>
+                ) : (
+                  orderRows.map((o) => (
+                    <tr key={o.order_id} className="hover:bg-neutral-50">
+                      <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(o.ts_ms)}</td>
+                      <td className="py-1.5 px-2">{o.phase}</td>
+                      <td className="py-1.5 px-2" data-secondary>{o.side}</td>
+                      <td className="py-1.5 px-2">{o.action}</td>
+                      <td className="py-1.5 px-2 font-bold text-neutral-100">{o.symbol}</td>
+                      <td className="py-1.5 px-2 text-right">{fmtNum(o.price, 4)}</td>
+                      <td className="py-1.5 px-2 text-right" data-secondary>{fmtNum(o.qty, 6)}</td>
+                      <td className="py-1.5 px-2 text-right" data-secondary>{fmtNum(o.fee, 6)}</td>
+                      <td className="py-1.5 px-2 text-right" data-secondary>{fmtNum(o.stop_price, 4)}</td>
+                      <td className="py-1.5 px-2 text-neutral-400" data-secondary>{o.trade_id || '—'}</td>
+                      <td className="py-1.5 px-2 text-neutral-500">{o.reason || '—'}</td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+        </SectionCard>
+      )}
+
+      {/* ══ ⑤c 拒单明细（按需展开）══ */}
+      {openPanel === 'rejected' && selectedRunId && detailStatus === 'succeeded' && (
+        <SectionCard
+          title="⑤c 拒单明细"
+          testid="lab-rejected"
+          sub
+          right={
+            <div className="flex items-center gap-2 text-[10px] font-mono">
+              <Chip tone={rejectedRows.length > 0 ? 'warn' : 'neutral'}>共 {rejectedRows.length} 条</Chip>
+              {rejected.error && <span className="text-rose-600">拒单取数错误：{rejected.error}</span>}
+              {rejected.data?.missing_reason && <span className="text-amber-700">{rejected.data.missing_reason}</span>}
+            </div>
+          }
+        >
+          {rejectedByReason.length > 0 && (
+            <div className="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-mono">
+              <span className="text-neutral-500">原因分布：</span>
+              {rejectedByReason.map(([reason, n]) => (
+                <span key={reason} className="ds-badge ds-badge--warn">
+                  {reason} × {n}
+                </span>
+              ))}
+            </div>
+          )}
+          <div className="ds-tablewrap" style={{ maxHeight: '16rem' }}>
+            <table className="ds-table ds-table--clickable">
+              <thead>
+                <tr>
+                  <th className="py-1.5 px-2">时点</th>
+                  <th className="py-1.5 px-2">标的</th>
+                  <th className="py-1.5 px-2">phase</th>
+                  <th className="py-1.5 px-2">原因</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rejectedRows.length === 0 ? (
+                  <tr>
+                    <td colSpan={4} className="ds-table__empty">
+                      {rejected.loading ? '读取中…' : '无真实拒单记录（账本 rejected 为空）——不把「无记录」包装成「无拒单」'}
+                    </td>
+                  </tr>
+                ) : (
+                  rejectedRows.map((r, i) => (
+                    <tr key={`${r.ts_ms}-${r.symbol}-${i}`} className="hover:bg-neutral-50">
+                      <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(r.ts_ms)}</td>
+                      <td className="py-1.5 px-2 font-bold text-neutral-100">{r.symbol}</td>
+                      <td className="py-1.5 px-2">{r.phase}</td>
+                      <td className="py-1.5 px-2 text-amber-800">{r.reason}</td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+        </SectionCard>
+      )}
+
+      {/* ══ ⑤d 资金费结算明细（按需展开）══ */}
+      {openPanel === 'funding' && selectedRunId && detailStatus === 'succeeded' && (
+        <SectionCard
+          title="⑤d 资金费结算明细"
+          testid="lab-funding"
+          sub
+          right={
+            <div className="flex items-center gap-2 text-[10px] font-mono">
+              <Chip>共 {fundingEvents.length} 条</Chip>
+              <ColToggle on={!!allCols.funding} onToggle={() => toggleCols('funding')} total={6} />
+              {fundingSum !== null && m?.total_funding_fee !== null && m?.total_funding_fee !== undefined && (
+                <span
+                  className={`ds-badge ${Math.abs(fundingSum - m.total_funding_fee) < 1e-6 ? 'ds-badge--pos' : 'ds-badge--neg'}`}
+                  title="逐事件求和 vs /metrics.total_funding_fee"
+                >
+                  对账：明细Σ {fmtUsd(fundingSum, 4)} vs 指标 {fmtUsd(m.total_funding_fee, 4)} ·{' '}
+                  {Math.abs(fundingSum - m.total_funding_fee) < 1e-6 ? '一致' : '不一致'}
+                </span>
+              )}
+              {chart.error && <span className="text-rose-600">资金费取数错误：{chart.error}</span>}
+            </div>
+          }
+        >
+          <div className="ds-tablewrap" style={{ maxHeight: '16rem' }}>
+            <table className={`ds-table ds-table--clickable${allCols.funding ? ' ds-table--all' : ''}`}>
+              <thead>
+                <tr>
+                  <th className="py-1.5 px-2">结算时点（UTC）</th>
+                  <th className="py-1.5 px-2">标的</th>
+                  <th className="py-1.5 px-2" data-secondary>trade_id</th>
+                  <th className="py-1.5 px-2 text-right">费率</th>
+                  <th className="py-1.5 px-2 text-right" data-secondary>标记价 mark</th>
+                  <th className="py-1.5 px-2 text-right">金额（USD）</th>
+                </tr>
+              </thead>
+              <tbody>
+                {fundingEvents.length === 0 ? (
+                  <tr>
+                    <td colSpan={allCols.funding ? 6 : 4} className="ds-table__empty">
+                      {chart.loading ? '读取中…' : '该 run 无真实资金费结算事件（账本 funding 为空）——不显示任何演示数据'}
+                    </td>
+                  </tr>
+                ) : (
+                  fundingEvents.map((f, i) => (
+                    <tr key={`${f.t}-${f.trade_id}-${i}`} className="hover:bg-neutral-50">
+                      <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(f.t)}</td>
+                      <td className="py-1.5 px-2 font-bold text-neutral-100">{chartPayload?.symbol ?? '—'}</td>
+                      <td className="py-1.5 px-2 text-neutral-400" data-secondary>{f.trade_id || '—'}</td>
+                      <td className="py-1.5 px-2 text-right">{fmtNum(f.rate, 8)}</td>
+                      <td className="py-1.5 px-2 text-right" data-secondary>{fmtNum(f.mark, 4)}</td>
+                      <td className="py-1.5 px-2 text-right">{fmtUsd(f.amount, 6)}</td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+        </SectionCard>
+      )}
+
+      {/* ══ 口径与审计（按需展开：指标口径 / 质量核对明细 / M4 门禁 / 边界声明）══ */}
+      {openPanel === 'audit' && (
+        <SectionCard title="口径与审计 · 指标口径 / 质量核对 / M4 门禁 / 边界声明" testid="lab-audit" section="lab-audit">
+          {(m?.note || m?.sharpe_basis) && (
+            <div className="ds-kvgrid ds-kvgrid--2" style={{ marginBottom: 10 }}>
+              {m?.note && <KV k="指标口径" v={m.note} mono={false} />}
+              {m?.sharpe_basis && (
+                <KV
+                  k="夏普（完整等间隔 UTC 逐日 · 年化 √365）"
+                  v={fmtNum(m.sharpe_annualized_sqrt365, 4)}
+                />
+              )}
+            </div>
+          )}
+
+        {/* ── 运行配置与审计详情（默认折叠）── */}
+        <details className="ds-details" style={{ marginBottom: 10 }} data-testid="lab-audit-details">
+          <summary>
             运行配置与审计详情（API 路径 / 请求体 / 后台线程 / 参数代码名 / 原始 JSON）
           </summary>
-          <div className="px-2 pb-2 pt-1 space-y-1 text-[10px] font-mono text-neutral-400 border-t border-neutral-200">
+          <div className="ds-details__body space-y-1">
             <div>
               列表 / 详情：<span className="text-neutral-200">GET /api/v1/backtests</span>、
               <span className="text-neutral-200">GET /api/v1/backtests/{'{id}'}</span>（只读，不触发计算）
@@ -1356,559 +2252,43 @@ export const BacktestWorkbench: React.FC = () => {
           </div>
         </details>
 
-        {blockingErrors.length > 0 && (
-          <div className="mt-2 text-[11px] text-rose-700 bg-rose-50 border border-rose-200 rounded px-2 py-1.5" data-testid="lab-form-errors">
-            <div className="font-bold">提交前校验未通过（后台仍会独立校验）：</div>
-            <ul className="list-disc pl-4">
-              {blockingErrors.map((e, i) => (
-                <li key={i}>{e}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {createErrors.length > 0 && (
-          <div className="mt-2 text-[11px] text-rose-700 bg-rose-50 border border-rose-200 rounded px-2 py-1.5" data-testid="lab-create-errors">
-            <div className="font-bold">后台拒绝创建（原样显示后台原因，失败保留）：</div>
-            <ul className="list-disc pl-4">
-              {createErrors.map((e, i) => (
-                <li key={i}>{e}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {createNotice && (
-          <div className="mt-2 text-[11px] text-sky-800 bg-sky-50 border border-sky-200 rounded px-2 py-1.5" data-testid="lab-create-notice">
-            {createNotice}
-          </div>
-        )}
-      </SectionCard>
-
-      {/* ══ ② 指标 ══ */}
-      <SectionCard
-        title="② 收益指标（所选 run 的真实结果）"
-        testid="lab-metrics"
-        right={
-          <div className="flex flex-wrap items-center gap-2 text-[10px] font-mono">
-            {selectedRunId ? (
-              <>
-                <Chip tone={detailStatus === 'succeeded' ? 'ok' : detailStatus === 'failed' ? 'bad' : 'warn'}>
-                  run_id {selectedRunId}
-                </Chip>
-                <span className={`px-1.5 py-0.5 rounded border ${statusStyle(detailStatus)}`}>
-                  执行：{detailStatus === 'succeeded' ? '已完成' : (detailStatus ?? '—')}
-                </span>
-                {/* 「执行完成」与「质量通过」分开标注：HTTP 200 的执行完成不代表质量通过 */}
-                <span
-                  className={`px-1.5 py-0.5 rounded border ${
-                    qualityOkOfRun
-                      ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                      : 'bg-rose-50 text-rose-700 border-rose-200'
-                  }`}
-                  title="质量通过需同时满足：运行 succeeded + quality.status=ok + 有 data_quality 明细"
-                >
-                  质量：{qualityOkOfRun ? '通过' : (qualityStatusOfRun ?? (quality.loading ? '读取中' : '未通过'))}
-                </span>
-              </>
-            ) : (
-              <span className="text-neutral-400">未选择运行</span>
-            )}
-            {metrics.loading && <span className="text-neutral-400">读取中…</span>}
-            {metrics.error && <span className="text-rose-600">指标取数错误：{metrics.error}</span>}
-          </div>
-        }
-      >
-        {!selectedRunId ? (
-          <div className="text-[11px] text-neutral-500">先在下方「实验记录」选择一次运行，或在上方点击「运行回测」。</div>
-        ) : detailStatus !== 'succeeded' ? (
-          <div className="text-[11px] text-amber-800 bg-amber-50 border border-amber-200 rounded px-2 py-1.5">
-            该运行状态为 <b>{detailStatus ?? '—'}</b>，结果尚未就绪（GET 只读、不触发计算）。
-            {detail.data?.failure_reason && <div className="mt-0.5 text-rose-700">失败原因：{detail.data.failure_reason}</div>}
-            {(detailStatus === 'queued' || detailStatus === 'running') && <div className="mt-0.5">正在轮询状态…</div>}
-          </div>
-        ) : metrics.loading && !metrics.data ? (
-          <div className="text-[11px] text-neutral-500" data-testid="lab-metrics-loading">
-            正在读取该 run 的真实指标…（未取到才显示 —；此处不预填任何 0 / 假值）
-          </div>
-        ) : metrics.error ? (
-          <div className="text-[11px] text-rose-700 bg-rose-50 border border-rose-200 rounded px-2 py-1.5">
-            指标取数失败（不得视为成绩）：{metrics.error}
-          </div>
-        ) : (
-          <div className="space-y-2">
-            <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-2">
-              {metricCards.map((c) => (
-                <div key={c.title} className="p-2.5 bg-white border border-neutral-200 rounded-lg space-y-1 shadow-sm">
-                  <span className="text-[11px] font-medium text-neutral-500 block truncate" title={c.title}>{c.title}</span>
-                  <div className={`text-lg font-bold font-mono tracking-tight ${c.color}`}>{c.value}</div>
-                  <span className="text-[10px] text-neutral-400 block" title={c.sub}>{c.sub}</span>
-                </div>
-              ))}
-            </div>
-            {m?.note && <div className="text-[10px] text-neutral-500">口径：{m.note}</div>}
-            {m?.sharpe_basis && (
-              <div className="text-[10px] text-neutral-500 font-mono">
-                夏普 {fmtNum(m.sharpe_annualized_sqrt365, 4)} · 基准：{m.sharpe_basis}
-              </div>
-            )}
-          </div>
-        )}
-      </SectionCard>
-
-      {/* ══ 结果身份：所选 run 的实际时间 / 配置 / 版本（不是表单未运行的值）══ */}
-      {selectedRunId && detail.data && (
-        <SectionCard
-          title="结果身份 · 所选 run 的实际时间 / 配置 / 版本（不用表单未运行的新值冒充结果配置）"
-          testid="lab-run-identity"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-1 font-mono text-[11px]">
-            <KV k="run_id" v={selectedRunId} />
-            <KV k="status" v={detail.data.status ?? '—'} />
-            <KV k="created_at" v={fmtIsoUtc(detail.data.created_at)} />
-            <KV k="finished_at" v={fmtIsoUtc(detail.data.finished_at)} />
-            <KV
-              k="标的 / 所 / 市场"
-              v={`${detail.data.window?.symbol ?? '—'} · ${detail.data.window?.exchange ?? '—'} / ${detail.data.window?.market ?? '—'}`}
-            />
-            <KV
-              k="周期（信号 / 执行）"
-              v={`${detail.data.window?.signal_timeframe ?? '—'} / ${detail.data.window?.exec_timeframe ?? '—'}`}
-            />
-            <KV k="窗口（UTC）" v={`${fmtUtc(detail.data.window?.win_start_ms)} → ${fmtUtc(detail.data.window?.win_end_ms)}`} />
-            <KV
-              k="窗口天数 / 预热"
-              v={`${fmtNum(detail.data.window?.window_days, 2)} 天 / ${detail.data.window?.warmup_bars ?? '—'} 根`}
-            />
-            <KV k="初始资金（生效）" v={fmtUsd((detail.data.config?.actual_config?.['initial_equity'] as number) ?? null, 2)} />
-            <KV k="手续费率（生效）" v={String((detail.data.config?.actual_config?.['fee_rate'] as number) ?? '—')} />
-            <KV k="滑点 bps（生效）" v={String((detail.data.config?.actual_config?.['slippage_bps'] as number) ?? '—')} />
-            <KV
-              k="engine 版本"
-              v={`${(detail.data.engine?.['signal_version'] as string) ?? '—'} / ${(detail.data.engine?.['core_version'] as string) ?? '—'} / ${(detail.data.engine?.['exec_core_version'] as string) ?? '—'}`}
-            />
-          </div>
-
-          {/* 审计明细：长 hash / 账本行数 / 原始参数 JSON / 输入快照 —— 默认折叠，不挡指标与曲线 */}
-          <details className="mt-2 border border-neutral-200 rounded bg-neutral-50" data-testid="lab-run-audit">
-            <summary className="cursor-pointer select-none px-2 py-1 text-[11px] font-bold text-neutral-300">
-              代码 / 输入 hash · 账本行数 · 生效参数原始 JSON · 输入快照
-            </summary>
-            <div className="px-2 pb-2 pt-1 space-y-1 border-t border-neutral-200">
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-1 font-mono text-[10px]">
-                <KV k="signal_params_hash" v={detail.data.hashes?.['signal_params_hash'] ?? '—'} />
-                <KV k="exec_params_hash" v={detail.data.hashes?.['exec_params_hash'] ?? '—'} />
-                <KV k="spec_sha256" v={detail.data.hashes?.['spec_sha256'] ?? '—'} />
-                <KV k="code_sha256" v={detail.data.hashes?.['code_sha256'] ?? '—'} />
-                <KV k="input_sha256" v={detail.data.hashes?.['input_sha256'] ?? '—'} />
-                <KV k="signal_frame_sha256" v={detail.data.hashes?.['signal_frame_sha256'] ?? '—'} />
-                <KV k="experiment_id" v={(detail.data.engine?.['experiment_id'] as string) ?? '—'} />
-                <KV
-                  k="账本行数"
-                  v={detail.data.ledger_counts ? Object.entries(detail.data.ledger_counts).map(([k, v]) => `${k}=${v}`).join(' ') : '—'}
-                />
-              </div>
-              {detail.data.config?.config?.signal_params && (
-                <div className="text-[10px] text-neutral-400 font-mono break-all">
-                  生效 signal_params：{JSON.stringify(detail.data.config.config.signal_params)}
-                </div>
-              )}
-              {detail.data.config?.config?.exec_params && (
-                <div className="text-[10px] text-neutral-400 font-mono break-all">
-                  生效 exec_params：{JSON.stringify(detail.data.config.config.exec_params)}
-                </div>
-              )}
-              {detail.data.snapshot_files && detail.data.snapshot_files.length > 0 && (
-                <div className="text-[10px] text-neutral-400 font-mono break-all">
-                  输入快照：{detail.data.snapshot_files.join(' · ')}
-                </div>
-              )}
-            </div>
-          </details>
-        </SectionCard>
-      )}
-
-      {/* ══ ③ 资金分析 ══ */}
-      {selectedRunId && detailStatus === 'succeeded' && (
-        <LabFundingPanel
-          points={equityPoints}
-          benchmarkSeries={equity.data?.benchmark_equity ?? null}
-          benchmarkMeta={equity.data?.benchmark ?? metrics.data?.benchmark_buy_hold ?? null}
-          metrics={m}
-          monthly={metrics.data?.monthly_returns ?? null}
-          loading={equity.loading}
-          error={equity.error}
-          monthCloseCounts={monthCloseCounts}
-          windowStartMs={detail.data?.window?.win_start_ms ?? null}
-          windowEndMs={detail.data?.window?.win_end_ms ?? null}
-        />
-      )}
-
-      {/* ══ ④ 执行视图 ══ */}
-      {selectedRunId && detailStatus === 'succeeded' && (
-        <LabChartPanel
-          chart={chartPayload}
-          loading={chart.loading}
-          error={chart.error}
-          missingReason={chart.data?.missing_reason ?? null}
-          selectedTradeId={selectedTradeId}
-          onSelectTrade={setSelectedTradeId}
-        />
-      )}
-
-      {/* ══ ⑤ 明细表 + 单笔详情 ══ */}
-      {selectedRunId && detailStatus === 'succeeded' && (
-        <SectionCard
-          title="⑤ 逐笔明细（点击任意行 ⇒ 图表定位该 trade_id + 显示单笔详情）"
-          testid="lab-trades"
-          right={
-            <div className="flex items-center gap-2 text-[10px] font-mono">
-              <Chip>共 {tradeRows.length} 笔</Chip>
-              {trades.error && <span className="text-rose-600">逐笔取数错误：{trades.error}</span>}
-            </div>
-          }
-        >
-          <div className="overflow-auto max-h-72 border border-neutral-100 rounded">
-            <table className="w-full text-left text-[11px] font-mono">
-              <thead className="bg-neutral-50 text-neutral-400 border-b border-neutral-200 sticky top-0">
-                <tr>
-                  <th className="py-1.5 px-2">进场时间</th>
-                  <th className="py-1.5 px-2">出场时间</th>
-                  <th className="py-1.5 px-2">标的</th>
-                  <th className="py-1.5 px-2">方向</th>
-                  <th className="py-1.5 px-2 text-right">开仓价</th>
-                  <th className="py-1.5 px-2 text-right">出场价</th>
-                  <th className="py-1.5 px-2 text-right">数量</th>
-                  <th className="py-1.5 px-2 text-right">毛盈亏</th>
-                  <th className="py-1.5 px-2 text-right">双边手续费</th>
-                  <th className="py-1.5 px-2 text-right">资金费</th>
-                  <th className="py-1.5 px-2 text-right">净盈亏</th>
-                  <th className="py-1.5 px-2">退出原因</th>
-                  <th className="py-1.5 px-2">trade_id</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-100">
-                {tradeRows.length === 0 ? (
-                  <tr>
-                    <td colSpan={13} className="py-6 text-center text-neutral-400 font-sans">
-                      {trades.loading ? '读取中…' : '无真实成交记录（后台账本为空）——不显示任何演示成绩'}
-                    </td>
-                  </tr>
-                ) : (
-                  tradeRows.map((t) => {
-                    const sel = t.trade_id === selectedTradeId;
-                    return (
-                      <tr
-                        key={t.trade_id}
-                        data-trade-id={t.trade_id}
-                        onClick={() => setSelectedTradeId(t.trade_id)}
-                        className={`cursor-pointer transition-colors ${sel ? 'bg-emerald-50' : 'hover:bg-neutral-50'}`}
-                      >
-                        <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(t.entry_time_ms)}</td>
-                        <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(t.exit_time_ms)}</td>
-                        <td className="py-1.5 px-2 font-bold text-neutral-100">{t.symbol}</td>
-                        <td className="py-1.5 px-2">
-                          <span className={`px-1.5 py-0.5 rounded border text-[10px] font-bold ${t.direction === 'long' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-rose-50 text-rose-700 border-rose-200'}`}>
-                            {t.direction === 'long' ? '做多' : t.direction === 'short' ? '做空' : t.direction}
-                          </span>
-                        </td>
-                        <td className="py-1.5 px-2 text-right text-neutral-300">{fmtNum(t.entry_price, 4)}</td>
-                        <td className="py-1.5 px-2 text-right text-neutral-100 font-semibold">{fmtNum(t.exit_price, 4)}</td>
-                        <td className="py-1.5 px-2 text-right">{fmtNum(t.qty, 6)}</td>
-                        <td className="py-1.5 px-2 text-right">{fmtSignedUsd(t.gross_pnl, 2)}</td>
-                        <td className="py-1.5 px-2 text-right text-neutral-400">{fmtUsd(t.fees, 2)}</td>
-                        <td className="py-1.5 px-2 text-right text-neutral-400">{fmtUsd(t.funding_fee, 2)}</td>
-                        <td className={`py-1.5 px-2 text-right font-bold ${t.net_pnl >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
-                          {fmtSignedUsd(t.net_pnl, 2)}
-                        </td>
-                        <td className="py-1.5 px-2 text-neutral-400">{t.exit_reason}</td>
-                        <td className="py-1.5 px-2 text-neutral-400">{t.trade_id}</td>
-                      </tr>
-                    );
-                  })
-                )}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="mt-3 border-t border-neutral-100 pt-3">
-            <LabTradeDetailPanel
-              detail={tradeDetail.data}
-              loading={tradeDetail.loading}
-              error={tradeDetail.error}
-            />
-          </div>
-        </SectionCard>
-      )}
-
-      {/* ══ ⑤b 全局订单 / 成交明细 ══ */}
-      {selectedRunId && detailStatus === 'succeeded' && (
-        <SectionCard
-          title="⑤b 订单 / 成交明细（全局 · 账本 orders 表；与逐笔同源）"
-          testid="lab-orders"
-          right={
-            <div className="flex items-center gap-2 text-[10px] font-mono">
-              <Chip>共 {orderRows.length} 行</Chip>
-              {orders.error && <span className="text-rose-600">订单取数错误：{orders.error}</span>}
-              {orders.data?.missing_reason && <span className="text-amber-700">{orders.data.missing_reason}</span>}
-            </div>
-          }
-        >
-          <div className="overflow-auto max-h-72 border border-neutral-100 rounded">
-            <table className="w-full text-left text-[11px] font-mono">
-              <thead className="bg-neutral-50 text-neutral-400 border-b border-neutral-200 sticky top-0">
-                <tr>
-                  <th className="py-1.5 px-2">时点</th>
-                  <th className="py-1.5 px-2">phase</th>
-                  <th className="py-1.5 px-2">side</th>
-                  <th className="py-1.5 px-2">action</th>
-                  <th className="py-1.5 px-2">标的</th>
-                  <th className="py-1.5 px-2 text-right">价格</th>
-                  <th className="py-1.5 px-2 text-right">数量</th>
-                  <th className="py-1.5 px-2 text-right">手续费</th>
-                  <th className="py-1.5 px-2 text-right">止损价</th>
-                  <th className="py-1.5 px-2">trade_id</th>
-                  <th className="py-1.5 px-2">原因</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-100">
-                {orderRows.length === 0 ? (
-                  <tr>
-                    <td colSpan={11} className="py-6 text-center text-neutral-400 font-sans">
-                      {orders.loading ? '读取中…' : '无真实订单记录（账本 orders 为空）——不显示任何演示数据'}
-                    </td>
-                  </tr>
-                ) : (
-                  orderRows.map((o) => (
-                    <tr key={o.order_id} className="hover:bg-neutral-50">
-                      <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(o.ts_ms)}</td>
-                      <td className="py-1.5 px-2">{o.phase}</td>
-                      <td className="py-1.5 px-2">{o.side}</td>
-                      <td className="py-1.5 px-2">{o.action}</td>
-                      <td className="py-1.5 px-2 font-bold text-neutral-100">{o.symbol}</td>
-                      <td className="py-1.5 px-2 text-right">{fmtNum(o.price, 4)}</td>
-                      <td className="py-1.5 px-2 text-right">{fmtNum(o.qty, 6)}</td>
-                      <td className="py-1.5 px-2 text-right">{fmtNum(o.fee, 6)}</td>
-                      <td className="py-1.5 px-2 text-right">{fmtNum(o.stop_price, 4)}</td>
-                      <td className="py-1.5 px-2 text-neutral-400">{o.trade_id || '—'}</td>
-                      <td className="py-1.5 px-2 text-neutral-500">{o.reason || '—'}</td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
-          </div>
-        </SectionCard>
-      )}
-
-      {/* ══ ⑤c 拒单明细 ══ */}
-      {selectedRunId && detailStatus === 'succeeded' && (
-        <SectionCard
-          title="⑤c 拒单明细（账本 rejected 表：时点 / 标的 / 相位 / 原因）"
-          testid="lab-rejected"
-          right={
-            <div className="flex items-center gap-2 text-[10px] font-mono">
-              <Chip tone={rejectedRows.length > 0 ? 'warn' : 'neutral'}>共 {rejectedRows.length} 条</Chip>
-              {rejected.error && <span className="text-rose-600">拒单取数错误：{rejected.error}</span>}
-              {rejected.data?.missing_reason && <span className="text-amber-700">{rejected.data.missing_reason}</span>}
-            </div>
-          }
-        >
-          {rejectedByReason.length > 0 && (
-            <div className="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-mono">
-              <span className="text-neutral-500">原因分布：</span>
-              {rejectedByReason.map(([reason, n]) => (
-                <span key={reason} className="px-1.5 py-0.5 rounded border border-amber-200 bg-amber-50 text-amber-800">
-                  {reason} × {n}
-                </span>
-              ))}
-            </div>
-          )}
-          <div className="overflow-auto max-h-64 border border-neutral-100 rounded">
-            <table className="w-full text-left text-[11px] font-mono">
-              <thead className="bg-neutral-50 text-neutral-400 border-b border-neutral-200 sticky top-0">
-                <tr>
-                  <th className="py-1.5 px-2">时点</th>
-                  <th className="py-1.5 px-2">标的</th>
-                  <th className="py-1.5 px-2">phase</th>
-                  <th className="py-1.5 px-2">原因</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-100">
-                {rejectedRows.length === 0 ? (
-                  <tr>
-                    <td colSpan={4} className="py-6 text-center text-neutral-400 font-sans">
-                      {rejected.loading ? '读取中…' : '无真实拒单记录（账本 rejected 为空）——不把「无记录」包装成「无拒单」'}
-                    </td>
-                  </tr>
-                ) : (
-                  rejectedRows.map((r, i) => (
-                    <tr key={`${r.ts_ms}-${r.symbol}-${i}`} className="hover:bg-neutral-50">
-                      <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(r.ts_ms)}</td>
-                      <td className="py-1.5 px-2 font-bold text-neutral-100">{r.symbol}</td>
-                      <td className="py-1.5 px-2">{r.phase}</td>
-                      <td className="py-1.5 px-2 text-amber-800">{r.reason}</td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
-          </div>
-        </SectionCard>
-      )}
-
-      {/* ══ ⑥ 实验记录 + 质量报告 ══ */}
-      <SectionCard
-        title="⑥ 实验记录（永久保存 · 可选择历史 run）与质量报告"
-        testid="lab-runs"
-        right={
-          <div className="flex items-center gap-2 text-[10px] font-mono">
-            <Chip>共 {runs.length} 条</Chip>
-            {activeRun && <Chip tone="info">轮询中：{activeRun.run_id} · {activeRun.status}</Chip>}
-            {list.error && <span className="text-rose-600">列表取数错误：{list.error}</span>}
-          </div>
-        }
-      >
-        {/* 新旧归属：本列表仅含当前策略；旧策略 run 已退役并排除 */}
-        <div
-          className="mb-2 rounded border border-amber-200 bg-amber-50 px-2 py-1.5 text-[10px] text-amber-900 flex flex-wrap items-center gap-x-3 gap-y-1"
-          data-testid="lab-run-attribution"
-        >
-          <span className="font-bold">新旧归属</span>
-          <span>
-            本列表**仅含当前策略**{' '}
-            <span className="font-mono">{retirement?.successor_strategy_id ?? LAB_STRATEGY_ID}</span>
-          </span>
-          {retirement?.retired_strategy_keys && (
-            <span>
-              已退役旧策略：
-              <span className="font-mono">{retirement.retired_strategy_keys.join(' / ')}</span>
-              {retirement.retired_at ? `（${retirement.retired_at}）` : ''}
-            </span>
-          )}
-          <span className="text-amber-700">
-            被排除出本列表的旧/身份存疑 run：{excludedLegacy.length} 条
-            {excludedLegacy.length > 0 && `（${excludedLegacy.map((x) => x.run_id).slice(0, 3).join('、')}${excludedLegacy.length > 3 ? '…' : ''}）`}
-          </span>
-          <span className="text-amber-700">旧结果不得当成新策略成绩；旧源码/runs 以可恢复只读归档保留。</span>
-        </div>
-
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
-          <div className="overflow-auto max-h-80 border border-neutral-100 rounded">
-            <table className="w-full text-left text-[11px] font-mono">
-              <thead className="bg-neutral-50 text-neutral-400 border-b border-neutral-200 sticky top-0">
-                <tr>
-                  <th className="py-1.5 px-2">run_id</th>
-                  <th className="py-1.5 px-2">状态</th>
-                  <th className="py-1.5 px-2">归属</th>
-                  <th className="py-1.5 px-2">创建时间（UTC）</th>
-                  <th className="py-1.5 px-2">标的 / 窗口</th>
-                  <th className="py-1.5 px-2 text-right">净收益</th>
-                  <th className="py-1.5 px-2 text-right">回撤</th>
-                  <th className="py-1.5 px-2 text-right">笔数</th>
-                  <th className="py-1.5 px-2">配置 hash</th>
-                  <th className="py-1.5 px-2">失败原因</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-100">
-                {runs.length === 0 ? (
-                  <tr>
-                    <td colSpan={10} className="py-6 text-center text-neutral-400 font-sans">
-                      {list.loading ? '读取中…' : '暂无实验记录'}
-                    </td>
-                  </tr>
-                ) : (
-                  runs.map((r) => {
-                    const sel = r.run_id === selectedRunId;
-                    const h = hashMap[r.run_id];
-                    return (
-                      <tr
-                        key={r.run_id}
-                        data-run-id={r.run_id}
-                        onClick={() => {
-                          didPick.current = true;
-                          setSelectedRunId(r.run_id);
-                        }}
-                        className={`cursor-pointer transition-colors ${sel ? 'bg-emerald-50' : 'hover:bg-neutral-50'}`}
-                      >
-                        <td className="py-1.5 px-2 text-neutral-200 whitespace-nowrap">{r.run_id}</td>
-                        <td className="py-1.5 px-2">
-                          <span className={`px-1.5 py-0.5 rounded border text-[10px] ${statusStyle(r.status)}`}>{r.status}</span>
-                        </td>
-                        <td className="py-1.5 px-2">
-                          {r.attribution === 'current_strategy' ? (
-                            <span className="px-1.5 py-0.5 rounded border border-emerald-200 bg-emerald-50 text-emerald-700 text-[10px]">
-                              当前策略
-                            </span>
-                          ) : (
-                            <span className="px-1.5 py-0.5 rounded border border-amber-200 bg-amber-50 text-amber-800 text-[10px]">
-                              身份存疑
-                            </span>
-                          )}
-                        </td>
-                        <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtIsoUtc(r.created_at)}</td>
-                        <td className="py-1.5 px-2 text-neutral-400 whitespace-nowrap">
-                          {(r.symbols ?? []).join(',') || '—'}
-                          {r.window ? ` · ${fmtUtc(r.window.win_start_ms)}→${fmtUtc(r.window.win_end_ms)}` : ''}
-                        </td>
-                        <td className={`py-1.5 px-2 text-right ${(r.net_return_pct ?? 0) >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
-                          {fmtPct(r.net_return_pct, 4)}
-                        </td>
-                        <td className="py-1.5 px-2 text-right text-rose-600">
-                          {r.max_drawdown_pct === null || r.max_drawdown_pct === undefined ? '—' : `-${r.max_drawdown_pct.toFixed(4)}%`}
-                        </td>
-                        <td className="py-1.5 px-2 text-right">{r.trades_count ?? '—'}</td>
-                        <td className="py-1.5 px-2 text-neutral-500" title={h?.spec_sha256 ?? '未取到'}>
-                          {h ? shortHash(h.spec_sha256, 10) : '—'}
-                        </td>
-                        <td className="py-1.5 px-2 text-rose-600 max-w-[16rem] truncate" title={r.failure_reason ?? undefined}>
-                          {r.failure_reason ?? '—'}
-                        </td>
-                      </tr>
-                    );
-                  })
-                )}
-              </tbody>
-            </table>
-            <div className="px-2 py-1 text-[10px] text-neutral-400 border-t border-neutral-100">
-              列表端点 `GET /backtests` 的 summary **不含配置 hash**（精确缺口：`backtest_api._summary()` 未带
-              `spec_sha256`/`*_params_hash`）⇒ 这里用只读 `GET /backtests/{'{id}'}` 补齐（并发上限 4，最多 30 条）；
-              未取到的显示 —，不伪造。
-            </div>
-          </div>
-
           <LabQualityPanel q={quality.data} loading={quality.loading} error={quality.error} />
-        </div>
 
-        {/* 执行完成 ≠ 正式策略放行 */}
-        <div className="mt-3 border-t border-neutral-100 pt-2 space-y-1">
-          <div className="text-[11px] font-bold text-neutral-200 flex items-center gap-1">
-            <FlaskConical className="w-3.5 h-3.5 text-amber-600" />
-            执行完成 ≠ 正式策略放行 / M4 验收
+          <div className="mt-3 border-t border-neutral-100 pt-2 space-y-1">
+            <div className="text-[11px] font-bold text-neutral-200 flex items-center gap-1">
+              <FlaskConical className="w-3.5 h-3.5 text-amber-600" />
+              执行完成 ≠ 正式策略放行 / M4 验收
+            </div>
+            {metrics.data?.formal_m4_gate ? (
+              <details className="ds-details" data-testid="lab-m4-gate">
+                <summary>formal_m4_gate 原始字段（门禁逐条判定）</summary>
+                <div className="ds-details__body text-[10px] text-neutral-400 font-mono break-all">
+                  {JSON.stringify(metrics.data.formal_m4_gate, null, 2)}
+                </div>
+              </details>
+            ) : (
+              <div className="text-[10px] text-neutral-400">
+                未取到 formal_m4_gate（运行未成功或该 run 无该字段）⇒ 不推断「已放行」。
+              </div>
+            )}
+            <details className="ds-details">
+              <summary>边界声明（本工作台只做研究 · Paper / Live 未接通）</summary>
+              <div className="ds-details__body text-[10px] text-neutral-500 space-y-1">
+                <div>
+                  <Clock className="w-3 h-3 inline-block mr-1" />
+                  本工作台只做<b>独立候选研究</b>；旧 3a–3d / A / B 已<b>退役</b>（可运行入口已下线），
+                  Paper / Live 未接新共享核心 ⇒ 显示 NOT_CONNECTED、禁止新开仓与真实下单。
+                </div>
+                <div>
+                  <AlertCircle className="w-3 h-3 inline-block mr-1" />
+                  页面数值全部来自服务端账本；缺失显示 —，不造数。
+                </div>
+              </div>
+            </details>
           </div>
-          {metrics.data?.m4_disclaimer && (
-            <div className="text-[10px] text-amber-900 bg-amber-50 border border-amber-200 rounded px-2 py-1">
-              {metrics.data.m4_disclaimer}
-            </div>
-          )}
-          {metrics.data?.formal_m4_gate ? (
-            <div className="text-[10px] text-neutral-400 font-mono break-all">
-              formal_m4_gate：{JSON.stringify(metrics.data.formal_m4_gate)}
-            </div>
-          ) : (
-            <div className="text-[10px] text-neutral-400">
-              未取到 formal_m4_gate（运行未成功或该 run 无该字段）⇒ 不推断「已放行」。
-            </div>
-          )}
-          <div className="text-[10px] text-neutral-500 flex items-center gap-1">
-            <Clock className="w-3 h-3" />
-            本工作台只做**独立候选研究**；旧 3a–3d / A / B 已**退役**（可运行入口已下线），
-            Paper / Live 未接新共享核心 ⇒ 显示 NOT_CONNECTED、禁止新开仓与真实下单。
-            <AlertCircle className="w-3 h-3 text-neutral-400" />
-            页面数值全部来自服务端账本；缺失显示 —，不造数。
-          </div>
-        </div>
-      </SectionCard>
+        </SectionCard>
+      )}
+
     </div>
   );
 };

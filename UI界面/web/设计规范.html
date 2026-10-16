@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>设计规范系统 · 趋势研判系统</title>
+<!--
+  本页与线上应用**共用同一份 CSS**（src/design/tokens.css + components.css）。
+  规范页不是「文档副本」，它就是设计事实源的可视化投影 —— 改一处，两处同步。
+-->
+<link rel="stylesheet" href="./src/design/tokens.css" />
+<link rel="stylesheet" href="./src/design/components.css" />
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--ds-canvas);
+    color: var(--ds-text-2);
+    font-family: var(--ds-font);
+    font-size: var(--ds-fs-sm);
+    line-height: var(--ds-lh-base);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, p, ul, ol { margin: 0; }
+  ul { padding-left: 1.15em; }
+  code {
+    font-family: var(--ds-mono);
+    font-size: 0.92em;
+    background: var(--ds-surface-3);
+    border: 1px solid var(--ds-border-subtle);
+    border-radius: var(--ds-r-sm);
+    padding: 0.5px 4px;
+    color: var(--ds-accent-700);
+  }
+
+  /* 布局：左侧目录 + 右侧内容 */
+  .shell { display: flex; align-items: flex-start; min-height: 100vh; }
+  .toc {
+    position: sticky; top: 0; align-self: flex-start;
+    width: 216px; flex: 0 0 216px; height: 100vh;
+    padding: 22px 14px;
+    border-right: 1px solid var(--ds-border);
+    background: var(--ds-surface);
+    overflow-y: auto;
+  }
+  .toc__brand { display: flex; align-items: center; gap: 9px; margin-bottom: 20px; }
+  .toc__mark {
+    width: 30px; height: 30px; border-radius: var(--ds-r-lg);
+    background: var(--ds-accent); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 14px; letter-spacing: -.03em;
+  }
+  .toc__name { font-size: var(--ds-fs-md); font-weight: 700; color: var(--ds-text); line-height: 1.2; }
+  .toc__ver { font-size: var(--ds-fs-2xs); color: var(--ds-text-4); font-family: var(--ds-mono); }
+  .toc__group { margin-bottom: 14px; }
+  .toc__gtitle {
+    font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--ds-text-4); padding: 0 8px 5px;
+  }
+  .toc a {
+    display: block; padding: 4px 8px; border-radius: var(--ds-r-sm);
+    font-size: var(--ds-fs-xs); color: var(--ds-text-3); text-decoration: none;
+    transition: background var(--ds-dur-fast) var(--ds-ease), color var(--ds-dur-fast) var(--ds-ease);
+  }
+  .toc a:hover { background: var(--ds-surface-3); color: var(--ds-text); }
+
+  .main { flex: 1 1 auto; min-width: 0; padding: 32px 40px 96px; max-width: 1120px; }
+
+  .hero { margin-bottom: 34px; }
+  .hero h1 { font-size: 30px; font-weight: 800; letter-spacing: -.03em; color: var(--ds-text); }
+  .hero p { margin-top: 8px; max-width: 62ch; color: var(--ds-text-3); line-height: 1.65; }
+  .hero__meta { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+
+  section { margin-bottom: 42px; scroll-margin-top: 20px; }
+  .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .sec-head h2 { font-size: 19px; font-weight: 700; letter-spacing: -.02em; color: var(--ds-text); }
+  .sec-head .idx {
+    font-family: var(--ds-mono); font-size: var(--ds-fs-xs); font-weight: 700;
+    color: var(--ds-accent); background: var(--ds-accent-50);
+    border: 1px solid var(--ds-accent-100); border-radius: var(--ds-r-sm);
+    padding: 1px 6px;
+  }
+  .sec-desc { color: var(--ds-text-3); max-width: 74ch; margin-bottom: 16px; line-height: 1.6; }
+
+  .sub { font-size: var(--ds-fs-md); font-weight: 700; color: var(--ds-text); margin: 22px 0 9px; }
+  .sub:first-child { margin-top: 0; }
+  .subnote { font-size: var(--ds-fs-xs); color: var(--ds-text-4); margin-bottom: 10px; }
+
+  /* ── 「栅格与等高」演示脚手架（仅本页 demo 用，不属于设计系统组件）──
+     真实页面里卡片内部由组件自己纵向排布；这里补上 flex 链，让「矮卡被拉伸」
+     这件事在 demo 里看得见（否则内容会顶在上方，看不出差值被补在哪）。 */
+  .eq-demo .ds-card { display: flex; flex-direction: column; }
+  .eq-demo .ds-card__body { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; }
+  .eq-fill {
+    font-family: var(--ds-mono); font-size: 10px; color: var(--ds-text-4);
+    text-align: center; line-height: 1.5;
+  }
+  .eq-fill--box {
+    width: 100%; height: 104px; display: flex; align-items: center; justify-content: center;
+    border: 1px dashed var(--ds-border-strong); border-radius: var(--ds-r-md);
+    background: repeating-linear-gradient(45deg, var(--ds-surface-3), var(--ds-surface-3) 8px, var(--ds-surface) 8px, var(--ds-surface) 16px);
+  }
+
+  /* 色卡 */
+  .swatches { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(178px, 1fr)); }
+  .sw {
+    border: 1px solid var(--ds-border); border-radius: var(--ds-r-md); overflow: hidden;
+    background: var(--ds-surface); box-shadow: var(--ds-shadow-xs);
+  }
+  .sw__chip { height: 54px; border-bottom: 1px solid var(--ds-border-subtle); }
+  .sw__body { padding: 7px 9px; }
+  .sw__name { font-size: var(--ds-fs-xs); font-weight: 700; color: var(--ds-text); }
+  .sw__tok { font-family: var(--ds-mono); font-size: 10px; color: var(--ds-accent-700); margin-top: 1px; word-break: break-all; }
+  .sw__val { font-family: var(--ds-mono); font-size: 10px; color: var(--ds-text-4); }
+  .sw__use { font-size: 10px; color: var(--ds-text-3); margin-top: 3px; line-height: 1.35; }
+
+  /* 通用演示容器 */
+  .demo {
+    border: 1px solid var(--ds-border); border-radius: var(--ds-r-lg);
+    background: var(--ds-surface); padding: 18px; box-shadow: var(--ds-shadow-xs);
+  }
+  .demo--canvas { background: var(--ds-canvas); }
+  .demo__row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .demo__row + .demo__row { margin-top: 12px; }
+  .demo__cap {
+    font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--ds-text-4); margin-bottom: 7px;
+  }
+
+  /* 规格表 */
+  table.spec { width: 100%; border-collapse: separate; border-spacing: 0; font-size: var(--ds-fs-xs); }
+  table.spec th {
+    text-align: left; padding: 7px 10px; background: var(--ds-surface-3);
+    border-bottom: 1px solid var(--ds-border); font-weight: 700; color: var(--ds-text-3);
+    white-space: nowrap;
+  }
+  table.spec td {
+    padding: 7px 10px; border-bottom: 1px solid var(--ds-border-subtle); vertical-align: top;
+  }
+  table.spec td code { white-space: nowrap; }
+  table.spec tr:last-child td { border-bottom: 0; }
+  .spec-wrap { border: 1px solid var(--ds-border); border-radius: var(--ds-r-md); overflow: hidden; }
+
+  .mono { font-family: var(--ds-mono); font-variant-numeric: tabular-nums; }
+
+  /* 字号阶梯 */
+  .type-row { display: flex; align-items: baseline; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--ds-border-subtle); }
+  .type-row:last-child { border-bottom: 0; }
+  .type-row__meta { flex: 0 0 168px; font-family: var(--ds-mono); font-size: 10px; color: var(--ds-text-4); }
+  .type-row__demo { color: var(--ds-text); }
+
+  /* 间距可视化 */
+  .space-row { display: flex; align-items: center; gap: 12px; padding: 5px 0; }
+  .space-row__bar { height: 14px; background: var(--ds-accent-100); border: 1px solid var(--ds-accent-300); border-radius: 2px; }
+  .space-row__meta { font-family: var(--ds-mono); font-size: 10px; color: var(--ds-text-4); flex: 0 0 132px; }
+
+  .radius-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .radius-box {
+    width: 84px; height: 62px; background: var(--ds-surface-3); border: 1px solid var(--ds-border-strong);
+    display: flex; align-items: flex-end; justify-content: center; padding-bottom: 5px;
+    font-family: var(--ds-mono); font-size: 10px; color: var(--ds-text-3);
+  }
+
+  .shadow-row { display: flex; gap: 18px; flex-wrap: wrap; }
+  .shadow-box {
+    width: 128px; height: 74px; background: var(--ds-surface); border: 1px solid var(--ds-border);
+    border-radius: var(--ds-r-lg); display: flex; align-items: flex-end; justify-content: center;
+    padding-bottom: 7px; font-family: var(--ds-mono); font-size: 10px; color: var(--ds-text-3);
+  }
+
+  /* Do / Don't */
+  .dd { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .dd__card { border-radius: var(--ds-r-lg); border: 1px solid var(--ds-border); background: var(--ds-surface); overflow: hidden; }
+  .dd__head {
+    padding: 7px 12px; font-size: var(--ds-fs-xs); font-weight: 700;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .dd__head--do { background: var(--ds-pos-bg); color: var(--ds-pos); border-bottom: 1px solid var(--ds-pos-border); }
+  .dd__head--dont { background: var(--ds-neg-bg); color: var(--ds-neg); border-bottom: 1px solid var(--ds-neg-border); }
+  .dd__body { padding: 12px; font-size: var(--ds-fs-xs); color: var(--ds-text-3); line-height: 1.6; }
+  .dd__body ul { margin: 0; padding-left: 1.1em; }
+
+  .grid2 { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
+
+  .principle { display: flex; gap: 12px; padding: 14px; border: 1px solid var(--ds-border); border-radius: var(--ds-r-lg); background: var(--ds-surface); }
+  .principle__no {
+    flex: 0 0 26px; height: 26px; border-radius: var(--ds-r-md); background: var(--ds-accent);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: var(--ds-fs-sm); font-family: var(--ds-mono);
+  }
+  .principle h4 { font-size: var(--ds-fs-sm); color: var(--ds-text); margin-bottom: 3px; }
+  .principle p { font-size: var(--ds-fs-xs); color: var(--ds-text-3); line-height: 1.6; }
+  .principles { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); }
+</style>
+</head>
+<body class="ds-scope">
+<div class="shell">
+
+  <!-- ══════════ 目录 ══════════ -->
+  <aside class="toc">
+    <div class="toc__brand">
+      <div class="toc__mark">趋</div>
+      <div>
+        <div class="toc__name">设计规范系统</div>
+        <div class="toc__ver">v1.0 · 2026-10-16</div>
+      </div>
+    </div>
+
+    <div class="toc__group">
+      <div class="toc__gtitle">基础</div>
+      <a href="#principles">设计原则</a>
+      <a href="#color">色彩系统</a>
+      <a href="#type">字体与排版</a>
+      <a href="#space">间距 · 圆角 · 阴影</a>
+      <a href="#motion">动效</a>
+    </div>
+    <div class="toc__group">
+      <div class="toc__gtitle">组件</div>
+      <a href="#button">按钮</a>
+      <a href="#input">输入与表单</a>
+      <a href="#segment">分段控件</a>
+      <a href="#badge">徽标与状态</a>
+      <a href="#stat">指标卡</a>
+      <a href="#table">数据表格</a>
+      <a href="#kv">键值对</a>
+      <a href="#note">提示条</a>
+      <a href="#empty">空态与加载</a>
+      <a href="#details">折叠区</a>
+    </div>
+    <div class="toc__group">
+      <div class="toc__gtitle">页面结构</div>
+      <a href="#grid">栅格与等高</a>
+      <a href="#pagehead">页头与工具条</a>
+      <a href="#nav">区块导航</a>
+      <a href="#chart">图表配色</a>
+    </div>
+    <div class="toc__group">
+      <div class="toc__gtitle">规范</div>
+      <a href="#usage">使用准则</a>
+      <a href="#api">令牌索引</a>
+    </div>
+  </aside>
+
+  <!-- ══════════ 正文 ══════════ -->
+  <main class="main">
+
+    <div class="hero">
+      <h1>趋势研判系统 · 设计规范</h1>
+      <p>
+        这是一套「量化研究终端」的界面语言：浅色、克制、以数据为中心。规范分三层 ——
+        <b>令牌层</b>（颜色 / 字号 / 间距等原子值）、<b>组件层</b>（按钮 / 卡片 / 表格等可复用块）、
+        <b>页面层</b>（页头、区块导航、工具条的固定组合）。所有层级只允许向下引用，不允许跳层硬编码。
+      </p>
+      <div class="hero__meta">
+        <span class="ds-badge ds-badge--accent">tokens.css</span>
+        <span class="ds-badge ds-badge--accent">components.css</span>
+        <span class="ds-badge ds-badge--neutral">与线上同源</span>
+        <span class="ds-badge ds-badge--pos">浅色主题</span>
+      </div>
+    </div>
+
+    <!-- ══════════ 设计原则 ══════════ -->
+    <section id="principles">
+      <div class="sec-head"><span class="idx">01</span><h2>设计原则</h2></div>
+      <p class="sec-desc">四条原则按优先级排列。发生冲突时，序号小的优先。</p>
+      <div class="principles">
+        <div class="principle">
+          <div class="principle__no">1</div>
+          <div>
+            <h4>数据优先于装饰</h4>
+            <p>界面存在的唯一目的是让数字可读、可比、可信。任何不帮助读数的渐变、光晕、动画都应删除。分隔用 1px 描边，不用色块堆叠。</p>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle__no">2</div>
+          <div>
+            <h4>缺失就说缺失</h4>
+            <p>取不到的数一律显示 <code>—</code>，绝不用 <code>0</code> 冒充。空态文案要说明「为什么空」，而不是「暂无数据」。</p>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle__no">3</div>
+          <div>
+            <h4>层级靠结构与字重，不靠颜色</h4>
+            <p>颜色只承担语义（涨跌 / 通过 / 告警 / 选中）。主次关系用字号、字重、间距、描边表达，这样在任何色觉条件下都成立。</p>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle__no">4</div>
+          <div>
+            <h4>数字等宽且不跳动</h4>
+            <p>所有数值走 <code>--ds-mono</code> + <code>tabular-nums</code>。同一列的数字必须右对齐、位数对齐，刷新时不允许横向抖动。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 色彩 ══════════ -->
+    <section id="color">
+      <div class="sec-head"><span class="idx">02</span><h2>色彩系统</h2></div>
+      <p class="sec-desc">
+        五个色族，各司其职。<b>表面</b>表达层级，<b>描边</b>表达边界，<b>文字</b>表达主次，
+        <b>强调</b>表达交互，<b>语义</b>表达数据含义。语义色三件套（文字 / 底 / 边）必须成组使用，不允许只取其中一支。
+      </p>
+
+      <div class="sub">表面层 · Surface</div>
+      <div class="subnote">按「层级」选择，不按「深浅」选择。画布永远最底，卡片永远最上。</div>
+      <div class="swatches">
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-canvas)"></div><div class="sw__body"><div class="sw__name">画布</div><div class="sw__tok">--ds-canvas</div><div class="sw__val">#f5f7fb</div><div class="sw__use">页面底色</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-surface)"></div><div class="sw__body"><div class="sw__name">卡片面</div><div class="sw__tok">--ds-surface</div><div class="sw__val">#ffffff</div><div class="sw__use">卡片 / 面板</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-surface-2)"></div><div class="sw__body"><div class="sw__name">次级面</div><div class="sw__tok">--ds-surface-2</div><div class="sw__val">#fafbfe</div><div class="sw__use">表头 / 折叠摘要</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-surface-3)"></div><div class="sw__body"><div class="sw__name">内嵌面</div><div class="sw__tok">--ds-surface-3</div><div class="sw__val">#eef2f8</div><div class="sw__use">分段控件底 / 代码块</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-surface-inverse)"></div><div class="sw__body"><div class="sw__name">反色面</div><div class="sw__tok">--ds-surface-inverse</div><div class="sw__val">#0f1a2e</div><div class="sw__use">哈希 / 终端块</div></div></div>
+      </div>
+
+      <div class="sub">文字层 · Text</div>
+      <div class="subnote">四级层次，均满足浅底可读对比度（正文 ≥ 4.5:1）。</div>
+      <div class="swatches">
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-text)"></div><div class="sw__body"><div class="sw__name">一级文字</div><div class="sw__tok">--ds-text</div><div class="sw__val">#0b1526</div><div class="sw__use">标题 / 关键数字</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-text-2)"></div><div class="sw__body"><div class="sw__name">二级文字</div><div class="sw__tok">--ds-text-2</div><div class="sw__val">#3d4c63</div><div class="sw__use">正文</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-text-3)"></div><div class="sw__body"><div class="sw__name">三级文字</div><div class="sw__tok">--ds-text-3</div><div class="sw__val">#6b7a91</div><div class="sw__use">标签 / 说明</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-text-4)"></div><div class="sw__body"><div class="sw__name">四级文字</div><div class="sw__tok">--ds-text-4</div><div class="sw__val">#93a1b5</div><div class="sw__use">占位 / 极弱辅助</div></div></div>
+      </div>
+
+      <div class="sub">强调色 · Accent</div>
+      <div class="subnote">只用于交互与选中：主按钮、焦点环、当前区块。<b>不得</b>用于表达数据涨跌。</div>
+      <div class="swatches">
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-accent-50)"></div><div class="sw__body"><div class="sw__name">强调-50</div><div class="sw__tok">--ds-accent-50</div><div class="sw__val">#eef3ff</div><div class="sw__use">选中行底色</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-accent-100)"></div><div class="sw__body"><div class="sw__name">强调-100</div><div class="sw__tok">--ds-accent-100</div><div class="sw__val">#dce7ff</div><div class="sw__use">焦点环</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-accent)"></div><div class="sw__body"><div class="sw__name">强调</div><div class="sw__tok">--ds-accent</div><div class="sw__val">#3b6ef6</div><div class="sw__use">主按钮 / 竖条</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-accent-600)"></div><div class="sw__body"><div class="sw__name">强调-hover</div><div class="sw__tok">--ds-accent-600</div><div class="sw__val">#2f5ce0</div><div class="sw__use">悬停态</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-accent-700)"></div><div class="sw__body"><div class="sw__name">强调-文字</div><div class="sw__tok">--ds-accent-700</div><div class="sw__val">#2449bb</div><div class="sw__use">选中项文字</div></div></div>
+      </div>
+
+      <div class="sub">语义色 · Semantic</div>
+      <div class="subnote">
+        每组三支：<code>fg</code> 文字与描边、<code>-bg</code> 底、<code>-border</code> 边，成组使用。
+        本项目图表注释约定为「涨绿跌红」，因此 <code>pos</code>=绿、<code>neg</code>=红；若整体切换为 A 股习惯，
+        只需在 <code>tokens.css</code> 互换两组色值，全站自动跟随。
+      </div>
+      <div class="swatches">
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-pos)"></div><div class="sw__body"><div class="sw__name">正向 · 盈利/上涨</div><div class="sw__tok">--ds-pos</div><div class="sw__val">#0f9d63</div><div class="sw__use">正收益 / 多单 / 通过</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-pos-bg)"></div><div class="sw__body"><div class="sw__name">正向-底</div><div class="sw__tok">--ds-pos-bg</div><div class="sw__val">#e9f8f1</div><div class="sw__use">通过徽标底</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-neg)"></div><div class="sw__body"><div class="sw__name">负向 · 亏损/下跌</div><div class="sw__tok">--ds-neg</div><div class="sw__val">#d92d48</div><div class="sw__use">回撤 / 空单 / 失败</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-neg-bg)"></div><div class="sw__body"><div class="sw__name">负向-底</div><div class="sw__tok">--ds-neg-bg</div><div class="sw__val">#fdeef1</div><div class="sw__use">失败徽标底</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-warn)"></div><div class="sw__body"><div class="sw__name">告警</div><div class="sw__tok">--ds-warn</div><div class="sw__val">#b26a00</div><div class="sw__use">待确认 / 假设值 / 拒单</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-warn-bg)"></div><div class="sw__body"><div class="sw__name">告警-底</div><div class="sw__tok">--ds-warn-bg</div><div class="sw__val">#fff6e5</div><div class="sw__use">告警条底</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-info)"></div><div class="sw__body"><div class="sw__name">信息</div><div class="sw__tok">--ds-info</div><div class="sw__val">#1f6fd0</div><div class="sw__use">进行中 / 队列</div></div></div>
+        <div class="sw"><div class="sw__chip" style="background:var(--ds-neutral-fg)"></div><div class="sw__body"><div class="sw__name">中性</div><div class="sw__tok">--ds-neutral-fg</div><div class="sw__val">#45536b</div><div class="sw__use">无状态徽标</div></div></div>
+      </div>
+
+      <div class="sub">描边层 · Border</div>
+      <div class="spec-wrap" style="margin-top:10px">
+        <table class="spec">
+          <thead><tr><th>令牌</th><th>值</th><th>用途</th><th>示例</th></tr></thead>
+          <tbody>
+            <tr><td><code>--ds-border-subtle</code></td><td class="mono">#edf1f7</td><td>同层分隔（表格行线、卡片内分区）</td><td><div style="height:0;border-top:1px solid var(--ds-border-subtle)"></div></td></tr>
+            <tr><td><code>--ds-border</code></td><td class="mono">#dde5ef</td><td>卡片轮廓、输入框默认边</td><td><div style="height:0;border-top:1px solid var(--ds-border)"></div></td></tr>
+            <tr><td><code>--ds-border-strong</code></td><td class="mono">#c6d1e0</td><td>悬停边界、需要强调的边界</td><td><div style="height:0;border-top:1px solid var(--ds-border-strong)"></div></td></tr>
+            <tr><td><code>--ds-border-focus</code></td><td class="mono">#3b6ef6</td><td>键盘焦点环</td><td><div style="height:0;border-top:2px solid var(--ds-border-focus)"></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══════════ 字体 ══════════ -->
+    <section id="type">
+      <div class="sec-head"><span class="idx">03</span><h2>字体与排版</h2></div>
+      <p class="sec-desc">
+        两族字体：正文用系统无衬线（中文优先 PingFang SC / 微软雅黑），数字与代码用等宽。
+        <b>凡是数值，一律等宽 + tabular-nums</b>，这是本系统最不可妥协的一条。
+      </p>
+
+      <div class="demo">
+        <div class="demo__cap">字号阶梯</div>
+        <div class="type-row"><div class="type-row__meta">--ds-fs-2xl · 26px · 800</div><div class="type-row__demo" style="font-size:26px;font-weight:800;letter-spacing:-.03em">主指标 1,247.83</div></div>
+        <div class="type-row"><div class="type-row__meta">--ds-fs-xl · 20px · 700</div><div class="type-row__demo mono" style="font-size:20px;font-weight:700;letter-spacing:-.02em">+40.74%</div></div>
+        <div class="type-row"><div class="type-row__meta">--ds-fs-lg · 15px · 700</div><div class="type-row__demo" style="font-size:15px;font-weight:700">区块标题 · 收益指标</div></div>
+        <div class="type-row"><div class="type-row__meta">--ds-fs-md · 13px · 700</div><div class="type-row__demo" style="font-size:13px;font-weight:700">卡片标题 · 逐笔明细</div></div>
+        <div class="type-row"><div class="type-row__meta">--ds-fs-sm · 12px · 400</div><div class="type-row__demo" style="font-size:12px">正文基准。用于说明文字、按钮、输入框。</div></div>
+        <div class="type-row"><div class="type-row__meta">--ds-fs-xs · 11px · 400</div><div class="type-row__demo mono" style="font-size:11px">2026-10-16 10:19:58 · BTCUSDT · trd_5b0ee4</div></div>
+        <div class="type-row"><div class="type-row__meta">--ds-fs-2xs · 10px · 700</div><div class="type-row__demo" style="font-size:10px;font-weight:700;letter-spacing:.02em">徽标内文字 · 单位标注</div></div>
+      </div>
+
+      <div class="sub">数字排版</div>
+      <div class="grid2">
+        <div class="demo">
+          <div class="demo__cap">正确 · 等宽 + 对齐</div>
+          <div class="mono" style="font-size:12px;font-variant-numeric:tabular-nums;text-align:right">
+            <div>1,247.83</div><div>98,204.51</div><div>7.62</div><div>-2,882.90</div>
+          </div>
+        </div>
+        <div class="demo">
+          <div class="demo__cap">错误 · 比例字体不对齐</div>
+          <div style="font-size:12px;font-family:var(--ds-font);text-align:right">
+            <div>1,247.83</div><div>98,204.51</div><div>7.62</div><div>-2,882.90</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 间距 / 圆角 / 阴影 ══════════ -->
+    <section id="space">
+      <div class="sec-head"><span class="idx">04</span><h2>间距 · 圆角 · 阴影</h2></div>
+      <p class="sec-desc">间距以 4px 为基，只允许使用下列八档。禁止出现 7px、13px 这类散值——散值会让节奏感崩掉。</p>
+
+      <div class="demo">
+        <div class="demo__cap">间距阶梯（4px 基）</div>
+        <div class="space-row"><div class="space-row__meta">--ds-1 · 4px</div><div class="space-row__bar" style="width:4px"></div></div>
+        <div class="space-row"><div class="space-row__meta">--ds-2 · 8px</div><div class="space-row__bar" style="width:8px"></div></div>
+        <div class="space-row"><div class="space-row__meta">--ds-3 · 12px</div><div class="space-row__bar" style="width:12px"></div></div>
+        <div class="space-row"><div class="space-row__meta">--ds-4 · 16px</div><div class="space-row__bar" style="width:16px"></div></div>
+        <div class="space-row"><div class="space-row__meta">--ds-5 · 20px</div><div class="space-row__bar" style="width:20px"></div></div>
+        <div class="space-row"><div class="space-row__meta">--ds-6 · 24px</div><div class="space-row__bar" style="width:24px"></div></div>
+        <div class="space-row"><div class="space-row__meta">--ds-8 · 32px</div><div class="space-row__bar" style="width:32px"></div></div>
+      </div>
+
+      <div class="sub">圆角</div>
+      <div class="demo">
+        <div class="radius-row">
+          <div class="radius-box" style="border-radius:var(--ds-r-sm)">sm 4</div>
+          <div class="radius-box" style="border-radius:var(--ds-r-md)">md 6</div>
+          <div class="radius-box" style="border-radius:var(--ds-r-lg)">lg 10</div>
+          <div class="radius-box" style="border-radius:var(--ds-r-xl)">xl 14</div>
+          <div class="radius-box" style="border-radius:var(--ds-r-pill)">pill</div>
+        </div>
+        <div class="subnote" style="margin:12px 0 0">
+          sm → 徽标 / 小控件　md → 按钮 / 输入 / 指标卡　lg → 卡片　xl → 浮层　pill → 胶囊标签
+        </div>
+      </div>
+
+      <div class="sub">阴影</div>
+      <div class="demo demo--canvas">
+        <div class="shadow-row">
+          <div class="shadow-box" style="box-shadow:var(--ds-shadow-xs)">xs 卡片静置</div>
+          <div class="shadow-box" style="box-shadow:var(--ds-shadow-sm)">sm 卡片悬停</div>
+          <div class="shadow-box" style="box-shadow:var(--ds-shadow-md)">md 浮起</div>
+          <div class="shadow-box" style="box-shadow:var(--ds-shadow-lg)">lg 浮层</div>
+        </div>
+        <div class="subnote" style="margin:12px 0 0">
+          阴影只表达「离画布多远」，不表达强调。需要强调请用描边或左侧色条。
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 动效 ══════════ -->
+    <section id="motion">
+      <div class="sec-head"><span class="idx">05</span><h2>动效</h2></div>
+      <p class="sec-desc">
+        只做「状态变化」的过渡，不做装饰性动画。三档时长：<code>120ms</code> 悬停/焦点、
+        <code>180ms</code> 面板展开、<code>260ms</code> 布局位移。缓动统一 <code>cubic-bezier(.4,0,.2,1)</code>。
+        所有动画必须响应 <code>prefers-reduced-motion</code>。
+      </p>
+      <div class="spec-wrap">
+        <table class="spec">
+          <thead><tr><th>令牌</th><th>值</th><th>用于</th></tr></thead>
+          <tbody>
+            <tr><td><code>--ds-dur-fast</code></td><td class="mono">120ms</td><td>悬停、焦点、颜色变化</td></tr>
+            <tr><td><code>--ds-dur</code></td><td class="mono">180ms</td><td>折叠展开、区块显隐</td></tr>
+            <tr><td><code>--ds-ease</code></td><td class="mono">cubic-bezier(.4,0,.2,1)</td><td>统一缓动</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══════════ 按钮 ══════════ -->
+    <section id="button">
+      <div class="sec-head"><span class="idx">06</span><h2>按钮</h2></div>
+      <p class="sec-desc">
+        四种变体：<b>primary</b> 一个视图最多一个（主操作）、<b>secondary</b> 次要操作、
+        <b>ghost</b> 弱化操作与图标按钮、<b>danger</b> 破坏性操作。三档尺寸：sm 24px / md 28px / lg 32px。
+      </p>
+      <div class="demo">
+        <div class="demo__cap">变体（一个视图最多一个 primary）</div>
+        <div class="demo__row">
+          <button class="ds-btn ds-btn--primary">运行回测</button>
+          <button class="ds-btn ds-btn--secondary">刷新实验列表</button>
+          <button class="ds-btn ds-btn--ghost">取消</button>
+          <button class="ds-btn ds-btn--danger">强制平仓</button>
+          <button class="ds-btn ds-btn--secondary" disabled>已禁用</button>
+        </div>
+        <div class="demo__cap" style="margin-top:16px">尺寸</div>
+        <div class="demo__row">
+          <button class="ds-btn ds-btn--secondary ds-btn--sm">sm · 24</button>
+          <button class="ds-btn ds-btn--secondary">md · 28（默认）</button>
+          <button class="ds-btn ds-btn--primary ds-btn--lg">lg · 32</button>
+        </div>
+        <div class="demo__cap" style="margin-top:16px">图标按钮</div>
+        <div class="demo__row">
+          <button class="ds-btn ds-btn--secondary ds-btn--sm ds-btn--icon" title="刷新">⟳</button>
+          <button class="ds-btn ds-btn--ghost ds-btn--icon" title="设置">⚙</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 输入 ══════════ -->
+    <section id="input">
+      <div class="sec-head"><span class="idx">07</span><h2>输入与表单</h2></div>
+      <p class="sec-desc">
+        输入框高 28px，等宽字体。<b>每个输入都必须有单位标注</b>（% / bps / USD / 根），
+        并在下方给出等价换算，避免用户在心算里出错。
+      </p>
+      <div class="demo">
+        <div class="demo__row" style="align-items:flex-start">
+          <div class="ds-field" style="width:170px">
+            <span class="ds-field__label">窗口起点 UTC</span>
+            <input class="ds-input" value="2026-10-01T00:00" readonly />
+            <span class="ds-field__hint">2026-10-01 00:00 UTC</span>
+          </div>
+          <div class="ds-field" style="width:150px">
+            <span class="ds-field__label">基准手续费率 <span class="ds-badge ds-badge--info">小数</span></span>
+            <input class="ds-input" value="0.0005" readonly />
+            <span class="ds-field__hint">= 5.00 bps / 0.0500%</span>
+          </div>
+          <div class="ds-field" style="width:150px">
+            <span class="ds-field__label">初始资金 <span class="ds-badge ds-badge--neutral">USD</span></span>
+            <input class="ds-input" value="100000" readonly />
+            <span class="ds-field__hint">[0, +∞]</span>
+          </div>
+          <div class="ds-field" style="width:150px">
+            <span class="ds-field__label">不可编辑态</span>
+            <input class="ds-input" value="0.000300" disabled />
+            <span class="ds-field__hint">未支持项禁用并说明</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 分段控件 ══════════ -->
+    <section id="segment">
+      <div class="sec-head"><span class="idx">08</span><h2>分段控件</h2></div>
+      <p class="sec-desc">
+        用于「互斥的少量选项」：视图切换、周期选择、交易所选择。未支持的选项<b>禁用并给原因</b>，
+        而不是隐藏——隐藏会让人以为功能不存在。
+      </p>
+      <div class="demo">
+        <div class="demo__cap">视图切换（ds-seg）</div>
+        <div class="demo__row">
+          <div class="ds-seg">
+            <button class="ds-seg__item" aria-selected="true">完整回测工作台</button>
+            <button class="ds-seg__item">验收复盘</button>
+          </div>
+        </div>
+        <div class="demo__cap" style="margin-top:16px">选项行（ds-optrow / ds-opt）</div>
+        <div class="demo__row">
+          <div class="ds-optrow">
+            <span class="ds-optrow__label">交易所</span>
+            <button class="ds-opt" aria-pressed="true">binance</button>
+            <button class="ds-opt">okx</button>
+          </div>
+          <div class="ds-optrow">
+            <span class="ds-optrow__label">周期</span>
+            <button class="ds-opt" aria-pressed="true">15m</button>
+            <button class="ds-opt">1h</button>
+            <button class="ds-opt">4h</button>
+            <button class="ds-opt" disabled title="未支持">1d</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 徽标 ══════════ -->
+    <section id="badge">
+      <div class="sec-head"><span class="idx">09</span><h2>徽标与状态</h2></div>
+      <p class="sec-desc">
+        徽标只承载<b>状态</b>，不承载描述性文字。六种色调对应六种状态，不允许自定义新色。
+      </p>
+      <div class="demo">
+        <div class="demo__row">
+          <span class="ds-badge ds-badge--neutral">neutral</span>
+          <span class="ds-badge ds-badge--pos">succeeded</span>
+          <span class="ds-badge ds-badge--neg">failed</span>
+          <span class="ds-badge ds-badge--warn">interrupted</span>
+          <span class="ds-badge ds-badge--info">running</span>
+          <span class="ds-badge ds-badge--accent">accent</span>
+        </div>
+        <div class="demo__cap" style="margin-top:16px">大号（用于区块标题右侧）</div>
+        <div class="demo__row">
+          <span class="ds-badge ds-badge--lg ds-badge--pos">质量：通过</span>
+          <span class="ds-badge ds-badge--lg ds-badge--neutral">共 35 条</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 指标卡 ══════════ -->
+    <section id="stat">
+      <div class="sec-head"><span class="idx">10</span><h2>指标卡</h2></div>
+      <p class="sec-desc">
+        指标卡是本系统最重要的数据容器。<b>数值必须限长</b>——超过 12 个有效位就截断，
+        完整值放 <code>title</code> 里悬停查看。绝不因为数字长就把卡片撑变形。
+      </p>
+      <div class="demo demo--canvas">
+        <div class="ds-grid-auto">
+          <div class="ds-stat ds-stat--lead ds-stat--pos">
+            <span class="ds-stat__label">净收益率</span>
+            <span class="ds-stat__value ds-stat__value--pos">+0.4074%</span>
+            <span class="ds-stat__sub">净盈亏 +$407.39 / 初始 $100,000</span>
+          </div>
+          <div class="ds-stat ds-stat--lead ds-stat--neg">
+            <span class="ds-stat__label">最大回撤</span>
+            <span class="ds-stat__value ds-stat__value--neg">-2.8829%</span>
+            <span class="ds-stat__sub">峰值动态水线</span>
+          </div>
+          <div class="ds-stat">
+            <span class="ds-stat__label">胜率</span>
+            <span class="ds-stat__value">50.00%</span>
+            <span class="ds-stat__sub">盈 3 / 亏 3 / 平 0</span>
+          </div>
+          <div class="ds-stat">
+            <span class="ds-stat__label">平均盈亏比</span>
+            <span class="ds-stat__value" title="1.29048909413528">1.290489094…</span>
+            <span class="ds-stat__sub">平均盈利 / 平均亏损</span>
+          </div>
+          <div class="ds-stat">
+            <span class="ds-stat__label">Profit Factor</span>
+            <span class="ds-stat__value">1.2905</span>
+            <span class="ds-stat__sub">Σ盈 / |Σ亏|（聚合口径）</span>
+          </div>
+          <div class="ds-stat">
+            <span class="ds-stat__label">交易次数</span>
+            <span class="ds-stat__value">6</span>
+            <span class="ds-stat__sub">已平仓笔数</span>
+          </div>
+          <div class="ds-stat">
+            <span class="ds-stat__label">手续费合计</span>
+            <span class="ds-stat__value ds-stat__value--muted">$456.59</span>
+            <span class="ds-stat__sub">入场 $228.07 + 出场 $228.52</span>
+          </div>
+          <div class="ds-stat">
+            <span class="ds-stat__label">资金费合计</span>
+            <span class="ds-stat__value ds-stat__value--muted">$31.58</span>
+            <span class="ds-stat__sub">10 笔真实结算事件</span>
+          </div>
+        </div>
+        <div class="subnote" style="margin-top:12px">
+          左起两卡为「主指标」，用 <code>.ds-stat--lead</code> 加左侧色条区分主次。
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 表格 ══════════ -->
+    <section id="table">
+      <div class="sec-head"><span class="idx">11</span><h2>数据表格</h2></div>
+      <p class="sec-desc">
+        表头 sticky、等宽字体、数字右对齐。选中行用左侧色条 + 浅底，而不是整行变色——
+        整行变色会淹没盈亏的颜色语义。
+      </p>
+      <div class="demo">
+        <div class="ds-tablewrap" style="max-height:230px">
+          <table class="ds-table ds-table--clickable">
+            <thead>
+              <tr>
+                <th>进场时间</th><th>标的</th><th>方向</th>
+                <th class="ds-table__num">开仓价</th><th class="ds-table__num">出场价</th>
+                <th class="ds-table__num">净盈亏</th><th>退出原因</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr aria-selected="true">
+                <td class="ds-table__muted">2026-10-01 16:00</td>
+                <td class="ds-table__strong">BTCUSDT</td>
+                <td><span class="ds-badge ds-badge--pos">做多</span></td>
+                <td class="ds-table__num">84,126.4108</td>
+                <td class="ds-table__num ds-table__strong">84,266.4181</td>
+                <td class="ds-table__num ds-table__pos">+$55.6252</td>
+                <td class="ds-table__muted">take_profit</td>
+              </tr>
+              <tr>
+                <td class="ds-table__muted">2026-10-02 00:00</td>
+                <td class="ds-table__strong">BTCUSDT</td>
+                <td><span class="ds-badge ds-badge--pos">做多</span></td>
+                <td class="ds-table__num">84,829.6000</td>
+                <td class="ds-table__num ds-table__strong">84,829.6000</td>
+                <td class="ds-table__num ds-table__pos">+$2.187394</td>
+                <td class="ds-table__muted">stop_loss</td>
+              </tr>
+              <tr>
+                <td class="ds-table__muted">2026-10-03 08:00</td>
+                <td class="ds-table__strong">BTCUSDT</td>
+                <td><span class="ds-badge ds-badge--neg">做空</span></td>
+                <td class="ds-table__num">86,470.1000</td>
+                <td class="ds-table__num ds-table__strong">86,264.2000</td>
+                <td class="ds-table__num ds-table__neg">-$8.240732</td>
+                <td class="ds-table__muted">trailing_stop</td>
+              </tr>
+              <tr>
+                <td colspan="7" class="ds-table__empty">无真实成交记录（后台账本为空）——不显示任何演示成绩</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="subnote" style="margin-top:10px">
+          空态写在 <code>&lt;td colspan&gt;</code> 内并加 <code>.ds-table__empty</code>：<b>必须说明「为什么空」</b>。
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 键值对 ══════════ -->
+    <section id="kv">
+      <div class="sec-head"><span class="idx">12</span><h2>键值对</h2></div>
+      <p class="sec-desc">用于展示「结果身份」这类只读元数据。键用四级文字，值用等宽二级文字，长值截断 + title。</p>
+      <div class="demo">
+        <div class="ds-kvgrid ds-kvgrid--4">
+          <div class="ds-kv"><span class="ds-kv__k">run_id</span><span class="ds-kv__v" title="bt_20261016T101958Z_af0f054f">bt_20261016T101958Z_af0f054f</span></div>
+          <div class="ds-kv"><span class="ds-kv__k">status</span><span class="ds-kv__v">succeeded</span></div>
+          <div class="ds-kv"><span class="ds-kv__k">created_at</span><span class="ds-kv__v">2026-10-16 10:19:58 UTC</span></div>
+          <div class="ds-kv"><span class="ds-kv__k">窗口</span><span class="ds-kv__v">10-01 00:00 → 10-08 00:00</span></div>
+          <div class="ds-kv"><span class="ds-kv__k">初始资金</span><span class="ds-kv__v">$100,000.00</span></div>
+          <div class="ds-kv"><span class="ds-kv__k">手续费率</span><span class="ds-kv__v">0.0005</span></div>
+          <div class="ds-kv"><span class="ds-kv__k">滑点 bps</span><span class="ds-kv__v">3</span></div>
+          <div class="ds-kv"><span class="ds-kv__k">engine 版本</span><span class="ds-kv__v">oi_res_v1.0.0 / oi_res_core_v1.0.0</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 提示条 ══════════ -->
+    <section id="note">
+      <div class="sec-head"><span class="idx">13</span><h2>提示条</h2></div>
+      <p class="sec-desc">四种语义。提示条内必须有<b>结论</b>（加粗）+ <b>依据</b>（等宽），不能只给一句模糊的「注意」。</p>
+      <div class="demo" style="display:flex;flex-direction:column;gap:10px">
+        <div class="ds-note ds-note--pos">
+          <span>✓</span>
+          <span><span class="ds-note__title">质量结论：通过</span>　运行 status succeeded · 信封 quality.status ok · data_quality 存在</span>
+        </div>
+        <div class="ds-note ds-note--neg">
+          <span>✕</span>
+          <span><span class="ds-note__title">质量结论：未通过</span>　quality.status=null ⇒ 缺质量明细，不能断言通过（HTTP 200 不等于成功）</span>
+        </div>
+        <div class="ds-note ds-note--warn">
+          <span>!</span>
+          <span><span class="ds-note__title">OI 门禁</span>　oi_min_resonance 当前为 UNSET，UNSET=未批准生产阈值 ⇒ 因子门控不参与门槛</span>
+        </div>
+        <div class="ds-note ds-note--info">
+          <span>i</span>
+          <span><span class="ds-note__title">本页提交：</span><span class="mono">bt_20261016T101958Z_af0f054f</span> · 状态 queued（轮询中；进入终态前按钮保持禁用）</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 空态 ══════════ -->
+    <section id="empty">
+      <div class="sec-head"><span class="idx">14</span><h2>空态与加载</h2></div>
+      <p class="sec-desc">
+        空态要回答三个问题：<b>空的是什么</b>、<b>为什么空</b>、<b>怎么让它不空</b>。
+        禁止只写「暂无数据」。
+      </p>
+      <div class="grid2">
+        <div class="demo">
+          <div class="demo__cap">空态</div>
+          <div class="ds-empty">
+            <div class="ds-empty__icon">◫</div>
+            <div class="ds-empty__title">暂无实验记录</div>
+            <div class="ds-empty__hint">还没有运行过回测。在上方「① 运行配置」里选择标的与 UTC 窗口，点击「运行回测」即可生成第一条记录。</div>
+          </div>
+        </div>
+        <div class="demo">
+          <div class="demo__cap">加载骨架</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="ds-skeleton" style="height:14px;width:38%"></div>
+            <div class="ds-skeleton" style="height:14px;width:82%"></div>
+            <div class="ds-skeleton" style="height:14px;width:64%"></div>
+            <div class="ds-skeleton" style="height:14px;width:71%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 折叠区 ══════════ -->
+    <section id="details">
+      <div class="sec-head"><span class="idx">15</span><h2>折叠区</h2></div>
+      <p class="sec-desc">
+        审计类信息（hash、原始 JSON、快照文件）默认折叠——它们重要但不需要常驻视野。
+        折叠摘要必须写明<b>里面是什么</b>，而不是「更多」。
+      </p>
+      <div class="demo">
+        <details class="ds-details" open>
+          <summary>代码 / 输入 hash · 账本行数 · 生效参数原始 JSON</summary>
+          <div class="ds-details__body">
+            <div class="ds-kvgrid ds-kvgrid--3">
+              <div class="ds-kv"><span class="ds-kv__k">spec_sha256</span><span class="ds-kv__v">17a3518d91ca5</span></div>
+              <div class="ds-kv"><span class="ds-kv__k">code_sha256</span><span class="ds-kv__v">c5e847b263f18</span></div>
+              <div class="ds-kv"><span class="ds-kv__k">input_sha256</span><span class="ds-kv__v">4d0b779fa1c28</span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════ 栅格与等高 ══════════ -->
+    <section id="grid">
+      <div class="sec-head"><span class="idx">16</span><h2>栅格与等高</h2></div>
+      <p class="sec-desc">
+        单屏仪表盘用 <b>12 列栅格</b>排布：<code>.ds-col-7</code> / <code>.ds-col-5</code> 左右并排，
+        <code>.ds-col-6</code> 等宽对分，<code>.ds-col-12</code>（默认）整行。
+        窄于 1200px 时并排一律退化为整行堆叠 —— <b>退化的只是排布，不隐藏任何内容</b>。
+      </p>
+      <p class="sec-desc" style="margin-top:-6px">
+        <b>同一排的两张卡片，高度由「高的那张」决定，矮的自动拉伸对齐。</b>
+        这件事交给栅格层完成（<code>.ds-dash</code> 的 <code>align-items: stretch</code> + 两级 flex），
+        <b>不要在页面里逐张调像素去凑等高</b> —— 并排时行高取两侧的较大值，只压一侧永远不够。
+      </p>
+      <div class="demo demo--canvas">
+        <div class="demo__cap">并排等高 · .ds-col-7 + .ds-col-5</div>
+        <div class="ds-dash eq-demo">
+          <div class="ds-col-7">
+            <div class="ds-card">
+              <div class="ds-card__head">
+                <span class="ds-card__title">④ 执行视图</span>
+                <span class="ds-card__meta">内容较多</span>
+              </div>
+              <div class="ds-card__body">
+                <div class="eq-fill eq-fill--box">图表区 · 由内容撑高</div>
+              </div>
+            </div>
+          </div>
+          <div class="ds-col-5">
+            <div class="ds-card">
+              <div class="ds-card__head">
+                <span class="ds-card__title">③ 资金分析</span>
+                <span class="ds-card__meta">内容较少</span>
+              </div>
+              <div class="ds-card__body">
+                <div class="eq-fill">外框被拉伸到与左卡同高<br>下方不留缺口</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="subnote" style="margin-top:12px">
+          左卡内容约 150px、右卡约 60px，两卡外框却完全对齐 —— 差值是栅格拉伸出来的，不是写死的像素。
+        </div>
+      </div>
+
+      <div class="sub">单行工具条 · 按需面板 · 表格限高</div>
+      <p class="sec-desc">
+        一屏之内看完的前提是「一行做完一件事」。下面三类原语负责把内容压回单屏，
+        <b>它们只改变「什么时候出现」，不改变「有没有」</b>。
+      </p>
+      <div class="spec-wrap">
+        <table class="spec">
+          <thead><tr><th>类名</th><th>用途与约束</th></tr></thead>
+          <tbody>
+            <tr><td><code>.ds-bar</code> <code>.ds-bar__label</code> <code>.ds-bar__sep</code></td><td>单行工具条：标签在左、控件在右、<code>align-items: flex-end</code>。用于「运行配置」「收益指标」这类一行放完的控件行。</td></tr>
+            <tr><td><code>.ds-panelbar</code> <code>.ds-panelbar__label</code></td><td>按需展开按钮组（<b>单选</b>）：同一时间只展开一个面板，不会把单屏又撑成长页。<b>字段一个不删</b>，只是默认不占首屏高度。</td></tr>
+            <tr><td><code>.ds-tablewrap--tight</code></td><td>表内滚动限高 8.25rem（约 4 行）。</td></tr>
+            <tr><td><code>.ds-tablewrap--mid</code></td><td>表内滚动限高 11rem（约 6 行）。</td></tr>
+            <tr><td><code>.ds-tablewrap--tall</code></td><td>表内滚动限高 12rem。并排布局下左列更高时，右列表格用满剩余高度。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo" style="margin-top:12px">
+        <div class="ds-note ds-note--warn">
+          <span>!</span>
+          <span><span class="ds-note__title">限高 ≠ 隐藏。</span>表内滚动的行仍在 DOM 里，滚动即可看到。要「默认不显示」的列请用 <code>data-secondary</code>（见「数据表格」节），但同样<b>不得从 DOM 移除</b> —— 验收脚本按 DOM 查询全部字段。</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 页头与工具条 ══════════ -->
+    <section id="pagehead">
+      <div class="sec-head"><span class="idx">17</span><h2>页头与工具条</h2></div>
+      <p class="sec-desc">
+        页头 sticky 在顶部，承载「我是谁 + 主操作」；工具条 sticky 在页头下方，承载
+        「当前上下文（选中的 run / 状态 / 关键指标速览）」。两者都必须毛玻璃 + 细描边，
+        滚动时内容从下方穿过而不被硬遮挡。
+      </p>
+      <div class="demo demo--canvas" style="padding:0;overflow:hidden;border-radius:var(--ds-r-lg)">
+        <div class="ds-pagehead" style="position:static">
+          <div class="ds-pagehead__row">
+            <div class="ds-pagehead__title">
+              <h1>回测复盘</h1>
+              <span class="ds-pagehead__sub">单策略 · WX_OI_RESONANCE_V1</span>
+            </div>
+            <div class="ds-pagehead__spacer"></div>
+            <div class="ds-seg">
+              <button class="ds-seg__item" aria-selected="true">完整回测工作台</button>
+              <button class="ds-seg__item">验收复盘</button>
+            </div>
+          </div>
+          <div class="ds-pagehead__row">
+            <nav class="ds-nav">
+              <button class="ds-nav__item" aria-current="true"><span class="ds-nav__idx">1</span>运行配置</button>
+              <button class="ds-nav__item"><span class="ds-nav__idx">2</span>收益指标</button>
+              <button class="ds-nav__item"><span class="ds-nav__idx">3</span>资金分析</button>
+              <button class="ds-nav__item"><span class="ds-nav__idx">4</span>执行视图</button>
+              <button class="ds-nav__item"><span class="ds-nav__idx">5</span>逐笔明细</button>
+              <button class="ds-nav__item"><span class="ds-nav__idx">6</span>实验记录</button>
+            </nav>
+          </div>
+        </div>
+        <!-- 工具条按**真实视口宽度**渲染：本页正文只有约 750px，若按此宽度渲染，
+             17 个条目必然换行，反而否定了 dense 要证明的事。故给内层 1400px 并允许横向滚动。 -->
+        <div style="padding:16px;overflow-x:auto">
+          <div style="min-width:1400px;display:flex;flex-direction:column;gap:16px">
+          <div>
+            <div class="demo__cap">默认 · gap 12px（按真实视口 1400px 渲染，可横向滚动查看）</div>
+            <div class="ds-toolbar" style="position:static">
+              <span class="ds-toolbar__label">当前结果</span>
+              <span class="ds-badge ds-badge--accent">bt_20261016T101958Z_af0f054f</span>
+              <span class="ds-badge ds-badge--pos">succeeded</span>
+              <span class="ds-badge ds-badge--pos">质量通过</span>
+              <span class="ds-toolbar__divider"></span>
+              <span class="ds-kv"><span class="ds-kv__k">净收益</span><span class="ds-kv__v" style="color:var(--ds-pos);font-weight:700">+0.4074%</span></span>
+              <span class="ds-kv"><span class="ds-kv__k">回撤</span><span class="ds-kv__v" style="color:var(--ds-neg);font-weight:700">-2.8829%</span></span>
+              <span class="ds-kv"><span class="ds-kv__k">笔数</span><span class="ds-kv__v">6</span></span>
+            </div>
+          </div>
+          <div>
+            <div class="demo__cap">.ds-toolbar--dense · gap 8px</div>
+            <div class="ds-toolbar ds-toolbar--dense" style="position:static">
+              <span class="ds-toolbar__label">当前结果</span>
+              <span class="ds-badge ds-badge--accent">bt_20261016T101958Z_af0f054f</span>
+              <span class="ds-badge ds-badge--pos">succeeded</span>
+              <span class="ds-badge ds-badge--pos">质量通过</span>
+              <span class="ds-toolbar__divider"></span>
+              <span class="ds-kv"><span class="ds-kv__k">净收益</span><span class="ds-kv__v" style="color:var(--ds-pos);font-weight:700">+0.4074%</span></span>
+              <span class="ds-kv"><span class="ds-kv__k">回撤</span><span class="ds-kv__v" style="color:var(--ds-neg);font-weight:700">-2.8829%</span></span>
+              <span class="ds-kv"><span class="ds-kv__k">笔数</span><span class="ds-kv__v">6</span></span>
+              <span class="ds-kv"><span class="ds-kv__k">胜率</span><span class="ds-kv__v">50.00%</span></span>
+              <span class="ds-kv"><span class="ds-kv__k">盈亏比</span><span class="ds-kv__v">1.29</span></span>
+              <span class="ds-toolbar__divider"></span>
+              <span class="ds-toolbar__label">更多视图</span>
+              <button class="ds-btn ds-btn--ghost ds-btn--sm">▸ 结果身份</button>
+              <button class="ds-btn ds-btn--ghost ds-btn--sm">▸ 订单明细</button>
+              <button class="ds-btn ds-btn--ghost ds-btn--sm">▸ 拒单明细</button>
+              <button class="ds-btn ds-btn--ghost ds-btn--sm">▸ 资金费结算</button>
+              <button class="ds-btn ds-btn--ghost ds-btn--sm">▸ 口径与审计</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="demo" style="margin-top:12px">
+        <div class="ds-note ds-note--info">
+          <span>i</span>
+          <span><span class="ds-note__title">条目多时用 <code>.ds-toolbar--dense</code>（gap 12px → 8px）。</span>17 个条目 × 12px 间距 ≈ 多出 190px，会把「口径与审计」挤到第二行、条高从 42px 涨到 78px。把间距收到 8px 就能压回单行 —— <b>优先加设计系统变体，不要砍文案</b>。</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 区块导航 ══════════ -->
+    <section id="nav">
+      <div class="sec-head"><span class="idx">18</span><h2>区块导航</h2></div>
+      <p class="sec-desc">
+        长页面（超过 3 屏）必须提供区块导航。序号用等宽数字小方块，当前区块用强调色高亮。
+        导航项文案用「做什么」而不是「第几节」。
+      </p>
+      <div class="demo">
+        <nav class="ds-nav">
+          <button class="ds-nav__item" aria-current="true"><span class="ds-nav__idx">1</span>运行配置</button>
+          <button class="ds-nav__item"><span class="ds-nav__idx">2</span>收益指标</button>
+          <button class="ds-nav__item"><span class="ds-nav__idx">3</span>资金分析</button>
+          <button class="ds-nav__item"><span class="ds-nav__idx">4</span>执行视图</button>
+          <button class="ds-nav__item"><span class="ds-nav__idx">5</span>逐笔明细</button>
+          <button class="ds-nav__item"><span class="ds-nav__idx">6</span>实验记录</button>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ══════════ 图表配色 ══════════ -->
+    <section id="chart">
+      <div class="sec-head"><span class="idx">19</span><h2>图表配色</h2></div>
+      <p class="sec-desc">
+        图表是回测页的核心视图，配色必须与语义色一致：<b>策略净值用强调蓝、买入持有基准用中性灰、
+        回撤用负向红、涨跌沿用绿涨红跌</b>。基准永远比策略弱一档，避免喧宾夺主。
+      </p>
+      <div class="demo">
+        <div class="demo__row">
+          <span class="ds-badge ds-badge--accent">策略净值</span><span class="mono" style="font-size:11px">#3b6ef6</span>
+          <span style="width:1px;height:14px;background:var(--ds-border)"></span>
+          <span class="ds-badge ds-badge--neutral">买入持有基准</span><span class="mono" style="font-size:11px">#93a1b5</span>
+          <span style="width:1px;height:14px;background:var(--ds-border)"></span>
+          <span class="ds-badge ds-badge--neg">回撤</span><span class="mono" style="font-size:11px">#d92d48</span>
+          <span style="width:1px;height:14px;background:var(--ds-border)"></span>
+          <span class="ds-badge ds-badge--pos">上涨 K</span><span class="mono" style="font-size:11px">#0f9d63</span>
+          <span class="ds-badge ds-badge--neg">下跌 K</span><span class="mono" style="font-size:11px">#d92d48</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 使用准则 ══════════ -->
+    <section id="usage">
+      <div class="sec-head"><span class="idx">20</span><h2>使用准则</h2></div>
+      <p class="sec-desc">写代码时对照这组正误示例。判据只有一条：<b>新代码里不允许出现硬编码的色值、字号、间距</b>。</p>
+      <div class="dd">
+        <div class="dd__card">
+          <div class="dd__head dd__head--do">✓ 应该这样做</div>
+          <div class="dd__body">
+            <ul>
+              <li>用 <code>var(--ds-text-3)</code>，不用 <code>#6b7a91</code></li>
+              <li>用 <code>padding: var(--ds-3)</code>，不用 <code>padding: 12px</code></li>
+              <li>数值容器加 <code>ds-num</code> / <code>ds-table__num</code></li>
+              <li>语义色三件套成组使用（fg + bg + border）</li>
+              <li>缺失值输出 <code>—</code>，并在旁边说明为什么缺</li>
+              <li>长数字截断 + <code>title</code> 保留完整值</li>
+              <li>空态写清「空的是什么 + 为什么 + 怎么解决」</li>
+            </ul>
+          </div>
+        </div>
+        <div class="dd__card">
+          <div class="dd__head dd__head--dont">✕ 不要这样做</div>
+          <div class="dd__body">
+            <ul>
+              <li>硬编码 <code>#fff</code> / <code>13px</code> / <code>7px</code> 这类散值</li>
+              <li>用强调蓝表达盈亏（盈亏只能用 pos / neg）</li>
+              <li>用颜色深浅表达层级（层级用结构 / 字重）</li>
+              <li>缺数据显示 <code>0</code>（会让「无数据」被读成「收益为零」）</li>
+              <li>一个视图里出现两个 primary 按钮</li>
+              <li>用 <code>transition: all</code>（会连带布局属性一起动画）</li>
+              <li>空态只写「暂无数据」</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 令牌索引 ══════════ -->
+    <section id="api">
+      <div class="sec-head"><span class="idx">21</span><h2>令牌索引</h2></div>
+      <p class="sec-desc">完整清单。新增令牌必须先加进这里，再在页面使用。</p>
+      <div class="spec-wrap">
+        <table class="spec">
+          <thead><tr><th>分类</th><th>令牌</th><th>值</th></tr></thead>
+          <tbody>
+            <tr><td>表面</td><td><code>--ds-canvas</code> / <code>--ds-surface</code> / <code>--ds-surface-2</code> / <code>--ds-surface-3</code> / <code>--ds-surface-inverse</code></td><td class="mono">#f5f7fb / #fff / #fafbfe / #eef2f8 / #0f1a2e</td></tr>
+            <tr><td>描边</td><td><code>--ds-border-subtle</code> / <code>--ds-border</code> / <code>--ds-border-strong</code> / <code>--ds-border-focus</code></td><td class="mono">#edf1f7 / #dde5ef / #c6d1e0 / #3b6ef6</td></tr>
+            <tr><td>文字</td><td><code>--ds-text</code> / <code>--ds-text-2</code> / <code>--ds-text-3</code> / <code>--ds-text-4</code></td><td class="mono">#0b1526 / #3d4c63 / #6b7a91 / #93a1b5</td></tr>
+            <tr><td>强调</td><td><code>--ds-accent-50/100/300</code> / <code>--ds-accent</code> / <code>--ds-accent-600/700</code></td><td class="mono">#eef3ff…#2449bb</td></tr>
+            <tr><td>语义</td><td><code>--ds-pos[-bg|-border]</code> · <code>--ds-neg…</code> · <code>--ds-warn…</code> · <code>--ds-info…</code></td><td class="mono">三件套</td></tr>
+            <tr><td>字体</td><td><code>--ds-font</code> / <code>--ds-mono</code></td><td class="mono">system / SF Mono</td></tr>
+            <tr><td>字号</td><td><code>--ds-fs-2xs … --ds-fs-2xl</code></td><td class="mono">10 / 11 / 12 / 13 / 15 / 20 / 26</td></tr>
+            <tr><td>行高</td><td><code>--ds-lh-tight</code> / <code>--ds-lh-base</code></td><td class="mono">1.25 / 1.5</td></tr>
+            <tr><td>间距</td><td><code>--ds-1 … --ds-8</code></td><td class="mono">4 / 8 / 12 / 16 / 20 / 24 / 32</td></tr>
+            <tr><td>圆角</td><td><code>--ds-r-sm/md/lg/xl/pill</code></td><td class="mono">4 / 6 / 10 / 14 / 999</td></tr>
+            <tr><td>阴影</td><td><code>--ds-shadow-xs/sm/md/lg</code> / <code>--ds-ring</code></td><td class="mono">4 档 + 焦点环</td></tr>
+            <tr><td>动效</td><td><code>--ds-dur-fast</code> / <code>--ds-dur</code> / <code>--ds-ease</code></td><td class="mono">120ms / 180ms / cubic-bezier(.4,0,.2,1)</td></tr>
+            <tr><td>布局</td><td><code>--ds-pagehead-h</code> / <code>--ds-sticky-gap</code> / <code>--ds-toolbar-h</code> / <code>--ds-scroll-pad</code></td><td class="mono">89px / 8px / 42px / 16px</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sub">组件类索引</div>
+      <div class="spec-wrap">
+        <table class="spec">
+          <thead><tr><th>块</th><th>类名</th></tr></thead>
+          <tbody>
+            <tr><td>卡片</td><td><code>.ds-card</code> <code>.ds-card__head</code> <code>.ds-card__title</code> <code>.ds-card__meta</code> <code>.ds-card__body</code> <code>.ds-card__foot</code> <code>.ds-card--sub</code></td></tr>
+            <tr><td>按钮</td><td><code>.ds-btn</code> + <code>--primary|--secondary|--ghost|--danger</code> + <code>--sm|--lg|--icon</code></td></tr>
+            <tr><td>输入</td><td><code>.ds-field</code> <code>.ds-field__label</code> <code>.ds-field__hint</code> <code>.ds-input</code> <code>.ds-select</code></td></tr>
+            <tr><td>分段</td><td><code>.ds-seg</code> <code>.ds-seg__item</code> <code>.ds-optrow</code> <code>.ds-opt</code></td></tr>
+            <tr><td>徽标</td><td><code>.ds-badge</code> + <code>--neutral|--pos|--neg|--warn|--info|--accent</code> + <code>--lg</code></td></tr>
+            <tr><td>指标卡</td><td><code>.ds-stat</code> <code>.ds-stat__label</code> <code>.ds-stat__value</code> <code>.ds-stat__sub</code> + <code>--lead|--pos|--neg</code></td></tr>
+            <tr><td>表格</td><td><code>.ds-tablewrap</code> <code>.ds-table</code> <code>.ds-table--clickable</code> <code>.ds-table__num|__muted|__strong|__pos|__neg|__empty</code></td></tr>
+            <tr><td>键值</td><td><code>.ds-kv</code> <code>.ds-kv__k</code> <code>.ds-kv__v</code> <code>.ds-kvgrid</code> + <code>--2|--3|--4</code></td></tr>
+            <tr><td>提示</td><td><code>.ds-note</code> + <code>--info|--pos|--neg|--warn</code> <code>.ds-note__title</code></td></tr>
+            <tr><td>空态</td><td><code>.ds-empty</code> <code>.ds-empty__icon</code> <code>.ds-empty__title</code> <code>.ds-empty__hint</code> <code>.ds-skeleton</code></td></tr>
+            <tr><td>折叠</td><td><code>.ds-details</code> <code>.ds-details__body</code></td></tr>
+            <tr><td>页面</td><td><code>.ds-page</code> <code>.ds-pagehead</code> <code>.ds-pagehead__row|__title|__sub|__spacer</code></td></tr>
+            <tr><td>导航</td><td><code>.ds-nav</code> <code>.ds-nav__item</code> <code>.ds-nav__idx</code></td></tr>
+            <tr><td>工具条</td><td><code>.ds-toolbar</code> + <code>--dense</code> <code>.ds-toolbar__label</code> <code>.ds-toolbar__divider</code></td></tr>
+            <tr><td>栅格</td><td><code>.ds-dash</code> <code>.ds-col-7</code> <code>.ds-col-6</code> <code>.ds-col-5</code>（同排自动等高）</td></tr>
+            <tr><td>单行条</td><td><code>.ds-bar</code> <code>.ds-bar__label</code> <code>.ds-bar__sep</code> <code>.ds-panelbar</code> <code>.ds-panelbar__label</code></td></tr>
+            <tr><td>行内指标</td><td><code>.ds-mi</code> <code>.ds-mi__k</code> <code>.ds-mi__v</code> + <code>--pos|--neg|--muted</code></td></tr>
+            <tr><td>表格限高</td><td><code>.ds-tablewrap--tight</code> <code>.ds-tablewrap--mid</code> <code>.ds-tablewrap--tall</code></td></tr>
+            <tr><td>工具类</td><td><code>.ds-num</code> <code>.ds-row</code> <code>.ds-stack</code> <code>.ds-grid-auto</code> <code>.ds-truncate</code> <code>.ds-hr</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

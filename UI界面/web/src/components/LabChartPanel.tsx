@@ -36,7 +36,7 @@ import {
   type ChartViewport,
 } from './LightweightChart';
 import type { Candle } from '../types/crypto';
-import type { LabChart, LabChartTrade } from '../api/labBacktest';
+import type { LabChart, LabChartTrade, LabOrderRow } from '../api/labBacktest';
 
 /* ── 格式化（未知一律 '—'）────────────────────────────────────────────────── */
 const fmtNum = (v: number | null | undefined, digits = 2): string =>
@@ -119,6 +119,36 @@ function buildTradeMarkers(chart: LabChart | null, selectedTradeId: string | nul
 /** 保护止损轨迹（引擎实况记录，不重建、不造点）。 */
 const LAB_STOP_COLOR = '#b45309';
 
+/**
+ * 订单/委托标记（账本 `orders` 表 ⇒ 官方 markers）。
+ *
+ * 与「成交」标记区分：成交用上下箭头（belowBar/aboveBar），订单用 **inBar 圆点**并按 `phase` 着色，
+ * 便于在同一根 K 线上把「委托 → 成交」分层看出；同一 order 一行一标记，不做任何去重/合并。
+ * 本策略为次根 15m 开盘撮合 ⇒ 成交价与订单价一致，圆点与箭头落在同一根上，属真实事实，不隐藏。
+ */
+const ORDER_PHASE_COLOR: Record<string, string> = {
+  C_entry: '#1d4ed8',
+  D_intrabar: '#7c3aed',
+  EOD: '#64748b',
+};
+
+function buildOrderMarkers(orders: LabOrderRow[] | null | undefined): SeriesMarker<Time>[] {
+  const out: SeriesMarker<Time>[] = [];
+  if (!orders) return out;
+  for (const o of orders) {
+    if (!Number.isFinite(o.ts_ms)) continue;
+    out.push({
+      id: `ord-${o.order_id}`,
+      time: toChartSeconds(o.ts_ms),
+      position: 'inBar',
+      shape: 'circle',
+      color: ORDER_PHASE_COLOR[o.phase] ?? '#64748b',
+      size: 1,
+    });
+  }
+  return out;
+}
+
 export interface LabChartPanelProps {
   chart: LabChart | null;
   loading: boolean;
@@ -126,6 +156,8 @@ export interface LabChartPanelProps {
   missingReason: string | null;
   selectedTradeId: string | null;
   onSelectTrade: (tradeId: string | null) => void;
+  /** 账本 `orders` 表（真实委托明细）；缺失 ⇒ 不画订单标记，不造点。 */
+  orders?: LabOrderRow[] | null;
 }
 
 export const LabChartPanel: React.FC<LabChartPanelProps> = ({
@@ -135,6 +167,7 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
   missingReason,
   selectedTradeId,
   onSelectTrade,
+  orders = null,
 }) => {
   const bars = useMemo(() => labCandlesToBars(chart), [chart]);
   const gridTimes = useMemo(() => buildCandleGrid(bars), [bars]);
@@ -155,8 +188,8 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
   const onViewportChange = useCallback((v: ChartViewport) => setViewport(v), []);
 
   const extraMarkers = useMemo(
-    () => buildTradeMarkers(chart, selectedTradeId),
-    [chart, selectedTradeId],
+    () => [...buildTradeMarkers(chart, selectedTradeId), ...buildOrderMarkers(orders)],
+    [chart, selectedTradeId, orders],
   );
 
   const selectedTrade: LabChartTrade | null = useMemo(
@@ -265,64 +298,96 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
     >
       <div className="px-3 py-2 border-b border-neutral-200 bg-neutral-50 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2 flex-wrap">
-          <h3 className="text-xs font-bold text-neutral-100">
-            执行视图 · {chart?.symbol ?? '—'} · {chart?.exec_timeframe ?? '—'} 真实 K 线 / 成交量 / 信号 / 开平仓 / 保护止损轨迹
+          <h3
+            className="text-xs font-bold text-neutral-100"
+            title="真实 K 线 / 成交量 / 信号 / 开平仓 / 保护止损轨迹；成交量 = 原始 base 量（不是 USDT 名义额）"
+          >
+            ④ 执行视图 · {chart?.symbol ?? '—'} · {chart?.exec_timeframe ?? '—'}
           </h3>
-          <span className="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-mono">
-            {bars.length} 根（真实）
-          </span>
-          <span className="px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-700 border border-neutral-200 text-[10px] font-mono">
-            成交量 = 原始 base 量（不是 USDT 名义额）
+          <span
+            className="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-mono"
+            title="来自后台真实 K 线载荷的根数（非合成 / 非静态 demo）"
+          >
+            {bars.length} 根
           </span>
           {chart?.trades && (
             <span className="px-1.5 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-200 text-[10px] font-mono">
-              开平仓标记 {chart.trades.length} 笔
+              开平仓 {chart.trades.length} 笔
             </span>
           )}
-        </div>
-        <div className="flex items-center gap-2">
+          {orders && orders.length > 0 && (
+            <span
+              className="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200 text-[10px] font-mono"
+              title="委托标记为 inBar 圆点，按 phase 着色"
+            >
+              委托 {orders.length} 条
+            </span>
+          )}
           {selectedTrade && (
             <button
               onClick={() => onSelectTrade(null)}
-              className="px-2 py-1 rounded border border-neutral-200 bg-white text-[11px] text-neutral-300 hover:bg-neutral-50"
+              className="px-2 py-0.5 rounded border border-neutral-200 bg-white text-[10px] text-neutral-300 hover:bg-neutral-50"
             >
               清除选中
             </button>
           )}
-          <span className="text-[10px] text-neutral-400 font-mono">
-            滚轮缩放 / 拖动平移
-            {viewport ? ` · 视窗 ${fmtUtc(viewport.fromMs)} → ${fmtUtc(viewport.toMs)}` : ''}
+          {/* 视窗范围：常显（这是「现在看的是哪一段」），交互提示收进 title */}
+          <span
+            className="text-[10px] text-neutral-400 font-mono"
+            title="滚轮缩放 / 拖动平移（走项目既有 lightweight-charts 官方时间轴）"
+          >
+            {viewport ? `视窗 ${fmtUtc(viewport.fromMs)} → ${fmtUtc(viewport.toMs)}` : ''}
           </span>
         </div>
       </div>
 
-      {/* 止盈口径：没有固定止盈规则就明说，不造 TP 点 */}
-      <div className="px-3 py-1.5 border-b border-neutral-200 bg-white text-[11px] flex flex-wrap gap-x-4 gap-y-1">
+      {/* 止盈口径 + 标记图例 + 成交时刻口径（**同一行**；口径原文移到 title，不占视野） */}
+      <div className="px-3 py-1 border-b border-neutral-200 bg-white text-[10px] flex flex-wrap items-center gap-x-3 gap-y-1">
         {noFixedTp === true && (
-          <span className="px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-semibold">
-            未配置固定止盈（take_profit.exists = false）
+          <span
+            className="px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-semibold"
+            title={tp?.note ? `口径：${tp.note}` : undefined}
+          >
+            无固定止盈
           </span>
         )}
         {noFixedTp === false && (
-          <span className="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
-            止盈规则：已配置（按后台字段）
+          <span
+            className="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200"
+            title={tp?.note ? `口径：${tp.note}` : undefined}
+          >
+            止盈规则已配置
           </span>
         )}
-        {noFixedTp === null && <span className="text-neutral-400">止盈规则字段缺失 ⇒ 不做任何假设</span>}
-        {tp?.note && <span className="text-neutral-400">口径：{tp.note}</span>}
-      </div>
-
-      {/* 时间精度：bar 级假设如实显示 */}
-      {chart?.time_precision && (
-        <div className="px-3 py-1.5 border-b border-neutral-200 bg-amber-50/60 text-[10px] text-amber-900 space-y-0.5">
-          <div className="font-semibold">成交时刻口径（后台 time_precision，bar 级假设，非 tick 精确）</div>
-          {Object.entries(chart.time_precision).map(([k, v]) => (
-            <div key={k} className="font-mono">
-              <span className="text-amber-700">{k}</span>：{v}
+        {noFixedTp === null && <span className="text-neutral-400">止盈规则字段缺失 ⇒ 不做假设</span>}
+        <span className="text-neutral-500 flex flex-wrap items-center gap-x-2">
+          <span className="font-semibold">图例</span>
+          <span>▲ 开仓</span>
+          <span>▼ 平仓</span>
+          <span className="text-amber-700">— 保护止损</span>
+          <span className="text-indigo-700">● C_entry</span>
+          <span className="text-violet-700">● D_intrabar</span>
+          <span className="text-neutral-500">● EOD</span>
+        </span>
+        {/* 时间精度：bar 级假设如实显示（行内折叠，口径不删、不占高） */}
+        {chart?.time_precision && (
+          <details className="text-[10px]" data-testid="lab-chart-timeprecision">
+            <summary
+              className="cursor-pointer text-neutral-500 hover:text-neutral-100 list-none"
+              title="后台 time_precision 原值（bar 级假设，非 tick 精确）"
+            >
+              成交时刻口径 ▾
+            </summary>
+            <div className="text-[10px] space-y-0.5 pt-1">
+              {Object.entries(chart.time_precision).map(([k, v]) => (
+                <div key={k} className="font-mono">
+                  <span className="text-amber-700">{k}</span>：{v}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      )}
+          </details>
+        )}
+      </div>
 
       {/* 悬停读数 */}
       <div className="px-3 py-1.5 border-b border-neutral-200 bg-neutral-50 text-[11px] font-mono flex flex-wrap items-center gap-x-4 gap-y-1">
@@ -354,7 +419,7 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
         )}
       </div>
 
-      <div className="relative w-full h-[420px] bg-white">
+      <div className="relative w-full h-[273px] bg-white">
         {bars.length === 0 ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center text-xs text-neutral-500 gap-1">
             <span>{loading ? '正在读取真实图表载荷…' : '无真实 K 线数据（不绘制任何合成 K 线 / 静态 demo）'}</span>
