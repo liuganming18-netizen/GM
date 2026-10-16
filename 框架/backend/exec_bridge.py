@@ -21,15 +21,11 @@ STRATEGY_DIR = Path(__file__).resolve().parents[2] / "策略"
 if str(STRATEGY_DIR) not in sys.path:
     sys.path.insert(0, str(STRATEGY_DIR))
 
+# WORK-04 阶段 1：旧执行链完全隔离，禁止生产调用（实体保留备查）
+LEGACY_ISOLATED = True
 CORE_AVAILABLE = False
-IMPORT_ERROR = None
-
-try:                                                       # noqa: SIM105
-    from WyckoffMaster import execution as X                # type: ignore
-    CORE_AVAILABLE = True
-except Exception as exc:                                    # noqa: BLE001
-    X = None
-    IMPORT_ERROR = f"{type(exc).__name__}: {exc}"
+IMPORT_ERROR = "WORK-04_ISOLATION: 旧 v3.1 执行桥已被完全隔离，生产流程严禁调用旧执行核心"
+X = None
 
 if CORE_AVAILABLE:
     CORE_VERSION = X.CORE_VERSION
