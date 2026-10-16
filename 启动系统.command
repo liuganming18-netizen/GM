@@ -62,6 +62,10 @@ export PATH="$NODE_BIN_DIR:$PATH"
 export DATA_HUB_PROJECT="$ROOT"
 export MARKET_DB="$ROOT/数据/市场数据/db/market_v2.sqlite3"
 export MARKET_ARCHIVE="$ROOT/数据/市场数据/parquet"
+# 纸面账本目录：**显式**绑定（禁止相对推导 + 自动建库）。缺库 ⇒ 后端 fail-closed。
+export PAPER_LEDGER_DIR="$ROOT/数据/paper"
+export PAPER_LEDGER_ALLOW_INIT="${PAPER_LEDGER_ALLOW_INIT:-0}"
+export LIVE_WORKER_INTERVAL_SEC="${LIVE_WORKER_INTERVAL_SEC:-900}"
 export PYTHONPATH="$ROOT/框架:$BE_DIR:$ROOT:${PYTHONPATH:-}"
 
 say "════════════════════════════════════════════════"
