@@ -36,20 +36,24 @@ from __future__ import annotations
 import datetime as dt
 import hashlib
 import json
+import os
 import sqlite3
 from pathlib import Path
 
 import live_store as L
-import exec_bridge as EB                     # v3.1 共用执行核心桥（策略/风控/成交唯一来源）
+EB = None                                     # WORK-04B: exec_bridge 已退役，禁止导入
+try:                                          # WORK-04 退役闸门（fail-closed）
+    import legacy_retirement as _RET
+except Exception:                             # noqa: BLE001
+    _RET = None
 
 UTC = dt.timezone.utc
 H = 3_600_000
 MIN = 60_000
 
 MODEL_VERSION = "paper_exec_v1_derived_from_effective_view_20261013"
-# 账本口径标识：绑定共用执行核心版本（供任务三核对「回放与实时同口径」）
-LEDGER_MODEL_VERSION = (EB.LEDGER_MODEL_VERSION if EB.CORE_AVAILABLE
-                        else "paper_exec_v1_core_unavailable")
+# 账本口径标识：WORK-04B 旧执行链退役
+LEDGER_MODEL_VERSION = "paper_exec_v1_legacy_retired_in_work04b"
 DETAIL_TF = "15m"
 
 # ── 报价新鲜度配置（本窗口**显式定义**；待人类追认；不用于成交定价）────────────
@@ -135,10 +139,13 @@ def new_entry_gate() -> dict:
     }
 
 # 已批准参数视图（**只读引用**，运行期读取）
-EFFECTIVE_VIEW = Path(
-    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/"
-    "最新唐奇安威科夫接通与收尾_2026-10-11/5000U收尾与回测条件终验6/"
-    "10_研究参数生效视图_v2_2_user5000_shared.json")
+# W1（2026-10-16）：原写死 旧工作区路径（已删）（该视图已随旧工作区删除）。
+# 现路径 = 环境变量 `EFFECTIVE_VIEW`（若设）否则工程内正式位置。文件不存在时下方
+# `FALLBACK` 逻辑照旧生效，并在返回值里**显式标注** source=fallback（不冒充生效视图）。
+EFFECTIVE_VIEW = (Path(os.environ["EFFECTIVE_VIEW"]) if os.environ.get("EFFECTIVE_VIEW")
+                  else Path(__file__).resolve().parents[2] / "数据" / "研究输入" /
+                  "最新唐奇安威科夫接通与收尾_2026-10-11" / "5000U收尾与回测条件终验6" /
+                  "10_研究参数生效视图_v2_2_user5000_shared.json")
 
 # 兜底（仅当视图文件不可读时使用；并在返回值里显式标注 source=fallback）
 # **2026-10-15 闭环整改·阶段A**：兜底值**改为冻结视图 v2.2 的保守真值**，
@@ -271,9 +278,13 @@ def _crosscheck_with_exec_core(params: dict) -> dict:
 # 与冻结回测同源：`strategies/wx_daily_375.py` 的 `SPEC_ROUNDING`
 # （`本次离线决策_2026-10-12/07_526币保守执行近似规格.csv`）。此处**直接读同一 CSV**
 # （stdlib `csv`），不 `import wx_daily_375`（它模块级 import pyarrow，会让单测静默 skip）。
-CONTRACT_SPEC_CSV = Path(
-    "/Users/boos/.codex/worktrees/c9d7/加密货币趋势判断系统/本次离线决策_2026-10-12/"
-    "07_526币保守执行近似规格.csv")
+# W1（2026-10-16）：原指向外部工作树 外部工作树路径。
+# 该目录的业务数据（45 MB）已**整体迁入工程**：`数据/研究输入/外部迁移_2026-10-16/`。
+CONTRACT_SPEC_CSV = (Path(os.environ["CONTRACT_SPEC_CSV"])
+                     if os.environ.get("CONTRACT_SPEC_CSV") else
+                     Path(__file__).resolve().parents[2] / "数据" / "研究输入" /
+                     "外部迁移_2026-10-16" / "本次离线决策_2026-10-12" /
+                     "07_526币保守执行近似规格.csv")
 _SPEC_ROWS: dict | None = None
 
 
@@ -694,6 +705,13 @@ def open_position(arm: str, symbol: str, *, signal_uid=None, direction="long",
     用于审计与「手工请求」的经济请求时刻；缺省 = 本次尝试时刻）。
     `epoch_ms` = 本轮 paper epoch（缺省取 `live_store.get_paper_epoch_ms()`）。
     """
+    # ── WORK-04 退役闸门（fail-closed）：旧 3a–3d 可运行入口已下线 ────────────────
+    # Paper 未接新共享核心期间，**禁止任何新开仓**；不写账本、不回退旧 exec_bridge。
+    if _RET is not None and _RET.is_retired(arm):
+        return {"ok": False, "arm": arm, "symbol": symbol,
+                "reason": "legacy_strategy_retired_WORK04",
+                "detail": "旧策略已退役；Paper 未接新共享核心（NOT_CONNECTED）⇒ 禁止新开仓",
+                "retired": True, "new_core": _RET.SUCCESSOR_STRATEGY_ID}
     params = approved_params()
     # ── 方向归一（任务二重点修复：**绝不**把缺失/非法方向默认成 long）─────────────
     # 旧实现只判 `direction not in ("long","short")` 后直接继续；上游若把 short 写成

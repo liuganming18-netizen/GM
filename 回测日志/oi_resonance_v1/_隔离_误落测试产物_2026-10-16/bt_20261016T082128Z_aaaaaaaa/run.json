@@ -1,0 +1,9 @@
+{
+  "spec": {},
+  "status": "interrupted",
+  "run_id": "bt_20261016T082128Z_aaaaaaaa",
+  "created_at": "2026-10-16T08:21:28Z",
+  "updated_at": "2026-10-16T08:21:28Z",
+  "interrupted_at": "2026-10-16T08:21:28Z",
+  "failure_reason": "服务重启时该运行仍为 queued/running ⇒ 标 interrupted（未完成，结果不得当成功使用）"
+}

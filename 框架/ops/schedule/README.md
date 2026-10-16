@@ -21,10 +21,10 @@
 
 ```sh
 # 启用（前置门禁通过后）
-OPS_ENABLE_SCHEDULE=1 sh "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/ops/schedule/install_launchd.sh"
+OPS_ENABLE_SCHEDULE=1 sh "/Users/boos/Desktop/威科夫因子共振趋势/ops/schedule/install_launchd.sh"
 
 # 卸载（可逆）
-sh "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/ops/schedule/uninstall_launchd.sh"
+sh "/Users/boos/Desktop/威科夫因子共振趋势/ops/schedule/uninstall_launchd.sh"
 ```
 
 ## 当前状态

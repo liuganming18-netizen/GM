@@ -1,0 +1,61 @@
+{
+  "replay_verdict": "FAIL",
+  "verdict": "PASS",
+  "notes": [
+    "window.window_source",
+    "window.data_end_ms",
+    "window.sig_end_ms",
+    "window.exec_end_ms",
+    "trades[0].trade_id",
+    "trades[1].trade_id",
+    "trades[2].trade_id",
+    "trades[3].trade_id",
+    "trades[4].trade_id",
+    "trades[5].trade_id",
+    "trades[6].trade_id",
+    "orders[0].order_id",
+    "orders[1].order_id",
+    "orders[2].order_id",
+    "orders[3].order_id",
+    "orders[4].order_id",
+    "orders[5].order_id",
+    "orders[6].order_id",
+    "orders[7].order_id",
+    "orders[8].order_id",
+    "orders[9].order_id",
+    "orders[10].order_id",
+    "orders[11].order_id",
+    "orders[12].order_id",
+    "orders[13].order_id",
+    "hashes.input_sha256",
+    "hashes.signal_frame_sha256"
+  ],
+  "identity_diffs": [
+    {
+      "key": "strategy.code_sha256",
+      "class": "identity",
+      "got": "a40299a39ef2e26312766ce9a76e6d9c0b2a111a5a6f4665fb52812320523f01",
+      "want": "364aacfcd65c45e18106b9d2bac3200f21aa1bbdb4750a3f598ad07045fa338a"
+    },
+    {
+      "key": "strategy.signal_params_hash",
+      "class": "identity",
+      "got": "5cc0457b7d0913bf7bb896021276369895fe3eef944702852f542917b72c12db",
+      "want": "0ba4b7918356b66415416504ae63f9f99786c73ee410fcc69182e9678aee21db"
+    },
+    {
+      "key": "hashes.code_sha256",
+      "class": "identity",
+      "got": "a40299a39ef2e26312766ce9a76e6d9c0b2a111a5a6f4665fb52812320523f01",
+      "want": "364aacfcd65c45e18106b9d2bac3200f21aa1bbdb4750a3f598ad07045fa338a"
+    },
+    {
+      "key": "hashes.signal_params_hash",
+      "class": "identity",
+      "got": "5cc0457b7d0913bf7bb896021276369895fe3eef944702852f542917b72c12db",
+      "want": "0ba4b7918356b66415416504ae63f9f99786c73ee410fcc69182e9678aee21db"
+    }
+  ],
+  "behavior_diffs": [],
+  "behavior_diff_count": 0
+}

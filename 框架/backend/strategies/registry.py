@@ -12,11 +12,27 @@
   · run_status            运行是否冻结（当前恒 pending —— G05 未通过）
   · implementation_status 代码是否已实现（WX 四组 = implemented）
 """
-from . import common, strategy_a, strategy_b
-from . import wx_donchian_wyckoff as wx
-from . import wx_config
+from . import common
 
-# ── 单一「当前回测策略」元数据（2026-10-16 策略替换）─────────────────────────
+# WORK-04B：旧策略彻底退役的单一事实源。
+try:
+    import legacy_retirement as _RET                      # type: ignore
+except Exception:                                         # noqa: BLE001
+    import sys as _sys
+    from pathlib import Path as _Path
+    _bd = str(_Path(__file__).resolve().parents[1])
+    if _bd not in _sys.path:
+        _sys.path.insert(0, _bd)
+    try:
+        import legacy_retirement as _RET                  # type: ignore
+    except Exception:                                     # noqa: BLE001
+        class _RET:                                       # type: ignore
+            RETIRED_STRATEGY_KEYS = ("3a", "3b", "3c", "3d", "A", "B")
+            RETIRED_AT = "2026-10-16"
+            SUCCESSOR_STRATEGY_ID = "WX_OI_RESONANCE_V1"
+            RETIREMENT_REASON = "旧 F_WX（3a–3d）与旧 A/B 已彻底退役清除"
+
+# ── 单一「当前唯一策略」元数据（WORK-04B 核心收敛）───────────────────────────
 CURRENT_BACKTEST_KEY = "wx_oi_resonance_v1"
 CURRENT_BACKTEST_ID = "WX_OI_RESONANCE_V1"
 _BACKTEST_CACHE = {"entry": None, "error": None, "loaded": False}
@@ -40,18 +56,13 @@ def backtest_entry(key=None):
     return _BACKTEST_CACHE["entry"], _BACKTEST_CACHE["error"]
 
 
-# 当前启用集切换为新策略 WX_OI_RESONANCE_V1（2026-10-16 任务三对接）
+# 当前唯一启用集为新策略 WX_OI_RESONANCE_V1
 CURRENT_RUN_KEYS = (CURRENT_BACKTEST_KEY,)
-# 旧 F_WX（3a–3d）降为 legacy 只读，与旧 A/B 共同保留为历史追溯，不改名冒充新策略
-LEGACY_KEYS = tuple(wx.ARM_IDS) + (strategy_a.KEY, strategy_b.KEY)
+# 旧策略键（3a–3d、A、B）已退役，仅存静态标识，无运行实体
+LEGACY_KEYS = ("3a", "3b", "3c", "3d", "A", "B")
 
-# 全量查找表（CLI / 历史查询用）
 _new_mod, _ = backtest_entry()
-REGISTRY = {
-    **wx.REGISTRY,
-    strategy_a.KEY: strategy_a,
-    strategy_b.KEY: strategy_b,
-}
+REGISTRY = {}
 if _new_mod is not None:
     REGISTRY[CURRENT_BACKTEST_KEY] = _new_mod
 
@@ -60,17 +71,15 @@ def get(key):
     if key in (CURRENT_BACKTEST_KEY, CURRENT_BACKTEST_ID):
         mod, _ = backtest_entry()
         return mod
-    return REGISTRY.get(key)
+    return None
 
 
 def resolved_config(con, key, version=None):
-    """统一配置解析：新策略走内置冻结配置；WX 走生效视图/库内登记；旧 A/B 走库内 strategy_configs。"""
+    """统一配置解析：新策略走内置冻结配置；旧策略已退役无配置。"""
     if key in (CURRENT_BACKTEST_KEY, CURRENT_BACKTEST_ID):
         mod, _ = backtest_entry()
         return mod.resolve(con, key, version) if mod else None
-    if key in wx.ARM_IDS:
-        return wx_config.resolve(con, key, version)
-    return common.load_config(con, key, version)
+    return None
 
 
 def describe(con, key):
@@ -81,60 +90,33 @@ def describe(con, key):
     if key in (CURRENT_BACKTEST_KEY, CURRENT_BACKTEST_ID):
         return describe_current_backtest(con)
 
-    mod = REGISTRY.get(key)
-    if mod is None:
-        return None
-    resolved = resolved_config(con, key, None)
-    status, missing, errors = common.validate_config(
-        resolved, mod.REQUIRED_CONFIG,
-        getattr(mod, "VALIDATION", None), getattr(mod, "RELATIONS", None))
-    if resolved and resolved.get("hash_check") == "drift":
-        status = common.STATUS_INVALID
-        errors = list(errors) + ["身份漂移（视图 SHA/登记表/逐配置生效身份或 DB 参数不一致）：拒绝运行"]
-        errors = errors + list(resolved.get("identity_problems") or [])
-    if status == common.STATUS_INVALID:
-        config_status = common.STATUS_INVALID
-        run_status = "invalid_config"
-    elif status == common.STATUS_OK:
-        config_status = "已配置"
-        run_status = "configured"
-    else:
-        config_status = common.STATUS_PENDING
-        run_status = "pending_config"
-
-    is_wx = key in wx.ARM_IDS
-    view, vsha = wx_config.load_view() if is_wx else (None, None)
-    return {
-        "strategy_key": key,
-        "name": mod.NAME,
-        "timeframe": mod.TIMEFRAME,
-        "direction": mod.DIRECTION,
-        "family": "F_WX_legacy" if is_wx else "legacy",
-        "enabled_for_current_run": False,   # 旧 F_WX 降为 legacy 只读
-        "status": run_status,
-        "config_status": config_status,
-        "missing_config": missing,
-        "config_errors": errors,
-        "required_config": list(mod.REQUIRED_CONFIG),
-        "config_version": resolved["version"] if resolved else None,
-        "config_hash": resolved["config_hash"] if resolved else None,
-        "config_source": resolved.get("source") if resolved else None,
-        "frozen": bool(resolved["frozen"]) if resolved else False,
-        # 三层真实状态（不互相冒充）
-        "policy_status": ("frozen" if (is_wx and view and view.get("research_policy_frozen"))
-                          else ("unknown" if is_wx else "n/a")),
-        "run_status": ("frozen" if (is_wx and resolved and resolved.get("run_frozen"))
-                       else ("pending" if is_wx else "n/a")),
-        "implementation_status": "legacy_readable_only",
-        "identity_ok": (resolved.get("identity_ok") if (is_wx and resolved) else None),
-        "view_sha256": (resolved.get("view_sha256") if (is_wx and resolved) else None),
-        "run_binding": (resolved.get("run_binding") if (is_wx and resolved) else None),
-        "exec": (resolved.get("exec") if (is_wx and resolved) else None),
-        "gate_status": ({"G01": "pending", "G02": "pending", "G03": "pending",
-                         "G04": "pending", "G05": "pending"} if is_wx else None),
-        "config": resolved["config"] if resolved else None,
-        "note": "旧 F_WX 策略族（3a–3d）：已降为 legacy 只读追溯，不进入当前启用集",
-    }
+    if key in LEGACY_KEYS:
+        return {
+            "strategy_key": key,
+            "name": f"Legacy Strategy {key} (Retired)",
+            "timeframe": "1h",
+            "direction": "long",
+            "family": "legacy_retired",
+            "enabled_for_current_run": False,
+            "retired": True,
+            "runnable": False,
+            "retired_at": getattr(_RET, "RETIRED_AT", "2026-10-16"),
+            "successor_strategy_id": getattr(_RET, "SUCCESSOR_STRATEGY_ID", "WX_OI_RESONANCE_V1"),
+            "status": "retired",
+            "config_status": "已退役清理",
+            "missing_config": [],
+            "config_errors": ["WORK-04B: 策略已彻底退役，禁止运行"],
+            "required_config": [],
+            "config_version": None,
+            "config_hash": None,
+            "config_source": None,
+            "frozen": False,
+            "policy_status": "retired",
+            "run_status": "retired",
+            "implementation_status": "deleted_in_work04b",
+            "note": "WORK-04B: 旧策略已退役并从源码中物理清理，仅保留历史审计凭据，不可作为生产策略启动。",
+        }
+    return None
 
 
 def list_all(con):
@@ -198,6 +180,7 @@ def describe_current_backtest(con=None):
                     "不退回默认参数",
             "inherits_legacy_results": False,
             "legacy_archive": "策略/WyckoffMaster/_legacy_archive_v31",
+            "runnable": False, "retired": False,
         }
     iface = mod.interface()
     return {
@@ -221,9 +204,63 @@ def describe_current_backtest(con=None):
         "inherits_legacy_results": False,
         "not_inherited": iface["not_inherited"],
         "legacy_archive": "策略/WyckoffMaster/_legacy_archive_v31",
-        "role": "当前**回测**策略（唯一）；旧 F_WX 3a–3d 仍为当前启用族，语义不变",
+        "runnable": True,
+        "retired": False,
+        "role": "当前**唯一可运行回测策略**；旧 F_WX 3a–3d 与旧 A/B 已退役"
+                "（runnable=False，见 list_legacy / retirement_summary）",
         "note": "正式 M4 门禁未过（run_frozen=False）⇒ 本策略只做**独立候选研究**，"
                 "不得冒称 M4 已通过、不得继承 3a–3d / M0–M6 成绩",
+    }
+
+
+def is_runnable(key) -> bool:
+    """该注册表键当前是否**可运行**。旧 3a–3d / A / B 一律 `False`（WORK-04 退役）。"""
+    if key in (CURRENT_BACKTEST_KEY, CURRENT_BACKTEST_ID):
+        mod, _ = backtest_entry()
+        return mod is not None
+    return False
+
+
+def guard_runnable(key):
+    """可运行性硬闸：旧策略 / 未知键 ⇒ 返回**拒绝原因字符串**；可运行 ⇒ `None`。
+
+    调用方（回测创建 / 驱动）必须先过此闸，避免旧策略被当成可运行策略启动。
+    """
+    if key in (CURRENT_BACKTEST_KEY, CURRENT_BACKTEST_ID):
+        mod, err = backtest_entry()
+        if mod is None:
+            return f"候选策略包不可用：{err}"
+        return None
+    if key in LEGACY_KEYS:
+        return (f"策略 {key!r} 已退役（WORK-04，{getattr(_RET, 'RETIRED_AT', '')}）"
+                f"⇒ 不可运行；唯一可运行策略为 "
+                f"{getattr(_RET, 'SUCCESSOR_STRATEGY_ID', 'WX_OI_RESONANCE_V1')}")
+    return f"未知策略键 {key!r}（不在注册表）"
+
+
+def retirement_block() -> dict:
+    """**轻量**退役元数据（不查库、不触发候选包加载）——供 `/api/v1/strategies` 等内嵌。"""
+    return {
+        "retired_strategy_keys": list(_RET.RETIRED_STRATEGY_KEYS),
+        "retired_at": getattr(_RET, "RETIRED_AT", None),
+        "successor_strategy_id": getattr(_RET, "SUCCESSOR_STRATEGY_ID", None),
+        "successor_strategy_key": CURRENT_BACKTEST_KEY,
+        "current_runnable_keys": list(CURRENT_RUN_KEYS),
+        "legacy_readonly_keys": list(LEGACY_KEYS),
+    }
+
+
+def retirement_summary(con=None) -> dict:
+    """退役汇总（供 API / UI 展示「新旧归属」）。"""
+    return {
+        "retired_strategy_keys": list(_RET.RETIRED_STRATEGY_KEYS),
+        "retired_at": getattr(_RET, "RETIRED_AT", None),
+        "successor_strategy_id": getattr(_RET, "SUCCESSOR_STRATEGY_ID", None),
+        "successor_strategy_key": CURRENT_BACKTEST_KEY,
+        "current_runnable_keys": list(CURRENT_RUN_KEYS),
+        "legacy_readonly": list(LEGACY_KEYS),
+        "legacy": list_legacy(con),
+        "note": "旧策略已退役：不再进入任何可运行入口；旧源码/旧 runs 以可恢复只读归档保留。",
     }
 
 

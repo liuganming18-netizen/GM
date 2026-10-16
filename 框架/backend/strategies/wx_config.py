@@ -24,7 +24,8 @@ import json
 import os
 
 from . import common
-from . import wx_donchian_wyckoff as wx
+wx = None                                    # WORK-04B: wx_donchian_wyckoff 已彻底删除
+ARM_IDS = ("3a", "3b", "3c", "3d")
 from . import wx_gate
 
 # ── 固定接受身份（施工前由生效视图实算并冻结；不是运行放行凭据）──────────────
@@ -259,10 +260,15 @@ APPROX_375_CALENDAR = {
 # ── 118 人类确认日历（2026-10-12 确认；**覆盖** 上方 inherited 候选，仅记回执不擅改）──────
 # 用户 2026-10-12 明确确认：面板 2020-12-15→2026-10-09；DEV 至 2023-11-11；段首 30 日禁开，
 # DEV 首开 2021-01-14（=面板起+30d，正好给足「此前 30 完整 UTC 日」窗口）。
+# W1（2026-10-16）：`source` 由外部工作树路径改为**工程内迁移落点**（数据已整体迁入）。
+_RESEARCH_MIGRATION = (
+    os.environ.get("RESEARCH_INPUT_DIR")
+    or os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__)))), "数据", "研究输入", "外部迁移_2026-10-16"))
 APPROX_375_CALENDAR_STATUS = "human_confirmed"
 APPROX_375_CALENDAR_CONFIRMED = {
-    "source": ("/Users/boos/.codex/worktrees/c9d7/加密货币趋势判断系统/"
-               "Work派工_2026-10-11/118_20201215新候选日历_待用户确认.json"),
+    "source": os.path.join(_RESEARCH_MIGRATION, "Work派工_2026-10-11",
+                           "118_20201215新候选日历_待用户确认.json"),
     "human_confirmed": True,
     "confirmed_at_utc": "2026-10-12T04:43:15.294862+00:00",
     "timezone": "UTC",
@@ -283,8 +289,8 @@ APPROX_375_CALENDAR_SUPERSEDED_NOTE = (
     "新输入/回测一律用确认值，inherited 仅作 23 回归兼容。")
 
 # 本次离线决策目录（用户本轮授权的 375 名单 / 逐日资格 / 规格 / 费用规则来源；**只读**）。
-APPROX_375_DECISION_DIR = ("/Users/boos/.codex/worktrees/c9d7/加密货币趋势判断系统/"
-                           "本次离线决策_2026-10-12")
+# W1（2026-10-16）：由外部工作树路径改为工程内迁移落点。
+APPROX_375_DECISION_DIR = os.path.join(_RESEARCH_MIGRATION, "本次离线决策_2026-10-12")
 APPROX_375_POOL_LIST = os.path.join(APPROX_375_DECISION_DIR, "19_最终375币假设研究池.csv")
 APPROX_375_DAILY_ELIGIBILITY = os.path.join(APPROX_375_DECISION_DIR,
                                             "12_通过连续性币的逐日准入资格.csv")

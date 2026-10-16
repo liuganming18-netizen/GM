@@ -20,28 +20,43 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import sys
 import time
 from pathlib import Path
 
-BASE = Path("/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究")
-BACKEND = BASE / "后端实现"
-ROOT = BASE / "最新唐奇安威科夫接通与收尾_2026-10-11"
-W37 = ROOT / "取消成交额硬门槛与375新准入37"
-W43 = ROOT / "量价信号接入与模拟历史并行43"
-for _p in (str(W43), str(W37), str(BACKEND)):
-    if _p not in sys.path:
-        sys.path.insert(0, _p)
+# W1（2026-10-16）幽灵依赖清理
+# ─────────────────────────────────────────────────────────────────────────────
+# 原写死 旧工作区站点根（已删）
+# （**已随旧工作区整体删除**）。该目录承载的旧研究件（`_warmup43` / `_接入43`）
+# **不在本工程内**，因此本模块对 `_warmup43` 的导入在当前工程里**必然失败** ——
+# 这正是「旧四臂 live 链已不具生产条件」的事实。现改为：外部站点根**只**来自
+# 显式环境变量 `LEGACY_SITE_DIR`；未设置 ⇒ 不注入任何工程外路径（不猜、不兜底）。
+LEGACY_SITE_DIR = os.environ.get("LEGACY_SITE_DIR")
+BASE = Path(LEGACY_SITE_DIR) if LEGACY_SITE_DIR else None
+BACKEND = Path(__file__).resolve().parent
+ROOT = (BASE / "最新唐奇安威科夫接通与收尾_2026-10-11") if BASE else None
+W37 = (ROOT / "取消成交额硬门槛与375新准入37") if ROOT else None
+W43 = (ROOT / "量价信号接入与模拟历史并行43") if ROOT else None
+for _p in (W43, W37, BACKEND):
+    if _p is None:
+        continue
+    if str(_p) not in sys.path:
+        sys.path.insert(0, str(_p))
 sys.dont_write_bytecode = True
 
 import live_store as L                                     # noqa: E402
 import paper_engine as PE                                  # noqa: E402
-import exec_bridge as EB                                   # noqa: E402（v3.1 共用执行核心桥）
+EB = None                                                  # WORK-04B: exec_bridge 已退役，禁止导入
 import live_signal_engine as SE                            # noqa: E402
 import live_account as LA                                  # noqa: E402
 import _warmup43 as W                                      # noqa: E402
-from strategies import wx_config as CFG                    # noqa: E402
-from strategies import wx_donchian_wyckoff as WX           # noqa: E402
+CFG = None                                                 # WORK-04B: 旧策略配置已退役
+WX = None                                                  # WORK-04B: wx_donchian_wyckoff 已退役
+try:                                                        # WORK-04 退役闸门（fail-closed）
+    import legacy_retirement as _RET
+except Exception:                                           # noqa: BLE001
+    _RET = None
 
 UTC = dt.timezone.utc
 H = 3_600_000
@@ -182,6 +197,11 @@ def advance_paper(*, T=None, log=print) -> dict:
     **因果闸门**：只自动开 `confirmed_at >= 实时起点水位线` 的信号。
     水位线之前的实时信号照常展示，但不自动开仓（详见 `live_store` 水位线注释）。
     """
+    # ── WORK-04 退役闸门（fail-closed）：Paper 未接新共享核心 ⇒ 不推进、不开仓 ──────
+    if _RET is not None and _RET.paper_live_status().get("paper", {}).get("connected") is False:
+        return {"ok": False, "skipped": True, "reason": "paper_not_connected_WORK04",
+                "detail": "Paper 未接新共享核心（NOT_CONNECTED）⇒ 禁止新开仓/真实下单，不回退旧 exec_bridge",
+                "new_core": _RET.SUCCESSOR_STRATEGY_ID}
     T = int(T) if T else _now()
     params = PE.approved_params()
     resolved = {a: CFG.resolve(None, a) for a in ARMS}
@@ -508,6 +528,16 @@ def run_once(*, T=None, limit=0, force=False, with_signals=True, with_accounts=T
 
 
 def main():
+    # ── WORK-04 退役闸门（fail-closed）：旧 3a–3d paper worker 已退役 ───────────────
+    if _RET is not None and _RET.paper_live_status().get("paper", {}).get("connected") is False:
+        print(json.dumps({
+            "ok": False, "status": "NOT_CONNECTED",
+            "reason": "paper_not_connected_WORK04",
+            "detail": "旧 3a–3d paper worker 已退役；Paper 未接新共享核心 ⇒ 拒绝启动，不回退旧 exec_bridge",
+            "new_core": _RET.SUCCESSOR_STRATEGY_ID,
+            "retired_strategy_keys": list(_RET.RETIRED_STRATEGY_KEYS),
+        }, ensure_ascii=False), flush=True)
+        return 3
     ap = argparse.ArgumentParser()
     ap.add_argument("--T", default=None)
     ap.add_argument("--limit", type=int, default=0)

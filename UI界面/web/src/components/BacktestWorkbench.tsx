@@ -50,8 +50,10 @@ import {
   labGetChart,
   labGetEquity,
   labGetMetrics,
+  labGetOrders,
   labGetPool,
   labGetQuality,
+  labGetRejected,
   labGetRun,
   labGetTrade,
   labGetTrades,
@@ -65,10 +67,15 @@ import {
   type LabEquityPoint,
   type LabEquityResponse,
   type LabMetricsResponse,
+  type LabOrderRow,
+  type LabOrdersResponse,
   type LabParamSpec,
   type LabPoolItem,
   type LabQualityResponse,
+  type LabRejectedResponse,
+  type LabRejectedRow,
   type LabRegistryEntry,
+  type LabRetirementInfo,
   type LabRunDetail,
   type LabRunHashes,
   type LabRunSummary,
@@ -840,6 +847,14 @@ export const BacktestWorkbench: React.FC = () => {
   const trades = useLabFetch<LabTradesResponse>(subKey, () =>
     labGetTrades(selectedRunId as string).then((d) => expectRunId(d, selectedRunId as string)),
   );
+  /** 全局订单/成交明细（与逐笔同源账本 orders 表）。 */
+  const orders = useLabFetch<LabOrdersResponse>(subKey, () =>
+    labGetOrders(selectedRunId as string).then((d) => expectRunId(d, selectedRunId as string)),
+  );
+  /** 拒单明细（账本 rejected 表）。 */
+  const rejected = useLabFetch<LabRejectedResponse>(subKey, () =>
+    labGetRejected(selectedRunId as string).then((d) => expectRunId(d, selectedRunId as string)),
+  );
   const chart = useLabFetch<LabChartResponse>(subKey, () =>
     labGetChart(selectedRunId as string).then((d) => expectRunId(d, selectedRunId as string)),
   );
@@ -1061,6 +1076,22 @@ export const BacktestWorkbench: React.FC = () => {
   const tradeRows: LabTradeRow[] = useMemo(() => trades.data?.items ?? [], [trades.data]);
   const equityPoints: LabEquityPoint[] = useMemo(() => equity.data?.items ?? [], [equity.data]);
   const chartPayload: LabChart | null = chart.data?.chart ?? null;
+  const orderRows: LabOrderRow[] = useMemo(() => orders.data?.items ?? [], [orders.data]);
+  const rejectedRows: LabRejectedRow[] = useMemo(() => rejected.data?.items ?? [], [rejected.data]);
+
+  /** 拒单原因聚合（按 `reason` 计数；仅统计真实返回的行，缺失不填 0）。 */
+  const rejectedByReason = useMemo(() => {
+    const out: Record<string, number> = {};
+    for (const r of rejectedRows) {
+      const k = r.reason || '（原因缺失）';
+      out[k] = (out[k] ?? 0) + 1;
+    }
+    return Object.entries(out).sort((a, b) => b[1] - a[1]);
+  }, [rejectedRows]);
+
+  /** 运行列表新旧归属（来自列表响应 `retirement`；缺失 ⇒ 不推断）。 */
+  const retirement: LabRetirementInfo | null = list.data?.retirement ?? null;
+  const excludedLegacy = list.data?.excluded_legacy ?? [];
 
   /** 该月平仓笔数（按**真实**平仓时间；仅作旧热力图的「补充事实」列，非收益口径）。 */
   const monthCloseCounts = useMemo(() => {
@@ -1610,6 +1641,122 @@ export const BacktestWorkbench: React.FC = () => {
         </SectionCard>
       )}
 
+      {/* ══ ⑤b 全局订单 / 成交明细 ══ */}
+      {selectedRunId && detailStatus === 'succeeded' && (
+        <SectionCard
+          title="⑤b 订单 / 成交明细（全局 · 账本 orders 表；与逐笔同源）"
+          testid="lab-orders"
+          right={
+            <div className="flex items-center gap-2 text-[10px] font-mono">
+              <Chip>共 {orderRows.length} 行</Chip>
+              {orders.error && <span className="text-rose-600">订单取数错误：{orders.error}</span>}
+              {orders.data?.missing_reason && <span className="text-amber-700">{orders.data.missing_reason}</span>}
+            </div>
+          }
+        >
+          <div className="overflow-auto max-h-72 border border-neutral-100 rounded">
+            <table className="w-full text-left text-[11px] font-mono">
+              <thead className="bg-neutral-50 text-neutral-400 border-b border-neutral-200 sticky top-0">
+                <tr>
+                  <th className="py-1.5 px-2">时点</th>
+                  <th className="py-1.5 px-2">phase</th>
+                  <th className="py-1.5 px-2">side</th>
+                  <th className="py-1.5 px-2">action</th>
+                  <th className="py-1.5 px-2">标的</th>
+                  <th className="py-1.5 px-2 text-right">价格</th>
+                  <th className="py-1.5 px-2 text-right">数量</th>
+                  <th className="py-1.5 px-2 text-right">手续费</th>
+                  <th className="py-1.5 px-2 text-right">止损价</th>
+                  <th className="py-1.5 px-2">trade_id</th>
+                  <th className="py-1.5 px-2">原因</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-100">
+                {orderRows.length === 0 ? (
+                  <tr>
+                    <td colSpan={11} className="py-6 text-center text-neutral-400 font-sans">
+                      {orders.loading ? '读取中…' : '无真实订单记录（账本 orders 为空）——不显示任何演示数据'}
+                    </td>
+                  </tr>
+                ) : (
+                  orderRows.map((o) => (
+                    <tr key={o.order_id} className="hover:bg-neutral-50">
+                      <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(o.ts_ms)}</td>
+                      <td className="py-1.5 px-2">{o.phase}</td>
+                      <td className="py-1.5 px-2">{o.side}</td>
+                      <td className="py-1.5 px-2">{o.action}</td>
+                      <td className="py-1.5 px-2 font-bold text-neutral-100">{o.symbol}</td>
+                      <td className="py-1.5 px-2 text-right">{fmtNum(o.price, 4)}</td>
+                      <td className="py-1.5 px-2 text-right">{fmtNum(o.qty, 6)}</td>
+                      <td className="py-1.5 px-2 text-right">{fmtNum(o.fee, 6)}</td>
+                      <td className="py-1.5 px-2 text-right">{fmtNum(o.stop_price, 4)}</td>
+                      <td className="py-1.5 px-2 text-neutral-400">{o.trade_id || '—'}</td>
+                      <td className="py-1.5 px-2 text-neutral-500">{o.reason || '—'}</td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+        </SectionCard>
+      )}
+
+      {/* ══ ⑤c 拒单明细 ══ */}
+      {selectedRunId && detailStatus === 'succeeded' && (
+        <SectionCard
+          title="⑤c 拒单明细（账本 rejected 表：时点 / 标的 / 相位 / 原因）"
+          testid="lab-rejected"
+          right={
+            <div className="flex items-center gap-2 text-[10px] font-mono">
+              <Chip tone={rejectedRows.length > 0 ? 'warn' : 'neutral'}>共 {rejectedRows.length} 条</Chip>
+              {rejected.error && <span className="text-rose-600">拒单取数错误：{rejected.error}</span>}
+              {rejected.data?.missing_reason && <span className="text-amber-700">{rejected.data.missing_reason}</span>}
+            </div>
+          }
+        >
+          {rejectedByReason.length > 0 && (
+            <div className="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-mono">
+              <span className="text-neutral-500">原因分布：</span>
+              {rejectedByReason.map(([reason, n]) => (
+                <span key={reason} className="px-1.5 py-0.5 rounded border border-amber-200 bg-amber-50 text-amber-800">
+                  {reason} × {n}
+                </span>
+              ))}
+            </div>
+          )}
+          <div className="overflow-auto max-h-64 border border-neutral-100 rounded">
+            <table className="w-full text-left text-[11px] font-mono">
+              <thead className="bg-neutral-50 text-neutral-400 border-b border-neutral-200 sticky top-0">
+                <tr>
+                  <th className="py-1.5 px-2">时点</th>
+                  <th className="py-1.5 px-2">标的</th>
+                  <th className="py-1.5 px-2">phase</th>
+                  <th className="py-1.5 px-2">原因</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-100">
+                {rejectedRows.length === 0 ? (
+                  <tr>
+                    <td colSpan={4} className="py-6 text-center text-neutral-400 font-sans">
+                      {rejected.loading ? '读取中…' : '无真实拒单记录（账本 rejected 为空）——不把「无记录」包装成「无拒单」'}
+                    </td>
+                  </tr>
+                ) : (
+                  rejectedRows.map((r, i) => (
+                    <tr key={`${r.ts_ms}-${r.symbol}-${i}`} className="hover:bg-neutral-50">
+                      <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(r.ts_ms)}</td>
+                      <td className="py-1.5 px-2 font-bold text-neutral-100">{r.symbol}</td>
+                      <td className="py-1.5 px-2">{r.phase}</td>
+                      <td className="py-1.5 px-2 text-amber-800">{r.reason}</td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+        </SectionCard>
+      )}
+
       {/* ══ ⑥ 实验记录 + 质量报告 ══ */}
       <SectionCard
         title="⑥ 实验记录（永久保存 · 可选择历史 run）与质量报告"
@@ -1622,6 +1769,30 @@ export const BacktestWorkbench: React.FC = () => {
           </div>
         }
       >
+        {/* 新旧归属：本列表仅含当前策略；旧策略 run 已退役并排除 */}
+        <div
+          className="mb-2 rounded border border-amber-200 bg-amber-50 px-2 py-1.5 text-[10px] text-amber-900 flex flex-wrap items-center gap-x-3 gap-y-1"
+          data-testid="lab-run-attribution"
+        >
+          <span className="font-bold">新旧归属</span>
+          <span>
+            本列表**仅含当前策略**{' '}
+            <span className="font-mono">{retirement?.successor_strategy_id ?? LAB_STRATEGY_ID}</span>
+          </span>
+          {retirement?.retired_strategy_keys && (
+            <span>
+              已退役旧策略：
+              <span className="font-mono">{retirement.retired_strategy_keys.join(' / ')}</span>
+              {retirement.retired_at ? `（${retirement.retired_at}）` : ''}
+            </span>
+          )}
+          <span className="text-amber-700">
+            被排除出本列表的旧/身份存疑 run：{excludedLegacy.length} 条
+            {excludedLegacy.length > 0 && `（${excludedLegacy.map((x) => x.run_id).slice(0, 3).join('、')}${excludedLegacy.length > 3 ? '…' : ''}）`}
+          </span>
+          <span className="text-amber-700">旧结果不得当成新策略成绩；旧源码/runs 以可恢复只读归档保留。</span>
+        </div>
+
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
           <div className="overflow-auto max-h-80 border border-neutral-100 rounded">
             <table className="w-full text-left text-[11px] font-mono">
@@ -1629,6 +1800,7 @@ export const BacktestWorkbench: React.FC = () => {
                 <tr>
                   <th className="py-1.5 px-2">run_id</th>
                   <th className="py-1.5 px-2">状态</th>
+                  <th className="py-1.5 px-2">归属</th>
                   <th className="py-1.5 px-2">创建时间（UTC）</th>
                   <th className="py-1.5 px-2">标的 / 窗口</th>
                   <th className="py-1.5 px-2 text-right">净收益</th>
@@ -1641,7 +1813,7 @@ export const BacktestWorkbench: React.FC = () => {
               <tbody className="divide-y divide-neutral-100">
                 {runs.length === 0 ? (
                   <tr>
-                    <td colSpan={9} className="py-6 text-center text-neutral-400 font-sans">
+                    <td colSpan={10} className="py-6 text-center text-neutral-400 font-sans">
                       {list.loading ? '读取中…' : '暂无实验记录'}
                     </td>
                   </tr>
@@ -1662,6 +1834,17 @@ export const BacktestWorkbench: React.FC = () => {
                         <td className="py-1.5 px-2 text-neutral-200 whitespace-nowrap">{r.run_id}</td>
                         <td className="py-1.5 px-2">
                           <span className={`px-1.5 py-0.5 rounded border text-[10px] ${statusStyle(r.status)}`}>{r.status}</span>
+                        </td>
+                        <td className="py-1.5 px-2">
+                          {r.attribution === 'current_strategy' ? (
+                            <span className="px-1.5 py-0.5 rounded border border-emerald-200 bg-emerald-50 text-emerald-700 text-[10px]">
+                              当前策略
+                            </span>
+                          ) : (
+                            <span className="px-1.5 py-0.5 rounded border border-amber-200 bg-amber-50 text-amber-800 text-[10px]">
+                              身份存疑
+                            </span>
+                          )}
                         </td>
                         <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtIsoUtc(r.created_at)}</td>
                         <td className="py-1.5 px-2 text-neutral-400 whitespace-nowrap">
@@ -1719,7 +1902,8 @@ export const BacktestWorkbench: React.FC = () => {
           )}
           <div className="text-[10px] text-neutral-500 flex items-center gap-1">
             <Clock className="w-3 h-3" />
-            本工作台只做**独立候选研究**；在线策略仍为 3a–d，不修改在线/模拟账户。
+            本工作台只做**独立候选研究**；旧 3a–3d / A / B 已**退役**（可运行入口已下线），
+            Paper / Live 未接新共享核心 ⇒ 显示 NOT_CONNECTED、禁止新开仓与真实下单。
             <AlertCircle className="w-3 h-3 text-neutral-400" />
             页面数值全部来自服务端账本；缺失显示 —，不造数。
           </div>

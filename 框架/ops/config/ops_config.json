@@ -1,15 +1,15 @@
 {
   "version": "ops-2026-10-14",
   "note": "数据保全与进程保活 · 安全根运维接线配置。只读源库，写目标仅限 backups/ 与 ops/。",
-  "safe_root": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统",
-  "backend_dir": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现",
-  "spawn_detached": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/spawn_detached.py",
+  "safe_root": "/Users/boos/Desktop/威科夫因子共振趋势",
+  "backend_dir": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend",
+  "spawn_detached": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/spawn_detached.py",
   "python": "/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3",
-  "hot_db": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
-  "paper_dir": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/最新唐奇安威科夫接通与收尾_2026-10-11/量价信号接入与模拟历史并行43/纸面模拟43",
+  "hot_db": "/Users/boos/Desktop/威科夫因子共振趋势/data/market_v2.sqlite3",
+  "paper_dir": "/Users/boos/Desktop/威科夫因子共振趋势/数据/paper",
   "paper_arms": ["3a", "3b", "3c", "3d"],
-  "backups_root": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/hot",
-  "manifests_root": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/manifests",
+  "backups_root": "/Users/boos/Desktop/威科夫因子共振趋势/backups/hot",
+  "manifests_root": "/Users/boos/Desktop/威科夫因子共振趋势/backups/manifests",
   "reserve_bytes": 12884901888,
   "retention_days": 14,
   "watermarks": {
@@ -30,27 +30,27 @@
     {
       "name": "adapter",
       "pattern": "后端实现/adapter.py",
-      "log": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/logs/backend.log",
-      "pidfile": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/backend.pid",
-      "expect_path": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
+      "log": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/logs/backend.log",
+      "pidfile": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/backend.pid",
+      "expect_path": "/Users/boos/Desktop/威科夫因子共振趋势/data/market_v2.sqlite3",
       "max_log_age_s": 86400,
       "role": "只读API(:8787)"
     },
     {
       "name": "realtime_collector",
       "pattern": "后端实现/realtime_collector.py",
-      "log": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/logs/realtime.log",
-      "pidfile": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/logs/realtime.pid",
-      "expect_path": "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3",
+      "log": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/logs/realtime.log",
+      "pidfile": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/logs/realtime.pid",
+      "expect_path": "/Users/boos/Desktop/威科夫因子共振趋势/data/market_v2.sqlite3",
       "max_log_age_s": 240,
       "role": "实时采集"
     },
     {
       "name": "live_worker",
       "pattern": "live_worker.py --loop",
-      "log": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/模拟实盘生产接通_2026-10-14/logs/live_worker_prod.log",
+      "log": "/Users/boos/Desktop/威科夫因子共振趋势/框架/模拟实盘生产接通_2026-10-14/logs/live_worker_prod.log",
       "pidfile": null,
-      "expect_path": "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/live/live_signals.sqlite3",
+      "expect_path": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/live/live_signals.sqlite3",
       "max_log_age_s": 900,
       "role": "模拟实盘worker"
     }

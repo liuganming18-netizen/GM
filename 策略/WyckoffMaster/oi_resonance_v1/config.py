@@ -30,6 +30,7 @@ from __future__ import annotations
 import hashlib
 import json
 from dataclasses import asdict, dataclass, fields
+from typing import Any, Dict, Optional
 
 # ══════════════════════════ 身份标识 ══════════════════════════
 
@@ -100,7 +101,20 @@ class SignalParams:
 
     # —— 方向 / 因子门槛 ——
     enable_short: bool = False               # 默认只多（与旧策略一致，但为**本包**默认值）
-    oi_min_resonance: float = 0.0            # 0.0 = 不设因子门槛（候选默认）
+
+    # **OI 共振门槛：当前 UNSET（未批准生产阈值）**
+    # ────────────────────────────────────────
+    # 来源追查（2026-10-16，WORK-02）：
+    #   · 附件（`已粘贴的文本.txt` L205）只给出
+    #     `oi_min_resonance = float(cfg.get("oi_min_resonance", 0.0))` 的**默认值**，
+    #     并未给出任何**经批准的生产阈值**；
+    #   · 全工程无第二处正式来源（无生效视图、无登记表、无实验记录给出该值）。
+    # 因此按施工单 W2-1：**没有正式批准值 ⇒ 不得擅自发明**，置 `None`（= UNSET）。
+    # 语义：`None` ⇒ 因子门槛**未配置**（OI 仍照实计算并逐行标注 quality / pit_proven，
+    # 但不作为拒单依据）；数值 ⇒ 显式门槛，必须 `0 < v <= 1` 才真正参与决策。
+    # 后果：`formal_run_allowed` 在 UNSET 期间**恒 False** ⇒ 阻止正式生产运行，
+    # 只允许独立候选研究（回测）运行，且运行记录必须带 `oi_min_resonance_status=UNSET`。
+    oi_min_resonance: Optional[float] = None
 
     # —— 时间网格（显式，禁止推断）——
     bars_per_day: int = 24                   # 信号周期 1h ⇒ 24
@@ -114,6 +128,12 @@ class SignalParams:
     oi_mom_flux_window: int = 48
     oi_vol_ma_window: int = 48
     oi_vol_ratio_clip: float = 5.0
+
+    # —— OI 数据可得性（PIT，施工单 W2-5）——
+    # `None` = **未声明发布延迟** ⇒ 无法证明 PIT ⇒ OI 标记 `pit_proven=False`，
+    # 不得作为决策依据（"宁可标记不可用，也不乐观使用"）。
+    # 声明为非负毫秒数后，只有 `bucket_time + lag <= bar_close` 的观测才可用于决策。
+    oi_publication_lag_ms: Optional[int] = None
 
     # —— 价格最小变动（0 = 不取整）——
     price_step: float = 0.0
@@ -194,6 +214,7 @@ SIGNAL_VALIDATION = {
     "sc_vol_mult": (0.0, None, float),
     "sc_range_atr_mult": (0.0, None, float),
     "sc_lower_wick_frac": (0.0, 1.0, float),
+    # `None` = UNSET（未批准生产阈值）；数值时须落在 [0, 1]（见 validate_signal_params）
     "oi_min_resonance": (0.0, 1.0, float),
     "bars_per_day": (1, None, int),
     "signal_bar_seconds": (1, None, int),
@@ -205,6 +226,8 @@ SIGNAL_VALIDATION = {
     "oi_vol_ma_window": (1, None, int),
     "oi_vol_ratio_clip": (0.0, None, float),
     "price_step": (0.0, None, float),
+    # PIT：OI 发布延迟（毫秒）。None = 未声明（⇒ pit_proven=False）
+    "oi_publication_lag_ms": (0, None, int),
 }
 
 EXEC_VALIDATION = {
@@ -225,10 +248,17 @@ def _is_num(v) -> bool:
     return isinstance(v, (int, float)) and not isinstance(v, bool)
 
 
+# `oi_min_resonance` 是**唯一**允许为 None 的参数（None = UNSET）
+OPTIONAL_NUMERIC_FIELDS = ("oi_min_resonance", "oi_publication_lag_ms")
+
+
 def validate_signal_params(p: SignalParams = SIGNAL_FROZEN) -> list[str]:
     errs: list[str] = []
     for name, (lo, hi, kind) in SIGNAL_VALIDATION.items():
         v = getattr(p, name)
+        # UNSET 语义：仅 `oi_min_resonance` 允许 None（未批准生产阈值）
+        if v is None and name in OPTIONAL_NUMERIC_FIELDS:
+            continue
         if kind is int:
             if not isinstance(v, int) or isinstance(v, bool):
                 errs.append(f"{name} 必须为 int（得到 {v!r}）")
@@ -291,6 +321,9 @@ def config_identity() -> dict:
         "experiment_id": EXPERIMENT_ID,
         "signal_params_hash": SIGNAL_FROZEN.hash(),
         "exec_params_hash": EXEC_FROZEN.hash(),
+        "param_hash": param_hash(),
+        "param_hash_basis": list(PARAM_HASH_BASIS),
+        "oi_min_resonance_status": oi_min_resonance_status(),
         "run_frozen": RUN_FROZEN,
         "gate_status": dict(GATE_STATUS),
         "supersedes": SUPERSEDES,
@@ -299,6 +332,83 @@ def config_identity() -> dict:
         "live_order_enabled": False,
         "allow_new_entries": EXEC_FROZEN.allow_new_entries,
     }
+
+
+# ══════════════════════════ OI 门槛状态（W2-1）══════════════════════════
+
+OI_MIN_RESONANCE_UNSET = "UNSET"
+OI_MIN_RESONANCE_SET = "SET"
+OI_MIN_RESONANCE_DISABLED_ZERO = "SET_ZERO_NO_GATE"
+
+
+def oi_min_resonance_status(p: SignalParams = SIGNAL_FROZEN) -> str:
+    """`UNSET`（未批准生产阈值）/ `SET_ZERO_NO_GATE`（显式 0，门槛不生效）/ `SET`。"""
+    v = p.oi_min_resonance
+    if v is None:
+        return OI_MIN_RESONANCE_UNSET
+    if float(v) <= 0.0:
+        return OI_MIN_RESONANCE_DISABLED_ZERO
+    return OI_MIN_RESONANCE_SET
+
+
+def oi_gate_enabled(p: SignalParams = SIGNAL_FROZEN) -> bool:
+    """门槛是否**真正**参与拒单。UNSET 或 <=0 ⇒ 不参与。"""
+    return p.oi_min_resonance is not None and float(p.oi_min_resonance) > 0.0
+
+
+# ══════════════════════════ 统一 param_hash（W2-2）══════════════════════════
+
+# 覆盖面（施工单 W2-2 逐项对号）
+PARAM_HASH_BASIS = (
+    "strategy_key", "strategy_id", "strategy_version(signal_version)",
+    "core_version", "exec_core_version", "experiment_id",
+    "timeframe", "exec_timeframe", "exchange", "market", "direction",
+    "signal_params.*",   # 含 OI 参数 / Wyckoff 参数 / ATR / Donchian / price_step /
+                         # bars_per_day / signal_bar_seconds（执行时点）/ oi_publication_lag_ms
+    "exec_params.*",     # 含 position sizing / leverage / risk limit / fee profile /
+                         # slippage profile / exit policy（trailing、期末平仓）/ funding_model
+    "oi_weights",
+)
+
+
+def param_hash(signal: Optional[SignalParams] = None,
+               exec_cfg: Optional[ExecParams] = None,
+               *,
+               timeframe: str = "1h",
+               exec_timeframe: str = "15m",
+               exchange: str = "binance",
+               market: str = "um",
+               direction: str = "long") -> str:
+    """**统一参数指纹**：覆盖一切能改变订单结果的身份与参数。
+
+    与 `SignalParams.hash()` / `ExecParams.hash()` 的关系：
+      · 两个分项哈希各自只覆盖本层字段，**不含**策略身份与周期 ⇒ 不足以单独作为
+        「同一份规则」的指纹（改 `timeframe` 不会让它们变）；
+      · `param_hash` = 身份 + 周期 + 两层全部字段 + 权重，一次算全。
+    验收：改任一影响行为的参数 ⇒ `param_hash` 必变。
+    """
+    p = signal or SIGNAL_FROZEN
+    e = exec_cfg or EXEC_FROZEN
+    payload: Dict[str, Any] = {
+        "strategy_key": STRATEGY_KEY,
+        "strategy_id": STRATEGY_ID,
+        "strategy_version": SIGNAL_VERSION,
+        "core_version": CORE_VERSION,
+        "exec_core_version": EXEC_CORE_VERSION,
+        "experiment_id": EXPERIMENT_ID,
+        "timeframe": str(timeframe),
+        "exec_timeframe": str(exec_timeframe),
+        "exchange": str(exchange),
+        "market": str(market),
+        "direction": str(direction),
+        "signal_params": p.identity(),
+        "exec_params": e.identity(),
+        "oi_weights": dict(OI_WEIGHTS),
+        "oi_min_resonance_status": oi_min_resonance_status(p),
+    }
+    return hashlib.sha256(json.dumps(payload, sort_keys=True,
+                                     separators=(",", ":"),
+                                     default=str).encode()).hexdigest()
 
 
 def signal_params_dict(p: SignalParams = SIGNAL_FROZEN) -> dict:

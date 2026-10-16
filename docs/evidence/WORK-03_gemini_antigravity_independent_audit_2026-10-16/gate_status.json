@@ -1,0 +1,12 @@
+{
+  "audit_date": "2026-10-16",
+  "levels": ["PASS", "PARTIAL", "BLOCKED", "FAIL", "NOT TESTED"],
+  "gate_1_backtest": {"status": "PARTIAL", "reason": "Golden 7 trades cash/trade arithmetic independently matches exported rows; strict PIT and raw source availability not established"},
+  "gate_2_paper_backtest_parity": {"status": "FAIL", "reason": "different strategy, execution and ledger implementations; no event-by-event parity"},
+  "gate_3_live_shared_core": {"status": "FAIL", "reason": "worker uses legacy strategy and paper engine; ExchangeFillAdapter not wired; real orders remain off"},
+  "gate_4_ui_truth": {"status": "FAIL", "reason": "DataCenterView.tsx falls back to fixed green collection rows and fixed record count when feeds absent"},
+  "gate_5_restart": {"status": "NOT TESTED", "reason": "kill -9/restart/WAL replay not performed; no shared persistent event-ledger wiring found"},
+  "gate_6_code_hygiene": {"status": "FAIL", "reason": "legacy production calls, absolute WorkBuddy/worktree paths, and multiple active cores"},
+  "live_shadow_allowed": false,
+  "overall": "FAIL"
+}

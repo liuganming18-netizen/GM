@@ -64,12 +64,15 @@ AVAILABLE = False
 IMPORT_ERROR: Optional[str] = None
 
 C = CORE = EXEC = FACT = REG = None            # noqa: E305
+SIGNAL_CONTRACT_VERSION: Optional[str] = None
 try:                                                       # noqa: SIM105
     from WyckoffMaster.oi_resonance_v1 import config as C          # type: ignore
     from WyckoffMaster.oi_resonance_v1 import core as CORE         # type: ignore
     from WyckoffMaster.oi_resonance_v1 import execution as EXEC    # type: ignore
     from WyckoffMaster.oi_resonance_v1 import factors as FACT      # type: ignore
     from WyckoffMaster.oi_resonance_v1 import registry_entry as REG  # type: ignore
+    from WyckoffMaster.trading_core import signal as _SIGC          # type: ignore
+    SIGNAL_CONTRACT_VERSION = _SIGC.SIGNAL_CONTRACT_VERSION
     AVAILABLE = True
 except Exception as exc:                                   # noqa: BLE001
     IMPORT_ERROR = f"{type(exc).__name__}: {exc}"
@@ -138,6 +141,16 @@ def version_block() -> Dict[str, Any]:
         "experiment_id": C.EXPERIMENT_ID,
         "signal_params_hash": C.SIGNAL_FROZEN.hash(),
         "exec_params_hash": C.EXEC_FROZEN.hash(),
+        # 统一参数指纹（W2-2）：身份 + 周期 + 信号/执行两层全部字段 + OI 权重
+        "param_hash": C.param_hash(),
+        "param_hash_basis": list(C.PARAM_HASH_BASIS),
+        # OI 门槛状态（W2-1）：UNSET 期间禁止正式生产运行
+        "oi_min_resonance": C.SIGNAL_FROZEN.oi_min_resonance,
+        "oi_min_resonance_status": C.oi_min_resonance_status(),
+        "oi_gate_enabled": C.oi_gate_enabled(),
+        # PIT（W2-5）：None = 未声明发布延迟 ⇒ OI 一律 pit_proven=False
+        "oi_publication_lag_ms": C.SIGNAL_FROZEN.oi_publication_lag_ms,
+        "signal_contract_version": SIGNAL_CONTRACT_VERSION,
         "contract_version": CONTRACT_VERSION,
         "core_available": AVAILABLE,
         "import_error": IMPORT_ERROR,

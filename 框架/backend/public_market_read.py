@@ -28,10 +28,12 @@ import threading
 from datetime import datetime, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# W1（2026-10-16）：默认工程根改为**本工程推导**（原兜底 旧工作区路径（已删） 已删除）。
 PROJECT_ROOT = os.environ.get(
-    "DATA_HUB_PROJECT", "/Users/boos/WorkBuddy AI/加密货币趋势判断系统")
+    "DATA_HUB_PROJECT", os.path.dirname(os.path.dirname(HERE)))
 # P3 切流（2026-10-13）：默认只读库 = 新热库 market_v2.sqlite3（旧库已退役）
-DB_PATH = os.environ.get("MARKET_DB", os.path.join(PROJECT_ROOT, "data", "market_v2.sqlite3"))
+DB_PATH = os.environ.get("MARKET_DB", os.path.join(
+    PROJECT_ROOT, "数据", "市场数据", "db", "market_v2.sqlite3"))
 for _p in (PROJECT_ROOT, HERE):
     if _p not in sys.path:
         sys.path.insert(0, _p)

@@ -1,0 +1,13 @@
+{
+  "spec": {
+    "symbols": [
+      "BTCUSDT"
+    ]
+  },
+  "status": "interrupted",
+  "run_id": "bt_20261016T081758Z_ffffffff",
+  "created_at": "2026-10-16T08:17:58Z",
+  "updated_at": "2026-10-16T08:21:28Z",
+  "interrupted_at": "2026-10-16T08:21:28Z",
+  "failure_reason": "服务重启时该运行仍为 queued/running ⇒ 标 interrupted（未完成，结果不得当成功使用）"
+}

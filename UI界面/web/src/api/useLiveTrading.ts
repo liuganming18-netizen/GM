@@ -29,6 +29,13 @@ import {
 /** 与行情层同一刷新节拍（5s）。 */
 const LIVE_REFRESH_MS = 5000;
 
+/**
+ * WORK-04 退役提示：Paper 未接新共享核心期间，任何开/平仓一律 fail-closed。
+ * 文案明确「不回退旧执行通道」，避免被读成临时故障。
+ */
+const NOT_CONNECTED_ORDER_NOTICE =
+  '模拟实盘尚未接通新策略核心（NOT_CONNECTED）：已禁止新开仓与真实下单，不回退旧执行通道（exec_bridge）。';
+
 export interface LiveTradingState {
   /** 四臂账户（服务端账本） */
   paperAccounts: PaperAccountView[];
@@ -44,6 +51,19 @@ export interface LiveTradingState {
   newEntryGate: PaperLedger['newEntryGate'];
   /** 旧版/未验收账本标记（后端只读追加）。 */
   legacyLedger: PaperLedger['legacyLedger'];
+  // ── WORK-04 退役：Paper 未接新共享核心时的 NOT_CONNECTED 身份 ──────────────
+  /** 服务端 `quality.status`（`ok`/`not_connected`/`unavailable`/`retired`）。 */
+  paperStatus: string | null;
+  /** Paper 是否处于 `NOT_CONNECTED`（未接新核心 ⇒ 禁止新开仓 / 真实下单）。 */
+  paperNotConnected: boolean;
+  /** 新共享核心策略 id（后端 `quality.new_core`）。 */
+  paperNewCore: string | null;
+  /** 新共享核心是否已接线到 Paper。 */
+  paperNewCoreWired: boolean | null;
+  /** 已退役旧策略注册表键（`3a/3b/3c/3d/A/B`）。 */
+  paperRetiredKeys: string[];
+  /** Paper / Live 接线状态块（后端 `quality.paper_live`）。 */
+  paperLive: PaperLedger['paperLive'];
   /** 实时起点水位线（UTC）。 */
   liveStartUtc: string | null;
   /** 水位线前「仅展示」信号数 / 之后可自动开仓信号数（后端真实计数）。 */
@@ -88,6 +108,11 @@ const EMPTY_LEDGER: PaperLedger = {
   liveStartUtc: null,
   nPreWatermarkDisplayOnly: null,
   nAfterWatermark: null,
+  status: null,
+  newCore: null,
+  newCoreWired: null,
+  retiredStrategyKeys: [],
+  paperLive: null,
 };
 
 export function useLiveTrading(): LiveTradingState {
@@ -101,6 +126,12 @@ export function useLiveTrading(): LiveTradingState {
   const alive = useRef(true);
   const busy = useRef(false);
   const pending = useRef(false);
+  /**
+   * 最近一次成功读取的 `quality.status`。
+   * 用 ref（而非 state）供**下单守卫**同步读取，避免把 `ledger` 拖进 `openPosition`
+   * 的依赖而令回调引用每次刷新都变化。
+   */
+  const statusRef = useRef<string | null>(null);
 
   const pull = useCallback(async () => {
     if (busy.current) {
@@ -112,9 +143,13 @@ export function useLiveTrading(): LiveTradingState {
       // 纸面账本：失败保留上次成功值（不清空，避免下单后闪空）
       try {
         const l = await fetchPaperLedger();
-        if (alive.current) setLedger(l);
+        if (alive.current) {
+          setLedger(l);
+          statusRef.current = l.status;
+        }
       } catch {
         if (alive.current) {
+          statusRef.current = null;
           setLedger((prev) => ({ ...prev, missingReason: '纸面账本读取失败（后端不可达或未初始化）' }));
         }
       }
@@ -150,6 +185,11 @@ export function useLiveTrading(): LiveTradingState {
 
   const openPosition = useCallback<LiveTradingState['openPosition']>(
     async (input) => {
+      // ── WORK-04 退役（fail-closed）：Paper 未接新核心 ⇒ 客户端也不发单，不回退旧 exec_bridge ──
+      if (statusRef.current === 'not_connected') {
+        setOrderNotice(NOT_CONNECTED_ORDER_NOTICE);
+        return null;
+      }
       setOrderBusy(true);
       setOrderNotice(null);
       try {
@@ -175,6 +215,11 @@ export function useLiveTrading(): LiveTradingState {
 
   const closePosition = useCallback<LiveTradingState['closePosition']>(
     async (arm, positionId, reason = 'manual') => {
+      // ── WORK-04 退役（fail-closed）：Paper 未接新核心 ⇒ 客户端也不发单 ──
+      if (statusRef.current === 'not_connected') {
+        setOrderNotice(NOT_CONNECTED_ORDER_NOTICE);
+        return null;
+      }
       setOrderBusy(true);
       setOrderNotice(null);
       try {
@@ -202,6 +247,12 @@ export function useLiveTrading(): LiveTradingState {
     paperNote: ledger.qualityNote,
     newEntryGate: ledger.newEntryGate,
     legacyLedger: ledger.legacyLedger,
+    paperStatus: ledger.status,
+    paperNotConnected: ledger.status === 'not_connected',
+    paperNewCore: ledger.newCore,
+    paperNewCoreWired: ledger.newCoreWired,
+    paperRetiredKeys: ledger.retiredStrategyKeys,
+    paperLive: ledger.paperLive,
     liveStartUtc: ledger.liveStartUtc,
     nPreWatermarkDisplayOnly: ledger.nPreWatermarkDisplayOnly,
     nAfterWatermark: ledger.nAfterWatermark,

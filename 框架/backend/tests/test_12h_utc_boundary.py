@@ -28,8 +28,10 @@ import unittest
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent.parent          # 后端实现/
-PROJECT = "/Users/boos/WorkBuddy AI/加密货币趋势判断系统"
-for _p in (str(HERE), PROJECT, str(HERE / "logs")):
+# W1（2026-10-16）：原指向工程外路径（已删）⇒ 改按工程布局推导。
+FRAMEWORK = str(HERE.parent)          # 框架/（含 data_hub 包）
+PROJECT = str(HERE.parent.parent)     # 工程根（DATA_HUB_PROJECT 语义）
+for _p in (str(HERE), FRAMEWORK, PROJECT, str(HERE / "logs")):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 

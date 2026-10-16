@@ -1,0 +1,25 @@
+WORK-03 实际调用图（源码静态追踪，2026-10-16）
+
+Backtest API -> backtest_runner._run (777)
+  -> oi_resonance_bridge.CORE.compute_signals (799)
+  -> oi_resonance_bridge.EXEC.run_portfolio_execution (806)
+  -> backtest_store.Ledger -> orders / trades / equity 等独立回测表
+
+Live worker.run_once (470)
+  -> live_signal_engine.run_cycle (475)
+  -> 每个 symbol、每个 arm: arm_events_for (463)
+  -> strategies.wx_donchian_wyckoff.run (169)
+  -> live_store.live_signal / prompt
+  -> live_worker.advance_paper (477)
+  -> paper_engine.open_position / close_at_price
+  -> live_store.paper_* SQLite
+
+Live worker 旧仓退出维护:
+  -> _arm_exits (390)
+  -> strategies.wx_donchian_wyckoff.run (75)
+  -> paper_engine.close_at_price (410)
+
+live_signal_engine.oi_resonance_events_for (149) 存在，但 run_cycle 未调用。
+trading_core.policy.ExecutionPolicy、fill.SimulatedBarFillAdapter、
+fill.ExchangeFillAdapter、ledger.InMemoryLedger 存在，但三个生产入口均未引用。
+因此图中不存在已接线的 Shared Core 分叉；不能把设计图当作当前调用图。

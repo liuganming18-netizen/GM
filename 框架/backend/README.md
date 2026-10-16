@@ -7,7 +7,7 @@
 |---|---|
 | 监听 | `http://127.0.0.1:8787` **与** `http://[::1]:8787`（双栈，均仅本机回环） |
 | 进程 PID | 以**端口监听者**为准：`lsof -nP -iTCP:8787 -sTCP:LISTEN`（`backend.pid` 可能写的是包装进程号，不可信） |
-| 唯一行情库 | `/Users/boos/.codex/worktrees/90b1/加密货币趋势判断系统/data/market.sqlite3` |
+| 唯一行情库 | `<工程根>/数据/市场数据/db/market_v2.sqlite3`（W1 2026-10-16：原外部工作树路径已作废） |
 | 启动 / 停止 | `sh start.sh` / `sh stop.sh`（身份校验后仅停自有服务） |
 | 验证 | `curl -s --noproxy '*' http://127.0.0.1:8787/api/health` |
 | **Python** | **`/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3`** |

@@ -24,7 +24,11 @@ sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ops_common as OC  # noqa: E402
 
-ARC = "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/archive/parquet"
+# W1（2026-10-16）幽灵依赖清理：原写死外部工作区归档根（已删除）。
+# 现由**工程根**推导（冷档 Parquet 根 = `数据/市场数据/parquet`），可被环境变量覆盖。
+ARC = os.environ.get("MARKET_ARCHIVE") or os.path.join(
+    os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+    "数据", "市场数据", "parquet")
 PAIR = ["_state.json", "_catalog.json"]
 
 

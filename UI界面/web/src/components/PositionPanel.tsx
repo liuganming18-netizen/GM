@@ -56,6 +56,13 @@ interface PositionPanelProps {
   onOpenQuickPosition: (direction: 'long' | 'short') => void;
   /** 下单/平仓的真实回执或服务端拒绝原因 */
   orderNotice?: string | null;
+  // ── WORK-04 退役：Paper 未接新共享核心 ⇒ NOT_CONNECTED（fail-closed）──────────
+  /** 为真时：本面板不展示旧 3a–3d 账户，且**开/平仓按钮一律禁用**。 */
+  paperNotConnected?: boolean;
+  /** 新共享核心策略 id（用于文案：为什么当前没有可运行账户）。 */
+  paperNewCore?: string | null;
+  /** 已退役旧策略注册表键（`3a/3b/3c/3d/A/B`）。 */
+  paperRetiredKeys?: string[];
 }
 
 /** 数字格式化：null / 非有限值一律 '—'，不显示 0 冒充真实值。 */
@@ -132,10 +139,16 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
   onClosePosition,
   onOpenQuickPosition,
   orderNotice,
+  paperNotConnected = false,
+  paperNewCore = null,
+  paperRetiredKeys = [],
 }) => {
   const [selectedArm, setSelectedArm] = useState<'ALL' | string>('ALL');
 
   const paperConnected = paperAccounts.length > 0 && !paperMissingReason;
+
+  /** WORK-04：Paper 未接新核心 ⇒ 禁止新开仓 / 真实下单（按钮禁用 + 明确文案）。 */
+  const executionDisabled = paperNotConnected || !paperConnected;
 
   /** 全局四臂合计（始终挂在 data-cash / data-equity 等属性上，确保验收脚本兼容）。 */
   const totalEquityAll = paperConnected
@@ -249,6 +262,30 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
             </span>
           </div>
 
+          {/* WORK-04 退役：Paper 未接新共享核心 ⇒ NOT_CONNECTED（不回退旧 3a–3d 账本模型） */}
+          {paperNotConnected && (
+            <div
+              data-testid="paper-not-connected"
+              className="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[10px] text-amber-300 leading-relaxed space-y-1"
+            >
+              <div className="flex items-center gap-1.5 font-bold text-amber-200">
+                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                <span>模拟实盘 NOT_CONNECTED</span>
+              </div>
+              <div className="break-all">
+                Paper 尚未接通新共享核心
+                {paperNewCore ? `（${paperNewCore} 只完成 Backtest 一侧）` : ''}
+                ⇒ 不展示旧 3a–3d 纸面账户，<b>禁止新开仓与真实下单</b>，不回退旧执行通道
+                （exec_bridge）。旧账本原件保留（可恢复只读归档），但不作为当前账户。
+              </div>
+              {paperRetiredKeys.length > 0 && (
+                <div className="font-mono text-amber-400/80">
+                  已退役旧策略键：{paperRetiredKeys.join(' / ')}
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Account Details Box —— 严格仅显示用户指定的8大核心指标，全单行横排，杜绝断字折行 */}
           <div
             className="p-3 rounded-lg bg-neutral-950 border border-neutral-800 text-xs space-y-2 font-mono text-neutral-400"
@@ -359,15 +396,19 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
             </div>
           )}
 
-          {/* Quick Trade —— 按「当前选中信号」开仓 */}
+          {/* Quick Trade —— 按「当前选中信号」开仓（WORK-04：Paper NOT_CONNECTED 时一律禁用） */}
           <div className="flex gap-2">
             <button
               onClick={() => onOpenQuickPosition('long')}
-              disabled={orderBusy}
-              title="按当前选中信号在服务端账本开多仓"
+              disabled={orderBusy || executionDisabled}
+              title={
+                executionDisabled
+                  ? '模拟实盘 NOT_CONNECTED：已禁止新开仓与真实下单'
+                  : '按当前选中信号在服务端账本开多仓'
+              }
               className={`flex-1 py-1.5 rounded-lg border text-xs font-semibold flex items-center justify-center gap-1 transition-colors ${
-                orderBusy
-                  ? 'bg-neutral-800/60 text-neutral-500 border-neutral-700 cursor-wait'
+                orderBusy || executionDisabled
+                  ? 'bg-neutral-800/60 text-neutral-500 border-neutral-700 cursor-not-allowed'
                   : 'bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-500 border-emerald-500/30'
               }`}
             >
@@ -376,11 +417,15 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
             </button>
             <button
               onClick={() => onOpenQuickPosition('short')}
-              disabled={orderBusy}
-              title="按当前选中信号在服务端账本开空仓"
+              disabled={orderBusy || executionDisabled}
+              title={
+                executionDisabled
+                  ? '模拟实盘 NOT_CONNECTED：已禁止新开仓与真实下单'
+                  : '按当前选中信号在服务端账本开空仓'
+              }
               className={`flex-1 py-1.5 rounded-lg border text-xs font-semibold flex items-center justify-center gap-1 transition-colors ${
-                orderBusy
-                  ? 'bg-neutral-800/60 text-neutral-500 border-neutral-700 cursor-wait'
+                orderBusy || executionDisabled
+                  ? 'bg-neutral-800/60 text-neutral-500 border-neutral-700 cursor-not-allowed'
                   : 'bg-rose-500/15 hover:bg-rose-500/25 text-rose-500 border-rose-500/30'
               }`}
             >
@@ -417,7 +462,9 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
                     ? selectedArm === 'ALL'
                       ? '当前无模拟持仓（无账本成交 ⇒ 不显示任何「已买入」标记）'
                       : `策略臂 ${selectedArm} 当前无未平仓持仓`
-                    : '账本未接通'}
+                    : paperNotConnected
+                      ? '模拟实盘 NOT_CONNECTED（未接新共享核心）⇒ 不展示旧 3a–3d 账户'
+                      : '账本未接通'}
                 </div>
                 {paperConnected && paperNote && selectedArm === 'ALL' && (
                   <div className="p-2 rounded-lg bg-neutral-950/60 border border-neutral-800 text-[10px] text-neutral-500 leading-relaxed">
@@ -615,7 +662,7 @@ export const PositionPanel: React.FC<PositionPanelProps> = ({
 
           <div className="text-[10px] text-neutral-500 flex items-center justify-between pt-1">
             <span>持仓历史 → 回测复盘</span>
-            <span>四臂独立记账 · 守恒校验</span>
+            <span>{paperNotConnected ? 'NOT_CONNECTED · 未接新核心' : '四臂独立记账 · 守恒校验'}</span>
           </div>
         </div>
 

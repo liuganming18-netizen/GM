@@ -1,0 +1,29 @@
+{
+  "audit_date": "2026-10-16",
+  "scope": "source tracing, no live orders",
+  "backtest": {
+    "strategy": "WX_OI_RESONANCE_V1",
+    "signal": "WyckoffMaster.oi_resonance_v1.core.compute_signals",
+    "execution": "WyckoffMaster.oi_resonance_v1.execution.run_portfolio_execution",
+    "order_position_trade_ledger": "backtest_store isolated run ledger",
+    "shared_trading_core_used": false,
+    "evidence": ["框架/backend/backtest_runner.py:798-808", "框架/backend/backtest_runner.py:906-934"]
+  },
+  "paper": {
+    "strategy": "legacy F_WX 3a/3b/3c/3d",
+    "signal": "strategies.wx_donchian_wyckoff.run via live_signal_engine.arm_events_for",
+    "execution": "paper_engine.open_position/close_at_price",
+    "order_position_trade_ledger": "live_store.paper_* per-arm SQLite",
+    "shared_trading_core_used": false,
+    "evidence": ["框架/backend/live_signal_engine.py:461-464", "框架/backend/live_signal_engine.py:169", "框架/backend/live_worker.py:323-330"]
+  },
+  "live": {
+    "strategy": "legacy F_WX signal and exit maintenance",
+    "exchange_order_submission": "not found in audited worker",
+    "actual_fill_adapter": "not wired",
+    "simulated_paper_fill_in_worker": true,
+    "real_trading_enabled": false,
+    "shared_trading_core_used": false,
+    "evidence": ["框架/backend/live_worker.py:470-479", "框架/backend/live_worker.py:66-77", "策略/WyckoffMaster/oi_resonance_v1/config.py:170"]
+  }
+}

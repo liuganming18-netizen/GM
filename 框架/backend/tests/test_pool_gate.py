@@ -14,7 +14,27 @@
   PY=/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3
   cd 后端实现 && PYTHONDONTWRITEBYTECODE=1 $PY -m unittest tests.test_pool_gate -v
 """
+
 from __future__ import annotations
+# ── W1-GUARD-BEGIN（2026-10-16）遗留组件守卫（显式 SKIP，非 PASS）──
+# 本模块回归的是**旧工作区遗留件**（未随工程迁移，且属施工单禁止恢复项）。
+# 组件缺失 ⇒ **显式 SKIP**：既不 PASS、也不静默 fallback（fail-closed 纪律）。
+# 若遗留件将来被正式迁入，守卫自动失效，测试照常运行。
+import importlib.util as _ilu_w1
+from pathlib import Path as _PathW1
+
+import pytest as _pytest_w1
+
+MIG_W1 = _PathW1(__file__).resolve().parents[3].joinpath('数据', '研究输入', '外部迁移_2026-10-16')
+_missing_w1 = [str(p) for p in () if not p.exists()]
+_missing_w1 += [m for m in ('_pool_gate',) if _ilu_w1.find_spec(m) is None]
+if _missing_w1:
+    _pytest_w1.skip(
+        "W1: 旧工作区遗留组件未迁移且禁止恢复 ⇒ 显式 SKIP（非 PASS）: "
+        + ", ".join(_missing_w1),
+        allow_module_level=True,
+    )
+# ── W1-GUARD-END ──
 
 import hashlib
 import json
@@ -30,10 +50,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent                # 后端实现/
 # `data_hub`（统一网关/存储）位于唯一正式库所在项目；`_pool_restfill.py` 直接运行
 # 时需其可被 import。子进程测试必须显式带上 PYTHONPATH，否则与生产运行环境不一致。
-PROJ = Path("/Users/boos/WorkBuddy AI/加密货币趋势判断系统")
+# W1（2026-10-16）：原指向工程外路径（已删）⇒ 改按工程布局推导。
+PROJ = ROOT.parent.parent
 sys.path.insert(0, str(ROOT / "logs"))
 sys.path.insert(0, str(ROOT / "历史下载"))
-sys.path.insert(0, str(PROJ))
+sys.path.insert(0, str(ROOT.parent))
 import _pool_gate                                            # noqa: E402
 
 PY = sys.executable

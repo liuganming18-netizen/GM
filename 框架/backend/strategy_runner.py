@@ -35,8 +35,10 @@ if str(HERE) not in sys.path:
 from strategies import common, registry, wx_gate  # noqa: E402
 import history_lifecycle  # noqa: E402
 
-DEFAULT_DB = "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market.sqlite3"
-PROJECT = "/Users/boos/WorkBuddy AI/加密货币趋势判断系统"
+# W1（2026-10-16）：默认库 / 工程根改为**工程内推导**（原写死 旧工作区路径（已删），
+# 该目录已删除）。显式环境变量仍可覆盖，缺省落到本工程热库 market_v2.sqlite3。
+PROJECT = str(HERE.parent.parent)
+DEFAULT_DB = str(Path(PROJECT) / "数据" / "市场数据" / "db" / "market_v2.sqlite3")
 
 
 def connect(db):

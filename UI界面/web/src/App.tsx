@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { CryptoSignal } from './types/crypto';
 import { tokenId } from './api/adapters';
 import { useMarketData } from './api/useMarketData';
@@ -67,6 +67,10 @@ export default function App() {
     orderBusy,
     openPosition,
     closePosition,
+    // ── WORK-04 退役：Paper/Live 未接新共享核心 ⇒ NOT_CONNECTED（fail-closed）──
+    paperNotConnected,
+    paperNewCore,
+    paperRetiredKeys,
   } = useLiveTrading();
 
   const [expandedTokenId, setExpandedTokenId] = useState<string | null>(null);
@@ -141,29 +145,48 @@ export default function App() {
   /**
    * Close position handler：**服务端账本**平仓（按最近一根已闭合 15m 收盘）。
    * 成功/失败均由服务端回执决定，本地不预扣盈亏、不先行移除。
+   *
+   * **WORK-04 退役**：Paper 未接新共享核心 ⇒ 前端 fail-closed，不发单、不回退旧执行通道。
    */
   const handleClosePosition = useCallback(
     (arm: string, positionId: number) => {
       setHintNotice(null);
+      if (paperNotConnected) {
+        setHintNotice(
+          '模拟实盘尚未接通新策略核心（NOT_CONNECTED）：已禁止平仓请求与真实下单，不回退旧执行通道。',
+        );
+        return;
+      }
       void closePosition(arm, positionId, 'manual_ui');
     },
-    [closePosition],
+    [closePosition, paperNotConnected],
   );
 
-  /** 已批准的四个启用族（开仓按信号所属臂路由；未知则回落 3a）。 */
-  const ARMS = useMemo(() => ['3a', '3b', '3c', '3d'], []);
+  /**
+   * 旧启用族 3a–3d **已退役**（WORK-04）。
+   *
+   * 新策略 `WX_OI_RESONANCE_V1` 未接 Paper ⇒ 这里**不再有任何可运行的旧臂路由目标**；
+   * 保留空数组仅为让既有调用点结构不变（开仓入口已由 NOT_CONNECTED 守卫兜住）。
+   */
+  const ARMS: string[] = [];
 
   /**
    * 按「当前选中信号」在服务端纸面账本开仓。
    *
-   * 为什么必须绑定信号：开仓需要**该信号的 ATR** 作止损基数（止损 = 入场 − 3×ATR），
-   * 且信号身份用于幂等去重（同一 signal_uid 只开一次，避免重复下单）。
-   * 未选信号 / 信号缺 ATR ⇒ 本地先给出明确原因；其余一律交给服务端判定，
-   * 服务端拒绝时显示其**真实**原因（不伪造成交、不本地造仓）。
+   * **WORK-04 退役（fail-closed）**：Paper 未接新共享核心 ⇒ 一律 NOT_CONNECTED：
+   * 不新开仓、不真实下单、**不回退旧 3a–3d / exec_bridge**。以下旧臂路由逻辑仅作历史保留，
+   * 在 `paperNotConnected` 为真时不可达。
    */
   const handleOpenQuickPosition = useCallback(
     (direction: 'long' | 'short') => {
       setHintNotice(null);
+      // ── WORK-04：Paper 未接新核心 ⇒ 禁止新开仓（第一道闸，先于任何信号/臂判定）──
+      if (paperNotConnected) {
+        setHintNotice(
+          '模拟实盘尚未接通新策略核心（NOT_CONNECTED）：已禁止新开仓与真实下单，不回退旧执行通道。',
+        );
+        return;
+      }
       const sig = selectedSignal;
       if (!sig) {
         setHintNotice('请先在信号区选择一个信号：开仓需要该信号的 ATR 作为止损基数。');
@@ -190,7 +213,12 @@ export default function App() {
         );
         return;
       }
-      const arm = sig.arm && ARMS.includes(sig.arm) ? sig.arm : '3a';
+      // 旧臂已退役：不再回落 '3a'（`ARMS` 恒为空 ⇒ 仅当信号自带合法臂时才取用）。
+      const arm = sig.arm && ARMS.includes(sig.arm) ? sig.arm : '';
+      if (!arm) {
+        setHintNotice('旧策略臂（3a–3d）已退役：当前无可用的开仓路由目标。');
+        return;
+      }
       void openPosition({
         arm,
         symbol: sig.rawSymbol,
@@ -199,7 +227,7 @@ export default function App() {
         signalUid: sig.id,
       });
     },
-    [selectedSignal, openPosition, ARMS],
+    [selectedSignal, openPosition, ARMS, paperNotConnected],
   );
 
   /** 顶栏「模拟账户可用」= 四臂服务端账本可用现金合计（无账本时 null ⇒ '—'）。 */
@@ -232,6 +260,8 @@ export default function App() {
               paperPositions={paperPositions}
               paperPending={paperPending}
               newEntryGate={newEntryGate}
+              paperNotConnected={paperNotConnected}
+              paperNewCore={paperNewCore}
             />
 
             {/* 3B. Center Column: 全市场代币排序表 + 行内展开K线 */}
@@ -256,6 +286,9 @@ export default function App() {
               liveAccounts={liveAccounts}
               liveMissingReason={liveMissingReason}
               orderBusy={orderBusy}
+              paperNotConnected={paperNotConnected}
+              paperNewCore={paperNewCore}
+              paperRetiredKeys={paperRetiredKeys}
               onSelectTokenSymbol={(sym) => {
                 const target = tokens.find((t) => t.symbol === sym);
                 if (target) setExpandedTokenId(target.id);

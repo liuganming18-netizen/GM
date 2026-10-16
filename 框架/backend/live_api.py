@@ -27,6 +27,7 @@ from pathlib import Path
 
 import live_store as L
 import paper_engine as PE
+import legacy_retirement as RET
 
 # ── 运行身份 / 账本来源 / 真实健康（统一口径，2026-10-15 账本保全与身份统一）──────
 # 每个响应都必须能回答四个问题：**哪个策略版本、哪套规则、哪个账本、哪份数据**；
@@ -79,7 +80,7 @@ def _runtime_identity() -> dict:
     """运行身份：策略/规则版本、参数哈希、数据版本（统一，不各写各的）。
 
     参数哈希优先级：冻结**视图**文件 `sha256` > 共用执行核心**冻结配置** hash。
-    视图文件随旧工作区 `/Users/boos/WorkBuddy AI` 一并丢失 ⇒ 退回执行核心 hash，
+    视图文件随旧工作区一并丢失 ⇒ 退回执行核心 hash，
     并**如实标注** basis（绝不把执行核心 hash 冒充成视图哈希）。
     """
     try:
@@ -105,7 +106,7 @@ def _runtime_identity() -> dict:
         "rule_view_available": bool(view_sha),
         "rule_view_spec_version": p.get("view_spec_version"),
         "rule_view_note": (None if view_sha else
-                           "冻结参数视图文件不可读（随旧工作区 /Users/boos/WorkBuddy AI 一并丢失）"
+                           "冻结参数视图文件不可读（随旧工作区一并丢失）"
                            "⇒ 按 FALLBACK 冻结 v2.2 保守真值运行；"
                            "`param_hash` 已退回共用执行核心冻结配置 hash，"
                            "并附 `exec_core_crosscheck` 逐项核对结果。"),
@@ -598,6 +599,16 @@ def _side_table_summary() -> dict:
 
 
 def paper_accounts() -> dict:
+    # ── WORK-04 退役：Paper 未接新共享核心 ⇒ NOT_CONNECTED（不回退旧 exec_bridge）──
+    return _not_connected(
+        "paper",
+        note="Paper 尚未接新共享核心（WX_OI_RESONANCE_V1 只完成 Backtest 一侧）⇒ "
+             "NOT_CONNECTED：不返回旧 3a–3d 纸面账户，不回退旧 exec_bridge，"
+             "禁止新开仓。旧纸面账本原件保留（可恢复只读归档），但不作为当前账户展示。")
+
+
+def _paper_accounts_legacy() -> dict:
+    """（退役保留，只读参考）旧四臂纸面账户读取实现。**不再挂任何路由。**"""
     ident = _runtime_identity()
     ledger = _ledger_source()
     try:
@@ -656,6 +667,15 @@ def paper_accounts() -> dict:
 
 
 def paper_positions() -> dict:
+    # ── WORK-04 退役：Paper 未接新核心 ⇒ NOT_CONNECTED（不返回旧 3a–3d 持仓）──
+    return _not_connected(
+        "paper",
+        note="Paper 尚未接新共享核心 ⇒ NOT_CONNECTED：不返回旧 3a–3d 纸面持仓"
+             "（旧持仓为旧版/未验收，原账本未修改、按只读归档保留）。禁止新开仓。")
+
+
+def _paper_positions_legacy() -> dict:
+    """（退役保留，只读参考）旧四臂纸面持仓读取实现。**不再挂任何路由。**"""
     ident = _runtime_identity()
     ledger = _ledger_source()
     try:
@@ -689,6 +709,22 @@ def paper_positions() -> dict:
                                      "并排除正式策略表现。"})
 
 
+def _not_connected(mode: str, *, note: str, ident: dict | None = None) -> dict:
+    """Paper / Live **未接新共享核心**期间的统一 `NOT_CONNECTED` 响应（fail-closed）。
+
+    纪律：不回退旧 `exec_bridge`、不回退旧 3a–3d 账本模型；禁止新开仓、禁止真实下单。
+    """
+    pl = RET.paper_live_status()
+    return envelope(items=[], total=0, mode=mode, **(ident if ident is not None else _runtime_identity()),
+                    missing_reason=note,
+                    quality={"status": "not_connected", "age_seconds": None,
+                             "note": note,
+                             "new_core": RET.SUCCESSOR_STRATEGY_ID,
+                             "new_core_wired": False,
+                             "retired_strategy_keys": list(RET.RETIRED_STRATEGY_KEYS),
+                             "paper_live": pl})
+
+
 def _ledger_unavailable(ident: dict, ledger: dict, exc: Exception, *,
                         mode: str = "paper_read_only") -> dict:
     """账本缺失/身份不符的**统一缺失响应**（fail-closed；不建库、不换库、不返 0）。"""
@@ -701,12 +737,19 @@ def _ledger_unavailable(ident: dict, ledger: dict, exc: Exception, *,
 
 
 def paper_orders(params=None) -> dict:
-    """**只读**订单/挂单查询（06 任务 1：补真实只读查询，**保留 POST 写入口**）。
+    """**已退役（WORK-04）**：Paper 未接新共享核心 ⇒ `NOT_CONNECTED`。
 
-    `?arm=3a|3b|3c|3d`（缺省四臂全给）`&status=filled|rejected|pending` `&limit=N`。
-    本端点**不写任何行**；开/平仓仍只走 `POST /api/v1/paper/orders`。
-    账本缺失 ⇒ `unavailable`（**不是**空列表冒充「无订单」）。
+    原只读订单/挂单查询读取旧 3a–3d 纸面账本；新核心接线未做，故不再对外服务旧结果。
+    旧账本原件保留（可恢复只读归档），开/平仓写入口见 `paper_order_post`（恒拒）。
     """
+    return _not_connected(
+        "paper",
+        note="Paper 尚未接新共享核心 ⇒ NOT_CONNECTED：不返回旧 3a–3d 订单/挂单"
+             "（旧账本原件保留，可恢复只读归档）。写入口恒拒，不回退旧 exec_bridge。")
+
+
+def _paper_orders_legacy(params=None) -> dict:
+    """（退役保留，只读参考）旧只读订单查询实现。**不再挂任何路由。**"""
     params = params or {}
     ident = _runtime_identity()
     ledger = _ledger_source()
@@ -736,7 +779,15 @@ def paper_orders(params=None) -> dict:
 
 
 def paper_funding_audit(params=None) -> dict:
-    """**只读**资金费符号口径与迟到补记对账（06 任务 3 / 07 G-P03 的在线核对点）。"""
+    """**已退役（WORK-04）**：Paper 未接新核心 ⇒ `NOT_CONNECTED`（不返回旧 3a–3d 资金费对账）。"""
+    return _not_connected(
+        "paper",
+        note="Paper 尚未接新共享核心 ⇒ NOT_CONNECTED：不返回旧 3a–3d 资金费对账"
+             "（旧账本原件保留，可恢复只读归档）。")
+
+
+def _paper_funding_audit_legacy(params=None) -> dict:
+    """（退役保留，只读参考）旧资金费对账实现。**不再挂任何路由。**"""
     params = params or {}
     ident = _runtime_identity()
     ledger = _ledger_source()
@@ -755,9 +806,20 @@ def paper_funding_audit(params=None) -> dict:
 
 
 def paper_order_post(payload: dict) -> tuple[dict, int]:
-    """页面模拟开/平仓（服务端账本唯一写入口）。body:
-    `{"arm":"3a","action":"open|close","symbol":"AAVEUSDT","atr":2.1,"signal_uid":"...","position_id":1}`
+    """**已退役（WORK-04）**：Paper 未接新共享核心 ⇒ 一律 `NOT_CONNECTED`（503）。
+
+    纪律：**禁止新开仓 / 禁止真实下单 / 不回退旧 exec_bridge**。
+    本函数**在任何条件下都不写账本**（不调用 `paper_engine.open_position/close_position`）。
+    旧账本原件保留（可恢复只读归档），接线属后续施工单。
     """
+    return _not_connected(
+        "paper",
+        note="Paper 尚未接新共享核心 ⇒ NOT_CONNECTED：拒绝新开仓/平仓，"
+             "不回退旧 exec_bridge、不写任何账本。新核心接线属后续施工单。"), 503
+
+
+def _paper_order_post_legacy(payload: dict) -> tuple[dict, int]:
+    """（退役保留，只读参考）旧纸面开/平仓写入口实现。**不再挂任何路由。**"""
     arm = str(payload.get("arm") or "").strip()
     action = str(payload.get("action") or "").strip()
     ident = _runtime_identity()
@@ -936,7 +998,14 @@ def live_health() -> dict:
                         "ledger_source": ledger,
                         "market_collector_note": "市场采集进程与策略 worker 是**两个**进程；"
                                                  "前者活跃不代表后者在跑。",
-                        "note": worker_note + ("" if ledger_ok else "；账本缺失"),
+                        # WORK-04：Live 未接新共享核心 ⇒ 明确标注（不因心跳新鲜而假装接通）
+                        "strategy_core": RET.SUCCESSOR_STRATEGY_ID,
+                        "new_core_wired": False,
+                        "paper_live": RET.paper_live_status(),
+                        "retired_strategy_keys": list(RET.RETIRED_STRATEGY_KEYS),
+                        "note": worker_note + ("" if ledger_ok else "；账本缺失")
+                                + "；**新共享核心未接线**（Live 仍为旧 3a–3d 链路，"
+                                  "已退役，不得据此开仓/下单）",
                     })
 
 
@@ -1102,15 +1171,26 @@ def _month_returns_from_curve(curve_points: list[dict], all_closed: list[dict],
 
 
 def backtest_review(params=None) -> dict:
-    """真实历史回测与模拟实盘复盘接口（接通 /api/v1/backtests 与 /api/v1/reviews）。
+    """**已退役（WORK-04）**：旧 3a–3d / 模拟盘 / 信号审计的「回测复盘」旧通道。
 
-    彻底修复：
-      1. `mode=history` 读取 `ledgers_ra/ledger_3a..3d.sqlite3` 真实 159 币历史回测账本；
-      2. `mode=paper_review` 读取 `paper_3a..3d.sqlite3` 并严格过滤 `COALESCE(voided,0)=0`；
-      3. 移除全部硬编码假数据（58.3% 胜率、2.34 夏普、30 天假锯齿曲线）；
-      4. 返回四臂横向对标矩阵 `arm_comparison`、毛利/手续费/资金费瀑布拆解、平仓原因拆解、
-         单币种盈亏榜单 `symbol_attribution`、信号→成交漏斗 `funnel` 与真实 BTC 基准净值。
+    新策略 `WX_OI_RESONANCE_V1` 的独立回测走 `GET /api/v1/backtests`（**不带 mode**，
+    由 `backtest_api` 提供）。旧通道**不再服务**：返回 `retired` 态 + 归档指针，
+    **不读取、不计算、不返回任何旧 3a–3d 账本数字**（避免旧结果被当成新策略成绩）。
+
+    旧账本 / 历史证据**原件未删**，以**可恢复只读归档**保留
+    （`legacy_retirement.ARCHIVE_DIR`，按归档清单 SHA 可逐字节核对）。
     """
+    return envelope(
+        items=[], total=0, mode="retired", **_runtime_identity(),
+        missing_reason=RET.RETIREMENT_REASON,
+        quality={"status": "retired", "age_seconds": None,
+                 "note": "旧回测复盘通道已退役；新策略回测请用 "
+                         "GET /api/v1/backtests（不带 mode）",
+                 **RET.retirement_block()})
+
+
+def _backtest_review_legacy(params=None) -> dict:
+    """（退役保留，只读参考）旧 3a–3d 回测复盘实现。**不再挂任何路由。**"""
     import datetime as dt
     import math
 

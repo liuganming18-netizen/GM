@@ -2694,11 +2694,10 @@ def _strategy_shape(item):
 
 
 def v1_strategies():
-    """复数端点：当前启用族 F_WX 四组 + 历史 A/B（只读）。
+    """复数端点：当前可运行策略（新 WX_OI_RESONANCE_V1）+ 历史只读族（旧 F_WX 3a–3d / 旧 A/B）。
 
-    2026-10-11 改造：正式注册接口只展示当前 WX 四组及真实 pending/implemented 状态；
-    旧 A/B 单列 `legacy`，`enabled_for_current_run=false`，不参与当前运行。
-    另附 `run_binding`（G01–G05 运行绑定）与 `run_context`（当前是否运行放行）。
+    WORK-04（2026-10-16）：旧策略**已退役**（`runnable=False`），只列在 `legacy` 里作历史追溯；
+    `current` 只含新策略。旧件源码/旧 runs 以可恢复只读归档保留，不进入任何可运行入口。
     """
     with use_db() as con:
         current = registry.list_current(con)
@@ -2713,6 +2712,12 @@ def v1_strategies():
                     current_run_keys=sorted(CURRENT_RUN_KEYS),
                     legacy_keys=sorted(LEGACY_RUN_KEYS),
                     current_backtest=current_backtest,
+                    retirement={
+                        **registry.retirement_block(),
+                        "note": "旧策略（3a/3b/3c/3d/A/B）已退役：仅保留历史只读追溯，"
+                                "不进入任何可运行入口；唯一可运行策略为 "
+                                f"{registry.CURRENT_BACKTEST_ID}。",
+                    },
                     run_binding={"gates": ctx.get("gates"),
                                  "all_pass": ctx.get("gates_all_pass"),
                                  "source": ctx.get("gates_source")},
@@ -2722,8 +2727,9 @@ def v1_strategies():
                                  "version": ctx.get("version")},
                     total=len(current) + len(legacy),
                     quality={"status": "ok", "age_seconds": None,
-                             "note": "当前启用族 F_WX 3a/3b/3c/3d（实现已就绪、运行未冻结）；"
-                                     "旧 A/B 保留历史可读，不进入当前启用集；"
+                             "note": "当前可运行策略仅 WX_OI_RESONANCE_V1（注册表键 "
+                                     "wx_oi_resonance_v1）；旧 F_WX 3a/3b/3c/3d 与旧 A/B 已退役"
+                                     "（runnable=False），仅列 legacy 供历史追溯；"
                                      "运行放行 = 视图 run_frozen ∧ 身份一致 ∧ G01–G05 全 pass"})
 
 
@@ -2770,7 +2776,8 @@ def v1_registered_configs():
 def v1_strategy():
     """单数端点 /strategy：保持前端 client.ts 既有契约兼容。
 
-    顶层为 Strategy 结构（代表当前族首组 3a），另以 `registry` 给出全部注册条目。
+    顶层为当前可运行策略结构（`WX_OI_RESONANCE_V1`），另以 `registry` 给出全部注册条目
+    （含已退役的旧 F_WX 3a–3d / 旧 A/B，`runnable=False`，仅历史追溯）。
     """
     with use_db() as con:
         current = registry.list_current(con)
@@ -2782,8 +2789,10 @@ def v1_strategy():
                     current=[_strategy_shape(i) for i in current],
                     legacy=[_strategy_shape(i) for i in legacy],
                     current_run_keys=sorted(CURRENT_RUN_KEYS),
+                    retirement=registry.retirement_block(),
                     quality={"status": "ok", "age_seconds": None,
-                             "note": "旧单数端点：顶层为当前族首组；registry 为全部注册条目"},
+                             "note": "顶层为当前可运行策略；registry 含全部注册条目"
+                                     "（旧 3a–3d / A/B 已退役，runnable=False）"},
                     **primary)
 
 

@@ -1089,10 +1089,21 @@ def _run(run_id: str, doc: dict) -> dict:
         "funding_events_recomputed": len(funding_all),
         "funding_evidence_reconcile": ("逐事件独立重算(毫秒) == 引擎累计值（已通过）"
                                        if not funding_mismatch else "不一致"),
-        "oi_min_resonance": float(sp.oi_min_resonance),
-        "oi_gate_enabled": bool(float(sp.oi_min_resonance) > 0.0),
-        "oi_gate_note": ("默认 oi_min_resonance=0.0 ⇒ **因子门槛未启用**（因子只作证据记录，"
-                         "不拒单）；本运行**未擅自改阈值**"),
+        # OI 门槛状态（W2-1）：UNSET 是**一等公民**，不得用 0 冒充
+        "oi_min_resonance": (None if sp.oi_min_resonance is None
+                             else float(sp.oi_min_resonance)),
+        "oi_min_resonance_status": BR.C.oi_min_resonance_status(sp),
+        "oi_gate_enabled": bool(BR.C.oi_gate_enabled(sp)),
+        "oi_gate_note": ("oi_min_resonance 当前为 "
+                         f"{BR.C.oi_min_resonance_status(sp)}：UNSET=未批准生产阈值 ⇒ "
+                         "因子门槛不参与拒单（OI 仍逐行标注 quality / pit_proven），"
+                         "且正式生产运行被门禁拒绝；本运行**未擅自改阈值**"),
+        # PIT（W2-5）：未声明 OI 发布延迟 ⇒ OI 一律 pit_proven=False
+        "oi_publication_lag_ms": sp.oi_publication_lag_ms,
+        "oi_pit": (sig_frame.attrs or {}).get("oi_pit") or {},
+        # 统一参数指纹（W2-2）
+        "param_hash": BR.C.param_hash(sp, ep),
+        "param_hash_basis": list(BR.C.PARAM_HASH_BASIS),
         "reconcile": res["reconcile"],
         "reconcile_ok": reconcile_ok,
         "metrics_match": bool(metrics_match),
@@ -1102,6 +1113,7 @@ def _run(run_id: str, doc: dict) -> dict:
                                 "时刻在 OHLC 下不可知 ⇒ 退出时刻属**显式 bar 级假设**"
                                 "（不隐瞒、不伪造 tick 时刻）"),
         "actual_config": {"signal_params_hash": sp.hash(), "exec_params_hash": ep.hash(),
+                          "param_hash": BR.C.param_hash(sp, ep),
                           "initial_equity": float(ep.initial_equity),
                           "fee_rate": float(ep.fee_rate),
                           "maker_fee_rate": float(getattr(ep, "maker_fee_rate", 0.0002)),

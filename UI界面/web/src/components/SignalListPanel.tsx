@@ -31,6 +31,13 @@ interface SignalListPanelProps {
   paperPending?: PaperPendingView[];
   /** 服务端新开仓总闸（fail-closed）；用于如实说明「新开仓已被阻断」。 */
   newEntryGate?: { allowNewEntries: boolean; reason: string | null } | null;
+  /**
+   * **WORK-04 退役**：Paper 未接新共享核心 ⇒ `NOT_CONNECTED`。
+   * 为真时本面板**不提供任何开仓路径**（信号仅展示，执行入口一律关闭）。
+   */
+  paperNotConnected?: boolean;
+  /** 新共享核心策略 id（用于文案：为什么当前没有可执行入口）。 */
+  paperNewCore?: string | null;
 }
 
 /** 数字格式化：null / 非有限值一律 '—'，绝不用 0 冒充真实值。 */
@@ -183,8 +190,13 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
   paperPositions = [],
   paperPending = [],
   newEntryGate = null,
+  paperNotConnected = false,
+  paperNewCore = null,
 }) => {
-  const [armFilter, setArmFilter] = useState<'ALL' | '3a' | '3b' | '3c' | '3d'>('ALL');
+  /**
+   * **WORK-04 退役**：旧策略臂（3a–3d）筛选入口已下线。
+   * 保留 `kindFilter`（结构类型）与搜索；不再有「按旧臂筛选」这一可运行入口。
+   */
   const [kindFilter, setKindFilter] = useState<'ALL' | 'base' | 'spring' | 'sc'>('ALL');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -269,41 +281,15 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
     [currentSignals],
   );
 
-  /** 各臂命中卡数统计（供顶部快筛标签展示真实计数）。 */
-  const armCounts = useMemo(() => {
-    const counts: Record<'3a' | '3b' | '3c' | '3d', number> = {
-      '3a': 0,
-      '3b': 0,
-      '3c': 0,
-      '3d': 0,
-    };
-    for (const s of currentSignals) {
-      const hitSet = new Set<string>(
-        s.armsHit && s.armsHit.length > 0
-          ? s.armsHit
-          : armList(s)
-              .map((a) => a.arm)
-              .filter((a): a is string => !!a),
-      );
-      if (hitSet.has('3a')) counts['3a'] += 1;
-      if (hitSet.has('3b')) counts['3b'] += 1;
-      if (hitSet.has('3c')) counts['3c'] += 1;
-      if (hitSet.has('3d')) counts['3d'] += 1;
-    }
-    return counts;
-  }, [currentSignals]);
-
-  /** 按用户选择的策略臂、结构类型与搜索词过滤当前有效信号。 */
+  /**
+   * 按结构类型与搜索词过滤当前有效信号。
+   *
+   * **WORK-04 退役**：删除「按旧策略臂（3a–3d）筛选」——旧臂不再是可运行入口。
+   */
   const filteredSignals = useMemo(() => {
     const q = searchQuery.trim().toUpperCase();
     return currentSignals.filter((s) => {
       const arms = armList(s);
-      if (armFilter !== 'ALL') {
-        const hit =
-          (s.armsHit && s.armsHit.includes(armFilter)) ||
-          arms.some((a) => a.arm === armFilter);
-        if (!hit) return false;
-      }
       if (kindFilter !== 'ALL') {
         const k = (s.structuralKind ?? '').toLowerCase();
         const masks = (s.sourceMasks ?? []).map((m) => m.toLowerCase());
@@ -326,7 +312,7 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
       }
       return true;
     });
-  }, [currentSignals, armFilter, kindFilter, searchQuery]);
+  }, [currentSignals, kindFilter, searchQuery]);
 
   /** 六态 → 展示标签与配色（未知/null 显式标「未决」，不冒充失效）。 */
   const statusLabel = (s: CryptoSignal): { text: string; cls: string } => {
@@ -458,6 +444,21 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
           </div>
         </div>
 
+        {/* WORK-04 退役：Paper/Live 未接新共享核心 ⇒ 信号仅展示，执行入口一律关闭 */}
+        {paperNotConnected && (
+          <div
+            data-testid="signal-not-connected"
+            className="mx-2.5 mt-2 p-2 rounded-lg border border-amber-300 bg-amber-50 text-[10px] leading-relaxed text-amber-800 flex gap-1.5"
+          >
+            <ShieldCheck className="w-3.5 h-3.5 shrink-0 mt-0.5 text-amber-600" />
+            <span className="break-all">
+              模拟实盘 <b>NOT_CONNECTED</b>
+              {paperNewCore ? `（新策略 ${paperNewCore} 未接 Paper）` : ''}：信号仅供研究展示，
+              <b>禁止新开仓与真实下单</b>，不回退旧执行通道；旧策略臂 3a–3d / A / B 已退役。
+            </span>
+          </div>
+        )}
+
         {/* Signals List */}
         <div className="flex-1 overflow-y-auto p-2.5 space-y-2.5 bg-gray-50/50">
           {currentSignals.length === 0 ? (
@@ -473,6 +474,11 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
                 <p className="text-[10px] leading-relaxed text-amber-600">
                   服务端已阻断全部新开仓（总闸 fail-closed；原因：{newEntryGate?.reason ?? '未标注'}）；
                   退出/费用/资金费照常处理。
+                </p>
+              )}
+              {paperNotConnected && (
+                <p className="text-[10px] leading-relaxed text-amber-600">
+                  模拟实盘 NOT_CONNECTED：信号仅展示，禁止新开仓与真实下单。
                 </p>
               )}
             </div>
@@ -636,7 +642,7 @@ export const SignalListPanel: React.FC<SignalListPanelProps> = ({
       <div className="px-3 py-2 border-t border-gray-200 bg-white text-[10px] text-gray-500 flex items-center justify-between">
         <span className="flex items-center gap-1.5 text-gray-600">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-          <span>点击信号联动定位行情与开仓</span>
+          <span>{paperNotConnected ? '信号仅展示 · 执行入口已关闭' : '点击信号联动定位行情与开仓'}</span>
         </span>
         <span className="font-mono text-gray-400">实时推送</span>
       </div>

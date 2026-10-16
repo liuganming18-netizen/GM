@@ -15,6 +15,7 @@
 import { ApiError, apiGet, apiPost, unwrapItems } from './client';
 import type {
   Envelope,
+  EnvelopeQuality,
   RawLiveAccount,
   RawPaperAccount,
   RawPaperPending,
@@ -176,6 +177,20 @@ export interface PaperLedger {
   /** 水位线之前「仅展示」信号数 / 之后可自动开仓信号数（后端真实计数）。 */
   nPreWatermarkDisplayOnly: number | null;
   nAfterWatermark: number | null;
+  // ── WORK-04 退役：Paper 未接新共享核心 ⇒ `status='not_connected'`（fail-closed）──
+  /**
+   * 服务端 `quality.status`（`ok` / `not_connected` / `unavailable` / `retired`）。
+   * `not_connected` ⇒ 该端点未接新核心，**禁止新开仓 / 真实下单**。
+   */
+  status: string | null;
+  /** 新共享核心策略 id（后端 `quality.new_core`）。 */
+  newCore: string | null;
+  /** 新共享核心是否已接线到 Paper（后端 `quality.new_core_wired`）。 */
+  newCoreWired: boolean | null;
+  /** 已退役旧策略注册表键（后端 `quality.retired_strategy_keys`）。 */
+  retiredStrategyKeys: string[];
+  /** Paper / Live 接线状态块（后端 `quality.paper_live`）；缺失即 null。 */
+  paperLive: EnvelopeQuality['paper_live'];
 }
 
 export interface LiveAccountsResult {
@@ -328,6 +343,13 @@ export async function fetchPaperLedger(signal?: AbortSignal): Promise<PaperLedge
     liveStartUtc: q?.live_start_utc ?? null,
     nPreWatermarkDisplayOnly: num(q?.n_pre_watermark_display_only),
     nAfterWatermark: num(q?.n_after_watermark),
+    status: typeof q?.status === 'string' ? q.status : null,
+    newCore: typeof q?.new_core === 'string' ? q.new_core : null,
+    newCoreWired: typeof q?.new_core_wired === 'boolean' ? q.new_core_wired : null,
+    retiredStrategyKeys: Array.isArray(q?.retired_strategy_keys)
+      ? q.retired_strategy_keys.filter((k): k is string => typeof k === 'string')
+      : [],
+    paperLive: q?.paper_live ?? null,
   };
 }
 

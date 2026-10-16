@@ -1,0 +1,36 @@
+{
+  "fixture_hash": "57e3003df1c8620f7dd95fb8de7e0263a23ae413bfc661aae929c1abeb0baf03",
+  "signal_counts": {
+    "spring": 46,
+    "sc_reversal": 0,
+    "donchian_breakout": 68,
+    "lps_pullback": 4,
+    "none": 782
+  },
+  "reject_counts": {},
+  "oi_quality_counts": {
+    "missing_open_interest": 347,
+    "ok": 281,
+    "insufficient_history": 167,
+    "partial_insufficient_history": 105
+  },
+  "result_sha256": "925c2481db6ee14f724f23a1d0c1bbb7f5c0a556005ef90ab32816148763ffda",
+  "summary": {
+    "trades_count": 50,
+    "net_return_pct": 8.354876037933995,
+    "final_equity": 108354.876037934,
+    "sum_fees": 4062.990378167072,
+    "sum_funding_fee": 340.1294826517733,
+    "max_drawdown_pct": 10.040464499978041,
+    "rejected_orders": 68,
+    "decisions": 100,
+    "equity_points": 3600,
+    "cash_identity_ok": true,
+    "equity_identity_ok": true
+  },
+  "identity": {
+    "signal_params_hash": "0ba4b7918356b66415416504ae63f9f99786c73ee410fcc69182e9678aee21db",
+    "exec_params_hash": "a92639c0a2b51e3df59e1d7fc78362611fcc91f0a97ba5310c06f0f24e5b99a5"
+  },
+  "label": "after-shared-core"
+}

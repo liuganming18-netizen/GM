@@ -3,7 +3,7 @@
 # 只做：SQLite 在线 backup → quick_check → SHA → manifest。
 # 云上传默认关闭（OPS_CLOUD_ENABLED=0）；未过前置门禁不得开启。
 set -eu
-OPS="/Users/boos/WorkBuddy AI/加密货币趋势判断系统/ops"
+OPS="/Users/boos/Desktop/威科夫因子共振趋势/ops"
 PY="/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3"
 export PYTHONDONTWRITEBYTECODE=1
 BATCH="$(date -u +%Y%m%dT%H%M%SZ)"

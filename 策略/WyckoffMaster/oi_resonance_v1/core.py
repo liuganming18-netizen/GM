@@ -19,6 +19,12 @@
   · 时间单位由调用方显式给出（`time_unit`），不再从 `max/median` 推断。
   · 因子不可用时**不伪造 0.5**：仅在显式设置门槛（`oi_min_resonance > 0`）时 fail-closed 拒单，
     否则如实放行并携带 `oi_resonance_available=False`。
+  · PIT 可得性（施工单 W2-5）**分层**处理，不混为一谈：
+    `oi_resonance_available`（数值算得出）≠ `oi_pit_proven`（决策时刻真可见）≠
+    `oi_decision_usable`（两者同时成立）。发布延迟 `oi_publication_lag_ms` **未声明**时：
+    逐行只**标记** `pit_proven=False`（**不改逐 bar 策略规则**），改由 `formal_run_gate()`
+    在**运行级**拒绝正式生产（与 W2-1 的 UNSET 同款口径）；**已声明**时，逐行校验
+    「观测 + 延迟 <= bar 收盘」，不可见者逐行 fail-closed（`oi_pit_unproven_fail_closed`）。
 
 同根优先级（2026-10-16 订正）
 ────────────────────────────
@@ -47,6 +53,7 @@ import numpy as np
 import pandas as pd
 
 from . import factors as F
+from ..trading_core import pit as PIT
 from .config import STRATEGY_ID, SIGNAL_FROZEN, SignalParams
 
 SIG_NONE = 0
@@ -242,6 +249,8 @@ def compute_signals(df: pd.DataFrame, params: Optional[SignalParams] = None,
 
     work, dedup_report = F.dedup_bars(df)
     out = F.compute_oi_factors(work, p)
+    # PIT 可得性门禁（施工单 W2-5）：未声明 OI 发布延迟 ⇒ pit_proven=False（不乐观使用）
+    out = PIT.annotate_oi_pit(out, p)
     out = out.reset_index(drop=True)
     n = len(out)
     out.attrs["time_unit"] = unit
@@ -288,6 +297,18 @@ def compute_signals(df: pd.DataFrame, params: Optional[SignalParams] = None,
 
     score = out[F.C_SCORE].to_numpy(np.float64)
     avail = out[F.C_AVAILABLE].to_numpy(bool)
+    # 因子门槛是否真正参与拒单（UNSET / <=0 ⇒ 不参与）
+    oi_gate_enabled = (p.oi_min_resonance is not None
+                       and float(p.oi_min_resonance) > 0.0)
+    oi_min_resonance = (float(p.oi_min_resonance) if oi_gate_enabled else None)
+    # PIT：OI 观测是否**可证明**在 bar 收盘前已可见（施工单 W2-5）
+    if PIT.C_PIT_PROVEN in out.columns:
+        oi_pit_ok = out[PIT.C_PIT_PROVEN].to_numpy(bool)
+    else:
+        oi_pit_ok = np.zeros(n, dtype=bool)
+    # 发布延迟是否**已声明**：未声明 ⇒ 属**配置缺失**（运行级拒绝），
+    # 不据此逐 bar 改策略规则（施工单 W2-5 原文为「标记不可用」，非「逐 bar 拒单」）。
+    oi_pit_declared = getattr(p, "oi_publication_lag_ms", None) is not None
 
     sig = np.zeros(n, np.int64)
     direction = np.zeros(n, np.int64)
@@ -332,11 +353,19 @@ def compute_signals(df: pd.DataFrame, params: Optional[SignalParams] = None,
                 last_bo_idx, last_bo_level, last_bo_low = i, float(dch), float(l[i])
 
         # ① 因子门槛（**仅在显式设置时生效**；不可用 ⇒ fail-closed，不伪造 0.5）
-        if p.oi_min_resonance > 0.0:
+        #    `oi_min_resonance is None` = **UNSET**（未批准生产阈值，施工单 W2-1）
+        #    ⇒ 门槛不参与决策（OI 仍照实计算并逐行标注），但正式运行门禁会拒绝。
+        if oi_gate_enabled:
             if not avail[i]:
                 reject[i] = "oi_factor_unavailable_fail_closed"
                 continue
-            if not (math.isfinite(score[i]) and score[i] >= p.oi_min_resonance):
+            # PIT（W2-5）：**仅当发布延迟已声明**时，逐行校验「该观测在 bar 收盘前确实可见」；
+            # 可见性不成立 ⇒ 逐行 fail-closed（这是**数据**问题，不是配置问题）。
+            # 未声明（None）⇒ **不改逐 bar 策略规则**，由 `formal_run_gate()` 在**运行级**拒绝。
+            if oi_pit_declared and not oi_pit_ok[i]:
+                reject[i] = "oi_pit_unproven_fail_closed"
+                continue
+            if not (math.isfinite(score[i]) and score[i] >= oi_min_resonance):
                 reject[i] = "oi_resonance_below_threshold"
                 continue
 
@@ -395,6 +424,18 @@ def compute_signals(df: pd.DataFrame, params: Optional[SignalParams] = None,
     out.attrs["reject_counts"] = {
         r: int((reject == r).sum()) for r in sorted(set(reject.tolist())) if r}
     out.attrs["oi_factor_meta"] = F.oi_factor_meta(out)
+    out.attrs["oi_pit"] = PIT.pit_summary(out)
+    out.attrs["oi_gate"] = {
+        "oi_min_resonance": oi_min_resonance,
+        "status": ("UNSET" if p.oi_min_resonance is None
+                   else ("SET_ZERO_NO_GATE" if float(p.oi_min_resonance) <= 0.0 else "SET")),
+        "enabled": bool(oi_gate_enabled),
+        "pit_declared": bool(oi_pit_declared),
+        "note": ("UNSET = 未批准生产阈值 ⇒ 门槛不参与决策，且正式运行门禁拒绝；"
+                 "OI 仍逐行标注 quality / pit_proven / decision_usable。"
+                 "PIT 未声明 ⇒ 逐行标记 pit_proven=False，**不在逐 bar 改策略规则**，"
+                 "由 formal_run_gate 在运行级拒绝（禁止乐观使用）。"),
+    }
     return out
 
 
@@ -408,6 +449,8 @@ def signal_summary(df: pd.DataFrame) -> dict:
         "reject_counts": dict(df.attrs.get("reject_counts") or {}),
         "dedup_report": dict(df.attrs.get("dedup_report") or {}),
         "oi_factor_meta": dict(df.attrs.get("oi_factor_meta") or {}),
+        "oi_pit": dict(df.attrs.get("oi_pit") or {}),
+        "oi_gate": dict(df.attrs.get("oi_gate") or {}),
         "time_unit": df.attrs.get("time_unit"),
         "strategy_id": STRATEGY_ID,
     }

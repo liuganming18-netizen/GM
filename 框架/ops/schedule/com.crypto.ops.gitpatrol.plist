@@ -8,14 +8,14 @@
   <key>ProgramArguments</key>
   <array>
     <string>/bin/sh</string>
-    <string>/Users/boos/WorkBuddy AI/加密货币趋势判断系统/ops/schedule/run_git_patrol.sh</string>
+    <string>/Users/boos/Desktop/威科夫因子共振趋势/ops/schedule/run_git_patrol.sh</string>
   </array>
   <key>StartCalendarInterval</key>
   <array>
     <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>30</integer></dict>
   </array>
-  <key>StandardOutPath</key><string>/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/logs/gitpatrol.out.log</string>
-  <key>StandardErrorPath</key><string>/Users/boos/WorkBuddy AI/加密货币趋势判断系统/backups/logs/gitpatrol.err.log</string>
+  <key>StandardOutPath</key><string>/Users/boos/Desktop/威科夫因子共振趋势/backups/logs/gitpatrol.out.log</string>
+  <key>StandardErrorPath</key><string>/Users/boos/Desktop/威科夫因子共振趋势/backups/logs/gitpatrol.err.log</string>
   <key>RunAtLoad</key><false/>
 </dict>
 </plist>

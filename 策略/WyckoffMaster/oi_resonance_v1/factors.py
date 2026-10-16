@@ -10,6 +10,10 @@
 2. **缺 OI / 预热不足不得伪造 0.5**：附件在 `open_interest` 缺失时直接写
    `oi_resonance_score = 0.5`（把「不知道」伪装成「中性正常值」）。本模块改为
    `score = NaN` + `available = False` + `quality = <原因>`。
+2b. **`quality` 逐行判定**（2026-10-16 修复）：旧实现 `out[C_QUALITY] = <标量>` 会把
+   同一个标签**广播到整列**，于是「因子可用行 / 历史不足行 / OI 缺失行」互相冒充。
+   现按**每一行自身的可观测事实**分别给出 `ok` / `missing_open_interest` /
+   `insufficient_history` / `partial_insufficient_history`。
 3. **保留原始分项 / 权重 / available / quality**：三个分项各自留原始值与分位值，
    权重以 `config.OI_WEIGHTS` 显式给出，**不**冒充旧 M4/M5/M6。
 4. **分项按附件定义**（2026-10-16 纠正）：
@@ -214,14 +218,24 @@ def compute_oi_factors(df: pd.DataFrame, params) -> pd.DataFrame:
     avail = score.notna() & np.isfinite(score.astype(np.float64))
     out[C_AVAILABLE] = avail
 
-    all_nan = (~avail).all()
-    any_nan = (~avail).any()
-    if all_nan:
-        out[C_QUALITY] = QUALITY_INSUFFICIENT
-    elif any_nan:
-        out[C_QUALITY] = QUALITY_PARTIAL
-    else:
-        out[C_QUALITY] = QUALITY_OK
+    # ⑤ **逐行**质量标签（2026-10-16 修复：此前写标量 ⇒ 整列广播，四类行互相冒充）
+    #   判据全部取自**该行自身**的可观测事实，不写全局常量：
+    #     · 该行 `open_interest` 缺失            ⇒ missing_open_interest
+    #     · 该行 score 有限                      ⇒ ok
+    #     · 该行 OI 有值但有效观测数 < min_periods ⇒ insufficient_history（窗口未成形）
+    #     · 该行 OI 有值、窗口已成形、score 仍 NaN ⇒ partial_insufficient_history
+    #       （例：`f_oi_price_div` / `f_oi_mom_flux` 因自身 pct_change 回看不足而 NaN）
+    oi_present = oi.notna().to_numpy(dtype=bool)
+    avail_row = avail.to_numpy(dtype=bool)
+    obs_seen = np.cumsum(oi_present)
+    window_formed = obs_seen >= int(min_periods)
+
+    quality = np.full(n, QUALITY_MISSING_OI, dtype=object)
+    quality[oi_present & avail_row] = QUALITY_OK
+    unavailable = oi_present & (~avail_row)
+    quality[unavailable & (~window_formed)] = QUALITY_INSUFFICIENT
+    quality[unavailable & window_formed] = QUALITY_PARTIAL
+    out[C_QUALITY] = quality
     return out
 
 
@@ -240,6 +254,10 @@ def oi_factor_meta(df: pd.DataFrame) -> dict:
         "total": int(len(df)),
         "quality": {str(k): int(v) for k, v in q.items()},
         "note": ("缺 OI / 预热不足 ⇒ score=NaN 且 available=False（不写 0.5）；"
+                 "quality **逐行**判定（不整列广播）："
+                 "missing_open_interest=该行 OI 缺失 / insufficient_history=该行有效 OI 观测数"
+                 "未达 min_periods / partial_insufficient_history=窗口已成形但个别分项仍 NaN / "
+                 "ok=该行 score 有限；"
                  "分项按附件定义取**当期** rolling 分位（不 shift1）；"
                  "0.50 分项对**原始 OI** 取分位（f_oi_level_rank）；"
                  "oi_chg_20 仅为独立观察列；权重仅 0.50/0.25/0.25 一项来源"),

@@ -1,0 +1,75 @@
+WORK-02 最终全量复验 · 2026-10-16 16:23:20 +0800
+解释器: /Users/boos/.workbuddy-ai/binaries/python/envs/default/bin/python
+python 3.13.12 duckdb 1.5.6 pyarrow 26.0.0
+
+### [1] WORK-02 指定 15 用例
+...............                                                          [100%]
+15 passed in 1.32s
+
+### [2] 既有回归 · 文档命令（OI_RESONANCE_RUNS_DIR 已设，F1 F2 F3 F4）
+........................................................................ [ 82%]
+...............                                                          [100%]
+87 passed in 1.18s
+
+### [3] 既有回归 · 顺序无关性核验（store 置首，不设 env）
+........................................................................ [ 82%]
+...............                                                          [100%]
+87 passed in 1.11s
+
+### [4] 既有回归 · 裸命令（不设 env，原顺序）—— 如实记录
+
+evidence/Work_单策略回测_2026-10-16/test_backtest_store.py:96: KeyError
+=========================== short test summary info ============================
+FAILED evidence/Work_单策略回测_2026-10-16/test_backtest_store.py::test_atomic_exclusive_create_and_duplicate_rejected
+FAILED evidence/Work_单策略回测_2026-10-16/test_backtest_store.py::test_list_runs_reads_docs_and_flags_broken
+2 failed, 85 passed in 2.04s
+
+### [5] 行为保持核验
+  net_return_pct                    : 8.354876037933995
+  final_equity                      : 108354.876037934
+  max_drawdown_pct                  : 10.040464499978041
+  reconcile.sum_fees                : 4062.990378167072
+  reconcile.sum_funding_fee         : 340.1294826517733
+  reconcile.cash_identity_ok        : True
+  reconcile.equity_identity_ok      : True
+  decisions                         : 100
+  rejected_orders                   : 68
+  equity_points                     : 3600
+
+契约产物（新增，不参与行为判据）:
+  orders_count                     : 100
+  registry_unique_keys             : 100
+  ledger_events_total              : 660
+  ledger_event_counts              : {'FEE_CHARGED': 100, 'FUNDING_FEE': 41, 'GENESIS_INIT': 1, 'ORDER_CREATED': 100, 'ORDER_FILLED': 100, 'ORDER_SUBMITTED': 100, 'POSITION_CLOSED': 50, 'POSITION_OPENED': 50, 'SIGNAL_ACCEPTED': 50, 'SIGNAL_REJECTED': 68}
+  fill_adapter.kind                : simulated_bar
+  policy.close_open_positions_at_end: True
+
+结果: PASS —— 剥离新增键后与改造前逐位一致
+
+### [6] Golden 差异分类闸门
+  NOTE trades[6].trade_id: golden='trd_9b931c0181f3ccb0' replay='trd_24619a13f08fb6ea'
+  NOTE orders[0].order_id: golden='ord_0ed440766a574558' replay='ord_7a4d372c5d623d58'
+  NOTE orders[1].order_id: golden='ord_064d35d770eb49d6' replay='ord_754c8905d3fe9caf'
+  NOTE orders[2].order_id: golden='ord_ca87a5053cfcd27c' replay='ord_51939230108ca060'
+  NOTE orders[3].order_id: golden='ord_65957d4972c84365' replay='ord_3803edb693f117aa'
+  NOTE orders[4].order_id: golden='ord_3af2430d4e056c70' replay='ord_a61d4ab81bdf16ab'
+  NOTE orders[5].order_id: golden='ord_919e6b761c85d491' replay='ord_6475d39ea90bfeb3'
+  NOTE orders[6].order_id: golden='ord_78b6c7716cb68fae' replay='ord_ed06e57fc2187db9'
+  NOTE orders[7].order_id: golden='ord_23fab544e0e056c0' replay='ord_ccd73de19eb9a22b'
+  NOTE orders[8].order_id: golden='ord_e5ecda7a36a705fa' replay='ord_c76eca2b7b80d168'
+  NOTE orders[9].order_id: golden='ord_b4f6390d300a4d48' replay='ord_8f2affec379a977b'
+  NOTE orders[10].order_id: golden='ord_c9065f9846b78af9' replay='ord_bb28d58c05f15aef'
+  NOTE orders[11].order_id: golden='ord_8323c5fc7bbeddd4' replay='ord_bd348dbd2ed630a4'
+  NOTE orders[12].order_id: golden='ord_a18937809af723c0' replay='ord_375ae293c4160357'
+  NOTE orders[13].order_id: golden='ord_c6de9e298d6d0793' replay='ord_4f9bbb664b381520'
+  NOTE hashes.input_sha256: golden='169d3a6b9e898a7b62c0e4524f857e4a7e3629b018ceaf6ec4bcaa4b3a0c5794' replay='c312f4f1666f282de46baab22b328c291ce3d663da9ef8e44e4022baadb24bae'
+  NOTE hashes.signal_frame_sha256: golden='a2c0090ec97aba6b2e795b85961a73ee8b8b323d96120ad72789dbb627a48fc2' replay='b3be495b5d8231a2e9eed2d03585ff3c78c89c4ec1734818df268f7d4695f40b'
+
+=== 核心判据差异 4 项 ===
+  DIFF strategy.code_sha256: got='a40299a39ef2e26312766ce9a76e6d9c0b2a111a5a6f4665fb52812320523f01' want='364aacfcd65c45e18106b9d2bac3200f21aa1bbdb4750a3f598ad07045fa338a'
+  DIFF strategy.signal_params_hash: got='5cc0457b7d0913bf7bb896021276369895fe3eef944702852f542917b72c12db' want='0ba4b7918356b66415416504ae63f9f99786c73ee410fcc69182e9678aee21db'
+  DIFF hashes.code_sha256: got='a40299a39ef2e26312766ce9a76e6d9c0b2a111a5a6f4665fb52812320523f01' want='364aacfcd65c45e18106b9d2bac3200f21aa1bbdb4750a3f598ad07045fa338a'
+  DIFF hashes.signal_params_hash: got='5cc0457b7d0913bf7bb896021276369895fe3eef944702852f542917b72c12db' want='0ba4b7918356b66415416504ae63f9f99786c73ee410fcc69182e9678aee21db'
+
+结果：FAIL（与 Golden Reference 核心判据不一致）
+exit=0

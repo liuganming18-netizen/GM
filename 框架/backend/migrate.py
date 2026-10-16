@@ -48,7 +48,8 @@ SCHEMA_V6 = HERE / "business_schema_v6.sql"
 SCHEMA_V8 = HERE / "business_schema_v8.sql"
 SCHEMA_V9 = HERE / "business_schema_v9.sql"
 # P3 切流（2026-10-13）：默认目标库 = 新热库 market_v2.sqlite3（旧库已退役，禁止回落重建）
-DEFAULT_DB = "/Users/boos/WorkBuddy AI/加密货币趋势判断系统/data/market_v2.sqlite3"
+# W1（2026-10-16）：改为**工程内推导**（原写死 旧工作区路径（已删），该目录已删除）。
+DEFAULT_DB = str(HERE.parent.parent / "数据" / "市场数据" / "db" / "market_v2.sqlite3")
 
 MIGRATIONS = [
     (1, "business_tables", SCHEMA.read_text(encoding="utf-8")),

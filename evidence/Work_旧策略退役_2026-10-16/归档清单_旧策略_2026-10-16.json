@@ -1,0 +1,1111 @@
+{
+  "generated_at": "2026-10-16T09:37:27.384907+00:00",
+  "retired_at": "2026-10-16",
+  "work_order": "WORK-04",
+  "retired_strategy_keys": [
+    "3a",
+    "3b",
+    "3c",
+    "3d",
+    "A",
+    "B"
+  ],
+  "successor_strategy_id": "WX_OI_RESONANCE_V1",
+  "successor_strategy_key": "wx_oi_resonance_v1",
+  "policy": "只退役「可运行入口」；**原件不删、不改、不移动**。恢复 = 按本清单逐文件 SHA256 核对（原件仍在原位）。",
+  "classification": {
+    "legacy_ab_source": "旧 A/B 策略源码（已退役可运行入口；仍被当前 registry import）",
+    "legacy_fwx_source": "旧 F_WX 3a–3d 源码（已退役可运行入口；仍被当前 registry import）",
+    "legacy_shared_util": "旧件共享工具（未退役，保留）",
+    "current_registry": "当前注册表（未退役；登记指纹用于核对退役标记）",
+    "legacy_v31_core_archive": "旧 v3.1 核心逐字节封存",
+    "legacy_run_dir": "旧回测/复盘 runs（只读保留）"
+  },
+  "totals": {
+    "files": 134,
+    "bytes": 268577943,
+    "by_kind": {
+      "legacy_ab_source": 2,
+      "legacy_fwx_source": 7,
+      "legacy_shared_util": 3,
+      "current_registry": 1,
+      "legacy_v31_core_archive": 13,
+      "legacy_run_dir": 108
+    }
+  },
+  "missing_paths": [],
+  "entries": [
+    {
+      "path": "框架/backend/strategies/strategy_a.py",
+      "kind": "legacy_ab_source",
+      "note": "旧 A 策略（唐奇安突破）",
+      "bytes": 6882,
+      "mtime_utc": "2026-10-04T16:40:22+00:00",
+      "sha256": "97f6aa562793eda633a0c73f63db1a95686fab10259529a4ba435cb173c4879b"
+    },
+    {
+      "path": "框架/backend/strategies/strategy_b.py",
+      "kind": "legacy_ab_source",
+      "note": "旧 B 策略（异常量）",
+      "bytes": 7224,
+      "mtime_utc": "2026-10-04T16:40:36+00:00",
+      "sha256": "37b6426c3d0598505d0c2bbd020bd9bb8571b9d507105b42fe234900ef3fa153"
+    },
+    {
+      "path": "框架/backend/strategies/wx_donchian_wyckoff.py",
+      "kind": "legacy_fwx_source",
+      "note": "旧 F_WX 四臂 3a–3d 核心",
+      "bytes": 30780,
+      "mtime_utc": "2026-10-16T07:51:04.945059+00:00",
+      "sha256": "d6c8812da00e7f4ad22cfcf915d2f810ad94470b5709cfd3fad99ab4b33fcd3a"
+    },
+    {
+      "path": "框架/backend/strategies/wx_config.py",
+      "kind": "legacy_fwx_source",
+      "note": "旧 F_WX 参数解析",
+      "bytes": 48718,
+      "mtime_utc": "2026-10-16T07:50:28.210822+00:00",
+      "sha256": "0c952673dc35f945ff745026f139368476affccad19e15463f3d66d6b7dbaef9"
+    },
+    {
+      "path": "框架/backend/strategies/wx_daily_375.py",
+      "kind": "legacy_fwx_source",
+      "note": "旧 F_WX 日线 375 分支",
+      "bytes": 50150,
+      "mtime_utc": "2026-10-16T07:51:43.357121+00:00",
+      "sha256": "50ac87d34c3885f85c048fd9a8ec4c9605a34941d9f738c56c18d0fb994631c6"
+    },
+    {
+      "path": "框架/backend/strategies/wx_engine.py",
+      "kind": "legacy_fwx_source",
+      "note": "旧 F_WX 引擎",
+      "bytes": 9998,
+      "mtime_utc": "2026-10-11T08:07:43+00:00",
+      "sha256": "19452161645b7c698ee90d0782cee1e11b8972accc4bce1fee6cd651334e7368"
+    },
+    {
+      "path": "框架/backend/strategies/wx_execution.py",
+      "kind": "legacy_fwx_source",
+      "note": "旧 F_WX 执行核心 v3.1",
+      "bytes": 173417,
+      "mtime_utc": "2026-10-12T15:53:00+00:00",
+      "sha256": "0ede9ce19c7cec9d18398572e393ef65ef4c04a6aa5ff2b41f8ad022c83dbcf1"
+    },
+    {
+      "path": "框架/backend/strategies/wx_gate.py",
+      "kind": "legacy_fwx_source",
+      "note": "旧 F_WX 门禁",
+      "bytes": 92241,
+      "mtime_utc": "2026-10-12T07:29:34+00:00",
+      "sha256": "dd79c5f554e5f503198339de5ba34af35712c8acf0dbdf4c36484a2364818d22"
+    },
+    {
+      "path": "框架/backend/strategies/wx_ledger.py",
+      "kind": "legacy_fwx_source",
+      "note": "旧 F_WX 账本",
+      "bytes": 27817,
+      "mtime_utc": "2026-10-12T07:26:25+00:00",
+      "sha256": "289de97abc585136cc3cfd0cc79e673b44c439b5e6b798d9f97fafdc0267802c"
+    },
+    {
+      "path": "框架/backend/strategies/common.py",
+      "kind": "legacy_shared_util",
+      "note": "旧件共享工具（仍被 import，保留）",
+      "bytes": 9506,
+      "mtime_utc": "2026-10-07T15:26:06+00:00",
+      "sha256": "eb8626adf51eee4b98711c7489b976623a7b8b2619e85553ca640848665df5f3"
+    },
+    {
+      "path": "框架/backend/strategies/funding_interval_meta_source.py",
+      "kind": "legacy_shared_util",
+      "note": "资金费间隔元数据源（仍被 import，保留）",
+      "bytes": 10016,
+      "mtime_utc": "2026-10-13T02:08:29+00:00",
+      "sha256": "685dcfa863857ea6010ac88781056cd418aa7ddc146911878d7f1069bb51d546"
+    },
+    {
+      "path": "框架/backend/strategies/__init__.py",
+      "kind": "legacy_shared_util",
+      "note": "strategies 包初始化（保留）",
+      "bytes": 331,
+      "mtime_utc": "2026-10-04T15:28:08+00:00",
+      "sha256": "26e8900fc7c4137cc47492663a902421af59452bdd56265d5ebdd2bba0dc19e3"
+    },
+    {
+      "path": "框架/backend/strategies/registry.py",
+      "kind": "current_registry",
+      "note": "当前注册表（WORK-04 已加 retired/runnable 标记；非旧策略件）",
+      "bytes": 14473,
+      "mtime_utc": "2026-10-16T09:09:35.000592+00:00",
+      "sha256": "82a4ae114dc485bb63ba991a76e184f991b9590ce24deba33b8daef907bf6f50"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/ARCHIVE_MANIFEST.json",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 8037,
+      "mtime_utc": "2026-10-15T17:56:58.110434+00:00",
+      "sha256": "5d48bf19b8633e06ff5cd00054ae80cbe9044a2e507a861795da321c9ac6492c"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/EXECUTION.md",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 6399,
+      "mtime_utc": "2026-10-15T07:56:13.526767+00:00",
+      "sha256": "a16f72dc50dc0091a3b1f1cf03ea4ddac99e56f9eed3d206e9aa4708a3576e17"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/README.md",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 5445,
+      "mtime_utc": "2026-10-14T18:27:16.072572+00:00",
+      "sha256": "9db975dba4d24ee4157a86e72f1404ee960b311bc166a4a6830022c3f5dea8bf"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/__init__.py",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 2044,
+      "mtime_utc": "2026-10-14T18:24:28.460047+00:00",
+      "sha256": "d289d7b35925784dc2cc359ed7032c4ece1d60473ba12faa4ad8e71993872be2"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/core.py",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 29489,
+      "mtime_utc": "2026-10-15T13:21:18.511671+00:00",
+      "sha256": "8728051762d21c065c88b9bafa5af8376522f2963d2ca8850ee972e89b015441"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/execution.py",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 58397,
+      "mtime_utc": "2026-10-15T09:09:41.400352+00:00",
+      "sha256": "2eb6ae840acbbd75a7d545faa61dfb8f875b619142416c8e7ae49bca5c8a71af"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/experiments.py",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 5662,
+      "mtime_utc": "2026-10-14T18:24:21.960051+00:00",
+      "sha256": "5b44e0eda8a69836bba65947c6a6a99c8c27cd13413bcd0a2173c92bb849058f"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/factors.py",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 6483,
+      "mtime_utc": "2026-10-14T18:24:12.616537+00:00",
+      "sha256": "ae81838357f3af2a4eeb48b9f365b4c4685fe0c0c686ae75464be32a859e41f3"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/params.py",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 5759,
+      "mtime_utc": "2026-10-14T18:23:24.801345+00:00",
+      "sha256": "7406f767b8c9b52afa2e1fff5185f33d249303f1434ccfa7875bdb9f5369d20e"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/segments.py",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 4216,
+      "mtime_utc": "2026-10-14T18:23:36.896427+00:00",
+      "sha256": "1e1cbb1409a8a328856728d521b27f0a8e5241b3e2f8f2db7d96b0fc02b18607"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/series.py",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 3902,
+      "mtime_utc": "2026-10-14T18:18:08.538671+00:00",
+      "sha256": "2adec648634bc90c07604545bb267a45748ea7578e05a80ab3dfde9b7e18d1ec"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/test_execution.py",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 31405,
+      "mtime_utc": "2026-10-15T13:21:31.748379+00:00",
+      "sha256": "03e61f501cf764f943e7c75be2ca528b5502718c5696b44490d6eb939e6bfd72"
+    },
+    {
+      "path": "策略/WyckoffMaster/_legacy_archive_v31/verify.py",
+      "kind": "legacy_v31_core_archive",
+      "note": "旧 v3.1 核心逐字节封存（只读保留）",
+      "bytes": 33477,
+      "mtime_utc": "2026-10-14T18:26:44.236663+00:00",
+      "sha256": "b72ae76ced516f8c00eee6c259cd4339859e27014730826a433904c2f5fd9381"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/README_窗口状态.md",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 8202,
+      "mtime_utc": "2026-10-15T08:47:08.026065+00:00",
+      "sha256": "eb80feedb5a11a9734a28915f2c5b4d59bab9b614170ecbbecd75cbcff8ee667"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/adapters/data_hygiene.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 6628,
+      "mtime_utc": "2026-10-15T04:07:29.006223+00:00",
+      "sha256": "e67f3b63021d3e780c0550d671d1c8af2d1883be8d32c6c81983fec755247f26"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/adapters/holdout_guard.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 6599,
+      "mtime_utc": "2026-10-14T18:07:45.448459+00:00",
+      "sha256": "af92f774e8af42ecbbf509d2996abf8a03eb99d084c98042d04baa49b16dfeb5"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/adapters/launch_isolated.sh",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1658,
+      "mtime_utc": "2026-10-14T18:03:49.641043+00:00",
+      "sha256": "e2f189381ea60c14137c66b3a931090567cfe33095548b56f83ebb4494dcf81a"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/adapters/ra_bridge.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 5352,
+      "mtime_utc": "2026-10-15T08:08:10.923313+00:00",
+      "sha256": "47d68d1e060f23a182fe852bb1586fe5ff8385998390b35b1723b92259adb0b9"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/adapters/segment_end_liquidation.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 6503,
+      "mtime_utc": "2026-10-14T18:09:19.213860+00:00",
+      "sha256": "5301b818833a0ed06772cedfb7d3ae8d2f271a35f8ad83b260db71c2f076969c"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/config/frozen_segments.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 5352,
+      "mtime_utc": "2026-10-14T18:07:07.184147+00:00",
+      "sha256": "3d0703b848a904568ca600f8a3a62bd5ce595be79d15811511eb0dc4dbfc79a7"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/config/ladder.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 9908,
+      "mtime_utc": "2026-10-14T18:07:22.549354+00:00",
+      "sha256": "980a7a370f88c38ef49b02c26d957bba583a679f4c19fcb3da9ae885ee59b53f"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/config/m2_rejection.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2528,
+      "mtime_utc": "2026-10-14T18:09:42.158655+00:00",
+      "sha256": "8d449104ac8d589c502ea5db61aa05b385a248b76f7bf3a0f6a15c5fae932e8f"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/engine/__init__.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 104,
+      "mtime_utc": "2026-10-15T07:49:53.545229+00:00",
+      "sha256": "525c6726feca8a99e9297449270632753675f9b68362d729f093bc8f5c136416"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/engine/engine.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 33767,
+      "mtime_utc": "2026-10-15T08:18:40.061204+00:00",
+      "sha256": "af6401b6ba829deeb56b38b72ceee304d9486824117534774303e47999c90f92"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/engine/ladder.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 18006,
+      "mtime_utc": "2026-10-15T08:25:57.217672+00:00",
+      "sha256": "f4e2f47ea928f54787c45f66d66ffe6a770b165b74107089e6f517d54da07e37"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/engine/ledger.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 7596,
+      "mtime_utc": "2026-10-15T07:47:32.711305+00:00",
+      "sha256": "b07ceadcc47ca0e2585722a5d4cb1d3d265141e29306523d2440ee74de90facd"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/engine/loader.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 5217,
+      "mtime_utc": "2026-10-15T07:47:19.242489+00:00",
+      "sha256": "c16226a878351290b52030fcd0ab23ab1766b1184f836ab1b5678e5790dc9718"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/engine/m4.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2163,
+      "mtime_utc": "2026-10-15T08:21:33.221313+00:00",
+      "sha256": "3f27cfc9a5e5c8e78973a93d0a4be653976ceb045091e06fdf509774bf479a06"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/engine/paths.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 4716,
+      "mtime_utc": "2026-10-15T07:46:52.072274+00:00",
+      "sha256": "a54dc56f5b52967192dc691a86289cd63e10fcd25d42b1e62b7eeb26d26fd511"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/engine/reconcile.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 3716,
+      "mtime_utc": "2026-10-15T07:51:29.282270+00:00",
+      "sha256": "6288aa4b9946e7e3b888003b9d37115e9770d58375602927b6e1869368804da2"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_IS_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1884160,
+      "mtime_utc": "2026-10-15T09:13:28.984586+00:00",
+      "sha256": "475e45ac41afc630f544a9001783c0f269b07f4e57e305b905459a8b8c913516"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_IS_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1867776,
+      "mtime_utc": "2026-10-15T09:14:33.848629+00:00",
+      "sha256": "236227159d8e56c538ae7e75569ed625e76dc03655e50b9d1e30ba55803c5feb"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_IS_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1937408,
+      "mtime_utc": "2026-10-15T09:15:26.445622+00:00",
+      "sha256": "d1372f14d4bdb0b5c3329070a2775bee414dc41da95b96c9cf3cf144f32e5629"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_IS_M3_BE.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2174976,
+      "mtime_utc": "2026-10-15T09:16:24.301160+00:00",
+      "sha256": "364f150ecaa05fc116aeb5abc0bd5b3efb000799b95e6f7bc3d00d56fe848fbf"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_IS_M3_Step.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2179072,
+      "mtime_utc": "2026-10-15T09:17:15.574705+00:00",
+      "sha256": "5972504edc412ca3a69b539a0ffdb46f8b94c7c003a7ecfb0e531cbfc1f411ff"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_IS_M4.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2011136,
+      "mtime_utc": "2026-10-15T09:18:05.734033+00:00",
+      "sha256": "c70617a3474af4667a3bdbfa13cadfabbbf692066d1b2225c3aa187a2a046d3f"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_Val_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2252800,
+      "mtime_utc": "2026-10-15T09:14:04.257930+00:00",
+      "sha256": "39fc3054b56243a7df6274ddffcab44b6c49de460916d69f3f24805be682a1af"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_Val_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2011136,
+      "mtime_utc": "2026-10-15T09:15:03.489307+00:00",
+      "sha256": "563ef745d6c58e2b2fd4d098c6ad9e8dcea5c43bb04de4789aef7066ec1e1295"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_Val_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2347008,
+      "mtime_utc": "2026-10-15T09:16:01.617000+00:00",
+      "sha256": "49f401a9ffa304a578d9383f4108c5ce59c3036ef97acf0a45dd6751b0f6208b"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_Val_M3_BE.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2531328,
+      "mtime_utc": "2026-10-15T09:16:52.285038+00:00",
+      "sha256": "d27987aee5820ebf796f40c90bb53eeec8c40808a28b12140bd7534127074292"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_Val_M3_Step.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2592768,
+      "mtime_utc": "2026-10-15T09:17:42.169937+00:00",
+      "sha256": "e966a0b0f4f43a60a687161880505e00df7a21d8907a5c06de1d7b54dcf5c11b"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_small_1h_Val_M4.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2322432,
+      "mtime_utc": "2026-10-15T09:18:35.752451+00:00",
+      "sha256": "0beae9cc26cda9c79fbe8822657c96c1c47568ce0e39311d3cf28992a34f9d75"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_IS_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 23351296,
+      "mtime_utc": "2026-10-15T09:29:58.567495+00:00",
+      "sha256": "ad2da5fd8bae711f1eb2deb88a52a41332386b85bd856086c98eafd453932aab"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_IS_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 23343104,
+      "mtime_utc": "2026-10-15T09:31:04.227945+00:00",
+      "sha256": "cee544cf040805df7d143b226c0386857707a387e27af3e7a78472af4753217d"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_IS_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 23420928,
+      "mtime_utc": "2026-10-15T09:31:57.631167+00:00",
+      "sha256": "9bb0c67b52f8b0d1fd50fb94da5dbd747de291049f6c7f40e41dd7ad0461ae1d"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_IS_M3_BE.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 24563712,
+      "mtime_utc": "2026-10-15T09:32:49.329168+00:00",
+      "sha256": "a256ca91aac17c9b00f7c65957db6534f73bb1c4a1577644c78ba3242ce814f3"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_IS_M3_Step.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 25182208,
+      "mtime_utc": "2026-10-15T09:33:41.175640+00:00",
+      "sha256": "0397a147e662446da7a35bd64b1f9623f22dcb9d4473cfe5ada9ecb319495ff6"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_IS_M4.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 23498752,
+      "mtime_utc": "2026-10-15T09:34:35.987959+00:00",
+      "sha256": "b942ed50dbc77c03d6980b5ba2acc5fc7787cd516e3b9b75e614e8dece52f5bd"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_Val_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 10485760,
+      "mtime_utc": "2026-10-15T09:30:35.350728+00:00",
+      "sha256": "683c6ae7ec836246d9a08cacbde8f56779d5e6f73cd0581a1ef2239ed8d1efe0"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_Val_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 10223616,
+      "mtime_utc": "2026-10-15T09:31:32.766432+00:00",
+      "sha256": "0962066bfaa209a6aa0871744262b6c3c4232c14ff530188e888ff9b711984a8"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_Val_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 10579968,
+      "mtime_utc": "2026-10-15T09:32:24.871457+00:00",
+      "sha256": "5343c67d5df4f714c332967107b47b8f25e807d5905ec4d36b11140d2a730336"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_Val_M3_BE.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 11177984,
+      "mtime_utc": "2026-10-15T09:33:16.598542+00:00",
+      "sha256": "083e28717fa3182f0debe9f8fc3b3daeecf8a8456196ba7be55d4f95d4f3a6e2"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_Val_M3_Step.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 11481088,
+      "mtime_utc": "2026-10-15T09:34:07.948772+00:00",
+      "sha256": "036692bb11abaaff05dcddb604fecdb75693096909fbc2cf9a5ce8367ec14789"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/ladder_wm31_kline_1h_Val_M4.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 10555392,
+      "mtime_utc": "2026-10-15T09:35:08.500815+00:00",
+      "sha256": "85da7a8ed7ea6dd7b4016420fa39ad0bd1174ea3c52020d6849303cf173b3b34"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/noloookahead/poison_base.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1499136,
+      "mtime_utc": "2026-10-15T09:19:26.588073+00:00",
+      "sha256": "3442b321864aaba4da0a72ecb087f12bdfdc83a02967f9d29916f1e9f1d597c2"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/noloookahead/poison_test.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1298432,
+      "mtime_utc": "2026-10-15T09:19:28.318111+00:00",
+      "sha256": "38319d3b3b1a925af839df54c7721e70c451bd80a103412753622bea8c37691b"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/perf_A_rescan_c1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1650688,
+      "mtime_utc": "2026-10-15T09:19:51.423712+00:00",
+      "sha256": "05eb7e12096e151534616d9766db311c6b97a1bd7fea7510b07a54d5fa29ef0a"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/perf_B_cursor_c1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1650688,
+      "mtime_utc": "2026-10-15T09:19:54.443106+00:00",
+      "sha256": "50362c2b33341cfb59f398a246711bae3fd9d52417bd725d642a3981308ad5f1"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/perf_C_cursor_c1000.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1728512,
+      "mtime_utc": "2026-10-15T09:19:57.421704+00:00",
+      "sha256": "7a8c0b4c031cdc7ff07cfb7344016829e87a07df527f374989196b7194f79caa"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/smoke_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1679360,
+      "mtime_utc": "2026-10-15T09:20:05.329912+00:00",
+      "sha256": "6d46567e57bf9ebfb39855c01bed6f3f709b152931971fdc77d201dc02eafc58"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/smoke_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1536000,
+      "mtime_utc": "2026-10-15T09:20:07.933290+00:00",
+      "sha256": "aedb4695fb26abfff3e0e571b8c71c2966d1aba32ce9d1c5771bb50fbbbe6062"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/smoke_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1572864,
+      "mtime_utc": "2026-10-15T09:20:10.673423+00:00",
+      "sha256": "0c0501535e8982101559a78d9f0d5861cf64de0b1722923624b69a0b236b9b71"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/smoke_M2b.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1617920,
+      "mtime_utc": "2026-10-15T09:20:13.317185+00:00",
+      "sha256": "f374f553b4ab5dead7166b39d1bb9e3b887f76e3dbdd8fb45cc28a40aa6f2d3b"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/smoke_M3_BE.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1638400,
+      "mtime_utc": "2026-10-15T09:20:15.829188+00:00",
+      "sha256": "689f41cd4cc21b68fa18e0c1d2173b54e6150c5b9628030b96ee63066bba52fb"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/smoke_M3_Step.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1687552,
+      "mtime_utc": "2026-10-15T09:20:18.450957+00:00",
+      "sha256": "d966097856d6f280f886717801d227a4a93586f815a593c9dce63d23a65b3cf2"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_dbg_1h_1000000MOGUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 512000,
+      "mtime_utc": "2026-10-15T09:07:54.283296+00:00",
+      "sha256": "7258f8f7c35d5e60a46392fdbdd51eb0f473ad530b067921441cd2ac7d20f7c0"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_dbg_1h_1000000MOGUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 483328,
+      "mtime_utc": "2026-10-15T09:07:55.812032+00:00",
+      "sha256": "db89a0421d079e11ecdb123f2d4b68d6c338737a89b1748ba7723e787876c19b"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_dbg_1h_1000000MOGUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 499712,
+      "mtime_utc": "2026-10-15T09:07:56.884356+00:00",
+      "sha256": "46477a2683c1c043891d16dd17247a8fbb61f77fb434f7ba57d37a5e9c31dc4a"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_0GUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 323584,
+      "mtime_utc": "2026-10-15T09:10:03.038554+00:00",
+      "sha256": "c9779dcd3a42ae9b9f7993e12eadd40b64d888cbceb95197542ee2469ee218b2"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_0GUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 323584,
+      "mtime_utc": "2026-10-15T09:10:14.860232+00:00",
+      "sha256": "4889942ddc308841fa44096e538d56415bf257413755c6cf37b2a324b728f9bd"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_0GUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 323584,
+      "mtime_utc": "2026-10-15T09:10:25.073844+00:00",
+      "sha256": "9f2beaf82cc03883625c368aee8dbc44ead7a1757828d0deec1c880daa222343"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000000BOBUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 372736,
+      "mtime_utc": "2026-10-15T09:10:03.471151+00:00",
+      "sha256": "0de8be34496b657a8e5fd0468020b07a5be5ee7b5a3b4eaff18477bda8ab5588"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000000BOBUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 372736,
+      "mtime_utc": "2026-10-15T09:10:15.194482+00:00",
+      "sha256": "a05a9556e43ad063df09234aa4cfe6b1b5dbfd1ed3317a73f45653d552dcc960"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000000BOBUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 372736,
+      "mtime_utc": "2026-10-15T09:10:25.416404+00:00",
+      "sha256": "1c292751b7f3641f2aedc86965018e8ba850d5c0b2f55fc13126da53449ceb8c"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000000MOGUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 512000,
+      "mtime_utc": "2026-10-15T09:10:04.022636+00:00",
+      "sha256": "ed64f552fd960a6fd1ab5d6a227a387bf512c2e363fbe7d6d06801d9bb4a6923"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000000MOGUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 483328,
+      "mtime_utc": "2026-10-15T09:10:15.739908+00:00",
+      "sha256": "9fca78c1663ffc1af5f31a1ae244e850583407d4fb764de0b3a4145f243860ad"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000000MOGUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 499712,
+      "mtime_utc": "2026-10-15T09:10:26.577155+00:00",
+      "sha256": "a26be2cbdb668aec8d6943f05b1f8f324a1523f96ecc470e8093a15df06fb710"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000BONKUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 495616,
+      "mtime_utc": "2026-10-15T09:10:05.819759+00:00",
+      "sha256": "3ae97b862bfdbeddb02473e23ec55a030b6aa5f9e33e021260d7abeae33abae1"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000BONKUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 487424,
+      "mtime_utc": "2026-10-15T09:10:17.526861+00:00",
+      "sha256": "095bb8496724bf2bdefb669b97b09270fb4f68e6b89120bbc7842bf7feb3cb4e"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000BONKUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 479232,
+      "mtime_utc": "2026-10-15T09:10:28.821354+00:00",
+      "sha256": "33de1d94bd3a14204511f3fe9de28fb0638167460ae8806495cd0909b5dd8c05"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000CATUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 487424,
+      "mtime_utc": "2026-10-15T09:10:07.369882+00:00",
+      "sha256": "530e9a7b74c35ac01653be3e8ba093a450cbfec7c081b73ea533252d8846b736"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000CATUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 475136,
+      "mtime_utc": "2026-10-15T09:10:18.837991+00:00",
+      "sha256": "a089e922262a8a7cc52c1f871c3c91ffb192614f998c2393cd20b97c6aa8f599"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000CATUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 471040,
+      "mtime_utc": "2026-10-15T09:10:30.131163+00:00",
+      "sha256": "c43352155516b7b5332b6d56640b84ea1c4ba019f1890cf7901b2b9a1e57206e"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000CHEEMSUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 475136,
+      "mtime_utc": "2026-10-15T09:10:08.762359+00:00",
+      "sha256": "9d40c5bf949c07766f04a9266aec9b6b24fb690a0370ef42170a34e87d58fc1f"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000CHEEMSUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 458752,
+      "mtime_utc": "2026-10-15T09:10:19.968927+00:00",
+      "sha256": "913549a5243d6cf76135e50a2be36cad0d27bed42a276ab7b6cd421c46ca22e3"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000CHEEMSUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 462848,
+      "mtime_utc": "2026-10-15T09:10:31.609248+00:00",
+      "sha256": "96960354acad9ef2ed48db3e9366efb5c886176c23a22cfa89a509417982cf06"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000FLOKIUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 491520,
+      "mtime_utc": "2026-10-15T09:10:09.836534+00:00",
+      "sha256": "767863e83d51dff55d1adf540bff74a07ffa7c03fc95ba3e7a0a2f8d07757409"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000FLOKIUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 483328,
+      "mtime_utc": "2026-10-15T09:10:21.041542+00:00",
+      "sha256": "42fc91d2be13ab3d127ddf1b48d00cb03e1bdf5b8fa21c7488e9e4a69a57d45f"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000FLOKIUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 491520,
+      "mtime_utc": "2026-10-15T09:10:32.632885+00:00",
+      "sha256": "9ab3d5e704219aad64dd29d0624b76960ba1944ee3b94cb75eadfc40afd578d0"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000LUNCUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 491520,
+      "mtime_utc": "2026-10-15T09:10:11.091897+00:00",
+      "sha256": "86dedc325a559bcaf80b7e188377d9dccbb119cf06892704bbe79ee9943e8d2f"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000LUNCUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 487424,
+      "mtime_utc": "2026-10-15T09:10:21.998884+00:00",
+      "sha256": "9ff6e0d5252c1a899600bd93bbeb8eeebe4bb99ce874c21797e57a816ee7ad21"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000LUNCUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 487424,
+      "mtime_utc": "2026-10-15T09:10:33.782990+00:00",
+      "sha256": "75c6517b1db6cb2a94fb534486f0ef6e0599b501fc74d9b6314e6e05a1bfa9e3"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000PEPEUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 487424,
+      "mtime_utc": "2026-10-15T09:10:12.361534+00:00",
+      "sha256": "d53cb6d45337d5a4ac2dabf00af00a9e9da57c798635b57f8896e0c41ed2d7e6"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000PEPEUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 471040,
+      "mtime_utc": "2026-10-15T09:10:23.073548+00:00",
+      "sha256": "fe320a937a9a48b37954419c317e54654880c963e146df56a1f1388c096b853e"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000PEPEUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 479232,
+      "mtime_utc": "2026-10-15T09:10:35.061076+00:00",
+      "sha256": "3aa0713d912279662ce0b44d459b43c249452f3a8ea728b87bffe8b0a7f26ba3"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000RATSUSDT_M0.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 495616,
+      "mtime_utc": "2026-10-15T09:10:13.427433+00:00",
+      "sha256": "e7aba421760070b62790f3a9035be7d41a456e7004a5fd393233dd3ac7bd79bf"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000RATSUSDT_M1.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 475136,
+      "mtime_utc": "2026-10-15T09:10:23.866611+00:00",
+      "sha256": "03f917dd80639b1e08a21aa4e59da9a78f50af301b8b50612e3f401901439594"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/ledgers/svb_svb_1h_1000RATSUSDT_M2.sqlite3",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 479232,
+      "mtime_utc": "2026-10-15T09:10:36.446873+00:00",
+      "sha256": "520504eda0773628c871b4a129ede90f0b1aa53a126c795a1795683a977630e1"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/check_gates_once.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 3080,
+      "mtime_utc": "2026-10-14T18:03:57.779319+00:00",
+      "sha256": "af2ac2ed1de6a113ad61633f93cd228e0d4bd06fe0a0f9d20fa3a90891bbf9f2"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/freeze_segments.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 6980,
+      "mtime_utc": "2026-10-14T18:07:01.418337+00:00",
+      "sha256": "19506b70960fe57db2b5f518960530da7094be8ef315362e73cbe82d9b4f52cb"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/no_lookahead.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 6334,
+      "mtime_utc": "2026-10-15T07:52:14.407504+00:00",
+      "sha256": "c3f0138208d9ec5a88caa8254439c2bd7750754b47f73233bb0b7e94ab62a517"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/perf_equiv.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 6466,
+      "mtime_utc": "2026-10-15T08:06:39.008388+00:00",
+      "sha256": "ebeee25fc5fdb645900ceaea4f1b99849e233d4a1399c843f5b7e25cf61150a7"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/run_ladder.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 9645,
+      "mtime_utc": "2026-10-15T09:29:26.635851+00:00",
+      "sha256": "5d4a5edc18989755862911d24dc22b499aba152f6aed24c9f11f391695d3b9e5"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/smoke_engine.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2980,
+      "mtime_utc": "2026-10-15T07:49:53.545229+00:00",
+      "sha256": "acec15882ef02b99bcb61cf0dea1741dc458230d646f8366acc099cee6c85f3a"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/stream_vs_batch_reconcile.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 29022,
+      "mtime_utc": "2026-10-15T08:46:24.848556+00:00",
+      "sha256": "c1e976b52ed55f4ff21a1df34f7963fae9c03b6a88fe3057625083f13dff18e6"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/validate_small_window.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 9693,
+      "mtime_utc": "2026-10-15T08:26:11.655585+00:00",
+      "sha256": "c5475b2cde82d2854cec9ac990f17df58e38b6cabe1cd992b933c2ef5f47ef95"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/verify_gates.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 7307,
+      "mtime_utc": "2026-10-15T09:12:09.063156+00:00",
+      "sha256": "0a5f69d4ab6c163d5ef19d3f980538f9d933fbb83a2bad391d5906931e4200d8"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/scripts/verify_v31_prep.py",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 12732,
+      "mtime_utc": "2026-10-14T18:10:16.471872+00:00",
+      "sha256": "fcbdd3e3c7394326baaadfc932e07c608f11249b8611d3af12817421ad474902"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/gate_probe.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 768,
+      "mtime_utc": "2026-10-15T07:49:06.411854+00:00",
+      "sha256": "c213e127fdf36c847a92e644f3b30b7b237394a3d4b2c643355a80629f71b189"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/gate_verify.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2954,
+      "mtime_utc": "2026-10-15T09:29:31.159477+00:00",
+      "sha256": "6e4921d1cb4f48ed514856d2d0dd711166ac7a2a119c826c427325c9ce2d20d9"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/ladder_kline.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 445688,
+      "mtime_utc": "2026-10-15T09:35:09.236579+00:00",
+      "sha256": "e2320ea73915698a86548c4be0c987ae29b6bad0333313720a9fb8a0b8e6b976"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/ladder_kline_IS.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 249548,
+      "mtime_utc": "2026-10-15T09:35:09.232574+00:00",
+      "sha256": "9a323e87d0a1ae0b611ed82cea04cff5bb0d27b3e1e99c2a58f1e08bb40fc0df"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/ladder_kline_Val.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 113910,
+      "mtime_utc": "2026-10-15T09:35:09.233043+00:00",
+      "sha256": "8cc5a21949c86ce57158759721ebb936aaac219820062c46a7f33678c577d61c"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/ladder_status.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1044,
+      "mtime_utc": "2026-10-15T09:35:09.237361+00:00",
+      "sha256": "a765d5e4c81183640de06c7831445706d870920ffffbceba2c54b46c63823b46"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/no_lookahead.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 501,
+      "mtime_utc": "2026-10-15T09:19:36.503411+00:00",
+      "sha256": "83b19ae4cc21dc6dcba2a4a73d679d1c5f32546e74ed499cf7742bf1f21f2e95"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/perf_equiv.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 1413,
+      "mtime_utc": "2026-10-15T09:19:57.511970+00:00",
+      "sha256": "c7ab84ff3d4a2e38c2cb3e596854c1d7fbc8ebc1b4ae660145afea72d5fb3b4c"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/phase.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 3381,
+      "mtime_utc": "2026-10-14T18:12:32.691050+00:00",
+      "sha256": "209cb3f58c33af3cf4adf9c815ddc3de4427fda5500fb289d269240c2ad6637b"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/small_window_validation.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 32171,
+      "mtime_utc": "2026-10-15T09:18:36.546578+00:00",
+      "sha256": "3043302772f01d73dd6f90c436ef91c3b686afb618845295888ab7ed283bae73"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/smoke_result.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 2438,
+      "mtime_utc": "2026-10-15T09:20:18.453365+00:00",
+      "sha256": "01cf1e048e4c4eb5999814b340084dc153109d80aa1563dfd0a08d7233145ff4"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/stream_vs_batch.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 87733,
+      "mtime_utc": "2026-10-15T09:10:38.648835+00:00",
+      "sha256": "f95aa9fadb9b726ea1072ef2690bf40754dfb829e4e3f5164a9adbb53d681021"
+    },
+    {
+      "path": "回测日志/WyckoffMaster/state/v31_prep_verify.json",
+      "kind": "legacy_run_dir",
+      "note": "旧回测/复盘 runs（只读保留，不进入新策略运行列表）",
+      "bytes": 4448,
+      "mtime_utc": "2026-10-15T04:23:41.720649+00:00",
+      "sha256": "43145acaf370d74331b700dbcaf56cdcdd535fd1243cb65e2e23cf04a8aeca30"
+    }
+  ]
+}

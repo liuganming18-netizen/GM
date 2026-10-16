@@ -21,6 +21,8 @@ import pandas as pd
 from . import config as C
 from . import core as CORE
 from . import execution as EXEC
+from ..trading_core.contracts import stable_hash as _stable_hash
+from ..trading_core import signal as SIGCONTRACT
 
 KEY = C.STRATEGY_KEY
 NAME = "WX_OI_RESONANCE_V1：OI 共振 + 威科夫/唐奇安候选规则（spring / sc_reversal / donchian_breakout / lps_pullback）"
@@ -66,15 +68,40 @@ FORMAL_M4_NOT_PASSED_REASONS = (
 )
 
 
-def formal_run_gate() -> dict:
-    """正式 M4 门禁：未过 ⇒ **禁止正式运行**（本函数只读、不写任何状态）。"""
+def formal_run_gate(params=None) -> dict:
+    """正式 M4 门禁：未过 ⇒ **禁止正式运行**（本函数只读、不写任何状态）。
+
+    `params` 缺省取 `config.SIGNAL_FROZEN`；显式传入时按该组参数评估（供测试与候选评估用）。
+    """
+    p = params if params is not None else C.SIGNAL_FROZEN
+    blockers = list(FORMAL_M4_NOT_PASSED_REASONS)
+    oi_status = C.oi_min_resonance_status(p)
+    if oi_status != C.OI_MIN_RESONANCE_SET:
+        blockers.insert(0,
+                        "OI 共振门槛 oi_min_resonance 当前为 "
+                        f"{oi_status}（未批准生产阈值，施工单 W2-1）"
+                        "⇒ 因子未真正参与决策，正式生产运行拒绝")
+    # PIT 可得性（施工单 W2-5）：门槛已启用但发布延迟未声明 ⇒ 无法证明 OI 在决策时刻可见
+    # ⇒ **禁止乐观使用**，运行级拒绝（逐 bar 不改策略规则，见 core.compute_signals）。
+    lag = getattr(p, "oi_publication_lag_ms", None)
+    pit_declared = lag is not None
+    if C.oi_gate_enabled(p) and not pit_declared:
+        blockers.insert(0,
+                        "OI 发布延迟 oi_publication_lag_ms 未声明（None）"
+                        "⇒ 无法证明 OI 观测在决策时刻已可见（施工单 W2-5）"
+                        "⇒ 禁止乐观使用，正式生产运行拒绝")
     return {
         "strategy_id": C.STRATEGY_ID,
         "formal_run_allowed": False,
         "run_frozen": C.RUN_FROZEN,
         "gate_status": dict(C.GATE_STATUS),
         "requirements": list(FORMAL_M4_REQUIREMENTS),
-        "blocking_reasons": list(FORMAL_M4_NOT_PASSED_REASONS),
+        "blocking_reasons": blockers,
+        "oi_min_resonance_status": oi_status,
+        "oi_min_resonance": p.oi_min_resonance,
+        "oi_gate_enabled": C.oi_gate_enabled(p),
+        "oi_publication_lag_ms": lag,
+        "oi_pit_declared": bool(pit_declared),
         "ai_role": "AI 只能生成候选；确定性风控有最终权限",
         "live_order_enabled": False,
         "new_entry_switch_default": False,
@@ -110,6 +137,11 @@ def resolve(con, key=KEY, version=None) -> dict:
         "hash_check": "ok" if not errs else "invalid",
         "identity_ok": not errs,
         "identity_problems": list(errs),
+        "param_hash": C.param_hash(),
+        "param_hash_basis": list(C.PARAM_HASH_BASIS),
+        "oi_min_resonance": C.SIGNAL_FROZEN.oi_min_resonance,
+        "oi_min_resonance_status": C.oi_min_resonance_status(),
+        "oi_gate_enabled": C.oi_gate_enabled(),
         "run_binding": gate,
         "oi_weights": dict(C.OI_WEIGHTS),
         "experiment_id": C.EXPERIMENT_ID,
@@ -131,6 +163,14 @@ def interface() -> dict:
         "experiment_id": C.EXPERIMENT_ID,
         "signal_params_hash": C.SIGNAL_FROZEN.hash(),
         "exec_params_hash": C.EXEC_FROZEN.hash(),
+        # 统一参数指纹（W2-2）：身份 + 周期 + 两层全部字段
+        "param_hash": C.param_hash(),
+        "param_hash_basis": list(C.PARAM_HASH_BASIS),
+        "oi_min_resonance": C.SIGNAL_FROZEN.oi_min_resonance,
+        "oi_min_resonance_status": C.oi_min_resonance_status(),
+        "oi_gate_enabled": C.oi_gate_enabled(),
+        "oi_publication_lag_ms": C.SIGNAL_FROZEN.oi_publication_lag_ms,
+        "signal_contract_version": SIGCONTRACT.SIGNAL_CONTRACT_VERSION,
         "oi_weights": dict(C.OI_WEIGHTS),
         "signal_names": dict(CORE.SIGNAL_NAMES),
         "stop_modes": list(CORE.VALID_STOP_MODES),
@@ -164,7 +204,7 @@ def _bars_to_frame(bars: Iterable) -> pd.DataFrame:
 
 
 def _event_uid(*parts) -> str:
-    return hashlib.sha256("|".join(str(p) for p in parts).encode("utf-8")).hexdigest()[:32]
+    return _stable_hash(*parts)
 
 
 def run(bars, resolved=None, arm_id=None, identity=None, require_identity=False) -> dict:
@@ -223,6 +263,26 @@ def run(bars, resolved=None, arm_id=None, identity=None, require_identity=False)
             },
         })
     counts = sig.attrs.get("signal_counts") or {}
+    # ── 正式 Signal 契约（施工单 W2-4）：四时点分离 + 因子 + 条件 + 拒绝原因 ──
+    contract_events = SIGCONTRACT.build_signal_events(
+        sig, symbol=(symbol or ""), timeframe=TIMEFRAME,
+        strategy_key=C.STRATEGY_KEY, strategy_version=C.SIGNAL_VERSION,
+        signal_bar_seconds=int(C.SIGNAL_FROZEN.signal_bar_seconds),
+        source_id=(f"{exchange}:um:{symbol}" if symbol else ""),
+        entry_policy=EXEC.build_policy().identity(),
+        exit_policy={"close_open_positions_at_end": True,
+                     "exit_order_type": "STOP_MARKET",
+                     "trailing": "exit_low_curr/exit_high_curr → 下一根执行 bar"},
+        include_rejected=True)
+    contract_by_bar = {int(e.signal_time or -1): e for e in contract_events}
+    for ev in events:
+        bar = int(ev["evidence"]["signal_bar_open_time"])
+        ce = contract_by_bar.get(bar)
+        if ce is not None:
+            ev["evidence"]["signal_id"] = ce.signal_id
+            ev["evidence"]["signal_contract_hash"] = ce.content_hash()
+            ev["evidence"]["available_at"] = ce.available_at
+            ev["evidence"]["time_order_ok"] = ce.time_order_ok()
     return {
         "status": "ok",
         "events": events,
@@ -232,6 +292,19 @@ def run(bars, resolved=None, arm_id=None, identity=None, require_identity=False)
             "reject_counts": sig.attrs.get("reject_counts") or {},
             "dedup_report": sig.attrs.get("dedup_report") or {},
             "oi_factor_meta": sig.attrs.get("oi_factor_meta") or {},
+            "oi_pit": sig.attrs.get("oi_pit") or {},
+            "oi_gate": sig.attrs.get("oi_gate") or {},
+            "param_hash": C.param_hash(),
+            "oi_min_resonance_status": C.oi_min_resonance_status(),
+            "signal_contract_version": SIGCONTRACT.SIGNAL_CONTRACT_VERSION,
+            "signal_events": [e.to_dict() for e in contract_events],
+            "signal_events_accepted": int(sum(1 for e in contract_events
+                                              if e.signal_type != "none")),
+            "signal_events_rejected": int(sum(1 for e in contract_events
+                                              if e.signal_type == "none")),
+            "signal_contract_note": ("trade_time 需执行周期 bar 序列才能确定；"
+                                     "本入口只给信号周期 ⇒ trade_time=None，"
+                                     "由回测驱动按 `resolve_trade_time` 补齐"),
         },
     }
 

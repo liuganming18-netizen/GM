@@ -1,0 +1,171 @@
+================================================================================
+WORK-02 · 新策略净核 + Shared Trading Core 收敛 · 收尾汇报
+2026-10-16
+================================================================================
+
+【一句话结论】
+施工项 W2-0 ~ W2-11 全部落地。指定 15 用例 + 既有回归 87 用例 = 102 项全绿，
+0 FAIL / 0 ERROR。数值行为逐位保持。Golden 只有身份哈希变化，行为类差异 0 项。
+施工停止，等下一份施工单。
+
+
+--------------------------------------------------------------------------------
+一、本轮新出现的「2 项失败」——已查清，不是本次改动造成的
+--------------------------------------------------------------------------------
+
+现象：不设环境变量、按原文件顺序跑 4 个既有回归套件，得到 2 failed / 85 passed。
+
+    FAILED test_backtest_store.py::test_atomic_exclusive_create_and_duplicate_rejected
+    FAILED test_backtest_store.py::test_list_runs_reads_docs_and_flags_broken
+
+结论：这是 test_backtest_store.py 自身的「测试隔离缺陷」，由 pytest 文件顺序触发，
+      与 WORK-02 零因果关系。
+
+成因（三行代码的相互作用）：
+  1) 框架/backend/backtest_store.py:41
+     在「模块导入期」读环境变量 OI_RESONANCE_RUNS_DIR 来决定 RUNS_ROOT；
+  2) evidence/Work_单策略回测_2026-10-16/test_oi_resonance_v1_backend_p0p1.py:31
+     在「模块级」先一步 import backtest_store，此时环境变量还没设，
+     于是 RUNS_ROOT 被冻结成项目默认目录；
+  3) evidence/Work_单策略回测_2026-10-16/test_backtest_store.py:22-25
+     先设环境变量、再 importlib.import_module("backtest_store")，
+     但模块已在缓存里，拿回的是同一个旧对象，环境变量的赋值被完全忽略。
+  => RUNS_ROOT != TMP，两条断言必然失败。
+
+证据一：同一批 87 个用例，只改顺序或只补环境变量，就 0 失败
+
+    编号  环境变量                              文件顺序              结果
+    V1    不设                                  原顺序                2 failed, 85 passed
+    V2    不设                                  store 置首            87 passed
+    V3    OI_RESONANCE_RUNS_DIR=/tmp/bt_store_test 原顺序             87 passed
+    V4    不设                                  仅 p0p1 + store       2 failed, 37 passed
+
+证据二：触发链上的三个文件相对 HEAD 零改动
+
+    框架/backend/backtest_store.py                          git 干净   mtime 10:37:22
+    evidence/.../test_oi_resonance_v1_backend_p0p1.py       git 干净   mtime 10:48:26
+    evidence/.../test_backtest_store.py                     git 干净   mtime 10:23:05
+
+    HEAD = bd85ccd；git show --stat bd85ccd -- 上述路径 => 输出为空（该提交也没改它们）。
+    WORK-02 的改动全部发生在 15:40 之后，且尚未提交。
+
+证据三：WORK-02 改动的模块从不导入 backtest_store
+
+    策略/WyckoffMaster/oi_resonance_v1/execution.py   -> 无
+    策略/WyckoffMaster/trading_core/*.py              -> 仅注释/docstring 提到名字，无 import
+
+证据四：最小复现只用「未改动模块」即可成立
+
+    import os, sys, importlib
+    sys.path.insert(0, "框架/backend")
+    import backtest_store                          # 模拟 p0p1.py:31，此时无 env
+    os.environ["OI_RESONANCE_RUNS_DIR"] = "/tmp/bt_store_test"
+    m = importlib.import_module("backtest_store")   # 模拟 test_backtest_store.py:25
+    # 实测：两次 RUNS_ROOT 完全相同，m is backtest_store == True
+
+附带损害（已封住）：
+  V1/V4 每次会往「正式」回测目录 回测日志/oi_resonance_v1/runs/ 写 2 个测试目录，
+  界面上会被当成「损坏的运行」列出来。
+  处理：原样搬进同级隔离目录（未删除任何文件，可 mv 回退）
+        回测日志/oi_resonance_v1/_隔离_误落测试产物_2026-10-16/  共 10 个
+  正式 runs 根残留 0；10:22–10:55 的真实运行记录未触碰。
+
+建议修复（本次未实施）：
+  在 importlib.import_module 之后补一行  S.RUNS_ROOT = TMP  （或加 assert 显式暴露顺序依赖）。
+  未实施原因：该文件属他人工作包；该目录内有并行写者；施工单禁止「改测试使其 PASS」。
+
+
+--------------------------------------------------------------------------------
+二、最终验收数字（已落盘，可复跑）
+--------------------------------------------------------------------------------
+
+    WORK-02 指定 15 用例          15 PASS / 0 FAIL / 0 ERROR
+    既有回归 4 套件               87 PASS / 0 FAIL / 0 ERROR
+      其中  patches 35 / backend_fixes 13 / backend_p0p1 33 / backtest_store 6
+    合计                          102 PASS / 0 FAIL / 0 ERROR
+
+    行为保持                       PASS —— 剥离新增键后与改造前逐位一致
+      trades 50 / net_return 8.354876% / final_equity 108354.876
+      maxDD 10.0405% / fees 4062.99 / funding 340.13
+      decisions 100 / rejected 68 / equity_points 3600
+
+    Golden 差异分类闸门            exit=0
+      行为类差异 0 项（必须为 0）
+      身份类差异 4 项（code_sha256 ×2、signal_params_hash ×2，按设计必然变）
+      已知口径差 NOTE 27 项（run-scoped ID / 窗口末端，不判失败）
+
+    契约产物
+      orders_count 100 / registry_unique_keys 100（ID 无碰撞）
+      ledger_events_total 660
+        {FEE_CHARGED:100, FUNDING_FEE:41, GENESIS_INIT:1,
+         ORDER_CREATED:100, ORDER_FILLED:100, ORDER_SUBMITTED:100,
+         POSITION_CLOSED:50, POSITION_OPENED:50,
+         SIGNAL_ACCEPTED:50, SIGNAL_REJECTED:68}
+      fill_adapter.kind = simulated_bar
+
+
+--------------------------------------------------------------------------------
+三、一键复跑命令（整段全选复制，粘进终端即可）
+--------------------------------------------------------------------------------
+
+cd /Users/boos/Desktop/威科夫因子共振趋势
+export PYTHONDONTWRITEBYTECODE=1
+export PY=/Users/boos/.workbuddy-ai/binaries/python/envs/default/bin/python
+$PY -m pytest 策略/WyckoffMaster/test_work02_core_contract.py -q
+OI_RESONANCE_RUNS_DIR=/tmp/bt_store_test $PY -m pytest evidence/Work_策略替换_2026-10-16/test_oi_resonance_v1_patches.py evidence/Work_单策略回测_2026-10-16/test_oi_resonance_v1_backend_fixes.py evidence/Work_单策略回测_2026-10-16/test_oi_resonance_v1_backend_p0p1.py evidence/Work_单策略回测_2026-10-16/test_backtest_store.py -q
+$PY evidence/Work_策略核心收敛_2026-10-16/工具_行为一致性核验.py
+$PY evidence/Work_策略核心收敛_2026-10-16/工具_Golden差异分类.py
+$PY evidence/Work_策略核心收敛_2026-10-16/工具_身份指纹.py
+
+说明：第 2 条必须带 OI_RESONANCE_RUNS_DIR（该测试自己的 docstring 就这么规定的），
+      否则会撞上第一节那个既有缺陷，出现 2 failed / 85 passed。
+
+
+--------------------------------------------------------------------------------
+四、遗留项（如实登记，本窗口未越界处理）
+--------------------------------------------------------------------------------
+
+    1) test_backtest_store.py 顺序依赖（2 项）  —— 既有缺陷，非本次引入；改法见第一节
+    2) 误落正式 runs 根的测试产物              —— 已原样隔离 10 个，可 mv 回退
+    3) W2-4 available_at / trade_time 入账     —— backtest_runner 信号表未写，契约层已齐备
+    4) W2-5 oi_observed_at 列                  —— 当前退回 timestamp + bar_seconds（最乐观假设）
+    5) W2-10 Ledger 落盘迁移                   —— 只定义事件接口 + InMemoryLedger
+    6) Live 端接线                             —— ExchangeFillAdapter 已就位，无交易所客户端
+    7) Paper 端接线                            —— 下一施工单
+    8) 后端套件 33 项非绿                      —— 既有环境问题（缺外部模块/目录、视图丢失）
+    9) 旧 v3.1 E11                             —— 既有失败，新核心已用 W2-3 机制正确实现该性质
+
+
+--------------------------------------------------------------------------------
+五、需施工方拍板（本窗口不自行裁决）
+--------------------------------------------------------------------------------
+
+    D-1  PIT 未声明时，逐 bar 是否也要 fail-closed？
+         现状按原文「只标记」；若收紧属策略规则变更，需单独施工单 + 证据。
+
+    D-2  oi_min_resonance 的正式批准值
+         当前 UNSET => formal_run_allowed = False。
+         这不是缺陷，是等待批准；不批则正式生产永远不启动。
+
+    D-3  Golden 重新生成的时机与批准
+         当前判定「暂不重生成」（收敛系列未结束，旧基线行为判据仍有效）。
+
+    D-4  available_at / trade_time 是否本轮就写入 backtest_runner 信号表？
+         本轮未改（避免扩大改动面 + 影响 Golden 输入快照）。
+
+
+--------------------------------------------------------------------------------
+六、交付文件
+--------------------------------------------------------------------------------
+
+    docs/evidence/WORK-02_strategy_core_convergence_2026-10-16.md
+        主报告（14 节）。第 6.2 节已按最终实测重写，新增 6.2.1 归因节，
+        第 11 节遗留项 +2 行，第 14 节复跑命令补环境变量与顺序无关性核验。
+
+    evidence/Work_策略核心收敛_2026-10-16/验收_既有回归2项失败_归因_2026-10-16.md
+        第一节 2 项失败的完整归因证据链（7 节，含复现矩阵与最小复现）。
+
+    evidence/Work_策略核心收敛_2026-10-16/验收_最终全量复验_2026-10-16.txt
+        最终全量复验的实跑日志。
+
+================================================================================

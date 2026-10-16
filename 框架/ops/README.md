@@ -28,8 +28,8 @@
 ## 常用命令
 
 ```sh
-PY=/Users/boos/.workbuddy-ai/binaries/python/versions/3.13.12/bin/python3
-OPS="/Users/boos/WorkBuddy AI/加密货币趋势判断系统/ops"
+PY=/Users/boos/.workbuddy-ai/binaries/python/envs/default/bin/python   # 需含 duckdb/pyarrow
+OPS="$(cd "$(dirname "$0")" && pwd)"   # 本 README 所在目录 = <工程根>/框架/ops
 
 $PY "$OPS/hot_snapshot.py" --dry-run          # 容量与计划
 $PY "$OPS/hot_snapshot.py"                     # 实际快照

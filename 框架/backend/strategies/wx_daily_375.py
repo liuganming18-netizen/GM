@@ -37,10 +37,19 @@ EXTREME_RATE = 0.02                      # 极端情景：每整点 1h、单边�
 NORM4H_KIND = "norm4h_fixed_last_known"  # 正常情景：固定 4h 整点 + 严格过去 last-known 费率
 
 # ── 只读真实来源（第27窗口固定）────────────────────────────────────────────────
-DECISION_DIR = Path("/Users/boos/.codex/worktrees/c9d7/加密货币趋势判断系统/"
-                    "本次离线决策_2026-10-12")
-AUDIT_DIR = Path("/Users/boos/.codex/worktrees/c9d7/加密货币趋势判断系统/"
-                 "Work派工_2026-10-11")
+# W1（2026-10-16）幽灵依赖清理：
+#   · 决策 / 派工数据原在外部工作树 外部工作树（数据已迁入）
+#     ⇒ 该目录业务数据（45 MB）已**整体迁入工程** `数据/研究输入/外部迁移_2026-10-16/`
+#     （逐字节复制，未改内容）。原外部目录**不再是依赖**。
+#   · `BACKEND` 原指向外部工作区的「后端实现」目录（已删除）⇒ 改为本文件所在的后端目录。
+#   · `BN_DIR`（perp 原始下载）与 `SIDECAR`（quote sidecar）**不在本工程内**
+#     （原外部工作区已整体删除，无副本）⇒ 此处**不伪造数据**，只给出「若恢复应放哪」的
+#     工程内正式位置；文件缺失时调用方必须 fail-closed，**不得静默降级**。
+_RESEARCH_MIGRATION = (
+    Path(os.environ["RESEARCH_INPUT_DIR"]) if os.environ.get("RESEARCH_INPUT_DIR")
+    else Path(__file__).resolve().parents[3] / "数据" / "研究输入" / "外部迁移_2026-10-16")
+DECISION_DIR = _RESEARCH_MIGRATION / "本次离线决策_2026-10-12"
+AUDIT_DIR = _RESEARCH_MIGRATION / "Work派工_2026-10-11"
 POOL_LIST = DECISION_DIR / "19_最终375币假设研究池.csv"
 SRC10 = DECISION_DIR / "10_442币连续性与实际准入汇总.csv"      # 价格文件 / 成交额文件
 DAILY12 = DECISION_DIR / "12_通过连续性币的逐日准入资格.csv"    # 交叉核对
@@ -52,7 +61,7 @@ MODEL_DOC = DECISION_DIR / "08_具体近似模型与缺口持仓两方案.md"
 
 CALENDAR_118 = AUDIT_DIR / "118_20201215新候选日历_待用户确认.json"
 
-BACKEND = Path("/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现")
+BACKEND = Path(__file__).resolve().parents[1]
 BN_DIR = BACKEND / "历史下载" / "perp_datadir_real" / "data" / "binance" / "futures"
 SIDECAR = (BACKEND.parent / "最新唐奇安威科夫接通与收尾_2026-10-11" /
            "5000U收尾与回测条件终验6" / "回测输入收口" / "quote_sidecar")

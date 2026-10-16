@@ -64,12 +64,15 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import sys
 from pathlib import Path
 
 import numpy as np
 
-BACKEND = Path("/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现")
+# W1（2026-10-16）：原写死外部工作区（该目录已整体删除）。
+# 本模块自身就在「后端实现」目录内 ⇒ 直接用本文件所在目录，语义等价且工程内自洽。
+BACKEND = Path(__file__).resolve().parent
 for _p in (str(BACKEND), str(BACKEND / "logs")):
     if _p not in sys.path:
         sys.path.insert(0, _p)
@@ -111,10 +114,13 @@ EXCHANGE = "binance"
 MARKET = "um"
 
 # 冻结参数生效视图（只读引用；唯一参数来源，禁手抄数值）
-FROZEN_VIEW = Path(
-    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/"
-    "最新唐奇安威科夫接通与收尾_2026-10-11/5000U收尾与回测条件终验6/"
-    "10_研究参数生效视图_v2_2_user5000_shared.json")
+# W1（2026-10-16）：路径改为**工程内 + 环境变量可覆盖**。原写死 旧工作区路径（已删），
+# 该视图已随旧工作区删除 ⇒ 现落到工程内正式位置；文件不存在时下方 `frozen_signal_params()`
+# 仍按既有规则走 `_VIEW_FALLBACK` 并**显式标注 source=fallback**（不冒充生效视图）。
+FROZEN_VIEW = (Path(os.environ["EFFECTIVE_VIEW"]) if os.environ.get("EFFECTIVE_VIEW") else
+               Path(__file__).resolve().parents[2] / "数据" / "研究输入" /
+               "最新唐奇安威科夫接通与收尾_2026-10-11" / "5000U收尾与回测条件终验6" /
+               "10_研究参数生效视图_v2_2_user5000_shared.json")
 _VIEW_PARAM_KEYS = ("don_entry_bars", "don_exit_bars", "atr_n", "vol_n",
                     "warmup_contiguous_bars", "spring_confirm_bars",
                     "sc_leg_bars", "sc_confirm_bars")

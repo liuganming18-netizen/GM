@@ -24,8 +24,10 @@ from contextlib import closing
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent.parent
-PROJECT = "/Users/boos/WorkBuddy AI/加密货币趋势判断系统"
-for p in (str(HERE), PROJECT):
+# W1（2026-10-16）：原指向工程外路径（已删）⇒ 改按工程布局推导。
+FRAMEWORK = str(HERE.parent)          # 框架/（含 data_hub 包）
+PROJECT = str(HERE.parent.parent)     # 工程根（DATA_HUB_PROJECT 语义）
+for p in (str(HERE), FRAMEWORK, PROJECT):
     if p not in sys.path:
         sys.path.insert(0, p)
 

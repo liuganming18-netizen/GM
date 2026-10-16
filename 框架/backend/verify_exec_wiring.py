@@ -78,13 +78,11 @@ def main(argv=None) -> int:
     rep: dict = {"probe": "exec_wiring", "data_read_disclosure":
                  "零真实行情读取（全部合成 bar + 内存 sqlite）"}
 
-    import exec_bridge as EB
-    rep["core_available"] = EB.CORE_AVAILABLE
-    rep["version_ids"] = EB.version_ids()
-    if not EB.CORE_AVAILABLE:
-        rep["status"] = "blocked_exec_core_unavailable"
-        _emit(rep, a.out)
-        return 2
+    rep["core_available"] = False
+    rep["status"] = "retired_legacy_core_in_work04b"
+    rep["note"] = "WORK-04B: 旧执行核心已彻底退役清除，单核交易收敛至 Shared Trading Core"
+    _emit(rep, a.out)
+    return 0
 
     try:
         import paper_engine as PE

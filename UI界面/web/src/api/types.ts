@@ -43,6 +43,29 @@ export interface EnvelopeQuality {
   } | null;
   /** 成交时钟口径（后端显式定义）。 */
   fill_policy?: Record<string, unknown> | null;
+  // ── WORK-04 退役：Paper / Live 未接新共享核心时的身份字段（缺失即 undefined）────
+  /** 新共享核心策略 id（如 `WX_OI_RESONANCE_V1`）。 */
+  new_core?: string | null;
+  /** 新共享核心是否已接线到本端点；`false` ⇒ 该端点处于 `NOT_CONNECTED`。 */
+  new_core_wired?: boolean | null;
+  /** 已退役旧策略注册表键（`3a/3b/3c/3d/A/B`）。 */
+  retired_strategy_keys?: string[] | null;
+  /** Paper / Live 接线状态块（后端 `legacy_retirement.paper_live_status()`）。 */
+  paper_live?: {
+    new_core?: string | null;
+    paper?: { connected?: boolean; status?: string | null; reason?: string | null } | null;
+    live?: { connected?: boolean; status?: string | null; reason?: string | null } | null;
+    note?: string | null;
+  } | null;
+  /** 退役元数据块（旧通道 retired 响应携带；含归档位置与恢复说明）。 */
+  retired_strategy_keys_note?: string | null;
+  successor_strategy_id?: string | null;
+  successor_strategy_key?: string | null;
+  retired_at?: string | null;
+  archive_dir?: string | null;
+  archive_manifest?: string | null;
+  recovery?: string | null;
+  reason?: string | null;
 }
 
 export interface Envelope<T> {

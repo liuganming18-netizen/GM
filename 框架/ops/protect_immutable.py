@@ -34,18 +34,26 @@ import ops_common as OC  # noqa: E402
 
 UF_IMMUTABLE = getattr(stat, "UF_IMMUTABLE", 0x00000002)
 
+# W1（2026-10-16）幽灵依赖清理：以下三组路径原写死外部工作区（已整体删除）。
+# 现全部由**工程根**推导（`_ROOT`），并允许环境变量覆盖：
+#   PROTECT_RESCUED_FILES / PROTECT_ZIP_ROOTS（os.pathsep 分隔）
+_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 # ── 静态 rescued 原件（已完成 quick_check + integrity_check 校验） ─────────────
-RESCUED_FILES = [
-    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/"
-    "热库抢救_2026-10-14/rescued/market_v2.sqlite3",
-]
+# 旧外部工作区里的 `热库抢救_2026-10-14/rescued/market_v2.sqlite3` **不在本工程内**
+# （原工作区已删、全盘无副本）⇒ 此处**不伪造路径**，默认空列表；
+# 若将来重新落盘，用 `PROTECT_RESCUED_FILES` 显式注入，或把文件放进
+# `数据/市场数据/cold_archive/` 并在下方追加。
+RESCUED_FILES = [p for p in os.environ.get("PROTECT_RESCUED_FILES", "").split(os.pathsep) if p]
 # 同目录 -wal/-shm 按「不锁 WAL/SHM」规则**不纳入**保护，只登记说明。
 
 # ── 已校验 ZIP 语料根（官方 CHECKSUM 随件） ────────────────────────────────
-ZIP_ROOTS = [
-    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw",
-    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_oi_metrics",
-    "/Users/boos/WorkBuddy AI/2026-10-03-16-11-14/outputs/网站逆向研究/后端实现/历史下载/raw_rest_gap",
+# 对应工程内目录：`数据/raw`（12h/15m/1h/… 分片）、`数据/raw_oi_metrics`、
+# `数据/raw_rest_gap`。全部由工程根推导，**不含任何工程外路径**。
+ZIP_ROOTS = [p for p in os.environ.get("PROTECT_ZIP_ROOTS", "").split(os.pathsep) if p] or [
+    os.path.join(_ROOT, "数据", "raw"),
+    os.path.join(_ROOT, "数据", "raw_oi_metrics"),
+    os.path.join(_ROOT, "数据", "raw_rest_gap"),
 ]
 ZIP_SUFFIXES = (".zip", ".zip.CHECKSUM")
 

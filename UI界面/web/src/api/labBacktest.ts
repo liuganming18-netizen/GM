@@ -16,6 +16,8 @@
  *   GET  /backtests/{id}/equity            items（策略线）+ benchmark_equity
  *   GET  /backtests/{id}/trades            逐笔
  *   GET  /backtests/{id}/trades/{trade_id} 单笔（trade/orders/funding/original_signal）
+ *   GET  /backtests/{id}/orders            全局订单/成交明细
+ *   GET  /backtests/{id}/rejected          拒单明细
  *   GET  /backtests/{id}/chart             chart.candles / signals / trades / benchmark
  *   GET  /backtests/{id}/quality           data_quality / hashes / window
  *
@@ -232,6 +234,9 @@ export interface LabRunSummary {
   started_at: string | null;
   finished_at: string | null;
   strategy_id: string | null;
+  /** 归属：`current_strategy` = 当前策略；其它值 ⇒ 身份存疑（列表已排除） */
+  strategy_key?: string | null;
+  attribution?: string | null;
   symbols: string[] | null;
   window: LabWindow | null;
   net_return_pct: number | null;
@@ -404,6 +409,32 @@ export interface LabTradeRow {
 }
 
 export interface LabTradesResponse extends LabEnvelope<LabTradeRow> {}
+
+export interface LabOrdersResponse extends LabEnvelope<LabOrderRow> {}
+
+/** 拒单明细行（账本 `rejected` 表：时点 / 标的 / 相位 / 原因）。 */
+export interface LabRejectedRow {
+  run_id: string;
+  ts_ms: number;
+  symbol: string;
+  phase: string;
+  reason: string;
+}
+
+export interface LabRejectedResponse extends LabEnvelope<LabRejectedRow> {}
+
+/** 退役元数据（列表响应内嵌；旧策略已退役、当前仅新策略可运行）。 */
+export interface LabRetirementInfo {
+  retired_strategy_keys?: string[] | null;
+  retired_at?: string | null;
+  successor_strategy_id?: string | null;
+  successor_strategy_key?: string | null;
+  current_runnable_keys?: string[] | null;
+  legacy_readonly?: string[] | null;
+  note?: string | null;
+  available?: boolean;
+  error?: string | null;
+}
 
 export interface LabOrderRow {
   run_id: string;
@@ -591,6 +622,11 @@ export interface LabRegistryEntry {
 export interface LabListResponse extends LabEnvelope<LabRunSummary> {
   runs_root?: string;
   registry_entry?: LabRegistryEntry | null;
+  /** WORK-04：旧策略退役汇总（新旧归属）。 */
+  retirement?: LabRetirementInfo | null;
+  /** 被排除出当前列表的非当前策略 run（只登记，不当成新策略结果）。 */
+  excluded_legacy?: LabRunSummary[] | null;
+  excluded_legacy_total?: number | null;
 }
 
 /* ══════════════════════════ 创建载荷 ══════════════════════════ */
@@ -627,6 +663,14 @@ export const labGetEquity = (id: string) =>
 
 export const labGetTrades = (id: string) =>
   apiGet<LabTradesResponse>(`/backtests/${encodeURIComponent(id)}/trades`);
+
+/** 全局订单/成交明细（同一 run_id 账本 orders 表）。 */
+export const labGetOrders = (id: string) =>
+  apiGet<LabOrdersResponse>(`/backtests/${encodeURIComponent(id)}/orders`);
+
+/** 拒单明细（同一 run_id 账本 rejected 表）。 */
+export const labGetRejected = (id: string) =>
+  apiGet<LabRejectedResponse>(`/backtests/${encodeURIComponent(id)}/rejected`);
 
 export const labGetTrade = (id: string, tradeId: string) =>
   apiGet<LabTradeDetail>(`/backtests/${encodeURIComponent(id)}/trades/${encodeURIComponent(tradeId)}`);

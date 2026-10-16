@@ -10,6 +10,8 @@
 `GET  /api/v1/backtests/{id}/equity`     权益曲线
 `GET  /api/v1/backtests/{id}/trades`     交易列表
 `GET  /api/v1/backtests/{id}/trades/{tid}` 单笔（同一 trade_id 联结图表与表格）
+`GET  /api/v1/backtests/{id}/orders`     **全局**订单/成交明细
+`GET  /api/v1/backtests/{id}/rejected`   **拒单明细**
 `GET  /api/v1/backtests/{id}/chart`      图表载荷（真实 K 线/信号/开平仓/保护止损轨迹）
 `GET  /api/v1/backtests/{id}/quality`    数据质量与对账
 
@@ -18,6 +20,7 @@
 · **GET 一律不触发计算**（只读 `run.json` / `ledger.sqlite3`）。
 · 仅 `WX_OI_RESONANCE_V1`；参数白名单；周期/交易所/市场白名单（当前仅 1h 信号 + 15m 执行）。
 · 创建走**原子独占目录**，重名拒绝；任务在**后台线程**执行，状态持久化。
+· **运行列表只含当前策略**；非当前策略 / 身份缺失的 run 排除并单列 `excluded_legacy`。
 """
 from __future__ import annotations
 
@@ -56,11 +59,40 @@ def list_experiments(params: Optional[dict] = None) -> dict:
     except (ValueError, TypeError):
         limit = 50
     runs = S.list_runs(limit=max(1, min(limit, 500)))
-    items = [_summary(r) for r in runs]
+    # ── WORK-04 新旧归属：运行列表**只含新策略** `WX_OI_RESONANCE_V1` ─────────────
+    # 运行根（`回测日志/oi_resonance_v1/runs`）本应只含新策略 run；此处仍按 strategy_id
+    # 显式核对，把非新策略 / 身份缺失的 run **排除出当前列表**并单独登记（不冒充新结果）。
+    current: List[dict] = []
+    excluded_legacy: List[dict] = []
+    for r in runs:
+        sid = (r.get("spec") or {}).get("strategy_id") or r.get("strategy_id")
+        if sid == BR.STRATEGY_ID:
+            current.append(r)
+        else:
+            excluded_legacy.append({
+                "run_id": r.get("run_id"), "status": r.get("status"),
+                "strategy_id": sid, "created_at": r.get("created_at"),
+                "attribution": "legacy_excluded",
+                "note": "非当前策略（或身份缺失）⇒ 排除出当前运行列表；旧结果不得当成新策略成绩",
+            })
+    items = [_summary(r) for r in current]
     return _envelope(items=items, total=len(items),
                      runs_root=str(S.RUNS_ROOT),
                      registry_entry=_registry_entry(),
-                     note="研究回测实验列表（只读；创建走 POST /api/v1/backtests）")
+                     retirement=_retirement_block(),
+                     excluded_legacy=excluded_legacy,
+                     excluded_legacy_total=len(excluded_legacy),
+                     note="研究回测实验列表（**仅当前策略** WX_OI_RESONANCE_V1；只读；"
+                          "创建走 POST /api/v1/backtests）。旧策略 run 已排除并单列 excluded_legacy。")
+
+
+def _retirement_block() -> dict:
+    """旧策略退役汇总（懒加载；失败如实报缺）。"""
+    try:
+        from strategies import registry as _reg
+        return _reg.retirement_summary(None)
+    except Exception as exc:                              # noqa: BLE001
+        return {"available": False, "error": f"{type(exc).__name__}: {exc}"}
 
 
 def _registry_entry() -> dict:
@@ -75,11 +107,14 @@ def _registry_entry() -> dict:
 
 def _summary(doc: dict) -> dict:
     m = doc.get("metrics") or {}
+    sid = (doc.get("spec") or {}).get("strategy_id") or doc.get("strategy_id")
     return {
         "run_id": doc.get("run_id"), "status": doc.get("status"),
         "created_at": doc.get("created_at"), "started_at": doc.get("started_at"),
         "finished_at": doc.get("finished_at"),
-        "strategy_id": (doc.get("spec") or {}).get("strategy_id") or doc.get("strategy_id"),
+        "strategy_id": sid,
+        "strategy_key": BR.STRATEGY_KEY,
+        "attribution": ("current_strategy" if sid == BR.STRATEGY_ID else "unknown"),
         "symbols": (doc.get("spec") or {}).get("symbols"),
         "window": doc.get("window"),
         "net_return_pct": m.get("net_return_pct"),
@@ -200,6 +235,42 @@ def get_trades(run_id: str) -> Tuple[dict, int]:
                      items=rows, total=len(rows)), 200
 
 
+def get_orders(run_id: str) -> Tuple[dict, int]:
+    """**全局**订单/成交明细（同一 `run_id` 账本 `orders` 表；与逐笔同源）。
+
+    纪律：只读账本，缺失表/账本 ⇒ 空列表（不编造）。金额/数量原样来自账本。
+    """
+    doc, err = _require_done(run_id)
+    if err:
+        return err
+    try:
+        rows = S.read_ledger_rows(run_id, "orders", order_by="ts_ms ASC")
+    except S.RunNotFound:
+        return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+                         items=[], total=0, missing_reason="账本缺失（orders 表不可读）"), 200
+    return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+                     items=rows, total=len(rows),
+                     note="全局订单/成交明细（同一 run_id 账本 orders 表；与逐笔同源）"), 200
+
+
+def get_rejected(run_id: str) -> Tuple[dict, int]:
+    """**拒单明细**（同一 `run_id` 账本 `rejected` 表：时点 / 标的 / 相位 / 原因）。
+
+    纪律：只读账本；缺表 ⇒ 空列表并标注 `missing_reason`，不把「无记录」包装成「无拒单」。
+    """
+    doc, err = _require_done(run_id)
+    if err:
+        return err
+    try:
+        rows = S.read_ledger_rows(run_id, "rejected", order_by="ts_ms ASC")
+    except S.RunNotFound:
+        return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+                         items=[], total=0, missing_reason="账本缺失（rejected 表不可读）"), 200
+    return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+                     items=rows, total=len(rows),
+                     note="拒单明细（账本 rejected 表：风险/仓位/资金/信号门禁等拒绝原因）"), 200
+
+
 def get_trade(run_id: str, trade_id: str) -> Tuple[dict, int]:
     doc, err = _require_done(run_id)
     if err:
@@ -249,10 +320,27 @@ def _run_in_thread(run_id: str) -> None:
             _THREADS.pop(run_id, None)
 
 
+def _runnable_gate() -> Optional[str]:
+    """**策略可运行性硬闸**（WORK-04）：返回拒绝原因，或 `None`（放行）。
+
+    唯一可运行策略是 `WX_OI_RESONANCE_V1`；旧 3a–3d / A / B 已退役。
+    注册表不可用时不静默放行 —— 返回原因并拒绝创建。
+    """
+    try:
+        from strategies import registry as _reg
+        return _reg.guard_runnable(BR.STRATEGY_ID)
+    except Exception as exc:                              # noqa: BLE001
+        return f"策略注册表不可用：{type(exc).__name__}: {exc}"
+
+
 def create_run(payload: Optional[dict]) -> Tuple[dict, int]:
     """创建研究回测（后台执行）。返回 202 + run_id。"""
     if not BR.AVAILABLE:
         return _envelope(missing_reason=f"候选策略包不可用：{BR.IMPORT_ERROR}"), 503
+    # ── WORK-04：可运行性硬闸（旧策略 / 未知键一律拒绝，不回退任何旧执行通道）──
+    gate_err = _runnable_gate()
+    if gate_err:
+        return _envelope(missing_reason=f"策略不可运行：{gate_err}"), 409
     clean, errs = BR.validate_run_spec(payload)
     if errs:
         return _envelope(missing_reason="运行规格校验失败", errors=errs), 400
@@ -315,6 +403,10 @@ def route(seg: List[str], params: Optional[dict] = None) -> Tuple[dict, int]:
         return get_chart(rid)
     if sub == "quality":
         return get_quality(rid)
+    if sub == "orders":
+        return get_orders(rid)
+    if sub == "rejected":
+        return get_rejected(rid)
     if sub == "trades":
         if len(seg) == 2:
             return get_trades(rid)
@@ -337,6 +429,6 @@ def startup() -> List[str]:
 
 __all__ = [
     "CONTRACT_VERSION", "list_experiments", "get_run", "get_metrics", "get_equity",
-    "get_trades", "get_trade", "get_chart", "get_quality", "create_run",
-    "route", "route_post", "startup",
+    "get_trades", "get_trade", "get_orders", "get_rejected", "get_chart", "get_quality",
+    "create_run", "route", "route_post", "startup",
 ]

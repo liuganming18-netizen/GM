@@ -75,14 +75,6 @@ interface TradeItem {
   mfe_str?: string;
 }
 
-const heatmap = [
-  [-2.1, 0.8, 1.9, 1.2, -0.5],
-  [0.4, 3.1, 5.2, 3.0, 0.6],
-  [1.2, 5.8, 8.6, 5.1, -1.4],
-  [0.9, 4.2, 6.3, 2.2, -3.2],
-  [-1.8, 0.3, 1.1, -2.6, -4.9],
-];
-
 function StatusBadge({ status }: { status: GateStatus }) {
   const map: Record<GateStatus, readonly [string, string]> = {
     pass: ['PASS', 'text-emerald-300 bg-emerald-500/10 border-emerald-500/20'],
@@ -179,12 +171,70 @@ export const BacktestReviewView: React.FC = () => {
   const runDetailEndpoint = useEndpoint<any>(activeRunId ? `/backtests/${activeRunId}` : '', 15_000);
   const metricsEndpoint = useEndpoint<any>(activeRunId ? `/backtests/${activeRunId}/metrics` : '', 15_000);
   const tradesEndpoint = useEndpoint<{ items: any[]; total: number }>(activeRunId ? `/backtests/${activeRunId}/trades` : '', 15_000);
-  const dataStatus = useEndpoint<any>('/data/status', 30_000);
 
   const hasRealRun = Boolean(activeRunId && runDetailEndpoint.data?.status === 'succeeded');
-  const summary = metricsEndpoint.data?.summary ?? null;
+  /**
+   * WORK-04 修正（并行窗口遗留缺陷）：后端 `GET /backtests/{id}/metrics` 的指标块**键名是 `metrics`**，
+   * 原实现取 `data.summary` ⇒ 恒为 `null` ⇒ 8 项核心指标全部显示「—」（即使已有真实 succeeded run）。
+   * 这里改为真实键；缺失仍为 `null`（下方显示「—」，不补固定分）。
+   */
+  const summary = metricsEndpoint.data?.metrics ?? null;
   const rawTrades = tradesEndpoint.data?.items ?? [];
   const formalGate = metricsEndpoint.data?.formal_m4_gate ?? null;
+
+  /**
+   * WORK-04：以下全部取自同一 `activeRunId` 的真实运行详情（`GET /backtests/{id}`），
+   * 缺失一律为 `null` ⇒ 渲染层显示「—」，**禁止任何固定兜底数字**。
+   */
+  const runDetail = runDetailEndpoint.data;
+  const spec = runDetail?.config?.spec ?? null;
+  const sigExec = runDetail?.config?.config?.exec_params ?? null;
+  const engine = runDetail?.engine ?? null;
+  const hashes = runDetail?.hashes ?? null;
+  const win = runDetail?.window ?? null;
+  const ledgerCounts = runDetail?.ledger_counts ?? null;
+
+  // 真实配置行（配置区只暴露后端已核验选项；缺失即「—」，不做静默替换）
+  const configRows: [string, string][] = useMemo(() => {
+    const p = spec?.params ?? null;
+    const symbolList = Array.isArray(spec?.symbols) && spec.symbols.length ? spec.symbols.join(',') : null;
+    const exMk = spec?.exchange
+      ? `${String(spec.exchange).toUpperCase()}${spec?.market ? ' · ' + spec.market : ''}${symbolList ? ' ' + symbolList : ''}`
+      : null;
+    const tf = spec?.signal_timeframe ? `${spec.signal_timeframe} 主信号 / ${spec.exec_timeframe ?? '—'} 执行` : null;
+    const feePct = typeof p?.fee_rate === 'number' ? `${(p.fee_rate * 100).toFixed(2)}%` : null;
+    const slip = typeof p?.slippage_bps === 'number' ? `${p.slippage_bps} bps` : null;
+    const riskPct = typeof p?.risk_per_trade === 'number' ? `${(p.risk_per_trade * 100).toFixed(1)}%` : null;
+    const marginPct = typeof sigExec?.max_portfolio_margin_pct === 'number' ? `${(sigExec.max_portfolio_margin_pct * 100).toFixed(0)}%` : null;
+    const fundingModel = sigExec?.funding_model ? String(sigExec.funding_model) : null;
+    const fundingLabel = fundingModel === 'settlement_events' ? '结算事件计提（8h 事件）' : fundingModel;
+    return [
+      ['策略', runDetail?.strategy_id ?? '—'],
+      ['交易所 / 合约', exMk ?? '—'],
+      ['周期', tf ?? '—'],
+      ['时间窗口', spec?.window?.span_days != null ? `${spec.window.span_days} 天 (${fmtTime(spec.window.start_ms)} 起)` : '—'],
+      ['成交时点', spec?.exec_timeframe ? `次根 ${spec.exec_timeframe} Open (保守撮合)` : '—'],
+      ['手续费 / 滑点', feePct && slip ? `Taker ${feePct} / 滑点 ${slip}` : '—'],
+      ['资金费', fundingLabel ?? '—'],
+      ['仓位 / 风险', riskPct && marginPct ? `单笔 ${riskPct} / 最大保证金 ${marginPct}` : '—'],
+    ];
+  }, [spec, sigExec, runDetail]);
+
+  // 真实数据证明（仅展示后端确实提供的证据；不冒充覆盖率/PIT 结论）
+  const proofRows: [string, string][] = useMemo(() => {
+    const cov = win?.window_days != null
+      ? `${win.window_days} 天全窗 · 预热 ${win.warmup_bars ?? '—'} 根信号`
+      : 'MISSING';
+    const pitDeclared = formalGate?.oi_pit_declared === true;
+    return [
+      ['覆盖范围', hasRealRun ? cov : 'MISSING'],
+      ['数据版本', runDetail?.contract_version ?? '—'],
+      ['信号帧指纹', hashes?.signal_frame_sha256 ? `${String(hashes.signal_frame_sha256).slice(0, 16)}…` : '—'],
+      ['输入指纹', hashes?.input_sha256 ? `${String(hashes.input_sha256).slice(0, 16)}…` : '—'],
+      ['PIT 声明', hasRealRun ? (pitDeclared ? '已声明' : '未声明（oi_publication_lag_ms=UNSET）') : 'BLOCKED'],
+      ['可得时间', hasRealRun ? fmtTime(win?.data_end_ms) : '—'],
+    ];
+  }, [win, hashes, runDetail, formalGate, hasRealRun]);
 
   // 映射真实交易清单
   const tradeList: TradeItem[] = useMemo(() => {
@@ -193,15 +243,17 @@ export const BacktestReviewView: React.FC = () => {
     }
     return rawTrades.map((t, idx) => {
       const pnlNum = typeof t.net_pnl === 'number' ? t.net_pnl : null;
+      // WORK-04：缺失字段一律「—」，禁止用 0 / 默认方向 / 默认原因静默替换
+      const px = (v: unknown): string => (typeof v === 'number' && Number.isFinite(v) ? `$${v.toFixed(1)}` : '—');
       return {
         id: t.trade_id || idx + 1,
         trade_id: t.trade_id,
         signal_id: t.signal_id,
-        symbol: t.symbol ?? 'BTCUSDT',
-        side: (t.direction ?? 'long').toUpperCase(),
-        entry: `${fmtTime(t.entry_time_ms)} ($${Number(t.entry_price || 0).toFixed(1)})`,
-        exit: `${fmtTime(t.exit_time_ms)} ($${Number(t.exit_price || 0).toFixed(1)})`,
-        reason: t.exit_reason ?? 'intrabar_stop',
+        symbol: t.symbol ?? '—',
+        side: typeof t.direction === 'string' ? t.direction.toUpperCase() : '—',
+        entry: `${fmtTime(t.entry_time_ms)} (${px(t.entry_price)})`,
+        exit: `${fmtTime(t.exit_time_ms)} (${px(t.exit_price)})`,
+        reason: t.exit_reason ?? '—',
         pnl: pnlNum,
         pnl_str: pnlNum !== null ? `${pnlNum >= 0 ? '+' : ''}$${pnlNum.toFixed(2)}` : '—',
         fees: t.fees,
@@ -218,34 +270,48 @@ export const BacktestReviewView: React.FC = () => {
     return tradeList.find((t) => t.trade_id === selectedTradeId || String(t.id) === selectedTradeId) ?? tradeList[0];
   }, [tradeList, selectedTradeId]);
 
-  // 六大 Gate 真实状态映射
+  // 六大 Gate 真实状态映射（WORK-04：仅依据同 run 真实运行详情与门禁，不做无据结论）
   const gates: GateItem[] = useMemo(() => {
-    const isDataPass = dataStatus.data?.coverage_summary?.non_whitelist_missing === 0;
+    const pitDeclared = formalGate?.oi_pit_declared === true;
+    const riskPct = typeof spec?.params?.risk_per_trade === 'number' ? `${(spec.params.risk_per_trade * 100).toFixed(1)}%` : null;
+    const marginPct = typeof sigExec?.max_portfolio_margin_pct === 'number' ? `${(sigExec.max_portfolio_margin_pct * 100).toFixed(0)}%` : null;
+    const tradesN = typeof ledgerCounts?.trades === 'number' ? ledgerCounts.trades : null;
+    const signalsN = typeof ledgerCounts?.signals === 'number' ? ledgerCounts.signals : null;
     return [
       {
         name: '数据完整性',
-        status: isDataPass ? 'pass' : 'partial',
-        note: isDataPass ? '冷层历史全部对齐，3,625 官方停摆已核销' : '当前运行已排除停摆，冷层全量就绪',
+        status: hasRealRun ? 'pass' : 'partial',
+        note: hasRealRun
+          ? `全窗 ${win?.window_days ?? '—'} 天逐根闭合连续已校验（预热 ${win?.warmup_bars ?? '—'} 根）`
+          : '尚无真实 Run 的全窗覆盖证明',
       },
       {
         name: 'PIT 可得性',
-        status: hasRealRun ? 'pass' : 'blocked',
-        note: hasRealRun ? '事件按 confirm_time 逐棒对齐，0 未来函数' : '未提供逐事件可得性证明',
+        status: pitDeclared ? 'pass' : hasRealRun ? 'partial' : 'blocked',
+        note: pitDeclared ? '逐事件 confirm_time 可得性已声明' : 'OI 可得性未声明（oi_publication_lag_ms=UNSET）',
       },
       {
         name: '信号完整性',
         status: hasRealRun ? 'pass' : 'fail',
-        note: hasRealRun ? `已跑通 WX_OI_RESONANCE_V1 核心，产出 ${rawTrades.length} 笔闭合交易` : '需验证因子消融与信号形成链',
+        note: hasRealRun
+          ? `已跑通 ${runDetail?.strategy_id ?? 'WX_OI_RESONANCE_V1'} 核心：${signalsN ?? '—'} 信号 / ${tradesN ?? '—'} 闭合交易`
+          : '需验证因子消融与信号形成链',
       },
       {
         name: '执行一致性',
         status: hasRealRun ? 'pass' : 'fail',
-        note: hasRealRun ? 'Shared Trading Core 统一循环与保守撮合' : 'Live / Paper / Backtest 尚未共核',
+        note: hasRealRun
+          ? `单核执行 ${engine?.exec_core_version ?? '—'} · 保守次根撮合`
+          : 'Live / Paper / Backtest 尚未共核',
       },
       {
         name: '风控准入',
         status: hasRealRun ? 'pass' : 'not_tested',
-        note: hasRealRun ? '单笔 0.8% 风险限额 + 40% 保证金上限严格合规' : '尚未形成独立验收证据',
+        note: hasRealRun
+          ? riskPct && marginPct
+            ? `单笔 ${riskPct} 风险限额 + ${marginPct} 保证金上限`
+            : '风控参数缺失'
+          : '尚未形成独立验收证据',
       },
       {
         name: '样本外稳定性',
@@ -253,7 +319,7 @@ export const BacktestReviewView: React.FC = () => {
         note: formalGate?.formal_run_allowed ? '参数热力区已通过' : '当前为候选研究 Run，正式 M4 门禁待锁定',
       },
     ];
-  }, [dataStatus.data, hasRealRun, rawTrades.length, formalGate]);
+  }, [hasRealRun, spec, sigExec, ledgerCounts, runDetail, engine, win, formalGate]);
 
   const overall: GateStatus = useMemo(() => {
     if (gates.some((g) => g.status === 'fail')) return 'fail';
@@ -262,11 +328,12 @@ export const BacktestReviewView: React.FC = () => {
     return 'pass';
   }, [gates]);
 
-  // 真实指标呈现
+  // 真实指标呈现（WORK-04：键名对齐后端 `metrics` 块；**一律不补固定分**，缺失即「—」）
   const metrics = useMemo(() => {
     if (!hasRealRun || !summary) {
       return {
         netReturn: '—',
+        netTone: undefined as 'green' | 'red' | undefined,
         maxDrawdown: '—',
         profitFactor: '—',
         sharpe: '—',
@@ -276,27 +343,30 @@ export const BacktestReviewView: React.FC = () => {
         totalCost: '—',
       };
     }
-    const netRet = summary.total_return_pct ?? -3.08;
-    const maxDd = summary.max_drawdown_pct ?? 3.42;
-    const pf = summary.profit_factor;
-    const sh = summary.sharpe_ratio;
-    const cnt = summary.total_trades ?? rawTrades.length;
-    const wr = summary.win_rate_pct;
-    const avg = summary.avg_trade_pnl;
-    const totalFees = (summary.total_fees || 0) + (summary.total_funding_fee || 0);
+    const num = (v: unknown): number | null =>
+      typeof v === 'number' && Number.isFinite(v) ? v : null;
+    const netRet = num(summary.net_return_pct);
+    const maxDd = num(summary.max_drawdown_pct);
+    const pf = num(summary.profit_factor);
+    const sh = num(summary.sharpe_annualized_sqrt365);
+    const cnt = num(summary.trades_count);
+    const wr = num(summary.win_rate_pct);
+    const avg = num(summary.expectancy_usd);
+    const fees = num(summary.total_fees);
+    const funding = num(summary.total_funding_fee);
 
     return {
-      netReturn: `${netRet >= 0 ? '+' : ''}${netRet.toFixed(2)}%`,
-      netTone: netRet >= 0 ? ('green' as const) : ('red' as const),
-      maxDrawdown: `${maxDd.toFixed(2)}%`,
-      profitFactor: pf !== null && pf !== undefined ? pf.toFixed(2) : '—',
-      sharpe: sh !== null && sh !== undefined ? sh.toFixed(2) : '—',
-      tradesCount: `${cnt} 笔`,
-      winRate: wr !== null && wr !== undefined ? `${wr.toFixed(1)}%` : '—',
-      avgPnl: avg !== null && avg !== undefined ? `${avg >= 0 ? '+' : ''}$${avg.toFixed(2)}` : '—',
-      totalCost: `$${totalFees.toFixed(2)}`,
+      netReturn: netRet === null ? '—' : `${netRet >= 0 ? '+' : ''}${netRet.toFixed(2)}%`,
+      netTone: netRet === null ? undefined : netRet >= 0 ? ('green' as const) : ('red' as const),
+      maxDrawdown: maxDd === null ? '—' : `${maxDd.toFixed(2)}%`,
+      profitFactor: pf === null ? '—' : pf.toFixed(2),
+      sharpe: sh === null ? '—' : sh.toFixed(2),
+      tradesCount: cnt === null ? '—' : `${cnt} 笔`,
+      winRate: wr === null ? '—' : `${wr.toFixed(1)}%`,
+      avgPnl: avg === null ? '—' : `${avg >= 0 ? '+' : ''}$${avg.toFixed(2)}`,
+      totalCost: fees === null || funding === null ? '—' : `$${(fees + funding).toFixed(2)}`,
     };
-  }, [hasRealRun, summary, rawTrades.length]);
+  }, [hasRealRun, summary]);
 
   return (
     <div className="flex-1 min-h-0 overflow-auto bg-neutral-950 text-neutral-200 p-4">
@@ -328,7 +398,7 @@ export const BacktestReviewView: React.FC = () => {
                 ) : (
                   availableRuns.map((r) => (
                     <option key={r.run_id} value={r.run_id} className="bg-neutral-900 text-neutral-200">
-                      {r.run_id} ({r.symbols.join('/')} · {r.status})
+                      {r.run_id} ({(r.symbols ?? []).join('/') || '—'} · {r.status})
                     </option>
                   ))
                 )}
@@ -336,7 +406,7 @@ export const BacktestReviewView: React.FC = () => {
             </div>
 
             <span className="flex items-center gap-1 text-neutral-500">
-              <GitBranch className="h-3 w-3 text-neutral-400" /> wyckoff-v3.1-main
+              <GitBranch className="h-3 w-3 text-neutral-400" /> {engine?.experiment_id ?? '—'}
             </span>
 
             <button
@@ -355,13 +425,13 @@ export const BacktestReviewView: React.FC = () => {
         {/* 2. 8 大核心指标展示（Zero-Mock，无假数字） */}
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-2">
           <Metric label="净收益" value={metrics.netReturn} hint={hasRealRun ? '真实账本扣费后净值' : '没有真实 Run'} tone={metrics.netTone} />
-          <Metric label="最大回撤" value={metrics.maxDrawdown} hint={hasRealRun ? '含未平仓浮动权益' : '含未平仓权益'} />
+          <Metric label="最大回撤" value={metrics.maxDrawdown} hint={hasRealRun ? '同步组合净值口径' : '同步组合净值'} />
           <Metric label="Profit Factor" value={metrics.profitFactor} hint={hasRealRun ? '毛盈利 / 毛亏损' : '净盈利 / 净亏损'} />
-          <Metric label="Sharpe" value={metrics.sharpe} hint={hasRealRun ? '按小时对齐年化' : '按运行口径计算'} />
+          <Metric label="Sharpe" value={metrics.sharpe} hint={hasRealRun ? '逐日净值年化 √365' : '按运行口径计算'} />
           <Metric label="交易数" value={metrics.tradesCount} hint={hasRealRun ? '真实闭合 Trade' : '完整 Trade'} />
           <Metric label="胜率" value={metrics.winRate} hint={hasRealRun ? '真实平仓正收益占比' : '真实成交后计算'} />
           <Metric label="平均盈亏" value={metrics.avgPnl} hint={hasRealRun ? '单笔净期望' : '含费用与资金费'} />
-          <Metric label="总成本" value={metrics.totalCost} hint={hasRealRun ? '手续费 + 资金费 + 滑点' : '手续费 + Funding + 滑点'} />
+          <Metric label="总成本" value={metrics.totalCost} hint={hasRealRun ? '手续费 + 资金费' : '手续费 + Funding'} />
         </div>
 
         {/* 3. 策略验收 Gate 卡点 */}
@@ -424,16 +494,7 @@ export const BacktestReviewView: React.FC = () => {
               </button>
               {showConfig && (
                 <div className="mt-3 space-y-2 text-[10px]">
-                  {[
-                    ['策略', 'WX_OI_RESONANCE_V1'],
-                    ['交易所 / 合约', runDetailEndpoint.data?.config?.spec?.exchange ? `${runDetailEndpoint.data.config.spec.exchange.toUpperCase()} ${runDetailEndpoint.data.config.spec.symbols?.join(',')}` : 'BINANCE BTCUSDT'],
-                    ['周期', runDetailEndpoint.data?.config?.spec?.signal_timeframe ? `${runDetailEndpoint.data.config.spec.signal_timeframe} 主信号 / ${runDetailEndpoint.data.config.spec.exec_timeframe} 执行` : '1h 主信号 / 15m 执行'],
-                    ['时间窗口', runDetailEndpoint.data?.config?.spec?.window?.span_days ? `7.0 天 (${fmtTime(runDetailEndpoint.data.config.spec.window.start_ms)} 起)` : '—'],
-                    ['成交时点', '次根 15m Open (保守撮合)'],
-                    ['手续费 / 滑点', 'Taker 0.05% / 滑点 3.0 bps'],
-                    ['资金费', '8h 事件严格连续计提'],
-                    ['仓位 / 风险', '单笔 0.8% / 最大保证金 40%'],
-                  ].map(([k, v]) => (
+                  {configRows.map(([k, v]) => (
                     <div key={k} className="flex justify-between gap-2 border-b border-neutral-800/60 pb-1.5">
                       <span className="text-neutral-500">{k}</span>
                       <span className="font-mono text-neutral-300 truncate max-w-[150px]">{v}</span>
@@ -456,13 +517,7 @@ export const BacktestReviewView: React.FC = () => {
                 <Database className="h-3.5 w-3.5 text-indigo-300" /> 数据证明
               </div>
               <div className="mt-3 space-y-2 text-[10px]">
-                {[
-                  ['覆盖范围', hasRealRun ? '100% (冷层全量历史)' : 'MISSING'],
-                  ['缺口 / 未决样本', hasRealRun ? '0 异常缺口 (3,625白名单核销)' : 'MISSING'],
-                  ['PIT 时间戳', hasRealRun ? '严格对齐 (0 未来函数)' : 'BLOCKED'],
-                  ['数据版本', runDetailEndpoint.data?.contract_version ?? 'bt_api_v1'],
-                  ['可得时间', hasRealRun ? fmtTime(runDetailEndpoint.data?.window?.data_end_ms) : '—'],
-                ].map(([k, v]) => (
+                {proofRows.map(([k, v]) => (
                   <div key={k} className="flex justify-between gap-2">
                     <span className="text-neutral-500">{k}</span>
                     <span className={v === 'MISSING' || v === 'BLOCKED' ? 'text-amber-300 font-mono' : 'text-neutral-300 font-mono'}>
@@ -501,13 +556,15 @@ export const BacktestReviewView: React.FC = () => {
                 {hasRealRun ? (
                   <div className="space-y-2 text-xs">
                     <div className="flex justify-between items-center border-b border-neutral-800 pb-2">
-                      <span className="text-neutral-400">标的与周期：BTCUSDT (1h 信号 / 15m 执行)</span>
+                      <span className="text-neutral-400">
+                        标的与周期：{win?.symbol ?? '—'} ({win?.signal_timeframe ?? '—'} 信号 / {win?.exec_timeframe ?? '—'} 执行)
+                      </span>
                       <span className="text-emerald-400 font-bold">真实回测 Run: {activeRunId}</span>
                     </div>
                     <div className="text-[11px] text-neutral-300 space-y-1">
-                      <div>• 信号发生数：{rawTrades.length} 笔入场 · 全部完成保守次根 15m Open 撮合</div>
-                      <div>• 动态追踪止损：已按 ATR 与通道逐根计算（包含在 stop_trace 证据链）</div>
-                      <div>• 资金费率事件：按每 8 小时实际费率计提扣缴，0 假定费率</div>
+                      <div>• 信号数：{ledgerCounts?.signals ?? '—'} · 委托 {ledgerCounts?.orders ?? '—'} · 闭合交易 {ledgerCounts?.trades ?? '—'} · 拒绝 {ledgerCounts?.rejected ?? '—'}</div>
+                      <div>• 动态追踪止损：按 ATR 与通道逐根计算（包含在 stop_trace 证据链）</div>
+                      <div>• 资金费事件：账本 funding 表 {ledgerCounts?.funding ?? '—'} 条，按实际费率计提</div>
                     </div>
                     <div className="pt-8 text-center text-neutral-500 text-[10px]">
                       [真实轻量交互图表渲染已就绪 · 点击下方交易可高亮开平仓位置]
@@ -534,17 +591,25 @@ export const BacktestReviewView: React.FC = () => {
               <div className="mt-3 flex items-center gap-1.5 overflow-x-auto pb-1">
                 <ChainNode label="Signal" sub={activeTrade?.signal_id ?? '四时点七问'} active={Boolean(activeTrade?.signal_id)} />
                 <ChevronDown className="hidden sm:block rotate-[-90deg] text-neutral-700 shrink-0" />
-                <ChainNode label="Risk" sub="0.8% 风险 / 40% 保证金" active={hasRealRun} />
+                <ChainNode
+                  label="Risk"
+                  sub={
+                    typeof spec?.params?.risk_per_trade === 'number' && typeof sigExec?.max_portfolio_margin_pct === 'number'
+                      ? `${(spec.params.risk_per_trade * 100).toFixed(1)}% 风险 / ${(sigExec.max_portfolio_margin_pct * 100).toFixed(0)}% 保证金`
+                      : '风控参数缺失'
+                  }
+                  active={hasRealRun}
+                />
                 <ChevronDown className="hidden sm:block rotate-[-90deg] text-neutral-700 shrink-0" />
                 <ChainNode label="Order" sub="幂等 Order ID" active={hasRealRun} />
                 <ChevronDown className="hidden sm:block rotate-[-90deg] text-neutral-700 shrink-0" />
-                <ChainNode label="Fill" sub="次根 15m Open" active={hasRealRun} />
+                <ChainNode label="Fill" sub={win?.exec_timeframe ? `次根 ${win.exec_timeframe} Open` : '—'} active={hasRealRun} />
                 <ChevronDown className="hidden sm:block rotate-[-90deg] text-neutral-700 shrink-0" />
-                <ChainNode label="Position" sub={activeTrade?.symbol ?? 'BTCUSDT'} active={hasRealRun} />
+                <ChainNode label="Position" sub={activeTrade?.symbol ?? '—'} active={hasRealRun} />
                 <ChevronDown className="hidden sm:block rotate-[-90deg] text-neutral-700 shrink-0" />
                 <ChainNode label="Trade" sub={activeTrade?.trade_id ?? '逐笔对账'} active={Boolean(activeTrade?.trade_id)} />
                 <ChevronDown className="hidden sm:block rotate-[-90deg] text-neutral-700 shrink-0" />
-                <ChainNode label="Ledger" sub="资金流水一分不差" active={hasRealRun} />
+                <ChainNode label="Ledger" sub="账本逐笔可核" active={hasRealRun} />
               </div>
             </Card>
 
@@ -556,11 +621,13 @@ export const BacktestReviewView: React.FC = () => {
                   <div className="rounded-lg border border-neutral-800 bg-neutral-950/70 p-3 text-[11px] space-y-2">
                     <div className="flex justify-between border-b border-neutral-800/60 pb-1.5">
                       <span className="text-neutral-500">策略标识：</span>
-                      <span className="font-mono text-emerald-400 font-bold">WX_OI_RESONANCE_V1</span>
+                      <span className="font-mono text-emerald-400 font-bold">{runDetail?.strategy_id ?? '—'}</span>
                     </div>
                     <div className="flex justify-between border-b border-neutral-800/60 pb-1.5">
                       <span className="text-neutral-500">执行模式：</span>
-                      <span className="font-mono text-neutral-300">Shared Trading Core (单核交易引擎)</span>
+                      <span className="font-mono text-neutral-300">
+                        单核执行核心 {engine?.exec_core_version ?? '—'} / 信号核心 {engine?.core_version ?? '—'}
+                      </span>
                     </div>
                     <div className="flex justify-between border-b border-neutral-800/60 pb-1.5">
                       <span className="text-neutral-500">M4 声明口径：</span>
@@ -621,10 +688,10 @@ export const BacktestReviewView: React.FC = () => {
                   <div className="text-xs font-bold">信号形成与拒绝日志</div>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     {[
-                      ['触发总数', hasRealRun ? `${rawTrades.length + 3}` : '—'],
-                      ['风控接受', hasRealRun ? `${rawTrades.length}` : '—'],
-                      ['准入拒绝', hasRealRun ? '3' : '—'],
-                      ['超时失效', '0'],
+                      ['触发信号', ledgerCounts?.signals != null ? String(ledgerCounts.signals) : '—'],
+                      ['生成委托', ledgerCounts?.orders != null ? String(ledgerCounts.orders) : '—'],
+                      ['准入拒绝', ledgerCounts?.rejected != null ? String(ledgerCounts.rejected) : '—'],
+                      ['超时失效', '—'],
                     ].map(([k, v]) => (
                       <div key={k} className="rounded-lg bg-neutral-950/70 border border-neutral-800 p-3">
                         <div className="text-[10px] text-neutral-500">{k}</div>
@@ -644,29 +711,19 @@ export const BacktestReviewView: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <div className="rounded-lg border border-neutral-800 bg-neutral-950/70 p-3">
                       <div className="text-[10px] text-neutral-500">参数敏感性 (热力图)</div>
-                      <div className="mt-2 grid grid-cols-5 gap-1">
-                        {heatmap.flat().map((v, i) => (
-                          <div
-                            key={i}
-                            className={`rounded h-7 flex items-center justify-center text-[9px] font-mono ${
-                              v >= 0 ? 'bg-emerald-500/15 text-emerald-300 font-bold' : 'bg-rose-500/15 text-rose-300'
-                            }`}
-                          >
-                            {v.toFixed(1)}
-                          </div>
-                        ))}
+                      <div className="mt-2 flex h-[92px] items-center justify-center rounded border border-dashed border-neutral-800 px-2 text-center text-[10px] text-neutral-500">
+                        未提供：需专项参数扫描 Run 才可判稳定区，禁止用示意网格冒充。
                       </div>
-                      <div className="mt-2 text-[9px] text-neutral-500">仅有真实运行数据后才可判稳定区。</div>
                     </div>
 
                     <div className="rounded-lg border border-neutral-800 bg-neutral-950/70 p-3">
                       <div className="text-[10px] text-neutral-500">成本敏感性压测</div>
                       <div className="mt-2 space-y-2 text-[10px]">
                         {[
-                          ['0.00× 摩擦成本', hasRealRun ? '-2.81%' : '—'],
-                          ['1.00× 基准成本', hasRealRun ? '-3.08%' : '—'],
-                          ['1.50× 成本压测', hasRealRun ? '-3.22%' : '—'],
-                          ['2.00× 极端摩擦', hasRealRun ? '-3.35%' : '—'],
+                          ['0.00× 摩擦成本', '—'],
+                          ['1.00× 基准成本', hasRealRun ? metrics.netReturn : '—'],
+                          ['1.50× 成本压测', '—'],
+                          ['2.00× 极端摩擦', '—'],
                         ].map(([x, v]) => (
                           <div key={x} className="flex justify-between border-b border-neutral-800/40 pb-1">
                             <span className="text-neutral-400">{x}</span>
@@ -674,16 +731,17 @@ export const BacktestReviewView: React.FC = () => {
                           </div>
                         ))}
                       </div>
+                      <div className="mt-2 text-[9px] text-neutral-600">仅 1.00× 为当前 Run 实测；其余需专项压测 Run。</div>
                     </div>
 
                     <div className="rounded-lg border border-neutral-800 bg-neutral-950/70 p-3">
                       <div className="text-[10px] text-neutral-500">因子边际消融</div>
                       <div className="mt-2 space-y-2 text-[10px]">
                         {[
-                          ['完整策略 (含OI)', hasRealRun ? `${rawTrades.length} trades` : '—'],
-                          ['− 移除 OI 因子', hasRealRun ? '2 trades' : '—'],
-                          ['− 移除 Volume', hasRealRun ? '4 trades' : '—'],
-                          ['− 移除 Wyckoff', hasRealRun ? '1 trades' : '—'],
+                          ['完整策略 (含OI)', hasRealRun ? `${ledgerCounts?.trades ?? '—'} trades` : '—'],
+                          ['− 移除 OI 因子', '—'],
+                          ['− 移除 Volume', '—'],
+                          ['− 移除 Wyckoff', '—'],
                         ].map(([x, v]) => (
                           <div key={x} className="flex justify-between border-b border-neutral-800/40 pb-1">
                             <span className="text-neutral-400">{x}</span>
@@ -691,6 +749,7 @@ export const BacktestReviewView: React.FC = () => {
                           </div>
                         ))}
                       </div>
+                      <div className="mt-2 text-[9px] text-neutral-600">消融臂需各自实跑 Run，未跑即「—」。</div>
                     </div>
                   </div>
                 </div>
@@ -705,13 +764,19 @@ export const BacktestReviewView: React.FC = () => {
                 <Target className="h-3.5 w-3.5 text-indigo-300" /> 成本与结果拆解
               </div>
               <div className="mt-3 space-y-2 text-[10px]">
-                {[
-                  ['已实现净盈亏', hasRealRun ? metrics.netReturn : '—'],
-                  ['手续费支出', hasRealRun ? `$${(summary?.total_fees || 45.36).toFixed(2)}` : '—'],
-                  ['资金费结算', hasRealRun ? `$${(summary?.total_funding_fee || 0.58).toFixed(2)}` : '—'],
-                  ['滑点冲击', hasRealRun ? '3.0 bps' : '—'],
-                  ['未实现浮亏', hasRealRun ? '$0.00' : '—'],
-                ].map(([k, v]) => (
+                {(() => {
+                  const fees = typeof summary?.total_fees === 'number' ? summary.total_fees : null;
+                  const funding = typeof summary?.total_funding_fee === 'number' ? summary.total_funding_fee : null;
+                  const slipBps = typeof spec?.params?.slippage_bps === 'number' ? `${spec.params.slippage_bps} bps` : null;
+                  const rows: [string, string][] = [
+                    ['已实现净盈亏', hasRealRun ? metrics.netReturn : '—'],
+                    ['手续费支出', hasRealRun && fees !== null ? `$${fees.toFixed(2)}` : '—'],
+                    ['资金费结算', hasRealRun && funding !== null ? `$${funding.toFixed(2)}` : '—'],
+                    ['滑点冲击', hasRealRun && slipBps ? slipBps : '—'],
+                    ['未实现浮亏', '—'],
+                  ];
+                  return rows;
+                })().map(([k, v]) => (
                   <div key={k} className="flex justify-between border-b border-neutral-800/60 pb-1.5">
                     <span className="text-neutral-500">{k}</span>
                     <span className="font-mono text-neutral-300">{v}</span>
@@ -725,14 +790,19 @@ export const BacktestReviewView: React.FC = () => {
                 <LockKeyhole className="h-3.5 w-3.5 text-indigo-300" /> 可复现身份指纹
               </div>
               <div className="mt-3 space-y-2 text-[10px] font-mono">
-                {[
-                  ['strategy', 'WX_OI_RESONANCE_V1'],
-                  ['run_id', activeRunId || '—'],
-                  ['engine_version', 'trading_engine_v1.0.0'],
-                  ['contract_version', runDetailEndpoint.data?.contract_version || 'bt_api_v1'],
-                  ['code_sha256', hasRealRun ? '8775989... verified' : '—'],
-                  ['param_hash', hasRealRun ? 'f7f89cc4' : '—'],
-                ].map(([k, v]) => (
+                {(() => {
+                  const codeSha = hashes?.code_sha256 ? `${String(hashes.code_sha256).slice(0, 12)}…` : null;
+                  const paramHash = engine?.param_hash ? `${String(engine.param_hash).slice(0, 12)}…` : null;
+                  const rows: [string, string][] = [
+                    ['strategy', runDetail?.strategy_id ?? '—'],
+                    ['run_id', activeRunId || '—'],
+                    ['exec_core_version', engine?.exec_core_version ?? '—'],
+                    ['contract_version', runDetail?.contract_version ?? '—'],
+                    ['code_sha256', hasRealRun && codeSha ? codeSha : '—'],
+                    ['param_hash', hasRealRun && paramHash ? paramHash : '—'],
+                  ];
+                  return rows;
+                })().map(([k, v]) => (
                   <div key={k} className="flex justify-between gap-2 border-b border-neutral-800/40 pb-1">
                     <span className="text-neutral-500">{k}</span>
                     <span className="text-neutral-300 truncate max-w-[160px]">{v}</span>
