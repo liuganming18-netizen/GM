@@ -1,6 +1,6 @@
 {
   "schema": "backtest_golden_reference/v1",
-  "generated_at_utc": "2026-10-16T06:58:46Z",
+  "generated_at_utc": "2026-10-16T07:05:30Z",
   "purpose": "WX_OI_RESONANCE_V1 Backtest 黄金基准。任何 Trading Core 重构后必须复跑同一案例并逐项 diff。",
   "provenance": {
     "run_id": "bt_20261016T063427Z_810f1a3b",
@@ -16,11 +16,13 @@
   },
   "repo": {
     "branch": "wyckoff-v3.1-main",
-    "commit": "622020526bef8dae20fc76446aeb7147eca7f27f",
-    "commit_short": "6220205",
-    "commit_subject": "docs(blueprint): 落地系统架构收敛与施工蓝图，确立单核交易核心与六大验收关卡",
-    "origin_commit": "622020526bef8dae20fc76446aeb7147eca7f27f",
-    "dirty_tracked_files": 126
+    "commit": "801a162207b655cba393a81c21e6317dd1b4a2ed",
+    "commit_short": "801a162",
+    "commit_subject": "feat(data): 完成历史冷层K线补缺落库收尾，升级验收工具实现白名单自动排除",
+    "commit_time": "2026-10-16 15:01:07 +0800",
+    "origin_commit": "801a162207b655cba393a81c21e6317dd1b4a2ed",
+    "dirty_tracked_files": 107,
+    "commit_semantics": "本字段是**建档时刻**的仓库 HEAD，不等于 run 执行时刻的 HEAD。run 的代码身份由 strategy.code_sha256（策略包文件内容哈希）绑定，与 git commit 解耦。核查期间观察到并行写者提交：run 执行时（14:34）HEAD=6220205，建档时 HEAD=801a162（该提交只改 evidence/快照，未触及 框架/策略/UI 任何代码）。"
   },
   "strategy": {
     "strategy_id": "WX_OI_RESONANCE_V1",
@@ -43,11 +45,17 @@
     "signal_timeframe": "1h",
     "exec_timeframe": "15m",
     "window_mode": "auto_recent_days",
+    "window_days": 7,
+    "warmup_bars_requested": 240,
+    "warmup_bars": 240,
+    "convention": "UTC 半开区间 [win_start, win_end)；预热段（warmup_bars 根信号 bar）只喂数据不交易；bar 均须已收盘且连续、且**全窗覆盖**",
     "data_end_ms": 1792130400000,
     "win_start_ms": 1791504000000,
+    "win_end_ms": 1792108800000,
     "sig_end_ms": 1792130400000,
     "exec_end_ms": 1792132200000,
     "signal_series_start_ms": 1790640000000,
+    "trade_start_sec": 1791504000,
     "start_utc": null,
     "end_utc": null,
     "window_raw": {

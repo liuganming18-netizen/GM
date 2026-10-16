@@ -113,6 +113,14 @@ except Exception as _exc:                            # noqa: BLE001
     backtest = None
     _BACKTEST_IMPORT_ERROR = f"{type(_exc).__name__}: {_exc}"
 
+try:                                                 # noqa: E402
+    import datacenter_service as datacenter         # noqa: E402
+    _DATACENTER_IMPORT_ERROR = None
+except Exception as _exc:                            # noqa: BLE001
+    datacenter = None
+    _DATACENTER_IMPORT_ERROR = f"{type(_exc).__name__}: {_exc}"
+
+
 
 def _backtest_missing(reason):
     return missing(reason, "not_connected", items=[], has_more=False, next_cursor=None,
@@ -2601,8 +2609,10 @@ def v1_coverage():
 
 def v1_data_status():
     st = api_stats()
+    metrics_summary = datacenter.get_datacenter_metrics_summary() if datacenter else None
     return envelope(database=DB_PATH, source_files=st["sources"],
                     coverage=covered(), external_calls=st["calls"],
+                    metrics_summary=metrics_summary,
                     external_calls_ok=st["ok_calls"],
                     external_calls_failed=st["failed_calls"],
                     scope_state=st["scope_state"],
@@ -2611,6 +2621,7 @@ def v1_data_status():
                           "失败请求不计作已连通。"
                           "计数为**非阻塞重统计**：无界全表 COUNT 已移出请求路径，"
                           "尚未就绪时 external_calls* / source_files 返回 null（暂不可得），不填 0。"))
+
 
 
 def v1_import_plan():
@@ -3178,7 +3189,23 @@ def route_v1(path, params):
         return v1_coverage(), 200
     if seg == ["data", "import-plan"]:
         return v1_import_plan(), 200
+    if seg == ["data", "oi"]:
+        limit = int((params.get("limit") or [150])[0])
+        q = (params.get("q") or [None])[0]
+        items = datacenter.get_oi_items(limit, q) if datacenter else []
+        return envelope(items=items, total=len(items)), 200
+    if seg == ["data", "funding"]:
+        limit = int((params.get("limit") or [150])[0])
+        q = (params.get("q") or [None])[0]
+        items = datacenter.get_funding_items(limit, q) if datacenter else []
+        return envelope(items=items, total=len(items)), 200
+    if seg == ["data", "smart-money"]:
+        limit = int((params.get("limit") or [150])[0])
+        q = (params.get("q") or [None])[0]
+        items = datacenter.get_smart_money_items(limit, q) if datacenter else []
+        return envelope(items=items, total=len(items)), 200
     if len(seg) == 3 and seg[0] == "markets":
+
         return v1_market(seg[1], seg[2]), 200
     if len(seg) == 4 and seg[0] == "markets":
         tail = seg[3]

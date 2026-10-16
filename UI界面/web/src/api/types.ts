@@ -541,10 +541,89 @@ export interface RawDataStatusRow {
   missing_within_observed_range: number | null;
 }
 
+export interface DataCenterMetricsSummary {
+  kline: {
+    combos: number;
+    total_rows: number;
+    missing_bars: number;
+    whitelisted_missing: number;
+    net_abnormal_missing: number;
+    shards_count: number;
+    unit: string;
+    coverage_desc: string;
+  };
+  oi: {
+    symbols_count: number;
+    total_rows: number;
+    shards_count: number;
+    sample_periods: string[];
+    unit: string;
+    coverage_desc: string;
+  };
+  funding: {
+    symbols_count: number;
+    total_events: number;
+    shards_count: number;
+    time_span: string;
+    unit: string;
+    coverage_desc: string;
+  };
+  smart_money: {
+    monitored_symbols: number;
+    supply_symbols: number;
+    quality: string;
+    unit: string;
+    coverage_desc: string;
+  };
+}
+
+export interface RawOiItem {
+  exchange: string;
+  market: string;
+  symbol: string;
+  period: string;
+  latest_ts: number;
+  latest_time: string | null;
+  open_interest: number;
+  oi_usd: number;
+  source: string;
+  status: string;
+}
+
+export interface RawFundingItem {
+  exchange: string;
+  market: string;
+  symbol: string;
+  funding_time: number;
+  funding_time_fmt: string | null;
+  funding_rate: number;
+  funding_rate_pct: string;
+  annual_rate_pct: string;
+  mark_price: number;
+  rate_type: string;
+  source: string;
+  status: string;
+}
+
+export interface RawSmartMoneyItem {
+  exchange: string;
+  market: string;
+  symbol: string;
+  long_short_ratio: number | null;
+  traders_ratio: number | null;
+  total_positions_usd: number;
+  total_traders: number;
+  whale_share_percent: number;
+  circulating_supply: number;
+  update_time: string | null;
+  status: string;
+}
+
 export interface RawDataStatus extends Envelope<never> {
   database: string | null;
   source_files: number | null;
   coverage: RawDataStatusRow[] | null;
+  metrics_summary?: DataCenterMetricsSummary | null;
   external_calls: number | null;
   external_calls_ok: number | null;
   external_calls_failed: number | null;
