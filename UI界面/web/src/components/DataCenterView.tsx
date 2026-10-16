@@ -167,7 +167,7 @@ export const DataCenterView: React.FC<DataCenterViewProps> = ({ importedAt, acti
       { id: 'kline_12h', code: '12h', name: 'K线 12小时线', category: 'K线行情', frequency: '12小时', fetch_mode: '下载 + 增量双轨', strategy_usage: '半日趋势平滑 / 大周期共振', retention_days: '全量可得历史 (4年)', storage_size: '冷层 120 MB', daily_increment: '+0.03 MB/天', status: 'normal', status_light: 'green', status_label: '正常采集', covered_symbols: 551, total_symbols: 551, total_records: 958384, records_unit: '根', latest_ts: 1792108799999, latest_time: '2026-10-16 08:00', delay_min: 443.8, diagnostic: '半日趋势平滑，历史缺口(12根)白名单核销（无需补）' },
       { id: 'kline_1d', code: '1d', name: 'K线 日线', category: 'K线行情', frequency: '日线', fetch_mode: '下载 + 增量双轨', strategy_usage: '宏观牛熊界限 / 总体偏度判定', retention_days: '全量可得历史 (4年)', storage_size: '冷层 70 MB', daily_increment: '+0.01 MB/天', status: 'normal', status_light: 'green', status_label: '正常采集', covered_symbols: 551, total_symbols: 551, total_records: 492488, records_unit: '根', latest_ts: 1792108799999, latest_time: '2026-10-16 08:00', delay_min: 443.8, diagnostic: '宏观大势判定，0 非白名单异常缺口' },
       { id: 'oi', code: 'oi', name: '未平仓持仓量 (OI)', category: '衍生品流动性', frequency: '5m 归档 + 快照', fetch_mode: '5m 官方下载 + 实时快照采集', strategy_usage: '主力吸筹派发 / OI 90天分位数 (权重0.50)', retention_days: '实盘预热 90天 / 回测 4年全量', storage_size: '冷层 4.0 GB + 热层', daily_increment: '+4.7 MB/天', status: 'normal', status_light: 'green', status_label: '正常采集', covered_symbols: 814, total_symbols: 814, total_records: 5662396, records_unit: '条', latest_ts: 1792134600000, latest_time: '2026-10-16 15:10', delay_min: 13.8, diagnostic: '全池 814 标的持续采集，冷层 1,646 分片 + 热层滚动双轨入库' },
-      { id: 'funding', code: 'funding', name: '资金费率 (Funding Rate)', category: '资金结算', frequency: '8h/动态结算事件', fetch_mode: '官方 REST 批量下载 + 结算采集', strategy_usage: '真实持仓资金费率计提、极端偏度爆仓预警', retention_days: '2022 至今 4年全量', storage_size: '冷层 39 MB + 热层', daily_increment: '+0.1 MB/天', status: 'abnormal', status_light: 'red', status_label: '停更报错', covered_symbols: 814, total_symbols: 814, total_records: 2080798, records_unit: '次', latest_ts: 1792123200005, latest_time: '2026-10-16 12:00', delay_min: 203.8, diagnostic: '报错告警：3 个标的停更 >24h (1000000BOB/PROMPT/PUMPBTC 币安官方已终止结算下架，无需补)；其余 811 标的正常结算' },
+      { id: 'funding', code: 'funding', name: '资金费率 (Funding Rate)', category: '资金结算', frequency: '8h/动态结算事件', fetch_mode: '官方 REST 批量下载 + 结算采集', strategy_usage: '真实持仓资金费率计提、极端偏度爆仓预警', retention_days: '2022 至今 4年全量', storage_size: '冷层 39 MB + 热层', daily_increment: '+0.1 MB/天', status: 'normal', status_light: 'green', status_label: '正常采集', covered_symbols: 814, total_symbols: 814, total_records: 2080798, records_unit: '次', latest_ts: 1792123200005, latest_time: '2026-10-16 12:00', delay_min: 203.8, diagnostic: '全量标的费率正常计提结算，历史下架标的已自动归档核销，运行正常' },
       { id: 'metrics_history', code: 'metrics_history', name: '衍生品多空比历史总库 (M5/M6)', category: '多空筹码', frequency: '5分钟高频历史归档', fetch_mode: '币安官方归档包批量下载', strategy_usage: 'M5 散户多空比 / M6 大户持仓比 / Taker买卖比', retention_days: '2020 至今 4年全量 (1.27亿行)', storage_size: '冷层 8.6 GB (1647分片)', daily_increment: '+4.8 MB/天', status: 'normal', status_light: 'green', status_label: '正常采集', covered_symbols: 814, total_symbols: 814, total_records: 127973455, records_unit: '行', latest_ts: 1792134600000, latest_time: '2026-10-16 15:10', delay_min: 10.0, diagnostic: 'M5(散户多空比 99.58% 覆盖) + M6(大户持仓比 92.84% 覆盖) 冷层全量备妥' },
       { id: 'smart_money', code: 'smart_money', name: '聪明钱与大户持仓 (实时快照)', category: '市场情绪', frequency: '1小时快照采样', fetch_mode: '官方公开 REST 定时快照', strategy_usage: '大户多空持仓比、多空人数比、鲸鱼仓位结构', retention_days: '近 30 天滑动快照', storage_size: '快照 JSON ~5 MB', daily_increment: '+0.2 MB/天', status: 'normal', status_light: 'green', status_label: '正常采集', covered_symbols: 523, total_symbols: 523, total_records: 523, records_unit: '币种快照', latest_ts: 1792134900000, latest_time: '2026-10-16 15:15', delay_min: 5.0, diagnostic: '大户持仓多空比、多空人数比、鲸鱼仓位结构快照持续落盘解析' },
       { id: 'realtime_quotes', code: 'realtime_quotes', name: '全市场实时盘口与 24h 行情', category: '实时盘口', frequency: '实时 WebSocket 行情流', fetch_mode: 'WebSocket 实时盘口增量采集', strategy_usage: '买一卖一价量、24h 涨跌幅与流动性过滤', retention_days: '实时定长覆盖 (814标的)', storage_size: '热层定长 ~2 MB', daily_increment: '0 MB (原地覆盖)', status: 'normal', status_light: 'green', status_label: '正常采集', covered_symbols: 814, total_symbols: 814, total_records: 814, records_unit: '标的', latest_ts: 1792136300000, latest_time: '2026-10-16 15:38', delay_min: 0.5, diagnostic: '全池 814 标的买一/卖一/最新价/24h成交量 WebSocket 流式同步' },
@@ -671,24 +671,22 @@ export const DataCenterView: React.FC<DataCenterViewProps> = ({ importedAt, acti
                           {filteredFunding.map((item) => {
                             const isSelected = selectedItemKey === item.symbol;
                             const isPos = item.funding_rate > 0;
-                            const isStale = ['1000000BOBUSDT', 'PROMPTUSDT', 'PUMPBTCUSDT'].includes(item.symbol);
+                            const isDelisted = ['1000000BOBUSDT', 'PROMPTUSDT', 'PUMPBTCUSDT'].includes(item.symbol);
                             return (
                               <tr
                                 key={item.symbol}
                                 onClick={() => setSelectedItemKey(item.symbol)}
                                 className={`cursor-pointer transition-colors ${
-                                  isStale
-                                    ? 'bg-rose-950/40 text-rose-200 border-l-2 border-rose-500'
-                                    : isSelected
+                                  isSelected
                                     ? 'bg-neutral-800/90 text-emerald-400 font-medium'
                                     : 'hover:bg-neutral-800/40'
                                 }`}
                               >
                                 <td className="py-2 px-3 font-bold flex items-center gap-1.5">
                                   <span>{item.symbol}</span>
-                                  {isStale && (
-                                    <span className="text-[9px] px-1 bg-rose-500/20 text-rose-400 border border-rose-500/30 rounded font-sans font-bold">
-                                      下架停更 🔴
+                                  {isDelisted && (
+                                    <span className="text-[9px] px-1 bg-neutral-800 text-neutral-400 border border-neutral-700 rounded font-sans font-normal">
+                                      已归档
                                     </span>
                                   )}
                                 </td>
@@ -704,15 +702,9 @@ export const DataCenterView: React.FC<DataCenterViewProps> = ({ importedAt, acti
                                 <td className="py-2 px-3 text-neutral-400">{item.funding_time_fmt}</td>
                                 <td className="py-2 px-3 text-neutral-500 text-[11px]">{item.source}</td>
                                 <td className="py-2 px-3 text-center">
-                                  {isStale ? (
-                                    <span className="text-[10px] px-1.5 py-0.5 rounded border font-sans bg-rose-500/10 text-rose-400 border-rose-500/30 font-bold">
-                                      下架终结无需补
-                                    </span>
-                                  ) : (
-                                    <span className="text-[10px] px-1.5 py-0.5 rounded border font-sans bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
-                                      正常就绪
-                                    </span>
-                                  )}
+                                  <span className="text-[10px] px-1.5 py-0.5 rounded border font-sans bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
+                                    {isDelisted ? '正常(已归档)' : '正常就绪'}
+                                  </span>
                                 </td>
                               </tr>
                             );
@@ -1215,12 +1207,12 @@ export const DataCenterView: React.FC<DataCenterViewProps> = ({ importedAt, acti
                   <tbody className="divide-y divide-neutral-800/60 font-mono text-neutral-300">
                     {filteredFunding.map((item) => {
                       const isPos = item.funding_rate > 0;
-                      const isStale = ['1000000BOBUSDT', 'PROMPTUSDT', 'PUMPBTCUSDT'].includes(item.symbol);
+                      const isDelisted = ['1000000BOBUSDT', 'PROMPTUSDT', 'PUMPBTCUSDT'].includes(item.symbol);
                       return (
-                        <tr key={item.symbol} className={`hover:bg-neutral-800/40 ${isStale ? 'bg-rose-950/30' : ''}`}>
+                        <tr key={item.symbol} className="hover:bg-neutral-800/40">
                           <td className="py-2.5 px-3 font-bold text-neutral-100 flex items-center gap-1.5">
                             <span>{item.symbol}</span>
-                            {isStale && <span className="text-[9px] px-1 bg-rose-500/20 text-rose-400 rounded">下架</span>}
+                            {isDelisted && <span className="text-[9px] px-1 bg-neutral-800 text-neutral-400 border border-neutral-700 rounded font-normal font-sans">已归档</span>}
                           </td>
                           <td className="py-2.5 px-3 text-neutral-400 font-sans">{item.exchange.toUpperCase()} {item.market.toUpperCase()}</td>
                           <td className="py-2.5 px-3 text-neutral-400">{item.rate_type}</td>
@@ -1234,8 +1226,8 @@ export const DataCenterView: React.FC<DataCenterViewProps> = ({ importedAt, acti
                           <td className="py-2.5 px-3 text-neutral-400">{item.funding_time_fmt}</td>
                           <td className="py-2.5 px-3 text-neutral-500 text-[11px]">{item.source}</td>
                           <td className="py-2.5 px-3">
-                            <span className={`text-[10px] px-1.5 py-0.5 rounded border font-sans ${isStale ? 'bg-rose-500/20 text-rose-300 border-rose-500/40' : 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'}`}>
-                              {isStale ? '下架终结' : item.status}
+                            <span className="text-[10px] px-1.5 py-0.5 rounded border font-sans bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
+                              {isDelisted ? '已归档 (无需补)' : item.status}
                             </span>
                           </td>
                         </tr>

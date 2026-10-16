@@ -254,11 +254,20 @@ def get_data_feeds_status() -> list[dict]:
     """, (now_ts - 24 * 3600 * 1000,)).fetchall()]
     stale_cnt = len(stale_syms)
 
-    f_status = "abnormal" if stale_cnt > 0 else "normal"
-    f_light = "red" if stale_cnt > 0 else "green"
-    f_label = "停更报错" if stale_cnt > 0 else "正常采集"
-    sym_str = ", ".join(stale_syms)
-    f_diag = f"报错告警：{stale_cnt} 个标的停更 >24h ({sym_str} 币安官方已终止结算下架，无需补)；其余 811 标的正常结算" if stale_cnt > 0 else "全量标的费率正常计提结算，无异常"
+    # 针对已下架退市标的（如 1000000BOBUSDT, PROMPTUSDT, PUMPBTCUSDT 等）已终止结算，属正常历史归档，自动核销无需报错
+    KNOWN_DELISTED_SYMBOLS = {"1000000BOBUSDT", "PROMPTUSDT", "PUMPBTCUSDT"}
+    active_stale_syms = [s for s in stale_syms if s not in KNOWN_DELISTED_SYMBOLS]
+    has_active_error = len(active_stale_syms) > 0
+
+    f_status = "abnormal" if has_active_error else "normal"
+    f_light = "red" if has_active_error else "green"
+    f_label = "停更报错" if has_active_error else "正常采集"
+    if has_active_error:
+        f_diag = f"报错告警：活跃标的停更 >24h ({', '.join(active_stale_syms)})"
+    elif stale_cnt > 0:
+        f_diag = f"正常采集：全池 814 标的持续计提，历史下架标的({', '.join(stale_syms)})已自动归档核销"
+    else:
+        f_diag = "全量标的费率正常计提结算，运行正常"
 
     feeds.append({
         "id": "funding",
