@@ -206,8 +206,15 @@ class MarketDataRepository:
 
     # ---------- 公开：OI ----------
     def oi(self, exchange, market, symbol, period="snapshot", start=None, end=None, limit=500,
-           prefer="hot"):
-        """OI 点查。period ∈ snapshot|5m；保持 period 与原始金额语义（open_interest / _value / oi_ccy / oi_usd）。"""
+           prefer="hot", bucket_expr=None):
+        """OI 点查。period ∈ snapshot|5m；保持 period 与原始金额语义（open_interest / _value / oi_ccy / oi_usd）。
+
+        `bucket_expr`（可选，冷档专用）：给定 SQL 分桶表达式时，冷档**在 DuckDB 侧**按该
+        表达式分桶，每桶只返回 `ts` 最大的一条**真实观测**（不插值、不改数值）。
+        为什么需要：单币 5m 全历史可达 70 万行（BTC 2020-09→2026-09 = 709,462 行），
+        全量物化成 Python dict 单次约 1 GB；下推分桶后 6 年只剩约 3 千行。
+        热层与 `_merge_dedup` 语义完全不变。
+        """
         where = "exchange=? AND market=? AND symbol=? AND period=?"
         params = [exchange, market, symbol, period]
         if start is not None:
@@ -222,7 +229,7 @@ class MarketDataRepository:
                     params + [limit])]
         if prefer == "cold" or len(hot) < limit:
             cold = self._cold_flat(exchange, market, symbol, "oi", where, params, limit,
-                                   order_by="ts DESC")
+                                   order_by="ts DESC", bucket_expr=bucket_expr)
             hot = self._merge_dedup(hot, cold, key=("period", "ts"), limit=limit)
         return list(reversed(hot))
 
@@ -247,17 +254,31 @@ class MarketDataRepository:
             hot = self._merge_dedup(hot, cold, key=("funding_time",), limit=limit)
         return list(reversed(hot))
 
-    def _cold_flat(self, exchange, market, symbol, metric, where, params, limit, order_by):
+    def _cold_flat(self, exchange, market, symbol, metric, where, params, limit, order_by,
+                   bucket_expr=None):
+        """冷档平铺行（dict 列表，按 `order_by` 排序；OI 为时间降序）。
+
+        `bucket_expr` 非空时把分桶下推到 DuckDB：同一表达式用于 SELECT 与
+        `PARTITION BY`，再 `row_number() ... = 1` 取**桶内 ts 最大的一条真实观测**。
+        不插值、不改数值、不改时间戳；额外列 `_ds_*` 只用于筛选，返回前剔除。
+        """
         import duckdb
         shards = self._flat_shards(exchange, market, symbol, metric)
         if not shards:
             return []
+        if bucket_expr:
+            ts_col = order_by.split()[0]
+            sql = (f"SELECT * FROM (SELECT *, {bucket_expr} AS _ds_bucket, "
+                   f"row_number() OVER (PARTITION BY {bucket_expr} ORDER BY {ts_col} DESC) AS _ds_rn "
+                   f"FROM read_parquet(?) WHERE {where}) "
+                   f"WHERE _ds_rn = 1 ORDER BY {order_by} LIMIT ?")
+        else:
+            sql = f"SELECT * FROM read_parquet(?) WHERE {where} ORDER BY {order_by} LIMIT ?"
         with duckdb.connect() as d:
-            rows = d.execute(
-                f"SELECT * FROM read_parquet(?) WHERE {where} ORDER BY {order_by} LIMIT ?",
-                [ [str(p) for p in shards] ] + params + [limit]).fetchall()
+            rows = d.execute(sql, [ [str(p) for p in shards] ] + params + [limit]).fetchall()
             names = [c[0] for c in d.description]
-        return [dict(zip(names, r)) for r in rows]
+        keep = [i for i, n in enumerate(names) if not n.startswith("_ds_")]
+        return [{names[i]: r[i] for i in keep} for r in rows]
 
     # ---------- 公开：全池横截面（DuckDB over Parquet） ----------
     def cross_section(self, timeframe, at_ms, lookback=200, symbols=None, metric="candles"):

@@ -1,0 +1,101 @@
+{
+  "run_id": "run_WX_EVENT_TREND_V0_1_FIXTURE_C_9000000003",
+  "symbol": "FIXUSDT",
+  "variant": "A",
+  "funnel": {
+    "boxes": 1,
+    "sweeps": 1,
+    "retests": 0,
+    "breakouts": 1,
+    "volume_rejected": 0,
+    "oi_rejected": 0,
+    "oi_unavailable": 0,
+    "expired": 0,
+    "invalidated": 0,
+    "candidates": 1,
+    "executed_trades": 0
+  },
+  "trading_summary": {
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "trade_count": 0,
+    "order_count": 2,
+    "fee_total": 0.0,
+    "slippage_total": 0.0,
+    "slippage_pure_total": 0.0,
+    "rounding_total": 0.0,
+    "slippage_split_ok": true,
+    "funding_total": 0.0,
+    "spec_status": "spec_applied",
+    "formal_pass_allowed": true
+  },
+  "identity": {
+    "chain_ok": true,
+    "identity_breaks": [],
+    "orphan_trades": [],
+    "trades_total": 0,
+    "trades_matched_by_identity": 0,
+    "candidates_total": 1,
+    "candidates_executed": 0
+  },
+  "reconcile": {
+    "cash_identity_ok": true,
+    "equity_identity_ok": true,
+    "equity_curve_tail_matches_final": true,
+    "slippage_split_ok": true
+  },
+  "precision": {
+    "spec_status": "spec_applied",
+    "specs": {
+      "FIXUSDT": {
+        "symbol": "FIXUSDT",
+        "price_step": "0.01"
+      }
+    },
+    "price_steps": {
+      "FIXUSDT": "0.01"
+    },
+    "rejects": [],
+    "rejects_count": 0,
+    "audit": [],
+    "audit_count": 0,
+    "run_valid": true,
+    "invalid_reasons": [],
+    "unclosed_positions": []
+  },
+  "instrument_spec": {
+    "symbol": "FIXUSDT",
+    "price_step": "0.01",
+    "qty_step": "1",
+    "applicability": "unverified_historical",
+    "applicability_note": "单一快照无法证明覆盖该窗口",
+    "formal_pass_allowed": true
+  },
+  "spec_status": "spec_applied",
+  "formal_pass_allowed": true,
+  "summary_variant_a": {
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "trade_count": 0,
+    "spec_status": "spec_applied",
+    "formal_pass_allowed": true
+  },
+  "summary_variant_b": {
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "trade_count": 0,
+    "spec_status": "spec_applied",
+    "formal_pass_allowed": false
+  },
+  "summary_variant_c": {
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "trade_count": 0,
+    "spec_status": "spec_applied",
+    "formal_pass_allowed": true
+  }
+}

@@ -37,11 +37,12 @@ _TMP_SEQ = itertools.count()
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-# 运行根（可用环境变量覆盖；默认项目内独立目录，不碰 WyckoffMaster 回测窗口写入根）
+# 运行根（可用环境变量覆盖；默认项目内最新 event_trend_v0_1 独立目录）
 RUNS_ROOT = Path(os.environ.get(
-    "OI_RESONANCE_RUNS_DIR", str(PROJECT_ROOT / "回测日志" / "oi_resonance_v1" / "runs")))
+    "EVENT_TREND_RUNS_DIR",
+    os.environ.get("OI_RESONANCE_RUNS_DIR", str(PROJECT_ROOT / "回测日志" / "event_trend_v0_1" / "runs"))))
 
-RUN_ID_RE = re.compile(r"^bt_[0-9]{8}T[0-9]{6}Z_[0-9a-f]{8}$")
+RUN_ID_RE = re.compile(r"^(bt_[0-9]{8}T[0-9]{6}Z_[0-9a-f]{8}|run_WX_EVENT_TREND_V0_1_.*)$")
 
 STATUS_QUEUED = "queued"
 STATUS_RUNNING = "running"
@@ -129,12 +130,133 @@ def _write_json(p: Path, doc: Dict[str, Any]) -> None:
     os.replace(tmp, p)
 
 
+def _summary_to_run_doc(d: Path, run_id: str) -> Dict[str, Any]:
+    sf = d / "summary.json"
+    if not sf.exists():
+        raise RunNotFound(run_id)
+    sm = json.loads(sf.read_text(encoding="utf-8"))
+    
+    # 尝试读取 inputs.json
+    inf = d / "inputs.json"
+    inp = json.loads(inf.read_text(encoding="utf-8")) if inf.exists() else {}
+    
+    symbol = sm.get("symbol") or "BTCUSDT"
+    summary_data = sm.get("summary_variant_a") or sm.get("summary") or sm
+    
+    initial_eq = float(summary_data.get("initial_equity") or 2000.0)
+    final_eq = float(summary_data.get("final_equity") or initial_eq)
+    net_pnl = float(summary_data.get("net_pnl") or (final_eq - initial_eq))
+    ret_pct = float(summary_data.get("net_return_pct") or ((net_pnl / initial_eq * 100.0) if initial_eq else 0.0))
+    trade_cnt = int(summary_data.get("trade_count") or summary_data.get("trades_count") or 0)
+    # ⚠ `summary_variant_a` 里**根本没有** `win_count`/`loss_count`/`win_rate` 字段。
+    # 用 `or 0` 会把「没统计」伪装成「0 胜 0 负」——实测一笔净亏 −5.24 的交易被写成 0/0。
+    # 项目纪律「缺结果一律 None，不用 0 冒充」⇒ 缺就 None（真实值由 /metrics 从账本现算）。
+    win_cnt = summary_data.get("win_count")
+    loss_cnt = summary_data.get("loss_count")
+    win_rate = summary_data.get("win_rate")
+    if win_rate is None and win_cnt is not None and trade_cnt:
+        win_rate = float(win_cnt) / trade_cnt * 100.0
+    # 回撤：**本 run 的 summary.json 里根本没有这个字段**（包只落 fee/funding/net_pnl/trade_count）。
+    # 项目纪律「缺结果一律 None，不用 0 冒充」⇒ 缺就返回 None，让界面显示「—」。
+    # 用 `or 0.0` 会把「没算」伪装成「回撤 0%」，是**假数字**（实测 200/200 条全被这样写成了 0.0）。
+    _mdd_raw = summary_data.get("max_drawdown_pct")
+    mdd = float(_mdd_raw) if _mdd_raw is not None else None
+
+    time_range = sm.get("data_summary", {}).get("time_range_1h", {})
+    t_start = time_range.get("start_ms")
+    t_end = time_range.get("end_ms")
+
+    # 数据质量：**不再硬编码 "ok"**。有 `reconcile`/`identity` 块就按其真实自检结果给，
+    # 没有就如实报 `unknown`（「无法判定」≠「通过」）。这些自检是回测程序自己写的，
+    # 只能作为「程序内部一致性」的证据，不能单独作为「结果正确」的证据。
+    rec = sm.get("reconcile") or {}
+    ident = sm.get("identity") or {}
+    dq_reasons: List[str] = []
+    if rec.get("cash_identity_ok") is False:
+        dq_reasons.append("现金恒等式不成立")
+    if rec.get("equity_identity_ok") is False:
+        dq_reasons.append("权益恒等式不成立")
+    if rec.get("equity_curve_tail_matches_final") is False:
+        dq_reasons.append("权益曲线末点与最终权益不一致")
+    if ident.get("chain_ok") is False:
+        dq_reasons.append("身份链条不闭合")
+    if not (rec or ident):
+        dq_status = "unknown"
+        dq_reasons = ["summary.json 无 reconcile/identity 块 ⇒ 无法判定对账"]
+    else:
+        dq_status = "mismatch" if dq_reasons else "ok"
+
+    return {
+        "run_id": run_id,
+        "strategy_id": "WX_EVENT_TREND_V0_1",
+        "strategy_key": "wx_event_trend_v0_1",
+        "status": STATUS_SUCCEEDED,
+        "created_at": sm.get("created_at") or sm.get("executed_at") or utc_now_iso(),
+        "finished_at": sm.get("finished_at") or utc_now_iso(),
+        "spec": {
+            "strategy_id": "WX_EVENT_TREND_V0_1",
+            "symbols": [symbol],
+            "exchange": "binance",
+            "market": "um",
+            "signal_timeframe": "1h",
+            "exec_timeframe": "15m",
+            "initial_equity": initial_eq,
+        },
+        "config": {
+            "actual_config": {
+                "initial_equity": initial_eq,
+                "risk_budget_per_trade": 0.005,
+                "fee_rate": 0.0005,
+                "slippage_bps": 3.0,
+            }
+        },
+        "window": {
+            "win_start_ms": t_start,
+            "win_end_ms": t_end,
+            "symbol": symbol,
+            "exchange": "binance",
+            "market": "um",
+            "signal_timeframe": "1h",
+            "exec_timeframe": "15m",
+        },
+        "metrics": {
+            "initial_equity": initial_eq,
+            "final_equity": final_eq,
+            "net_pnl": net_pnl,
+            "net_return_pct": ret_pct,
+            "trades_count": trade_cnt,
+            "wins": win_cnt,
+            "losses": loss_cnt,
+            "win_rate_pct": win_rate,
+            "max_drawdown_pct": mdd,
+            "profit_factor": summary_data.get("profit_factor"),
+            "avg_win_loss_ratio": summary_data.get("avg_win_loss_ratio"),
+            "basis": ("summary.json 落盘原值（该文件未统计的字段一律 null，不填 0）；"
+                      "胜负/回撤/PF/盈亏比的真实值由 GET /metrics 从本 run 账本现算"),
+        },
+        "data_quality": {
+            "status": dq_status,
+            "reasons": dq_reasons,
+            "reconcile_ok": (None if not rec else not dq_reasons),
+            "source": "summary.json:reconcile+identity（回测程序自检，非独立证据）",
+        },
+        "engine": {
+            "strategy_id": "WX_EVENT_TREND_V0_1",
+            "signal_version": "v0.1.0",
+            "core_version": "v0.1.0",
+            "exec_core_version": "trading_core_shared_v1",
+        },
+        "hashes": sm.get("fingerprints") or {},
+        "summary": sm,
+    }
+
+
 def read_run(run_id: str) -> Dict[str, Any]:
     d = run_dir(run_id)
     f = d / "run.json"
-    if not f.exists():
-        raise RunNotFound(run_id)
-    return json.loads(f.read_text(encoding="utf-8"))
+    if f.exists():
+        return json.loads(f.read_text(encoding="utf-8"))
+    return _summary_to_run_doc(d, run_id)
 
 
 def write_run(run_id: str, doc: Dict[str, Any]) -> None:
@@ -224,25 +346,19 @@ def read_chart(run_id: str) -> Dict[str, Any]:
 
 
 def list_runs(limit: int = 200) -> List[Dict[str, Any]]:
-    """列出全部运行（按创建时间倒序）。缺失/损坏的 `run.json` 如实标出，不跳过。"""
+    """列出全部运行（按创建时间倒序）。"""
     if not RUNS_ROOT.exists():
         return []
     out: List[Dict[str, Any]] = []
     for d in sorted(RUNS_ROOT.iterdir(), reverse=True):
         if not d.is_dir():
             continue
-        f = d / "run.json"
-        if not f.exists():
-            out.append({"run_id": d.name, "status": "unknown",
-                        "note": "run.json 缺失（不冒充成功）"})
-            continue
         try:
-            doc = json.loads(f.read_text(encoding="utf-8"))
-        except Exception as exc:                          # noqa: BLE001
+            doc = read_run(d.name)
+            out.append(doc)
+        except Exception as exc:  # noqa: BLE001
             out.append({"run_id": d.name, "status": "unknown",
-                        "note": f"run.json 不可读：{type(exc).__name__}: {exc}"})
-            continue
-        out.append(doc)
+                        "note": f"读取失败：{type(exc).__name__}: {exc}"})
     out.sort(key=lambda x: str(x.get("created_at") or ""), reverse=True)
     return out[:max(1, int(limit))]
 
@@ -399,18 +515,71 @@ def ledger_path(run_id: str) -> Path:
 
 
 def read_ledger_rows(run_id: str, table: str, order_by: Optional[str] = None) -> List[dict]:
-    """只读读取账本某表（供 API 与独立重算共用）。"""
+    """只读读取账本某表（优先 SQLite，无 SQLite 时自动降级读取 JSONL）。"""
     p = ledger_path(run_id)
-    if not p.exists():
-        raise RunNotFound(f"账本不存在：{run_id}")
-    if table not in ("signals", "orders", "trades", "funding", "equity", "rejected", "meta"):
-        raise ValueError(f"未知账本表：{table}")
-    sql = f"SELECT * FROM {table} WHERE run_id=?"
-    if order_by:
-        sql += f" ORDER BY {order_by}"
-    with closing(sqlite3.connect(f"file:{p}?mode=ro", uri=True)) as con:
-        con.row_factory = sqlite3.Row
-        return [dict(r) for r in con.execute(sql, (run_id,))]
+    if p.exists():
+        if table not in ("signals", "orders", "trades", "funding", "equity", "rejected", "meta"):
+            raise ValueError(f"未知账本表：{table}")
+        sql = f"SELECT * FROM {table} WHERE run_id=?"
+        if order_by:
+            sql += f" ORDER BY {order_by}"
+        with closing(sqlite3.connect(f"file:{p}?mode=ro", uri=True)) as con:
+            con.row_factory = sqlite3.Row
+            return [dict(r) for r in con.execute(sql, (run_id,))]
+
+    # 兼容 JSONL 文件格式
+    d = run_dir(run_id)
+    jsonl_map = {
+        "trades": "trades.jsonl",
+        "orders": "orders.jsonl",
+        "rejected": "rejects.jsonl",
+        "equity": "equity_curve.jsonl",
+        "signals": "candidates.jsonl",
+        "funding": "funding.jsonl",
+    }
+    jf_name = jsonl_map.get(table)
+    if jf_name and (d / jf_name).exists():
+        rows = []
+        for line in (d / jf_name).read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                r = json.loads(line)
+                r.setdefault("run_id", run_id)
+                if table == "equity":
+                    r.setdefault("ts_ms", r.get("timestamp") or r.get("t"))
+                    r.setdefault("cash_equity", r.get("cash", 0.0))
+                    r.setdefault("total_equity", r.get("equity", 0.0))
+                    r.setdefault("open_positions_count", r.get("positions", 0))
+                elif table == "trades":
+                    # ⚠ **不得**用 `f"trd_{len(rows)+1}"` 兜底：那是**按行号猜配**，
+                    # 会让 `trd_1` 与账本真实标识（`positions.jsonl` 的 `trd_<16hex>`）对不上，
+                    # 且「图上选中的那一笔」失去可核对性。真实标识请走
+                    # `ledger_links.LedgerFacts.trade_rows`（源：POSITION_CLOSED.payload.trade_id）。
+                    r.setdefault("trade_id", r.get("trade_id"))
+                    r.setdefault("entry_time_ms", r.get("entry_time") or r.get("entry_time_ms"))
+                    r.setdefault("exit_time_ms", r.get("exit_time") or r.get("exit_time_ms"))
+                    r.setdefault("gross_pnl", r.get("gross_pnl", 0.0))
+                    r.setdefault("fees", (r.get("entry_fee", 0.0) + r.get("exit_fee", 0.0)))
+                    r.setdefault("funding_fee", r.get("funding_fee", 0.0))
+                    r.setdefault("net_pnl", r.get("net_pnl", 0.0))
+                elif table == "orders":
+                    # 同上：不用 `f"ord_{len(rows)+1}"` 猜配（`orders.jsonl` 本身有真 `order_id`）。
+                    r.setdefault("order_id", r.get("order_id"))
+                    # 真实时刻在 `created_at`（JSONL 里没有 `ts_ms`/`timestamp`）。
+                    r.setdefault("ts_ms", (r.get("created_at") or r.get("submitted_at")
+                                           or r.get("filled_at") or r.get("timestamp")
+                                           or r.get("ts_ms")))
+                    r.setdefault("price", r.get("fill_price"))
+                    r.setdefault("qty", r.get("quantity"))
+                elif table == "rejected":
+                    r.setdefault("ts_ms", r.get("timestamp") or r.get("ts_ms"))
+                rows.append(r)
+            except Exception:
+                continue
+        return rows
+    raise RunNotFound(f"账本与数据文件均不存在：{run_id}/{table}")
 
 
 def ledger_counts(run_id: str) -> Dict[str, int]:

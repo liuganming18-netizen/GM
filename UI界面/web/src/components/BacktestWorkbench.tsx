@@ -491,8 +491,14 @@ function parseStopTrace(raw: string | null | undefined): StopTracePoint[] {
     const arr = JSON.parse(raw);
     if (!Array.isArray(arr)) return [];
     return arr
-      .filter((p) => p && Number.isFinite(p.ts) && Number.isFinite(p.stop))
-      .map((p) => ({ ts: p.ts as number, stop: p.stop as number, reason: String(p.reason ?? '') }));
+      // 字段契约兼容：官方 `stop_trace_json` 用 `t`（毫秒），历史行可能仍是 `ts`。
+      // 两者都接受 ⇒ 上游往哪边收敛都能显示；都没有的点丢弃（不猜时间）。
+      .filter((p) => p && (Number.isFinite(p.t) || Number.isFinite(p.ts)) && Number.isFinite(p.stop))
+      .map((p) => ({
+        ts: (Number.isFinite(p.t) ? p.t : p.ts) as number,
+        stop: p.stop as number,
+        reason: String(p.reason ?? ''),
+      }));
   } catch {
     return [];
   }
@@ -530,7 +536,7 @@ const LabTradeDetailPanel: React.FC<{ detail: LabTradeDetail | null; loading: bo
         <KV k="持仓小时" v={fmtNum(t.holding_hours, 2)} />
         <KV k="毛盈亏" v={fmtSignedUsd(t.gross_pnl, 2)} />
         <KV k="手续费" v={`${fmtUsd(t.fees, 2)}（入 ${fmtNum(t.entry_fee, 2)} / 出 ${fmtNum(t.exit_fee, 2)}）`} />
-        <KV k="资金费" v={`${fmtUsd(t.funding_fee, 2)}（${t.funding_events ?? 0} 事件）`} />
+        <KV k="资金费" v={`${fmtUsd(t.funding_fee, 2)}（${t.funding_events ?? '—'} 事件）`} />
         <KV k="净盈亏" v={fmtSignedUsd(t.net_pnl, 2)} />
         <KV k="MFE / MAE" v={`${fmtNum(t.mfe, 6)} / ${fmtNum(t.mae, 6)}`} />
         <KV k="funding_gaps" v={t.funding_gaps_json ?? '—'} />
@@ -643,7 +649,7 @@ const LabTradeDetailPanel: React.FC<{ detail: LabTradeDetail | null; loading: bo
                 {funding.map((f) => (
                   <tr key={`${f.funding_time_ms}-${f.amount}`}>
                     <td className="py-1 pr-2 text-neutral-500">{fmtUtc(f.funding_time_ms)}</td>
-                    <td className="py-1 px-2 text-right">{f.rate}</td>
+                    <td className="py-1 px-2 text-right">{f.rate ?? '—'}</td>
                     <td className="py-1 px-2 text-right">{fmtNum(f.mark, 2)}</td>
                     <td className="py-1 px-2 text-right">{fmtNum(f.qty, 6)}</td>
                     <td className="py-1 px-2 text-right">{fmtNum(f.amount, 6)}</td>
@@ -912,9 +918,33 @@ export const BacktestWorkbench: React.FC = () => {
 
   /* ── 列表 / 注册表 ── */
   const listKey = 'list';
-  const list = useLabFetch<Awaited<ReturnType<typeof labListRuns>>>(listKey, () => labListRuns(50));
+  const list = useLabFetch<Awaited<ReturnType<typeof labListRuns>>>(listKey, () => labListRuns(600));
   const runs: LabRunSummary[] = useMemo(() => list.data?.items ?? [], [list.data]);
   const registry: LabRegistryEntry | null = list.data?.registry_entry ?? null;
+
+  /* ── 全市场逐笔明细与实验记录过滤 ── */
+  const [runsFilter, setRunsFilter] = useState<'all' | 'trades_only'>('trades_only');
+  const [allTradesData, setAllTradesData] = useState<LabTradeRow[]>([]);
+  const [viewAllTrades, setViewAllTrades] = useState<boolean>(true);
+
+  useEffect(() => {
+    fetch('/all_trades.json')
+      .then((r) => r.json())
+      .then((d) => {
+        if (Array.isArray(d.items)) {
+          setAllTradesData(d.items);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const displayedRuns = useMemo(() => {
+    if (runsFilter === 'trades_only') {
+      const filtered = runs.filter((r) => (r.trades_count ?? 0) > 0);
+      return filtered.length > 0 ? filtered : runs;
+    }
+    return runs;
+  }, [runs, runsFilter]);
 
   /* ── 默认值（来自后台真实 run）── */
   const defaults = useLabFetch<LabDefaults>('defaults', () => labLoadDefaults());
@@ -986,13 +1016,34 @@ export const BacktestWorkbench: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeRun?.run_id]);
 
-  /* 自动选中最新 run（仅首次） */
+  /* 自动选中最新/有成交的 run（仅首次） */
   const didPick = useRef(false);
+
+  /* ── 深链：`?run=<run_id>` 直接打开指定 run ──
+   * 为什么需要：⑥ 实验记录列表只取最近 50 条，且同批 run 的 `created_at` 完全相同
+   * ⇒ 排序不稳定，指定的 run 可能根本不在列表里（实测有成交的 run 会滑出前 50）。
+   * 深链只设定「当前所选 run」，**不改变列表语义、不改任何取数口径**，
+   * 让「打开某一笔」可复现（验收 / 复现问题用）。
+   * 声明在「自动选最新」之前 ⇒ `didPick` 置真，压掉自动选择。 */
+  useEffect(() => {
+    let rid: string | null = null;
+    try {
+      rid = new URLSearchParams(window.location.search).get('run');
+    } catch {
+      rid = null;
+    }
+    if (rid) {
+      didPick.current = true;
+      setSelectedRunId(rid);
+    }
+  }, []);
+
   useEffect(() => {
     if (didPick.current) return;
     if (runs.length === 0) return;
     didPick.current = true;
-    setSelectedRunId((prev) => prev ?? runs[0].run_id);
+    const bestRun = runs.find((r) => (r.trades_count ?? 0) > 0) ?? runs[0];
+    setSelectedRunId((prev) => prev ?? bestRun.run_id);
   }, [runs]);
 
   /* ── 所选 run 的详情 / 指标 / 曲线 / 逐笔 / 图表 / 质量（响应身份一律核对 run_id）── */
@@ -1039,10 +1090,6 @@ export const BacktestWorkbench: React.FC = () => {
     () => labGetQuality(selectedRunId as string).then((d) => expectRunId(d, selectedRunId as string)),
   );
 
-  // 切换 run ⇒ 清空选中交易
-  useEffect(() => {
-    setSelectedTradeId(null);
-  }, [selectedRunId]);
 
   const tradeDetail = useLabFetch<LabTradeDetail>(
     selectedRunId && selectedTradeId ? `trade:${selectedRunId}:${selectedTradeId}` : null,
@@ -1278,6 +1325,56 @@ export const BacktestWorkbench: React.FC = () => {
     quality.data?.data_quality != null;
 
   const tradeRows: LabTradeRow[] = useMemo(() => trades.data?.items ?? [], [trades.data]);
+  const displayTrades: LabTradeRow[] = useMemo(() => {
+    if (viewAllTrades && allTradesData.length > 0) {
+      return allTradesData;
+    }
+    return tradeRows;
+  }, [viewAllTrades, allTradesData, tradeRows]);
+
+  // 切换 run ⇒ 仅当旧选中交易不在新 run 且不在展示列表中时清空
+  useEffect(() => {
+    if (!selectedTradeId) return;
+    const currentTrade = displayTrades.find((t) => t.trade_id === selectedTradeId);
+    if (currentTrade && currentTrade.run_id && currentTrade.run_id !== selectedRunId && !viewAllTrades) {
+      setSelectedTradeId(null);
+    }
+  }, [selectedRunId, selectedTradeId, displayTrades, viewAllTrades]);
+
+  // 当有成交明细且当前未选中任何交易时，自动选中第一笔成交
+  useEffect(() => {
+    if (!selectedTradeId && displayTrades.length > 0) {
+      const targetTrade = displayTrades.find((t) => t.run_id === selectedRunId) ?? displayTrades[0];
+      if (targetTrade) {
+        setSelectedTradeId(targetTrade.trade_id);
+      }
+    }
+  }, [selectedRunId, displayTrades, selectedTradeId]);
+
+  /**
+   * 逐笔明细 → ③ 资金分析（水下回撤）联动载荷。
+   * 只吃逐笔账本里的**真实** entry/exit 毫秒时间戳；缺失即不给定位（不推断、不用 K 线时刻顶替）。
+   */
+  const focusTrade = useMemo(() => {
+    if (!selectedTradeId) return null;
+    const t = displayTrades.find((x) => x.trade_id === selectedTradeId);
+    if (!t) return null;
+    if (!Number.isFinite(t.entry_time_ms) || !Number.isFinite(t.exit_time_ms)) return null;
+    return { tradeId: t.trade_id, entryMs: t.entry_time_ms, exitMs: t.exit_time_ms };
+  }, [selectedTradeId, displayTrades]);
+
+  /**
+   * 逐笔明细行索引（真实 trade_id + 进出场毫秒）。
+   * 图载荷 `chart.trades[].trade_id` 实测为 `null` ⇒ 执行视图靠它把 id 换回来，
+   * 否则「选中高亮 / 图上点击定位」全失效。
+   */
+  const tradeIndex = useMemo(
+    () =>
+      tradeRows
+        .filter((t) => Number.isFinite(t.entry_time_ms) && Number.isFinite(t.exit_time_ms))
+        .map((t) => ({ tradeId: t.trade_id, entryMs: t.entry_time_ms, exitMs: t.exit_time_ms })),
+    [tradeRows],
+  );
   const equityPoints: LabEquityPoint[] = useMemo(() => equity.data?.items ?? [], [equity.data]);
   const chartPayload: LabChart | null = chart.data?.chart ?? null;
   const orderRows: LabOrderRow[] = useMemo(() => orders.data?.items ?? [], [orders.data]);
@@ -1303,6 +1400,23 @@ export const BacktestWorkbench: React.FC = () => {
   /** 运行列表新旧归属（来自列表响应 `retirement`；缺失 ⇒ 不推断）。 */
   const retirement: LabRetirementInfo | null = list.data?.retirement ?? null;
   const excludedLegacy = list.data?.excluded_legacy ?? [];
+
+  /**
+   * 逐笔为空时，用**本 run 自己的真实载荷**解释「为什么空」。
+   *
+   * 事件驱动策略的绝大多数 run 本来就不成交：4h 箱体没发生有效突破 ⇒ 无候选 ⇒ 无成交。
+   * 这是链条**真实地停在了前面某一环**，不是「记录丢了」。区分这两件事，
+   * 才能让「K 线 → 候选 → 逐笔」这条链在空结果时也看得懂。
+   */
+  const tradesEmptyHint = useMemo(() => {
+    const nSig = (chartPayload?.signals ?? []).filter(
+      (s) => Number.isFinite(s?.t) && s.t > 0,
+    ).length;
+    if (nSig > 0) {
+      return `本 run 有 ${nSig} 个候选信号，但未触发成交（执行环为空）——链条止于「候选 → 执行」之间，不是记录缺失`;
+    }
+    return '本 run 无候选信号（4h 箱体未发生有效突破）⇒ 无逐笔成交。这是策略的真实产出，不是记录缺失';
+  }, [chartPayload]);
 
   /** 该月平仓笔数（按**真实**平仓时间；仅作旧热力图的「补充事实」列，非收益口径）。 */
   const monthCloseCounts = useMemo(() => {
@@ -1639,30 +1753,34 @@ export const BacktestWorkbench: React.FC = () => {
           </div>
         )}
 
+        {/* 三条提示一律**单行**：整块列表会白占 ~50px/条，把单屏布局顶出屏幕。
+            全文（逐条原因）进 title，信息不删。 */}
         {blockingErrors.length > 0 && (
-          <div className="ds-note ds-note--neg ds-note--col" style={{ margin: '8px 12px 10px' }} data-testid="lab-form-errors">
-            <div className="font-bold">提交前校验未通过（后台仍会独立校验）：</div>
-            <ul className="list-disc pl-4">
-              {blockingErrors.map((e, i) => (
-                <li key={i}>{e}</li>
-              ))}
-            </ul>
+          <div
+            className="ds-note ds-note--neg"
+            style={{ margin: '6px 12px 8px', alignItems: 'center', columnGap: 8, rowGap: 2 }}
+            data-testid="lab-form-errors"
+            title={blockingErrors.map((e, i) => `${i + 1}. ${e}`).join('\n')}
+          >
+            <span className="font-bold whitespace-nowrap">提交前校验未通过</span>
+            <span className="ds-truncate">{blockingErrors.join(' · ')}</span>
           </div>
         )}
 
         {createErrors.length > 0 && (
-          <div className="ds-note ds-note--neg ds-note--col" style={{ margin: '8px 12px 10px' }} data-testid="lab-create-errors">
-            <div className="font-bold">后台拒绝创建（原样显示后台原因，失败保留）：</div>
-            <ul className="list-disc pl-4">
-              {createErrors.map((e, i) => (
-                <li key={i}>{e}</li>
-              ))}
-            </ul>
+          <div
+            className="ds-note ds-note--neg"
+            style={{ margin: '6px 12px 8px', alignItems: 'center', columnGap: 8, rowGap: 2 }}
+            data-testid="lab-create-errors"
+            title={createErrors.map((e, i) => `${i + 1}. ${e}`).join('\n')}
+          >
+            <span className="font-bold whitespace-nowrap">后台拒绝创建</span>
+            <span className="ds-truncate">{createErrors.join(' · ')}</span>
           </div>
         )}
 
         {createNotice && (
-          <div className="ds-note ds-note--info" style={{ margin: '8px 12px 10px' }} data-testid="lab-create-notice">
+          <div className="ds-note ds-note--info" style={{ margin: '6px 12px 8px' }} data-testid="lab-create-notice">
             {createNotice}
           </div>
         )}
@@ -1762,6 +1880,7 @@ export const BacktestWorkbench: React.FC = () => {
               selectedTradeId={selectedTradeId}
               onSelectTrade={setSelectedTradeId}
               orders={orderRows}
+              tradeIndex={tradeIndex}
             />
           </div>
           <div className="ds-col-5" data-lab-section="lab-funding">
@@ -1776,6 +1895,7 @@ export const BacktestWorkbench: React.FC = () => {
               monthCloseCounts={monthCloseCounts}
               windowStartMs={detail.data?.window?.win_start_ms ?? null}
               windowEndMs={detail.data?.window?.win_end_ms ?? null}
+              focusTrade={focusTrade}
             />
           </div>
         </div>
@@ -1793,13 +1913,31 @@ export const BacktestWorkbench: React.FC = () => {
             section="lab-trades"
             right={
               <div className="flex items-center gap-2 text-[10px] font-mono">
-                <Chip>共 {tradeRows.length} 笔</Chip>
+                {allTradesData.length > 0 && (
+                  <div className="flex items-center gap-1 mr-1">
+                    <button
+                      type="button"
+                      className={`px-2 py-0.5 rounded text-[10px] font-medium border transition-colors ${viewAllTrades ? 'bg-amber-500/20 text-amber-300 border-amber-500/40' : 'bg-neutral-800 text-neutral-400 border-neutral-700'}`}
+                      onClick={() => setViewAllTrades(true)}
+                    >
+                      全市场成交 ({allTradesData.length}笔)
+                    </button>
+                    <button
+                      type="button"
+                      className={`px-2 py-0.5 rounded text-[10px] font-medium border transition-colors ${!viewAllTrades ? 'bg-amber-500/20 text-amber-300 border-amber-500/40' : 'bg-neutral-800 text-neutral-400 border-neutral-700'}`}
+                      onClick={() => setViewAllTrades(false)}
+                    >
+                      当前标的 ({tradeRows.length}笔)
+                    </button>
+                  </div>
+                )}
+                <Chip>共 {displayTrades.length} 笔</Chip>
                 <ColToggle on={!!allCols.trades} onToggle={() => toggleCols('trades')} total={13} />
                 {trades.error && <span className="text-rose-600">逐笔取数错误：{trades.error}</span>}
               </div>
             }
           >
-          <div className="ds-tablewrap" style={{ maxHeight: '17.25rem' }} title="点击任意行 ⇒ 图表定位该笔成交 + 显示单笔详情">
+          <div className="ds-tablewrap" style={{ maxHeight: '17.25rem' }} title="点击任意行 ⇒ 执行视图定位该笔 + ③ 资金分析切到「水下回撤」并定位该笔区间">
             <table className={`ds-table ds-table--clickable${allCols.trades ? ' ds-table--all' : ''}`}>
               <thead>
                 <tr>
@@ -1819,28 +1957,36 @@ export const BacktestWorkbench: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {tradeRows.length === 0 ? (
+                {displayTrades.length === 0 ? (
                   <tr>
-                    <td colSpan={allCols.trades ? 13 : 7} className="ds-table__empty">
-                      {trades.loading ? '读取中…' : '无真实成交记录（后台账本为空）——不显示任何演示成绩'}
+                    <td colSpan={allCols.trades ? 13 : 7} className="ds-table__empty" data-testid="lab-trades-empty">
+                      {trades.loading ? '读取中…' : tradesEmptyHint}
                     </td>
                   </tr>
                 ) : (
-                  tradeRows.map((t) => {
+                  displayTrades.map((t) => {
                     const sel = t.trade_id === selectedTradeId;
+                    const dirStr = String(t.direction ?? '');
+                    const isLong = dirStr === 'long' || dirStr === '1' || dirStr === 'buy';
                     return (
                       <tr
                         key={t.trade_id}
                         data-trade-id={t.trade_id}
-                        onClick={() => setSelectedTradeId(t.trade_id)}
+                        onClick={() => {
+                          if (t.run_id && t.run_id !== selectedRunId) {
+                            didPick.current = true;
+                            setSelectedRunId(t.run_id);
+                          }
+                          setSelectedTradeId(t.trade_id);
+                        }}
                         aria-selected={sel}
                       >
                         <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtUtc(t.entry_time_ms)}</td>
                         <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap" data-secondary>{fmtUtc(t.exit_time_ms)}</td>
                         <td className="py-1.5 px-2 font-bold text-neutral-100">{t.symbol}</td>
                         <td className="py-1.5 px-2">
-                          <span className={`ds-badge ${t.direction === 'long' ? 'ds-badge--pos' : 'ds-badge--neg'}`}>
-                            {t.direction === 'long' ? '做多' : t.direction === 'short' ? '做空' : t.direction}
+                          <span className={`ds-badge ${isLong ? 'ds-badge--pos' : 'ds-badge--neg'}`}>
+                            {isLong ? '做多' : '做空'}
                           </span>
                         </td>
                         <td className="py-1.5 px-2 text-right text-neutral-300">{fmtNum(t.entry_price, 4)}</td>
@@ -1886,25 +2032,29 @@ export const BacktestWorkbench: React.FC = () => {
         section="lab-runs"
         right={
           <div className="flex items-center gap-2 text-[10px] font-mono">
-            <Chip>共 {runs.length} 条</Chip>
+            <button
+              type="button"
+              className={`px-2 py-0.5 rounded text-[10px] font-medium border transition-colors ${runsFilter === 'trades_only' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40' : 'bg-neutral-800 text-neutral-400 border-neutral-700'}`}
+              onClick={() => setRunsFilter((f) => (f === 'trades_only' ? 'all' : 'trades_only'))}
+            >
+              {runsFilter === 'trades_only' ? `仅显示有成交 (${runs.filter((r) => (r.trades_count ?? 0) > 0).length})` : `全部运行 (${runs.length})`}
+            </button>
+            <Chip>共 {displayedRuns.length} 条</Chip>
             <ColToggle on={!!allCols.runs} onToggle={() => toggleCols('runs')} total={10} />
             {activeRun && <Chip tone="info">轮询中：{activeRun.run_id} · {activeRun.status}</Chip>}
             {list.error && <span className="text-rose-600">列表取数错误：{list.error}</span>}
           </div>
         }
       >
-        {/* 新旧归属：本列表仅含当前策略；旧策略 run 已退役并排除 */}
-        <div
-          className="ds-note ds-note--warn"
-          style={{ marginBottom: 8, columnGap: 12, rowGap: 4, alignItems: 'center' }}
+        {/* 新旧归属：本列表仅含当前策略；旧策略 run 已退役并排除。
+            常态（无被排除 run）**不刷横幅**，收成一行可展开说明；有被排除 run 才标黄提示。 */}
+        <details
+          className="ds-details"
+          style={{ marginBottom: 8 }}
           data-testid="lab-run-attribution"
         >
-          <span className="font-bold">新旧归属</span>
-          <span>
-            仅含当前策略 <span className="font-mono">{retirement?.successor_strategy_id ?? LAB_STRATEGY_ID}</span>
-          </span>
-          <span
-            className="text-amber-700"
+          <summary
+            className={excludedLegacy.length > 0 ? 'text-amber-700' : undefined}
             title={
               (retirement?.retired_strategy_keys
                 ? `已退役旧策略：${retirement.retired_strategy_keys.join(' / ')}${retirement.retired_at ? `（${retirement.retired_at}）` : ''}\n`
@@ -1914,19 +2064,35 @@ export const BacktestWorkbench: React.FC = () => {
                 : '无被排除 run')
             }
           >
-            已退役旧策略与身份存疑 run 共排除 {excludedLegacy.length} 条 · 旧结果不得当成新策略成绩（悬停看明细）
-          </span>
-        </div>
+            归属：仅含当前策略 {retirement?.successor_strategy_id ?? LAB_STRATEGY_ID}
+            {excludedLegacy.length > 0
+              ? ` · 已排除旧/存疑 run ${excludedLegacy.length} 条`
+              : ' · 无被排除 run'}
+          </summary>
+          <div className="ds-details__body text-[10px] text-neutral-400 space-y-0.5">
+            <div>
+              已退役旧策略：
+              {retirement?.retired_strategy_keys?.length
+                ? `${retirement.retired_strategy_keys.join(' / ')}${retirement.retired_at ? `（${retirement.retired_at}）` : ''}`
+                : '—'}
+            </div>
+            <div>
+              被排除的旧 / 身份存疑 run：
+              {excludedLegacy.length > 0 ? excludedLegacy.map((x) => x.run_id).join('、') : '无'}
+              {excludedLegacy.length > 0 ? ' ⇒ 旧结果不得当成新策略成绩' : ''}
+            </div>
+          </div>
+        </details>
 
-        <div className="ds-tablewrap" style={{ maxHeight: '14.75rem' }}>
+        <div className="ds-tablewrap" style={{ maxHeight: '11rem' }}>
             <table className={`ds-table ds-table--clickable${allCols.runs ? ' ds-table--all' : ''}`}>
               <thead>
                 <tr>
-                  <th className="py-1.5 px-2">run_id</th>
+                  <th className="py-1.5 px-2">标的</th>
+                  <th className="py-1.5 px-2">运行 ID</th>
                   <th className="py-1.5 px-2">状态</th>
                   <th className="py-1.5 px-2" data-secondary>归属</th>
                   <th className="py-1.5 px-2">创建时间（UTC）</th>
-                  <th className="py-1.5 px-2" data-secondary>标的 / 窗口</th>
                   <th className="py-1.5 px-2 text-right">净收益</th>
                   <th className="py-1.5 px-2 text-right">回撤</th>
                   <th className="py-1.5 px-2 text-right">笔数</th>
@@ -1935,16 +2101,20 @@ export const BacktestWorkbench: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {runs.length === 0 ? (
+                {displayedRuns.length === 0 ? (
                   <tr>
                     <td colSpan={allCols.runs ? 10 : 7} className="ds-table__empty">
                       {list.loading ? '读取中…' : '暂无实验记录'}
                     </td>
                   </tr>
                 ) : (
-                  runs.map((r) => {
+                  displayedRuns.map((r) => {
                     const sel = r.run_id === selectedRunId;
                     const h = hashMap[r.run_id];
+                    const symbolText = (r.symbols ?? []).join(',') || '—';
+                    const displayRunId = r.run_id.length > 24 
+                      ? `${r.run_id.slice(0, 10)}...${r.run_id.slice(-8)}` 
+                      : r.run_id;
                     return (
                       <tr
                         key={r.run_id}
@@ -1952,10 +2122,17 @@ export const BacktestWorkbench: React.FC = () => {
                         onClick={() => {
                           didPick.current = true;
                           setSelectedRunId(r.run_id);
+                          const runTrade = allTradesData.find((t) => t.run_id === r.run_id);
+                          if (runTrade) {
+                            setSelectedTradeId(runTrade.trade_id);
+                          }
                         }}
                         aria-selected={sel}
                       >
-                        <td className="py-1.5 px-2 text-neutral-200 whitespace-nowrap">{r.run_id}</td>
+                        <td className="py-1.5 px-2 font-semibold text-emerald-400 whitespace-nowrap">{symbolText}</td>
+                        <td className="py-1.5 px-2 text-neutral-300 font-mono text-xs whitespace-nowrap" title={r.run_id}>
+                          {displayRunId}
+                        </td>
                         <td className="py-1.5 px-2">
                           <span className={`ds-badge ${statusTone(r.status)}`}>{r.status}</span>
                         </td>
@@ -1971,17 +2148,21 @@ export const BacktestWorkbench: React.FC = () => {
                           )}
                         </td>
                         <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtIsoUtc(r.created_at)}</td>
-                        <td className="py-1.5 px-2 text-neutral-400 whitespace-nowrap" data-secondary>
-                          {(r.symbols ?? []).join(',') || '—'}
-                          {r.window ? ` · ${fmtUtc(r.window.win_start_ms)}→${fmtUtc(r.window.win_end_ms)}` : ''}
-                        </td>
-                        <td className={`py-1.5 px-2 text-right ${(r.net_return_pct ?? 0) >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
+                        <td className={`py-1.5 px-2 text-right ${(r.net_return_pct ?? 0) >= 0 ? 'text-emerald-500 font-medium' : 'text-rose-500 font-medium'}`}>
                           {fmtPct(r.net_return_pct, 4)}
                         </td>
-                        <td className="py-1.5 px-2 text-right text-rose-600">
+                        <td className="py-1.5 px-2 text-right text-rose-500 font-medium">
                           {r.max_drawdown_pct === null || r.max_drawdown_pct === undefined ? '—' : `-${r.max_drawdown_pct.toFixed(4)}%`}
                         </td>
-                        <td className="py-1.5 px-2 text-right">{r.trades_count ?? '—'}</td>
+                        <td className="py-1.5 px-2 text-right">
+                          {(r.trades_count ?? 0) > 0 ? (
+                            <span className="font-bold text-amber-400 bg-amber-950/40 px-1.5 py-0.5 rounded border border-amber-800/60">
+                              {r.trades_count} 笔
+                            </span>
+                          ) : (
+                            <span className="text-neutral-500">0</span>
+                          )}
+                        </td>
                         <td className="py-1.5 px-2 text-neutral-500" data-secondary title={h?.spec_sha256 ?? '未取到'}>
                           {h ? shortHash(h.spec_sha256, 10) : '—'}
                         </td>

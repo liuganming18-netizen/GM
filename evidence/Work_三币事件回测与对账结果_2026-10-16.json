@@ -1,0 +1,300 @@
+{
+  "meta": {
+    "title": "WORK-07 三币真实数据事件回测与四大逐字段对账结果",
+    "timestamp": 1792169939,
+    "date": "2026-10-17",
+    "strategy": "WX_EVENT_TREND_V0_1",
+    "strategy_version": "v0.1.0",
+    "rules_hash_sha256": "1f1167de35412cb7d1d3608d8069c4108324f7641de7c369bf94882f1679a8ab",
+    "governance_status": {
+      "work_06_gate": "FAIL (门禁未解除，严禁接入实盘)",
+      "work_07_engineering_gate": "NOT_ASSERTED (本轮为第四次独立复核阻断项的整改轮；通过与否由独立复核判定，本报告不自行宣告 PASS)",
+      "work_07_research_gate": "FAIL (真实行情 2024H1 样本集下严格门槛产出 0 候选，缺少真实交易统计显著性样本，绝不放宽条件凑样本)"
+    },
+    "rectification_scope_2026_10_17": {
+      "identity_chain": "候选 ID → signal_id → order_id → 成交 全链等值贯穿；删除时间近似/顺序消耗/最近候选/拼接订单号四类兜底",
+      "execution_rules": "2R 激活改用实际成交价与实际初始风险 R；接入 10 个自然日到期退出；接入前一根已完成 15m 成交额 0.1% 参与率上限",
+      "artifacts": "Run 整套产物原子提交 + 代码/配置/输入/规则四类指纹 + orders/fills/positions/trades/ledger/equity 全链路逐笔证据",
+      "pit": "PIT 仍为未证明（pit_proven=False），未伪造发布/到达时间",
+      "ui_api_ledger_full_chain": "仍待独立验证（本轮未取得 UI/API 全链路通过证据）"
+    },
+    "pit_guarantee_statement": {
+      "pit_proven": false,
+      "note": "无交易所官方 API 发布延迟凭证前，回放将持仓序列对齐时间视为观测可得假设，严格标记为条件假设性研究，不冒称通过 PIT。"
+    }
+  },
+  "four_reconciliation_verifications": {
+    "BTCUSDT": {
+      "repeatability_pass": true,
+      "chunked_batch_pass": true,
+      "duplicate_injection_pass": true,
+      "crash_recovery_pass": true
+    },
+    "ETHUSDT": {
+      "repeatability_pass": true,
+      "chunked_batch_pass": true,
+      "duplicate_injection_pass": true,
+      "crash_recovery_pass": true
+    },
+    "SOLUSDT": {
+      "repeatability_pass": true,
+      "chunked_batch_pass": true,
+      "duplicate_injection_pass": true,
+      "crash_recovery_pass": true
+    }
+  },
+  "real_market_playback": {
+    "BTCUSDT": {
+      "data_summary": {
+        "bar_4h_count": 1306,
+        "bar_1h_count": 4344,
+        "bar_15m_count": 17376,
+        "oi_records_count": 634207,
+        "funding_records_count": 7436,
+        "time_range": "2024-01-01 ~ 2024-06-30"
+      },
+      "run_ids": {
+        "A": "run_WX_EVENT_TREND_V0_1_BTCUSDT_A_1792169927",
+        "B": "run_WX_EVENT_TREND_V0_1_BTCUSDT_B_1792169927",
+        "C": "run_WX_EVENT_TREND_V0_1_BTCUSDT_C_1792169927"
+      },
+      "funnel_variant_a": {
+        "boxes": 30,
+        "sweeps": 4,
+        "retests": 2,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 14,
+        "invalidated": 15,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "funnel_variant_b": {
+        "boxes": 30,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "summary_variant_a": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "summary_variant_b": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "summary_variant_c": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      }
+    },
+    "ETHUSDT": {
+      "data_summary": {
+        "bar_4h_count": 1306,
+        "bar_1h_count": 4344,
+        "bar_15m_count": 17376,
+        "oi_records_count": 503373,
+        "funding_records_count": 7436,
+        "time_range": "2024-01-01 ~ 2024-06-30"
+      },
+      "run_ids": {
+        "A": "run_WX_EVENT_TREND_V0_1_ETHUSDT_A_1792169932",
+        "B": "run_WX_EVENT_TREND_V0_1_ETHUSDT_B_1792169932",
+        "C": "run_WX_EVENT_TREND_V0_1_ETHUSDT_C_1792169932"
+      },
+      "funnel_variant_a": {
+        "boxes": 30,
+        "sweeps": 10,
+        "retests": 4,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 12,
+        "invalidated": 17,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "funnel_variant_b": {
+        "boxes": 30,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "summary_variant_a": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "summary_variant_b": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "summary_variant_c": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      }
+    },
+    "SOLUSDT": {
+      "data_summary": {
+        "bar_4h_count": 1306,
+        "bar_1h_count": 4344,
+        "bar_15m_count": 17376,
+        "oi_records_count": 503356,
+        "funding_records_count": 6741,
+        "time_range": "2024-01-01 ~ 2024-06-30"
+      },
+      "run_ids": {
+        "A": "run_WX_EVENT_TREND_V0_1_SOLUSDT_A_1792169938",
+        "B": "run_WX_EVENT_TREND_V0_1_SOLUSDT_B_1792169938",
+        "C": "run_WX_EVENT_TREND_V0_1_SOLUSDT_C_1792169938"
+      },
+      "funnel_variant_a": {
+        "boxes": 29,
+        "sweeps": 6,
+        "retests": 1,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 15,
+        "invalidated": 12,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "funnel_variant_b": {
+        "boxes": 29,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "summary_variant_a": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "summary_variant_b": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "summary_variant_c": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      }
+    }
+  },
+  "adversarial_synthetic_verification": {
+    "multi_candidate_unique_binding": {
+      "valid_candidate_executed": true,
+      "valid_candidate_qty": 4.434320404171876,
+      "valid_candidate_net_pnl": 42.97898536937525,
+      "valid_candidate_order_id": "ord_15e03a496a512b00d80f5a25",
+      "valid_candidate_identity_status": "ok",
+      "future_candidate_executed": false,
+      "future_candidate_canceled_reason": "no_signal_dispatched_or_unmatched_in_intrabar_grid",
+      "binding_test_pass": true
+    },
+    "candidate_input_order_perturbation": {
+      "forward": {
+        "cand_synth_valid_001": [
+          true,
+          1788743700000,
+          "ord_15e03a496a512b00d80f5a25"
+        ],
+        "cand_synth_future_002": [
+          false,
+          null,
+          null
+        ]
+      },
+      "reversed": {
+        "cand_synth_future_002": [
+          false,
+          null,
+          null
+        ],
+        "cand_synth_valid_001": [
+          true,
+          1788743700000,
+          "ord_15e03a496a512b00d80f5a25"
+        ]
+      },
+      "order_independent": true,
+      "test_pass": true
+    },
+    "identity_chain": {
+      "chain_ok": true,
+      "identity_breaks": [],
+      "orphan_trades": [],
+      "trades_total": 1,
+      "trades_matched_by_identity": 1,
+      "candidates_total": 2,
+      "candidates_executed": 1
+    },
+    "gap_protection_test": {
+      "open_price": 130.0,
+      "max_entry_price": 112.0,
+      "executed": false,
+      "canceled_reason": "canceled_gap_above_0.5a (open=130.0 > max=112.0)",
+      "test_pass": true
+    },
+    "drop_into_box_protection_test": {
+      "open_price": 108.0,
+      "min_entry_price": 110.0,
+      "executed": false,
+      "canceled_reason": "canceled_fell_back_into_box (open=108.0 < H=110.0)",
+      "test_pass": true
+    }
+  }
+}

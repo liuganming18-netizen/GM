@@ -13,6 +13,7 @@
     剥离的键 = 新增契约产物，不是行为：
       · close_open_positions_at_end / close_open_positions_at_end_source   （W2-3 显式开关）
       · trading_core                                                       （W2-6..10 契约块）
+      · trades[*].signal_id / order_id / exit_order_id                     （WORK-07 身份贯穿，加性）
 
 任一不符 ⇒ 说明「抽 Shared Core」改变了数值行为 ⇒ FAIL。
 """
@@ -39,6 +40,24 @@ from WyckoffMaster.oi_resonance_v1 import execution as EXEC  # noqa: E402
 NEW_KEYS = ("close_open_positions_at_end", "close_open_positions_at_end_source",
             "trading_core")
 
+# 成交记录内的**加性身份字段**（WORK-07 第四次复核整改：真实 Order→Fill→Trade 溯源）。
+# 它们只承载「这一笔成交由哪个订单/信号开立」，不参与任何数值行为；
+# 这里显式剥离后比对，用于证明「抽 Shared Core + 追加身份字段」没有改变数值结果。
+TRADE_IDENTITY_KEYS = ("signal_id", "order_id", "exit_order_id")
+
+
+def strip_non_behavioral(res: dict) -> dict:
+    """剥离已知新增键与成交记录内的加性身份字段，得到可与改造前逐位比对的**行为体**。"""
+    out = {k: v for k, v in res.items() if k not in NEW_KEYS}
+    trades = out.get("trades")
+    if isinstance(trades, list):
+        out["trades"] = [
+            ({k: v for k, v in t.items() if k not in TRADE_IDENTITY_KEYS}
+             if isinstance(t, dict) else t)
+            for t in trades
+        ]
+    return out
+
 
 def main() -> int:
     before = json.loads((HERE / "基线_改造前.json").read_text(encoding="utf-8"))
@@ -49,7 +68,7 @@ def main() -> int:
                                        strategy_params=C.SIGNAL_FROZEN,
                                        exec_cfg=C.EXEC_FROZEN, time_unit="ms")
     present_new = [k for k in NEW_KEYS if k in res]
-    stripped = {k: v for k, v in res.items() if k not in NEW_KEYS}
+    stripped = strip_non_behavioral(res)
     now_sha = _w2fx.stable_json_hash(stripped)
 
     print("=" * 72)
@@ -58,6 +77,7 @@ def main() -> int:
     print(f"改造前 result_sha256（完整结果体）: {baseline_sha}")
     print(f"改造后 剥离新增键后 hash         : {now_sha}")
     print(f"剥离掉的新增键                   : {present_new}")
+    print(f"剥离掉的成交身份字段             : {list(TRADE_IDENTITY_KEYS)}")
     print()
 
     # 逐笔/逐决策的独立对照（不依赖哈希）

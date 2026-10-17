@@ -21,36 +21,122 @@ from __future__ import annotations
 
 import math
 from dataclasses import dataclass, field
+from decimal import Decimal, InvalidOperation
 from typing import Any, Dict, Optional, Protocol, runtime_checkable
 
 from .contracts import (Liquidity, LiveExecutionForbidden, OrderStatus, TradingCoreError)
 
-FILL_CONTRACT_VERSION = "fill_contract_v1.0.0"
+FILL_CONTRACT_VERSION = "fill_contract_v1.1.0"
 
 SIMULATED_BAR = "simulated_bar"
 EXCHANGE_ACK = "exchange_ack"
 
 
-# ══════════════════════════ 取整（整体搬移，无第二实现）══════════════════════════
+# ══════════════════════════ 拒绝（成交精度闸门）══════════════════════════
+
+class FillRejected(Exception):
+    """成交被拒绝：价格非法 / 规格非法 / 取整后不可成交。
+
+    `detail` 必带四件套：`raw_price`（原价）、`post_slip_price`（滑点后）、
+    `post_round_price`（取整后）、`price_step`（所用规格）+ `reason`。
+    **任何一处缺失都不允许放行成交**（见 `TradingCore` 的调用点）。
+    """
+
+    def __init__(self, reason: str, detail: Optional[Dict[str, Any]] = None):
+        self.reason = str(reason)
+        self.detail: Dict[str, Any] = dict(detail or {})
+        self.detail.setdefault("reason", self.reason)
+        super().__init__(f"fill_rejected:{self.reason}")
+
+
+def _fmt_num(d: Decimal) -> str:
+    """十进制审计串：定点输出 + 去尾零（`100.031000300000000` → `100.0310003`）。"""
+    s = format(d.normalize(), "f")
+    return s if s not in ("-0", "-0.0") else "0"
+
+
+def _dec(value: Any, *, name: str) -> Decimal:
+    """精确十进制入口（浮点走 str 最短往返，不引入二进制噪声）。"""
+    if isinstance(value, Decimal):
+        d = value
+    elif isinstance(value, bool):
+        raise InvalidOperation(f"{name}: bool")
+    elif isinstance(value, int):
+        d = Decimal(value)
+    elif isinstance(value, float):
+        if not math.isfinite(value):
+            raise InvalidOperation(f"{name}: non_finite")
+        d = Decimal(str(value))
+    elif isinstance(value, str):
+        d = Decimal(value.strip())
+    else:
+        raise InvalidOperation(f"{name}: {type(value).__name__}")
+    if not d.is_finite():
+        raise InvalidOperation(f"{name}: non_finite")
+    return d
+
+
+# ══════════════════════════ 取整（唯一实现）══════════════════════════
 
 def round_buy_price(px: float, step: float) -> float:
-    """买入价向**更贵**取整（step<=0 不取整）。"""
-    if not step or step <= 0:
+    """买入价向**更贵**取整（step<=0 不取整，保持既有契约）。
+
+    改为 Decimal 精确运算：旧实现 `px/step - 1e-9` 在二进制浮点下会
+    把恰好落在步长边界上的价格多取整一档（如 100.03/0.01 = 10002.999999999998）。
+    """
+    if not step or float(step) <= 0:
         return float(px)
-    return float(step * math.ceil(px / step - 1e-9))
+    return float((_dec(px, name="px") / _dec(step, name="step")).to_integral_value(
+        rounding="ROUND_CEILING") * _dec(step, name="step"))
 
 
 def round_sell_price(px: float, step: float) -> float:
     """卖出价向**更便宜**取整。"""
-    if not step or step <= 0:
+    if not step or float(step) <= 0:
         return float(px)
-    return float(step * math.floor(px / step + 1e-9))
+    return float((_dec(px, name="px") / _dec(step, name="step")).to_integral_value(
+        rounding="ROUND_FLOOR") * _dec(step, name="step"))
 
 
 def round_qty_down(qty: float, step: float) -> float:
-    if not step or step <= 0:
+    if not step or float(step) <= 0:
         return float(qty)
-    return float(step * math.floor(qty / step + 1e-9))
+    return float((_dec(qty, name="qty") / _dec(step, name="step")).to_integral_value(
+        rounding="ROUND_FLOOR") * _dec(step, name="step"))
+
+
+def price_breakdown(*, raw_price: Any, is_buy: bool, price_step: Any,
+                    slippage_rate: float) -> Dict[str, Any]:
+    """把「原价 → 滑点后 → 取整后」三段拆开，供审计与成本分账。
+
+    `is_buy` 必须由调用方按**这笔单的实际方向**给：
+      · 入场：多头 = 买（True）、空头 = 卖（False）
+      · 出场：多头 = 卖（False）、空头 = 买（True）
+    买向更贵（ceil）、卖向更便宜（floor），与 `round_buy_price` / `round_sell_price` 同源。
+    """
+    raw = _dec(raw_price, name="raw_price")
+    step = _dec(price_step, name="price_step")
+    if step <= 0:
+        raise FillRejected("invalid_price_step_nonpositive",
+                           {"price_step": str(price_step), "raw_price": str(raw_price)})
+    # 滑点率由 bps/10000 得来，二进制除法会留下 `0.00030000000000000003` 这类尾巴。
+    # 归一到 12 位十进制（滑点率的实际意义远不到 1e-12），让审计串可读且可比对。
+    slip = _dec(slippage_rate, name="slippage_rate").quantize(Decimal("1e-12"))
+    if is_buy:
+        post_slip = raw * (Decimal(1) + slip)
+        post_round = (post_slip / step).to_integral_value(rounding="ROUND_CEILING") * step
+    else:
+        post_slip = raw * (Decimal(1) - slip)
+        post_round = (post_slip / step).to_integral_value(rounding="ROUND_FLOOR") * step
+    return {
+        "raw_price": _fmt_num(raw),
+        "post_slip_price": _fmt_num(post_slip),
+        "post_round_price": _fmt_num(post_round),
+        "price_step": _fmt_num(step),
+        "slip_delta": _fmt_num(post_slip - raw),
+        "round_delta": _fmt_num(post_round - post_slip),
+        "is_buy": bool(is_buy),
+    }
 
 
 # ══════════════════════════ 数据结构 ══════════════════════════
@@ -63,6 +149,8 @@ class FillQuote:
     source: str
     slippage_rate: float
     price_step: float
+    # 精度审计：raw → post_slip → post_round 三段（十进制字符串）
+    audit: Dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -107,22 +195,70 @@ class SimulatedBarFillAdapter:
     · 滑点按 `slippage_bps` 单边；
     · 费率 maker/taker 分列，默认 taker。
 
+    `strict=True`（生产回测必须开）时额外执行三条闸门：
+      1. 原价必须有限且 > 0，`price_step` 必须有限且 > 0 —— 否则 `FillRejected`；
+      2. 滑点后价格必须有限且 > 0 —— 否则 `FillRejected`；
+      3. 取整后价格必须有限且 > 0 —— 否则 `FillRejected`（**这是 SPACE 零元卖出的直接防线**）。
+
     **不含任何策略/风控判断**，也不读任何账本。
     """
 
     kind = SIMULATED_BAR
 
     def __init__(self, *, slippage_bps: float, maker_fee_rate: float,
-                 taker_fee_rate: float, default_liquidity: Liquidity = Liquidity.TAKER):
+                 taker_fee_rate: float, default_liquidity: Liquidity = Liquidity.TAKER,
+                 strict: bool = False):
         self.slippage_rate = float(slippage_bps) * 1e-4
         self.maker_fee_rate = float(maker_fee_rate)
         self.taker_fee_rate = float(taker_fee_rate)
         self.default_liquidity = Liquidity(default_liquidity)
+        self.strict = bool(strict)
+        # 最近一次 quote_exit 的三段审计（引擎在平仓后取走做成本分账）
+        self.last_exit_audit: Optional[Dict[str, Any]] = None
+
+    # —— 闸门 ——
+    def _guard(self, *, raw_price: Any, price_step: Any, kind: str) -> None:
+        if not self.strict:
+            return
+        try:
+            raw = _dec(raw_price, name="raw_price")
+        except InvalidOperation as exc:
+            raise FillRejected("non_finite_or_invalid_price",
+                               {"raw_price": str(raw_price), "stage": kind,
+                                "detail": str(exc)}) from exc
+        if raw <= 0:
+            raise FillRejected("nonpositive_raw_price",
+                               {"raw_price": str(raw_price), "stage": kind})
+        try:
+            step = _dec(price_step, name="price_step")
+        except InvalidOperation as exc:
+            raise FillRejected("non_finite_or_invalid_price_step",
+                               {"price_step": str(price_step), "stage": kind,
+                                "detail": str(exc)}) from exc
+        if step <= 0:
+            raise FillRejected("invalid_price_step_nonpositive",
+                               {"price_step": str(price_step), "stage": kind,
+                                "raw_price": str(raw)})
 
     # —— 报价 ——
     def quote_entry(self, *, raw_price: float, direction: int, price_step: float,
                     stop_price: float) -> FillQuote:
+        self._guard(raw_price=raw_price, price_step=price_step, kind="entry")
         slip = self.slippage_rate
+        if self.strict:
+            bd = price_breakdown(raw_price=raw_price, is_buy=(direction == 1),
+                                 price_step=price_step, slippage_rate=slip)
+            entry = float(Decimal(bd["post_round_price"]))
+            if not (math.isfinite(entry) and entry > 0):
+                raise FillRejected("nonpositive_or_nonfinite_entry_fill", bd)
+            if direction == 1:
+                stop = stop_price * (1.0 - slip)
+            else:
+                stop = stop_price * (1.0 + slip)
+            return FillQuote(entry_fill=float(entry), stop_fill=float(stop),
+                             source=SIMULATED_BAR, slippage_rate=slip,
+                             price_step=float(price_step), audit=bd)
+        # 非严格（历史调用方/黄金测试）：逐位保持既有行为
         if direction == 1:
             entry = round_buy_price(raw_price * (1.0 + slip), price_step)
             stop = stop_price * (1.0 - slip)
@@ -135,10 +271,25 @@ class SimulatedBarFillAdapter:
 
     def quote_exit(self, *, target_px: float, direction: int,
                    price_step: float, reason: str) -> float:
+        self._guard(raw_price=target_px, price_step=price_step, kind="exit")
         slip = self.slippage_rate
+        if self.strict:
+            # 出场方向与入场相反：多头出场 = 卖（False），空头出场 = 买（True）
+            bd = price_breakdown(raw_price=target_px, is_buy=(direction == -1),
+                                 price_step=price_step, slippage_rate=slip)
+            bd["reason"] = str(reason)
+            out = float(Decimal(bd["post_round_price"]))
+            if not (math.isfinite(out) and out > 0):
+                self.last_exit_audit = bd
+                raise FillRejected("nonpositive_or_nonfinite_exit_fill", bd)
+            self.last_exit_audit = bd
+            return out
         if direction == 1:
-            return round_sell_price(target_px * (1.0 - slip), price_step)
-        return round_buy_price(target_px * (1.0 + slip), price_step)
+            out = round_sell_price(target_px * (1.0 - slip), price_step)
+        else:
+            out = round_buy_price(target_px * (1.0 + slip), price_step)
+        self.last_exit_audit = None
+        return out
 
     def fee_rate(self, *, liquidity: Liquidity = None) -> float:
         liq = Liquidity(liquidity or self.default_liquidity)
@@ -152,7 +303,8 @@ class SimulatedBarFillAdapter:
         return {"kind": self.kind, "slippage_bps": self.slippage_rate * 1e4,
                 "maker_fee_rate": self.maker_fee_rate,
                 "taker_fee_rate": self.taker_fee_rate,
-                "default_liquidity": self.default_liquidity.value}
+                "default_liquidity": self.default_liquidity.value,
+                "strict_precision": self.strict}
 
 
 # ══════════════════════════ Live：真实交易所回报 ══════════════════════════
@@ -241,6 +393,7 @@ class ExchangeFillAdapter:
 
 __all__ = [
     "FILL_CONTRACT_VERSION", "SIMULATED_BAR", "EXCHANGE_ACK",
+    "FillRejected", "price_breakdown",
     "round_buy_price", "round_sell_price", "round_qty_down",
     "FillQuote", "Fill", "FillAdapter",
     "SimulatedBarFillAdapter", "ExchangeFillAdapter",

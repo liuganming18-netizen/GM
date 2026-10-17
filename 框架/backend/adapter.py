@@ -207,7 +207,9 @@ class _ReadOnlyStore(MarketStore):
                 source_id=None):
         """点查 K 线：**热层（新热库近 30 天）+ 冷层（Parquet 全历史）统一路由**。
 
-        未配置 `MARKET_ARCHIVE` ⇒ 回退到原 SQLite 单库路径（与迁移前逐字一致，零回归）。
+        `MARKET_ARCHIVE` 未设置 ⇒ 回落工程内正式归档路径（见 `ARCHIVE_ROOT` 解析块）；
+        显式关闭（空/`0`/`off`/`none`）或归档目录不存在 ⇒ 回退到原 SQLite 单库路径
+        （与迁移前逐字一致，零回归）。
         """
         if _REPO is not None:
             return _REPO.candles(exchange, market, symbol, timeframe, start=start, end=end,
@@ -222,8 +224,33 @@ STORE = _ReadOnlyStore(DB_PATH)
 # 热层 = 本进程的 `MARKET_DB`（切流后指向 `market_v2.sqlite3`：近 30 天 + 每周期
 #        latest200）；冷层 = `MARKET_ARCHIVE` 指向的 Parquet 全历史归档。
 # 二者由**同一个** `MarketDataRepository` 统一路由（不另写第二套语义）。
-# 未设置 `MARKET_ARCHIVE` ⇒ 本块整体跳过，行为与迁移前**逐字一致**（零回归、可回退）。
-ARCHIVE_ROOT = os.environ.get("MARKET_ARCHIVE") or ""
+#
+# 冷层路径解析（2026-10-17 加固；防「重启后 OI 只剩 ~34 天」复发）：
+#   · 显式设值            ⇒ 用它（外部注入优先，与 `start.sh` / `启动系统.command` 一致）。
+#   · 显式设为空/0/off/none/false/no ⇒ **明确关闭冷层**，行为与迁移前**逐字一致**
+#                            （零回归、可回退；这是唯一合法的回退开关）。
+#   · **未设置**（key 不存在）⇒ 回落到 `project_paths.MARKET_ARCHIVE`
+#                            （= `数据/市场数据/parquet`），且该目录**存在**时才接入。
+# 旧口径「未设置 ⇒ 本块整体跳过」的问题：不经 `start.sh` / `启动系统.command` 直接
+# 拉起后端时（例如手工 `python adapter.py`、被其它 spawner 拉起）会**静默**退化为
+# 热层单库，用户侧表现为「OI 历史只有 20 多天、看不到更早」。此处只改**未设置**的
+# 缺省解析，不改变任何已显式注入的场景 ⇒ 现有部署逐字不变。
+ARCHIVE_ROOT = os.environ.get("MARKET_ARCHIVE")
+ARCHIVE_ROOT_SRC = "env"
+if ARCHIVE_ROOT is None:
+    try:
+        import project_paths as _pp                        # noqa: E402
+        _pp_archive = str(_pp.MARKET_ARCHIVE)
+        if os.path.isdir(_pp_archive):
+            ARCHIVE_ROOT, ARCHIVE_ROOT_SRC = _pp_archive, "project_paths"
+        else:
+            ARCHIVE_ROOT, ARCHIVE_ROOT_SRC = "", "project_paths_missing"
+    except Exception as _exc:                              # noqa: BLE001
+        ARCHIVE_ROOT = ""
+        ARCHIVE_ROOT_SRC = f"project_paths_error:{type(_exc).__name__}"
+elif not ARCHIVE_ROOT.strip() or ARCHIVE_ROOT.strip().lower() in (
+        "0", "off", "none", "false", "no"):
+    ARCHIVE_ROOT, ARCHIVE_ROOT_SRC = "", "env_off"
 REPO_WATERMARK_MS = int(os.environ.get("MARKET_WATERMARK_MS") or "0")
 REPO_RETENTION_DAYS = int(os.environ.get("MARKET_RETENTION_DAYS") or "30")
 REPO_ERROR = None
@@ -252,6 +279,7 @@ if ARCHIVE_ROOT:
 def repo_status():
     """冷热仓储接入状态（只读，供 /api/data/status 或诊断用）。"""
     return {"接入": _REPO is not None, "热层": DB_PATH, "冷层": ARCHIVE_ROOT or None,
+            "冷层来源": ARCHIVE_ROOT_SRC,
             "水位ms": REPO_WATERMARK_MS or None, "水位来源": REPO_WATERMARK_SRC,
             "热层保留天数": REPO_RETENTION_DAYS,
             "错误": REPO_ERROR}
@@ -2154,15 +2182,27 @@ HISTORY_LIMIT_MAX = 20000
 OI_SPREAD_STEPS = (
     (6 * 24 * 3600 * 1000, 5 * 60 * 1000),        # 近 6 天    → 5m
     (30 * 24 * 3600 * 1000, 60 * 60 * 1000),      # 6–30 天    → 1h
-    (365 * 24 * 3600 * 1000, 24 * 3600 * 1000),   # 30–365 天  → 1d
-    (None, 7 * 24 * 3600 * 1000),                 # 更早       → 1w
+    (None, 24 * 3600 * 1000),                     # 更早       → 1d
 )
 # 为什么近端 5m 档取 **6 天**（2026-10-11 由 2 天放宽）：
 #   展开图的 5m 首屏 = 本地库存一页 1500 根 + 实时尾段 180 根 ≈ **5.2 天**。
 #   旧档位只保近 2 天 5m，于是「首屏左侧 3 天被降成 1 小时桶、右侧 2 天是 5 分钟桶」，
 #   同一张柱形图里出现 4 倍的密度突变 —— 实测 10-06/07/08 每天只有 24 根柱，
 #   而 10-10/11 每天 75~81 根。放宽到 6 天后首屏整段同为 5m 档，密度一致。
-#   总点数上界 ≈ 6×288 + 24×24 + 335 + 287 ≈ 2,950（前端 OI_HISTORY_LIMIT = 4000）。
+#   总点数上界 ≈ 6×288 + 24×24 + (2237−30) ≈ **4,511**（前端 OI_HISTORY_LIMIT = 5000）。
+#
+# 为什么最外档由 **1 周收紧到 1 天**（2026-10-17）：
+#   1w 桶在粗周期上是肉眼可见的「缺」。实测 BTC（`period=auto&limit=4000`）按年点数
+#   为 {2021:52, 2022:52, 2023:52, 2024:52} ⇒ 一年只有 52 个样本。展开图 K 线窗口
+#   （首屏 1500 根）在 1d 周期上跨 **1499 天**、12h 跨 750 天、8h 跨 500 天，于是：
+#     · 1d  周期：1500 根蜡烛里只有 528 根拿得到 OI 样本（35.2%），最长连缺 **6 天**；
+#     · 12h 周期：30.0%；8h 周期：29.7%。
+#   收紧到 1d 后，1d 周期窗口内 **逐根都有样本**（100%），12h 升到 52%、8h 升到 37%；
+#   5m/15m/30m/1h/4h 五档的窗口全在 365 天以内，**不受本档影响、逐字不变**。
+#   为什么不做更细（例如 4h 档）：4h 周期窗口 250 天 × 6 根/天 = 1500 点，
+#   再叠加近端 5m 档（1728 点）就会顶穿 5000 的上界 ⇒ 得不偿失。
+#   为什么不用「按周期下发窗口」的彻底方案：那需要前端在切周期/翻页时重新取数，
+#   改动面涉及展开图取数链路（并行窗口在途文件），本轮不做。
 
 
 def _qint(params, name, default=None, lo=None, hi=None):
@@ -2244,7 +2284,8 @@ def _history(table, exchange, mid, ts_col, extra_cols, params=None, period_col=N
         rows = rows[::-1]              # 取最近 N 条后恢复时间升序
     # ── 冷层补齐（P3 冷热迁移）────────────────────────────────────────────────
     # 热层只保留近 30 天；全历史在冷档 Parquet。仅当**接入仓储**时启用；
-    # 未接入（未设 MARKET_ARCHIVE）⇒ 此段整体跳过，行为与迁移前逐字一致。
+    # 未接入（`MARKET_ARCHIVE` 显式关闭 / 归档目录不存在）⇒ 此段整体跳过，
+    # 行为与迁移前逐字一致。
     if _REPO is not None:
         want_n = (max(lim * 64, 20000) if bms else max(lim * 4, 20000))
         cold = _cold_flat_rows(table, exchange, mid, ts_col,
@@ -2307,6 +2348,23 @@ def _pyramid_size(ts, now):
     return OI_SPREAD_STEPS[-1][1]
 
 
+def _oi_spread_sql(now=None):
+    """`period=auto` 金字塔分桶表达式 —— **纯 SQL 字面量版**（无绑定参数）。
+
+    与 `_oi_spread_expr` 逐档同语义，唯一区别是把年龄阈值**内联**进 SQL 字符串。
+    为什么必须内联：冷档分桶要把同一个表达式用两次（子查询的 SELECT 与
+    `PARTITION BY`），位置参数会被重复绑定、与 `read_parquet(?)`/WHERE 的
+    参数顺序也难以对齐。阈值全部取自本模块常量（整数，无外部输入）⇒ 无注入面。
+
+    ⚠ 必须用 `//`（DuckDB 整除）。DuckDB 的 `/` 是**浮点除法**：`ts/300000`
+    会得到 5972185.03964… 这种小数，逐行都是不同桶 ⇒ 分桶完全失效
+    （实测退化成「取最近 4000 根原生 5m」= 13.9 天，比不修还少）。
+    """
+    now = now if now is not None else now_ms()
+    parts = [f"WHEN ts>={now - age} THEN ts//{ms}" for age, ms in OI_SPREAD_STEPS[:-1]]
+    return "CASE " + " ".join(parts) + f" ELSE ts//{OI_SPREAD_STEPS[-1][1]} END"
+
+
 def _oi_envelope(rows, note):
     """把 OI 行（dict，升序）打包成既有 envelope（口径与热层路径逐字一致）。"""
     if not rows:
@@ -2327,15 +2385,24 @@ def _oi_auto_cold(exchange, mid, params):
     与热层 SQL 版语义一致：5m 归档按 `OI_SPREAD_STEPS` 年龄分档分桶，每桶取桶内
     `ts` 最大的一条**真实观测**（不插值、不改数值）；snapshot 段只取归档末点之后
     （两段零重叠）；近端 snapshot 优先占满 limit。
+
+    **冷档分桶下推到 DuckDB**（2026-10-17 修）：旧实现按 `limit=300000` 行**全量物化**
+    再在 Python 里分桶 —— 单币 5m 全历史（BTC 2020-09→2026-09 = 709,462 行）取不满，
+    于是**图表只剩最近约 2.9 年**；而把 limit 提到 71 万行会让单次请求瞬时占用约 1 GB。
+    现在把与热层同一条金字塔表达式下推到冷档 SQL（`_oi_spread_sql`），
+    每桶只回 1 行 ⇒ 6 年全历史约 2,900 行，内存与耗时都不随历史长度增长。
     """
     lim = _qint(params, "limit", HISTORY_LIMIT_DEFAULT, 1, HISTORY_LIMIT_MAX)
     frm = _qint(params, "from", None, 0, None)
     to = _qint(params, "to", None, 0, None)
     spread = _qint(params, "spread", 1, 0, 1)
     bms = _qint(params, "bucket_ms", None, 1000, None)
+    now = now_ms()
     market = _market_for(exchange, mid)
+    # 冷档分桶表达式：显式 bucket_ms 优先；否则按年龄自适应金字塔；spread=0 ⇒ 原生 5m。
+    cold_bucket = (f"ts//{bms}" if bms else (_oi_spread_sql(now) if spread else None))
     cold5 = _REPO.oi(exchange, market, mid, period="5m", start=frm, end=to,
-                     limit=300000, prefer="cold")
+                     limit=lim, prefer="cold", bucket_expr=cold_bucket)
     where5, a5 = "exchange=? AND symbol=? AND period='5m'", [exchange, mid]
     if frm is not None:
         where5 += " AND ts>=?"; a5.append(frm)
@@ -2365,7 +2432,6 @@ def _oi_auto_cold(exchange, mid, params):
                 f"SELECT * FROM oi_history WHERE {wheres} ORDER BY ts DESC LIMIT ?",
                 as_ + [lim]).fetchall()]
     budget5 = max(1, lim - len(rows_s))
-    now = now_ms()
     arch = list(all5.values())
     if bms:
         bucket_of = lambda t: t // bms                     # noqa: E731
@@ -2658,24 +2724,36 @@ def _strategy_shape(item):
 
     研究未冻结时：param_hash=null、status=research_candidate、params.decided=false；
     不填占位串冒充已冻结。
+
+    健壮性修复（2026-10-17）：注册表条目有**两种形状** ——
+      · 旧族 / 退役族（`registry.describe`）含 `required_config` / `config_status` /
+        `timeframe` / `direction` 等键；
+      · 「当前回测策略」（`registry.describe_current_backtest`）只给候选包接口元数据，
+        **不含**上述键（其 `available=False` 分支甚至连 `name`/`timeframe` 都没有）。
+    旧实现对这些键**硬下标** ⇒ `/api/v1/strategy` 单数端点必然 `KeyError: 'required_config'`
+    （500），与当前是否切换候选策略无关（HEAD 即如此）。此处改为 `.get()` + 显式默认：
+    缺字段一律 `None` / `[]`，**不冒充、不造值**，与「缺失一律 None」口径一致。
     """
     cfg = item.get("config") or {}
     frozen = bool(item.get("frozen"))
     ver = item.get("config_version") or "未冻结"
+    key = item["strategy_key"]
+    tf = item.get("timeframe")
     return {
-        "strategy_key": item["strategy_key"],
+        "strategy_key": key,
         "strategy_version": ver,
         "rule_version": ver,
         "param_hash": item.get("config_hash"),
-        "name": item["name"],
+        "name": item.get("name") or key,
         "status": "research_candidate",
-        "summary": f"{item['timeframe']} / {item['direction']}；{item['note']}",
+        "summary": f"{tf or '—'} / {item.get('direction') or '—'}；{item.get('note') or '—'}",
         "params": [{"key": k, "label": k, "value": cfg.get(k), "unit": None,
-                    "decided": frozen, "note": None} for k in item["required_config"]],
-        "data_dependencies": [f"K线:{item['timeframe']}", "仅已收盘 bar",
+                    "decided": frozen, "note": None}
+                   for k in (item.get("required_config") or [])],
+        "data_dependencies": [f"K线:{tf}", "仅已收盘 bar",
                               "历史分位基线仅用当前 bar 之前"],
         "source_url": None,
-        "config_status": item["config_status"],
+        "config_status": item.get("config_status"),
         "missing_config": item.get("missing_config"),
         "config_errors": item.get("config_errors"),
         # 三层真实状态（2026-10-11）：policy / run / implementation 互不冒充

@@ -1,0 +1,265 @@
+{
+ "generated_utc": "2026-10-17T07:08:08Z",
+ "root": "/Users/boos/Desktop/威科夫因子共振趋势",
+ "path_basis": "全部为工程根相对路径",
+ "counts": {
+  "own": 24,
+  "input": 12,
+  "total": 36,
+  "missing": 0
+ },
+ "files": [
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/PRECISION-07_精度整改方案订正_2026-10-17.md",
+   "exists": true,
+   "bytes": 28232,
+   "sha256": "1ba3ec5b9da4c938c791a53ff6b5d62d889634d76324780f194c0e341da503ee"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/表1_两腿订正.csv",
+   "exists": true,
+   "bytes": 3108,
+   "sha256": "74876d63fef8124f2eac44ef9bc3f33bda7153f18516350350faecbf4fc07cc6"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/表2_62条腿分类.csv",
+   "exists": true,
+   "bytes": 26582,
+   "sha256": "1d3777d45d70eacb879fb7765091c7fdfab0617b3dbe371900370a072a02743e"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/表3_测试结果与失败原因.csv",
+   "exists": true,
+   "bytes": 2738,
+   "sha256": "52a85f297bc7fb755e65fd48d4b53956d8f0971bef4dd186de4a4e6ac3c03005"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/订正两条腿.json",
+   "exists": true,
+   "bytes": 6281,
+   "sha256": "602e4133f1375e1aa7fde7ae687ea5be3bb0b55534cf55f53a6c3488be84b9d3"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/重分类.json",
+   "exists": true,
+   "bytes": 78608,
+   "sha256": "ea79b1966a0b15e032540f7c74126e6b8653c8decd2701f7713448d7bd658438"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/测试结果解释.json",
+   "exists": true,
+   "bytes": 3718,
+   "sha256": "dcdc1e84a99bad60cae89f7456e3bf96d26d52b76d6d984e631fd936765cb318"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/方案对比.json",
+   "exists": true,
+   "bytes": 4233,
+   "sha256": "462bef4de9e05035a97c8403da3f00091495cdaca3cb7b57e788b87814ca05ba"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/订正原始输出.txt",
+   "exists": true,
+   "bytes": 4614,
+   "sha256": "16ac1f132e42e315339de2b396e067b118ece0bc2cc58e8cc83295c13d14e732"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/重分类原始输出.txt",
+   "exists": true,
+   "bytes": 4381,
+   "sha256": "eee3a3668c1263843a0027d4511bfdbefae05d08c57517e321a7481bb349b6a1"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/测试解释原始输出.txt",
+   "exists": true,
+   "bytes": 3362,
+   "sha256": "cc53787eac83ecf0a34f77ddd5962f59eee69cec3119493c2ed2e8f0fe252bda"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/方案对比原始输出.txt",
+   "exists": true,
+   "bytes": 732,
+   "sha256": "671da445897abf883a766ba3f574a8d9d80daf0bdb6f5fdb945cdeb4d8168219"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/原始输出/pytest_既有93项_R6前置.txt",
+   "exists": true,
+   "bytes": 2705,
+   "sha256": "4ccee26dcfefaf0a0c20033092789160548cea5d580980360e9c0c4ca25620f6"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/原始输出/pytest_既有93项_R6后置.txt",
+   "exists": true,
+   "bytes": 1412,
+   "sha256": "16d1c86980c56f8a0a017aee80b7f8174be77b70c4298e19c4803ac9228858bd"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/基线_开工.json",
+   "exists": true,
+   "bytes": 102164,
+   "sha256": "67c2258ca8df34bf5f28d2295e753755dcc7ab2a0c0af15d86895f50adf35544"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/基线_开工.txt",
+   "exists": true,
+   "bytes": 57503,
+   "sha256": "bc2aab20bb04924a5297877e61896eaef85f13dc7fed9aba24a342038ee6d018"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/基线_收工.json",
+   "exists": true,
+   "bytes": 102231,
+   "sha256": "18fca7c073b1703c9ea5fefb9670cf06a7300ce31bdbe2cda6bc1457dd01d917"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/基线_收工.txt",
+   "exists": true,
+   "bytes": 57533,
+   "sha256": "a0325861ca7085c1f9d613d6aaf6461a1c6997e34afb2c80189bb4233560cfad"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/工具_00_基线.py",
+   "exists": true,
+   "bytes": 6284,
+   "sha256": "ba7ef6562b0df347f59c3f0c8d9cf89a1e810eca9d01ad91ecc6938af342237c"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/工具_10_订正两条腿.py",
+   "exists": true,
+   "bytes": 15124,
+   "sha256": "cbdca1fcd897957313770fd499faf2966f765c1a5bfab723f0c9aed275e5e120"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/工具_20_62腿重分类.py",
+   "exists": true,
+   "bytes": 14725,
+   "sha256": "5729b76f3f3c91595f8a78f1c51189376082e95dcdf085fece2ae5d7c785f5fc"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/工具_30_测试结果解释.py",
+   "exists": true,
+   "bytes": 10052,
+   "sha256": "b81c08a0e6b8bfe23f396dcce843c65c3b25ddfdd20f35c2c96baeaf39d1efed"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/工具_40_方案可行性.py",
+   "exists": true,
+   "bytes": 7654,
+   "sha256": "f410da8345fd8ed6a3c58b30cca8b8a0cf481a6c7536cea3934c23fb07e322a2"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "evidence/PRECISION-07/工具_清单.py",
+   "exists": true,
+   "bytes": 6464,
+   "sha256": "4b7e16bd0af59015e729e44c474393e914bdf3bf495799c0855f87a2aa4fbb7f"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-06/PRECISION-06_越界成交腿与strict保护专项核验_2026-10-17.md",
+   "exists": true,
+   "bytes": 38060,
+   "sha256": "13d8b9f70fa914b7e93dfbf24ba130cc8e7a65220d6a2ab848581d4e16814136"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-06/表3b_全量成交腿扫描.csv",
+   "exists": true,
+   "bytes": 10404,
+   "sha256": "613e6920aeecccccfa8645fabc93023f49f2953d6c031a414e216db194a8b5c0"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-06/表5_影子整改覆盖.csv",
+   "exists": true,
+   "bytes": 1890,
+   "sha256": "f49ffdbcaf1fe1638c091e043449f8b4909f5c1ee976fead6d846ec3c4a20089"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-06/整改影响面.json",
+   "exists": true,
+   "bytes": 2559,
+   "sha256": "e9648f262b2a912b0369985f7e2f5945b5126a11f563c10b56aa4d19e3a546d8"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-06/隔离复现/test_p06_整改验收草案.py",
+   "exists": true,
+   "bytes": 8421,
+   "sha256": "5b65f19be3eb6ebaab27d65dc3d8d5d6e91e84951e569599829709fdcf895265"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-06/原始输出/pytest_既有93项_加R6影子.txt",
+   "exists": true,
+   "bytes": 2705,
+   "sha256": "2af2771e77b9dfe4500adb599f41a3262fbbc3560b485e4a58b024e2cf18a5ac"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "策略/WyckoffMaster/trading_core/fill.py",
+   "exists": true,
+   "bytes": 18376,
+   "sha256": "f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "策略/WyckoffMaster/trading_core/engine.py",
+   "exists": true,
+   "bytes": 59121,
+   "sha256": "c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "策略/WyckoffMaster/event_trend_v0_1/config.py",
+   "exists": true,
+   "bytes": 4758,
+   "sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "策略/WyckoffMaster/event_trend_v0_1/instrument_spec.py",
+   "exists": true,
+   "bytes": 52564,
+   "sha256": "97b9842de9a2e7c843416aa919841e81719834ecdb7940ff416196378fc1ab3a"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XMRUSDT_1792173989/orders.jsonl",
+   "exists": true,
+   "bytes": 1513,
+   "sha256": "4ff700444c69217417f6957a55962be607942ed0582533896afec8035500a20a"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SOONUSDT_1792174449/orders.jsonl",
+   "exists": true,
+   "bytes": 1488,
+   "sha256": "73677970be6f18c21e458a074d9a4aec27e2dc39963c854e4c86c0c51eba84e8"
+  }
+ ]
+}

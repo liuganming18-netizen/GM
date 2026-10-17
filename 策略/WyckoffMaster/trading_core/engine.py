@@ -26,6 +26,7 @@ Live 用 `ExchangeFillAdapter`）。本模块自身**不 import 任何具体策�
 """
 from __future__ import annotations
 
+import dataclasses
 import math
 from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple
 
@@ -34,16 +35,17 @@ import pandas as pd
 
 from .contracts import (ExecPhase, Liquidity, OrderStatus, PositionSide, Side,
                         stable_hash)
-from .fill import FillAdapter, SimulatedBarFillAdapter
+from .fill import FillAdapter, FillRejected, SimulatedBarFillAdapter, round_qty_down
 from .funding import funding_events_ms, settle_funding
 from .ledger import (FEE_CHARGED, FUNDING_FEE, GENESIS_INIT, ORDER_CREATED,
                      ORDER_FILLED, ORDER_SUBMITTED, POSITION_CLOSED,
                      POSITION_OPENED, SIGNAL_ACCEPTED, SIGNAL_REJECTED,
                      LedgerEvent, LedgerWriter)
 from .order import Order, OrderRegistry
-from .policy import (ACTION_EXIT_EOD, ACTION_EXIT_GAP, ACTION_EXIT_STOP,
-                     EXIT_EOD, EXIT_GAP, EXIT_INTRABAR, ExecutionPolicy,
-                     EntryDecision)
+from .policy import (ACTION_EXIT_EOD, ACTION_EXIT_GAP, ACTION_EXIT_MAX_HOLDING,
+                     ACTION_EXIT_STOP, EXIT_EOD, EXIT_GAP, EXIT_INTRABAR,
+                     EXIT_MAX_HOLDING, ExecutionPolicy, EntryDecision,
+                     ExitDecision)
 from .position import Position, unrealized_net_open, unrealized_pnl
 
 ENGINE_CONTRACT_VERSION = "trading_engine_v1.0.0"
@@ -78,6 +80,12 @@ def prep_symbol(sym: str, sig_bars: pd.DataFrame, bar_bars: pd.DataFrame,
         raise ExecutionInputError(f"non_finite_intrabar_ohlc:{sym}")
 
     n15 = len(t15_raw)
+    # 已完成 bar 的成交量 / 成交额（供参与率上限使用；缺列则为 NaN，不猜 0）
+    v15 = (bar_bars["volume"].to_numpy(np.float64)
+           if "volume" in bar_bars.columns else np.full(n15, np.nan, np.float64))
+    qv15 = (bar_bars["quote_volume"].to_numpy(np.float64)
+            if "quote_volume" in bar_bars.columns
+            else np.full(n15, np.nan, np.float64))
     pend_sig = np.zeros(n15, np.int64)
     pend_dir = np.zeros(n15, np.int64)
     pend_stop = np.full(n15, np.nan, np.float64)
@@ -100,6 +108,11 @@ def prep_symbol(sym: str, sig_bars: pd.DataFrame, bar_bars: pd.DataFrame,
         hi_col = "exit_high_curr" if "exit_high_curr" in sig.columns else "exit_high_prev"
         el_arr = sig[lo_col].to_numpy(np.float64)
         eh_arr = sig[hi_col].to_numpy(np.float64)
+        # 可选：信号帧自带 `signal_id` 列 ⇒ 用它做**策略侧身份贯穿**
+        # （候选 ID → signal_id → order_id → 成交）。缺列时退回既有确定性格式，
+        # 因此对既有调用方零行为变化。
+        sid_col = "signal_id" if "signal_id" in sig.columns else None
+        sid_arr = (sig[sid_col].astype(object).to_numpy() if sid_col else None)
         idx = np.searchsorted(t15_sec, tsig_confirm, side="left")
         for k in range(len(tsig_confirm)):
             j = int(idx[k])
@@ -114,24 +127,48 @@ def prep_symbol(sym: str, sig_bars: pd.DataFrame, bar_bars: pd.DataFrame,
                 pend_stop[j] = st_arr[k]
                 pend_res[j] = rs_arr[k]
                 pend_sig_bar[j] = int(sig_bar_ms[k])
-                pend_sig_id[j] = f"{sym}|{int(sig_bar_ms[k])}|{int(s_arr[k])}"
+                supplied = None
+                if sid_arr is not None:
+                    raw_sid = sid_arr[k]
+                    if raw_sid is not None and str(raw_sid) != "" and str(raw_sid) != "nan":
+                        supplied = str(raw_sid)
+                pend_sig_id[j] = (supplied if supplied is not None
+                                  else f"{sym}|{int(sig_bar_ms[k])}|{int(s_arr[k])}")
             conf_exit_low[j] = el_arr[k]
             conf_exit_high[j] = eh_arr[k]
+
+    if "exit_low_chan" in bar_bars.columns or "exit_high_chan" in bar_bars.columns:
+        exit_low_final = (bar_bars["exit_low_chan"].to_numpy(np.float64)
+                          if "exit_low_chan" in bar_bars.columns
+                          else np.full(n15, np.nan, np.float64))
+        exit_high_final = (bar_bars["exit_high_chan"].to_numpy(np.float64)
+                           if "exit_high_chan" in bar_bars.columns
+                           else np.full(n15, np.nan, np.float64))
+        exit_channel_source = "intrabar_explicit_15m"
+    else:
+        exit_low_final = pd.Series(conf_exit_low).ffill().to_numpy(np.float64)
+        exit_high_final = pd.Series(conf_exit_high).ffill().to_numpy(np.float64)
+        exit_channel_source = (lo_col if len(sig) else None)
 
     return {
         "symbol": sym,
         "timestamp": t15_raw,
         "timestamp_sec": t15_sec,
         "open": o15, "high": h15, "low": l15, "close": c15,
+        "volume": v15, "quote_volume": qv15,
         "funding_rate": (bar_bars["funding_rate"].to_numpy(np.float64)
                          if "funding_rate" in bar_bars.columns
                          else np.full(n15, np.nan, np.float64)),
         "pending_sig": pend_sig, "pending_dir": pend_dir,
         "pending_stop": pend_stop, "pending_res": pend_res,
         "pending_sig_bar": pend_sig_bar, "pending_sig_id": pend_sig_id,
-        "exit_low": pd.Series(conf_exit_low).ffill().to_numpy(np.float64),
-        "exit_high": pd.Series(conf_exit_high).ffill().to_numpy(np.float64),
-        "exit_channel_source": (lo_col if len(sig) else None),
+        # 退出通道（锁利 / 跟踪止损）。两条来源互斥：
+        #   ① 显式 15m 通道列 `exit_low_chan` / `exit_high_chan` ⇒ 逐 15m bar 精确生效
+        #      （用于「4h 收盘后下一根严格更晚的 15m bar 起生效」这类规则）；
+        #   ② 既有路径：由 1h 信号帧的 confirm_time 映射后 ffill（默认，零行为变化）。
+        "exit_low": exit_low_final,
+        "exit_high": exit_high_final,
+        "exit_channel_source": exit_channel_source,
         "signal_frame": sig,
     }
 
@@ -146,7 +183,8 @@ class TradingCore:
                  strategy_key: str, strategy_id: str, strategy_version: str,
                  timeframe: str = "1h", exec_timeframe: str = "15m",
                  ledger: Optional[LedgerWriter] = None,
-                 collect_contracts: bool = True):
+                 collect_contracts: bool = True,
+                 instrument_specs: Optional[Dict[str, Any]] = None):
         self.policy = policy
         self.adapter = fill_adapter
         self.signal_fn = signal_fn
@@ -158,6 +196,9 @@ class TradingCore:
         self.exec_timeframe = exec_timeframe
         self.ledger = ledger
         self.collect_contracts = collect_contracts
+        # 合约规格（按标的）。给出时启用「数量步长 / 最小量 / 最小名义额」三道闸门；
+        # 未给出 ⇒ 只做价格侧（保持既有调用方零行为变化），并在结果里显式标注。
+        self.instrument_specs: Dict[str, Any] = dict(instrument_specs or {})
         self.registry = OrderRegistry()
         self._orders: List[Order] = []
         self._ledger_counts: Dict[str, int] = {}
@@ -222,8 +263,36 @@ class TradingCore:
         maker_fee = float(getattr(cfg, "maker_fee_rate", 0.0002))
         fee = taker_fee
         step = float(p.price_step)
+        # 规格侧价格步长（十进制字符串，避免 float 往返）。缺规格 ⇒ 退回 float step，
+        # 并在结果 `precision.spec_status` 里如实标注。
+        spec_step_by_symbol: Dict[str, Any] = {}
+        for _sym in market_data:
+            _spec = self.instrument_specs.get(_sym)
+            if _spec is not None:
+                _spec.validate()
+                spec_step_by_symbol[_sym] = _spec.price_step
+            else:
+                spec_step_by_symbol[_sym] = float(step)
+        # 精度审计累计（全部是**加性**字段，不改变既有数值口径）
+        precision_audit: List[Dict[str, Any]] = []
+        precision_rejects: List[Dict[str, Any]] = []
+        invalid_reasons: List[str] = []
+        unclosed_positions: List[str] = []
         enable_trail = bool(getattr(cfg, "enable_trailing_exit", True))
         funding_is_assumption = (cfg.funding_model == "assumption_fixed_8h")
+        # 可选执行约束（**默认关闭** ⇒ 既有调用方零行为变化）：
+        #   max_holding_ms      最长持仓到期退出（到期后第一根 15m 开盘退出）
+        #   participation_rate  订单名义金额 ≤ 该比例 × 已完成的前一根 15m 成交额
+        max_holding_ms = getattr(cfg, "max_holding_ms", None)
+        if max_holding_ms is not None:
+            max_holding_ms = int(max_holding_ms)
+            if max_holding_ms <= 0:
+                raise ExecutionInputError("illegal_max_holding_ms")
+        participation_rate = getattr(cfg, "participation_rate", None)
+        if participation_rate is not None:
+            participation_rate = float(participation_rate)
+            if not (0.0 < participation_rate <= 1.0):
+                raise ExecutionInputError("illegal_participation_rate")
 
         arrays: Dict[str, dict] = {}
         for sym in sorted(market_data):
@@ -300,13 +369,34 @@ class TradingCore:
                     continue
                 arr = arrays[sym]
                 op = float(arr["open"][i])
-                dec = self.policy.decide_gap_exit(pos=pos, bar_open=op, symbol=sym)
+                # 最长持仓到期：到期后第一根 15m bar 的开盘退出（与跳空退出同价源，
+                # 只用 open，不看未来 low/high）。仅在显式设置 max_holding_ms 时生效。
+                expired = (max_holding_ms is not None
+                           and (int(t_now) - int(pos.entry_time)) >= max_holding_ms)
+                if expired:
+                    dec = ExitDecision(True, EXIT_MAX_HOLDING, target_px=op,
+                                       phase=ExecPhase.B_GAP.value,
+                                       order_type=self.policy.exit_order_type())
+                else:
+                    dec = self.policy.decide_gap_exit(pos=pos, bar_open=op, symbol=sym)
                 if not dec.should_exit:
                     continue
-                fill = self.adapter.quote_exit(target_px=dec.target_px,
-                                               direction=pos.direction,
-                                               price_step=step, reason=dec.reason)
-                intent = self._exit_intent(pos, action=ACTION_EXIT_GAP,
+                try:
+                    fill = self.adapter.quote_exit(target_px=dec.target_px,
+                                                   direction=pos.direction,
+                                                   price_step=spec_step_by_symbol.get(sym, step),
+                                                   reason=dec.reason)
+                except FillRejected as rej:
+                    # 出场失败 ⇒ **仓位保持未平**，运行标记为无效（不得当作已平仓）
+                    precision_rejects.append({"symbol": sym, "stage": "exit_gap",
+                                              "timestamp": int(t_now), **rej.detail})
+                    invalid_reasons.append(f"exit_gap_fill_rejected:{rej.reason}")
+                    unclosed_positions.append(sym)
+                    continue
+                exit_audit = getattr(self.adapter, "last_exit_audit", None)
+                intent = self._exit_intent(pos,
+                                           action=(ACTION_EXIT_MAX_HOLDING if expired
+                                                   else ACTION_EXIT_GAP),
                                            phase=ExecPhase.B_GAP.value,
                                            reason=dec.reason, symbol=sym,
                                            target=dec.target_px, ts=int(t_now))
@@ -316,7 +406,8 @@ class TradingCore:
                 exit_fee = self.adapter.fill_fee(fill, pos.qty)
                 cash, rec = _close_position(pos, cash, fill, exit_fee, fee, int(t_now),
                                             dec.reason, open_positions, sym,
-                                            raw_target_px=op, order=o)
+                                            raw_target_px=op, order=o,
+                                            exit_audit=exit_audit)
                 self._fill_order(o, price=fill, qty=pos.qty, fee=exit_fee,
                                  ts=int(t_now), liquidity=Liquidity.TAKER,
                                  detail={"reason": dec.reason})
@@ -353,10 +444,26 @@ class TradingCore:
                         sym, int(arr["pending_sig_bar"][i]), sig_type)
                     score = float(arr["pending_res"][i])
                     score = score if math.isfinite(score) else None
-                    quote = self.adapter.quote_entry(raw_price=raw_open,
-                                                     direction=direction,
-                                                     price_step=step,
-                                                     stop_price=stop_ref)
+                    try:
+                        quote = self.adapter.quote_entry(
+                            raw_price=raw_open, direction=direction,
+                            price_step=spec_step_by_symbol.get(sym, step),
+                            stop_price=stop_ref)
+                    except FillRejected as rej:
+                        # 入场价格非法/规格非法 ⇒ **不生成成交**
+                        precision_rejects.append({"symbol": sym, "stage": "entry",
+                                                  "timestamp": int(t_now),
+                                                  "signal_id": sig_id, **rej.detail})
+                        rejected.append({"timestamp": int(t_now), "symbol": sym,
+                                         "phase": "C_entry", "reason": rej.reason})
+                        self._emit(SIGNAL_REJECTED, symbol=sym, event_time=int(t_now),
+                                   payload={"signal_id": sig_id, "reason": rej.reason,
+                                            "phase": "C_entry", "precision": rej.detail})
+                        continue
+                    if quote.audit:
+                        precision_audit.append({"symbol": sym, "stage": "entry",
+                                                "timestamp": int(t_now),
+                                                "signal_id": sig_id, **quote.audit})
                     mtm = cash + unrealized_pnl(open_positions, fee)
                     seq = self.registry.next_sequence(self.strategy_key, sym, sig_id)
                     dec = self.policy.decide_entry(
@@ -373,14 +480,115 @@ class TradingCore:
                                    payload={"signal_id": sig_id, "reason": dec.reason,
                                             "phase": "C_entry"})
                         continue
+                    # ── 可选：流动性参与率上限（订单名义 ≤ 参与率 × 已完成前一根 15m 成交额）──
+                    # 只用**已完成**的上一根 bar 成交额，不借用未来成交量；
+                    # 成交额缺失 ⇒ fail-closed 拒绝（不用 0 冒充）。
+                    participation_capped = False
+                    if participation_rate is not None:
+                        prev_qv = (float(arr["quote_volume"][i - 1]) if i >= 1
+                                   else float("nan"))
+                        if not math.isfinite(prev_qv) or prev_qv <= 0:
+                            rejected.append({"timestamp": int(t_now), "symbol": sym,
+                                             "phase": "C_entry",
+                                             "reason": "participation_volume_unavailable"})
+                            self._emit(SIGNAL_REJECTED, symbol=sym, event_time=int(t_now),
+                                       payload={"signal_id": sig_id,
+                                                "reason": "participation_volume_unavailable",
+                                                "phase": "C_entry"})
+                            continue
+                        cap_notional = participation_rate * prev_qv
+                        cap_qty = cap_notional / float(quote.entry_fill)
+                        if dec.intent.quantity > cap_qty:
+                            if cap_qty <= 0.0 or not math.isfinite(cap_qty):
+                                rejected.append({"timestamp": int(t_now), "symbol": sym,
+                                                 "phase": "C_entry",
+                                                 "reason": "participation_cap_zero_qty"})
+                                self._emit(SIGNAL_REJECTED, symbol=sym,
+                                           event_time=int(t_now),
+                                           payload={"signal_id": sig_id,
+                                                    "reason": "participation_cap_zero_qty",
+                                                    "phase": "C_entry"})
+                                continue
+                            dec = dataclasses.replace(
+                                dec, intent=dataclasses.replace(
+                                    dec.intent, quantity=float(cap_qty)))
+                            participation_capped = True
+
+                    # ── 数量精度闸门（只在拿到合约规格时启用）──
+                    #   ① 数量向**下**取整到 stepSize（多买不可，少买可以）；
+                    #   ② 取整后必须 ≥ minQty；
+                    #   ③ 名义额必须 ≥ minNotional。
+                    # 缺规格 ⇒ 不猜步长（保持既有连续数量），并在结果里标注 spec_status。
                     entry_fill = float(quote.entry_fill)
+                    qty_audit: Dict[str, Any] = {}
+                    spec = self.instrument_specs.get(sym)
+                    if spec is not None:
+                        qty_raw = float(dec.intent.quantity)
+                        qty_rounded = round_qty_down(qty_raw, spec.qty_step)
+                        qty_audit = {
+                            "qty_raw": format(qty_raw, ".12g"),
+                            "qty_step": spec.qty_step,
+                            "qty_rounded": format(qty_rounded, ".12g"),
+                            "min_qty": spec.min_qty,
+                            "min_notional": spec.min_notional,
+                        }
+                        if not math.isfinite(qty_rounded) or qty_rounded <= 0 or \
+                                qty_rounded < float(spec.min_qty_dec):
+                            precision_rejects.append({
+                                "symbol": sym, "stage": "entry", "timestamp": int(t_now),
+                                "signal_id": sig_id, "reason": "qty_below_min_step",
+                                **qty_audit})
+                            rejected.append({"timestamp": int(t_now), "symbol": sym,
+                                             "phase": "C_entry",
+                                             "reason": "qty_below_min_step"})
+                            self._emit(SIGNAL_REJECTED, symbol=sym,
+                                       event_time=int(t_now),
+                                       payload={"signal_id": sig_id,
+                                                "reason": "qty_below_min_step",
+                                                "phase": "C_entry",
+                                                "precision": qty_audit})
+                            continue
+                        notional = qty_rounded * entry_fill
+                        qty_audit["notional"] = format(notional, ".12g")
+                        if notional < float(spec.min_notional_dec):
+                            precision_rejects.append({
+                                "symbol": sym, "stage": "entry", "timestamp": int(t_now),
+                                "signal_id": sig_id, "reason": "notional_below_min",
+                                **qty_audit})
+                            rejected.append({"timestamp": int(t_now), "symbol": sym,
+                                             "phase": "C_entry",
+                                             "reason": "notional_below_min"})
+                            self._emit(SIGNAL_REJECTED, symbol=sym,
+                                       event_time=int(t_now),
+                                       payload={"signal_id": sig_id,
+                                                "reason": "notional_below_min",
+                                                "phase": "C_entry",
+                                                "precision": qty_audit})
+                            continue
+                        dec = dataclasses.replace(
+                            dec, intent=dataclasses.replace(
+                                dec.intent, quantity=float(qty_rounded)))
                     o, dup = self._submit(dec.intent, ts=int(t_now))
                     if dup:
                         continue
                     e_fee = self.adapter.fill_fee(entry_fill, dec.intent.quantity)
                     cash -= e_fee
                     sum_entry_fee += e_fee
+                    # 成本分账：总执行成本（原有口径，= |成交价−原价|×量）拆成
+                    #   · 纯滑点 = |滑点后价 − 原价|×量
+                    #   · 取整   = |取整后价 − 滑点后价|×量
+                    # 两者之和恒等于原 `slippage_loss`，不额外加回利润。
                     entry_slip_loss = abs(entry_fill - raw_open) * dec.intent.quantity
+                    entry_slip_pure = entry_slip_loss
+                    entry_round_loss = 0.0
+                    if quote.audit:
+                        try:
+                            _raw = float(quote.audit["raw_price"])
+                            _ps = float(quote.audit["post_slip_price"])
+                            entry_slip_pure = abs(_ps - _raw) * dec.intent.quantity
+                            entry_round_loss = abs(entry_fill - _ps) * dec.intent.quantity
+                        except (KeyError, TypeError, ValueError):
+                            entry_slip_pure, entry_round_loss = entry_slip_loss, 0.0
                     pos = Position(
                         symbol=sym, direction=direction, signal_type=sig_type,
                         entry_time=int(t_now), entry_time_sec=int(arr["timestamp_sec"][i]),
@@ -388,6 +596,9 @@ class TradingCore:
                         initial_stop=stop_ref, current_stop=stop_ref,
                         entry_fee=e_fee, last_mark_price=entry_fill,
                         entry_slip_loss=entry_slip_loss,
+                        entry_slip_pure=entry_slip_pure,
+                        entry_round_loss=entry_round_loss,
+                        entry_price_audit=dict(quote.audit or {}),
                         last_funding_ms=int(arr["timestamp"][i]),
                         order_id=o.order_id, signal_id=sig_id,
                         signal_bar_open_ms=int(arr["pending_sig_bar"][i]))
@@ -424,6 +635,8 @@ class TradingCore:
                                       "qty": dec.intent.quantity,
                                       "entry_fee": e_fee,
                                       "signal_bar_open_ms": int(arr["pending_sig_bar"][i])})
+                    if participation_rate is not None:
+                        decisions[-1]["participation_capped"] = participation_capped
 
             # ── 相位 D：bar 内止损（**含当根新开仓**）──
             for sym, i in active:
@@ -441,9 +654,19 @@ class TradingCore:
                     pos.mae = max(pos.mae, (hi - pos.entry_price) / pos.entry_price)
                 dec = self.policy.decide_intrabar_exit(pos=pos, high=hi, low=lo, symbol=sym)
                 if dec.should_exit:
-                    fill = self.adapter.quote_exit(target_px=dec.target_px,
-                                                   direction=pos.direction,
-                                                   price_step=step, reason=dec.reason)
+                    try:
+                        fill = self.adapter.quote_exit(
+                            target_px=dec.target_px, direction=pos.direction,
+                            price_step=spec_step_by_symbol.get(sym, step),
+                            reason=dec.reason)
+                    except FillRejected as rej:
+                        precision_rejects.append({"symbol": sym, "stage": "exit_intrabar",
+                                                  "timestamp": int(t_now), **rej.detail})
+                        invalid_reasons.append(f"exit_intrabar_fill_rejected:{rej.reason}")
+                        unclosed_positions.append(sym)
+                        pos.last_mark_price = cl
+                        continue
+                    exit_audit = getattr(self.adapter, "last_exit_audit", None)
                     intent = self._exit_intent(pos, action=ACTION_EXIT_STOP,
                                                phase=ExecPhase.D_INTRABAR.value,
                                                reason=dec.reason, symbol=sym,
@@ -455,7 +678,7 @@ class TradingCore:
                     cash, rec = _close_position(pos, cash, fill, exit_fee, fee,
                                                 int(t_now), dec.reason, open_positions,
                                                 sym, raw_target_px=pos.current_stop,
-                                                order=o)
+                                                order=o, exit_audit=exit_audit)
                     self._fill_order(o, price=fill, qty=pos.qty, fee=exit_fee,
                                      ts=int(t_now), liquidity=Liquidity.TAKER,
                                      detail={"reason": dec.reason})
@@ -493,9 +716,18 @@ class TradingCore:
                 arr = arrays[sym]
                 last_close = float(arr["close"][-1])
                 dec = self.policy.decide_eod_exit(pos=pos, last_close=last_close, symbol=sym)
-                fill = self.adapter.quote_exit(target_px=dec.target_px,
-                                               direction=pos.direction,
-                                               price_step=step, reason=dec.reason)
+                try:
+                    fill = self.adapter.quote_exit(
+                        target_px=dec.target_px, direction=pos.direction,
+                        price_step=spec_step_by_symbol.get(sym, step),
+                        reason=dec.reason)
+                except FillRejected as rej:
+                    precision_rejects.append({"symbol": sym, "stage": "exit_eod",
+                                              "timestamp": int(last_ts), **rej.detail})
+                    invalid_reasons.append(f"exit_eod_fill_rejected:{rej.reason}")
+                    unclosed_positions.append(sym)
+                    continue
+                exit_audit = getattr(self.adapter, "last_exit_audit", None)
                 intent = self._exit_intent(pos, action=ACTION_EXIT_EOD,
                                            phase=ExecPhase.EOD.value,
                                            reason=dec.reason, symbol=sym,
@@ -504,7 +736,8 @@ class TradingCore:
                 exit_fee = self.adapter.fill_fee(fill, pos.qty)
                 cash, rec = _close_position(pos, cash, fill, exit_fee, fee, int(last_ts),
                                             dec.reason, open_positions, sym,
-                                            raw_target_px=last_close, order=o)
+                                            raw_target_px=last_close, order=o,
+                                            exit_audit=exit_audit)
                 self._fill_order(o, price=fill, qty=pos.qty, fee=exit_fee,
                                  ts=int(last_ts), liquidity=Liquidity.TAKER,
                                  detail={"reason": dec.reason})
@@ -542,6 +775,8 @@ class TradingCore:
         net_closed = sum(r["net_pnl"] for r in closed)
         un_net_open = unrealized_net_open(open_positions, fee)
         sum_slip = float(sum(r.get("slippage_loss", 0.0) for r in closed))
+        sum_slip_pure = float(sum(r.get("slippage_loss_pure", 0.0) for r in closed))
+        sum_round = float(sum(r.get("rounding_loss", 0.0) for r in closed))
         total_funding = float(sum(r["funding_fee"] for r in closed)
                               + sum(p.cum_funding_fee for p in open_positions.values()))
         recon = {
@@ -552,6 +787,10 @@ class TradingCore:
             "sum_exit_fee": float(sum_exit_fee),
             "sum_fees": float(sum_entry_fee + sum_exit_fee),
             "sum_slippage_loss": sum_slip,
+            # 成本分账（加性）：纯滑点 + 取整，恒等于 sum_slippage_loss
+            "sum_slippage_loss_pure": sum_slip_pure,
+            "sum_rounding_loss": sum_round,
+            "slippage_split_ok": abs(sum_slip - (sum_slip_pure + sum_round)) < 1e-9,
             "sum_funding_fee": total_funding,
             "funding_settlement_model": cfg.funding_model,
             "fee_model": {"tier": "Binance_VIP0", "maker_fee_rate": maker_fee,
@@ -600,6 +839,10 @@ class TradingCore:
             "close_open_positions_at_end": bool(close_at_end),
             "close_open_positions_at_end_source":
                 self.policy.close_at_end_source(close_open_positions_at_end),
+            # 成交精度审计（加性）：规格来源、步长、拒绝明细、运行有效性
+            "precision": self._precision_block(precision_rejects, precision_audit,
+                                               invalid_reasons, unclosed_positions,
+                                               spec_step_by_symbol),
         }
         if self.collect_contracts:
             out["trading_core"] = self.contract_block()
@@ -618,6 +861,31 @@ class TradingCore:
             "registry_unique_keys": len(self.registry),
             "ledger_event_counts": dict(sorted(self._ledger_counts.items())),
             "ledger_events_total": int(sum(self._ledger_counts.values())),
+        }
+
+    # ── 精度审计块（加性；不参与既有数值判据）──
+    def _precision_block(self, rejects: List[dict], audit: List[dict],
+                         invalid_reasons: List[str], unclosed: List[str],
+                         steps: Dict[str, Any]) -> dict:
+        specs = {}
+        for sym, spec in self.instrument_specs.items():
+            try:
+                specs[sym] = spec.identity()
+            except AttributeError:
+                specs[sym] = {"raw": repr(spec)}
+        return {
+            "spec_status": ("spec_applied" if self.instrument_specs
+                            else "declared_no_spec"),
+            "specs": specs,
+            "price_steps": {s: (str(v) if isinstance(v, str) else float(v))
+                            for s, v in steps.items()},
+            "rejects": rejects,
+            "rejects_count": len(rejects),
+            "audit": audit[:200],
+            "audit_count": len(audit),
+            "run_valid": not invalid_reasons,
+            "invalid_reasons": sorted(set(invalid_reasons)),
+            "unclosed_positions": sorted(set(unclosed)),
         }
 
     def _exit_intent(self, pos: Position, *, action: str, phase: str, reason: str,
@@ -713,13 +981,34 @@ def _close_position(pos: Position, cash: float, fill: float, exit_fee: float,
                     fee: float, ts: int, reason: str,
                     store: Dict[str, Position], sym: str,
                     raw_target_px: Optional[float] = None,
-                    order: Optional[Order] = None) -> Tuple[float, dict]:
-    """平仓记账（**入场费不重复计**：入场时已在现金中扣过一次）。"""
+                    order: Optional[Order] = None,
+                    exit_audit: Optional[dict] = None) -> Tuple[float, dict]:
+    """平仓记账（**入场费不重复计**：入场时已在现金中扣过一次）。
+
+    成本分账（加性）：
+      `slippage_loss`      保持**原有口径** = 入场 + 出场相对各自原价的总执行成本；
+      `slippage_loss_pure` 只含滑点部分；
+      `rounding_loss`      只含 tick 取整部分。
+    三者满足 `slippage_loss == slippage_loss_pure + rounding_loss`（浮点容差内）。
+    """
     gross = (fill - pos.entry_price) * pos.qty * pos.direction
     cash += gross - exit_fee
     target_px = raw_target_px if raw_target_px is not None else fill
     exit_slip_loss = abs(fill - target_px) * pos.qty
     total_slip_loss = getattr(pos, "entry_slip_loss", 0.0) + exit_slip_loss
+
+    entry_pure = float(getattr(pos, "entry_slip_pure", 0.0))
+    entry_round = float(getattr(pos, "entry_round_loss", 0.0))
+    exit_pure, exit_round = exit_slip_loss, 0.0
+    if exit_audit:
+        try:
+            _raw = float(exit_audit["raw_price"])
+            _ps = float(exit_audit["post_slip_price"])
+            exit_pure = abs(_ps - _raw) * pos.qty
+            exit_round = abs(fill - _ps) * pos.qty
+        except (KeyError, TypeError, ValueError):
+            exit_pure, exit_round = exit_slip_loss, 0.0
+
     rec = {
         "symbol": sym, "direction": pos.direction, "signal_type": pos.signal_type,
         "entry_time": int(pos.entry_time), "exit_time": int(ts),
@@ -727,10 +1016,22 @@ def _close_position(pos: Position, cash: float, fill: float, exit_fee: float,
         "gross_pnl": gross, "entry_fee": pos.entry_fee, "exit_fee": exit_fee,
         "fees": pos.entry_fee + exit_fee, "funding_fee": pos.cum_funding_fee,
         "slippage_loss": total_slip_loss,
+        # 分账（加性；不改上面任何既有字段的数值）
+        "slippage_loss_pure": entry_pure + exit_pure,
+        "rounding_loss": entry_round + exit_round,
+        "price_audit": {
+            "entry": dict(getattr(pos, "entry_price_audit", {}) or {}),
+            "exit": dict(exit_audit or {}),
+        },
         "net_pnl": gross - pos.entry_fee - exit_fee - pos.cum_funding_fee,
         "mfe": pos.mfe, "mae": pos.mae, "exit_reason": reason,
         "funding_gaps": list(pos.funding_gaps),
         "stop_trace": list(pos.stop_trace),
+        # 身份贯穿（加性，非行为字段）：成交 ← 订单 ← 信号 ← 候选
+        #   signal_id / order_id 来自真实开仓订单，不由下游按时间近似或拼接生成。
+        "signal_id": getattr(pos, "signal_id", None),
+        "order_id": getattr(pos, "order_id", None),
+        "exit_order_id": (order.order_id if order is not None else None),
     }
     del store[sym]
     return cash, rec

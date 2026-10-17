@@ -1,0 +1,16 @@
+PRECISION-07 / 工具 40 · R6 插入位置的方案对比
+
+基线（无闸门）：93 passed / 0 failed
+
+S1 R6 在 _guard（取整前，P06 做法）：91 passed / 2 failed
+    ✗ test_price_below_one_cent_with_cent_step_must_be_rejected
+    ✗ test_exit_failure_keeps_position_open_and_marks_run_invalid
+
+S2 R6 在取整之后（本窗口建议）：92 passed / 1 failed
+    ✗ test_exit_failure_keeps_position_open_and_marks_run_invalid
+
+R7 为何不给影响面数字：
+  FillAdapter 协议只收 raw_price / price_step（fill.py:179-183），
+  影子类拿不到 bar_low / bar_high ⇒ 无法在进程内注入 R7。
+  必须在 engine.py 落地后实测；本窗口只给 L2 离线回放（62 腿拒 27、误伤 0）。
+

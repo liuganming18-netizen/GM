@@ -1,0 +1,919 @@
+{
+  "runs": [
+    {
+      "symbol": "LPTUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_LPTUSDT_1792173591",
+      "ledger": {
+        "trade_id": "trd_eb941d2defdde27285ef06e2",
+        "trades_jsonl_has_trade_id": false,
+        "entry_time_ms": 1705040100000,
+        "entry_price": 8.91,
+        "exit_time_ms": 1705904100000,
+        "exit_price": 7.44,
+        "exit_reason": "max_holding_expired",
+        "qty": 3.4887271524329835,
+        "gross_pnl": -5.128428914076485,
+        "entry_fee": 0.015542279464088942,
+        "exit_fee": 0.012978065007050699,
+        "fees": 0.02852034447113964,
+        "funding_fee": 0.08514986645188688,
+        "net_pnl": -5.242099124999512,
+        "order_id": "ord_51d8c7c90b76a25e8ecf7b3c",
+        "exit_order_id": "ord_65fbb99bace0009d51158b8a",
+        "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_LPTUSDT_1704384000000_1705039200000",
+        "stop_trace_points_ledger": 1,
+        "orders_jsonl_count": 2,
+        "funding_jsonl_count": 60,
+        "candidates_jsonl_count": 1,
+        "equity_jsonl_count": 17376
+      },
+      "api_trades": {
+        "trade_id": "trd_eb941d2defdde27285ef06e2",
+        "trade_id_source": "ledger:positions.POSITION_CLOSED",
+        "entry_order_id": "ord_51d8c7c90b76a25e8ecf7b3c",
+        "exit_order_id": "ord_65fbb99bace0009d51158b8a",
+        "entry_order_found": true,
+        "exit_order_found": true,
+        "linked_order_count": 2,
+        "holding_hours": 240.0,
+        "funding_events": 60,
+        "stop_trace_points": 1,
+        "stop_trace_json": "[{\"t\": 1705040100000, \"stop\": 6.052921512842667, \"reason\": \"init\"}]",
+        "total": 1,
+        "unresolved_trade_ids": 0,
+        "link_notes": [],
+        "ledger_vs_api_diffs": []
+      },
+      "api_trade_detail": {
+        "http_code": 200,
+        "trade_id": "trd_eb941d2defdde27285ef06e2",
+        "orders_count": 2,
+        "order_ids": [
+          "ord_51d8c7c90b76a25e8ecf7b3c",
+          "ord_65fbb99bace0009d51158b8a"
+        ],
+        "order_ts_ms": [
+          1705040100000,
+          1705904100000
+        ],
+        "funding_count": 60,
+        "funding_trade_link": [
+          "time_window_unique"
+        ],
+        "funding_sum_amount": -0.08514986645241152,
+        "original_signal_present": true,
+        "original_signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_LPTUSDT_1704384000000_1705039200000",
+        "funding_cross_check": {
+          "trade_id": "trd_eb941d2defdde27285ef06e2",
+          "events": 60,
+          "sum_neg_delta": 0.08514986645241152,
+          "ledger_funding_fee": 0.08514986645188688,
+          "match": true
+        },
+        "missing": []
+      },
+      "api_orders_global": {
+        "total": 2,
+        "unlinked": 0,
+        "linked_to_this_trade": 2
+      },
+      "chart": {
+        "candles": 17376,
+        "candle_format": "tuple",
+        "signals": 1,
+        "signal_times_ok": true,
+        "trades": 1,
+        "chart_trade_trade_id": "trd_eb941d2defdde27285ef06e2",
+        "stop_trace_points_chart": 1,
+        "stop_trace_all_have_t": true,
+        "stop_trace_raw_keys": [
+          "reason",
+          "stop",
+          "t",
+          "ts"
+        ],
+        "funding_events": 60,
+        "funding_events_with_trade_id": 60,
+        "benchmark_return_pct": 93.73115577889446,
+        "stop_trace_source": "ledger:trades.jsonl.stop_trace（官方 `t` 毫秒；无后续调整时只有 1 个 init 点，不合成）"
+      },
+      "metrics": {
+        "trades_count": 1,
+        "wins": 0,
+        "losses": 1,
+        "flats": 0,
+        "win_rate_pct": 0.0,
+        "net_pnl": -5.242099124999512,
+        "net_return_pct": -0.2621049562500048,
+        "gross_pnl": -5.128428914076485,
+        "total_fees": 0.02852034447113964,
+        "total_funding_fee": 0.08514986645188688,
+        "profit_factor": 0.0,
+        "profit_factor_basis": "Σ盈利净额 / |Σ亏损净额|（聚合口径，扣费后）",
+        "avg_win_loss_ratio": null,
+        "avg_win_loss_ratio_basis": "平均盈利净额 / |平均亏损净额|（均值口径，扣费后）",
+        "max_drawdown_pct": 0.37705267641019957,
+        "max_drawdown_basis": "equity_curve.total_equity 逐点峰值回撤（含未实现浮盈浮亏，15m 粒度；峰值起点=首个权益点）",
+        "max_drawdown_detail": {
+          "peak_index": 1084,
+          "trough_index": 1794,
+          "peak_equity": 2000.1397775977257,
+          "trough_equity": 1992.5981970343485,
+          "points": 17376
+        },
+        "equity_points": 17376,
+        "win_loss_basis": "net_pnl（已扣手续费与资金费）>0 为盈、<0 为亏、=0 为平",
+        "stored_summary": {
+          "initial_equity": 2000.0,
+          "final_equity": 1994.757900875,
+          "net_pnl": -5.242099124999512,
+          "net_return_pct": -0.2621049562499756,
+          "trades_count": 1,
+          "wins": null,
+          "losses": null,
+          "win_rate_pct": null,
+          "max_drawdown_pct": null,
+          "profit_factor": null,
+          "avg_win_loss_ratio": null,
+          "basis": "summary.json 落盘原值（该文件未统计的字段一律 null，不填 0）；胜负/回撤/PF/盈亏比的真实值由 GET /metrics 从本 run 账本现算"
+        },
+        "notes": [
+          "缺少盈利单或亏损单 ⇒ 平均盈亏比无定义（不填 0）"
+        ]
+      },
+      "equity": {
+        "points": 17376,
+        "benchmark_kind": "buy_and_hold_price_only",
+        "benchmark_cost_model": "price_only（纯价格：不含手续费/滑点/资金费）",
+        "benchmark_net_return_pct": null,
+        "benchmark_price_only_return_pct": 92.06625980819528,
+        "benchmark_max_drawdown_pct": 63.87267320189448,
+        "benchmark_final_equity": 3874.623115577889,
+        "benchmark_series_points": 4344
+      }
+    },
+    {
+      "symbol": "OPUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_OPUSDT_1792172950",
+      "ledger": {
+        "trade_id": "trd_a01814754027b85386a054ca",
+        "trades_jsonl_has_trade_id": false,
+        "entry_time_ms": 1705068900000,
+        "entry_price": 4.16,
+        "exit_time_ms": 1705932900000,
+        "exit_price": 3.04,
+        "exit_reason": "max_holding_expired",
+        "qty": 8.298619208154234,
+        "gross_pnl": -9.294453513132742,
+        "entry_fee": 0.017261127952960805,
+        "exit_fee": 0.012613901196394436,
+        "fees": 0.02987502914935524,
+        "funding_fee": 0.08610500023084365,
+        "net_pnl": -9.41043354251294,
+        "order_id": "ord_6dfbc593396cb57a3bc6ebbc",
+        "exit_order_id": "ord_2becc7d044487cf28c467eee",
+        "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_OPUSDT_1704643200000_1705068000000",
+        "stop_trace_points_ledger": 1,
+        "orders_jsonl_count": 2,
+        "funding_jsonl_count": 30,
+        "candidates_jsonl_count": 1,
+        "equity_jsonl_count": 17376
+      },
+      "api_trades": {
+        "trade_id": "trd_a01814754027b85386a054ca",
+        "trade_id_source": "ledger:positions.POSITION_CLOSED",
+        "entry_order_id": "ord_6dfbc593396cb57a3bc6ebbc",
+        "exit_order_id": "ord_2becc7d044487cf28c467eee",
+        "entry_order_found": true,
+        "exit_order_found": true,
+        "linked_order_count": 2,
+        "holding_hours": 240.0,
+        "funding_events": 30,
+        "stop_trace_points": 1,
+        "stop_trace_json": "[{\"t\": 1705068900000, \"stop\": 2.9594273532169595, \"reason\": \"init\"}]",
+        "total": 1,
+        "unresolved_trade_ids": 0,
+        "link_notes": [],
+        "ledger_vs_api_diffs": []
+      },
+      "api_trade_detail": {
+        "http_code": 200,
+        "trade_id": "trd_a01814754027b85386a054ca",
+        "orders_count": 2,
+        "order_ids": [
+          "ord_6dfbc593396cb57a3bc6ebbc",
+          "ord_2becc7d044487cf28c467eee"
+        ],
+        "order_ts_ms": [
+          1705068900000,
+          1705932900000
+        ],
+        "funding_count": 30,
+        "funding_trade_link": [
+          "time_window_unique"
+        ],
+        "funding_sum_amount": -0.0861050002306456,
+        "original_signal_present": true,
+        "original_signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_OPUSDT_1704643200000_1705068000000",
+        "funding_cross_check": {
+          "trade_id": "trd_a01814754027b85386a054ca",
+          "events": 30,
+          "sum_neg_delta": 0.0861050002306456,
+          "ledger_funding_fee": 0.08610500023084365,
+          "match": true
+        },
+        "missing": []
+      },
+      "api_orders_global": {
+        "total": 2,
+        "unlinked": 0,
+        "linked_to_this_trade": 2
+      },
+      "chart": {
+        "candles": 17376,
+        "candle_format": "tuple",
+        "signals": 1,
+        "signal_times_ok": true,
+        "trades": 1,
+        "chart_trade_trade_id": "trd_a01814754027b85386a054ca",
+        "stop_trace_points_chart": 1,
+        "stop_trace_all_have_t": true,
+        "stop_trace_raw_keys": [
+          "reason",
+          "stop",
+          "t",
+          "ts"
+        ],
+        "funding_events": 30,
+        "funding_events_with_trade_id": 30,
+        "benchmark_return_pct": -53.00617134233432,
+        "stop_trace_source": "ledger:trades.jsonl.stop_trace（官方 `t` 毫秒；无后续调整时只有 1 个 init 点，不合成）"
+      },
+      "metrics": {
+        "trades_count": 1,
+        "wins": 0,
+        "losses": 1,
+        "flats": 0,
+        "win_rate_pct": 0.0,
+        "net_pnl": -9.41043354251294,
+        "net_return_pct": -0.4705216771256346,
+        "gross_pnl": -9.294453513132742,
+        "total_fees": 0.02987502914935524,
+        "total_funding_fee": 0.08610500023084365,
+        "profit_factor": 0.0,
+        "profit_factor_basis": "Σ盈利净额 / |Σ亏损净额|（聚合口径，扣费后）",
+        "avg_win_loss_ratio": null,
+        "avg_win_loss_ratio_basis": "平均盈利净额 / |平均亏损净额|（均值口径，扣费后）",
+        "max_drawdown_pct": 0.5137654804353509,
+        "max_drawdown_basis": "equity_curve.total_equity 逐点峰值回撤（含未实现浮盈浮亏，15m 粒度；峰值起点=首个权益点）",
+        "max_drawdown_detail": {
+          "peak_index": 1116,
+          "trough_index": 2065,
+          "peak_equity": 2000.5917102214346,
+          "trough_equity": 1990.3133606098656,
+          "points": 17376
+        },
+        "equity_points": 17376,
+        "win_loss_basis": "net_pnl（已扣手续费与资金费）>0 为盈、<0 为亏、=0 为平",
+        "stored_summary": {
+          "initial_equity": 2000.0,
+          "final_equity": 1990.5895664574873,
+          "net_pnl": -9.41043354251294,
+          "net_return_pct": -0.470521677125647,
+          "trades_count": 1,
+          "wins": null,
+          "losses": null,
+          "win_rate_pct": null,
+          "max_drawdown_pct": null,
+          "profit_factor": null,
+          "avg_win_loss_ratio": null,
+          "basis": "summary.json 落盘原值（该文件未统计的字段一律 null，不填 0）；胜负/回撤/PF/盈亏比的真实值由 GET /metrics 从本 run 账本现算"
+        },
+        "notes": [
+          "缺少盈利单或亏损单 ⇒ 平均盈亏比无定义（不填 0）"
+        ]
+      },
+      "equity": {
+        "points": 17376,
+        "benchmark_kind": "buy_and_hold_price_only",
+        "benchmark_cost_model": "price_only（纯价格：不含手续费/滑点/资金费）",
+        "benchmark_net_return_pct": null,
+        "benchmark_price_only_return_pct": -53.934751023642846,
+        "benchmark_max_drawdown_pct": 64.81747868326141,
+        "benchmark_final_equity": 939.8765731533134,
+        "benchmark_series_points": 4344
+      }
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568",
+      "ledger": {
+        "trade_id": "trd_4b7e88ebe45d27376fb18ca0",
+        "trades_jsonl_has_trade_id": false,
+        "entry_time_ms": 1717074900000,
+        "entry_price": 47.79,
+        "exit_time_ms": 1717938900000,
+        "exit_price": 62.050000000000004,
+        "exit_reason": "max_holding_expired",
+        "qty": 0.8581093808359787,
+        "gross_pnl": 12.23663977072106,
+        "entry_fee": 0.02050452365507571,
+        "exit_fee": 0.02662284354043624,
+        "fees": 0.04712736719551195,
+        "funding_fee": 0.19719087034498134,
+        "net_pnl": 11.992321533180569,
+        "order_id": "ord_4895069a82f75d95990b2518",
+        "exit_order_id": "ord_53fe59c02fc7103c1f061790",
+        "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_ORDIUSDT_1716364800000_1717074000000",
+        "stop_trace_points_ledger": 1,
+        "orders_jsonl_count": 2,
+        "funding_jsonl_count": 60,
+        "candidates_jsonl_count": 1,
+        "equity_jsonl_count": 17376
+      },
+      "api_trades": {
+        "trade_id": "trd_4b7e88ebe45d27376fb18ca0",
+        "trade_id_source": "ledger:positions.POSITION_CLOSED",
+        "entry_order_id": "ord_4895069a82f75d95990b2518",
+        "exit_order_id": "ord_53fe59c02fc7103c1f061790",
+        "entry_order_found": true,
+        "exit_order_found": true,
+        "linked_order_count": 2,
+        "holding_hours": 240.0,
+        "funding_events": 60,
+        "stop_trace_points": 1,
+        "stop_trace_json": "[{\"t\": 1717074900000, \"stop\": 36.189315000781086, \"reason\": \"init\"}]",
+        "total": 1,
+        "unresolved_trade_ids": 0,
+        "link_notes": [],
+        "ledger_vs_api_diffs": []
+      },
+      "api_trade_detail": {
+        "http_code": 200,
+        "trade_id": "trd_4b7e88ebe45d27376fb18ca0",
+        "orders_count": 2,
+        "order_ids": [
+          "ord_4895069a82f75d95990b2518",
+          "ord_53fe59c02fc7103c1f061790"
+        ],
+        "order_ts_ms": [
+          1717074900000,
+          1717938900000
+        ],
+        "funding_count": 60,
+        "funding_trade_link": [
+          "time_window_unique"
+        ],
+        "funding_sum_amount": -0.19719087034536642,
+        "original_signal_present": true,
+        "original_signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_ORDIUSDT_1716364800000_1717074000000",
+        "funding_cross_check": {
+          "trade_id": "trd_4b7e88ebe45d27376fb18ca0",
+          "events": 60,
+          "sum_neg_delta": 0.19719087034536642,
+          "ledger_funding_fee": 0.19719087034498134,
+          "match": true
+        },
+        "missing": []
+      },
+      "api_orders_global": {
+        "total": 2,
+        "unlinked": 0,
+        "linked_to_this_trade": 2
+      },
+      "chart": {
+        "candles": 17376,
+        "candle_format": "tuple",
+        "signals": 1,
+        "signal_times_ok": true,
+        "trades": 1,
+        "chart_trade_trade_id": "trd_4b7e88ebe45d27376fb18ca0",
+        "stop_trace_points_chart": 1,
+        "stop_trace_all_have_t": true,
+        "stop_trace_raw_keys": [
+          "reason",
+          "stop",
+          "t",
+          "ts"
+        ],
+        "funding_events": 60,
+        "funding_events_with_trade_id": 60,
+        "benchmark_return_pct": -49.63754729721121,
+        "stop_trace_source": "ledger:trades.jsonl.stop_trace（官方 `t` 毫秒；无后续调整时只有 1 个 init 点，不合成）"
+      },
+      "metrics": {
+        "trades_count": 1,
+        "wins": 1,
+        "losses": 0,
+        "flats": 0,
+        "win_rate_pct": 100.0,
+        "net_pnl": 11.992321533180569,
+        "net_return_pct": 0.5996160766590151,
+        "gross_pnl": 12.23663977072106,
+        "total_fees": 0.04712736719551195,
+        "total_funding_fee": 0.19719087034498134,
+        "profit_factor": null,
+        "profit_factor_basis": "Σ盈利净额 / |Σ亏损净额|（聚合口径，扣费后）",
+        "avg_win_loss_ratio": null,
+        "avg_win_loss_ratio_basis": "平均盈利净额 / |平均亏损净额|（均值口径，扣费后）",
+        "max_drawdown_pct": 0.3753215367567523,
+        "max_drawdown_basis": "equity_curve.total_equity 逐点峰值回撤（含未实现浮盈浮亏，15m 粒度；峰值起点=首个权益点）",
+        "max_drawdown_detail": {
+          "peak_index": 15234,
+          "trough_index": 15240,
+          "peak_equity": 2014.6218681289415,
+          "trough_equity": 2007.0605583736424,
+          "points": 17376
+        },
+        "equity_points": 17376,
+        "win_loss_basis": "net_pnl（已扣手续费与资金费）>0 为盈、<0 为亏、=0 为平",
+        "stored_summary": {
+          "initial_equity": 2000.0,
+          "final_equity": 2011.9923215331803,
+          "net_pnl": 11.992321533180569,
+          "net_return_pct": 0.5996160766590285,
+          "trades_count": 1,
+          "wins": null,
+          "losses": null,
+          "win_rate_pct": null,
+          "max_drawdown_pct": null,
+          "profit_factor": null,
+          "avg_win_loss_ratio": null,
+          "basis": "summary.json 落盘原值（该文件未统计的字段一律 null，不填 0）；胜负/回撤/PF/盈亏比的真实值由 GET /metrics 从本 run 账本现算"
+        },
+        "notes": [
+          "无亏损交易 ⇒ profit_factor 分母为 0，无定义（不输出 inf）",
+          "缺少盈利单或亏损单 ⇒ 平均盈亏比无定义（不填 0）"
+        ]
+      },
+      "equity": {
+        "points": 17376,
+        "benchmark_kind": "buy_and_hold_price_only",
+        "benchmark_cost_model": "price_only（纯价格：不含手续费/滑点/资金费）",
+        "benchmark_net_return_pct": null,
+        "benchmark_price_only_return_pct": -50.457439342289945,
+        "benchmark_max_drawdown_pct": 66.3627527626936,
+        "benchmark_final_equity": 1007.2490540557757,
+        "benchmark_series_points": 4344
+      }
+    },
+    {
+      "symbol": "ACEUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577",
+      "ledger": {
+        "trade_id": "trd_d574e8cd27bd34df692444e9",
+        "trades_jsonl_has_trade_id": false,
+        "entry_time_ms": 1708920900000,
+        "entry_price": 11.74,
+        "exit_time_ms": 1709784900000,
+        "exit_price": 12.88,
+        "exit_reason": "max_holding_expired",
+        "qty": 4.35789617082141,
+        "gross_pnl": 4.968001634736409,
+        "entry_fee": 0.025580850522721677,
+        "exit_fee": 0.02806485134008988,
+        "fees": 0.05364570186281156,
+        "funding_fee": 1.1653637366513157,
+        "net_pnl": 3.7489921962222827,
+        "order_id": "ord_7f944079418a013c400b0e94",
+        "exit_order_id": "ord_fcd89cdb2ac41ac1e4a0e3db",
+        "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_ACEUSDT_1708516800000_1708920000000",
+        "stop_trace_points_ledger": 1,
+        "orders_jsonl_count": 2,
+        "funding_jsonl_count": 60,
+        "candidates_jsonl_count": 1,
+        "equity_jsonl_count": 17376
+      },
+      "api_trades": {
+        "trade_id": "trd_d574e8cd27bd34df692444e9",
+        "trade_id_source": "ledger:positions.POSITION_CLOSED",
+        "entry_order_id": "ord_7f944079418a013c400b0e94",
+        "exit_order_id": "ord_fcd89cdb2ac41ac1e4a0e3db",
+        "entry_order_found": true,
+        "exit_order_found": true,
+        "linked_order_count": 2,
+        "holding_hours": 240.0,
+        "funding_events": 60,
+        "stop_trace_points": 1,
+        "stop_trace_json": "[{\"t\": 1708920900000, \"stop\": 9.458750346199814, \"reason\": \"init\"}]",
+        "total": 1,
+        "unresolved_trade_ids": 0,
+        "link_notes": [],
+        "ledger_vs_api_diffs": []
+      },
+      "api_trade_detail": {
+        "http_code": 200,
+        "trade_id": "trd_d574e8cd27bd34df692444e9",
+        "orders_count": 2,
+        "order_ids": [
+          "ord_7f944079418a013c400b0e94",
+          "ord_fcd89cdb2ac41ac1e4a0e3db"
+        ],
+        "order_ts_ms": [
+          1708920900000,
+          1709784900000
+        ],
+        "funding_count": 60,
+        "funding_trade_link": [
+          "time_window_unique"
+        ],
+        "funding_sum_amount": -1.1653637366516705,
+        "original_signal_present": true,
+        "original_signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_ACEUSDT_1708516800000_1708920000000",
+        "funding_cross_check": {
+          "trade_id": "trd_d574e8cd27bd34df692444e9",
+          "events": 60,
+          "sum_neg_delta": 1.1653637366516705,
+          "ledger_funding_fee": 1.1653637366513157,
+          "match": true
+        },
+        "missing": []
+      },
+      "api_orders_global": {
+        "total": 2,
+        "unlinked": 0,
+        "linked_to_this_trade": 2
+      },
+      "chart": {
+        "candles": 17376,
+        "candle_format": "tuple",
+        "signals": 1,
+        "signal_times_ok": true,
+        "trades": 1,
+        "chart_trade_trade_id": "trd_d574e8cd27bd34df692444e9",
+        "stop_trace_points_chart": 1,
+        "stop_trace_all_have_t": true,
+        "stop_trace_raw_keys": [
+          "reason",
+          "stop",
+          "t",
+          "ts"
+        ],
+        "funding_events": 60,
+        "funding_events_with_trade_id": 60,
+        "benchmark_return_pct": -65.88530227874139,
+        "stop_trace_source": "ledger:trades.jsonl.stop_trace（官方 `t` 毫秒；无后续调整时只有 1 个 init 点，不合成）"
+      },
+      "metrics": {
+        "trades_count": 1,
+        "wins": 1,
+        "losses": 0,
+        "flats": 0,
+        "win_rate_pct": 100.0,
+        "net_pnl": 3.7489921962222827,
+        "net_return_pct": 0.1874496098110967,
+        "gross_pnl": 4.968001634736409,
+        "total_fees": 0.05364570186281156,
+        "total_funding_fee": 1.1653637366513157,
+        "profit_factor": null,
+        "profit_factor_basis": "Σ盈利净额 / |Σ亏损净额|（聚合口径，扣费后）",
+        "avg_win_loss_ratio": null,
+        "avg_win_loss_ratio_basis": "平均盈利净额 / |平均亏损净额|（均值口径，扣费后）",
+        "max_drawdown_pct": 0.6574400262686091,
+        "max_drawdown_basis": "equity_curve.total_equity 逐点峰值回撤（含未实现浮盈浮亏，15m 粒度；峰值起点=首个权益点）",
+        "max_drawdown_detail": {
+          "peak_index": 6096,
+          "trough_index": 6226,
+          "peak_equity": 2009.246591156742,
+          "trough_equity": 1996.03699984004,
+          "points": 17376
+        },
+        "equity_points": 17376,
+        "win_loss_basis": "net_pnl（已扣手续费与资金费）>0 为盈、<0 为亏、=0 为平",
+        "stored_summary": {
+          "initial_equity": 2000.0,
+          "final_equity": 2003.748992196222,
+          "net_pnl": 3.7489921962222827,
+          "net_return_pct": 0.18744960981111414,
+          "trades_count": 1,
+          "wins": null,
+          "losses": null,
+          "win_rate_pct": null,
+          "max_drawdown_pct": null,
+          "profit_factor": null,
+          "avg_win_loss_ratio": null,
+          "basis": "summary.json 落盘原值（该文件未统计的字段一律 null，不填 0）；胜负/回撤/PF/盈亏比的真实值由 GET /metrics 从本 run 账本现算"
+        },
+        "notes": [
+          "无亏损交易 ⇒ profit_factor 分母为 0，无定义（不输出 inf）",
+          "缺少盈利单或亏损单 ⇒ 平均盈亏比无定义（不填 0）"
+        ]
+      },
+      "equity": {
+        "points": 17376,
+        "benchmark_kind": "buy_and_hold_price_only",
+        "benchmark_cost_model": "price_only（纯价格：不含手续费/滑点/资金费）",
+        "benchmark_net_return_pct": null,
+        "benchmark_price_only_return_pct": -65.40458910955628,
+        "benchmark_max_drawdown_pct": 77.3758774547418,
+        "benchmark_final_equity": 682.2939544251723,
+        "benchmark_series_points": 4344
+      }
+    },
+    {
+      "symbol": "BNBUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973",
+      "ledger": {
+        "trade_id": "trd_ae5861c5781bd75236471b3e",
+        "trades_jsonl_has_trade_id": false,
+        "entry_time_ms": 1705328100000,
+        "entry_price": 317.78000000000003,
+        "exit_time_ms": 1706018400000,
+        "exit_price": 290.15000000000003,
+        "exit_reason": "intrabar_stop",
+        "qty": 0.3580728990522076,
+        "gross_pnl": -9.893554200812495,
+        "entry_fee": 0.05689420293040528,
+        "exit_fee": 0.051947425829999026,
+        "fees": 0.1088416287604043,
+        "funding_fee": -0.9972197337644272,
+        "net_pnl": -9.005176095808473,
+        "order_id": "ord_d22221ef12d64627cc4d00d4",
+        "exit_order_id": "ord_2c8fce2acd290a7107135616",
+        "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_BNBUSDT_1705089600000_1705327200000",
+        "stop_trace_points_ledger": 1,
+        "orders_jsonl_count": 2,
+        "funding_jsonl_count": 22,
+        "candidates_jsonl_count": 1,
+        "equity_jsonl_count": 17376
+      },
+      "api_trades": {
+        "trade_id": "trd_ae5861c5781bd75236471b3e",
+        "trade_id_source": "ledger:positions.POSITION_CLOSED",
+        "entry_order_id": "ord_d22221ef12d64627cc4d00d4",
+        "exit_order_id": "ord_2c8fce2acd290a7107135616",
+        "entry_order_found": true,
+        "exit_order_found": true,
+        "linked_order_count": 2,
+        "holding_hours": 191.75,
+        "funding_events": 22,
+        "stop_trace_points": 1,
+        "stop_trace_json": "[{\"t\": 1705328100000, \"stop\": 290.2437673762541, \"reason\": \"init\"}]",
+        "total": 1,
+        "unresolved_trade_ids": 0,
+        "link_notes": [],
+        "ledger_vs_api_diffs": []
+      },
+      "api_trade_detail": {
+        "http_code": 200,
+        "trade_id": "trd_ae5861c5781bd75236471b3e",
+        "orders_count": 2,
+        "order_ids": [
+          "ord_d22221ef12d64627cc4d00d4",
+          "ord_2c8fce2acd290a7107135616"
+        ],
+        "order_ts_ms": [
+          1705328100000,
+          1706018400000
+        ],
+        "funding_count": 22,
+        "funding_trade_link": [
+          "time_window_unique"
+        ],
+        "funding_sum_amount": 0.9972197337649504,
+        "original_signal_present": true,
+        "original_signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_BNBUSDT_1705089600000_1705327200000",
+        "funding_cross_check": {
+          "trade_id": "trd_ae5861c5781bd75236471b3e",
+          "events": 22,
+          "sum_neg_delta": -0.9972197337649504,
+          "ledger_funding_fee": -0.9972197337644272,
+          "match": true
+        },
+        "missing": []
+      },
+      "api_orders_global": {
+        "total": 2,
+        "unlinked": 0,
+        "linked_to_this_trade": 2
+      },
+      "chart": {
+        "candles": 17376,
+        "candle_format": "tuple",
+        "signals": 1,
+        "signal_times_ok": true,
+        "trades": 1,
+        "chart_trade_trade_id": "trd_ae5861c5781bd75236471b3e",
+        "stop_trace_points_chart": 1,
+        "stop_trace_all_have_t": true,
+        "stop_trace_raw_keys": [
+          "reason",
+          "stop",
+          "t",
+          "ts"
+        ],
+        "funding_events": 22,
+        "funding_events_with_trade_id": 22,
+        "benchmark_return_pct": 83.14007644621461,
+        "stop_trace_source": "ledger:trades.jsonl.stop_trace（官方 `t` 毫秒；无后续调整时只有 1 个 init 点，不合成）"
+      },
+      "metrics": {
+        "trades_count": 1,
+        "wins": 0,
+        "losses": 1,
+        "flats": 0,
+        "win_rate_pct": 0.0,
+        "net_pnl": -9.005176095808473,
+        "net_return_pct": -0.45025880479039415,
+        "gross_pnl": -9.893554200812495,
+        "total_fees": 0.1088416287604043,
+        "total_funding_fee": -0.9972197337644272,
+        "profit_factor": 0.0,
+        "profit_factor_basis": "Σ盈利净额 / |Σ亏损净额|（聚合口径，扣费后）",
+        "avg_win_loss_ratio": null,
+        "avg_win_loss_ratio_basis": "平均盈利净额 / |平均亏损净额|（均值口径，扣费后）",
+        "max_drawdown_pct": 0.5420020832131132,
+        "max_drawdown_basis": "equity_curve.total_equity 逐点峰值回撤（含未实现浮盈浮亏，15m 粒度；峰值起点=首个权益点）",
+        "max_drawdown_detail": {
+          "peak_index": 2007,
+          "trough_index": 2168,
+          "peak_equity": 2001.8448647739617,
+          "trough_equity": 1990.9948239041921,
+          "points": 17376
+        },
+        "equity_points": 17376,
+        "win_loss_basis": "net_pnl（已扣手续费与资金费）>0 为盈、<0 为亏、=0 为平",
+        "stored_summary": {
+          "initial_equity": 2000.0,
+          "final_equity": 1990.9948239041921,
+          "net_pnl": -9.005176095808473,
+          "net_return_pct": -0.45025880479042363,
+          "trades_count": 1,
+          "wins": null,
+          "losses": null,
+          "win_rate_pct": null,
+          "max_drawdown_pct": null,
+          "profit_factor": null,
+          "avg_win_loss_ratio": null,
+          "basis": "summary.json 落盘原值（该文件未统计的字段一律 null，不填 0）；胜负/回撤/PF/盈亏比的真实值由 GET /metrics 从本 run 账本现算"
+        },
+        "notes": [
+          "缺少盈利单或亏损单 ⇒ 平均盈亏比无定义（不填 0）"
+        ]
+      },
+      "equity": {
+        "points": 17376,
+        "benchmark_kind": "buy_and_hold_price_only",
+        "benchmark_cost_model": "price_only（纯价格：不含手续费/滑点/资金费）",
+        "benchmark_net_return_pct": null,
+        "benchmark_price_only_return_pct": 82.1280265763751,
+        "benchmark_max_drawdown_pct": 22.347956965271198,
+        "benchmark_final_equity": 3662.801528924292,
+        "benchmark_series_points": 4344
+      }
+    },
+    {
+      "symbol": "MOVRUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792171582",
+      "ledger": {
+        "trade_id": "trd_6d6be42bdeed0ceb56044e2c",
+        "trades_jsonl_has_trade_id": false,
+        "entry_time_ms": 1708262100000,
+        "entry_price": 23.89,
+        "exit_time_ms": 1708660800000,
+        "exit_price": 21.95,
+        "exit_reason": "intrabar_stop",
+        "qty": 5.117637415840447,
+        "gross_pnl": -9.928216586730473,
+        "entry_fee": 0.06113017893221414,
+        "exit_fee": 0.0561660706388489,
+        "fees": 0.11729624957106305,
+        "funding_fee": 0.61884417903072,
+        "net_pnl": -10.664357015332255,
+        "order_id": "ord_029a1fde3508cf42222c255a",
+        "exit_order_id": "ord_adabcbda71268b5caa1123e9",
+        "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_MOVRUSDT_1707969600000_1708261200000",
+        "stop_trace_points_ledger": 1,
+        "orders_jsonl_count": 2,
+        "funding_jsonl_count": 27,
+        "candidates_jsonl_count": 1,
+        "equity_jsonl_count": 17376
+      },
+      "api_trades": {
+        "trade_id": "trd_6d6be42bdeed0ceb56044e2c",
+        "trade_id_source": "ledger:positions.POSITION_CLOSED",
+        "entry_order_id": "ord_029a1fde3508cf42222c255a",
+        "exit_order_id": "ord_adabcbda71268b5caa1123e9",
+        "entry_order_found": true,
+        "exit_order_found": true,
+        "linked_order_count": 2,
+        "holding_hours": 110.75,
+        "funding_events": 27,
+        "stop_trace_points": 1,
+        "stop_trace_json": "[{\"t\": 1708262100000, \"stop\": 21.965487424714542, \"reason\": \"init\"}]",
+        "total": 1,
+        "unresolved_trade_ids": 0,
+        "link_notes": [],
+        "ledger_vs_api_diffs": []
+      },
+      "api_trade_detail": {
+        "http_code": 200,
+        "trade_id": "trd_6d6be42bdeed0ceb56044e2c",
+        "orders_count": 2,
+        "order_ids": [
+          "ord_029a1fde3508cf42222c255a",
+          "ord_adabcbda71268b5caa1123e9"
+        ],
+        "order_ts_ms": [
+          1708262100000,
+          1708660800000
+        ],
+        "funding_count": 27,
+        "funding_trade_link": [
+          "time_window_unique"
+        ],
+        "funding_sum_amount": -0.6188441790307024,
+        "original_signal_present": true,
+        "original_signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_MOVRUSDT_1707969600000_1708261200000",
+        "funding_cross_check": {
+          "trade_id": "trd_6d6be42bdeed0ceb56044e2c",
+          "events": 27,
+          "sum_neg_delta": 0.6188441790307024,
+          "ledger_funding_fee": 0.61884417903072,
+          "match": true
+        },
+        "missing": []
+      },
+      "api_orders_global": {
+        "total": 2,
+        "unlinked": 0,
+        "linked_to_this_trade": 2
+      },
+      "chart": {
+        "candles": 17376,
+        "candle_format": "tuple",
+        "signals": 1,
+        "signal_times_ok": true,
+        "trades": 1,
+        "chart_trade_trade_id": "trd_6d6be42bdeed0ceb56044e2c",
+        "stop_trace_points_chart": 1,
+        "stop_trace_all_have_t": true,
+        "stop_trace_raw_keys": [
+          "reason",
+          "stop",
+          "t",
+          "ts"
+        ],
+        "funding_events": 27,
+        "funding_events_with_trade_id": 27,
+        "benchmark_return_pct": -56.85074867171148,
+        "stop_trace_source": "ledger:trades.jsonl.stop_trace（官方 `t` 毫秒；无后续调整时只有 1 个 init 点，不合成）"
+      },
+      "metrics": {
+        "trades_count": 1,
+        "wins": 0,
+        "losses": 1,
+        "flats": 0,
+        "win_rate_pct": 0.0,
+        "net_pnl": -10.664357015332255,
+        "net_return_pct": -0.5332178507666071,
+        "gross_pnl": -9.928216586730473,
+        "total_fees": 0.11729624957106305,
+        "total_funding_fee": 0.61884417903072,
+        "profit_factor": 0.0,
+        "profit_factor_basis": "Σ盈利净额 / |Σ亏损净额|（聚合口径，扣费后）",
+        "avg_win_loss_ratio": null,
+        "avg_win_loss_ratio_basis": "平均盈利净额 / |平均亏损净额|（均值口径，扣费后）",
+        "max_drawdown_pct": 1.241989457662269,
+        "max_drawdown_basis": "equity_curve.total_equity 逐点峰值回撤（含未实现浮盈浮亏，15m 粒度；峰值起点=首个权益点）",
+        "max_drawdown_detail": {
+          "peak_index": 4730,
+          "trough_index": 5104,
+          "peak_equity": 2014.3537036237037,
+          "trough_equity": 1989.3356429846679,
+          "points": 17376
+        },
+        "equity_points": 17376,
+        "win_loss_basis": "net_pnl（已扣手续费与资金费）>0 为盈、<0 为亏、=0 为平",
+        "stored_summary": {
+          "initial_equity": 2000.0,
+          "final_equity": 1989.3356429846679,
+          "net_pnl": -10.664357015332255,
+          "net_return_pct": -0.5332178507666128,
+          "trades_count": 1,
+          "wins": null,
+          "losses": null,
+          "win_rate_pct": null,
+          "max_drawdown_pct": null,
+          "profit_factor": null,
+          "avg_win_loss_ratio": null,
+          "basis": "summary.json 落盘原值（该文件未统计的字段一律 null，不填 0）；胜负/回撤/PF/盈亏比的真实值由 GET /metrics 从本 run 账本现算"
+        },
+        "notes": [
+          "缺少盈利单或亏损单 ⇒ 平均盈亏比无定义（不填 0）"
+        ]
+      },
+      "equity": {
+        "points": 17376,
+        "benchmark_kind": "buy_and_hold_price_only",
+        "benchmark_cost_model": "price_only（纯价格：不含手续费/滑点/资金费）",
+        "benchmark_net_return_pct": null,
+        "benchmark_price_only_return_pct": -57.5512790053061,
+        "benchmark_max_drawdown_pct": 67.53824931025834,
+        "benchmark_final_equity": 862.9850265657703,
+        "benchmark_series_points": 4344
+      }
+    }
+  ],
+  "problems": []
+}

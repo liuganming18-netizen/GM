@@ -1,0 +1,124 @@
+{
+  "note": "夹具为**合成**数据，只用于验证状态穿透；不代表任何真实 run 的结果。RUNS_ROOT 已在进程内改指到本目录，未触碰 回测日志/。",
+  "runs_root_used": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-03/夹具/runs",
+  "formal_run_gate_static": {
+    "strategy_id": "WX_EVENT_TREND_V0_1",
+    "formal_run_allowed": false,
+    "run_frozen": false,
+    "gate_status": {
+      "G01": "pass",
+      "G02": "pass",
+      "G03": "pass",
+      "G04": "pending",
+      "G05": "pending"
+    },
+    "requirements": [
+      "真实数据覆盖",
+      "确定性状态迁移与四大对账通过",
+      "共享交易核心真实成交与成本对账",
+      "多标的独立回放验证"
+    ],
+    "blocking_reasons": [
+      "目前处于候选研究阶段，正式生产运行需通过实盘前置 Gate 审批"
+    ],
+    "ai_role": "AI 只能生成候选；确定性风控有最终权限",
+    "live_order_enabled": false,
+    "new_entry_switch_default": false
+  },
+  "rows": [
+    {
+      "run_id": "run_WX_EVENT_TREND_V0_1_FIXTURE_A_9000000001",
+      "case": "F1 新格式 summary：formal=False / run_valid=False（出场被拒、仓位未平）",
+      "doc_source": "_summary_to_run_doc",
+      "bottom_formal_pass_allowed": false,
+      "bottom_spec_status": "spec_applied",
+      "bottom_run_valid": false,
+      "bottom_invalid_reasons": [
+        "exit_fill_rejected:rounding_to_zero",
+        "unclosed_position_at_end"
+      ],
+      "bottom_unclosed_positions": [
+        "FIXUSDT"
+      ],
+      "api_doc_status": "succeeded",
+      "api_dq_status": "ok",
+      "api_quality_status": "ok",
+      "ui_quality_ok": true,
+      "ui_verdict": "通过（运行成功 + 质量 ok + 有质量明细）"
+    },
+    {
+      "run_id": "run_WX_EVENT_TREND_V0_1_FIXTURE_B_9000000002",
+      "case": "F2 新格式 summary：formal=True / run_valid=True（对照组）",
+      "doc_source": "_summary_to_run_doc",
+      "bottom_formal_pass_allowed": true,
+      "bottom_spec_status": "spec_applied",
+      "bottom_run_valid": true,
+      "bottom_invalid_reasons": [],
+      "bottom_unclosed_positions": [],
+      "api_doc_status": "succeeded",
+      "api_dq_status": "ok",
+      "api_quality_status": "ok",
+      "ui_quality_ok": true,
+      "ui_verdict": "通过（运行成功 + 质量 ok + 有质量明细）"
+    },
+    {
+      "run_id": "run_WX_EVENT_TREND_V0_1_FIXTURE_C_9000000003",
+      "case": "F3 主运行顶层 formal=True，但 summary_variant_b.formal=False",
+      "doc_source": "_summary_to_run_doc",
+      "bottom_formal_pass_allowed": true,
+      "bottom_spec_status": "spec_applied",
+      "bottom_run_valid": true,
+      "bottom_invalid_reasons": [],
+      "bottom_unclosed_positions": [],
+      "api_doc_status": "succeeded",
+      "api_dq_status": "ok",
+      "api_quality_status": "ok",
+      "ui_quality_ok": true,
+      "ui_verdict": "通过（运行成功 + 质量 ok + 有质量明细）"
+    },
+    {
+      "run_id": "run_WX_EVENT_TREND_V0_1_FIXTURE_D_9000000004",
+      "case": "F4 对照：summary 无 reconcile/identity（⇒ dq=unknown）",
+      "doc_source": "_summary_to_run_doc",
+      "bottom_formal_pass_allowed": null,
+      "bottom_spec_status": null,
+      "bottom_run_valid": null,
+      "bottom_invalid_reasons": null,
+      "bottom_unclosed_positions": null,
+      "api_doc_status": "succeeded",
+      "api_dq_status": "unknown",
+      "api_quality_status": "unknown",
+      "ui_quality_ok": false,
+      "ui_verdict": "质量未通过（quality.status=unknown）"
+    },
+    {
+      "run_id": "run_WX_EVENT_TREND_V0_1_FIXTURE_E_9000000005",
+      "case": "F5 POST 创建路径的 run.json（_run_event_trend 写出的形状）",
+      "doc_source": "run.json",
+      "bottom_formal_pass_allowed": null,
+      "bottom_spec_status": null,
+      "bottom_run_valid": null,
+      "bottom_invalid_reasons": null,
+      "bottom_unclosed_positions": null,
+      "api_doc_status": "succeeded",
+      "api_dq_status": "ok",
+      "api_quality_status": "ok",
+      "ui_quality_ok": true,
+      "ui_verdict": "通过（运行成功 + 质量 ok + 有质量明细）"
+    }
+  ],
+  "conclusions": {
+    "ui_says_pass_when_bottom_formal_false": [
+      "run_WX_EVENT_TREND_V0_1_FIXTURE_A_9000000001"
+    ],
+    "ui_says_pass_when_run_valid_false": [
+      "run_WX_EVENT_TREND_V0_1_FIXTURE_A_9000000001"
+    ],
+    "ui_says_pass_when_no_flag_at_all": [
+      "run_WX_EVENT_TREND_V0_1_FIXTURE_E_9000000005"
+    ],
+    "main_top_level_flag_ignores_variant_b": [
+      "run_WX_EVENT_TREND_V0_1_FIXTURE_C_9000000003"
+    ]
+  }
+}

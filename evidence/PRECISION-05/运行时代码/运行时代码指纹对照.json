@@ -1,0 +1,839 @@
+{
+ "generated_utc": "2026-10-17T05:11:22Z",
+ "runs": {
+  "run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451": {
+   "symbol": "SPACEUSDT",
+   "combined_sha256": "4c5a5c58b9b6730cca114efbc6007957323dfc00c5c5fcaf7f517a82757ab619",
+   "files": {
+    "策略/WyckoffMaster/event_trend_v0_1/__init__.py": {
+     "run_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "current_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/config.py": {
+     "run_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "current_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/contracts.py": {
+     "run_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "current_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py": {
+     "run_sha256": "b08b61afb1fb06f05942c2b98a94bf2df8f1fd9f13ca859be60b993d794e386e",
+     "current_sha256": "fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/features.py": {
+     "run_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "current_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py": {
+     "run_sha256": "a3b5814ac942204791dc8278de1e5d3bcde8577fa5dcf3262d3eaeea462cd9c1",
+     "current_sha256": "07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/state_machine.py": {
+     "run_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "current_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/contracts.py": {
+     "run_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "current_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_head_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/engine.py": {
+     "run_sha256": "6e22d7cec8221ee606d2650b5d27ff478ba338d0185d35b85e48296556175b88",
+     "current_sha256": "c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2",
+     "git_head_sha256": "82a2616479a3c664c4b131f2ae2c4cd7b89817acb54af9c79a54834fdb4f6fa2",
+     "git_tracked": true,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/trading_core/fill.py": {
+     "run_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "current_sha256": "f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b",
+     "git_head_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/funding.py": {
+     "run_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "current_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_head_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/ledger.py": {
+     "run_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "current_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_head_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/order.py": {
+     "run_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "current_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_head_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/pit.py": {
+     "run_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "current_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_head_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/policy.py": {
+     "run_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "current_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "git_head_sha256": "4e078733542a3399b82c00b9a0de36e766f32b7add5963084f6339b722007d7b",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/position.py": {
+     "run_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "current_sha256": "5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc",
+     "git_head_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/risk.py": {
+     "run_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "current_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_head_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/signal.py": {
+     "run_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "current_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_head_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    }
+   },
+   "differs_from_current": [
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py",
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py",
+    "策略/WyckoffMaster/trading_core/engine.py",
+    "策略/WyckoffMaster/trading_core/fill.py",
+    "策略/WyckoffMaster/trading_core/position.py"
+   ]
+  },
+  "run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703": {
+   "symbol": "AIGENSYNUSDT",
+   "combined_sha256": "4c5a5c58b9b6730cca114efbc6007957323dfc00c5c5fcaf7f517a82757ab619",
+   "files": {
+    "策略/WyckoffMaster/event_trend_v0_1/__init__.py": {
+     "run_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "current_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/config.py": {
+     "run_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "current_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/contracts.py": {
+     "run_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "current_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py": {
+     "run_sha256": "b08b61afb1fb06f05942c2b98a94bf2df8f1fd9f13ca859be60b993d794e386e",
+     "current_sha256": "fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/features.py": {
+     "run_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "current_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py": {
+     "run_sha256": "a3b5814ac942204791dc8278de1e5d3bcde8577fa5dcf3262d3eaeea462cd9c1",
+     "current_sha256": "07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/state_machine.py": {
+     "run_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "current_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/contracts.py": {
+     "run_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "current_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_head_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/engine.py": {
+     "run_sha256": "6e22d7cec8221ee606d2650b5d27ff478ba338d0185d35b85e48296556175b88",
+     "current_sha256": "c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2",
+     "git_head_sha256": "82a2616479a3c664c4b131f2ae2c4cd7b89817acb54af9c79a54834fdb4f6fa2",
+     "git_tracked": true,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/trading_core/fill.py": {
+     "run_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "current_sha256": "f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b",
+     "git_head_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/funding.py": {
+     "run_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "current_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_head_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/ledger.py": {
+     "run_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "current_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_head_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/order.py": {
+     "run_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "current_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_head_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/pit.py": {
+     "run_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "current_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_head_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/policy.py": {
+     "run_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "current_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "git_head_sha256": "4e078733542a3399b82c00b9a0de36e766f32b7add5963084f6339b722007d7b",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/position.py": {
+     "run_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "current_sha256": "5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc",
+     "git_head_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/risk.py": {
+     "run_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "current_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_head_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/signal.py": {
+     "run_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "current_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_head_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    }
+   },
+   "differs_from_current": [
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py",
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py",
+    "策略/WyckoffMaster/trading_core/engine.py",
+    "策略/WyckoffMaster/trading_core/fill.py",
+    "策略/WyckoffMaster/trading_core/position.py"
+   ]
+  },
+  "run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465": {
+   "symbol": "TRUTHUSDT",
+   "combined_sha256": "4c5a5c58b9b6730cca114efbc6007957323dfc00c5c5fcaf7f517a82757ab619",
+   "files": {
+    "策略/WyckoffMaster/event_trend_v0_1/__init__.py": {
+     "run_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "current_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/config.py": {
+     "run_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "current_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/contracts.py": {
+     "run_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "current_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py": {
+     "run_sha256": "b08b61afb1fb06f05942c2b98a94bf2df8f1fd9f13ca859be60b993d794e386e",
+     "current_sha256": "fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/features.py": {
+     "run_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "current_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py": {
+     "run_sha256": "a3b5814ac942204791dc8278de1e5d3bcde8577fa5dcf3262d3eaeea462cd9c1",
+     "current_sha256": "07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/state_machine.py": {
+     "run_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "current_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/contracts.py": {
+     "run_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "current_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_head_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/engine.py": {
+     "run_sha256": "6e22d7cec8221ee606d2650b5d27ff478ba338d0185d35b85e48296556175b88",
+     "current_sha256": "c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2",
+     "git_head_sha256": "82a2616479a3c664c4b131f2ae2c4cd7b89817acb54af9c79a54834fdb4f6fa2",
+     "git_tracked": true,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/trading_core/fill.py": {
+     "run_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "current_sha256": "f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b",
+     "git_head_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/funding.py": {
+     "run_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "current_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_head_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/ledger.py": {
+     "run_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "current_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_head_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/order.py": {
+     "run_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "current_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_head_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/pit.py": {
+     "run_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "current_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_head_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/policy.py": {
+     "run_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "current_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "git_head_sha256": "4e078733542a3399b82c00b9a0de36e766f32b7add5963084f6339b722007d7b",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/position.py": {
+     "run_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "current_sha256": "5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc",
+     "git_head_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/risk.py": {
+     "run_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "current_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_head_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/signal.py": {
+     "run_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "current_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_head_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    }
+   },
+   "differs_from_current": [
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py",
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py",
+    "策略/WyckoffMaster/trading_core/engine.py",
+    "策略/WyckoffMaster/trading_core/fill.py",
+    "策略/WyckoffMaster/trading_core/position.py"
+   ]
+  },
+  "run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145": {
+   "symbol": "COTIUSDT",
+   "combined_sha256": "1e419902415c6065ad98f4489ab15634431fb05f0f7330a0192fb9635944f27b",
+   "files": {
+    "策略/WyckoffMaster/event_trend_v0_1/__init__.py": {
+     "run_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "current_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/config.py": {
+     "run_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "current_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/contracts.py": {
+     "run_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "current_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py": {
+     "run_sha256": "b08b61afb1fb06f05942c2b98a94bf2df8f1fd9f13ca859be60b993d794e386e",
+     "current_sha256": "fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/features.py": {
+     "run_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "current_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py": {
+     "run_sha256": "d7fa0ef25e9728edc301bf1538c9bf856f1019a6066efa0ab1959db2d11f2a62",
+     "current_sha256": "07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/state_machine.py": {
+     "run_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "current_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/contracts.py": {
+     "run_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "current_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_head_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/engine.py": {
+     "run_sha256": "6e22d7cec8221ee606d2650b5d27ff478ba338d0185d35b85e48296556175b88",
+     "current_sha256": "c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2",
+     "git_head_sha256": "82a2616479a3c664c4b131f2ae2c4cd7b89817acb54af9c79a54834fdb4f6fa2",
+     "git_tracked": true,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/trading_core/fill.py": {
+     "run_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "current_sha256": "f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b",
+     "git_head_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/funding.py": {
+     "run_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "current_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_head_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/ledger.py": {
+     "run_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "current_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_head_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/order.py": {
+     "run_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "current_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_head_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/pit.py": {
+     "run_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "current_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_head_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/policy.py": {
+     "run_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "current_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "git_head_sha256": "4e078733542a3399b82c00b9a0de36e766f32b7add5963084f6339b722007d7b",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/position.py": {
+     "run_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "current_sha256": "5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc",
+     "git_head_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/risk.py": {
+     "run_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "current_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_head_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/signal.py": {
+     "run_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "current_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_head_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    }
+   },
+   "differs_from_current": [
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py",
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py",
+    "策略/WyckoffMaster/trading_core/engine.py",
+    "策略/WyckoffMaster/trading_core/fill.py",
+    "策略/WyckoffMaster/trading_core/position.py"
+   ]
+  },
+  "run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973": {
+   "symbol": "BNBUSDT",
+   "combined_sha256": "1e419902415c6065ad98f4489ab15634431fb05f0f7330a0192fb9635944f27b",
+   "files": {
+    "策略/WyckoffMaster/event_trend_v0_1/__init__.py": {
+     "run_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "current_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/config.py": {
+     "run_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "current_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/contracts.py": {
+     "run_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "current_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py": {
+     "run_sha256": "b08b61afb1fb06f05942c2b98a94bf2df8f1fd9f13ca859be60b993d794e386e",
+     "current_sha256": "fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/features.py": {
+     "run_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "current_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py": {
+     "run_sha256": "d7fa0ef25e9728edc301bf1538c9bf856f1019a6066efa0ab1959db2d11f2a62",
+     "current_sha256": "07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/state_machine.py": {
+     "run_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "current_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/contracts.py": {
+     "run_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "current_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_head_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/engine.py": {
+     "run_sha256": "6e22d7cec8221ee606d2650b5d27ff478ba338d0185d35b85e48296556175b88",
+     "current_sha256": "c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2",
+     "git_head_sha256": "82a2616479a3c664c4b131f2ae2c4cd7b89817acb54af9c79a54834fdb4f6fa2",
+     "git_tracked": true,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/trading_core/fill.py": {
+     "run_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "current_sha256": "f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b",
+     "git_head_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/funding.py": {
+     "run_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "current_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_head_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/ledger.py": {
+     "run_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "current_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_head_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/order.py": {
+     "run_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "current_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_head_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/pit.py": {
+     "run_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "current_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_head_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/policy.py": {
+     "run_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "current_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "git_head_sha256": "4e078733542a3399b82c00b9a0de36e766f32b7add5963084f6339b722007d7b",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/position.py": {
+     "run_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "current_sha256": "5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc",
+     "git_head_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/risk.py": {
+     "run_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "current_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_head_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/signal.py": {
+     "run_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "current_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_head_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    }
+   },
+   "differs_from_current": [
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py",
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py",
+    "策略/WyckoffMaster/trading_core/engine.py",
+    "策略/WyckoffMaster/trading_core/fill.py",
+    "策略/WyckoffMaster/trading_core/position.py"
+   ]
+  },
+  "run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568": {
+   "symbol": "ORDIUSDT",
+   "combined_sha256": "1e419902415c6065ad98f4489ab15634431fb05f0f7330a0192fb9635944f27b",
+   "files": {
+    "策略/WyckoffMaster/event_trend_v0_1/__init__.py": {
+     "run_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "current_sha256": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/config.py": {
+     "run_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "current_sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/contracts.py": {
+     "run_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "current_sha256": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py": {
+     "run_sha256": "b08b61afb1fb06f05942c2b98a94bf2df8f1fd9f13ca859be60b993d794e386e",
+     "current_sha256": "fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/features.py": {
+     "run_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "current_sha256": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py": {
+     "run_sha256": "d7fa0ef25e9728edc301bf1538c9bf856f1019a6066efa0ab1959db2d11f2a62",
+     "current_sha256": "07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/event_trend_v0_1/state_machine.py": {
+     "run_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "current_sha256": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+     "git_head_sha256": null,
+     "git_tracked": false,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/contracts.py": {
+     "run_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "current_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_head_sha256": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/engine.py": {
+     "run_sha256": "6e22d7cec8221ee606d2650b5d27ff478ba338d0185d35b85e48296556175b88",
+     "current_sha256": "c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2",
+     "git_head_sha256": "82a2616479a3c664c4b131f2ae2c4cd7b89817acb54af9c79a54834fdb4f6fa2",
+     "git_tracked": true,
+     "verdict": "unrecoverable"
+    },
+    "策略/WyckoffMaster/trading_core/fill.py": {
+     "run_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "current_sha256": "f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b",
+     "git_head_sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/funding.py": {
+     "run_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "current_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_head_sha256": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/ledger.py": {
+     "run_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "current_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_head_sha256": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/order.py": {
+     "run_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "current_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_head_sha256": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/pit.py": {
+     "run_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "current_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_head_sha256": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/policy.py": {
+     "run_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "current_sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+     "git_head_sha256": "4e078733542a3399b82c00b9a0de36e766f32b7add5963084f6339b722007d7b",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/position.py": {
+     "run_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "current_sha256": "5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc",
+     "git_head_sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+     "git_tracked": true,
+     "verdict": "recoverable_from_git_HEAD"
+    },
+    "策略/WyckoffMaster/trading_core/risk.py": {
+     "run_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "current_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_head_sha256": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    },
+    "策略/WyckoffMaster/trading_core/signal.py": {
+     "run_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "current_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_head_sha256": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531",
+     "git_tracked": true,
+     "verdict": "same_as_current"
+    }
+   },
+   "differs_from_current": [
+    "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py",
+    "策略/WyckoffMaster/event_trend_v0_1/runner.py",
+    "策略/WyckoffMaster/trading_core/engine.py",
+    "策略/WyckoffMaster/trading_core/fill.py",
+    "策略/WyckoffMaster/trading_core/position.py"
+   ]
+  }
+ }
+}

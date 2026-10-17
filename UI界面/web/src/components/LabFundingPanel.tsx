@@ -72,7 +72,15 @@ export interface LabFundingPanelProps {
   /** 所选 run 的真实窗口（UTC 毫秒）——用于判定每个自然月是否被区间截断。 */
   windowStartMs?: number | null;
   windowEndMs?: number | null;
+  /**
+   * 逐笔明细联动：选中某一笔时把面板切到「水下回撤」并把时间轴定位到该笔的 entry/exit 区间。
+   * 只吃**真实**进出场时间戳（来自逐笔账本），不推断、不外推。
+   */
+  focusTrade?: { tradeId: string; entryMs: number; exitMs: number } | null;
 }
+
+/** 定位某笔时前后各留 1h 上下文（与执行视图 `PAD_MS` 同一口径）。 */
+const FOCUS_PAD_MS = 3_600_000;
 
 /** 某自然月（`YYYY-MM`）的 UTC 边界。 */
 function monthBounds(ym: string): { startMs: number; endMs: number } | null {
@@ -94,10 +102,15 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
   monthCloseCounts,
   windowStartMs = null,
   windowEndMs = null,
+  focusTrade = null,
 }) => {
   const [mode, setMode] = useState<'both' | 'underwater'>('both');
   const [hover, setHover] = useState<MergedPoint | null>(null);
   const [viewLabel, setViewLabel] = useState<string | null>(null);
+  /** 已定位的 trade_id（仅在联动生效后出现；未定位时为 null，不占位）。 */
+  const [focusedTradeId, setFocusedTradeId] = useState<string | null>(null);
+  /** 待落实的定位请求：图表/数据尚未就绪时挂起，就绪后自动补做（避免静默失败）。 */
+  const pendingFocusRef = useRef<{ tradeId: string; fromMs: number; toMs: number } | null>(null);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const chartRef = useRef<IChartApi | null>(null);
@@ -186,7 +199,17 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
         horzLine: { color: '#94a3b8', width: 1, style: LineStyle.Dashed, labelBackgroundColor: '#334155' },
       },
       rightPriceScale: { borderColor: '#d4dbe6', minimumWidth: 76 },
-      timeScale: { borderColor: '#d4dbe6', timeVisible: true, secondsVisible: false, rightOffset: 0 },
+      /* `minBarSpacing` 默认 0.5px ⇒ 17376 个 15m 净值点在这块 ~510px 宽的面板里
+         最多只能放下 ~1020 个 ⇒ `fitContent()` 被夹到「只剩最后约 10 天」，
+         标着「净值对比」却看不到整段。这里是**线图**（不是 K 线柱），亚像素密度没问题，
+         故把下限收到 0.01px，`fitContent()` 才能真的铺满所选 run 的完整窗口。 */
+      timeScale: {
+        borderColor: '#d4dbe6',
+        timeVisible: true,
+        secondsVisible: false,
+        rightOffset: 0,
+        minBarSpacing: 0.01,
+      },
       handleScroll: true,
       handleScale: true,
     });
@@ -300,11 +323,82 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
     // 否则「净值对比」模式下回撤 Area 会沿用默认 visible=true 一起画出来。
   }, [mode, hasBench, hasData]);
 
+  /* ── 逐笔明细 → 本面板联动 ────────────────────────────────────────────────
+   * 用户在「⑤ 逐笔明细」点中某一笔 ⇒ 这里做两件事：
+   *   ① 视图切到「水下回撤」（那一笔的盈亏落在哪段回撤里，是这张图要回答的问题）；
+   *   ② 时间轴定位到该笔的 entry/exit 区间（前后各留 1h）。
+   * 只用**真实**进出场毫秒时间戳；区间会夹到本 run 权益序列的真实范围内，
+   * 不越界、不外推。图表未就绪时挂起到 `pendingFocusRef`，就绪后补做。
+   */
+  const applyRangeMs = useCallback(
+    (fromMs: number, toMs: number): boolean => {
+      const chart = chartRef.current;
+      if (!chart) return false;
+      if (!Number.isFinite(fromMs) || !Number.isFinite(toMs) || toMs <= fromMs) return false;
+      /* 优先用**索引区间**定位：直接落在真实权益点上，避免「时间 → 逻辑坐标」换算把区间放大。
+         面板窄（约 590px），时间轴有最小 bar 间距，换算后的落点会比请求宽出一截。 */
+      if (merged.length > 0) {
+        let i0 = -1;
+        let i1 = -1;
+        for (let i = 0; i < merged.length; i++) {
+          const t = merged[i].t;
+          if (t >= fromMs && i0 < 0) i0 = i;
+          if (t <= toMs) i1 = i;
+        }
+        if (i0 >= 0 && i1 > i0) {
+          try {
+            chart.timeScale().setVisibleLogicalRange({ from: i0 - 0.5, to: i1 + 0.5 });
+            return true;
+          } catch {
+            /* 官方时间轴拒绝：落到下面的时间区间路径 */
+          }
+        }
+      }
+      const from = Math.floor(fromMs / 1000) as UTCTimestamp;
+      const to = Math.floor(toMs / 1000) as UTCTimestamp;
+      try {
+        chart.timeScale().setVisibleRange({ from, to });
+        return true;
+      } catch {
+        /* 官方时间轴拒绝该区间（越界/退化）：如实返回失败，由调用方决定是否重试 */
+        return false;
+      }
+    },
+    [merged],
+  );
+
+  useEffect(() => {
+    if (!focusTrade) return;
+    if (!Number.isFinite(focusTrade.entryMs) || !Number.isFinite(focusTrade.exitMs)) return;
+    const first = merged.length > 0 ? merged[0].t : null;
+    const last = merged.length > 0 ? merged[merged.length - 1].t : null;
+    let fromMs = focusTrade.entryMs - FOCUS_PAD_MS;
+    let toMs = focusTrade.exitMs + FOCUS_PAD_MS;
+    if (first !== null && last !== null) {
+      fromMs = Math.max(first, fromMs);
+      toMs = Math.min(last, toMs);
+    }
+    setMode('underwater');
+    setFocusedTradeId(focusTrade.tradeId);
+    pendingFocusRef.current = { tradeId: focusTrade.tradeId, fromMs, toMs };
+    // 立即尝试一次；失败则留待下方 effect 在图表/数据就绪后补做。
+    if (applyRangeMs(fromMs, toMs)) pendingFocusRef.current = null;
+  }, [focusTrade?.tradeId, focusTrade?.entryMs, focusTrade?.exitMs, merged, applyRangeMs]);
+
+  /* 图表是数据到达后才创建的 ⇒ 挂起的定位请求要在这里补做，否则「点了没反应」。 */
+  useEffect(() => {
+    const p = pendingFocusRef.current;
+    if (!p || !hasData) return;
+    if (applyRangeMs(p.fromMs, p.toMs)) pendingFocusRef.current = null;
+  }, [hasData, merged, applyRangeMs]);
+
   /* ── 快速区间：官方 setVisibleRange（原生时间轴）── */
   const applyQuickRange = useCallback(
     (bars: number | null) => {
       const chart = chartRef.current;
       if (!chart || merged.length === 0) return;
+      setFocusedTradeId(null);
+      pendingFocusRef.current = null;
       if (bars === null) {
         chart.timeScale().fitContent();
         return;
@@ -414,42 +508,36 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
     >
       <div className="px-3 py-2 border-b border-neutral-200 bg-neutral-50 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2 flex-wrap">
-          <TrendingUp className="w-4 h-4 text-emerald-600" />
-          <h3 className="text-xs font-bold text-neutral-100" title="基准为同标的、同期、同成本（手续费 + 滑点 + 真实资金费）的买入持有">
-            ③ 资金分析 · 策略净值 vs 买入持有基准
+          <TrendingUp className="w-4 h-4 text-neutral-400" />
+          <h3
+            className="text-xs font-bold text-neutral-100"
+            title="基准为同标的、同期、同成本（手续费 + 滑点 + 真实资金费）的买入持有"
+          >
+            ③ 资金分析
           </h3>
-          {ddCheck && (
+          {/* 状态类**只报异常**：一致时不再常驻「✓」徽章（口径原文在 title） */}
+          {ddCheck && ddCheck.match !== true && (
             <span
               className={`px-1.5 py-0.5 rounded border text-[10px] font-mono ${
-                ddCheck.match === true
-                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                  : ddCheck.match === false
-                    ? 'bg-rose-50 text-rose-700 border-rose-200'
-                    : 'bg-neutral-100 text-neutral-700 border-neutral-200'
+                ddCheck.match === false
+                  ? 'bg-rose-50 text-rose-700 border-rose-200'
+                  : 'bg-neutral-100 text-neutral-700 border-neutral-200'
               }`}
               title={`回撤核对：曲线由后台权益序列展开（初始峰值取 /metrics.initial_equity），峰值与 /metrics.max_drawdown_pct 实时核对 —— ${
-                ddCheck.match === true
-                  ? '与 /metrics 一致'
-                  : ddCheck.match === false
-                    ? `不一致（曲线 ${ddCheck.seriesMax.toFixed(6)}% vs 后台 ${fmtNum(ddCheck.backend, 6)}%）`
-                    : '后台未给 max_drawdown_pct'
+                ddCheck.match === false
+                  ? `不一致（曲线 ${ddCheck.seriesMax.toFixed(6)}% vs 后台 ${fmtNum(ddCheck.backend, 6)}%）`
+                  : '后台未给 max_drawdown_pct'
               }`}
             >
-              {/* 正常时极简（只报异常），完整口径在 title */}
-              回撤 {ddCheck.match === true ? '✓' : ddCheck.match === false ? '✗ 不一致' : '无后台值'}
+              {ddCheck.match === false ? '回撤 ✗ 不一致' : '回撤 无后台值'}
             </span>
           )}
-          {tailCheck && (
+          {tailCheck && !(tailCheck.stratOk === true && (tailCheck.benchOk === null || tailCheck.benchOk === true)) && (
             <span
-              className={`px-1.5 py-0.5 rounded border text-[10px] font-mono ${
-                tailCheck.stratOk === true && (tailCheck.benchOk === null || tailCheck.benchOk === true)
-                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                  : 'bg-rose-50 text-rose-700 border-rose-200'
-              }`}
+              className="px-1.5 py-0.5 rounded border text-[10px] font-mono bg-rose-50 text-rose-700 border-rose-200"
               title="末点核对：曲线末点必须等于 /metrics 的汇总值"
             >
-              末点{' '}
-              {tailCheck.stratOk === true ? '✓' : '✗ 策略≠汇总'}
+              末点 {tailCheck.stratOk === true ? '✓' : '✗ 策略≠汇总'}
               {tailCheck.benchOk === null ? '' : tailCheck.benchOk ? '' : ' · 基准≠汇总'}
             </span>
           )}
@@ -458,17 +546,28 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
           <div className="flex items-center bg-white border border-neutral-200 rounded p-0.5 text-[11px] shrink-0">
             <button
               onClick={() => setMode('both')}
-              className={`px-2 py-0.5 rounded font-medium whitespace-nowrap ${mode === 'both' ? 'bg-emerald-600 text-white font-bold' : 'text-neutral-400 hover:text-neutral-100'}`}
+              className={`px-2 py-0.5 rounded font-medium whitespace-nowrap ${mode === 'both' ? 'bg-[var(--ds-accent)] text-white font-bold' : 'text-neutral-400 hover:text-neutral-100'}`}
             >
               净值对比
             </button>
             <button
               onClick={() => setMode('underwater')}
-              className={`px-2 py-0.5 rounded font-medium whitespace-nowrap ${mode === 'underwater' ? 'bg-emerald-600 text-white font-bold' : 'text-neutral-400 hover:text-neutral-100'}`}
+              className={`px-2 py-0.5 rounded font-medium whitespace-nowrap ${mode === 'underwater' ? 'bg-[var(--ds-accent)] text-white font-bold' : 'text-neutral-400 hover:text-neutral-100'}`}
             >
               水下回撤
             </button>
           </div>
+          {/* 联动定位徽章：只有真的从「⑤ 逐笔明细」定位过某一笔才出现 */}
+          {focusedTradeId && (
+            <button
+              onClick={() => applyQuickRange(null)}
+              className="px-1.5 py-0.5 rounded border border-[var(--ds-accent)] bg-[var(--ds-accent-50)] text-[10px] font-mono text-[var(--ds-accent-700)] hover:brightness-95 whitespace-nowrap"
+              title="已按逐笔明细选中的那一笔定位时间轴；点击恢复全区间"
+              data-testid="lab-funding-focus"
+            >
+              已定位 {focusedTradeId.length > 16 ? `${focusedTradeId.slice(0, 8)}…${focusedTradeId.slice(-4)}` : focusedTradeId} ✕
+            </button>
+          )}
           <div className="flex items-center bg-white border border-neutral-200 rounded p-0.5 text-[11px] shrink-0">
             <button
               onClick={() => applyQuickRange(null)}
@@ -494,6 +593,7 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
           {/* 视窗范围常显；交互提示移到 title，避免挤压分段控件 */}
           <span
             className="text-[10px] text-neutral-400 font-mono whitespace-nowrap"
+            data-testid="lab-funding-viewport"
             title="滚轮缩放 / 拖动平移（走项目既有 lightweight-charts 官方时间轴）"
           >
             {viewLabel ? `视窗 ${viewLabel}` : `${merged.length} 点`}
@@ -526,6 +626,16 @@ export const LabFundingPanel: React.FC<LabFundingPanelProps> = ({
           <span className="text-neutral-500">水下回撤</span>
           <b className="text-rose-600">-{cur ? cur.drawdownPct.toFixed(3) : '—'}%</b>
         </span>
+        {/* 联动定位时补一行「该笔区间」：面板窄、时间轴有最小 bar 间距，
+            视图能放到的宽度有物理上限 ⇒ 精确区间在这里给出，不依赖图形缩放精度。 */}
+        {focusedTradeId && focusTrade && (
+          <span className="flex items-center gap-1 text-[var(--ds-accent-700)]">
+            <span>该笔区间</span>
+            <b>
+              {fmtUtcDay(focusTrade.entryMs)} → {fmtUtcDay(focusTrade.exitMs)} UTC
+            </b>
+          </span>
+        )}
       </div>
 
       <div ref={containerRef} className="w-full h-[195px] bg-white" data-testid="lab-funding-chart" />

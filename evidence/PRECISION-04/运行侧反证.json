@@ -1,0 +1,174 @@
+{
+ "generated_utc": "2026-10-17T05:11:22Z",
+ "method": "成交价 vs 同刻 15m K 线 [low, high]；仅证伪，不推断 tick",
+ "runs": [
+  {
+   "symbol": "SPACEUSDT",
+   "run_id": "run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451",
+   "has_instrument_spec_file": false,
+   "fills": [
+    {
+     "leg": "entry",
+     "fill_price": 0.01,
+     "bar_time_ms": 1779174900000,
+     "bar_low": 0.009391,
+     "bar_high": 0.009721,
+     "bar_utc": "2026-05-19T07:15:00Z",
+     "inside_bar_range": false,
+     "note": "成交价落在该 K 线区间之外 ⇒ 物理上不可能成交"
+    },
+    {
+     "leg": "exit",
+     "fill_price": 0.0,
+     "bar_time_ms": 1779941700000,
+     "bar_low": 0.006617,
+     "bar_high": 0.007098,
+     "bar_utc": "2026-05-28T04:15:00Z",
+     "inside_bar_range": false,
+     "note": "成交价落在该 K 线区间之外 ⇒ 物理上不可能成交"
+    }
+   ],
+   "all_inside": false
+  },
+  {
+   "symbol": "AIGENSYNUSDT",
+   "run_id": "run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703",
+   "has_instrument_spec_file": false,
+   "fills": [
+    {
+     "leg": "entry",
+     "fill_price": 0.03,
+     "bar_time_ms": 1788765300000,
+     "bar_low": 0.02095,
+     "bar_high": 0.02127,
+     "bar_utc": "2026-09-07T07:15:00Z",
+     "inside_bar_range": false,
+     "note": "成交价落在该 K 线区间之外 ⇒ 物理上不可能成交"
+    },
+    {
+     "leg": "exit",
+     "fill_price": 0.01,
+     "bar_time_ms": 1788991200000,
+     "bar_low": 0.01899,
+     "bar_high": 0.01964,
+     "bar_utc": "2026-09-09T22:00:00Z",
+     "inside_bar_range": false,
+     "note": "成交价落在该 K 线区间之外 ⇒ 物理上不可能成交"
+    }
+   ],
+   "all_inside": false
+  },
+  {
+   "symbol": "TRUTHUSDT",
+   "run_id": "run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465",
+   "has_instrument_spec_file": false,
+   "fills": [
+    {
+     "leg": "entry",
+     "fill_price": 0.02,
+     "bar_time_ms": 1770642900000,
+     "bar_low": 0.015398,
+     "bar_high": 0.016323,
+     "bar_utc": "2026-02-09T13:15:00Z",
+     "inside_bar_range": false,
+     "note": "成交价落在该 K 线区间之外 ⇒ 物理上不可能成交"
+    },
+    {
+     "leg": "exit",
+     "fill_price": 0.01,
+     "bar_time_ms": 1771317000000,
+     "bar_low": 0.011522,
+     "bar_high": 0.013449,
+     "bar_utc": "2026-02-17T08:30:00Z",
+     "inside_bar_range": false,
+     "note": "成交价落在该 K 线区间之外 ⇒ 物理上不可能成交"
+    }
+   ],
+   "all_inside": false
+  },
+  {
+   "symbol": "COTIUSDT",
+   "run_id": "run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145",
+   "has_instrument_spec_file": false,
+   "fills": [
+    {
+     "leg": "entry",
+     "fill_price": 0.07,
+     "bar_time_ms": 1707164100000,
+     "bar_low": 0.06177,
+     "bar_high": 0.06265,
+     "bar_utc": "2024-02-05T20:15:00Z",
+     "inside_bar_range": false,
+     "note": "成交价落在该 K 线区间之外 ⇒ 物理上不可能成交"
+    },
+    {
+     "leg": "exit",
+     "fill_price": 0.08,
+     "bar_time_ms": 1707627600000,
+     "bar_low": 0.08525,
+     "bar_high": 0.0864,
+     "bar_utc": "2024-02-11T05:00:00Z",
+     "inside_bar_range": false,
+     "note": "成交价落在该 K 线区间之外 ⇒ 物理上不可能成交"
+    }
+   ],
+   "all_inside": false
+  },
+  {
+   "symbol": "BNBUSDT",
+   "run_id": "run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973",
+   "has_instrument_spec_file": false,
+   "fills": [
+    {
+     "leg": "entry",
+     "fill_price": 317.78000000000003,
+     "bar_time_ms": 1705328100000,
+     "bar_low": 316.18,
+     "bar_high": 317.9,
+     "bar_utc": "2024-01-15T14:15:00Z",
+     "inside_bar_range": true,
+     "note": ""
+    },
+    {
+     "leg": "exit",
+     "fill_price": 290.15000000000003,
+     "bar_time_ms": 1706018400000,
+     "bar_low": 290.1,
+     "bar_high": 294.09,
+     "bar_utc": "2024-01-23T14:00:00Z",
+     "inside_bar_range": true,
+     "note": ""
+    }
+   ],
+   "all_inside": true
+  },
+  {
+   "symbol": "ORDIUSDT",
+   "run_id": "run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568",
+   "has_instrument_spec_file": false,
+   "fills": [
+    {
+     "leg": "entry",
+     "fill_price": 47.79,
+     "bar_time_ms": 1717074900000,
+     "bar_low": 47.212,
+     "bar_high": 48.414,
+     "bar_utc": "2024-05-30T13:15:00Z",
+     "inside_bar_range": true,
+     "note": ""
+    },
+    {
+     "leg": "exit",
+     "fill_price": 62.050000000000004,
+     "bar_time_ms": 1717938900000,
+     "bar_low": 61.294,
+     "bar_high": 62.081,
+     "bar_utc": "2024-06-09T13:15:00Z",
+     "inside_bar_range": true,
+     "note": ""
+    }
+   ],
+   "all_inside": true
+  }
+ ]
+}

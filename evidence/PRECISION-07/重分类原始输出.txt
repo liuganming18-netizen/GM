@@ -1,0 +1,76 @@
+PRECISION-07 / 工具 20 · 62 条成交腿按统一定义重分类
+
+run 数 31，腿数 62；复算逐位一致 62/62
+区间内 35，越界 27
+分类：{'inside': 35, 'round_dominant': 26, 'slip_dominant': 1}
+滑点段已越界的腿：3
+步长分布（按腿）：{'0.000001': 2, '0.01': 54, '0.0001': 4, '0.001': 2}
+
+R7 三种定义对比：
+  R7-零容差                 拒绝 27 条，误伤区间内 0 条
+  R7-容差=滑点               拒绝 27 条，误伤区间内 0 条
+  R7-容差=滑点+1档            拒绝  0 条，误伤区间内 0 条
+  · 零容差 vs 滑点容差：结果不同的腿 0 条
+  · 滑点容差 vs +1档：结果不同的腿 27 条
+
+被「+1档」放过的腿（即滑点容差会拒、+1档会允许）：
+  AIGENSYNUSDT 入场 2026-09-07T07:15:00Z 越界 0.00873 容差 0.0000063750 步长 0.01 分类 round_dominant
+  AIGENSYNUSDT 出场 2026-09-09T22:00:00Z 越界 0.00899 容差 0.0000056981 步长 0.01 分类 round_dominant
+  COTIUSDT 入场 2024-02-05T20:15:00Z 越界 0.00735 容差 0.0000186840 步长 0.01 分类 round_dominant
+  COTIUSDT 出场 2024-02-11T05:00:00Z 越界 0.00525 容差 0.0000257040 步长 0.01 分类 round_dominant
+  CYBERUSDT 入场 2024-03-18T07:15:00Z 越界 0.006 容差 0.0038604000 步长 0.01 分类 round_dominant
+  EULUSDT 入场 2026-02-14T01:15:00Z 越界 0.002 容差 0.0003102000 步长 0.01 分类 round_dominant
+  GRIFFAINUSDT 入场 2025-05-09T07:15:00Z 越界 0.00753 容差 0.0000240780 步长 0.01 分类 round_dominant
+  GRIFFAINUSDT 出场 2025-05-19T07:15:00Z 越界 0.00655 容差 0.0000289860 步长 0.01 分类 round_dominant
+  GUSDT 入场 2024-10-15T05:15:00Z 越界 0.00445 容差 0.0000106290 步长 0.01 分类 round_dominant
+  GUSDT 出场 2024-10-23T11:45:00Z 越界 0.00156 容差 0.0000094866 步长 0.01 分类 round_dominant
+  HAEDALUSDT 入场 2025-05-21T12:15:00Z 越界 0.006024 容差 0.0000511932 步长 0.01 分类 round_dominant
+  HAEDALUSDT 出场 2025-05-30T23:15:00Z 越界 0.002285 容差 0.0000378108 步长 0.01 分类 round_dominant
+  LAYERUSDT 出场 2025-07-03T08:15:00Z 越界 0.0068 容差 0.0001972800 步长 0.01 分类 round_dominant
+  MAGMAUSDT 入场 2026-03-03T17:15:00Z 越界 0.0083 容差 0.0000364860 步长 0.01 分类 round_dominant
+  MAGMAUSDT 出场 2026-03-06T10:30:00Z 越界 0.00147 容差 0.0000284712 步长 0.01 分类 round_dominant
+  MEGAUSDT 入场 2026-06-13T22:15:00Z 越界 0.00586 容差 0.0000188670 步长 0.01 分类 round_dominant
+  MEGAUSDT 出场 2026-06-23T22:15:00Z 越界 0.00579 容差 0.0000167610 步长 0.01 分类 round_dominant
+  POLYXUSDT 入场 2024-02-11T13:15:00Z 越界 0.0024 容差 0.0000517800 步长 0.01 分类 round_dominant
+  PUMPBTCUSDT 入场 2025-09-06T00:15:00Z 越界 0.00678 容差 0.0000126750 步长 0.01 分类 round_dominant
+  SOONUSDT 入场 2025-07-31T08:15:00Z 越界 0.00443 容差 0.0000466710 步长 0.01 分类 round_dominant
+  SPACEUSDT 入场 2026-05-19T07:15:00Z 越界 0.000279 容差 0.0000029154 步长 0.01 分类 round_dominant
+  SPACEUSDT 出场 2026-05-28T04:15:00Z 越界 0.006617 容差 0.0000020339 步长 0.01 分类 round_dominant
+  TAGUSDT 入场 2025-11-14T20:15:00Z 越界 0.0093649 容差 0.0000001879 步长 0.01 分类 round_dominant
+  TAGUSDT 出场 2025-11-20T16:00:00Z 越界 0.0004968 容差 0.0000001508 步长 0.01 分类 round_dominant
+  TRUTHUSDT 入场 2026-02-09T13:15:00Z 越界 0.003677 容差 0.0000047079 步长 0.01 分类 round_dominant
+  TRUTHUSDT 出场 2026-02-17T08:30:00Z 越界 0.001522 容差 0.0000037436 步长 0.01 分类 round_dominant
+  XMRUSDT 出场 2024-05-15T22:15:00Z 越界 0.05 容差 0.0401940000 步长 0.01 分类 slip_dominant
+
+按标的汇总（越界腿数 / 腿数）：
+  1000BONKUSDT   0/2
+  ACEUSDT        0/2
+  AIGENSYNUSDT   2/2
+  BNBUSDT        0/2
+  COTIUSDT       2/2
+  CVXUSDT        0/2
+  CYBERUSDT      1/2
+  EULUSDT        1/2
+  GRIFFAINUSDT   2/2
+  GUSDT          2/2
+  HAEDALUSDT     2/2
+  LAYERUSDT      1/2
+  LPTUSDT        0/2
+  MAGMAUSDT      2/2
+  MEGAUSDT       2/2
+  MOVRUSDT       0/2
+  NXPCUSDT       0/2
+  OPUSDT         0/2
+  ORDIUSDT       0/2
+  POLYXUSDT      1/2
+  PUMPBTCUSDT    1/2
+  SAFEUSDT       0/2
+  SOONUSDT       1/2
+  SPACEUSDT      2/2
+  SPXUSDT        0/2
+  SUIUSDT        0/2
+  TAGUSDT        2/2
+  TRUMPUSDT      0/2
+  TRUTHUSDT      2/2
+  XMRUSDT        1/2
+  XVSUSDT        0/2

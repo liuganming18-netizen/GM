@@ -36,17 +36,18 @@ PROJECT_ROOT = Path(os.environ.get("DATA_HUB_PROJECT") or BACKEND_DIR.parents[1]
 
 RETIRED_AT = "2026-10-16"
 
-# 旧 `F_WX` 四臂 + 旧 A/B（注册表键）
+# 旧 `F_WX` 四臂 + 旧 A/B + 旧 WX_OI 候选（注册表键）
 RETIRED_FWX_KEYS = ("3a", "3b", "3c", "3d")
 RETIRED_AB_KEYS = ("A", "B")
-RETIRED_STRATEGY_KEYS = RETIRED_FWX_KEYS + RETIRED_AB_KEYS
+RETIRED_OI_KEYS = ("wx_oi_resonance_v1", "WX_OI_RESONANCE_V1")
+RETIRED_STRATEGY_KEYS = RETIRED_FWX_KEYS + RETIRED_AB_KEYS + RETIRED_OI_KEYS
 
 # 唯一生产候选（新）
-SUCCESSOR_STRATEGY_ID = "WX_OI_RESONANCE_V1"
-SUCCESSOR_STRATEGY_KEY = "wx_oi_resonance_v1"
+SUCCESSOR_STRATEGY_ID = "WX_EVENT_TREND_V0_1"
+SUCCESSOR_STRATEGY_KEY = "wx_event_trend_v0_1"
 
 RETIREMENT_REASON = (
-    "旧 F_WX（3a/3b/3c/3d）与旧 A/B 已退役：新候选 WX_OI_RESONANCE_V1 是唯一生产候选；"
+    "旧 F_WX、旧 A/B 及旧 WX_OI 已退役：新策略 WX_EVENT_TREND_V0_1 是当前唯一策略；"
     "旧策略不再进入任何可运行入口（Registry / Backtest / Paper / Live / UI）。"
     "旧源码与历史 runs 以**可恢复只读归档**保留，不得删除、不得改作新策略成绩。"
 )

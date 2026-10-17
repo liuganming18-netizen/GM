@@ -1,0 +1,33 @@
+﻿序,层,位置,字段或判据,动作,现场实测,是否到达下一层
+1,规格解析,策略/WyckoffMaster/event_trend_v0_1/instrument_spec.py:50-54,applicability 五种码,定义（verified/unverified_historical/contradicted/not_listed/missing）,verified 需"两份一致快照夹住窗口 + 变更证据覆盖整窗",是
+2,规格解析,策略/WyckoffMaster/event_trend_v0_1/instrument_spec.py:1022,formal_pass_allowed = (applicability=="verified"),唯一赋值点,375/375 窗口均非 verified ⇒ 全 False（363 unverified_historical + 12 not_listed）,是
+3,适配器,策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:373,spec_status="spec_applied",有规格就写,恒 spec_applied（只说明"套用了规格"，不说明"规格合格"）,是
+4,适配器,策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:382,spec_status="declared_no_spec",只有显式 price_step 才写,当前无调用方走这条,是
+5,适配器,策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:610-613,formal_pass_allowed = 规格 ∧ precision.run_valid,组合两个条件,恒 False（规格项已 False）,是
+6,适配器,策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:629-631,返回 spec_status / precision,出函数,有,是
+7,适配器,策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:654-655,summary.spec_status / summary.formal_pass_allowed,出函数,有,是
+8,引擎,策略/WyckoffMaster/trading_core/engine.py:876-889,precision.run_valid / invalid_reasons / unclosed_positions,生成,run_valid = not invalid_reasons,是
+9,引擎,策略/WyckoffMaster/trading_core/engine.py:906-933,_empty_result 不写 precision,空数据早退路径,该路径下无 precision,否（断点 B10）
+10,runner,策略/WyckoffMaster/event_trend_v0_1/runner.py:426-448,_resolve_spec（窗口取 df_15m min/max）,解析规格,A/B/C 共用同一份 spec,是
+11,runner,策略/WyckoffMaster/event_trend_v0_1/runner.py:478-492,inputs.json / summary.json 落 spec_status+formal_pass_allowed,落盘,新 run 有,是
+12,runner,策略/WyckoffMaster/event_trend_v0_1/runner.py:515-519,instrument_spec.json（spec+precision）,落盘,新 run 有,是
+13,runner,策略/WyckoffMaster/event_trend_v0_1/runner.py:643-649,main summary 顶层=A；B/C 只在 summary_variant_*,落盘,无 A∧B∧C 聚合,部分（断点 B7）
+14,批量脚本,run_batch_round3_50/4_all_remain/5_100/6_100/clean/expand/random_50.py:105（各）,"status": "PASS",硬编码常量,7/7 脚本都是"没抛异常即 PASS"，从不读 formal_pass_allowed,否（断点 B9）
+15,API 执行,框架/backend/backtest_runner.py:777-914,_run_event_trend 的 data_quality,只读 reconcile/identity,从不读 summary.json 的 precision,否（断点 B4）
+16,API 执行,框架/backend/backtest_runner.py:903-914,run.json 的返回字段,写 window/metrics/data_quality/hashes/summary,无 formal_pass_allowed / spec_status / precision,否（断点 B6）
+17,API 执行,框架/backend/backtest_runner.py:1423,set_status(succeeded),程序跑完即 succeeded,无研究验收位,否（断点 B2）
+18,存储读,框架/backend/backtest_store.py:189-193,_summary_to_run_doc 的 status,硬编码 STATUS_SUCCEEDED,375/375 无 run.json ⇒ 全部走这条 ⇒ 全 succeeded,否（断点 B3）
+19,存储读,框架/backend/backtest_store.py:172-187,dq.status（只看 reconcile/identity）,无 reconcile/identity 才 unknown,375/375 = ok,否（断点 B4）
+20,存储读,框架/backend/backtest_store.py:254-259,read_run 优先 run.json,新 run 走 run.json,run.json 比 summary.json 字段更少,否（断点 B6）
+21,API,框架/backend/backtest_api.py:126-142,_summary 列表项,只带 net_return_pct/trades_count/mdd/failure_reason,实测无 formal_pass_allowed / spec_status,否（断点 B5）
+22,API,框架/backend/backtest_api.py:145-165,get_run,带 config/hashes/quality,无规格字段,否（断点 B5）
+23,API,框架/backend/backtest_api.py:168-179,_quality_of,status==succeeded ⇒ quality.status = dq.status,375/375 ⇒ "ok",否（断点 B2）
+24,API,框架/backend/backtest_api.py:182-197,_require_done,只认 succeeded,程序完成即可取图表/指标,否（断点 B2）
+25,API,框架/backend/backtest_api.py:240-250,get_quality,带 data_quality 原样,无规格字段,否（断点 B5）
+26,API,框架/backend/backtest_api.py:200-237,metrics.formal_m4_gate,读 doc 的静态常量,旧 run 为 null（实测）,否
+27,桥接,框架/backend/event_trend_bridge.py:88-99,formal_run_gate() 静态,G01/G02/G03 写死 pass；formal_run_allowed 写死 False,与任何 run 的 precision 无关,否（断点 B8）
+28,前端,UI界面/web/src/components/BacktestWorkbench.tsx:698-707,qualityOk 判据,succeeded ∧ quality.status=ok ∧ dq 非空,不看规格 ⇒ 显示"通过（运行成功 + 质量 ok + 有质量明细）",—（终点）
+29,前端,UI界面/web/src/components/BacktestWorkbench.tsx:1301-1305,工具栏同口径判据,同上,同上,—（终点）
+30,前端,UI界面/web/src/components/BacktestWorkbench.tsx:1415-1418,"质量：通过" 绿色徽标,qualityOkOfRun 三元,375/375 绿色"通过",—（终点）
+31,前端,UI界面/web/src/components/BacktestWorkbench.tsx:2355-2371,M4 门禁折叠区,唯一提示"不推断已放行",默认折叠、仅 raw JSON,—（终点）
+32,前端类型,UI界面/web/src/api/labBacktest.ts:607-612,LabQualityResponse,无规格字段,前端拿不到这些字段,—（终点）

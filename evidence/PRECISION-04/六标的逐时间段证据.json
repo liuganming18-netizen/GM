@@ -1,0 +1,2827 @@
+{
+ "generated_utc": "2026-10-17T05:11:22Z",
+ "grade_definitions": {
+  "A": "该时段内存在官方证据，直接给出该字段值；只主张『段内某时点确实是这个值』，不主张整段恒定",
+  "B": "段内无观测，只有段外（上线公告 / 段前段后快照）证据，只能约束不能坐实",
+  "C": "没有任何可定位到该段的官方证据"
+ },
+ "warning": "A 级不等于 verified，也不等于可用于正式回测。verified 还要求『覆盖整窗的变更证据』，本窗口无法诚实出具该记录。",
+ "symbols": [
+  {
+   "symbol": "SPACEUSDT",
+   "launch": {
+    "effective_utc": "2026-01-23T11:45:00Z",
+    "announced_utc": "2026-01-23T10:16:02Z",
+    "has_spec_table": true,
+    "announced_fields": {
+     "tick": "0.000001",
+     "min_qty": "1",
+     "min_notional": "5"
+    }
+   },
+   "window": [
+    "2026-01-31T20:00:00Z",
+    "2026-07-30T19:00:00Z"
+   ],
+   "observations": [
+    {
+     "utc": "2026-02-17T04:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260217041328Z.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "40000000",
+      "mkt_max_qty": "4000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-05-10T10:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260510103016Z.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "40000000",
+      "mkt_max_qty": "4000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-01T02:49:48Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20261001035141Z.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "50000000",
+      "mkt_max_qty": "12000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-02T11:46:29Z",
+     "kind": "local_snapshot",
+     "file": "exchangeInfo_futures_2026-10-05T015512Z.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "50000000",
+      "mkt_max_qty": "12000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-16T08:01:14Z",
+     "kind": "live_fetch",
+     "file": "当前响应_exchangeInfo.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "50000000",
+      "mkt_max_qty": "20000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    }
+   ],
+   "segments": [
+    {
+     "segment": "2026-01-23T11:45:00Z → 2026-01-31T20:00:00Z",
+     "name": "上线 → 窗口开始",
+     "in_segment_observations": [],
+     "fields": {
+      "tick": {
+       "grade": "B",
+       "value": "0.000001",
+       "source": "上线公告 2026-01-23T11:45:00Z",
+       "note": "只有上线公告给出起点值，段内无快照"
+      },
+      "qty_step": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      },
+      "min_qty": {
+       "grade": "B",
+       "value": "1",
+       "source": "上线公告 2026-01-23T11:45:00Z",
+       "note": "只有上线公告给出起点值，段内无快照"
+      },
+      "max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "mkt_max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "min_notional": {
+       "grade": "B",
+       "value": "5",
+       "source": "上线公告 2026-01-23T11:45:00Z",
+       "note": "只有上线公告给出起点值，段内无快照"
+      }
+     }
+    },
+    {
+     "segment": "2026-01-31T20:00:00Z → 2026-07-30T19:00:00Z",
+     "name": "窗口内",
+     "in_segment_observations": [
+      "2026-02-17T04:00:13Z",
+      "2026-05-10T10:00:13Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.000001",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "40000000",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "4000000",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      }
+     }
+    },
+    {
+     "segment": "2026-07-30T19:00:00Z → 2026-10-16T08:01:14Z",
+     "name": "窗口后 → 最近观测",
+     "in_segment_observations": [
+      "2026-10-01T02:49:48Z",
+      "2026-10-02T11:46:29Z",
+      "2026-10-16T08:01:14Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.000001",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "50000000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "20000000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测到 1 次变化"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "symbol": "AIGENSYNUSDT",
+   "launch": {
+    "effective_utc": "2026-04-29T14:15:00Z",
+    "announced_utc": "2026-04-29T13:27:04Z",
+    "has_spec_table": true,
+    "announced_fields": {
+     "tick": "0.00001",
+     "min_qty": "1",
+     "min_notional": "5"
+    }
+   },
+   "window": [
+    "2026-05-07T23:00:00Z",
+    "2026-09-14T06:00:00Z"
+   ],
+   "observations": [
+    {
+     "utc": "2026-05-10T10:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260510103016Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "20000000",
+      "mkt_max_qty": "2000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-01T02:49:48Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20261001035141Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "30000000",
+      "mkt_max_qty": "3000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-02T11:46:29Z",
+     "kind": "local_snapshot",
+     "file": "exchangeInfo_futures_2026-10-05T015512Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "30000000",
+      "mkt_max_qty": "3000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-16T08:01:14Z",
+     "kind": "live_fetch",
+     "file": "当前响应_exchangeInfo.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "30000000",
+      "mkt_max_qty": "3000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    }
+   ],
+   "segments": [
+    {
+     "segment": "2026-04-29T14:15:00Z → 2026-05-07T23:00:00Z",
+     "name": "上线 → 窗口开始",
+     "in_segment_observations": [],
+     "fields": {
+      "tick": {
+       "grade": "B",
+       "value": "0.00001",
+       "source": "上线公告 2026-04-29T14:15:00Z",
+       "note": "只有上线公告给出起点值，段内无快照"
+      },
+      "qty_step": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      },
+      "min_qty": {
+       "grade": "B",
+       "value": "1",
+       "source": "上线公告 2026-04-29T14:15:00Z",
+       "note": "只有上线公告给出起点值，段内无快照"
+      },
+      "max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "mkt_max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "min_notional": {
+       "grade": "B",
+       "value": "5",
+       "source": "上线公告 2026-04-29T14:15:00Z",
+       "note": "只有上线公告给出起点值，段内无快照"
+      }
+     }
+    },
+    {
+     "segment": "2026-05-07T23:00:00Z → 2026-09-14T06:00:00Z",
+     "name": "窗口内",
+     "in_segment_observations": [
+      "2026-05-10T10:00:13Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.00001",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "20000000",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "2000000",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      }
+     }
+    },
+    {
+     "segment": "2026-09-14T06:00:00Z → 2026-10-16T08:01:14Z",
+     "name": "窗口后 → 最近观测",
+     "in_segment_observations": [
+      "2026-10-01T02:49:48Z",
+      "2026-10-02T11:46:29Z",
+      "2026-10-16T08:01:14Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.00001",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "30000000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "3000000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "symbol": "TRUTHUSDT",
+   "launch": {
+    "effective_utc": "2025-10-01T12:00:00Z",
+    "announced_utc": "2025-09-29T06:00:03Z",
+    "has_spec_table": true,
+    "announced_fields": {
+     "tick": "0.000001"
+    }
+   },
+   "window": [
+    "2025-10-09T20:00:00Z",
+    "2026-04-07T20:00:00Z"
+   ],
+   "observations": [
+    {
+     "utc": "2026-02-17T04:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260217041328Z.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "60000000",
+      "mkt_max_qty": "6000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-05-10T10:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260510103016Z.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "60000000",
+      "mkt_max_qty": "6000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-01T02:49:48Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20261001035141Z.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "60000000",
+      "mkt_max_qty": "6000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-02T11:46:29Z",
+     "kind": "local_snapshot",
+     "file": "exchangeInfo_futures_2026-10-05T015512Z.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "60000000",
+      "mkt_max_qty": "6000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-16T08:01:14Z",
+     "kind": "live_fetch",
+     "file": "当前响应_exchangeInfo.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "60000000",
+      "mkt_max_qty": "6000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    }
+   ],
+   "segments": [
+    {
+     "segment": "2025-10-01T12:00:00Z → 2025-10-09T20:00:00Z",
+     "name": "上线 → 窗口开始",
+     "in_segment_observations": [],
+     "fields": {
+      "tick": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "上线公告的规格表自述为暂定值（上线前 15 分钟更新）⇒ 不能作为上线后时段的证据；计划值仅作参考：0.000001"
+      },
+      "qty_step": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      },
+      "min_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      },
+      "max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "mkt_max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "min_notional": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      }
+     }
+    },
+    {
+     "segment": "2025-10-09T20:00:00Z → 2026-04-07T20:00:00Z",
+     "name": "窗口内",
+     "in_segment_observations": [
+      "2026-02-17T04:00:13Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.000001",
+       "source": "2026-02-17T04:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-02-17T04:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-02-17T04:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "60000000",
+       "source": "2026-02-17T04:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "6000000",
+       "source": "2026-02-17T04:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2026-02-17T04:00:13Z",
+       "note": "段内观测值一致"
+      }
+     }
+    },
+    {
+     "segment": "2026-04-07T20:00:00Z → 2026-10-16T08:01:14Z",
+     "name": "窗口后 → 最近观测",
+     "in_segment_observations": [
+      "2026-05-10T10:00:13Z",
+      "2026-10-01T02:49:48Z",
+      "2026-10-02T11:46:29Z",
+      "2026-10-16T08:01:14Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.000001",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "60000000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "6000000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "symbol": "COTIUSDT",
+   "launch": {
+    "effective_utc": "2021-03-10T07:00:00Z",
+    "announced_utc": "2021-03-09T07:48:02Z",
+    "has_spec_table": false,
+    "announced_fields": {}
+   },
+   "window": [
+    "2024-01-01T00:00:00Z",
+    "2024-06-30T00:00:00Z"
+   ],
+   "observations": [
+    {
+     "utc": "2021-04-11T15:55:06Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210411155506Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "10000000",
+      "mkt_max_qty": "500000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-04-16T20:35:56Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210416203556Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "10000000",
+      "mkt_max_qty": "500000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-06-16T04:07:32Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210616214245Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "10000000",
+      "mkt_max_qty": "500000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-07-16T03:30:00Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210716214352Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "10000000",
+      "mkt_max_qty": "1000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-09-14T10:15:15Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210914214535Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "250000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-10-14T16:00:45Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20211014214606Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "250000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-12-13T03:30:03Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20211213214732Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "250000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-03-18T12:00:38Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20220318130953Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "250000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-09-08T12:00:16Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20220908123350Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "250000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-09-13T14:00:11Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20220913143555Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "250000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-09-14T14:00:38Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20220914151943Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "250000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-09-16T20:00:29Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20220916203339Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "800000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-11-16T20:00:10Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20221116205542Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "800000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-11-21T16:00:12Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20221121164449Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "800000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-11-27T16:00:11Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20221127174756Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "800000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2023-11-02T08:47:08Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20231102093209Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "5000000",
+      "mkt_max_qty": "800000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-02-17T04:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260217041328Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "50000000",
+      "mkt_max_qty": "5000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-05-10T10:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260510103016Z.json",
+     "spec": {
+      "tick": "0.00001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "50000000",
+      "mkt_max_qty": "5000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-01T02:49:48Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20261001035141Z.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "70000000",
+      "mkt_max_qty": "7000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-02T11:46:29Z",
+     "kind": "local_snapshot",
+     "file": "exchangeInfo_futures_2026-10-05T015512Z.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "70000000",
+      "mkt_max_qty": "7000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-16T08:01:14Z",
+     "kind": "live_fetch",
+     "file": "当前响应_exchangeInfo.json",
+     "spec": {
+      "tick": "0.000001",
+      "qty_step": "1",
+      "min_qty": "1",
+      "max_qty": "70000000",
+      "mkt_max_qty": "7000000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    }
+   ],
+   "segments": [
+    {
+     "segment": "2021-03-10T07:00:00Z → 2024-01-01T00:00:00Z",
+     "name": "上线 → 窗口开始",
+     "in_segment_observations": [
+      "2021-04-11T15:55:06Z",
+      "2021-04-16T20:35:56Z",
+      "2021-06-16T04:07:32Z",
+      "2021-07-16T03:30:00Z",
+      "2021-09-14T10:15:15Z",
+      "2021-10-14T16:00:45Z",
+      "2021-12-13T03:30:03Z",
+      "2022-03-18T12:00:38Z",
+      "2022-09-08T12:00:16Z",
+      "2022-09-13T14:00:11Z",
+      "2022-09-14T14:00:38Z",
+      "2022-09-16T20:00:29Z",
+      "2022-11-16T20:00:10Z",
+      "2022-11-21T16:00:12Z",
+      "2022-11-27T16:00:11Z",
+      "2023-11-02T08:47:08Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.00001",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "1",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "1",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "5000000",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测到 1 次变化"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "800000",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测到 3 次变化"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测值一致"
+      }
+     }
+    },
+    {
+     "segment": "2024-01-01T00:00:00Z → 2024-06-30T00:00:00Z",
+     "name": "窗口内",
+     "in_segment_observations": [],
+     "fields": {
+      "tick": {
+       "grade": "B",
+       "value": "0.00001",
+       "source": "段前 2023-11-02T08:47:08Z 与段后 2026-02-17T04:00:13Z 两端一致",
+       "note": "两端一致，但按纪律不构成『段内未变更』的证明"
+      },
+      "qty_step": {
+       "grade": "B",
+       "value": "1",
+       "source": "段前 2023-11-02T08:47:08Z 与段后 2026-02-17T04:00:13Z 两端一致",
+       "note": "两端一致，但按纪律不构成『段内未变更』的证明"
+      },
+      "min_qty": {
+       "grade": "B",
+       "value": "1",
+       "source": "段前 2023-11-02T08:47:08Z 与段后 2026-02-17T04:00:13Z 两端一致",
+       "note": "两端一致，但按纪律不构成『段内未变更』的证明"
+      },
+      "max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "mkt_max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "min_notional": {
+       "grade": "B",
+       "value": "5",
+       "source": "段前 2023-11-02T08:47:08Z 与段后 2026-02-17T04:00:13Z 两端一致",
+       "note": "两端一致，但按纪律不构成『段内未变更』的证明"
+      }
+     }
+    },
+    {
+     "segment": "2024-06-30T00:00:00Z → 2026-07-21T06:40:00Z",
+     "name": "变更点切分",
+     "in_segment_observations": [
+      "2026-02-17T04:00:13Z",
+      "2026-05-10T10:00:13Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.00001",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "50000000",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "5000000",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2026-05-10T10:00:13Z",
+       "note": "段内观测值一致"
+      }
+     }
+    },
+    {
+     "segment": "2026-07-21T06:40:00Z → 2026-10-16T08:01:14Z",
+     "name": "窗口后 → 最近观测",
+     "in_segment_observations": [
+      "2026-10-01T02:49:48Z",
+      "2026-10-02T11:46:29Z",
+      "2026-10-16T08:01:14Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.000001",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "1",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "70000000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "7000000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "symbol": "BNBUSDT",
+   "launch": {
+    "effective_utc": "2020-02-10T08:00:00Z",
+    "announced_utc": "2020-02-07T10:43:21Z",
+    "has_spec_table": false,
+    "announced_fields": {}
+   },
+   "window": [
+    "2024-01-01T00:00:00Z",
+    "2024-06-30T00:00:00Z"
+   ],
+   "observations": [
+    {
+     "utc": "2021-01-04T19:51:02Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210104195101Z.json",
+     "spec": {
+      "tick": "0.001",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "100000",
+      "min_notional": null
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-04-11T15:55:06Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210411155506Z.json",
+     "spec": {
+      "tick": "0.001",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "20000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-04-16T20:35:56Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210416203556Z.json",
+     "spec": {
+      "tick": "0.001",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "20000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-06-16T04:07:32Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210616214245Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "20000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-07-16T03:30:00Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210716214352Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "20000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-09-14T10:15:15Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20210914214535Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "1500",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-10-14T16:00:45Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20211014214606Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "1500",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2021-12-13T03:30:03Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20211213214732Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "1500",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-03-18T12:00:38Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20220318130953Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "1500",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-09-08T12:00:16Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20220908123350Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "1500",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-09-13T14:00:11Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20220913143555Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "1500",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-09-14T14:00:38Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20220914151943Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "1500",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-09-16T20:00:29Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20220916203339Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "1500",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-11-16T20:00:10Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20221116205542Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "2000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-11-21T16:00:12Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20221121164449Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "2000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2022-11-27T16:00:11Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20221127174756Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "2000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ]
+    },
+    {
+     "utc": "2023-11-02T08:47:08Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20231102093209Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "2000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-02-17T04:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260217041328Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "2000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-05-10T10:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260510103016Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "2000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-01T02:49:48Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20261001035141Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "2000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-02T11:46:29Z",
+     "kind": "local_snapshot",
+     "file": "exchangeInfo_futures_2026-10-05T015512Z.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "2000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-16T08:01:14Z",
+     "kind": "live_fetch",
+     "file": "当前响应_exchangeInfo.json",
+     "spec": {
+      "tick": "0.01",
+      "qty_step": "0.01",
+      "min_qty": "0.01",
+      "max_qty": "100000",
+      "mkt_max_qty": "2000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    }
+   ],
+   "segments": [
+    {
+     "segment": "2020-02-10T08:00:00Z → 2021-05-11T03:30:00Z",
+     "name": "变更点切分",
+     "in_segment_observations": [
+      "2021-01-04T19:51:02Z",
+      "2021-04-11T15:55:06Z",
+      "2021-04-16T20:35:56Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.001",
+       "source": "2021-04-16T20:35:56Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "0.01",
+       "source": "2021-04-16T20:35:56Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "0.01",
+       "source": "2021-04-16T20:35:56Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "100000",
+       "source": "2021-04-16T20:35:56Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "20000",
+       "source": "2021-04-16T20:35:56Z",
+       "note": "段内观测到 1 次变化"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2021-04-16T20:35:56Z",
+       "note": "段内观测到 1 次变化"
+      }
+     }
+    },
+    {
+     "segment": "2021-05-11T03:30:00Z → 2024-01-01T00:00:00Z",
+     "name": "上线 → 窗口开始",
+     "in_segment_observations": [
+      "2021-06-16T04:07:32Z",
+      "2021-07-16T03:30:00Z",
+      "2021-09-14T10:15:15Z",
+      "2021-10-14T16:00:45Z",
+      "2021-12-13T03:30:03Z",
+      "2022-03-18T12:00:38Z",
+      "2022-09-08T12:00:16Z",
+      "2022-09-13T14:00:11Z",
+      "2022-09-14T14:00:38Z",
+      "2022-09-16T20:00:29Z",
+      "2022-11-16T20:00:10Z",
+      "2022-11-21T16:00:12Z",
+      "2022-11-27T16:00:11Z",
+      "2023-11-02T08:47:08Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.01",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "0.01",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "0.01",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "100000",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "2000",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测到 2 次变化"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2023-11-02T08:47:08Z",
+       "note": "段内观测值一致"
+      }
+     }
+    },
+    {
+     "segment": "2024-01-01T00:00:00Z → 2024-06-30T00:00:00Z",
+     "name": "窗口内",
+     "in_segment_observations": [],
+     "fields": {
+      "tick": {
+       "grade": "B",
+       "value": "0.01",
+       "source": "段前 2023-11-02T08:47:08Z 与段后 2026-02-17T04:00:13Z 两端一致",
+       "note": "两端一致，但按纪律不构成『段内未变更』的证明"
+      },
+      "qty_step": {
+       "grade": "B",
+       "value": "0.01",
+       "source": "段前 2023-11-02T08:47:08Z 与段后 2026-02-17T04:00:13Z 两端一致",
+       "note": "两端一致，但按纪律不构成『段内未变更』的证明"
+      },
+      "min_qty": {
+       "grade": "B",
+       "value": "0.01",
+       "source": "段前 2023-11-02T08:47:08Z 与段后 2026-02-17T04:00:13Z 两端一致",
+       "note": "两端一致，但按纪律不构成『段内未变更』的证明"
+      },
+      "max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "mkt_max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "min_notional": {
+       "grade": "B",
+       "value": "5",
+       "source": "段前 2023-11-02T08:47:08Z 与段后 2026-02-17T04:00:13Z 两端一致",
+       "note": "两端一致，但按纪律不构成『段内未变更』的证明"
+      }
+     }
+    },
+    {
+     "segment": "2024-06-30T00:00:00Z → 2026-10-16T08:01:14Z",
+     "name": "窗口后 → 最近观测",
+     "in_segment_observations": [
+      "2026-02-17T04:00:13Z",
+      "2026-05-10T10:00:13Z",
+      "2026-10-01T02:49:48Z",
+      "2026-10-02T11:46:29Z",
+      "2026-10-16T08:01:14Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.01",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "0.01",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "0.01",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "100000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "2000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "symbol": "ORDIUSDT",
+   "launch": {
+    "effective_utc": "2023-11-07T12:30:00Z",
+    "announced_utc": "2023-11-07T07:30:03Z",
+    "has_spec_table": true,
+    "announced_fields": {
+     "tick": "0.001"
+    }
+   },
+   "window": [
+    "2024-01-01T00:00:00Z",
+    "2024-06-30T00:00:00Z"
+   ],
+   "observations": [
+    {
+     "utc": "2026-02-17T04:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260217041328Z.json",
+     "spec": {
+      "tick": "0.001",
+      "qty_step": "0.1",
+      "min_qty": "0.1",
+      "max_qty": "200000",
+      "mkt_max_qty": "20000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-05-10T10:00:13Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20260510103016Z.json",
+     "spec": {
+      "tick": "0.001",
+      "qty_step": "0.1",
+      "min_qty": "0.1",
+      "max_qty": "200000",
+      "mkt_max_qty": "20000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-01T02:49:48Z",
+     "kind": "archive_capture",
+     "file": "exchangeInfo_20261001035141Z.json",
+     "spec": {
+      "tick": "0.001",
+      "qty_step": "0.1",
+      "min_qty": "0.1",
+      "max_qty": "200000",
+      "mkt_max_qty": "20000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-02T11:46:29Z",
+     "kind": "local_snapshot",
+     "file": "exchangeInfo_futures_2026-10-05T015512Z.json",
+     "spec": {
+      "tick": "0.001",
+      "qty_step": "0.1",
+      "min_qty": "0.1",
+      "max_qty": "200000",
+      "mkt_max_qty": "20000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    },
+    {
+     "utc": "2026-10-16T08:01:14Z",
+     "kind": "live_fetch",
+     "file": "当前响应_exchangeInfo.json",
+     "spec": {
+      "tick": "0.001",
+      "qty_step": "0.1",
+      "min_qty": "0.1",
+      "max_qty": "200000",
+      "mkt_max_qty": "20000",
+      "min_notional": "5"
+     },
+     "order_types": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "time_in_force": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ]
+    }
+   ],
+   "segments": [
+    {
+     "segment": "2023-11-07T12:30:00Z → 2024-01-01T00:00:00Z",
+     "name": "上线 → 窗口开始",
+     "in_segment_observations": [],
+     "fields": {
+      "tick": {
+       "grade": "B",
+       "value": "0.001",
+       "source": "上线公告 2023-11-07T12:30:00Z",
+       "note": "只有上线公告给出起点值，段内无快照"
+      },
+      "qty_step": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      },
+      "min_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      },
+      "max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "mkt_max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "min_notional": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      }
+     }
+    },
+    {
+     "segment": "2024-01-01T00:00:00Z → 2024-06-30T00:00:00Z",
+     "name": "窗口内",
+     "in_segment_observations": [],
+     "fields": {
+      "tick": {
+       "grade": "B",
+       "value": "0.001",
+       "source": "上线公告 2023-11-07T12:30:00Z",
+       "note": "只有上线公告给出起点值，段内无快照"
+      },
+      "qty_step": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      },
+      "min_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      },
+      "max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "mkt_max_qty": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "该字段从未出现在任何官方公告里，段内又没有快照 ⇒ 无从确认"
+      },
+      "min_notional": {
+       "grade": "C",
+       "value": null,
+       "source": null,
+       "note": "段外证据不一致或缺一侧"
+      }
+     }
+    },
+    {
+     "segment": "2024-06-30T00:00:00Z → 2026-10-16T08:01:14Z",
+     "name": "窗口后 → 最近观测",
+     "in_segment_observations": [
+      "2026-02-17T04:00:13Z",
+      "2026-05-10T10:00:13Z",
+      "2026-10-01T02:49:48Z",
+      "2026-10-02T11:46:29Z",
+      "2026-10-16T08:01:14Z"
+     ],
+     "fields": {
+      "tick": {
+       "grade": "A",
+       "value": "0.001",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "qty_step": {
+       "grade": "A",
+       "value": "0.1",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_qty": {
+       "grade": "A",
+       "value": "0.1",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "max_qty": {
+       "grade": "A",
+       "value": "200000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "mkt_max_qty": {
+       "grade": "A",
+       "value": "20000",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      },
+      "min_notional": {
+       "grade": "A",
+       "value": "5",
+       "source": "2026-10-16T08:01:14Z",
+       "note": "段内观测值一致"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

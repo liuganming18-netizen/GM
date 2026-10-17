@@ -1,0 +1,99 @@
+{
+  "consoleErrors": [],
+  "failedResponses": [],
+  "checks": {
+    "candidates": {
+      "listCount": 200,
+      "withTrades": 9
+    },
+    "tfGroupFound": 1,
+    "tfButtons": [
+      {
+        "tf": "1d",
+        "label": "日线",
+        "disabled": false,
+        "pressed": false
+      },
+      {
+        "tf": "12h",
+        "label": "12h",
+        "disabled": false,
+        "pressed": false
+      },
+      {
+        "tf": "8h",
+        "label": "8h",
+        "disabled": false,
+        "pressed": false
+      },
+      {
+        "tf": "4h",
+        "label": "4h",
+        "disabled": false,
+        "pressed": false
+      },
+      {
+        "tf": "1h",
+        "label": "1h",
+        "disabled": false,
+        "pressed": false
+      },
+      {
+        "tf": "30m",
+        "label": "30m",
+        "disabled": false,
+        "pressed": false
+      },
+      {
+        "tf": "15m",
+        "label": "15m",
+        "disabled": false,
+        "pressed": true
+      },
+      {
+        "tf": "5m",
+        "label": "5分线",
+        "disabled": true,
+        "pressed": false
+      }
+    ],
+    "barsAt15m": 17376,
+    "barsAt1d": 181,
+    "dayPressed": "true",
+    "barsAt4h": 1086,
+    "barsAt1h": 4344,
+    "barsBackTo15m": 17376,
+    "m5Disabled": true,
+    "m5Title": "本 run 的执行周期是 15m，比它更细的 5m 无法从 15m 还原（不插值、不合成）⇒ 禁用",
+    "fundingViewportFound": 1,
+    "fundingViewportBefore": "视窗 01-01 00:00 → 06-29 23:45",
+    "underwaterActiveBefore": false,
+    "tradeRowCount": 1,
+    "tradeId": "trd_1",
+    "tradeRowText": "2024-02-26 04:15 ACEUSDT 1 11.7400 12.8800 +$3.75 max_holding_expired",
+    "underwaterActiveAfter": true,
+    "focusBadgeFound": 1,
+    "focusBadgeText": "已定位 trd_1 ✕",
+    "fundingViewportAfter": "视窗 02-24 14:45 → 03-07 05:30",
+    "fundingReadout": "③ 资金分析 回撤 ✗ 不一致 净值对比 水下回撤 已定位 trd_1 ✕ 全部 最近1天 最近3天 视窗 02-24 14:45 → 03-07 05:30 时刻 06-29 23:45 UTC 策略净值 $2,003.75 (+0.19%) 买入持有基准 该时点无基准数据 水下回撤 -0.274% 该笔区间 02-26 04:15 → 03-07 04:15 UTC 基准序列存在缺时点 ⇒ 不插值、不连线，缺时点处基准为空。 口径与一致性核对（基准 / 末点 / 回撤展开） 月度收益热力图与逐月完整性核对（0 个月）",
+    "chartPanelHasSelected": true,
+    "chartPanelSelectedLine": "已选中 entry 2024-02-26 04:15 @ 11.7400 exit 2024-03-07 04:15 @ 12.8800（max_holding_expired） 止损轨迹 1 点 定位 2024-02-26 03:15 → 2024-03-07 05:15",
+    "focusBadgeAfterReset": 0,
+    "scrollRatio": {
+      "scrollHeight": 995,
+      "clientHeight": 995,
+      "ratio": 1
+    },
+    "docRatio": 1
+  },
+  "shots": [
+    "/Users/boos/Desktop/威科夫因子共振趋势/UI界面/evidence/Work_回测复盘页三项改造_2026-10-17/runs/01_chart_15m.png",
+    "/Users/boos/Desktop/威科夫因子共振趋势/UI界面/evidence/Work_回测复盘页三项改造_2026-10-17/runs/02_chart_1d.png",
+    "/Users/boos/Desktop/威科夫因子共振趋势/UI界面/evidence/Work_回测复盘页三项改造_2026-10-17/runs/03_chart_4h.png",
+    "/Users/boos/Desktop/威科夫因子共振趋势/UI界面/evidence/Work_回测复盘页三项改造_2026-10-17/runs/04_funding_before.png",
+    "/Users/boos/Desktop/威科夫因子共振趋势/UI界面/evidence/Work_回测复盘页三项改造_2026-10-17/runs/05_linked_underwater.png",
+    "/Users/boos/Desktop/威科夫因子共振趋势/UI界面/evidence/Work_回测复盘页三项改造_2026-10-17/runs/06_after_reset.png",
+    "/Users/boos/Desktop/威科夫因子共振趋势/UI界面/evidence/Work_回测复盘页三项改造_2026-10-17/runs/07_final.png"
+  ],
+  "runId": "run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577"
+}

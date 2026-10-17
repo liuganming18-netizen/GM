@@ -1,0 +1,566 @@
+== 0 环境 ==
+/Users/boos/Desktop/威科夫因子共振趋势
+wyckoff-v3.1-main
+54b867bac71aae224f461f30290b882602923f1a
+Python 3.13.12
+
+== 1 独立复核 PRECISION-04（自建解析 + 自建分级实现）==
+========================================================================================
+A 公告：扫描 327 篇，含六标的的 23 篇
+   索引合计 6735 篇（公告索引.json:4452, 公告索引_48新币上线.json:2283）
+   [OK] BNBUSDT        原文命中=True 值={'0.001': True, '0.01': True} 生效时间=True
+   [OK] ORDIUSDT       原文命中=True 值={'0.001': True} 生效时间=True
+   [OK] TRUTHUSDT      原文命中=True 值={'0.000001': True} 生效时间=True
+   [OK] SPACEUSDT      原文命中=True 值={'0.000001': True, '5 USDT': True} 生效时间=True
+   [OK] AIGENSYNUSDT   原文命中=True 值={'0.00001': True, '5 USDT': True} 生效时间=True
+   [OK] COTIUSDT       原文命中=True 值={'0.00001': True, '0.000001': True} 生效时间=True
+   上线规格表覆盖: {"SPACEUSDT": {"has_TickSize": true, "has_MinTradeAmount": true, "has_MinNotional": true}, "AIGENSYNUSDT": {"has_TickSize": true, "has_MinTradeAmount": true, "has_MinNotional": true}, "TRUTHUSDT": {"has_TickSize": true, "has_MinTradeAmount": false, "has_MinNotional": false}, "ORDIUSDT": {"has_TickSize": true, "has_MinTradeAmount": false, "has_MinNotional": false}}
+   「上线前15分钟更新」免责: {"SPACEUSDT": false, "AIGENSYNUSDT": false, "TRUTHUSDT": true, "COTIUSDT": false, "BNBUSDT": false, "ORDIUSDT": false}
+========================================================================================
+B 存档：29 次捕获，usable 20，剔除 9 {"skew": ["2021-08-15T21:44:44Z", "2021-11-13T21:47:32Z", "2022-01-02T13:48:38Z"], "http_451": ["20221228165656", "20230216011155", "20231223162419", "20260408023940", "20260513163058"], "http_301": ["20230126191359"]}
+   usable 里 serverTime 与索引不符/超 skew 的：0
+========================================================================================
+C 时间线：23 条；源文件缺失 0；字段与源文件不符 0
+========================================================================================
+D 逐段：差异 0 处
+   obs 计数: {"SPACEUSDT": 5, "AIGENSYNUSDT": 4, "TRUTHUSDT": 5, "COTIUSDT": 21, "BNBUSDT": 22, "ORDIUSDT": 5}
+
+写出: /Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-05/PRECISION04复核结果.json
+
+== 2 重跑 PRECISION-04 自身工具链，记录退出码 ==
+exit=0 (工具_公告抓取.py)
+exit=0 (工具_证据汇总.py)
+exit=0 (工具_存档快照抓取.py)
+exit=0 (工具_本地证据盘点.py)
+exit=0 (工具_规格时间线.py)
+exit=0 (工具_逐段证据表.py)
+exit=0 (工具_运行侧反证.py)
+（注：工具_公告抓取.py index / index48 未重跑——会重新拉 6735 页；
+  其完整性改为核验已落盘索引的 reported_total 与实际条数是否相等，见报告第 2 节）
+
+== 3 逐笔核验 6 个 run 的 12 条腿 ==
+================================================================================================
+SPACEUSDT  run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451
+   timeframe=15m candles=17280 step_ms=[900000] config_has_price_step=False
+   entry  BUY  MARKET       2026-05-19T07:15:00Z  fill=0.01                   bar O=0.009718 H=0.009721 L=0.009391
+          inside=False overshoot=2.87% (above_high) steps_reproducing=['0.01', '0.005', '0.001']
+          参考：按公告 tick=0.000001 取整 → 0.009720999999999999（仅价格，不算盈亏）
+   exit   SELL STOP_MARKET  2026-05-28T04:15:00Z  fill=0.0                    bar O=0.007033 H=0.007098 L=0.006617
+          inside=False overshoot=-100.00% (below_low) steps_reproducing=['0.1', '0.05', '0.01']
+          参考：按公告 tick=0.000001 取整 → 0.006777（仅价格，不算盈亏）
+================================================================================================
+AIGENSYNUSDT  run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703
+   timeframe=15m candles=12418 step_ms=[900000] config_has_price_step=False
+   entry  BUY  MARKET       2026-09-07T07:15:00Z  fill=0.03                   bar O=0.02125 H=0.02127 L=0.02095
+          inside=False overshoot=41.04% (above_high) steps_reproducing=['0.01']
+          参考：按公告 tick=0.00001 取整 → 0.02126（仅价格，不算盈亏）
+   exit   SELL STOP_MARKET  2026-09-09T22:00:00Z  fill=0.01                   bar O=0.01957 H=0.01964 L=0.01899
+          inside=False overshoot=-47.34% (below_low) steps_reproducing=['0.01']
+          参考：按公告 tick=0.00001 取整 → 0.01898（仅价格，不算盈亏）
+================================================================================================
+TRUTHUSDT  run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465
+   timeframe=15m candles=17280 step_ms=[900000] config_has_price_step=False
+   entry  BUY  MARKET       2026-02-09T13:15:00Z  fill=0.02                   bar O=0.015693 H=0.016323 L=0.015398
+          inside=False overshoot=22.53% (above_high) steps_reproducing=['0.01', '0.005']
+          参考：按公告 tick=0.000001 取整 → 0.015698（仅价格，不算盈亏）
+   exit   SELL STOP_MARKET  2026-02-17T08:30:00Z  fill=0.01                   bar O=0.013363 H=0.013449 L=0.011522
+          inside=False overshoot=-13.21% (below_low) steps_reproducing=['0.01', '0.005']
+          参考：按公告 tick=0.000001 取整 → 0.012473999999999999（仅价格，不算盈亏）
+================================================================================================
+COTIUSDT  run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145
+   timeframe=15m candles=17376 step_ms=[900000] config_has_price_step=False
+   entry  BUY  MARKET       2024-02-05T20:15:00Z  fill=0.07                   bar O=0.06228 H=0.06265 L=0.06177
+          inside=False overshoot=11.73% (above_high) steps_reproducing=['0.01']
+          参考：按公告 tick=0.00001 取整 → 0.06230000000000001（仅价格，不算盈亏）
+   exit   SELL STOP_MARKET  2024-02-11T05:00:00Z  fill=0.08                   bar O=0.08624 H=0.0864 L=0.08525
+          inside=False overshoot=-6.16% (below_low) steps_reproducing=['0.01']
+          参考：按公告 tick=0.00001 取整 → 0.08565（仅价格，不算盈亏）
+================================================================================================
+BNBUSDT  run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973
+   timeframe=15m candles=17376 step_ms=[900000] config_has_price_step=False
+   entry  BUY  MARKET       2024-01-15T14:15:00Z  fill=317.78000000000003     bar O=317.68 H=317.9 L=316.18
+          inside=True overshoot=0.00% (inside) steps_reproducing=['0.01', '0.005']
+          参考：按公告 tick=0.01 取整 → 317.78000000000003（仅价格，不算盈亏）
+   exit   SELL STOP_MARKET  2024-01-23T14:00:00Z  fill=290.15000000000003     bar O=293.47 H=294.09 L=290.1
+          inside=True overshoot=0.00% (inside) steps_reproducing=['0.05', '0.01']
+          参考：按公告 tick=0.01 取整 → 290.15000000000003（仅价格，不算盈亏）
+================================================================================================
+ORDIUSDT  run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568
+   timeframe=15m candles=17376 step_ms=[900000] config_has_price_step=False
+   entry  BUY  MARKET       2024-05-30T13:15:00Z  fill=47.79                  bar O=47.768 H=48.414 L=47.212
+          inside=True overshoot=0.00% (inside) steps_reproducing=['0.01']
+          参考：按公告 tick=0.001 取整 → 47.783（仅价格，不算盈亏）
+   exit   SELL STOP_MARKET  2024-06-09T13:15:00Z  fill=62.050000000000004     bar O=62.078 H=62.081 L=61.294
+          inside=True overshoot=0.00% (inside) steps_reproducing=['0.05', '0.01']
+          参考：按公告 tick=0.001 取整 → 62.059000000000005（仅价格，不算盈亏）
+
+写出: /Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-05/四笔成交逐笔核验.json
+能同时复现全部 12 条腿的步长交集: ['0.01']
+
+== 4 运行时代码 vs 当前 vs git HEAD 三方对照 ==
+run 时 combined sha256: 4c5a5c58b9b6730cca114efbc6007957323dfc00c5c5fcaf7f517a82757ab619
+与当前不一致的文件 5 个：
+  策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py
+     run  : b08b61afb1fb06f05942c2b98a94bf2df8f1fd9f13ca859be60b993d794e386e
+     当前 : fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139
+     HEAD : None
+     结论 : unrecoverable
+  策略/WyckoffMaster/event_trend_v0_1/runner.py
+     run  : a3b5814ac942204791dc8278de1e5d3bcde8577fa5dcf3262d3eaeea462cd9c1
+     当前 : 07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb
+     HEAD : None
+     结论 : unrecoverable
+  策略/WyckoffMaster/trading_core/engine.py
+     run  : 6e22d7cec8221ee606d2650b5d27ff478ba338d0185d35b85e48296556175b88
+     当前 : c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2
+     HEAD : 82a2616479a3c664c4b131f2ae2c4cd7b89817acb54af9c79a54834fdb4f6fa2
+     结论 : unrecoverable
+  策略/WyckoffMaster/trading_core/fill.py
+     run  : 15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913
+     当前 : f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b
+     HEAD : 15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913
+     结论 : recoverable_from_git_HEAD
+  策略/WyckoffMaster/trading_core/position.py
+     run  : 85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327
+     当前 : 5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc
+     HEAD : 85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327
+     结论 : recoverable_from_git_HEAD
+六个 run 的代码指纹是否同一版: False {'4c5a5c58b9b6730cca114efbc6007957323dfc00c5c5fcaf7f517a82757ab619', '1e419902415c6065ad98f4489ab15634431fb05f0f7330a0192fb9635944f27b'}
+写出: /Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-05/运行时代码/运行时代码指纹对照.json
+
+== 5 现有精度保护探针（legacy / strict 两种模式）==
+==========================================================================================
+A_价格闸门_legacy(strict=False)
+  [FAIL] raw_price=0
+        expected = 'reject'
+        got = 'accepted'
+        result = "FillQuote(entry_fill=0.0, stop_fill=98.97030000000001, source='simulated_bar', slippage_rate=0.00030000000000000003, price_step=0.01, audit={})"
+  [FAIL] raw_price=-1
+        expected = 'reject'
+        got = 'accepted'
+        result = "FillQuote(entry_fill=-1.0, stop_fill=98.97030000000001, source='simulated_bar', slippage_rate=0.00030000000000000003, price_step=0.01, audit={})"
+  [PASS] raw_price=nan
+        expected = 'reject'
+        got = 'InvalidOperation'
+        reason = 'px: non_finite'
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] raw_price=inf
+        expected = 'reject'
+        got = 'InvalidOperation'
+        reason = 'px: non_finite'
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] raw_price=None
+        expected = 'reject'
+        got = 'TypeError'
+        reason = "unsupported operand type(s) for *: 'NoneType' and 'float'"
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] raw_price='abc'
+        expected = 'reject'
+        got = 'TypeError'
+        reason = "can't multiply sequence by non-int of type 'float'"
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [FAIL] exit raw_price=0
+        expected = 'reject'
+        got = 'accepted'
+        result = '0.0'
+  [PASS] exit raw_price=nan
+        expected = 'reject'
+        got = 'InvalidOperation'
+        reason = 'px: non_finite'
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+==========================================================================================
+A_价格闸门_strict(strict=True)
+  [PASS] raw_price=0
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'nonpositive_raw_price'
+        detail = "{'raw_price': '0.0', 'stage': 'entry', 'reason': 'nonpositive_raw_price'}"
+  [PASS] raw_price=-1
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'nonpositive_raw_price'
+        detail = "{'raw_price': '-1.0', 'stage': 'entry', 'reason': 'nonpositive_raw_price'}"
+  [PASS] raw_price=nan
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price'
+        detail = "{'raw_price': 'nan', 'stage': 'entry', 'detail': 'raw_price: non_finite', 'reason': 'non_finite_or_invalid_price'}"
+  [PASS] raw_price=inf
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price'
+        detail = "{'raw_price': 'inf', 'stage': 'entry', 'detail': 'raw_price: non_finite', 'reason': 'non_finite_or_invalid_price'}"
+  [PASS] raw_price=None
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price'
+        detail = "{'raw_price': 'None', 'stage': 'entry', 'detail': 'raw_price: NoneType', 'reason': 'non_finite_or_invalid_price'}"
+  [PASS] raw_price='abc'
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price'
+        detail = '{\'raw_price\': \'abc\', \'stage\': \'entry\', \'detail\': "[<class \'decimal.ConversionSyntax\'>]", \'reason\': \'non_finite_or_invalid_price\'}'
+  [PASS] exit raw_price=0
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'nonpositive_raw_price'
+        detail = "{'raw_price': '0.0', 'stage': 'exit', 'reason': 'nonpositive_raw_price'}"
+  [PASS] exit raw_price=nan
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price'
+        detail = "{'raw_price': 'nan', 'stage': 'exit', 'detail': 'raw_price: non_finite', 'reason': 'non_finite_or_invalid_price'}"
+==========================================================================================
+B_步长处理_legacy(strict=False)
+  [FAIL] price_step=0
+        expected = 'reject'
+        got = 'accepted'
+        result = "FillQuote(entry_fill=100.03, stop_fill=98.97030000000001, source='simulated_bar', slippage_rate=0.00030000000000000003, price_step=0.0, audit={})"
+  [FAIL] price_step=-0.01
+        expected = 'reject'
+        got = 'accepted'
+        result = "FillQuote(entry_fill=100.03, stop_fill=98.97030000000001, source='simulated_bar', slippage_rate=0.00030000000000000003, price_step=-0.01, audit={})"
+  [PASS] price_step=nan
+        expected = 'reject'
+        got = 'InvalidOperation'
+        reason = 'step: non_finite'
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] price_step=inf
+        expected = 'reject'
+        got = 'InvalidOperation'
+        reason = 'step: non_finite'
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] price_step='abc'
+        expected = 'reject'
+        got = 'ValueError'
+        reason = "could not convert string to float: 'abc'"
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] price_step=None
+        expected = 'reject'
+        got = 'TypeError'
+        reason = "float() argument must be a string or a real number, not 'NoneType'"
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [INFO] 0.004076 用 step=0.000001 买
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.004078
+        step_used = '0.000001'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+  [INFO] 0.004076 用 step=0.01 买
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.01
+        step_used = '0.01'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+  [INFO] 0.004076 用 step=0.01 卖
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.0
+        step_used = '0.01'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+  [INFO] 0.000001 用 step=0.01 卖
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.0
+        step_used = '0.01'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+==========================================================================================
+B_步长处理_strict(strict=True)
+  [PASS] price_step=0
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'invalid_price_step_nonpositive'
+        detail = "{'price_step': '0.0', 'stage': 'entry', 'raw_price': '100.0', 'reason': 'invalid_price_step_nonpositive'}"
+  [PASS] price_step=-0.01
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'invalid_price_step_nonpositive'
+        detail = "{'price_step': '-0.01', 'stage': 'entry', 'raw_price': '100.0', 'reason': 'invalid_price_step_nonpositive'}"
+  [PASS] price_step=nan
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price_step'
+        detail = "{'price_step': 'nan', 'stage': 'entry', 'detail': 'price_step: non_finite', 'reason': 'non_finite_or_invalid_price_step'}"
+  [PASS] price_step=inf
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price_step'
+        detail = "{'price_step': 'inf', 'stage': 'entry', 'detail': 'price_step: non_finite', 'reason': 'non_finite_or_invalid_price_step'}"
+  [PASS] price_step='abc'
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price_step'
+        detail = '{\'price_step\': \'abc\', \'stage\': \'entry\', \'detail\': "[<class \'decimal.ConversionSyntax\'>]", \'reason\': \'non_finite_or_invalid_price_step\'}'
+  [PASS] price_step=None
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price_step'
+        detail = "{'price_step': 'None', 'stage': 'entry', 'detail': 'price_step: NoneType', 'reason': 'non_finite_or_invalid_price_step'}"
+  [INFO] 0.004076 用 step=0.000001 买
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.004078
+        step_used = '0.000001'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+  [INFO] 0.004076 用 step=0.01 买
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.01
+        step_used = '0.01'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+  [INFO] 0.004076 用 step=0.01 卖
+        expected = '观察'
+        got = 'FillRejected'
+        reason = 'nonpositive_or_nonfinite_exit_fill'
+  [INFO] 0.000001 用 step=0.01 卖
+        expected = '观察'
+        got = 'FillRejected'
+        reason = 'nonpositive_or_nonfinite_exit_fill'
+==========================================================================================
+C_四笔异常复现
+  [INFO] SPACEUSDT entry
+        bar_open = 0.009718
+        recorded = 0.01
+        announced_tick = '0.000001'
+        legacy(strict=False)_step_0.01 = 0.01
+        legacy(strict=False)_tick = 0.009721
+        strict(strict=True)_step_0.01 = 0.01
+        strict(strict=True)_tick = 0.009721
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] SPACEUSDT exit
+        bar_open = 0.007033
+        recorded = 0.0
+        announced_tick = '0.000001'
+        legacy(strict=False)_step_0.01 = 0.0
+        legacy(strict=False)_tick = 0.00703
+        strict(strict=True)_step_0.01 = 'REJECT:nonpositive_or_nonfinite_exit_fill'
+        strict(strict=True)_tick = 0.00703
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] AIGENSYNUSDT entry
+        bar_open = 0.02125
+        recorded = 0.03
+        announced_tick = '0.00001'
+        legacy(strict=False)_step_0.01 = 0.03
+        legacy(strict=False)_tick = 0.02126
+        strict(strict=True)_step_0.01 = 0.03
+        strict(strict=True)_tick = 0.02126
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] AIGENSYNUSDT exit
+        bar_open = 0.01957
+        recorded = 0.01
+        announced_tick = '0.00001'
+        legacy(strict=False)_step_0.01 = 0.01
+        legacy(strict=False)_tick = 0.01956
+        strict(strict=True)_step_0.01 = 0.01
+        strict(strict=True)_tick = 0.01956
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] TRUTHUSDT entry
+        bar_open = 0.015693
+        recorded = 0.02
+        announced_tick = '0.000001'
+        legacy(strict=False)_step_0.01 = 0.02
+        legacy(strict=False)_tick = 0.015698
+        strict(strict=True)_step_0.01 = 0.02
+        strict(strict=True)_tick = 0.015698
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] TRUTHUSDT exit
+        bar_open = 0.013363
+        recorded = 0.01
+        announced_tick = '0.000001'
+        legacy(strict=False)_step_0.01 = 0.01
+        legacy(strict=False)_tick = 0.013358
+        strict(strict=True)_step_0.01 = 0.01
+        strict(strict=True)_tick = 0.013358
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] COTIUSDT entry
+        bar_open = 0.06228
+        recorded = 0.07
+        announced_tick = '0.00001'
+        legacy(strict=False)_step_0.01 = 0.07
+        legacy(strict=False)_tick = 0.0623
+        strict(strict=True)_step_0.01 = 0.07
+        strict(strict=True)_tick = 0.0623
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] COTIUSDT exit
+        bar_open = 0.08624
+        recorded = 0.08
+        announced_tick = '0.00001'
+        legacy(strict=False)_step_0.01 = 0.08
+        legacy(strict=False)_tick = 0.08621
+        strict(strict=True)_step_0.01 = 0.08
+        strict(strict=True)_tick = 0.08621
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] legacy(strict=False)：0.0068 按 0.01 卖出
+        fill_price = 0.0
+        produced_zero = True
+        note = '能产出 0 价 ⇒ 该模式下没有零价防线'
+  [INFO] strict(strict=True)：0.0068 按 0.01 卖出
+        got = 'REJECT'
+        reason = 'nonpositive_or_nonfinite_exit_fill'
+        note = '被拒 ⇒ 该模式下零价有防线'
+==========================================================================================
+D_规格闸门
+  [PASS] 无 instrument_spec 且无 price_step
+        expected = 'raise'
+        got = 'ExecutionInputError'
+        reason = 'instrument_spec_required: 必须提供交易所合约规格（或显式 price_step）；禁止用固定 0.01 默认值成交'
+  [PASS] price_step='0'
+        expected = 'raise'
+        got = 'ExecutionInputError'
+        reason = "invalid_price_step_nonpositive:'0'"
+  [PASS] price_step='-1'
+        expected = 'raise'
+        got = 'ExecutionInputError'
+        reason = "invalid_price_step_nonpositive:'-1'"
+  [PASS] price_step='abc'
+        expected = 'raise'
+        got = 'ExecutionInputError'
+        reason = "invalid_price_step:'abc'"
+  [INFO] 显式 price_step='0.01'（无规格）
+        expected = '放行但降级'
+        got = 'ExecutionInputError'
+        reason = 'missing_quote_volume_for_participation_cap: 15m 帧必须提供 quote_volume'
+        note = '若在此处就报错，说明还有更前置的校验'
+==========================================================================================
+E_历史规格判定
+  [INFO] SPACEUSDT
+        window = ['2026-01-31T20:00:00Z', '2026-07-30T19:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.000001'
+        qty_step = '1'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1769889600000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+  [INFO] AIGENSYNUSDT
+        window = ['2026-05-07T23:00:00Z', '2026-06-30T06:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.00001'
+        qty_step = '1'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1778194800000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+  [INFO] TRUTHUSDT
+        window = ['2025-10-09T20:00:00Z', '2026-04-07T20:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.000001'
+        qty_step = '1'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1760040000000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+  [INFO] COTIUSDT
+        window = ['2024-01-01T00:00:00Z', '2024-06-30T00:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.000001'
+        qty_step = '1'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+  [INFO] BNBUSDT
+        window = ['2024-01-01T00:00:00Z', '2024-06-30T00:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.01'
+        qty_step = '0.01'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+  [INFO] ORDIUSDT
+        window = ['2024-01-01T00:00:00Z', '2024-06-30T00:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.001'
+        qty_step = '0.1'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+==========================================================================================
+F_数量闸门
+  [INFO] qty=1.5（非整步长，price=100）
+        ok = False
+        violations = ['LOT_SIZE', 'MARKET_LOT_SIZE']
+  [INFO] qty=0（price=100）
+        ok = False
+        violations = ['LOT_SIZE', 'MARKET_LOT_SIZE', 'MIN_NOTIONAL']
+  [INFO] qty=-1（price=100）
+        ok = False
+        violations = ['LOT_SIZE', 'MARKET_LOT_SIZE', 'MIN_NOTIONAL']
+  [INFO] qty=999999999999（超 max，price=100）
+        ok = False
+        violations = ['LOT_SIZE', 'MARKET_LOT_SIZE']
+  [INFO] qty=1（整步长，price=100 ⇒ 名义额 100）
+        ok = True
+        violations = []
+  [INFO] qty=1（整步长，price=0.01 ⇒ 名义额 0.01）
+        ok = False
+        violations = ['MIN_NOTIONAL']
+
+写出: /Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-05/保护机制探针结果.json
+
+== 6 既有测试（隔离临时目录，不写工程 .pytest_cache）==
+pytest exit=0
+........................................................................ [ 77%]
+.....................                                                    [100%]
+93 passed in 1.57s
+
+== 7 交付表 + SHA256 清单 ==
+写出: /Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-05/表1_六标的证据对照.csv
+写出: /Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-05/表2_四笔成交逐笔核验.csv
+# PRECISION-05 产物 SHA256 清单
+
+## 本窗口产物
+
+| 文件 | 字节 | SHA256 |
+|---|---|---|
+| `PRECISION-05_核验报告_2026-10-17.md` | — | **缺失** |
+| `表1_六标的证据对照.csv` | 29302 | `89072230a025a29f4cf1b9cc030f8ee70a1f5fe025a2b7abcd3090b5ae866dd3` |
+| `表2_四笔成交逐笔核验.csv` | 6320 | `cb0a7ef3e0ea7648f8abf5882bc41b8266b1d6a6df409128f5941dd0dd114c90` |
+| `四笔成交逐笔核验.json` | 33988 | `4a45990bd0f0787ae9a51578f7f06149578acd8bff1f49d9b911ad2253565162` |
+| `PRECISION04复核结果.json` | 25493 | `9fe7c96d5e209071b1fbd78557b2598c9ad6a638c5d4b7b2dd6d2752f182adb9` |
+| `保护机制探针结果.json` | 19675 | `5bce7776b3e92cabd49b639b180c7d870ebc0fc61f724413d2313f06fc2aa1ed` |
+| `测试原始输出.txt` | 179 | `ad4b1ebe3b875aa3d0cb8938d009c3f7697f4fe7cd7e0d6b870e3e0f1012f375` |
+| `探针原始输出.txt` | 18798 | `f03887bf5701cc09bc6569df8f72c37a79ea6849cf18e1b16bd61a1440c7e4f6` |
+| `P04工具链重跑.txt` | 23438 | `0eb94e9741bf5268cf18ba2e8fbc7a72f7ad9fa47ddbc7a1119aa2645dd9eefe` |
+| `逐笔核验原始输出.txt` | 5048 | `acc0fa1966dde796fb9ce0d05388075968e759e6869f6353b187e4a5cef4e329` |
+| `复现命令.sh` | 2566 | `6d563cd756a8f1bdeda237ce0798f4c580d5b802dd3988c490c969b2f107197c` |
+| `工具_逐笔核验.py` | 14459 | `ab30d679ba4fbe4656ab5790422b81d04ae3b3156e93f983590460633710fc85` |
+| `工具_保护机制探针.py` | 13971 | `b4238682a57802122ca7a7e0c4745d474ab9c6e2119e0c1e6697a5640aa6e709` |
+| `工具_复核PRECISION04.py` | 24812 | `df057e8aaefa707a5492f0ab2d8509b46e51f0e00d9bae9bfc9d400d1d26bb92` |
+| `工具_生成交付表.py` | 4598 | `bc4f4672cf059b937a685ef5aa9451852aa6a57cf3f49d8cffcd9a4489136a1a` |
+| `工具_清单.py` | 4031 | `db9d111cb0320f43e0135123db3b20f3ed38f47ffbcbece3b39d39e806a5c9b4` |
+| `运行时代码/fill.py.HEAD` | 10642 | `15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913` |
+| `运行时代码/position.py.HEAD` | 7312 | `85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327` |
+| `运行时代码/运行时代码指纹对照.json` | 42962 | `fcfe3840233333ef406e0d185494447654942b2dac3efc03063846dc74707617` |
+
+## 被核验输入
+
+| 文件 | 字节 | SHA256 |
+|---|---|---|
+| `evidence/PRECISION-04/PRECISION-04_历史合约规格证据盘点_2026-10-17.md` | 30121 | `c86e9d912670993c6ba384acc97ba9619a304b6015b4b8acc44e95ddea5bbee5` |
+| `evidence/PRECISION-04/六标的逐时间段证据.json` | 63915 | `0cbcd471d6b9a1582136f4f4a8a79eaef31710c6856b0813ec1bff2dfdf4cb2c` |
+| `evidence/PRECISION-04/公告规格变更明细.json` | 6638 | `4b38c1c8a6c189dbadbc4cb78e1bc69aed521615bfb417c67d88e6a3e4e798bc` |
+| `evidence/PRECISION-04/规格时间线.json` | 57973 | `c8cee9dfd0bed462a5d9c67b56ad14e53f1eaada8f98ec3b0038fde7037fd975` |
+| `evidence/PRECISION-04/存档快照索引.json` | 19372 | `03674cbd837f781c6b219d7dc6f6a97bb294c18bb52375a3cdd897e215706b6e` |
+| `evidence/PRECISION-04/运行侧反证.json` | 4540 | `ecde411d806b389546ae767733aa96e8d01d16c7fce3eb7f232a6b45d08af5c4` |
+| `evidence/PRECISION-04/本地证据盘点.json` | 17806 | `423d46779667735f6dba0d68e799e1a10e83cc22678e8b001e33fc148e35c900` |
+| `evidence/PRECISION-04/当前响应_exchangeInfo.json` | 1151290 | `918bc3087252d4fee05e9cf8f49039b9c182e3a304a1fef4e63180d18b2fa338` |
+| `策略/WyckoffMaster/trading_core/fill.py` | 18376 | `f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b` |
+| `策略/WyckoffMaster/trading_core/engine.py` | 59121 | `c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2` |
+| `策略/WyckoffMaster/trading_core/position.py` | 7783 | `5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc` |
+| `策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py` | 29445 | `fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139` |
+| `策略/WyckoffMaster/event_trend_v0_1/runner.py` | 32550 | `07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb` |
+| `策略/WyckoffMaster/event_trend_v0_1/instrument_spec.py` | 52564 | `97b9842de9a2e7c843416aa919841e81719834ecdb7940ff416196378fc1ab3a` |
+
+
+全部完成。

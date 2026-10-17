@@ -1,0 +1,806 @@
+{
+  "task": "PRECISION-02",
+  "generated_at": "2026-10-17T03:57:22.811511+00:00",
+  "items": {
+    "1": {
+      "verdict": "失败",
+      "counts": {
+        "PASS": 7,
+        "FAIL": 4,
+        "UNKNOWN": 1
+      },
+      "cases": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12"
+      ]
+    },
+    "2": {
+      "verdict": "失败",
+      "counts": {
+        "PASS": 5,
+        "FAIL": 2,
+        "UNKNOWN": 1
+      },
+      "cases": [
+        "B1",
+        "B2",
+        "B3",
+        "B4-235",
+        "B4-236",
+        "B5",
+        "B6",
+        "B7"
+      ]
+    },
+    "3": {
+      "verdict": "失败",
+      "counts": {
+        "PASS": 3,
+        "FAIL": 4,
+        "UNKNOWN": 0
+      },
+      "cases": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C7",
+        "C6"
+      ]
+    },
+    "4": {
+      "verdict": "失败",
+      "counts": {
+        "PASS": 3,
+        "FAIL": 1,
+        "UNKNOWN": 1
+      },
+      "cases": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    "5": {
+      "verdict": "失败",
+      "counts": {
+        "PASS": 5,
+        "FAIL": 1,
+        "UNKNOWN": 2
+      },
+      "cases": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ]
+    },
+    "6": {
+      "verdict": "未知",
+      "counts": {
+        "PASS": 2,
+        "FAIL": 0,
+        "UNKNOWN": 1
+      },
+      "cases": [
+        "F1",
+        "F2",
+        "F3"
+      ]
+    }
+  },
+  "results": [
+    {
+      "id": "A1",
+      "item": 1,
+      "title": "多头入场：滑点后向更贵取整（ceil）",
+      "status": "PASS",
+      "expected": "100.04",
+      "actual": 100.04,
+      "repro": "SimulatedBarFillAdapter(slippage_bps=3,strict=True).quote_entry(raw_price=100.001,direction=1,price_step=0.01,stop_price=99)",
+      "source": "trading_core/fill.py:125-127",
+      "impact": "所有 strict 回测入场价",
+      "note": ""
+    },
+    {
+      "id": "A2",
+      "item": 1,
+      "title": "空头入场：滑点后向更便宜取整（floor）",
+      "status": "PASS",
+      "expected": "99.97",
+      "actual": 99.97,
+      "repro": "同上，direction=-1",
+      "source": "trading_core/fill.py:127-130",
+      "impact": "空头开仓（当前生产策略只多，暂不可达）",
+      "note": ""
+    },
+    {
+      "id": "A3",
+      "item": 1,
+      "title": "多头出场：向更便宜取整（floor）",
+      "status": "PASS",
+      "expected": "99.97",
+      "actual": 99.97,
+      "repro": "quote_exit(target_px=100.001,direction=1,price_step=0.01)",
+      "source": "trading_core/fill.py:278-281",
+      "impact": "所有 strict 回测出场价",
+      "note": ""
+    },
+    {
+      "id": "A4",
+      "item": 1,
+      "title": "空头出场：向更贵取整（ceil）",
+      "status": "PASS",
+      "expected": "100.04",
+      "actual": 100.04,
+      "repro": "quote_exit(...,direction=-1)",
+      "source": "trading_core/fill.py:278-281",
+      "impact": "空头平仓（当前生产策略只多）",
+      "note": ""
+    },
+    {
+      "id": "A5",
+      "item": 1,
+      "title": "精确步长边界不多跳一档（100.03/0.01）",
+      "status": "PASS",
+      "expected": "100.03 / 100.03",
+      "actual": "100.03 / 100.03",
+      "repro": "SimulatedBarFillAdapter(slippage_bps=0,strict=True) 上 100.03 双向报价",
+      "source": "trading_core/fill.py:87-98",
+      "impact": "边界价（Decimal 精确除法修复点）",
+      "note": ""
+    },
+    {
+      "id": "A6",
+      "item": 1,
+      "title": "极低价格：tick 相对价格过粗时成本被放大（观测项）",
+      "status": "UNKNOWN",
+      "expected": "买 0.08 / 卖 0.06（各偏离 14.29%，为 3bps 的 47.6 倍）",
+      "actual": "买 0.08（+14.29%）/ 卖 0.06（-14.29%）",
+      "repro": "quote_entry(raw_price=0.07,direction=1,price_step=0.01) + quote_exit(同价)",
+      "source": "trading_core/fill.py:108-139",
+      "impact": "价格 0.07 用 0.01 tick 时，单边 tick 成本≈14.3%；无任何「tick/价格」上限校验",
+      "note": "属规格选择问题而非算术错误，故记 UNKNOWN；但见 A7 —— 同一机制会把「失真」一路带进盈亏而不被标记。"
+    },
+    {
+      "id": "A7",
+      "item": 1,
+      "title": "极低价格：取整后价格偏离原价 25%（入场）/17%（出场）仍判 run_valid",
+      "status": "FAIL",
+      "expected": "应在「取整后价格相对原价偏差过大」时拒绝或标记无效",
+      "actual": "entry_fill=0.03（= 原价 ×1.250）, exit_fill=0.02（= 原价 ×0.833）, run_valid=True",
+      "repro": "_core(strict=True,price_step=0.01,stop=0.01) + 6 根 15m open=close=0.024",
+      "source": "trading_core/fill.py:252-253（只校验 >0）；engine.py:886（run_valid 只由出场拒绝触发）",
+      "impact": "价格 < 10×tick 的标的：往返价差 −33.3%，全部计入 gross_pnl，run 仍标 valid；SPACE/AIGENSYN/TRUTH 类标的正是此形态",
+      "note": "strict 只挡「取整后 = 0」，不挡「取整后 = 2.5 倍原价」。"
+    },
+    {
+      "id": "A8",
+      "item": 1,
+      "title": "数量向**下**取整到 stepSize",
+      "status": "PASS",
+      "expected": "43.13",
+      "actual": 43.13,
+      "repro": "round_qty_down(43.139, 0.01)",
+      "source": "trading_core/fill.py:101-105",
+      "impact": "所有带规格的入场数量",
+      "note": ""
+    },
+    {
+      "id": "A9",
+      "item": 1,
+      "title": "数量精确边界不丢一档（0.29/0.01）",
+      "status": "PASS",
+      "expected": "0.29",
+      "actual": 0.29,
+      "repro": "round_qty_down(0.29, 0.01)",
+      "source": "trading_core/fill.py:104-105",
+      "impact": "数量边界",
+      "note": ""
+    },
+    {
+      "id": "A10",
+      "item": 1,
+      "title": "非法步长（NaN）抛出的异常类型是否符合契约",
+      "status": "FAIL",
+      "expected": "FillRejected 或 ExecutionInputError",
+      "actual": "decimal.InvalidOperation: step: non_finite",
+      "repro": "round_buy_price(100.0, float('nan'))",
+      "source": "trading_core/fill.py:87-90",
+      "impact": "非 strict 路径若传入 NaN 步长，会在引擎深处抛 decimal.InvalidOperation，不是 FillRejected ⇒ 上层 except FillRejected 捕不到",
+      "note": ""
+    },
+    {
+      "id": "A11",
+      "item": 1,
+      "title": "数量 NaN 的异常类型是否符合契约",
+      "status": "FAIL",
+      "expected": "FillRejected 或返回 NaN 由调用方判",
+      "actual": "decimal.InvalidOperation",
+      "repro": "round_qty_down(float('nan'), 0.01)",
+      "source": "trading_core/fill.py:104-105",
+      "impact": "engine.py:527 先取整后判 isfinite ⇒ 若 qty 为 NaN 会先炸；当前 policy 已在上游拦 NaN 数量，故实际不可达（UNKNOWN 可达性）",
+      "note": "engine 的顺序是「先 round_qty_down 再 isfinite」，所以这条防线只是纸面防线。"
+    },
+    {
+      "id": "A12",
+      "item": 1,
+      "title": "负滑点（slippage_bps<0）被当作有利成交且不拒绝",
+      "status": "FAIL",
+      "expected": "应拒绝（滑点必须非负、方向必须不利）",
+      "actual": "entry_fill=99.7 < raw 100.0 ⇒ 有利成交",
+      "repro": "SimulatedBarFillAdapter(slippage_bps=-30,strict=True).quote_entry(raw_price=100,direction=1,price_step=0.01)",
+      "source": "trading_core/fill.py:211（无校验）；engine.py:261（无校验）",
+      "impact": "OI 路径由 validate_exec_params 兜住（>=0）；**事件趋势路径 EventTrendConfig 无任何校验** ⇒ 配置写错即静默产生有利成交",
+      "note": ""
+    },
+    {
+      "id": "B1",
+      "item": 2,
+      "title": "maxQty（最大下单量）是否实际执行",
+      "status": "FAIL",
+      "expected": "qty ≤ 1.0，否则拒绝（qty_above_max）",
+      "actual": "qty=43.13（maxQty=1），trades_count=1，rejected=[]",
+      "repro": "_spec(max_qty='1') + _core(strict=True,price_step=0.01) + open=100,stop=99",
+      "source": "trading_core/engine.py:517-570（只有 min_qty / min_notional 两道）；event_trend_v0_1/instrument_spec.py:120（max_qty 只解析不使用）",
+      "impact": "所有带规格的入场：超大单不会被拦。旧实现 `_legacy_archive_v31/execution.py:391` 有 max_quantity 校验 ⇒ 本次收敛**丢失**该约束",
+      "note": ""
+    },
+    {
+      "id": "B2",
+      "item": 2,
+      "title": "minQty 是否实际执行",
+      "status": "PASS",
+      "expected": "拒绝，reason=qty_below_min_step",
+      "actual": "trades_count=0, reasons=['qty_below_min_step']",
+      "repro": "_spec(min_qty='1000000') + open=100,stop=99",
+      "source": "trading_core/engine.py:535-550",
+      "impact": "带规格的入场",
+      "note": ""
+    },
+    {
+      "id": "B3",
+      "item": 2,
+      "title": "minNotional 是否实际执行",
+      "status": "PASS",
+      "expected": "拒绝，reason=notional_below_min",
+      "actual": "trades_count=0, reasons=['notional_below_min']",
+      "repro": "_spec(min_notional='1000000') + open=100,stop=99",
+      "source": "trading_core/engine.py:551-567",
+      "impact": "带规格的入场",
+      "note": ""
+    },
+    {
+      "id": "B4-235",
+      "item": 2,
+      "title": "minNotional 边界（=235）：notional=235 时的判定",
+      "status": "PASS",
+      "expected": "成交",
+      "actual": "trades_count=1, notional=235.0, reasons=[]",
+      "repro": "_spec(price_step='0.01',qty_step='1',min_qty='1',min_notional='235') + open=5.0, stop=4.9, slippage=0",
+      "source": "trading_core/engine.py:553",
+      "impact": "带规格的入场",
+      "note": "确认 minNotional 用「<」而非「<=」，边界值不被误拒。"
+    },
+    {
+      "id": "B4-236",
+      "item": 2,
+      "title": "minNotional 边界（=236）：notional=235 时的判定",
+      "status": "PASS",
+      "expected": "拒绝",
+      "actual": "trades_count=0, notional=None, reasons=['notional_below_min']",
+      "repro": "_spec(price_step='0.01',qty_step='1',min_qty='1',min_notional='236') + open=5.0, stop=4.9, slippage=0",
+      "source": "trading_core/engine.py:553",
+      "impact": "带规格的入场",
+      "note": "确认 minNotional 用「<」而非「<=」，边界值不被误拒。"
+    },
+    {
+      "id": "B5",
+      "item": 2,
+      "title": "订单类型约束：LIMIT 单缺 limit_price 仍被按市价成交",
+      "status": "FAIL",
+      "expected": "拒绝（limit_price_required）或按 limit_price 撮合",
+      "actual": "orders=[('open', 'LIMIT', None, 'FILLED'), ('exit_eod', 'LIMIT', None, 'FILLED')]",
+      "repro": "子类 policy 令 entry/exit_order_type() 返回 OrderType.LIMIT，其余不变",
+      "source": "trading_core/engine.py:232-242（_fill_order 不看 order_type/limit_price）；trading_core/order.py:93（limit_price 允许 None）",
+      "impact": "当前生产只有 MARKET / STOP_MARKET，故为**潜在**缺陷：任何人加限价单都会静默退化为「开盘价+滑点」成交",
+      "note": "同一缺陷使「STOP_MARKET 的触发价」也只作为审计字段存在，引擎不会校验成交价与 stop_price 的关系。"
+    },
+    {
+      "id": "B6",
+      "item": 2,
+      "title": "合约规格的 order_type 是否参与撮合约束选择",
+      "status": "UNKNOWN",
+      "expected": "应按实际订单类型（MARKET vs STOP_MARKET）选择 LOT_SIZE / MARKET_LOT_SIZE",
+      "actual": "engine.py 中是否出现 `spec.order_type`：False",
+      "repro": "grep 'spec.order_type' 策略/WyckoffMaster/trading_core/engine.py",
+      "source": "trading_core/engine.py（全文）；instrument_spec.py:125,233-249",
+      "impact": "解析侧按 order_type='MARKET' 取「两侧更保守」的步长，对 STOP_MARKET 出场不一定是交易所真值；因取 max 保守，只会更小不会非法 ⇒ 暂列未知",
+      "note": ""
+    },
+    {
+      "id": "B7",
+      "item": 2,
+      "title": "参与率上限（名义 ≤ 前一根 15m 成交额 × 0.1%）是否执行",
+      "status": "PASS",
+      "expected": "名义 ≤ 5000（=5e6×0.001）",
+      "actual": "notional=4314.612968260946, qty=43.13318972569175",
+      "repro": "_core(participation_rate=0.001) + quote_volume=5e6, open=100, stop=99",
+      "source": "trading_core/engine.py:487-515",
+      "impact": "事件趋势回测（participation_rate=0.001 恒开）",
+      "note": ""
+    },
+    {
+      "id": "C1",
+      "item": 3,
+      "title": "strict=True：非正/非有限成交价必须拒绝",
+      "status": "PASS",
+      "expected": "全部 FillRejected",
+      "actual": "全部 FillRejected",
+      "repro": "strict adapter 上 quote_entry/quote_exit 传 0/-1/NaN/inf",
+      "source": "trading_core/fill.py:220-241",
+      "impact": "事件趋势回测（strict=True）",
+      "note": ""
+    },
+    {
+      "id": "C2",
+      "item": 3,
+      "title": "strict=False：0 价静默通过（返回 0 成交价），NaN 抛非契约异常",
+      "status": "FAIL",
+      "expected": "0 价应拒绝；NaN 应以 FillRejected 拒绝",
+      "actual": "raw=0 ⇒ entry_fill=0.0（无异常）；raw=NaN ⇒ 抛 decimal.InvalidOperation",
+      "repro": "SimulatedBarFillAdapter(strict=False).quote_entry(raw_price=0.0/NaN,...)",
+      "source": "trading_core/fill.py:261-270（非 strict 分支无闸门）；fill.py:58-76（_dec 抛 InvalidOperation）",
+      "impact": "OI 共振生产回测 `oi_resonance_v1/execution.py:105` 正是 strict 缺省 False。引擎级 0 价目前被 `check_entry` 的 gap_beyond_stop 偶然拦住，但 NaN 会以 decimal.InvalidOperation 穿透 `except FillRejected`",
+      "note": "这就是 SPACE「零元卖出」在非 strict 路径下的原始形态：算术不报错，只是把成交价算成 0。"
+    },
+    {
+      "id": "C3",
+      "item": 3,
+      "title": "出场失败：仓位保留 / 运行标记无效 / 账本仍一致 / 不写平仓事件",
+      "status": "PASS",
+      "expected": "trades_count=0，open_positions_remaining=['TESTUSDT']，run_valid=False，cash_identity_ok=True，position_closed=0",
+      "actual": "trades_count=0, open=['TESTUSDT'], run_valid=False, cash_identity_ok=True, position_closed=0, ledger={'FEE_CHARGED': 1, 'GENESIS_INIT': 1, 'ORDER_CREATED': 1, 'ORDER_FILLED': 1, 'ORDER_SUBMITTED': 1, 'POSITION_OPENED': 1, 'SIGNAL_ACCEPTED': 1}",
+      "repro": "_core(strict=True,price_step=0.01,stop=0.003) + 6 根 15m open=close=0.004",
+      "source": "trading_core/engine.py:384-395, 719-729, 782-816",
+      "impact": "所有出场被拒的场景（SPACE 类）",
+      "note": ""
+    },
+    {
+      "id": "C4",
+      "item": 3,
+      "title": "出场先被拒、同 run 后段成功平仓 ⇒ `unclosed_positions` 误报",
+      "status": "FAIL",
+      "expected": "仓位最终已平 ⇒ unclosed_positions 应为空（run_valid 可保守为 False）",
+      "actual": "trades_count=1, open_positions_remaining=[], precision.unclosed_positions=['TESTUSDT'], invalid_reasons=['exit_gap_fill_rejected:nonpositive_or_nonfinite_exit_fill', 'exit_intrabar_fill_rejected:nonpositive_or_nonfinite_exit_fill']",
+      "repro": "_core(strict=True,price_step=0.01,stop=0.01) + opens=[0.02,0.02,0.004,0.02,0.02,0.02]，第 3 根 low=0.004，其余 close=0.02",
+      "source": "trading_core/engine.py:394（append 后无回撤）；engine.py:888（直接 sorted(set(...))）",
+      "impact": "任何「跳空出场被拒 → 后续正常平仓」的 run：报告字段自相矛盾，下游若据 unclosed_positions 判「仓位未平」会误判",
+      "note": ""
+    },
+    {
+      "id": "C5",
+      "item": 3,
+      "title": "出场失败后权益曲线末点与 final_equity 一致且仍计未平仓",
+      "status": "PASS",
+      "expected": "末点 total_equity == final_equity，open_positions_count=1",
+      "actual": "last.total_equity=9957.13816546967, final_equity=9957.13816546967, open_positions_count=1",
+      "repro": "同 C3 场景",
+      "source": "trading_core/engine.py:756-767",
+      "impact": "出场失败场景",
+      "note": ""
+    },
+    {
+      "id": "C7",
+      "item": 3,
+      "title": "空 market_data 的返回体缺少 `precision` 键（形状不一致）",
+      "status": "FAIL",
+      "expected": "主路径与空路径返回同一组键（含 precision），且缺结果用 None 而非 0",
+      "actual": "keys=['close_open_positions_at_end', 'close_open_positions_at_end_source', 'decisions', 'equity_curve', 'final_cash', 'final_equity', 'funding_gaps', 'funding_is_assumption', 'funding_model', 'initial_equity', 'max_drawdown_pct', 'net_return_pct', 'open_positions_remaining', 'reconcile', 'rejected_orders', 'strategy_id', 'time_unit', 'trade_start_sec', 'trades', 'trades_count', 'trading_core']；precision 存在=False；max_drawdown_pct=0.0",
+      "repro": "_core(strict=True,price_step=0.01).run({})",
+      "source": "trading_core/engine.py:906-933（_empty_result 无 precision，mdd 写死 0.0）",
+      "impact": "任何以 `res['precision']` 读运行有效性的下游：空输入直接 KeyError；且 mdd 用 0.0 冒充「无回撤」，与「缺结果一律 None」的项目约定相反",
+      "note": ""
+    },
+    {
+      "id": "C6",
+      "item": 3,
+      "title": "price_step=0（OI 生产缺省）+ strict=False ⇒ 无任何价格取整且 run_valid=True",
+      "status": "FAIL",
+      "expected": "应显式标记「未施加 tick 约束」（run 不应与「已取整」同权）",
+      "actual": "entry_price=100.03（= 100×1.0003，未取整）, price_steps={'TESTUSDT': 0.0}, spec_status=declared_no_spec, run_valid=True",
+      "repro": "_core(strict=False,price_step=0.0) + open=100,stop=99",
+      "source": "oi_resonance_v1/config.py:139（price_step 默认 0.0）；config.py:228（校验下限 0.0 ⇒ 0 合法）；fill.py:87（step<=0 不取整）",
+      "impact": "8787 OI 共振回测默认即此形态：`backtest_runner.py:948` → `run_portfolio_execution`，不传 instrument_specs；结果里 price_steps 显示 0.0，但 run_valid 仍 True、无 invalid_reasons",
+      "note": "`precision.spec_status='declared_no_spec'` 已如实标注，但没有「无 tick 约束 ⇒ 不得正式通过」的阻断位（formal_pass_allowed 未出现在该路径）。"
+    },
+    {
+      "id": "D1",
+      "item": 4,
+      "title": "strict：纯滑点与取整损失分别记录且合计等于总口径",
+      "status": "PASS",
+      "expected": "pure≈2.565974, round≈0.427513, total=2.993487",
+      "actual": "pure=2.5659739866869833, round=0.4275126567821952, total=2.9934866434691783, qty=42.764094906698034, entry=100.04, exit=99.97",
+      "repro": "_core(strict=True,price_step=0.01) + open=close=100.005, stop=99（EOD 平于 100.005）",
+      "source": "trading_core/engine.py:577-591（入场）、996-1010（出场）、790-793（汇总）",
+      "impact": "事件趋势回测的成本分账字段",
+      "note": ""
+    },
+    {
+      "id": "D2",
+      "item": 4,
+      "title": "不重复扣费：net_pnl 只由实际成交价推出，slippage_loss 不再二次扣减",
+      "status": "PASS",
+      "expected": "net_pnl == gross(实际成交价) − fees − funding，且 ≠ 再减 slippage_loss",
+      "actual": "net_pnl=-7.270109954613515, 由成交价复算=-7.270109954613515, 若再减滑点=-10.263596598082692",
+      "repro": "读取 trades[0] 的 entry_price/exit_price/qty/fees/funding_fee 手工复算",
+      "source": "trading_core/engine.py:1026",
+      "impact": "所有平仓记录与净值",
+      "note": ""
+    },
+    {
+      "id": "D3",
+      "item": 4,
+      "title": "非 strict：`slippage_split_ok` 为自证恒真，不能证明取整损失已计量",
+      "status": "FAIL",
+      "expected": "分账字段应能区分「未计量」与「计量为 0」",
+      "actual": "rounding_loss=0.0, price_audit={'entry': {}, 'exit': {}}, slippage_split_ok=True, slippage_loss=2.587991383541603",
+      "repro": "_core(strict=False,price_step=0.0) + open=100,stop=99",
+      "source": "trading_core/engine.py:582-591, 1000-1010（缺 audit 时 pure=total, round=0）",
+      "impact": "OI 共振回测（strict=False）的 slippage_split_ok 恒为 True，若被当作「成本已正确分账」的证据即为**假阳性**",
+      "note": ""
+    },
+    {
+      "id": "D4",
+      "item": 4,
+      "title": "汇总口径：reconcile.sum_slippage_loss == Σ 明细",
+      "status": "PASS",
+      "expected": "2.587991383541603",
+      "actual": 2.587991383541603,
+      "repro": "对比 reconcile.sum_slippage_loss 与 sum(trades.slippage_loss)",
+      "source": "trading_core/engine.py:777-793",
+      "impact": "所有 run 的成本汇总",
+      "note": ""
+    },
+    {
+      "id": "D5",
+      "item": 4,
+      "title": "未平仓仓位的入场执行成本是否进入 sum_slippage_loss",
+      "status": "UNKNOWN",
+      "expected": "应明确：汇总只含已平仓笔（当前实现如此）",
+      "actual": "sum_slippage_loss=0.0，trades_count=0，未平仓=1 笔（其入场成本未计入）",
+      "repro": "同 C3 场景（出场被拒 ⇒ 无平仓记录）",
+      "source": "trading_core/engine.py:777（只遍历 closed）",
+      "impact": "出场被拒的 run：成本汇总偏低（漏计该仓入场成本），与 run_valid=False 一致，但若下游只看 sum_slippage_loss 会低估",
+      "note": ""
+    },
+    {
+      "id": "E1",
+      "item": 5,
+      "title": "strict=True 的实际使用点",
+      "status": "PASS",
+      "expected": "仅事件趋势适配器 1 处",
+      "actual": [
+        "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:438"
+      ],
+      "repro": "grep 'strict=True' 于策略/与框架/backend/",
+      "source": "event_trend_v0_1/engine_adapter.py:438",
+      "impact": "事件趋势回测（唯一 strict 路径）",
+      "note": ""
+    },
+    {
+      "id": "E2",
+      "item": 5,
+      "title": "strict 缺省值 = False（构造点不传即为非严格）",
+      "status": "PASS",
+      "expected": "fill.py 中 `strict: bool = False`",
+      "actual": [
+        "策略/WyckoffMaster/trading_core/fill.py:210"
+      ],
+      "repro": "grep 'strict: bool = False'",
+      "source": "trading_core/fill.py:210",
+      "impact": "所有未显式传 strict 的构造点",
+      "note": ""
+    },
+    {
+      "id": "E3",
+      "item": 5,
+      "title": "SimulatedBarFillAdapter 构造点清单（谁在用哪一端）",
+      "status": "UNKNOWN",
+      "expected": "应逐点标注 strict 取值",
+      "actual": [
+        "策略/WyckoffMaster/oi_resonance_v1/execution.py:105 → return _fill.SimulatedBarFillAdapter(",
+        "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:434 → fill_adapter = SimulatedBarFillAdapter("
+      ],
+      "repro": "grep 'SimulatedBarFillAdapter('",
+      "source": "fill.py / execution.py / engine_adapter.py",
+      "impact": "OI 回测（strict=False 缺省）、事件趋势回测（strict=True）、测试",
+      "note": ""
+    },
+    {
+      "id": "E4",
+      "item": 5,
+      "title": "OI 共振生产回测入口（不受 strict / 规格闸门保护）",
+      "status": "UNKNOWN",
+      "expected": "应知该路径无 tick 约束、无数量闸门",
+      "actual": [
+        "策略/WyckoffMaster/oi_resonance_v1/execution.py:127",
+        "框架/backend/backtest_runner.py:948"
+      ],
+      "repro": "grep 'run_portfolio_execution'",
+      "source": "oi_resonance_v1/execution.py:127；框架/backend/backtest_runner.py:948",
+      "impact": "8787 的 OI 共振回测：price_step 缺省 0.0 ⇒ 无取整；instrument_specs 未传 ⇒ minQty/minNotional/maxQty 全部不生效",
+      "note": ""
+    },
+    {
+      "id": "E5",
+      "item": 5,
+      "title": "事件趋势回测入口（strict=True + 规格闸门）",
+      "status": "PASS",
+      "expected": "唯一注入 instrument_spec 与 strict=True 的路径",
+      "actual": [
+        "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:64",
+        "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:302",
+        "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:341"
+      ],
+      "repro": "grep 'run_event_trend_backtest'",
+      "source": "event_trend_v0_1/engine_adapter.py:341（定义）、runner.py:551-563（调用）",
+      "impact": "事件趋势回测 / 6 个历史标的的机制验证",
+      "note": ""
+    },
+    {
+      "id": "E6",
+      "item": 5,
+      "title": "第二套取整实现（float + 1e-9 偏置）仍在生产代码中",
+      "status": "FAIL",
+      "expected": "取整只应有 fill.py 一处实现",
+      "actual": [
+        "框架/backend/strategies/wx_execution.py:1662",
+        "框架/backend/strategies/wx_execution.py:1669"
+      ],
+      "repro": "grep 'def round_buy_price' / 'def round_sell_price'",
+      "source": "框架/backend/strategies/wx_execution.py:1671,1678",
+      "impact": "375 标的臂的实盘/纸面信号执行链（不经 trading_core）；其 `math.ceil(px/step - 1e-9)` 正是 fill.py 注释里指出的、在 100.03/0.01 这类边界上会多跳一档的旧写法",
+      "note": "该实现 `price_step` 取自标的池字段，非写死 0.01；`_round_price_step` 还无条件 floor（多空不分）"
+    },
+    {
+      "id": "E7",
+      "item": 5,
+      "title": "Paper 撮合是否经过 trading_core（strict 是否影响纸面）",
+      "status": "PASS",
+      "expected": "Paper 撮合不经 trading_core ⇒ strict 对其无影响",
+      "actual": "paper_engine.py 含 'trading_core'：False；含 'price_step'：True；含 'slippage'：True",
+      "repro": "grep trading_core / price_step / slippage 于 框架/backend/paper_engine.py",
+      "source": "框架/backend/paper_engine.py（全 1782 行）",
+      "impact": "纸面成交 = 已闭合 15m open ± 0.0005 滑点，**无任何 tick 取整**；与 trading_core.fill 的取整口径不可比",
+      "note": ""
+    },
+    {
+      "id": "E8",
+      "item": 5,
+      "title": "六笔修复是否重算成交价（strict 是否影响历史六笔数值）",
+      "status": "PASS",
+      "expected": "读取侧只做联结/口径修正，不重算 fill ⇒ 历史成交价保持旧 tick 结果",
+      "actual": {
+        "six_dir_entries": [
+          "Git差异_已跟踪文件_2026-10-17.diff",
+          "六笔三方对照表_2026-10-17.md",
+          "六笔对照表_2026-10-17.md",
+          "六笔核验_2026-10-17.json",
+          "回执_2026-10-17.md",
+          "在线API响应",
+          "工具_三方对照表.py",
+          "工具_六笔一致性核验.py",
+          "工具_共享图表契约自检.py",
+          "工具_在线API取证.py",
+          "工具_批量脚本图表契约收敛.py",
+          "工具_页面取证.mjs"
+        ],
+        "read_side_recompute_hits": []
+      },
+      "repro": "ls evidence/Work_六笔账本接口页面一致性整改_2026-10-17；grep price_step/round_*/quote_* 于 ledger_links.py、backtest_metrics.py",
+      "source": "框架/backend/ledger_links.py、backtest_metrics.py（读取侧）",
+      "impact": "六笔的成交价仍是旧 price_step=0.01 的产物；本次精度修复**不会**回溯修正其数值 ⇒ 任何「修复后历史收益」结论都不成立",
+      "note": ""
+    },
+    {
+      "id": "F1",
+      "item": 6,
+      "title": "六个历史标的：历史规格一律 unverified，formal_pass_allowed 恒 False",
+      "status": "PASS",
+      "expected": "全部 applicability != 'verified' 且 formal_pass_allowed=False",
+      "actual": [
+        {
+          "symbol": "LPTUSDT",
+          "price_step": "0.001",
+          "qty_step": "0.1",
+          "min_qty": "0.1",
+          "max_qty": "50000",
+          "min_notional": "5",
+          "applicability": "unverified_historical",
+          "formal_pass_allowed": false,
+          "evidence_sha256_8": "e0ecf7bd",
+          "mechanism_entry": 100.03,
+          "mechanism_exit": 99.97,
+          "on_tick_grid": true,
+          "run_valid": true,
+          "qty": 43.1
+        },
+        {
+          "symbol": "OPUSDT",
+          "price_step": "0.00001",
+          "qty_step": "0.1",
+          "min_qty": "0.1",
+          "max_qty": "1000000",
+          "min_notional": "5",
+          "applicability": "unverified_historical",
+          "formal_pass_allowed": false,
+          "evidence_sha256_8": "e0ecf7bd",
+          "mechanism_entry": 100.03,
+          "mechanism_exit": 99.97,
+          "on_tick_grid": true,
+          "run_valid": true,
+          "qty": 43.1
+        },
+        {
+          "symbol": "ORDIUSDT",
+          "price_step": "0.001",
+          "qty_step": "0.1",
+          "min_qty": "0.1",
+          "max_qty": "20000",
+          "min_notional": "5",
+          "applicability": "unverified_historical",
+          "formal_pass_allowed": false,
+          "evidence_sha256_8": "e0ecf7bd",
+          "mechanism_entry": 100.03,
+          "mechanism_exit": 99.97,
+          "on_tick_grid": true,
+          "run_valid": true,
+          "qty": 43.1
+        },
+        {
+          "symbol": "ACEUSDT",
+          "price_step": "0.00001",
+          "qty_step": "0.01",
+          "min_qty": "0.01",
+          "max_qty": "600000",
+          "min_notional": "5",
+          "applicability": "unverified_historical",
+          "formal_pass_allowed": false,
+          "evidence_sha256_8": "e0ecf7bd",
+          "mechanism_entry": 100.03,
+          "mechanism_exit": 99.97,
+          "on_tick_grid": true,
+          "run_valid": true,
+          "qty": 43.13
+        },
+        {
+          "symbol": "BNBUSDT",
+          "price_step": "0.01",
+          "qty_step": "0.01",
+          "min_qty": "0.01",
+          "max_qty": "2000",
+          "min_notional": "5",
+          "applicability": "unverified_historical",
+          "formal_pass_allowed": false,
+          "evidence_sha256_8": "e0ecf7bd",
+          "mechanism_entry": 100.03,
+          "mechanism_exit": 99.97,
+          "on_tick_grid": true,
+          "run_valid": true,
+          "qty": 43.13
+        },
+        {
+          "symbol": "MOVRUSDT",
+          "price_step": "0.0001",
+          "qty_step": "0.01",
+          "min_qty": "0.01",
+          "max_qty": "70000",
+          "min_notional": "5",
+          "applicability": "unverified_historical",
+          "formal_pass_allowed": false,
+          "evidence_sha256_8": "e0ecf7bd",
+          "mechanism_entry": 100.03,
+          "mechanism_exit": 99.97,
+          "on_tick_grid": true,
+          "run_valid": true,
+          "qty": 43.13
+        }
+      ],
+      "repro": "resolve_instrument_spec(每个标的, window 2026-01-01~2026-07-01)",
+      "source": "event_trend_v0_1/instrument_spec.py:381-404",
+      "impact": "六笔修复 / 6 个历史标的的任何结论：只能报「机制可复现」，**不得**报「修复后历史收益已修正」",
+      "note": ""
+    },
+    {
+      "id": "F2",
+      "item": 6,
+      "title": "六个历史标的：给定真实 tick 时成交价落在 tick 网格上（机制验证）",
+      "status": "PASS",
+      "expected": "entry/exit 均为该标的 tick 的整数倍",
+      "actual": [
+        {
+          "LPTUSDT": [
+            100.03,
+            99.97,
+            "0.001",
+            true
+          ]
+        },
+        {
+          "OPUSDT": [
+            100.03,
+            99.97,
+            "0.00001",
+            true
+          ]
+        },
+        {
+          "ORDIUSDT": [
+            100.03,
+            99.97,
+            "0.001",
+            true
+          ]
+        },
+        {
+          "ACEUSDT": [
+            100.03,
+            99.97,
+            "0.00001",
+            true
+          ]
+        },
+        {
+          "BNBUSDT": [
+            100.03,
+            99.97,
+            "0.01",
+            true
+          ]
+        },
+        {
+          "MOVRUSDT": [
+            100.03,
+            99.97,
+            "0.0001",
+            true
+          ]
+        }
+      ],
+      "repro": "同上（价格固定 100.0，仅验机制，不代表历史价位）",
+      "source": "trading_core/fill.py:125-130",
+      "impact": "只证明取整方向/网格正确；**不是**历史收益结论",
+      "note": ""
+    },
+    {
+      "id": "F3",
+      "item": 6,
+      "title": "六个历史标的的历史收益是否可下结论",
+      "status": "UNKNOWN",
+      "expected": "规格未验证 ⇒ 不可下结论",
+      "actual": "历史规格未验证（unverified_historical），本次仅机制验证；未输出任何修复后历史收益数值",
+      "repro": "本脚本不计算历史收益",
+      "source": "—",
+      "impact": "交付口径约束",
+      "note": ""
+    }
+  ]
+}

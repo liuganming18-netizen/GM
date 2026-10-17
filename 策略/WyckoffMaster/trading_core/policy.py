@@ -32,12 +32,16 @@ POLICY_CONTRACT_VERSION = "execution_policy_v1.0.0"
 EXIT_GAP = "gap_open_stop"
 EXIT_INTRABAR = "intrabar_stop"
 EXIT_EOD = "force_close_eod"
+# 最长持仓到期退出（仅当 `exec_params.max_holding_ms` 显式设置时才会触发；
+# 默认 None ⇒ 既有调用方零行为变化）
+EXIT_MAX_HOLDING = "max_holding_expired"
 
 # 入场动作名
 ACTION_OPEN = "open"
 ACTION_EXIT_GAP = "exit_gap"
 ACTION_EXIT_STOP = "exit_stop"
 ACTION_EXIT_EOD = "exit_eod"
+ACTION_EXIT_MAX_HOLDING = "exit_max_holding"
 
 
 @dataclass(frozen=True)
@@ -204,6 +208,8 @@ class ExecutionPolicy:
 
 __all__ = [
     "POLICY_CONTRACT_VERSION", "EXIT_GAP", "EXIT_INTRABAR", "EXIT_EOD",
+    "EXIT_MAX_HOLDING",
     "ACTION_OPEN", "ACTION_EXIT_GAP", "ACTION_EXIT_STOP", "ACTION_EXIT_EOD",
+    "ACTION_EXIT_MAX_HOLDING",
     "EntryDecision", "ExitDecision", "ExecutionPolicy",
 ]

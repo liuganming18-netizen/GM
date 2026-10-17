@@ -1,0 +1,44 @@
+..............F.....................F................................... [ 77%]
+.....................                                                    [100%]
+=================================== FAILURES ===================================
+__________ test_price_below_one_cent_with_cent_step_must_be_rejected ___________
+
+    def test_price_below_one_cent_with_cent_step_must_be_rejected():
+        """修复前的真凶：0.004076 用 0.01 步长，卖出向更便宜取整 = **0.00**。
+    
+        现在不允许「成交价为 0」，必须拒绝并留下四件套证据。
+        """
+        bd = price_breakdown(raw_price=0.004076, is_buy=False, price_step=0.01,
+                             slippage_rate=3e-4)
+        assert Decimal(bd["post_round_price"]) == 0      # 复现旧行为：零元卖出
+        a = _adapter()
+        with pytest.raises(FillRejected) as ei:
+            a.quote_exit(target_px=0.004076, direction=1, price_step=0.01,
+                         reason="intrabar_stop")
+        d = ei.value.detail
+>       assert ei.value.reason == "nonpositive_or_nonfinite_exit_fill"
+E       AssertionError: assert 'price_step_c...er_than_price' == 'nonpositive_...ite_exit_fill'
+E         
+E         - nonpositive_or_nonfinite_exit_fill
+E         + price_step_coarser_than_price
+
+../../策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py:98: AssertionError
+_________ test_exit_failure_keeps_position_open_and_marks_run_invalid __________
+
+    def test_exit_failure_keeps_position_open_and_marks_run_invalid():
+        """出场取整后为 0 ⇒ **不得**把仓位当作已平仓；运行标记为无效/未完成。"""
+        # 价格 0.004 + 步长 0.01：入场（买，向上）能成 0.01，出场（卖，向下）必成 0.00
+        cand, df_1h, df_15m = _entry_scenario(0.004, 0.003)
+        res = run_event_trend_backtest("SOLUSDT", df_1h, df_15m, [cand], [],
+                                       variant="A", price_step="0.01")
+        eng = res["engine_result"]
+        assert eng["trades_count"] == 0
+>       assert eng["open_positions_remaining"], "出场失败时仓位必须仍未平"
+E       AssertionError: 出场失败时仓位必须仍未平
+E       assert []
+
+../../策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py:326: AssertionError
+=========================== short test summary info ============================
+FAILED ../../策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py::test_price_below_one_cent_with_cent_step_must_be_rejected
+FAILED ../../策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py::test_exit_failure_keeps_position_open_and_marks_run_invalid
+2 failed, 91 passed in 1.36s

@@ -1,0 +1,76 @@
+# PRECISION-06 产物 SHA256 清单
+
+- 生成时间（UTC）：2026-10-17T06:33:45Z
+- 工程根：`/Users/boos/Desktop/威科夫因子共振趋势`
+- 路径基准：**全部为工程根相对路径**（产物与输入同一基准）
+- 计数：本窗口产物 **31** 项 + 被核验输入 **11** 项 = **42** 项，缺失 **0** 项
+
+## 本窗口产物
+
+| 文件 | 字节 | SHA256 |
+|---|---|---|
+| `evidence/PRECISION-06/PRECISION-06_越界成交腿与strict保护专项核验_2026-10-17.md` | 38060 | `13d8b9f70fa914b7e93dfbf24ba130cc8e7a65220d6a2ab848581d4e16814136` |
+| `evidence/PRECISION-06/表3_12条成交腿核验明细.csv` | 5720 | `ce5977299a2c1f1bb9ae1b547cea6fc22741510cfd0f3d349762d884631c4d34` |
+| `evidence/PRECISION-06/表3b_全量成交腿扫描.csv` | 10404 | `613e6920aeecccccfa8645fabc93023f49f2953d6c031a414e216db194a8b5c0` |
+| `evidence/PRECISION-06/表4_步长自证.csv` | 58750 | `ba22495c78ab398c242b9b4c2b4b49fd285c0e710062b19fc436b1f441053e79` |
+| `evidence/PRECISION-06/表5_影子整改覆盖.csv` | 1890 | `f49ffdbcaf1fe1638c091e043449f8b4909f5c1ee976fead6d846ec3c4a20089` |
+| `evidence/PRECISION-06/逐腿核验.json` | 473303 | `b8ea565a2dabe65b8710d4e28dafbd171d6cac48373e25ce352685375b50cb1c` |
+| `evidence/PRECISION-06/步长自证.json` | 405131 | `7b225f37f1f9c43ce54775b4b39d19b2fa1502735c4446f2a9f00fcfa37077cc` |
+| `evidence/PRECISION-06/影子整改.json` | 24189 | `e57bdd2f7ee16e56ac1f6168790a133b72c3a7a06e4f3a72b79bae3b30ef28b2` |
+| `evidence/PRECISION-06/影子端到端.json` | 5062 | `f74f7e52e396ac5f08a13c7ece4a4480124fccab18a73e13bc4783c3b94e3c50` |
+| `evidence/PRECISION-06/整改影响面.json` | 2559 | `e9648f262b2a912b0369985f7e2f5945b5126a11f563c10b56aa4d19e3a546d8` |
+| `evidence/PRECISION-06/基线_开工.json` | 65728 | `a63d065c045c4b1f1f178eb3f2193fa690ce123c06438e9bb8fb066221d80634` |
+| `evidence/PRECISION-06/基线_开工.txt` | 32592 | `fec6d36e4b1da74ce18f43f64f46aa0a9fbc0317427cc256c57765aa749e7fb3` |
+| `evidence/PRECISION-06/基线_收工.json` | 65728 | `df0a2d6bdd5473535f97c84ca63b7d2b8c0c44d7730443f24a51d484037d8e76` |
+| `evidence/PRECISION-06/基线_收工.txt` | 32592 | `671c3107cb965dd5e85c404c1594075597ef546f35c69495765ba457549efb5d` |
+| `evidence/PRECISION-06/逐腿核验原始输出.txt` | 2272 | `3b08eed30c77e26a970e61deeef2a80998456f69ea9f6db2fcb4b0dbaa635d45` |
+| `evidence/PRECISION-06/步长自证原始输出.txt` | 38876 | `6cccc5d42687b99691a237429548c6828efd26c070b394f5f8a58ea1d756367d` |
+| `evidence/PRECISION-06/影子整改原始输出.txt` | 2556 | `d863c8127ad52cf375cf35f7ee802bfcfdbf6cee410324c62796df559ee3f39b` |
+| `evidence/PRECISION-06/影子端到端原始输出.txt` | 2025 | `3ae5f9bd5111b6a9a3a6578915eea44a82d254354f3ba226796161efcfd1e9bb` |
+| `evidence/PRECISION-06/隔离复现/test_p06_现状固定.py` | 11520 | `10abcf619cc95c59b69e41f7e64ca493935e2d6459e2e14cc97f78a4c451aa3f` |
+| `evidence/PRECISION-06/隔离复现/test_p06_整改验收草案.py` | 8421 | `5b65f19be3eb6ebaab27d65dc3d8d5d6e91e84951e569599829709fdcf895265` |
+| `evidence/PRECISION-06/原始输出/pytest_既有93项.txt` | 179 | `495cda6b183206ac56aed74277075e112a5413f5bd26ac7bc7f1ce65e0692742` |
+| `evidence/PRECISION-06/原始输出/pytest_既有93项_加R6影子.txt` | 2705 | `2af2771e77b9dfe4500adb599f41a3262fbbc3560b485e4a58b024e2cf18a5ac` |
+| `evidence/PRECISION-06/原始输出/pytest_P06_现状固定.txt` | 1662 | `b9775bed199176b458de59705d88143a1de12c7e82bbedb0dc6aad08efc7f115` |
+| `evidence/PRECISION-06/原始输出/pytest_P06_整改验收.txt` | 1162 | `6e14a867b56772a8a1280e9ff4e1af56dc4b6dda586e9ebc7615f1263256fa3a` |
+| `evidence/PRECISION-06/工具_00_基线.py` | 6380 | `0940e5ff18d995bc00499985fd90abf442c462c41251f2f75a58823a8aeaf5b8` |
+| `evidence/PRECISION-06/工具_10_逐腿核验.py` | 32706 | `f7cf21c35e08af4bf14f0d379236f5bb12af15d35ae78680dd7ab917374f02b1` |
+| `evidence/PRECISION-06/工具_20_步长自证.py` | 7507 | `d14673bafce5d3dbe690590aec42b8ed03d9cbe3c3fd7c32778200c66a140599` |
+| `evidence/PRECISION-06/工具_30_影子整改.py` | 12025 | `7b234ae3a88b17069eae8fbdc13a234893325cee23753de6807305d8eb369c77` |
+| `evidence/PRECISION-06/工具_40_影子端到端.py` | 8121 | `bd3129de0f563ffdfadc5d792e7e48585cf646cd9597a7ae7afa9ead347f4ab6` |
+| `evidence/PRECISION-06/工具_50_既有测试影响面.py` | 5065 | `3f6e27ce5132b14af7ae78ff62013aa9daf197ca5d396f9f0f688ab5818368c6` |
+| `evidence/PRECISION-06/工具_清单.py` | 6685 | `b5b1d68ad8cc1c4d9f764759f2fee58f05616983fc7a28cb46873e1505f05525` |
+
+## 被核验输入
+
+| 文件 | 字节 | SHA256 |
+|---|---|---|
+| `evidence/PRECISION-05/四笔成交逐笔核验.json` | 33988 | `4a45990bd0f0787ae9a51578f7f06149578acd8bff1f49d9b911ad2253565162` |
+| `evidence/PRECISION-05/保护机制探针结果.json` | 19675 | `5bce7776b3e92cabd49b639b180c7d870ebc0fc61f724413d2313f06fc2aa1ed` |
+| `evidence/PRECISION-05/表2_四笔成交逐笔核验.csv` | 6320 | `cb0a7ef3e0ea7648f8abf5882bc41b8266b1d6a6df409128f5941dd0dd114c90` |
+| `策略/WyckoffMaster/trading_core/fill.py` | 18376 | `f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b` |
+| `策略/WyckoffMaster/trading_core/engine.py` | 59121 | `c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2` |
+| `策略/WyckoffMaster/trading_core/policy.py` | 10309 | `6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7` |
+| `策略/WyckoffMaster/trading_core/position.py` | 7783 | `5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc` |
+| `策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py` | 29445 | `fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139` |
+| `策略/WyckoffMaster/event_trend_v0_1/runner.py` | 32550 | `07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb` |
+| `策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py` | 17980 | `8812f0a48f229f1dab350e2ea57abbafb8d16e35913b21ab5ed2d7f25843d250` |
+| `策略/WyckoffMaster/event_trend_v0_1/tests/test_event_trend_closure.py` | 34681 | `7f08444a53674162e3c439c1407d603c9f0d804e0774e642047b487904ecbedb` |
+
+## 自校验（本文件不计入清单，避免自指）
+
+- 项数：42（产物 31 + 输入 11）
+- 缺失：0 项（无）
+- 落盘后重算哈希：不符 **0** 项（全部一致）
+
+复算命令（工程根执行）：
+
+```sh
+cd /Users/boos/Desktop/威科夫因子共振趋势
+shasum -a 256 -c <(python3 - <<'PY'
+import json
+d=json.load(open('evidence/PRECISION-06/产物SHA256清单.json'))
+print('\n'.join(f"{r['sha256']}  {r['path']}" for r in d['files']))
+PY
+)
+```

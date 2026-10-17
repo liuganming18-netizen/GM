@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "strategy": "WX_EVENT_TREND_V0_1",
+    "time_range": "2024-01-01 ~ 2024-06-30",
+    "timestamp": 1792170006,
+    "sample_symbols": [
+      "BLURUSDT",
+      "PENDLEUSDT",
+      "ORDIUSDT",
+      "CELOUSDT",
+      "MAGICUSDT",
+      "JTOUSDT",
+      "NMRUSDT",
+      "RVNUSDT",
+      "AVAXUSDT",
+      "SPELLUSDT"
+    ]
+  },
+  "results": {
+    "BLURUSDT": {
+      "symbol": "BLURUSDT",
+      "data_bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376,
+        "oi": 355490
+      },
+      "funnel": {
+        "boxes": 30,
+        "sweeps": 11,
+        "retests": 5,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 12,
+        "invalidated": 18,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "trading": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "elapsed_sec": 2.55
+    },
+    "PENDLEUSDT": {
+      "symbol": "PENDLEUSDT",
+      "data_bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376,
+        "oi": 329109
+      },
+      "funnel": {
+        "boxes": 27,
+        "sweeps": 5,
+        "retests": 3,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 14,
+        "invalidated": 12,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "trading": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "elapsed_sec": 2.56
+    },
+    "ORDIUSDT": {
+      "symbol": "ORDIUSDT",
+      "data_bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376,
+        "oi": 299904
+      },
+      "funnel": {
+        "boxes": 26,
+        "sweeps": 6,
+        "retests": 5,
+        "breakouts": 1,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 13,
+        "invalidated": 11,
+        "candidates": 1,
+        "executed_trades": 1
+      },
+      "trading": {
+        "initial_equity": 10000.0,
+        "final_equity": 10059.961607665897,
+        "net_pnl": 59.96160766590284,
+        "trade_count": 1,
+        "order_count": 2,
+        "fee_total": 0.23563683597755977,
+        "slippage_total": 0.21452734520898248,
+        "funding_total": 0.9859543517249068
+      },
+      "elapsed_sec": 11.58
+    },
+    "CELOUSDT": {
+      "symbol": "CELOUSDT",
+      "data_bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376,
+        "oi": 503360
+      },
+      "funnel": {
+        "boxes": 24,
+        "sweeps": 6,
+        "retests": 4,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 12,
+        "invalidated": 11,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "trading": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "elapsed_sec": 3.37
+    },
+    "MAGICUSDT": {
+      "symbol": "MAGICUSDT",
+      "data_bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376,
+        "oi": 382375
+      },
+      "funnel": {
+        "boxes": 27,
+        "sweeps": 5,
+        "retests": 2,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 13,
+        "invalidated": 13,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "trading": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "elapsed_sec": 3.09
+    },
+    "JTOUSDT": {
+      "symbol": "JTOUSDT",
+      "data_bars": {
+        "4h": 1228,
+        "1h": 4344,
+        "15m": 17376,
+        "oi": 291006
+      },
+      "funnel": {
+        "boxes": 26,
+        "sweeps": 3,
+        "retests": 2,
+        "breakouts": 1,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 13,
+        "invalidated": 11,
+        "candidates": 1,
+        "executed_trades": 0
+      },
+      "trading": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "elapsed_sec": 2.98
+    },
+    "NMRUSDT": {
+      "symbol": "NMRUSDT",
+      "data_bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376,
+        "oi": 339612
+      },
+      "funnel": {
+        "boxes": 26,
+        "sweeps": 3,
+        "retests": 0,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 16,
+        "invalidated": 10,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "trading": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "elapsed_sec": 3.04
+    },
+    "RVNUSDT": {
+      "symbol": "RVNUSDT",
+      "data_bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376,
+        "oi": 503236
+      },
+      "funnel": {
+        "boxes": 28,
+        "sweeps": 6,
+        "retests": 4,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 12,
+        "invalidated": 15,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "trading": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "elapsed_sec": 2.91
+    },
+    "AVAXUSDT": {
+      "symbol": "AVAXUSDT",
+      "data_bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376,
+        "oi": 503314
+      },
+      "funnel": {
+        "boxes": 33,
+        "sweeps": 10,
+        "retests": 6,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 14,
+        "invalidated": 18,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "trading": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "elapsed_sec": 3.3
+    },
+    "SPELLUSDT": {
+      "symbol": "SPELLUSDT",
+      "data_bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376,
+        "oi": 422507
+      },
+      "funnel": {
+        "boxes": 27,
+        "sweeps": 8,
+        "retests": 3,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 12,
+        "invalidated": 14,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "trading": {
+        "initial_equity": 10000.0,
+        "final_equity": 10000.0,
+        "net_pnl": 0.0,
+        "trade_count": 0,
+        "order_count": 0,
+        "fee_total": 0.0,
+        "slippage_total": 0.0,
+        "funding_total": 0.0
+      },
+      "elapsed_sec": 3.2
+    }
+  }
+}

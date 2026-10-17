@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.12, pytest-9.1.1, pluggy-1.6.0 -- /Users/boos/.workbuddy-ai/binaries/python/envs/default/bin/python
+rootdir: /Users/boos/Desktop/威科夫因子共振趋势
+collecting ... collected 10 items
+
+evidence/PRECISION-06/隔离复现/test_p06_现状固定.py::test_CURRENT_01_entry_above_bar_high_is_accepted PASSED [ 10%]
+evidence/PRECISION-06/隔离复现/test_p06_现状固定.py::test_CURRENT_02_exit_below_bar_low_is_accepted PASSED [ 20%]
+evidence/PRECISION-06/隔离复现/test_p06_现状固定.py::test_CURRENT_03_step_coarser_than_price_is_accepted PASSED [ 30%]
+evidence/PRECISION-06/隔离复现/test_p06_现状固定.py::test_CURRENT_04_zero_price_exit_is_rejected PASSED [ 40%]
+evidence/PRECISION-06/隔离复现/test_p06_现状固定.py::test_CURRENT_05_legacy_mode_has_no_gate_at_all PASSED [ 50%]
+evidence/PRECISION-06/隔离复现/test_p06_现状固定.py::test_CURRENT_06_end_to_end_two_out_of_range_legs_pass_all_selfchecks PASSED [ 60%]
+evidence/PRECISION-06/隔离复现/test_p06_现状固定.py::test_CURRENT_07_end_to_end_zero_exit_keeps_position_open PASSED [ 70%]
+evidence/PRECISION-06/隔离复现/test_p06_现状固定.py::test_CURRENT_08_missing_spec_and_step_is_refused PASSED [ 80%]
+evidence/PRECISION-06/隔离复现/test_p06_现状固定.py::test_CURRENT_09_normal_fill_inside_bar_is_untouched PASSED [ 90%]
+evidence/PRECISION-06/隔离复现/test_p06_现状固定.py::test_CURRENT_10_flat_bar_fixture_cannot_reveal_out_of_range PASSED [100%]
+
+============================== 10 passed in 0.28s ==============================

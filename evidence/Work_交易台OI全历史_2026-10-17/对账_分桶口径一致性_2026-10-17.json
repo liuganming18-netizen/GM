@@ -1,0 +1,31 @@
+{
+  "生成时间": "2026-10-17T02:24:00",
+  "档位": [
+    [
+      518400000,
+      300000
+    ],
+    [
+      2592000000,
+      3600000
+    ],
+    [
+      null,
+      86400000
+    ]
+  ],
+  "热层SQL": "CASE WHEN ts>=? THEN ts/300000 WHEN ts>=? THEN ts/3600000 ELSE ts/86400000 END",
+  "冷层SQL": "CASE WHEN ts>=1791656640851 THEN ts//300000 WHEN ts>=1789583040851 THEN ts//3600000 ELSE ts//86400000 END",
+  "采样点数": 8,
+  "冷层状态": {
+    "接入": true,
+    "热层": "/Users/boos/Desktop/威科夫因子共振趋势/框架/backend/data/market_v2.sqlite3",
+    "冷层": "/Users/boos/Desktop/威科夫因子共振趋势/数据/市场数据/parquet",
+    "冷层来源": "project_paths",
+    "水位ms": 1791880577632,
+    "水位来源": "state",
+    "热层保留天数": 30,
+    "错误": null
+  },
+  "失败": []
+}

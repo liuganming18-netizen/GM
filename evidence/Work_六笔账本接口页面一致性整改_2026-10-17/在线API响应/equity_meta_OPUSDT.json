@@ -1,0 +1,24 @@
+{
+  "http": 200,
+  "points": 17376,
+  "benchmark": {
+    "benchmark_kind": "buy_and_hold_price_only",
+    "symbol": "OPUSDT",
+    "entry_time_ms": 1704067200000,
+    "exit_time_ms": 1719702000000,
+    "entry_price": null,
+    "exit_price": null,
+    "qty": null,
+    "cum_funding": null,
+    "gross_return_pct": -53.934751023642846,
+    "price_only_return_pct": -53.934751023642846,
+    "net_return_pct": null,
+    "final_equity": 939.8765731533134,
+    "series_last_equity": 939.8765731533134,
+    "max_drawdown_pct": 64.81747868326141,
+    "cost_model": "price_only（纯价格：不含手续费/滑点/资金费）",
+    "points": 4344,
+    "note": "本 run 落盘的基准序列为纯价格口径 ⇒ 只给 price_only_return_pct，net_return_pct 如实留空（不与含成本的策略净收益直接比较）"
+  },
+  "benchmark_series_points": 4344
+}

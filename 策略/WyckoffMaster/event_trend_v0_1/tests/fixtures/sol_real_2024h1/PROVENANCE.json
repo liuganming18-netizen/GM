@@ -1,0 +1,28 @@
+{
+  "purpose": "真实 SOL 样本夹具，供 test_event_trend_closure.py 的真实数据/状态机用例使用；固化后测试不再依赖可被归档或清理的运行时目录。",
+  "symbol": "SOLUSDT",
+  "window": "2024-01-01 ~ 2024-06-30",
+  "source_run_id": "bt_20261016T101649Z_4aa21d94",
+  "source_path_at_capture": "回测日志/oi_resonance_v1/runs/bt_20261016T101649Z_4aa21d94/inputs/",
+  "source_path_now": "回测日志/legacy_archive/oi_resonance_runs_backup/bt_20261016T101649Z_4aa21d94/inputs/",
+  "captured_at": "2026-10-17T00:54:00+08:00",
+  "capture_reason": "原运行时目录于 2026-10-17 00:48:52 被其它工作流的归档动作移走，导致依赖它的用例报 FileNotFoundError。",
+  "files": {
+    "signal_bars.csv": {
+      "bytes": 107628,
+      "lines": 971,
+      "sha256": "3f6992759ccd0bfb6be501a7025d36aebf6aa8462525494f021500a77cd780ad"
+    },
+    "oi_5m.csv": {
+      "bytes": 417192,
+      "lines": 11589,
+      "sha256": "24d22759e49848987c9d643bb8728ab1f54dd78711eea162eb5e4ff96390ba2c"
+    },
+    "intrabar_bars.csv": {
+      "bytes": 263562,
+      "lines": 2881,
+      "sha256": "90c40b1ae0022aed06c324a86849dc8b9eabf3b06f093bb8e9fc8d89d7d590d4"
+    }
+  },
+  "note": "4h 历史 bar 不在此目录：夹具仍从冷层真实数据 数据/市场数据/parquet/candles/binance/um/SOLUSDT/4h/ 读取。"
+}

@@ -45,6 +45,12 @@ class Position:
     cum_funding_fee: float = 0.0
     funding_gaps: List[dict] = field(default_factory=list)
     entry_slip_loss: float = 0.0
+    # 成本分账（加性，不改变 `entry_slip_loss` 的既有口径）：
+    #   entry_slip_loss == entry_slip_pure + entry_round_loss
+    entry_slip_pure: float = 0.0
+    entry_round_loss: float = 0.0
+    # 入场价三段审计（raw → 滑点后 → 取整后），来自 FillAdapter
+    entry_price_audit: Dict[str, Any] = field(default_factory=dict)
     mfe: float = 0.0
     mae: float = 0.0
     # 保护止损轨迹（**引擎实况记录**，供图表真实取点；不造点）：
@@ -73,6 +79,8 @@ class Position:
             "last_funding_ms": int(self.last_funding_ms),
             "cum_funding_fee": self.cum_funding_fee,
             "entry_slip_loss": self.entry_slip_loss, "mfe": self.mfe, "mae": self.mae,
+            "entry_slip_pure": self.entry_slip_pure,
+            "entry_round_loss": self.entry_round_loss,
             "stop_trace": list(self.stop_trace),
             "order_id": self.order_id, "signal_id": self.signal_id,
             "signal_bar_open_ms": self.signal_bar_open_ms,

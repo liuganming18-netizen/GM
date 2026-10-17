@@ -1,0 +1,792 @@
+{
+ "generated_utc": "2026-10-17T05:11:21Z",
+ "contracts_dir": "/Users/boos/Desktop/威科夫因子共振趋势/数据/contracts/旧标的池",
+ "snapshots": [
+  {
+   "file": "exchangeInfo_futures_2026-10-05T015512Z.json",
+   "bytes": 1241246,
+   "sha256": "07445c2f07ef9670bc92fdb6d175ab745040d8bf3c6bb7c3c9d44cda34d99cef",
+   "request_fetched_ms": 1791165254984,
+   "request_fetched_utc": "2026-10-05T01:54:14Z",
+   "file_saved_ms_from_name": 1791165312000,
+   "file_saved_utc_from_name": "2026-10-05T015512Z",
+   "snapshot_server_ms": 1790941589240,
+   "snapshot_server_utc": "2026-10-02T11:46:29Z",
+   "file_mtime_utc": "2026-10-05T01:55:12Z",
+   "meta_present": true,
+   "meta": {
+    "fetched_at_ms": 1791165254984,
+    "saved_utc": "2026-10-05T01:55:12Z",
+    "request_id": 1,
+    "source": "共享缓存",
+    "url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+    "via": "统一 PublicGateway（只读、无密钥）"
+   },
+   "symbol_count": 920,
+   "has_our_symbols": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "COTIUSDT",
+    "BNBUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "file": "exchangeInfo_futures_2026-10-05T045328Z.json",
+   "bytes": 1241246,
+   "sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+   "request_fetched_ms": 1791173366032,
+   "request_fetched_utc": "2026-10-05T04:09:26Z",
+   "file_saved_ms_from_name": 1791176008000,
+   "file_saved_utc_from_name": "2026-10-05T045328Z",
+   "snapshot_server_ms": 1790941589242,
+   "snapshot_server_utc": "2026-10-02T11:46:29Z",
+   "file_mtime_utc": "2026-10-05T04:53:28Z",
+   "meta_present": true,
+   "meta": {
+    "fetched_at_ms": 1791173366032,
+    "saved_utc": "2026-10-05T04:53:28Z",
+    "request_id": 13,
+    "source": "共享缓存",
+    "url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+    "via": "统一 PublicGateway（只读、无密钥）",
+    "endpoint": "binance.instruments"
+   },
+   "symbol_count": 920,
+   "has_our_symbols": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "COTIUSDT",
+    "BNBUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "file": "exchangeInfo_spot_2026-10-05T015512Z.json",
+   "bytes": 6305462,
+   "sha256": "2e45a6016495db47b9594449acc2c73d57b85e0f78c5cc42267f40ca640eabb6",
+   "request_fetched_ms": 1791165316743,
+   "request_fetched_utc": "2026-10-05T01:55:16Z",
+   "file_saved_ms_from_name": 1791165312000,
+   "file_saved_utc_from_name": "2026-10-05T015512Z",
+   "snapshot_server_ms": 1791165313409,
+   "snapshot_server_utc": "2026-10-05T01:55:13Z",
+   "file_mtime_utc": "2026-10-05T01:55:16Z",
+   "meta_present": true,
+   "meta": {
+    "fetched_at_ms": 1791165316743,
+    "saved_utc": "2026-10-05T01:55:16Z",
+    "request_id": 3,
+    "source": "公共REST",
+    "url": "https://api.binance.com/api/v3/exchangeInfo",
+    "via": "统一 PublicGateway（只读、无密钥）"
+   },
+   "symbol_count": 1372,
+   "has_our_symbols": [
+    "AIGENSYNUSDT",
+    "COTIUSDT",
+    "BNBUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "file": "exchangeInfo_spot_2026-10-05T045328Z.json",
+   "bytes": 6305464,
+   "sha256": "d43f8561013fbd88b1228f62ad987e8e2307df56f5f4c9b49d1baff4a5e01a89",
+   "request_fetched_ms": 1791173368256,
+   "request_fetched_utc": "2026-10-05T04:09:28Z",
+   "file_saved_ms_from_name": 1791176008000,
+   "file_saved_utc_from_name": "2026-10-05T045328Z",
+   "snapshot_server_ms": 1791173366706,
+   "snapshot_server_utc": "2026-10-05T04:09:26Z",
+   "file_mtime_utc": "2026-10-05T04:53:28Z",
+   "meta_present": true,
+   "meta": {
+    "fetched_at_ms": 1791173368256,
+    "saved_utc": "2026-10-05T04:53:28Z",
+    "request_id": 14,
+    "source": "共享缓存",
+    "url": "https://api.binance.com/api/v3/exchangeInfo?permissions=SPOT&symbolStatus=TRADING",
+    "via": "统一 PublicGateway（只读、无密钥）",
+    "endpoint": "binance.spot_instruments"
+   },
+   "symbol_count": 1372,
+   "has_our_symbols": [
+    "AIGENSYNUSDT",
+    "COTIUSDT",
+    "BNBUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "file": "instruments_okx_2026-10-05T045328Z.json",
+   "bytes": 591833,
+   "sha256": "628ccc96ed1a504acf8d718ce0041c5e809ed42378d904b0951bc58d9d436d1d",
+   "request_fetched_ms": 1791173369918,
+   "request_fetched_utc": "2026-10-05T04:09:29Z",
+   "file_saved_ms_from_name": 1791176008000,
+   "file_saved_utc_from_name": "2026-10-05T045328Z",
+   "snapshot_server_ms": null,
+   "snapshot_server_utc": null,
+   "file_mtime_utc": "2026-10-05T04:53:28Z",
+   "meta_present": true,
+   "meta": {
+    "fetched_at_ms": 1791173369918,
+    "saved_utc": "2026-10-05T04:53:28Z",
+    "request_id": 15,
+    "source": "共享缓存",
+    "url": "https://www.okx.com/api/v5/public/instruments?instType=SWAP",
+    "via": "统一 PublicGateway（只读、无密钥）",
+    "endpoint": "okx.instruments"
+   },
+   "symbol_count": 500,
+   "has_our_symbols": []
+  }
+ ],
+ "futures_pair_diff": {
+  "file_a": "exchangeInfo_futures_2026-10-05T015512Z.json",
+  "file_b": "exchangeInfo_futures_2026-10-05T045328Z.json",
+  "top_level_fields_differing": [
+   "serverTime"
+  ],
+  "server_time_a": 1790941589240,
+  "server_time_b": 1790941589242,
+  "server_time_delta_ms": 2,
+  "symbol_count_a": 920,
+  "symbol_count_b": 920,
+  "symbols_differing": [],
+  "conclusion": "两份文件 sha256 不同，但差异**仅**在顶层 serverTime（相差 2 ms）；920 个合约条目逐字段完全一致。两个 serverTime 落在同一秒内，属同一次响应的两次落盘，**不构成两个可比较的证据时点**。"
+ },
+ "current_fetch": {
+  "file": "当前响应_exchangeInfo.json",
+  "sha256": "918bc3087252d4fee05e9cf8f49039b9c182e3a304a1fef4e63180d18b2fa338",
+  "bytes": 1151290,
+  "url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+  "snapshot_server_utc": "2026-10-16T08:01:14Z",
+  "symbol_count": 927,
+  "note": "本窗口实际抓取的官方响应；serverTime 明显早于抓取时刻 ⇒ 该响应本身也可能来自上游缓存，只能证明「响应里写的那个时点」。"
+ },
+ "per_symbol": {
+  "SPACEUSDT": {
+   "snapshot": {
+    "pricePrecision": 7,
+    "quantityPrecision": 0,
+    "onboardDate": 1769168700000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "tickSize": "0.0000010",
+     "maxPrice": "200",
+     "minPrice": "0.0000010"
+    },
+    "LOT_SIZE": {
+     "stepSize": "1",
+     "maxQty": "50000000",
+     "minQty": "1"
+    },
+    "MARKET_LOT_SIZE": {
+     "minQty": "1",
+     "maxQty": "12000000",
+     "stepSize": "1"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierUp": "1.1500",
+     "multiplierDown": "0.8500",
+     "multiplierDecimal": "4"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "now": {
+    "pricePrecision": 7,
+    "quantityPrecision": 0,
+    "onboardDate": 1769168700000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "maxPrice": "200",
+     "tickSize": "0.0000010",
+     "minPrice": "0.0000010"
+    },
+    "LOT_SIZE": {
+     "maxQty": "50000000",
+     "minQty": "1",
+     "stepSize": "1"
+    },
+    "MARKET_LOT_SIZE": {
+     "minQty": "1",
+     "maxQty": "20000000",
+     "stepSize": "1"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierDown": "0.8500",
+     "multiplierDecimal": "4",
+     "multiplierUp": "1.1500"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "diff_snapshot_vs_now": {
+    "MARKET_LOT_SIZE": {
+     "snapshot": {
+      "minQty": "1",
+      "maxQty": "12000000",
+      "stepSize": "1"
+     },
+     "now": {
+      "minQty": "1",
+      "maxQty": "20000000",
+      "stepSize": "1"
+     }
+    }
+   }
+  },
+  "AIGENSYNUSDT": {
+   "snapshot": {
+    "pricePrecision": 7,
+    "quantityPrecision": 0,
+    "onboardDate": 1777472100000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "maxPrice": "200",
+     "minPrice": "0.0000100",
+     "tickSize": "0.0000100"
+    },
+    "LOT_SIZE": {
+     "minQty": "1",
+     "stepSize": "1",
+     "maxQty": "30000000"
+    },
+    "MARKET_LOT_SIZE": {
+     "maxQty": "3000000",
+     "stepSize": "1",
+     "minQty": "1"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierDecimal": "4",
+     "multiplierUp": "1.1500",
+     "multiplierDown": "0.8500"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "now": {
+    "pricePrecision": 7,
+    "quantityPrecision": 0,
+    "onboardDate": 1777472100000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "maxPrice": "200",
+     "minPrice": "0.0000100",
+     "tickSize": "0.0000100"
+    },
+    "LOT_SIZE": {
+     "minQty": "1",
+     "maxQty": "30000000",
+     "stepSize": "1"
+    },
+    "MARKET_LOT_SIZE": {
+     "minQty": "1",
+     "stepSize": "1",
+     "maxQty": "3000000"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierUp": "1.1500",
+     "multiplierDown": "0.8500",
+     "multiplierDecimal": "4"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "diff_snapshot_vs_now": {}
+  },
+  "TRUTHUSDT": {
+   "snapshot": {
+    "pricePrecision": 7,
+    "quantityPrecision": 0,
+    "onboardDate": 1759320000000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "maxPrice": "200",
+     "minPrice": "0.0000010",
+     "tickSize": "0.0000010"
+    },
+    "LOT_SIZE": {
+     "minQty": "1",
+     "maxQty": "60000000",
+     "stepSize": "1"
+    },
+    "MARKET_LOT_SIZE": {
+     "minQty": "1",
+     "maxQty": "6000000",
+     "stepSize": "1"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierDown": "0.8500",
+     "multiplierUp": "1.1500",
+     "multiplierDecimal": "4"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "now": {
+    "pricePrecision": 7,
+    "quantityPrecision": 0,
+    "onboardDate": 1759320000000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "minPrice": "0.0000010",
+     "tickSize": "0.0000010",
+     "maxPrice": "200"
+    },
+    "LOT_SIZE": {
+     "stepSize": "1",
+     "maxQty": "60000000",
+     "minQty": "1"
+    },
+    "MARKET_LOT_SIZE": {
+     "stepSize": "1",
+     "maxQty": "6000000",
+     "minQty": "1"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierDown": "0.8500",
+     "multiplierDecimal": "4",
+     "multiplierUp": "1.1500"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "diff_snapshot_vs_now": {}
+  },
+  "COTIUSDT": {
+   "snapshot": {
+    "pricePrecision": 7,
+    "quantityPrecision": 0,
+    "onboardDate": 1615273200000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "maxPrice": "200",
+     "minPrice": "0.0000010",
+     "tickSize": "0.0000010"
+    },
+    "LOT_SIZE": {
+     "minQty": "1",
+     "stepSize": "1",
+     "maxQty": "70000000"
+    },
+    "MARKET_LOT_SIZE": {
+     "maxQty": "7000000",
+     "stepSize": "1",
+     "minQty": "1"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierUp": "1.1000",
+     "multiplierDown": "0.9000",
+     "multiplierDecimal": "4"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "now": {
+    "pricePrecision": 7,
+    "quantityPrecision": 0,
+    "onboardDate": 1615273200000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "tickSize": "0.0000010",
+     "maxPrice": "200",
+     "minPrice": "0.0000010"
+    },
+    "LOT_SIZE": {
+     "stepSize": "1",
+     "minQty": "1",
+     "maxQty": "70000000"
+    },
+    "MARKET_LOT_SIZE": {
+     "stepSize": "1",
+     "minQty": "1",
+     "maxQty": "7000000"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierDecimal": "4",
+     "multiplierUp": "1.1000",
+     "multiplierDown": "0.9000"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "diff_snapshot_vs_now": {}
+  },
+  "BNBUSDT": {
+   "snapshot": {
+    "pricePrecision": 3,
+    "quantityPrecision": 2,
+    "onboardDate": 1581321600000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "tickSize": "0.010",
+     "maxPrice": "100000",
+     "minPrice": "6.600"
+    },
+    "LOT_SIZE": {
+     "maxQty": "100000",
+     "stepSize": "0.01",
+     "minQty": "0.01"
+    },
+    "MARKET_LOT_SIZE": {
+     "maxQty": "2000",
+     "minQty": "0.01",
+     "stepSize": "0.01"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierDown": "0.9500",
+     "multiplierDecimal": "4",
+     "multiplierUp": "1.0500"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "now": {
+    "pricePrecision": 3,
+    "quantityPrecision": 2,
+    "onboardDate": 1581321600000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "maxPrice": "100000",
+     "tickSize": "0.010",
+     "minPrice": "6.600"
+    },
+    "LOT_SIZE": {
+     "maxQty": "100000",
+     "stepSize": "0.01",
+     "minQty": "0.01"
+    },
+    "MARKET_LOT_SIZE": {
+     "stepSize": "0.01",
+     "maxQty": "2000",
+     "minQty": "0.01"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierDecimal": "4",
+     "multiplierUp": "1.0500",
+     "multiplierDown": "0.9500"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "diff_snapshot_vs_now": {}
+  },
+  "ORDIUSDT": {
+   "snapshot": {
+    "pricePrecision": 6,
+    "quantityPrecision": 1,
+    "onboardDate": 1699360200000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "minPrice": "0.001000",
+     "maxPrice": "2000",
+     "tickSize": "0.001000"
+    },
+    "LOT_SIZE": {
+     "minQty": "0.1",
+     "maxQty": "200000",
+     "stepSize": "0.1"
+    },
+    "MARKET_LOT_SIZE": {
+     "minQty": "0.1",
+     "stepSize": "0.1",
+     "maxQty": "20000"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierUp": "1.1500",
+     "multiplierDecimal": "4",
+     "multiplierDown": "0.8500"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "now": {
+    "pricePrecision": 6,
+    "quantityPrecision": 1,
+    "onboardDate": 1699360200000,
+    "status": "TRADING",
+    "contractType": "PERPETUAL",
+    "PRICE_FILTER": {
+     "tickSize": "0.001000",
+     "minPrice": "0.001000",
+     "maxPrice": "2000"
+    },
+    "LOT_SIZE": {
+     "maxQty": "200000",
+     "minQty": "0.1",
+     "stepSize": "0.1"
+    },
+    "MARKET_LOT_SIZE": {
+     "minQty": "0.1",
+     "maxQty": "20000",
+     "stepSize": "0.1"
+    },
+    "MIN_NOTIONAL": {
+     "notional": "5"
+    },
+    "PERCENT_PRICE": {
+     "multiplierDown": "0.8500",
+     "multiplierUp": "1.1500",
+     "multiplierDecimal": "4"
+    },
+    "MAX_NUM_ORDERS": {
+     "limit": 200
+    },
+    "orderTypes": [
+     "LIMIT",
+     "MARKET",
+     "STOP",
+     "STOP_MARKET",
+     "TAKE_PROFIT",
+     "TAKE_PROFIT_MARKET",
+     "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+     "GTC",
+     "IOC",
+     "FOK",
+     "GTX",
+     "GTD"
+    ]
+   },
+   "diff_snapshot_vs_now": {}
+  }
+ }
+}

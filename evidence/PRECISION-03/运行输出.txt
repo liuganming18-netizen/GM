@@ -1,0 +1,73 @@
+### PRECISION-03 只读核验输出  2026-10-17 12:15:37
+
+== 1) 现场 375 个 run 的状态穿透 ==
+==============================================================================
+PRECISION-03 · 状态穿透核验（只读）
+==============================================================================
+  runs_total                                 375
+  has_formal_pass_allowed                    0
+  formal_pass_allowed_true                   0
+  formal_pass_allowed_false                  0
+  formal_pass_allowed_absent                 375
+  has_spec_status                            0
+  has_precision                              0
+  precision_run_valid_true                   0
+  precision_run_valid_false                  0
+  precision_run_valid_absent                 375
+  unclosed_nonempty                          0
+  doc_status_succeeded                       375
+  doc_source_summary_json                    375
+  doc_source_run_json                        0
+  api_quality_ok                             375
+  ui_quality_ok                              375
+  ui_ok_but_formal_false                     0
+  ui_ok_but_formal_absent                    375
+  ui_ok_and_precision_invalid                0
+  ui_ok_without_any_spec_verification        375
+------------------------------------------------------------------------------
+样例（前 5 个 UI 判为通过、但底层 formal_pass_allowed 缺失的 run）：
+  run_WX_EVENT_TREND_V0_1_0GUSDT_1792174343  doc_source=_summary_to_run_doc dq=ok ui=通过（运行成功 + 质量 ok + 有质量明细）
+  run_WX_EVENT_TREND_V0_1_1000BONKUSDT_1792173638  doc_source=_summary_to_run_doc dq=ok ui=通过（运行成功 + 质量 ok + 有质量明细）
+  run_WX_EVENT_TREND_V0_1_1000CATUSDT_1792174344  doc_source=_summary_to_run_doc dq=ok ui=通过（运行成功 + 质量 ok + 有质量明细）
+  run_WX_EVENT_TREND_V0_1_1000CHEEMSUSDT_1792196696  doc_source=_summary_to_run_doc dq=ok ui=通过（运行成功 + 质量 ok + 有质量明细）
+  run_WX_EVENT_TREND_V0_1_1000FLOKIUSDT_1792173639  doc_source=_summary_to_run_doc dq=ok ui=通过（运行成功 + 质量 ok + 有质量明细）
+
+明细：/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-03/result.json
+
+== 2) 隔离核验：新格式/run.json 路径 ==
+====================================================================================================
+PRECISION-03 · 隔离核验（合成夹具，RUNS_ROOT → /Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-03/夹具/runs ）
+====================================================================================================
+case                                           bottom formal  run_valid  api quality  UI     verdict
+----------------------------------------------------------------------------------------------------
+F1 新格式 summary：formal=False / run_valid=False（ False          False      ok           通过     通过（运行成功 + 质量 ok + 有质量明细）
+F2 新格式 summary：formal=True / run_valid=True（对照 True           True       ok           通过     通过（运行成功 + 质量 ok + 有质量明细）
+F3 主运行顶层 formal=True，但 summary_variant_b.forma True           True       ok           通过     通过（运行成功 + 质量 ok + 有质量明细）
+F4 对照：summary 无 reconcile/identity（⇒ dq=unknow None           None       unknown      未通过    质量未通过（quality.status=unknown）
+F5 POST 创建路径的 run.json（_run_event_trend 写出的形状） None           None       ok           通过     通过（运行成功 + 质量 ok + 有质量明细）
+----------------------------------------------------------------------------------------------------
+static formal_run_gate: {"G01": "pass", "G02": "pass", "G03": "pass", "G04": "pending", "G05": "pending"} | formal_run_allowed = False
+  ui_says_pass_when_bottom_formal_false: 1 → ['run_WX_EVENT_TREND_V0_1_FIXTURE_A_9000000001']
+  ui_says_pass_when_run_valid_false: 1 → ['run_WX_EVENT_TREND_V0_1_FIXTURE_A_9000000001']
+  ui_says_pass_when_no_flag_at_all: 1 → ['run_WX_EVENT_TREND_V0_1_FIXTURE_E_9000000005']
+  main_top_level_flag_ignores_variant_b: 1 → ['run_WX_EVENT_TREND_V0_1_FIXTURE_C_9000000003']
+
+明细：/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-03/隔离核验.json
+
+== 3) 375 个窗口的规格适用性 ==
+==============================================================================
+PRECISION-03 · 375 个既有窗口的规格适用性（按当前代码重解析）
+==============================================================================
+  runs_total              375
+  applicability           {'unverified_historical': 363, 'not_listed': 12}
+  formal_pass_allowed=True 0
+  errors                  {}
+------------------------------------------------------------------------------
+  样例： {"run_id": "run_WX_EVENT_TREND_V0_1_0GUSDT_1792174343", "symbol": "0GUSDT", "window_start_ms": 1758844800000, "window_end_ms": 1774393200000, "window_source": "inputs.json", "applicability": "unverified_historical", "formal_pass_allowed": false, "price_step": "0.0001", "evidence_sha256": "07445c2f07ef9670", "note": "窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1758844800000 ⇒ 窗口起点之前"}
+
+明细：/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-03/规格适用性分布.json
+
+== 4) 测试门禁 ==
+........................................................................ [ 77%]
+.....................                                                    [100%]
+93 passed in 1.69s

@@ -1,0 +1,21 @@
+========================================================================================
+A 公告：扫描 327 篇，含六标的的 23 篇
+   索引合计 6735 篇（公告索引.json:4452, 公告索引_48新币上线.json:2283）
+   [OK] BNBUSDT        原文命中=True 值={'0.001': True, '0.01': True} 生效时间=True
+   [OK] ORDIUSDT       原文命中=True 值={'0.001': True} 生效时间=True
+   [OK] TRUTHUSDT      原文命中=True 值={'0.000001': True} 生效时间=True
+   [OK] SPACEUSDT      原文命中=True 值={'0.000001': True, '5 USDT': True} 生效时间=True
+   [OK] AIGENSYNUSDT   原文命中=True 值={'0.00001': True, '5 USDT': True} 生效时间=True
+   [OK] COTIUSDT       原文命中=True 值={'0.00001': True, '0.000001': True} 生效时间=True
+   上线规格表覆盖: {"SPACEUSDT": {"has_TickSize": true, "has_MinTradeAmount": true, "has_MinNotional": true}, "AIGENSYNUSDT": {"has_TickSize": true, "has_MinTradeAmount": true, "has_MinNotional": true}, "TRUTHUSDT": {"has_TickSize": true, "has_MinTradeAmount": false, "has_MinNotional": false}, "ORDIUSDT": {"has_TickSize": true, "has_MinTradeAmount": false, "has_MinNotional": false}}
+   「上线前15分钟更新」免责: {"SPACEUSDT": false, "AIGENSYNUSDT": false, "TRUTHUSDT": true, "COTIUSDT": false, "BNBUSDT": false, "ORDIUSDT": false}
+========================================================================================
+B 存档：29 次捕获，usable 20，剔除 9 {"skew": ["2021-08-15T21:44:44Z", "2021-11-13T21:47:32Z", "2022-01-02T13:48:38Z"], "http_451": ["20221228165656", "20230216011155", "20231223162419", "20260408023940", "20260513163058"], "http_301": ["20230126191359"]}
+   usable 里 serverTime 与索引不符/超 skew 的：0
+========================================================================================
+C 时间线：23 条；源文件缺失 0；字段与源文件不符 0
+========================================================================================
+D 逐段：差异 0 处
+   obs 计数: {"SPACEUSDT": 5, "AIGENSYNUSDT": 4, "TRUTHUSDT": 5, "COTIUSDT": 21, "BNBUSDT": 22, "ORDIUSDT": 5}
+
+写出: /Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-05/PRECISION04复核结果.json

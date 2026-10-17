@@ -1,0 +1,66 @@
+{
+  "funnel": {
+    "boxes": 30,
+    "breakouts": 0,
+    "candidates": 0,
+    "executed_trades": 0,
+    "expired": 12,
+    "invalidated": 17,
+    "oi_rejected": 0,
+    "oi_unavailable": 0,
+    "retests": 4,
+    "sweeps": 10,
+    "volume_rejected": 0
+  },
+  "identity": {
+    "candidates_executed": 0,
+    "candidates_total": 0,
+    "chain_ok": true,
+    "identity_breaks": [],
+    "orphan_trades": [],
+    "trades_matched_by_identity": 0,
+    "trades_total": 0
+  },
+  "reconcile": {
+    "cash_identity_ok": true,
+    "equity_curve_tail_matches_final": true,
+    "equity_identity_ok": true,
+    "expected_cash": 10000.0,
+    "fee_model": {
+      "maker_fee_rate": 0.0002,
+      "taker_fee_rate": 0.0005,
+      "tier": "Binance_VIP0"
+    },
+    "final_cash": 10000.0,
+    "final_equity": 10000.0,
+    "funding_settlement_model": "real_events",
+    "initial_equity": 10000.0,
+    "risk_model": {
+      "max_concurrent_trades": 3,
+      "max_leverage": 1.0,
+      "max_portfolio_margin_pct": 0.9,
+      "risk_per_trade": 0.005
+    },
+    "sum_entry_fee": 0.0,
+    "sum_exit_fee": 0.0,
+    "sum_fees": 0.0,
+    "sum_funding_fee": 0.0,
+    "sum_gross_pnl": 0.0,
+    "sum_net_pnl_closed": 0.0,
+    "sum_slippage_loss": 0.0,
+    "unrealized_net_open": 0.0
+  },
+  "run_id": "run_WX_EVENT_TREND_V0_1_ETHUSDT_A_1792170105",
+  "symbol": "ETHUSDT",
+  "trading_summary": {
+    "fee_total": 0.0,
+    "final_equity": 10000.0,
+    "funding_total": 0.0,
+    "initial_equity": 10000.0,
+    "net_pnl": 0.0,
+    "order_count": 0,
+    "slippage_total": 0.0,
+    "trade_count": 0
+  },
+  "variant": "A"
+}

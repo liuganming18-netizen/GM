@@ -1,0 +1,18 @@
+{
+ "generated_utc": "2026-10-17T06:26:32Z",
+ "shadow_gate": "R6: price_step > raw_price ⇒ FillRejected",
+ "exit_code": 1,
+ "passed": 91,
+ "failed": [
+  {
+   "nodeid": "策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py::test_price_below_one_cent_with_cent_step_must_be_rejected",
+   "longrepr": "def test_price_below_one_cent_with_cent_step_must_be_rejected():\n        \"\"\"修复前的真凶：0.004076 用 0.01 步长，卖出向更便宜取整 = **0.00**。\n    \n        现在不允许「成交价为 0」，必须拒绝并留下四件套证据。\n        \"\"\"\n        bd = price_breakdown(raw_price=0.004076, is_buy=False, price_step=0.01,\n                             slippage_rate=3e-4)\n        assert Decimal(bd[\"post_round_price\"]) == 0      # 复现旧行为：零元卖出\n        a = _adapter()\n        with pytest.raises(FillRejected) as ei:\n            a.quote_exit(target_px=0.004076, direction=1, price_step=0.01,\n                         reason=\"intrabar_stop\")\n        d = ei.value.detail\n>       assert ei.value.reason == \"nonpositive_or_nonfinite_exit_fill\"\nE       AssertionError: assert 'price_step_c...er_than_price' == 'nonpositive_...ite_exit_fill'\nE         \nE         - nonpositive_or_nonfinite_exit_fill\nE         + price_step_coarser_than_price\n\n../../策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py:98: AssertionError"
+  },
+  {
+   "nodeid": "策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py::test_exit_failure_keeps_position_open_and_marks_run_invalid",
+   "longrepr": "def test_exit_failure_keeps_position_open_and_marks_run_invalid():\n        \"\"\"出场取整后为 0 ⇒ **不得**把仓位当作已平仓；运行标记为无效/未完成。\"\"\"\n        # 价格 0.004 + 步长 0.01：入场（买，向上）能成 0.01，出场（卖，向下）必成 0.00\n        cand, df_1h, df_15m = _entry_scenario(0.004, 0.003)\n        res = run_event_trend_backtest(\"SOLUSDT\", df_1h, df_15m, [cand], [],\n                                       variant=\"A\", price_step=\"0.01\")\n        eng = res[\"engine_result\"]\n        assert eng[\"trades_count\"] == 0\n>       assert eng[\"open_positions_remaining\"], \"出场失败时仓位必须仍未平\"\nE       AssertionError: 出场失败时仓位必须仍未平\nE       assert []\n\n../../策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py:326: AssertionError"
+  }
+ ],
+ "failed_count": 2,
+ "log": "evidence/PRECISION-06/原始输出/pytest_既有93项_加R6影子.txt"
+}

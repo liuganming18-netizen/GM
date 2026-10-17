@@ -24,9 +24,39 @@ import json
 import os
 
 from . import common
-wx = None                                    # WORK-04B: wx_donchian_wyckoff 已彻底删除
-ARM_IDS = ("3a", "3b", "3c", "3d")
 from . import wx_gate
+
+# ── WORK-04B 收尾修正（2026-10-17）──────────────────────────────────────────
+# 旧模块 `wx_donchian_wyckoff` 已物理删除，本文件曾以 `wx = None` 占位，但**仍有 5 处**
+# `wx.<常量>` 引用未清理（`REQUIRED_CONFIG` ×2、`ARM_IDS` ×1、`EFFECTIVE_VIEW_PATH` ×3）。
+# `wx is None` ⇒ 任一被触发即 `AttributeError: 'NoneType' object has no attribute ...`：
+#   · `load_view()`  —— 未显式给 `path` / `WX_EFFECTIVE_VIEW` 时，**默认路径解析直接崩**；
+#   · `effective_config()` / `signal_config_for()` —— 每次计算生效配置都崩。
+# 调用方是真实生产链路（`wx_execution.py` 与 `wx_gate.binding()`，后者被
+# `adapter.v1_registered_configs` 使用），故这不是"死代码"，是**可触发的运行时崩溃**。
+# 此处把常量**就地重建**，取值逐字取自被删模块 `8bb8f1b` 的原定义；视图文件本身已丢失
+# ⇒ `load_view` 依 `os.path.exists` 如实返回 `(None, None)`，不伪造、不兜底假值。
+ARM_IDS = ("3a", "3b", "3c", "3d")
+
+# 生效参数视图的**信号参数键**（18 个）。唯一来源 = 旧 `wx_donchian_wyckoff.REQUIRED_CONFIG`。
+REQUIRED_CONFIG = (
+    "don_entry_bars", "don_exit_bars", "atr_n", "vol_n", "warmup_contiguous_bars",
+    "atr_method", "ice_vol_mult", "tr_atr_mult", "spring_vol_mult", "spring_close_pos",
+    "spring_depth_atr", "spring_confirm_bars", "sc_vol_mult", "sc_close_pos",
+    "sc_newlow_pct", "sc_leg_bars", "sc_recover", "sc_confirm_bars",
+)
+
+
+def _resolve_effective_view_path():
+    """生效视图路径（唯一合法来源 `project_paths.EFFECTIVE_VIEW`；不可用则空串）。"""
+    try:
+        import project_paths as _pp                          # noqa: E402
+        return str(_pp.EFFECTIVE_VIEW)
+    except Exception:                                        # noqa: BLE001
+        return ""
+
+
+EFFECTIVE_VIEW_PATH = _resolve_effective_view_path()
 
 # ── 固定接受身份（施工前由生效视图实算并冻结；不是运行放行凭据）──────────────
 # 生效视图 10_研究参数生效视图_v2_2_user5000_shared.json 的文件 sha256。
@@ -65,7 +95,7 @@ def load_view(path=None):
 
     路径优先级：显式 `path` > 环境变量 `WX_EFFECTIVE_VIEW`（隔离反例用）> 固定视图。
     """
-    p = path or os.environ.get("WX_EFFECTIVE_VIEW") or wx.EFFECTIVE_VIEW_PATH
+    p = path or os.environ.get("WX_EFFECTIVE_VIEW") or EFFECTIVE_VIEW_PATH
     if not os.path.exists(p):
         return None, None
     with open(p, encoding="utf-8") as f:
@@ -101,7 +131,7 @@ def effective_config(view, item):
     执行覆盖（费率/滑点/入场与信号退出延迟）必须真实进入身份，否则压力组身份丢失。
     """
     sig = view.get("signals") or {}
-    cfg = {k: sig.get(k) for k in wx.REQUIRED_CONFIG}
+    cfg = {k: sig.get(k) for k in REQUIRED_CONFIG}
     cfg.update(_exec_defaults(view))
     for k, v in (item.get("changes") or {}).items():
         if k in cfg:
@@ -115,7 +145,7 @@ def signal_config_for(view, arm_id):
         if item.get("id") == arm_id:
             return effective_config(view, item)
     # 未登记该 arm：回落为视图 signals + 默认执行（仍标记为未登记）
-    cfg = {k: (view.get("signals") or {}).get(k) for k in wx.REQUIRED_CONFIG}
+    cfg = {k: (view.get("signals") or {}).get(k) for k in REQUIRED_CONFIG}
     cfg.update(_exec_defaults(view))
     return cfg
 
@@ -170,7 +200,7 @@ def resolve(con, arm_id, version=None):
           hash_check, identity_ok, identity_problems, run_binding, exec, ...}。
     视图缺失 → None（待配置）。
     """
-    if arm_id not in wx.ARM_IDS:
+    if arm_id not in ARM_IDS:
         # 允许按**预登记配置 id**（含敏感性/压力组）解析，便于逐配置身份核验；
         # 仍拒绝任何未登记键。
         view_probe, _ = load_view()
@@ -805,7 +835,7 @@ def approximate_375_registration(real=None, with_calendar=True):
             "maximum_account_drawdown_fraction")}
         spec_version = view.get("spec_version")
     else:
-        blocked.append("effective_view_missing:" + str(wx.EFFECTIVE_VIEW_PATH))
+        blocked.append("effective_view_missing:" + str(EFFECTIVE_VIEW_PATH))
     if not ident.get("ok"):
         blocked.append("view_identity_drift:" + ";".join(ident.get("problems") or []))
 
@@ -863,7 +893,7 @@ def approximate_375_registration(real=None, with_calendar=True):
                      "scope": (formal or {}).get("scope")},
         "coverage": coverage,
         "spec_version": spec_version,
-        "view": {"path": wx.EFFECTIVE_VIEW_PATH, "sha256": vsha, "identity_ok": ident.get("ok"),
+        "view": {"path": EFFECTIVE_VIEW_PATH, "sha256": vsha, "identity_ok": ident.get("ok"),
                  "identity_problems": ident.get("problems")},
         "configs_18": (real or {}).get("configs_18"),
         "engine": (real or {}).get("engine"),

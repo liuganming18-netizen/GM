@@ -1,0 +1,91 @@
+/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-02/审核_精度执行路径反例.py:878: Pandas4Warning: Timestamp.utcnow is deprecated and will be removed in a future version. Use Timestamp.now('UTC') instead.
+  "generated_at": pd.Timestamp.utcnow().isoformat(),
+==============================================================================
+项 1: 失败  {'PASS': 7, 'FAIL': 4, 'UNKNOWN': 1}
+项 2: 失败  {'PASS': 5, 'FAIL': 2, 'UNKNOWN': 1}
+项 3: 失败  {'PASS': 3, 'FAIL': 4, 'UNKNOWN': 0}
+项 4: 失败  {'PASS': 3, 'FAIL': 1, 'UNKNOWN': 1}
+项 5: 失败  {'PASS': 5, 'FAIL': 1, 'UNKNOWN': 2}
+项 6: 未知  {'PASS': 2, 'FAIL': 0, 'UNKNOWN': 1}
+==============================================================================
+[通过]   A1 (项1) 多头入场：滑点后向更贵取整（ceil）
+[通过]   A2 (项1) 空头入场：滑点后向更便宜取整（floor）
+[通过]   A3 (项1) 多头出场：向更便宜取整（floor）
+[通过]   A4 (项1) 空头出场：向更贵取整（ceil）
+[通过]   A5 (项1) 精确步长边界不多跳一档（100.03/0.01）
+[未知]   A6 (项1) 极低价格：tick 相对价格过粗时成本被放大（观测项）
+        期望: 买 0.08 / 卖 0.06（各偏离 14.29%，为 3bps 的 47.6 倍）
+        实际: 买 0.08（+14.29%）/ 卖 0.06（-14.29%）
+[失败]   A7 (项1) 极低价格：取整后价格偏离原价 25%（入场）/17%（出场）仍判 run_valid
+        期望: 应在「取整后价格相对原价偏差过大」时拒绝或标记无效
+        实际: entry_fill=0.03（= 原价 ×1.250）, exit_fill=0.02（= 原价 ×0.833）, run_valid=True
+[通过]   A8 (项1) 数量向**下**取整到 stepSize
+[通过]   A9 (项1) 数量精确边界不丢一档（0.29/0.01）
+[失败]  A10 (项1) 非法步长（NaN）抛出的异常类型是否符合契约
+        期望: FillRejected 或 ExecutionInputError
+        实际: decimal.InvalidOperation: step: non_finite
+[失败]  A11 (项1) 数量 NaN 的异常类型是否符合契约
+        期望: FillRejected 或返回 NaN 由调用方判
+        实际: decimal.InvalidOperation
+[失败]  A12 (项1) 负滑点（slippage_bps<0）被当作有利成交且不拒绝
+        期望: 应拒绝（滑点必须非负、方向必须不利）
+        实际: entry_fill=99.7 < raw 100.0 ⇒ 有利成交
+[失败]   B1 (项2) maxQty（最大下单量）是否实际执行
+        期望: qty ≤ 1.0，否则拒绝（qty_above_max）
+        实际: qty=43.13（maxQty=1），trades_count=1，rejected=[]
+[通过]   B2 (项2) minQty 是否实际执行
+[通过]   B3 (项2) minNotional 是否实际执行
+[通过] B4-235 (项2) minNotional 边界（=235）：notional=235 时的判定
+[通过] B4-236 (项2) minNotional 边界（=236）：notional=235 时的判定
+[失败]   B5 (项2) 订单类型约束：LIMIT 单缺 limit_price 仍被按市价成交
+        期望: 拒绝（limit_price_required）或按 limit_price 撮合
+        实际: orders=[('open', 'LIMIT', None, 'FILLED'), ('exit_eod', 'LIMIT', None, 'FILLED')]
+[未知]   B6 (项2) 合约规格的 order_type 是否参与撮合约束选择
+        期望: 应按实际订单类型（MARKET vs STOP_MARKET）选择 LOT_SIZE / MARKET_LOT_SIZE
+        实际: engine.py 中是否出现 `spec.order_type`：False
+[通过]   B7 (项2) 参与率上限（名义 ≤ 前一根 15m 成交额 × 0.1%）是否执行
+[通过]   C1 (项3) strict=True：非正/非有限成交价必须拒绝
+[失败]   C2 (项3) strict=False：0 价静默通过（返回 0 成交价），NaN 抛非契约异常
+        期望: 0 价应拒绝；NaN 应以 FillRejected 拒绝
+        实际: raw=0 ⇒ entry_fill=0.0（无异常）；raw=NaN ⇒ 抛 decimal.InvalidOperation
+[通过]   C3 (项3) 出场失败：仓位保留 / 运行标记无效 / 账本仍一致 / 不写平仓事件
+[失败]   C4 (项3) 出场先被拒、同 run 后段成功平仓 ⇒ `unclosed_positions` 误报
+        期望: 仓位最终已平 ⇒ unclosed_positions 应为空（run_valid 可保守为 False）
+        实际: trades_count=1, open_positions_remaining=[], precision.unclosed_positions=['TESTUSDT'], invalid_reasons=['exit_gap_fill_rejected:nonpositive_or_nonfinite_exit_fill', 'exit_intrabar_fill_rejected:nonpositive_or_nonfinite_exit_fill']
+[通过]   C5 (项3) 出场失败后权益曲线末点与 final_equity 一致且仍计未平仓
+[失败]   C7 (项3) 空 market_data 的返回体缺少 `precision` 键（形状不一致）
+        期望: 主路径与空路径返回同一组键（含 precision），且缺结果用 None 而非 0
+        实际: keys=['close_open_positions_at_end', 'close_open_positions_at_end_source', 'decisions', 'equity_curve', 'final_cash', 'final_equity', 'funding_gaps', 'funding_is_assumption', 'funding_model', 'initial_equity', 'max_drawdown_pct', 'net_return_pct', 'open_positions_remaining', 'reconcile', 'rejected_orders', 'strategy_id', 'time_unit', 'trade_start_sec', 'trades', 'trades_count', 'trading_core']；precision 存在=False；max_drawdown_pct=0.0
+[失败]   C6 (项3) price_step=0（OI 生产缺省）+ strict=False ⇒ 无任何价格取整且 run_valid=True
+        期望: 应显式标记「未施加 tick 约束」（run 不应与「已取整」同权）
+        实际: entry_price=100.03（= 100×1.0003，未取整）, price_steps={'TESTUSDT': 0.0}, spec_status=declared_no_spec, run_valid=True
+[通过]   D1 (项4) strict：纯滑点与取整损失分别记录且合计等于总口径
+[通过]   D2 (项4) 不重复扣费：net_pnl 只由实际成交价推出，slippage_loss 不再二次扣减
+[失败]   D3 (项4) 非 strict：`slippage_split_ok` 为自证恒真，不能证明取整损失已计量
+        期望: 分账字段应能区分「未计量」与「计量为 0」
+        实际: rounding_loss=0.0, price_audit={'entry': {}, 'exit': {}}, slippage_split_ok=True, slippage_loss=2.587991383541603
+[通过]   D4 (项4) 汇总口径：reconcile.sum_slippage_loss == Σ 明细
+[未知]   D5 (项4) 未平仓仓位的入场执行成本是否进入 sum_slippage_loss
+        期望: 应明确：汇总只含已平仓笔（当前实现如此）
+        实际: sum_slippage_loss=0.0，trades_count=0，未平仓=1 笔（其入场成本未计入）
+[通过]   E1 (项5) strict=True 的实际使用点
+[通过]   E2 (项5) strict 缺省值 = False（构造点不传即为非严格）
+[未知]   E3 (项5) SimulatedBarFillAdapter 构造点清单（谁在用哪一端）
+        期望: 应逐点标注 strict 取值
+        实际: ['策略/WyckoffMaster/oi_resonance_v1/execution.py:105 → return _fill.SimulatedBarFillAdapter(', '策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py:434 → fill_adapter = SimulatedBarFillAdapter(']
+[未知]   E4 (项5) OI 共振生产回测入口（不受 strict / 规格闸门保护）
+        期望: 应知该路径无 tick 约束、无数量闸门
+        实际: ['策略/WyckoffMaster/oi_resonance_v1/execution.py:127', '框架/backend/backtest_runner.py:948']
+[通过]   E5 (项5) 事件趋势回测入口（strict=True + 规格闸门）
+[失败]   E6 (项5) 第二套取整实现（float + 1e-9 偏置）仍在生产代码中
+        期望: 取整只应有 fill.py 一处实现
+        实际: ['框架/backend/strategies/wx_execution.py:1662', '框架/backend/strategies/wx_execution.py:1669']
+[通过]   E7 (项5) Paper 撮合是否经过 trading_core（strict 是否影响纸面）
+[通过]   E8 (项5) 六笔修复是否重算成交价（strict 是否影响历史六笔数值）
+[通过]   F1 (项6) 六个历史标的：历史规格一律 unverified，formal_pass_allowed 恒 False
+[通过]   F2 (项6) 六个历史标的：给定真实 tick 时成交价落在 tick 网格上（机制验证）
+[未知]   F3 (项6) 六个历史标的的历史收益是否可下结论
+        期望: 规格未验证 ⇒ 不可下结论
+        实际: 历史规格未验证（unverified_historical），本次仅机制验证；未输出任何修复后历史收益数值
+==============================================================================
+written: /Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-02/result.json

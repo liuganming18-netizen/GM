@@ -1,0 +1,869 @@
+{
+ "generated_utc": "2026-10-17T05:11:14Z",
+ "A_公告": {
+  "raw_files_scanned": 327,
+  "announcements_containing_any_of_6": 23,
+  "hit_codes": [
+   "02067834ba564042aa7e5f0d30eb2731",
+   "115002584432",
+   "175fddea47fd4a99b89216a2b77c77c8",
+   "360032921211",
+   "360039190692",
+   "3edd59bc38c147259945b634a1d2c039",
+   "418ae354683949dfbe88881c8b2236b9",
+   "471badd688b44686a457c15e60c3448f",
+   "4bd64404aa384fe5a00e0f9b131035db",
+   "524345e64dd14a23989bfe1e547760b5",
+   "5559a6615fd9448bad12a1ceda130428",
+   "5b64c7eaf295445584f222adfbf8d723",
+   "71f44e5e014c445697bb6a6f70315e35",
+   "790cd97ae5d54cd6897ad4fc81ab477b",
+   "875f9acd516c443b8752e800aa94b4b1",
+   "898393a3ce894d329943e10cef74bfec",
+   "8c76a7c17e2f4a68801bea7fe2192284",
+   "8ca05ebf2dcd4e2cbf5a7d2a313ab492",
+   "995efa57e37241a6a73c9e1fcd9e4ced",
+   "eb77bcfa132b435ea60e306af4f6edee",
+   "f048bfe84fb843b49790651137562ef1",
+   "f74b3070321a4cdaaea15f9dd8ceb0e8",
+   "fe45d25c344c40c7bd65932d81ca3227"
+  ],
+  "hit_titles": {
+   "115002584432": "Binance Adds BNB/USDT Trading Pair",
+   "360032921211": "Binance Will Launch Lending Platform: 14-Day Fixed Term USDT, BNB and ETC Lending Products Available for Subscription",
+   "360039190692": "Binance Futures Will Launch BNB/USDT Perpetual Contract With Up to 50x Leverage",
+   "471badd688b44686a457c15e60c3448f": "Isolated Margin Trading for CTSI, ARPA, WTC, KMD, JST and COTI Enabled on Binance",
+   "eb77bcfa132b435ea60e306af4f6edee": "Binance Futures Will Increase Maximum Leverage on BNB Contracts to 75x",
+   "8ca05ebf2dcd4e2cbf5a7d2a313ab492": "Auto Deleveraging (ADL) Guarantee on BTC, ETH, and BNB USDⓈ-M Futures Contracts",
+   "790cd97ae5d54cd6897ad4fc81ab477b": "Updates on Tick Size for USDT-Margined Perpetual Futures Contracts (2021-05-07)",
+   "418ae354683949dfbe88881c8b2236b9": "Binance Adds CELO, COTI, FLUX, HBAR, ICX, POND, YGG on Cross Margin and BTC/USDC, CELO/BUSD, ETH/USDC, FTM/ETH, LINK/ETH, LUNA/ETH, POWR/ETH, SAND/ETH, SOL/ETH, SYS/USDT, XMR/ETH on Isolated Margin",
+   "898393a3ce894d329943e10cef74bfec": "Updates on Tick Size, Leverage & Margin Tiers of Multiple Perpetual Contracts (2022-12-14)",
+   "fe45d25c344c40c7bd65932d81ca3227": "Binance Options Will Launch BNBUSDT Daily Options",
+   "8c76a7c17e2f4a68801bea7fe2192284": "Binance Options Will Launch Additional BNBUSDT Weekly Options",
+   "175fddea47fd4a99b89216a2b77c77c8": "Binance Options Will Launch Additional BNBUSDT Daily Options",
+   "4bd64404aa384fe5a00e0f9b131035db": "Binance Will List ORDI (ORDI) with Seed Tag Applied",
+   "5b64c7eaf295445584f222adfbf8d723": "Binance Futures Will Launch USDⓈ-M ORDI Perpetual Contract With Up to 50x Leverage",
+   "995efa57e37241a6a73c9e1fcd9e4ced": "Binance Adds AST, GNO, ORDI and More Pairs on Cross Margin & Isolated Margin",
+   "f048bfe84fb843b49790651137562ef1": "Binance Copy Trading Adds USDⓈ-M ORDI and 1000SATS Contracts",
+   "02067834ba564042aa7e5f0d30eb2731": "Binance Options Will Launch BNBUSDT and SOLUSDT Monthly Options",
+   "5559a6615fd9448bad12a1ceda130428": "Swarm Network (TRUTH) Will Be Available on Binance Alpha and Binance Futures (2025-10-01)",
+   "3edd59bc38c147259945b634a1d2c039": "Binance Futures Will Launch USDⓈ-Margined SPACEUSDT and FIGHTUSDT Perpetual Contracts (2026-01-23)",
+   "524345e64dd14a23989bfe1e547760b5": "Binance Futures Will Launch USDⓈ-Margined AIGENSYNUSDT Perpetual Contract (2026-04-29)",
+   "71f44e5e014c445697bb6a6f70315e35": "Binance Will List Gensyn (AIGENSYN) with Seed Tag Applied",
+   "875f9acd516c443b8752e800aa94b4b1": "Binance Will Add Gensyn (AIGENSYN) on Earn, Buy Crypto, Convert, VIP Loan & Margin",
+   "f74b3070321a4cdaaea15f9dd8ceb0e8": "Updates on Tick Size for Multiple USDⓈ-M Perpetual Futures Contracts (2026-07-21 & 2026-07-22)"
+  },
+  "claim_vs_raw": [
+   {
+    "symbol": "BNBUSDT",
+    "code": "790cd97ae5d54cd6897ad4fc81ab477b",
+    "found_in_raw": true,
+    "title_matches": true,
+    "values_present": {
+     "0.001": true,
+     "0.01": true
+    },
+    "effective_present": true,
+    "all_times_in_body": [
+     "2021-05-11 03:30"
+    ]
+   },
+   {
+    "symbol": "ORDIUSDT",
+    "code": "5b64c7eaf295445584f222adfbf8d723",
+    "found_in_raw": true,
+    "title_matches": true,
+    "values_present": {
+     "0.001": true
+    },
+    "effective_present": true,
+    "all_times_in_body": [
+     "2023-11-07 12:30",
+     "2023-11-07 16:00",
+     "2023-11-07 20:00",
+     "2023-11-08 00:00",
+     "2023-11-08 04:00"
+    ]
+   },
+   {
+    "symbol": "TRUTHUSDT",
+    "code": "5559a6615fd9448bad12a1ceda130428",
+    "found_in_raw": true,
+    "title_matches": true,
+    "values_present": {
+     "0.000001": true
+    },
+    "effective_present": true,
+    "all_times_in_body": [
+     "2025-10-01 12:00",
+     "2025-10-02 12:00"
+    ]
+   },
+   {
+    "symbol": "SPACEUSDT",
+    "code": "3edd59bc38c147259945b634a1d2c039",
+    "found_in_raw": true,
+    "title_matches": true,
+    "values_present": {
+     "0.000001": true,
+     "5 USDT": true
+    },
+    "effective_present": true,
+    "all_times_in_body": [
+     "2026-01-23 11:45",
+     "2026-01-23 12:15"
+    ]
+   },
+   {
+    "symbol": "AIGENSYNUSDT",
+    "code": "524345e64dd14a23989bfe1e547760b5",
+    "found_in_raw": true,
+    "title_matches": true,
+    "values_present": {
+     "0.00001": true,
+     "5 USDT": true
+    },
+    "effective_present": true,
+    "all_times_in_body": [
+     "2026-04-29 14:15"
+    ]
+   },
+   {
+    "symbol": "COTIUSDT",
+    "code": "f74b3070321a4cdaaea15f9dd8ceb0e8",
+    "found_in_raw": true,
+    "title_matches": true,
+    "values_present": {
+     "0.00001": true,
+     "0.000001": true
+    },
+    "effective_present": true,
+    "all_times_in_body": [
+     "2026-07-21 06:30",
+     "2026-07-21 06:31",
+     "2026-07-21 06:40",
+     "2026-07-21 06:41",
+     "2026-07-21 06:50",
+     "2026-07-21 06:51",
+     "2026-07-21 07:00",
+     "2026-07-21 07:01",
+     "2026-07-21 07:10",
+     "2026-07-21 07:11",
+     "2026-07-21 07:20",
+     "2026-07-21 07:21",
+     "2026-07-22 03:00"
+    ]
+   }
+  ],
+  "launch_spec_table_rows": {
+   "SPACEUSDT": {
+    "has_TickSize": true,
+    "has_MinTradeAmount": true,
+    "has_MinNotional": true
+   },
+   "AIGENSYNUSDT": {
+    "has_TickSize": true,
+    "has_MinTradeAmount": true,
+    "has_MinNotional": true
+   },
+   "TRUTHUSDT": {
+    "has_TickSize": true,
+    "has_MinTradeAmount": false,
+    "has_MinNotional": false
+   },
+   "ORDIUSDT": {
+    "has_TickSize": true,
+    "has_MinTradeAmount": false,
+    "has_MinNotional": false
+   }
+  },
+  "provisional_disclaimer": {
+   "SPACEUSDT": false,
+   "AIGENSYNUSDT": false,
+   "TRUTHUSDT": true,
+   "COTIUSDT": false,
+   "BNBUSDT": false,
+   "ORDIUSDT": false
+  },
+  "index_totals": {
+   "公告索引.json": {
+    "reported_total": 4452,
+    "fetched": 4452,
+    "articles": 4452,
+    "catalog": "Latest Binance News"
+   },
+   "公告索引_48新币上线.json": {
+    "reported_total": 2283,
+    "fetched": 2283,
+    "articles": 2283,
+    "catalog": "New Cryptocurrency Listing"
+   }
+  },
+  "index_total_sum": 6735
+ },
+ "B_存档": {
+  "max_skew_ms": 86400000,
+  "captures_total": 29,
+  "usable_count": 20,
+  "rejected_count": 9,
+  "rejected_kinds": {
+   "skew": [
+    "2021-08-15T21:44:44Z",
+    "2021-11-13T21:47:32Z",
+    "2022-01-02T13:48:38Z"
+   ],
+   "http_451": [
+    "20221228165656",
+    "20230216011155",
+    "20231223162419",
+    "20260408023940",
+    "20260513163058"
+   ],
+   "http_301": [
+    "20230126191359"
+   ]
+  },
+  "usable_but_inconsistent": [],
+  "usable_server_utc": [
+   "2021-01-04T19:51:02Z",
+   "2021-04-11T15:55:06Z",
+   "2021-04-16T20:35:56Z",
+   "2021-06-16T04:07:32Z",
+   "2021-07-16T03:30:00Z",
+   "2021-09-14T10:15:15Z",
+   "2021-10-14T16:00:45Z",
+   "2021-12-13T03:30:03Z",
+   "2022-03-18T12:00:38Z",
+   "2022-09-08T12:00:16Z",
+   "2022-09-13T14:00:11Z",
+   "2022-09-14T14:00:38Z",
+   "2022-09-16T20:00:29Z",
+   "2022-11-16T20:00:10Z",
+   "2022-11-21T16:00:12Z",
+   "2022-11-27T16:00:11Z",
+   "2023-11-02T08:47:08Z",
+   "2026-02-17T04:00:13Z",
+   "2026-05-10T10:00:13Z",
+   "2026-10-01T02:49:48Z"
+  ],
+  "rows": [
+   {
+    "wayback_utc": "2021-01-04T19:51:01Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1609789862039,
+    "index_server_ms": 1609789862039,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": 1039,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 80,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2021-04-11T15:55:06Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1618156506552,
+    "index_server_ms": 1618156506552,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": 552,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 112,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2021-04-16T20:35:56Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1618605356836,
+    "index_server_ms": 1618605356836,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": 836,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 113,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2021-06-16T21:42:45Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1623816452540,
+    "index_server_ms": 1623816452540,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -63312460,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 119,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2021-07-16T21:43:52Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1626406200844,
+    "index_server_ms": 1626406200844,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -65631156,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 122,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2021-08-15T21:44:44Z",
+    "status": "200",
+    "index_usable": false,
+    "index_reason": "serverTime 与捕获时刻相差 230705618 ms，超过 24h ⇒ 视为上游缓存副本，不能当作该捕获时刻的规格",
+    "file_exists": true,
+    "file_server_ms": 1628833178382,
+    "index_server_ms": 1628833178382,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -230705618,
+    "within_max_skew": false,
+    "symbol_count_recomputed": 126,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2021-09-14T21:45:35Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1631614515372,
+    "index_server_ms": 1631614515372,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -41419628,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 135,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2021-10-14T21:46:06Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1634227245497,
+    "index_server_ms": 1634227245497,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -20720503,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 140,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2021-11-13T21:47:32Z",
+    "status": "200",
+    "index_usable": false,
+    "index_reason": "serverTime 与捕获时刻相差 157804493 ms，超过 24h ⇒ 视为上游缓存副本，不能当作该捕获时刻的规格",
+    "file_exists": true,
+    "file_server_ms": 1636682247507,
+    "index_server_ms": 1636682247507,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -157804493,
+    "within_max_skew": false,
+    "symbol_count_recomputed": 144,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2021-12-13T21:47:32Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1639366203405,
+    "index_server_ms": 1639366203405,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -65848595,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 145,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2022-01-02T13:48:38Z",
+    "status": "200",
+    "index_usable": false,
+    "index_reason": "serverTime 与捕获时刻相差 193574782 ms，超过 24h ⇒ 视为上游缓存副本，不能当作该捕获时刻的规格",
+    "file_exists": true,
+    "file_server_ms": 1640937743218,
+    "index_server_ms": 1640937743218,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -193574782,
+    "within_max_skew": false,
+    "symbol_count_recomputed": 147,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2022-03-18T13:09:53Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1647604838598,
+    "index_server_ms": 1647604838598,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -4154402,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 152,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2022-09-08T12:33:50Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1662638416395,
+    "index_server_ms": 1662638416395,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -2013605,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 185,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2022-09-13T14:35:55Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1663077611941,
+    "index_server_ms": 1663077611941,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -2143059,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 187,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2022-09-14T15:19:43Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1663164038572,
+    "index_server_ms": 1663164038572,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -4744428,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 188,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2022-09-16T20:33:39Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1663358429913,
+    "index_server_ms": 1663358429913,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -1989087,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 189,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2022-11-16T20:55:42Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1668628810820,
+    "index_server_ms": 1668628810820,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -3331180,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 195,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2022-11-21T16:44:49Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1669046412010,
+    "index_server_ms": 1669046412010,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -2676990,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 195,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2022-11-27T17:47:56Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1669564811170,
+    "index_server_ms": 1669564811170,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -6464830,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 195,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2022-12-28T16:56:56Z",
+    "status": "451",
+    "index_usable": false,
+    "index_reason": "HTTP 451，非可解析响应",
+    "file_exists": true,
+    "parse_error": "[Errno 21] Is a directory: '/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-04/存档快照/'"
+   },
+   {
+    "wayback_utc": "2023-01-26T19:13:59Z",
+    "status": "301",
+    "index_usable": false,
+    "index_reason": "HTTP 301，非可解析响应",
+    "file_exists": true,
+    "parse_error": "[Errno 21] Is a directory: '/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-04/存档快照/'"
+   },
+   {
+    "wayback_utc": "2023-02-16T01:11:55Z",
+    "status": "451",
+    "index_usable": false,
+    "index_reason": "HTTP 451，非可解析响应",
+    "file_exists": true,
+    "parse_error": "[Errno 21] Is a directory: '/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-04/存档快照/'"
+   },
+   {
+    "wayback_utc": "2023-11-02T09:32:09Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1698914828849,
+    "index_server_ms": 1698914828849,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -2700151,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 272,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2023-12-23T16:24:19Z",
+    "status": "451",
+    "index_usable": false,
+    "index_reason": "HTTP 451，非可解析响应",
+    "file_exists": true,
+    "parse_error": "[Errno 21] Is a directory: '/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-04/存档快照/'"
+   },
+   {
+    "wayback_utc": "2026-02-17T04:13:28Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1771300813648,
+    "index_server_ms": 1771300813648,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -794352,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 683,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2026-04-08T02:39:40Z",
+    "status": "451",
+    "index_usable": false,
+    "index_reason": "HTTP 451，非可解析响应",
+    "file_exists": true,
+    "parse_error": "[Errno 21] Is a directory: '/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-04/存档快照/'"
+   },
+   {
+    "wayback_utc": "2026-05-10T10:30:16Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1778407213208,
+    "index_server_ms": 1778407213208,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -1802792,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 720,
+    "symbol_count_matches_index": true
+   },
+   {
+    "wayback_utc": "2026-05-13T16:30:58Z",
+    "status": "451",
+    "index_usable": false,
+    "index_reason": "HTTP 451，非可解析响应",
+    "file_exists": true,
+    "parse_error": "[Errno 21] Is a directory: '/Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-04/存档快照/'"
+   },
+   {
+    "wayback_utc": "2026-10-01T03:51:41Z",
+    "status": "200",
+    "index_usable": true,
+    "index_reason": "ok",
+    "file_exists": true,
+    "file_server_ms": 1790822988056,
+    "index_server_ms": 1790822988056,
+    "server_ms_matches_index": true,
+    "recomputed_skew_ms": -3712944,
+    "within_max_skew": true,
+    "symbol_count_recomputed": 919,
+    "symbol_count_matches_index": true
+   }
+  ]
+ },
+ "C_时间线": {
+  "timeline_count": 23,
+  "sources_missing": [],
+  "field_mismatches": [],
+  "rows": [
+   {
+    "server_utc": "2021-01-04T19:51:02Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20210104195101Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2021-04-11T15:55:06Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20210411155506Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2021-04-16T20:35:56Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20210416203556Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2021-06-16T04:07:32Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20210616214245Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2021-07-16T03:30:00Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20210716214352Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2021-09-14T10:15:15Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20210914214535Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2021-10-14T16:00:45Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20211014214606Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2021-12-13T03:30:03Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20211213214732Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2022-03-18T12:00:38Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20220318130953Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2022-09-08T12:00:16Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20220908123350Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2022-09-13T14:00:11Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20220913143555Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2022-09-14T14:00:38Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20220914151943Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2022-09-16T20:00:29Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20220916203339Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2022-11-16T20:00:10Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20221116205542Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2022-11-21T16:00:12Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20221121164449Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2022-11-27T16:00:11Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20221127174756Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2023-11-02T08:47:08Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20231102093209Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2026-02-17T04:00:13Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20260217041328Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2026-05-10T10:00:13Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20260510103016Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2026-10-01T02:49:48Z",
+    "kind": "archive_capture",
+    "file": "exchangeInfo_20261001035141Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2026-10-02T11:46:29Z",
+    "kind": "local_snapshot",
+    "file": "exchangeInfo_futures_2026-10-05T015512Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2026-10-02T11:46:29Z",
+    "kind": "local_snapshot",
+    "file": "exchangeInfo_futures_2026-10-05T045328Z.json",
+    "source_found": true,
+    "field_diffs": {}
+   },
+   {
+    "server_utc": "2026-10-16T08:01:14Z",
+    "kind": "live_fetch",
+    "file": "当前响应_exchangeInfo.json",
+    "source_found": true,
+    "field_diffs": {}
+   }
+  ]
+ },
+ "D_逐段": {
+  "diffs": [],
+  "per_symbol": {
+   "SPACEUSDT": {
+    "window_from_inputs_json": [
+     "2026-01-31T20:00:00Z",
+     "2026-07-30T19:00:00Z"
+    ],
+    "window_in_p04": [
+     "2026-01-31T20:00:00Z",
+     "2026-07-30T19:00:00Z"
+    ],
+    "window_matches": true
+   },
+   "AIGENSYNUSDT": {
+    "window_from_inputs_json": [
+     "2026-05-07T23:00:00Z",
+     "2026-09-14T06:00:00Z"
+    ],
+    "window_in_p04": [
+     "2026-05-07T23:00:00Z",
+     "2026-09-14T06:00:00Z"
+    ],
+    "window_matches": true
+   },
+   "TRUTHUSDT": {
+    "window_from_inputs_json": [
+     "2025-10-09T20:00:00Z",
+     "2026-04-07T20:00:00Z"
+    ],
+    "window_in_p04": [
+     "2025-10-09T20:00:00Z",
+     "2026-04-07T20:00:00Z"
+    ],
+    "window_matches": true
+   },
+   "COTIUSDT": {
+    "window_from_inputs_json": [
+     "2024-01-01T00:00:00Z",
+     "2024-06-30T00:00:00Z"
+    ],
+    "window_in_p04": [
+     "2024-01-01T00:00:00Z",
+     "2024-06-30T00:00:00Z"
+    ],
+    "window_matches": true
+   },
+   "BNBUSDT": {
+    "window_from_inputs_json": [
+     "2024-01-01T00:00:00Z",
+     "2024-06-30T00:00:00Z"
+    ],
+    "window_in_p04": [
+     "2024-01-01T00:00:00Z",
+     "2024-06-30T00:00:00Z"
+    ],
+    "window_matches": true
+   },
+   "ORDIUSDT": {
+    "window_from_inputs_json": [
+     "2024-01-01T00:00:00Z",
+     "2024-06-30T00:00:00Z"
+    ],
+    "window_in_p04": [
+     "2024-01-01T00:00:00Z",
+     "2024-06-30T00:00:00Z"
+    ],
+    "window_matches": true
+   }
+  },
+  "obs_counts": {
+   "SPACEUSDT": 5,
+   "AIGENSYNUSDT": 4,
+   "TRUTHUSDT": 5,
+   "COTIUSDT": 21,
+   "BNBUSDT": 22,
+   "ORDIUSDT": 5
+  }
+ }
+}

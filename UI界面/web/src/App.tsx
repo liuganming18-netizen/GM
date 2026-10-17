@@ -28,7 +28,16 @@ import {
 } from 'lucide-react';
 
 export default function App() {
-  const [currentNav, setCurrentNav] = useState('workbench');
+  /* 深链：`?run=<run_id>` ⇒ 直接落在「回测复盘」并打开该 run（由 BacktestWorkbench 读取）。
+   * 用途：⑥ 实验记录列表只取最近 50 条且排序不稳定，指定的 run 可能不在列表里
+   * ⇒ 深链是「打开某一笔」的确定性入口（验收/复现用）。无该参数时行为完全不变。 */
+  const [currentNav, setCurrentNav] = useState(() => {
+    try {
+      return new URLSearchParams(window.location.search).get('run') ? 'backtest' : 'workbench';
+    } catch {
+      return 'workbench';
+    }
+  });
 
   // 真实数据：全池行情 + 信号 + 顶部总览聚合；刷新由数据层按 5s 周期驱动。
   const {

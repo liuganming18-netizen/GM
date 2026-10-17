@@ -1,0 +1,257 @@
+{
+ "generated_utc": "2026-10-17T05:14:17Z",
+ "files": [
+  {
+   "kind": "本窗口产物",
+   "path": "PRECISION-05_核验报告_2026-10-17.md",
+   "exists": true,
+   "bytes": 31349,
+   "sha256": "2b2f80eb672143cd5d76752c0f3e8b4b185fedec6e183c3ca97dffb9b035e6d3"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "表1_六标的证据对照.csv",
+   "exists": true,
+   "bytes": 29302,
+   "sha256": "89072230a025a29f4cf1b9cc030f8ee70a1f5fe025a2b7abcd3090b5ae866dd3"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "表2_四笔成交逐笔核验.csv",
+   "exists": true,
+   "bytes": 6320,
+   "sha256": "cb0a7ef3e0ea7648f8abf5882bc41b8266b1d6a6df409128f5941dd0dd114c90"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "四笔成交逐笔核验.json",
+   "exists": true,
+   "bytes": 33988,
+   "sha256": "4a45990bd0f0787ae9a51578f7f06149578acd8bff1f49d9b911ad2253565162"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "PRECISION04复核结果.json",
+   "exists": true,
+   "bytes": 25493,
+   "sha256": "9fe7c96d5e209071b1fbd78557b2598c9ad6a638c5d4b7b2dd6d2752f182adb9"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "保护机制探针结果.json",
+   "exists": true,
+   "bytes": 19675,
+   "sha256": "5bce7776b3e92cabd49b639b180c7d870ebc0fc61f724413d2313f06fc2aa1ed"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "测试原始输出.txt",
+   "exists": true,
+   "bytes": 179,
+   "sha256": "ad4b1ebe3b875aa3d0cb8938d009c3f7697f4fe7cd7e0d6b870e3e0f1012f375"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "探针原始输出.txt",
+   "exists": true,
+   "bytes": 18798,
+   "sha256": "f03887bf5701cc09bc6569df8f72c37a79ea6849cf18e1b16bd61a1440c7e4f6"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "P04工具链重跑.txt",
+   "exists": true,
+   "bytes": 23438,
+   "sha256": "0eb94e9741bf5268cf18ba2e8fbc7a72f7ad9fa47ddbc7a1119aa2645dd9eefe"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "逐笔核验原始输出.txt",
+   "exists": true,
+   "bytes": 5048,
+   "sha256": "acc0fa1966dde796fb9ce0d05388075968e759e6869f6353b187e4a5cef4e329"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "复核原始输出.txt",
+   "exists": true,
+   "bytes": 2238,
+   "sha256": "f70d884ed14605dac6c443e982d7a176afcba6123b29931942187e4674f96469"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "一键复现日志.txt",
+   "exists": true,
+   "bytes": 33500,
+   "sha256": "1e12082e301145e5a15a05d650bde93b86fd3e52060f8f37bfad1ee71c0eeb4c"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "复现命令.sh",
+   "exists": true,
+   "bytes": 2566,
+   "sha256": "6d563cd756a8f1bdeda237ce0798f4c580d5b802dd3988c490c969b2f107197c"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "工具_逐笔核验.py",
+   "exists": true,
+   "bytes": 14459,
+   "sha256": "ab30d679ba4fbe4656ab5790422b81d04ae3b3156e93f983590460633710fc85"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "工具_保护机制探针.py",
+   "exists": true,
+   "bytes": 13971,
+   "sha256": "b4238682a57802122ca7a7e0c4745d474ab9c6e2119e0c1e6697a5640aa6e709"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "工具_复核PRECISION04.py",
+   "exists": true,
+   "bytes": 24812,
+   "sha256": "df057e8aaefa707a5492f0ab2d8509b46e51f0e00d9bae9bfc9d400d1d26bb92"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "工具_生成交付表.py",
+   "exists": true,
+   "bytes": 4598,
+   "sha256": "bc4f4672cf059b937a685ef5aa9451852aa6a57cf3f49d8cffcd9a4489136a1a"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "工具_代码版本对照.py",
+   "exists": true,
+   "bytes": 4282,
+   "sha256": "2a307784755ec1abc6643680c43088afb7a27df196d6665faa48c1a855c5dbe8"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "工具_清单.py",
+   "exists": true,
+   "bytes": 4127,
+   "sha256": "8e1c85e70b930f5814db5c8fb37fcbcc1877518c858bf7d53da701742d2485d5"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "运行时代码/fill.py.HEAD",
+   "exists": true,
+   "bytes": 10642,
+   "sha256": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "运行时代码/position.py.HEAD",
+   "exists": true,
+   "bytes": 7312,
+   "sha256": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327"
+  },
+  {
+   "kind": "本窗口产物",
+   "path": "运行时代码/运行时代码指纹对照.json",
+   "exists": true,
+   "bytes": 42962,
+   "sha256": "fcfe3840233333ef406e0d185494447654942b2dac3efc03063846dc74707617"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-04/PRECISION-04_历史合约规格证据盘点_2026-10-17.md",
+   "exists": true,
+   "bytes": 30121,
+   "sha256": "c86e9d912670993c6ba384acc97ba9619a304b6015b4b8acc44e95ddea5bbee5"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-04/六标的逐时间段证据.json",
+   "exists": true,
+   "bytes": 63915,
+   "sha256": "0cbcd471d6b9a1582136f4f4a8a79eaef31710c6856b0813ec1bff2dfdf4cb2c"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-04/公告规格变更明细.json",
+   "exists": true,
+   "bytes": 6638,
+   "sha256": "4b38c1c8a6c189dbadbc4cb78e1bc69aed521615bfb417c67d88e6a3e4e798bc"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-04/规格时间线.json",
+   "exists": true,
+   "bytes": 57973,
+   "sha256": "c8cee9dfd0bed462a5d9c67b56ad14e53f1eaada8f98ec3b0038fde7037fd975"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-04/存档快照索引.json",
+   "exists": true,
+   "bytes": 19372,
+   "sha256": "03674cbd837f781c6b219d7dc6f6a97bb294c18bb52375a3cdd897e215706b6e"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-04/运行侧反证.json",
+   "exists": true,
+   "bytes": 4540,
+   "sha256": "ecde411d806b389546ae767733aa96e8d01d16c7fce3eb7f232a6b45d08af5c4"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-04/本地证据盘点.json",
+   "exists": true,
+   "bytes": 17806,
+   "sha256": "423d46779667735f6dba0d68e799e1a10e83cc22678e8b001e33fc148e35c900"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "evidence/PRECISION-04/当前响应_exchangeInfo.json",
+   "exists": true,
+   "bytes": 1151290,
+   "sha256": "918bc3087252d4fee05e9cf8f49039b9c182e3a304a1fef4e63180d18b2fa338"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "策略/WyckoffMaster/trading_core/fill.py",
+   "exists": true,
+   "bytes": 18376,
+   "sha256": "f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "策略/WyckoffMaster/trading_core/engine.py",
+   "exists": true,
+   "bytes": 59121,
+   "sha256": "c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "策略/WyckoffMaster/trading_core/position.py",
+   "exists": true,
+   "bytes": 7783,
+   "sha256": "5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py",
+   "exists": true,
+   "bytes": 29445,
+   "sha256": "fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "策略/WyckoffMaster/event_trend_v0_1/runner.py",
+   "exists": true,
+   "bytes": 32550,
+   "sha256": "07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb"
+  },
+  {
+   "kind": "被核验输入",
+   "path": "策略/WyckoffMaster/event_trend_v0_1/instrument_spec.py",
+   "exists": true,
+   "bytes": 52564,
+   "sha256": "97b9842de9a2e7c843416aa919841e81719834ecdb7940ff416196378fc1ab3a"
+  }
+ ]
+}

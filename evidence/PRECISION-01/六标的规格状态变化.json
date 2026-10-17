@@ -1,0 +1,336 @@
+{
+  "generated_by": "工具_六标的状态对比.py",
+  "contracts_dir": "/Users/boos/Desktop/威科夫因子共振趋势/数据/contracts/旧标的池",
+  "rows": [
+    {
+      "symbol": "LPTUSDT",
+      "window": {
+        "start_ms": 1704067200000,
+        "end_ms": 1719705600000,
+        "run_id": "run_WX_EVENT_TREND_V0_1_LPTUSDT_1792173591"
+      },
+      "applicability": {
+        "old": "unverified_historical",
+        "new": "unverified_historical"
+      },
+      "formal_pass_allowed": {
+        "old": false,
+        "new": false
+      },
+      "new_reason_code": "no_snapshot_before_window_start",
+      "new_reason_note": "窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据",
+      "evidence": {
+        "old_path": "exchangeInfo_futures_2026-10-05T045328Z.json",
+        "new_path": "exchangeInfo_futures_2026-10-05T015512Z.json",
+        "old_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "new_sha256": "07445c2f07ef9670bc92fdb6d175ab745040d8bf3c6bb7c3c9d44cda34d99cef"
+      },
+      "times_new": {
+        "request_fetched_ms": 1791165254984,
+        "file_saved_ms": 1791165312000,
+        "snapshot_server_ms": 1790941589240,
+        "spec_effective_ms": null
+      },
+      "qty_constraints_new": [
+        {
+          "filter": "LOT_SIZE",
+          "applies": "always",
+          "step": "0.1",
+          "min": "0.1",
+          "max": "500000"
+        },
+        {
+          "filter": "MARKET_LOT_SIZE",
+          "applies": "market_only",
+          "step": "0.1",
+          "min": "0.1",
+          "max": "50000"
+        },
+        {
+          "filter": "MIN_NOTIONAL",
+          "applies": "always",
+          "notional": "5"
+        }
+      ],
+      "numeric_fields_changed": {},
+      "chain_roles": [
+        "anchor"
+      ]
+    },
+    {
+      "symbol": "OPUSDT",
+      "window": {
+        "start_ms": 1704067200000,
+        "end_ms": 1719705600000,
+        "run_id": "run_WX_EVENT_TREND_V0_1_OPUSDT_1792172950"
+      },
+      "applicability": {
+        "old": "unverified_historical",
+        "new": "unverified_historical"
+      },
+      "formal_pass_allowed": {
+        "old": false,
+        "new": false
+      },
+      "new_reason_code": "no_snapshot_before_window_start",
+      "new_reason_note": "窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据",
+      "evidence": {
+        "old_path": "exchangeInfo_futures_2026-10-05T045328Z.json",
+        "new_path": "exchangeInfo_futures_2026-10-05T015512Z.json",
+        "old_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "new_sha256": "07445c2f07ef9670bc92fdb6d175ab745040d8bf3c6bb7c3c9d44cda34d99cef"
+      },
+      "times_new": {
+        "request_fetched_ms": 1791165254984,
+        "file_saved_ms": 1791165312000,
+        "snapshot_server_ms": 1790941589240,
+        "spec_effective_ms": null
+      },
+      "qty_constraints_new": [
+        {
+          "filter": "LOT_SIZE",
+          "applies": "always",
+          "step": "0.1",
+          "min": "0.1",
+          "max": "10000000"
+        },
+        {
+          "filter": "MARKET_LOT_SIZE",
+          "applies": "market_only",
+          "step": "0.1",
+          "min": "0.1",
+          "max": "1000000"
+        },
+        {
+          "filter": "MIN_NOTIONAL",
+          "applies": "always",
+          "notional": "5"
+        }
+      ],
+      "numeric_fields_changed": {},
+      "chain_roles": [
+        "anchor"
+      ]
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "window": {
+        "start_ms": 1704067200000,
+        "end_ms": 1719705600000,
+        "run_id": "run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568"
+      },
+      "applicability": {
+        "old": "unverified_historical",
+        "new": "unverified_historical"
+      },
+      "formal_pass_allowed": {
+        "old": false,
+        "new": false
+      },
+      "new_reason_code": "no_snapshot_before_window_start",
+      "new_reason_note": "窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据",
+      "evidence": {
+        "old_path": "exchangeInfo_futures_2026-10-05T045328Z.json",
+        "new_path": "exchangeInfo_futures_2026-10-05T015512Z.json",
+        "old_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "new_sha256": "07445c2f07ef9670bc92fdb6d175ab745040d8bf3c6bb7c3c9d44cda34d99cef"
+      },
+      "times_new": {
+        "request_fetched_ms": 1791165254984,
+        "file_saved_ms": 1791165312000,
+        "snapshot_server_ms": 1790941589240,
+        "spec_effective_ms": null
+      },
+      "qty_constraints_new": [
+        {
+          "filter": "LOT_SIZE",
+          "applies": "always",
+          "step": "0.1",
+          "min": "0.1",
+          "max": "200000"
+        },
+        {
+          "filter": "MARKET_LOT_SIZE",
+          "applies": "market_only",
+          "step": "0.1",
+          "min": "0.1",
+          "max": "20000"
+        },
+        {
+          "filter": "MIN_NOTIONAL",
+          "applies": "always",
+          "notional": "5"
+        }
+      ],
+      "numeric_fields_changed": {},
+      "chain_roles": [
+        "anchor"
+      ]
+    },
+    {
+      "symbol": "ACEUSDT",
+      "window": {
+        "start_ms": 1704067200000,
+        "end_ms": 1719705600000,
+        "run_id": "run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577"
+      },
+      "applicability": {
+        "old": "unverified_historical",
+        "new": "unverified_historical"
+      },
+      "formal_pass_allowed": {
+        "old": false,
+        "new": false
+      },
+      "new_reason_code": "no_snapshot_before_window_start",
+      "new_reason_note": "窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据",
+      "evidence": {
+        "old_path": "exchangeInfo_futures_2026-10-05T045328Z.json",
+        "new_path": "exchangeInfo_futures_2026-10-05T015512Z.json",
+        "old_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "new_sha256": "07445c2f07ef9670bc92fdb6d175ab745040d8bf3c6bb7c3c9d44cda34d99cef"
+      },
+      "times_new": {
+        "request_fetched_ms": 1791165254984,
+        "file_saved_ms": 1791165312000,
+        "snapshot_server_ms": 1790941589240,
+        "spec_effective_ms": null
+      },
+      "qty_constraints_new": [
+        {
+          "filter": "LOT_SIZE",
+          "applies": "always",
+          "step": "0.01",
+          "min": "0.01",
+          "max": "2000000"
+        },
+        {
+          "filter": "MARKET_LOT_SIZE",
+          "applies": "market_only",
+          "step": "0.01",
+          "min": "0.01",
+          "max": "600000"
+        },
+        {
+          "filter": "MIN_NOTIONAL",
+          "applies": "always",
+          "notional": "5"
+        }
+      ],
+      "numeric_fields_changed": {},
+      "chain_roles": [
+        "anchor"
+      ]
+    },
+    {
+      "symbol": "BNBUSDT",
+      "window": {
+        "start_ms": 1704067200000,
+        "end_ms": 1719705600000,
+        "run_id": "run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973"
+      },
+      "applicability": {
+        "old": "unverified_historical",
+        "new": "unverified_historical"
+      },
+      "formal_pass_allowed": {
+        "old": false,
+        "new": false
+      },
+      "new_reason_code": "no_snapshot_before_window_start",
+      "new_reason_note": "窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据",
+      "evidence": {
+        "old_path": "exchangeInfo_futures_2026-10-05T045328Z.json",
+        "new_path": "exchangeInfo_futures_2026-10-05T015512Z.json",
+        "old_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "new_sha256": "07445c2f07ef9670bc92fdb6d175ab745040d8bf3c6bb7c3c9d44cda34d99cef"
+      },
+      "times_new": {
+        "request_fetched_ms": 1791165254984,
+        "file_saved_ms": 1791165312000,
+        "snapshot_server_ms": 1790941589240,
+        "spec_effective_ms": null
+      },
+      "qty_constraints_new": [
+        {
+          "filter": "LOT_SIZE",
+          "applies": "always",
+          "step": "0.01",
+          "min": "0.01",
+          "max": "100000"
+        },
+        {
+          "filter": "MARKET_LOT_SIZE",
+          "applies": "market_only",
+          "step": "0.01",
+          "min": "0.01",
+          "max": "2000"
+        },
+        {
+          "filter": "MIN_NOTIONAL",
+          "applies": "always",
+          "notional": "5"
+        }
+      ],
+      "numeric_fields_changed": {},
+      "chain_roles": [
+        "anchor"
+      ]
+    },
+    {
+      "symbol": "MOVRUSDT",
+      "window": {
+        "start_ms": 1704067200000,
+        "end_ms": 1719705600000,
+        "run_id": "run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792171582"
+      },
+      "applicability": {
+        "old": "unverified_historical",
+        "new": "unverified_historical"
+      },
+      "formal_pass_allowed": {
+        "old": false,
+        "new": false
+      },
+      "new_reason_code": "no_snapshot_before_window_start",
+      "new_reason_note": "窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据",
+      "evidence": {
+        "old_path": "exchangeInfo_futures_2026-10-05T045328Z.json",
+        "new_path": "exchangeInfo_futures_2026-10-05T015512Z.json",
+        "old_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "new_sha256": "07445c2f07ef9670bc92fdb6d175ab745040d8bf3c6bb7c3c9d44cda34d99cef"
+      },
+      "times_new": {
+        "request_fetched_ms": 1791165254984,
+        "file_saved_ms": 1791165312000,
+        "snapshot_server_ms": 1790941589240,
+        "spec_effective_ms": null
+      },
+      "qty_constraints_new": [
+        {
+          "filter": "LOT_SIZE",
+          "applies": "always",
+          "step": "0.01",
+          "min": "0.01",
+          "max": "500000"
+        },
+        {
+          "filter": "MARKET_LOT_SIZE",
+          "applies": "market_only",
+          "step": "0.01",
+          "min": "0.01",
+          "max": "70000"
+        },
+        {
+          "filter": "MIN_NOTIONAL",
+          "applies": "always",
+          "notional": "5"
+        }
+      ],
+      "numeric_fields_changed": {},
+      "chain_roles": [
+        "anchor"
+      ]
+    }
+  ]
+}

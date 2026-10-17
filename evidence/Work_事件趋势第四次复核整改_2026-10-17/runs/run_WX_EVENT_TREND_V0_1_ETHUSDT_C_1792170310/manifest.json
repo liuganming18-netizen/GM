@@ -1,0 +1,67 @@
+{
+  "commit_mode": "atomic_directory_rename",
+  "files": {
+    "candidates.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "decisions.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "equity_curve.jsonl": {
+      "bytes": 2606400,
+      "sha256": "47dcdfb083364f5a52128d78f89246b680c8bef1e6d19ae61ab18cafdb79298c"
+    },
+    "events.jsonl": {
+      "bytes": 70108,
+      "sha256": "fc98341ba72dc76ada0017f3012750e54a28072ca3f0a0f59e5a3cafc00a0071"
+    },
+    "fills.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "funding.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "inputs.json": {
+      "bytes": 6434,
+      "sha256": "859a9167b80fafde80c9cb7510c2d93adc35d710140a7f4b5047e8d2c34a657f"
+    },
+    "ledger.jsonl": {
+      "bytes": 322,
+      "sha256": "f7b06b422bce7a223e7369df64a614b9422956eb19ffc419567a71014bce0d3b"
+    },
+    "orders.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "positions.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rejects.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "summary.json": {
+      "bytes": 1579,
+      "sha256": "6f952e288e17706c5b60b6c4894890d405b71002725f82acf78a37296d99cbe9"
+    },
+    "trades.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "transitions.jsonl": {
+      "bytes": 34908,
+      "sha256": "31f5da52d754576e6ae6e1339a558560264f37d003cbe962c12ec701582013b3"
+    },
+    "validation_results.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "files_count": 15,
+  "run_dir": "run_WX_EVENT_TREND_V0_1_ETHUSDT_C_1792170310"
+}

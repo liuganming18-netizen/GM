@@ -1,0 +1,905 @@
+{
+  "generated_utc": "2026-10-17T02:43:51.526854+00:00",
+  "symbols": {
+    "SPACEUSDT": {
+      "run_id": "run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451",
+      "window": {
+        "start_ms": 1769889600000,
+        "end_ms": 1785438000000,
+        "start_utc": "2026-01-31 20:00",
+        "end_utc": "2026-07-30 19:00"
+      },
+      "bars": {
+        "4h": 1130,
+        "1h": 4319,
+        "15m": 17276
+      },
+      "candidates": 1,
+      "spec": {
+        "symbol": "SPACEUSDT",
+        "venue": "binance",
+        "market": "um",
+        "price_step": "0.000001",
+        "qty_step": "1",
+        "min_qty": "1",
+        "max_qty": "12000000",
+        "min_notional": "5",
+        "price_precision": 7,
+        "quantity_precision": 0,
+        "order_type": "MARKET",
+        "source_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+        "source_kind": "exchange_public_rest:exchangeInfo",
+        "fetched_at_ms": 1790941589242,
+        "evidence_path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/contracts/旧标的池/exchangeInfo_futures_2026-10-05T045328Z.json",
+        "evidence_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "onboard_ms": 1769168700000,
+        "snapshot_server_ms": 1790941589242,
+        "applicability": "unverified_historical",
+        "applicability_note": "仅有单一时点快照（serverTime=2026-10-05T045328Z），窗口 1769889600000~1785438000000 内无同源证据 ⇒ 不得据此声明历史成交已修正",
+        "formal_pass_allowed": false,
+        "window_start_ms": 1769889600000,
+        "window_end_ms": 1785438000000,
+        "contradiction_samples": [],
+        "blocking": true
+      },
+      "trades": [
+        {
+          "index": 0,
+          "before": {
+            "entry_time": "2026-05-19 07:15",
+            "exit_time": "2026-05-28 04:15",
+            "entry_price": 0.01,
+            "exit_price": 0.0,
+            "qty": 3095.235141921031,
+            "gross_pnl": -30.95235141921031,
+            "fees": 0.015476175709605154,
+            "funding_fee": 0.05713517951978271,
+            "net_pnl": -31.024962774439697,
+            "slippage_loss": 21.857468446959377,
+            "exit_reason": "intrabar_stop"
+          },
+          "after": {
+            "entry_time": "2026-05-19 07:15",
+            "exit_time": "2026-05-28 04:15",
+            "entry_price": 0.009721,
+            "exit_price": 0.006777,
+            "qty": 3387.0,
+            "gross_pnl": -9.971328000000002,
+            "fees": 0.027939363000000002,
+            "funding_fee": 0.0625208890958118,
+            "net_pnl": -10.061788252095813,
+            "slippage_loss": 0.019137870788865932,
+            "slippage_loss_pure": 0.016763262561240923,
+            "rounding_loss": 0.0023746082276250094,
+            "price_audit": {
+              "entry": {
+                "raw_price": "0.009718",
+                "post_slip_price": "0.0097209154",
+                "post_round_price": "0.009721",
+                "price_step": "0.000001",
+                "slip_delta": "0.0000029154",
+                "round_delta": "0.0000000846",
+                "is_buy": true
+              },
+              "exit": {
+                "raw_price": "0.006779650389958329",
+                "post_slip_price": "0.0067776164948413415013",
+                "post_round_price": "0.006777",
+                "price_step": "0.000001",
+                "slip_delta": "-0.0000020338951169874987",
+                "round_delta": "-0.0000006164948413415013",
+                "is_buy": false,
+                "reason": "intrabar_stop"
+              }
+            },
+            "exit_reason": "intrabar_stop"
+          }
+        }
+      ],
+      "reconcile": {
+        "initial_equity": 2000.0,
+        "final_cash": 1989.9382117479042,
+        "sum_gross_pnl": -9.971328000000002,
+        "sum_entry_fee": 0.0164625135,
+        "sum_exit_fee": 0.0114768495,
+        "sum_fees": 0.027939363000000002,
+        "sum_slippage_loss": 0.019137870788865932,
+        "sum_slippage_loss_pure": 0.016763262561240923,
+        "sum_rounding_loss": 0.0023746082276250094,
+        "slippage_split_ok": true,
+        "sum_funding_fee": 0.0625208890958118,
+        "funding_settlement_model": "real_events",
+        "fee_model": {
+          "tier": "Binance_VIP0",
+          "maker_fee_rate": 0.0002,
+          "taker_fee_rate": 0.0005
+        },
+        "risk_model": {
+          "risk_per_trade": 0.005,
+          "max_concurrent_trades": 3,
+          "max_portfolio_margin_pct": 0.9,
+          "max_leverage": 1.0
+        },
+        "sum_net_pnl_closed": -10.061788252095813,
+        "unrealized_net_open": 0.0,
+        "final_equity": 1989.9382117479042,
+        "expected_cash": 1989.938211747904,
+        "cash_identity_ok": true,
+        "equity_identity_ok": true,
+        "equity_curve_tail_matches_final": true
+      },
+      "precision": {
+        "spec_status": "spec_applied",
+        "run_valid": true,
+        "invalid_reasons": [],
+        "rejects_count": 0,
+        "unclosed_positions": []
+      },
+      "summary_after": {
+        "initial_equity": 2000.0,
+        "final_equity": 1989.9382117479042,
+        "net_pnl": -10.061788252095813,
+        "trade_count": 1,
+        "order_count": 2,
+        "fee_total": 0.027939363000000002,
+        "slippage_total": 0.019137870788865932,
+        "slippage_pure_total": 0.016763262561240923,
+        "rounding_total": 0.0023746082276250094,
+        "slippage_split_ok": true,
+        "funding_total": 0.0625208890958118,
+        "spec_status": "spec_applied",
+        "formal_pass_allowed": false
+      }
+    },
+    "AIGENSYNUSDT": {
+      "run_id": "run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703",
+      "window": {
+        "start_ms": 1778194800000,
+        "end_ms": 1789365600000,
+        "start_utc": "2026-05-07 23:00",
+        "end_utc": "2026-09-14 06:00"
+      },
+      "bars": {
+        "4h": 826,
+        "1h": 3103,
+        "15m": 12412
+      },
+      "candidates": 1,
+      "spec": {
+        "symbol": "AIGENSYNUSDT",
+        "venue": "binance",
+        "market": "um",
+        "price_step": "0.00001",
+        "qty_step": "1",
+        "min_qty": "1",
+        "max_qty": "3000000",
+        "min_notional": "5",
+        "price_precision": 7,
+        "quantity_precision": 0,
+        "order_type": "MARKET",
+        "source_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+        "source_kind": "exchange_public_rest:exchangeInfo",
+        "fetched_at_ms": 1790941589242,
+        "evidence_path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/contracts/旧标的池/exchangeInfo_futures_2026-10-05T045328Z.json",
+        "evidence_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "onboard_ms": 1777472100000,
+        "snapshot_server_ms": 1790941589242,
+        "applicability": "unverified_historical",
+        "applicability_note": "仅有单一时点快照（serverTime=2026-10-05T045328Z），窗口 1778194800000~1789365600000 内无同源证据 ⇒ 不得据此声明历史成交已修正",
+        "formal_pass_allowed": false,
+        "window_start_ms": 1778194800000,
+        "window_end_ms": 1789365600000,
+        "contradiction_samples": [],
+        "blocking": true
+      },
+      "trades": [
+        {
+          "index": 0,
+          "before": {
+            "entry_time": "2026-09-07 07:15",
+            "exit_time": "2026-09-09 22:00",
+            "entry_price": 0.03,
+            "exit_price": 0.01,
+            "qty": 906.0696579344342,
+            "gross_pnl": -18.12139315868868,
+            "fees": 0.018121393158688683,
+            "funding_fee": 0.014665914851189305,
+            "net_pnl": -18.15418046669856,
+            "slippage_loss": 16.076858685673606,
+            "exit_reason": "intrabar_stop"
+          },
+          "after": {
+            "entry_time": "2026-09-07 07:15",
+            "exit_time": "2026-09-09 22:00",
+            "entry_price": 0.02126,
+            "exit_price": 0.01898,
+            "qty": 4362.0,
+            "gross_pnl": -9.945360000000003,
+            "fees": 0.08776344,
+            "funding_fee": 0.070604638419,
+            "net_pnl": -10.103728078419005,
+            "slippage_loss": 0.10256337482362657,
+            "slippage_loss_pure": 0.052662661012448736,
+            "rounding_loss": 0.04990071381117783,
+            "price_audit": {
+              "entry": {
+                "raw_price": "0.02125",
+                "post_slip_price": "0.021256375",
+                "post_round_price": "0.02126",
+                "price_step": "0.00001",
+                "slip_delta": "0.000006375",
+                "round_delta": "0.000003625",
+                "is_buy": true
+              },
+              "exit": {
+                "raw_price": "0.018993512924076944",
+                "post_slip_price": "0.0189878148701997209168",
+                "post_round_price": "0.01898",
+                "price_step": "0.00001",
+                "slip_delta": "-0.0000056980538772230832",
+                "round_delta": "-0.0000078148701997209168",
+                "is_buy": false,
+                "reason": "intrabar_stop"
+              }
+            },
+            "exit_reason": "intrabar_stop"
+          }
+        }
+      ],
+      "reconcile": {
+        "initial_equity": 2000.0,
+        "final_cash": 1989.8962719215808,
+        "sum_gross_pnl": -9.945360000000003,
+        "sum_entry_fee": 0.04636806,
+        "sum_exit_fee": 0.04139538,
+        "sum_fees": 0.08776344,
+        "sum_slippage_loss": 0.10256337482362657,
+        "sum_slippage_loss_pure": 0.052662661012448736,
+        "sum_rounding_loss": 0.04990071381117783,
+        "slippage_split_ok": true,
+        "sum_funding_fee": 0.070604638419,
+        "funding_settlement_model": "real_events",
+        "fee_model": {
+          "tier": "Binance_VIP0",
+          "maker_fee_rate": 0.0002,
+          "taker_fee_rate": 0.0005
+        },
+        "risk_model": {
+          "risk_per_trade": 0.005,
+          "max_concurrent_trades": 3,
+          "max_portfolio_margin_pct": 0.9,
+          "max_leverage": 1.0
+        },
+        "sum_net_pnl_closed": -10.103728078419005,
+        "unrealized_net_open": 0.0,
+        "final_equity": 1989.8962719215808,
+        "expected_cash": 1989.896271921581,
+        "cash_identity_ok": true,
+        "equity_identity_ok": true,
+        "equity_curve_tail_matches_final": true
+      },
+      "precision": {
+        "spec_status": "spec_applied",
+        "run_valid": true,
+        "invalid_reasons": [],
+        "rejects_count": 0,
+        "unclosed_positions": []
+      },
+      "summary_after": {
+        "initial_equity": 2000.0,
+        "final_equity": 1989.8962719215808,
+        "net_pnl": -10.103728078419005,
+        "trade_count": 1,
+        "order_count": 2,
+        "fee_total": 0.08776344,
+        "slippage_total": 0.10256337482362657,
+        "slippage_pure_total": 0.052662661012448736,
+        "rounding_total": 0.04990071381117783,
+        "slippage_split_ok": true,
+        "funding_total": 0.070604638419,
+        "spec_status": "spec_applied",
+        "formal_pass_allowed": false
+      }
+    },
+    "TRUTHUSDT": {
+      "run_id": "run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465",
+      "window": {
+        "start_ms": 1760040000000,
+        "end_ms": 1775592000000,
+        "start_utc": "2025-10-09 20:00",
+        "end_utc": "2026-04-07 20:00"
+      },
+      "bars": {
+        "4h": 1130,
+        "1h": 4320,
+        "15m": 17280
+      },
+      "candidates": 1,
+      "spec": {
+        "symbol": "TRUTHUSDT",
+        "venue": "binance",
+        "market": "um",
+        "price_step": "0.000001",
+        "qty_step": "1",
+        "min_qty": "1",
+        "max_qty": "6000000",
+        "min_notional": "5",
+        "price_precision": 7,
+        "quantity_precision": 0,
+        "order_type": "MARKET",
+        "source_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+        "source_kind": "exchange_public_rest:exchangeInfo",
+        "fetched_at_ms": 1790941589242,
+        "evidence_path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/contracts/旧标的池/exchangeInfo_futures_2026-10-05T045328Z.json",
+        "evidence_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "onboard_ms": 1759320000000,
+        "snapshot_server_ms": 1790941589242,
+        "applicability": "unverified_historical",
+        "applicability_note": "仅有单一时点快照（serverTime=2026-10-05T045328Z），窗口 1760040000000~1775592000000 内无同源证据 ⇒ 不得据此声明历史成交已修正",
+        "formal_pass_allowed": false,
+        "window_start_ms": 1760040000000,
+        "window_end_ms": 1775592000000,
+        "contradiction_samples": [],
+        "blocking": true
+      },
+      "trades": [
+        {
+          "index": 0,
+          "before": {
+            "entry_time": "2026-02-09 13:15",
+            "exit_time": "2026-02-17 08:30",
+            "entry_price": 0.02,
+            "exit_price": 0.01,
+            "qty": 1326.0177249745498,
+            "gross_pnl": -13.260177249745498,
+            "fees": 0.019890265874618247,
+            "funding_fee": 0.04603869759659066,
+            "net_pnl": -13.326106213216708,
+            "slippage_loss": 8.997830766172743,
+            "exit_reason": "intrabar_stop"
+          },
+          "after": {
+            "entry_time": "2026-02-09 13:15",
+            "exit_time": "2026-02-17 08:30",
+            "entry_price": 0.015698,
+            "exit_price": 0.012474,
+            "qty": 3089.0,
+            "gross_pnl": -9.958935999999998,
+            "fees": 0.043511654,
+            "funding_fee": 0.10724859419099998,
+            "net_pnl": -10.109696248191,
+            "slippage_loss": 0.029665795102139694,
+            "slippage_loss_pure": 0.026106625138534935,
+            "rounding_loss": 0.003559169963604763,
+            "price_audit": {
+              "entry": {
+                "raw_price": "0.015693",
+                "post_slip_price": "0.0156977079",
+                "post_round_price": "0.015698",
+                "price_step": "0.000001",
+                "slip_delta": "0.0000047079",
+                "round_delta": "0.0000002921",
+                "is_buy": true
+              },
+              "exit": {
+                "raw_price": "0.012478603688929148",
+                "post_slip_price": "0.0124748601078224692556",
+                "post_round_price": "0.012474",
+                "price_step": "0.000001",
+                "slip_delta": "-0.0000037435811066787444",
+                "round_delta": "-0.0000008601078224692556",
+                "is_buy": false,
+                "reason": "intrabar_stop"
+              }
+            },
+            "exit_reason": "intrabar_stop"
+          }
+        }
+      ],
+      "reconcile": {
+        "initial_equity": 2000.0,
+        "final_cash": 1989.8903037518094,
+        "sum_gross_pnl": -9.958935999999998,
+        "sum_entry_fee": 0.024245561,
+        "sum_exit_fee": 0.019266093,
+        "sum_fees": 0.043511654,
+        "sum_slippage_loss": 0.029665795102139694,
+        "sum_slippage_loss_pure": 0.026106625138534935,
+        "sum_rounding_loss": 0.003559169963604763,
+        "slippage_split_ok": true,
+        "sum_funding_fee": 0.10724859419099998,
+        "funding_settlement_model": "real_events",
+        "fee_model": {
+          "tier": "Binance_VIP0",
+          "maker_fee_rate": 0.0002,
+          "taker_fee_rate": 0.0005
+        },
+        "risk_model": {
+          "risk_per_trade": 0.005,
+          "max_concurrent_trades": 3,
+          "max_portfolio_margin_pct": 0.9,
+          "max_leverage": 1.0
+        },
+        "sum_net_pnl_closed": -10.109696248191,
+        "unrealized_net_open": 0.0,
+        "final_equity": 1989.8903037518094,
+        "expected_cash": 1989.890303751809,
+        "cash_identity_ok": true,
+        "equity_identity_ok": true,
+        "equity_curve_tail_matches_final": true
+      },
+      "precision": {
+        "spec_status": "spec_applied",
+        "run_valid": true,
+        "invalid_reasons": [],
+        "rejects_count": 0,
+        "unclosed_positions": []
+      },
+      "summary_after": {
+        "initial_equity": 2000.0,
+        "final_equity": 1989.8903037518094,
+        "net_pnl": -10.109696248191,
+        "trade_count": 1,
+        "order_count": 2,
+        "fee_total": 0.043511654,
+        "slippage_total": 0.029665795102139694,
+        "slippage_pure_total": 0.026106625138534935,
+        "rounding_total": 0.003559169963604763,
+        "slippage_split_ok": true,
+        "funding_total": 0.10724859419099998,
+        "spec_status": "spec_applied",
+        "formal_pass_allowed": false
+      }
+    },
+    "COTIUSDT": {
+      "run_id": "run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145",
+      "window": {
+        "start_ms": 1704067200000,
+        "end_ms": 1719705600000,
+        "start_utc": "2024-01-01 00:00",
+        "end_utc": "2024-06-30 00:00"
+      },
+      "bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376
+      },
+      "candidates": 1,
+      "spec": {
+        "symbol": "COTIUSDT",
+        "venue": "binance",
+        "market": "um",
+        "price_step": "0.000001",
+        "qty_step": "1",
+        "min_qty": "1",
+        "max_qty": "7000000",
+        "min_notional": "5",
+        "price_precision": 7,
+        "quantity_precision": 0,
+        "order_type": "MARKET",
+        "source_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+        "source_kind": "exchange_public_rest:exchangeInfo",
+        "fetched_at_ms": 1790941589242,
+        "evidence_path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/contracts/旧标的池/exchangeInfo_futures_2026-10-05T045328Z.json",
+        "evidence_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "onboard_ms": 1615273200000,
+        "snapshot_server_ms": 1790941589242,
+        "applicability": "unverified_historical",
+        "applicability_note": "仅有单一时点快照（serverTime=2026-10-05T045328Z），窗口 1704067200000~1719705600000 内无同源证据 ⇒ 不得据此声明历史成交已修正",
+        "formal_pass_allowed": false,
+        "window_start_ms": 1704067200000,
+        "window_end_ms": 1719705600000,
+        "contradiction_samples": [],
+        "blocking": true
+      },
+      "trades": [
+        {
+          "index": 0,
+          "before": {
+            "entry_time": "2024-02-05 20:15",
+            "exit_time": "2024-02-11 05:00",
+            "entry_price": 0.07,
+            "exit_price": 0.08,
+            "qty": 663.0766693783688,
+            "gross_pnl": 6.630766693783685,
+            "fees": 0.049730750203377666,
+            "funding_fee": -0.07382590924314959,
+            "net_pnl": 6.654861852823457,
+            "slippage_loss": 8.885227369670147,
+            "exit_reason": "intrabar_stop"
+          },
+          "after": {
+            "entry_time": "2024-02-05 20:15",
+            "exit_time": "2024-02-11 05:00",
+            "entry_price": 0.062299,
+            "exit_price": 0.085654,
+            "qty": 1355.0,
+            "gross_pnl": 31.64602499999999,
+            "fees": 0.1002381575,
+            "funding_fee": -0.15086356019470454,
+            "net_pnl": 31.696650402694694,
+            "slippage_loss": 0.06097500000001397,
+            "slippage_loss_pure": 0.06014573999999915,
+            "rounding_loss": 0.0008292600000148198,
+            "price_audit": {
+              "entry": {
+                "raw_price": "0.06228",
+                "post_slip_price": "0.062298684",
+                "post_round_price": "0.062299",
+                "price_step": "0.000001",
+                "slip_delta": "0.000018684",
+                "round_delta": "0.000000316",
+                "is_buy": true
+              },
+              "exit": {
+                "raw_price": "0.08568",
+                "post_slip_price": "0.085654296",
+                "post_round_price": "0.085654",
+                "price_step": "0.000001",
+                "slip_delta": "-0.000025704",
+                "round_delta": "-0.000000296",
+                "is_buy": false,
+                "reason": "intrabar_stop"
+              }
+            },
+            "exit_reason": "intrabar_stop"
+          }
+        }
+      ],
+      "reconcile": {
+        "initial_equity": 2000.0,
+        "final_cash": 2031.696650402695,
+        "sum_gross_pnl": 31.64602499999999,
+        "sum_entry_fee": 0.0422075725,
+        "sum_exit_fee": 0.058030584999999996,
+        "sum_fees": 0.1002381575,
+        "sum_slippage_loss": 0.06097500000001397,
+        "sum_slippage_loss_pure": 0.06014573999999915,
+        "sum_rounding_loss": 0.0008292600000148198,
+        "slippage_split_ok": true,
+        "sum_funding_fee": -0.15086356019470454,
+        "funding_settlement_model": "real_events",
+        "fee_model": {
+          "tier": "Binance_VIP0",
+          "maker_fee_rate": 0.0002,
+          "taker_fee_rate": 0.0005
+        },
+        "risk_model": {
+          "risk_per_trade": 0.005,
+          "max_concurrent_trades": 3,
+          "max_portfolio_margin_pct": 0.9,
+          "max_leverage": 1.0
+        },
+        "sum_net_pnl_closed": 31.696650402694694,
+        "unrealized_net_open": 0.0,
+        "final_equity": 2031.696650402695,
+        "expected_cash": 2031.6966504026946,
+        "cash_identity_ok": true,
+        "equity_identity_ok": true,
+        "equity_curve_tail_matches_final": true
+      },
+      "precision": {
+        "spec_status": "spec_applied",
+        "run_valid": true,
+        "invalid_reasons": [],
+        "rejects_count": 0,
+        "unclosed_positions": []
+      },
+      "summary_after": {
+        "initial_equity": 2000.0,
+        "final_equity": 2031.696650402695,
+        "net_pnl": 31.696650402694694,
+        "trade_count": 1,
+        "order_count": 2,
+        "fee_total": 0.1002381575,
+        "slippage_total": 0.06097500000001397,
+        "slippage_pure_total": 0.06014573999999915,
+        "rounding_total": 0.0008292600000148198,
+        "slippage_split_ok": true,
+        "funding_total": -0.15086356019470454,
+        "spec_status": "spec_applied",
+        "formal_pass_allowed": false
+      }
+    },
+    "BNBUSDT": {
+      "run_id": "run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973",
+      "window": {
+        "start_ms": 1704067200000,
+        "end_ms": 1719705600000,
+        "start_utc": "2024-01-01 00:00",
+        "end_utc": "2024-06-30 00:00"
+      },
+      "bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376
+      },
+      "candidates": 1,
+      "spec": {
+        "symbol": "BNBUSDT",
+        "venue": "binance",
+        "market": "um",
+        "price_step": "0.01",
+        "qty_step": "0.01",
+        "min_qty": "0.01",
+        "max_qty": "2000",
+        "min_notional": "5",
+        "price_precision": 3,
+        "quantity_precision": 2,
+        "order_type": "MARKET",
+        "source_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+        "source_kind": "exchange_public_rest:exchangeInfo",
+        "fetched_at_ms": 1790941589242,
+        "evidence_path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/contracts/旧标的池/exchangeInfo_futures_2026-10-05T045328Z.json",
+        "evidence_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "onboard_ms": 1581321600000,
+        "snapshot_server_ms": 1790941589242,
+        "applicability": "unverified_historical",
+        "applicability_note": "仅有单一时点快照（serverTime=2026-10-05T045328Z），窗口 1704067200000~1719705600000 内无同源证据 ⇒ 不得据此声明历史成交已修正",
+        "formal_pass_allowed": false,
+        "window_start_ms": 1704067200000,
+        "window_end_ms": 1719705600000,
+        "contradiction_samples": [],
+        "blocking": true
+      },
+      "trades": [
+        {
+          "index": 0,
+          "before": {
+            "entry_time": "2024-01-15 14:15",
+            "exit_time": "2024-01-23 14:00",
+            "entry_price": 317.78000000000003,
+            "exit_price": 290.15000000000003,
+            "qty": 0.3580728990522076,
+            "gross_pnl": -9.893554200812495,
+            "fees": 0.1088416287604043,
+            "funding_fee": -0.9972197337644272,
+            "net_pnl": -9.005176095808473,
+            "slippage_loss": 0.06938284615703566,
+            "exit_reason": "intrabar_stop"
+          },
+          "after": {
+            "entry_time": "2024-01-15 14:15",
+            "exit_time": "2024-01-23 14:00",
+            "entry_price": 317.78,
+            "exit_price": 290.15,
+            "qty": 0.35,
+            "gross_pnl": -9.670499999999997,
+            "fees": 0.10638774999999998,
+            "funding_fee": -0.9747370095346446,
+            "net_pnl": -8.802150740465352,
+            "slippage_loss": 0.0678185816889254,
+            "slippage_loss_pure": 0.06383199557449472,
+            "rounding_loss": 0.003986586114430679,
+            "price_audit": {
+              "entry": {
+                "raw_price": "317.68",
+                "post_slip_price": "317.775304",
+                "post_round_price": "317.78",
+                "price_step": "0.01",
+                "slip_delta": "0.095304",
+                "round_delta": "0.004696",
+                "is_buy": true
+              },
+              "exit": {
+                "raw_price": "290.2437673762541",
+                "post_slip_price": "290.15669424604122377",
+                "post_round_price": "290.15",
+                "price_step": "0.01",
+                "slip_delta": "-0.08707313021287623",
+                "round_delta": "-0.00669424604122377",
+                "is_buy": false,
+                "reason": "intrabar_stop"
+              }
+            },
+            "exit_reason": "intrabar_stop"
+          }
+        }
+      ],
+      "reconcile": {
+        "initial_equity": 2000.0,
+        "final_cash": 1991.1978492595347,
+        "sum_gross_pnl": -9.670499999999997,
+        "sum_entry_fee": 0.055611499999999994,
+        "sum_exit_fee": 0.05077624999999999,
+        "sum_fees": 0.10638774999999998,
+        "sum_slippage_loss": 0.0678185816889254,
+        "sum_slippage_loss_pure": 0.06383199557449472,
+        "sum_rounding_loss": 0.003986586114430679,
+        "slippage_split_ok": true,
+        "sum_funding_fee": -0.9747370095346446,
+        "funding_settlement_model": "real_events",
+        "fee_model": {
+          "tier": "Binance_VIP0",
+          "maker_fee_rate": 0.0002,
+          "taker_fee_rate": 0.0005
+        },
+        "risk_model": {
+          "risk_per_trade": 0.005,
+          "max_concurrent_trades": 3,
+          "max_portfolio_margin_pct": 0.9,
+          "max_leverage": 1.0
+        },
+        "sum_net_pnl_closed": -8.802150740465352,
+        "unrealized_net_open": 0.0,
+        "final_equity": 1991.1978492595347,
+        "expected_cash": 1991.197849259535,
+        "cash_identity_ok": true,
+        "equity_identity_ok": true,
+        "equity_curve_tail_matches_final": true
+      },
+      "precision": {
+        "spec_status": "spec_applied",
+        "run_valid": true,
+        "invalid_reasons": [],
+        "rejects_count": 0,
+        "unclosed_positions": []
+      },
+      "summary_after": {
+        "initial_equity": 2000.0,
+        "final_equity": 1991.1978492595347,
+        "net_pnl": -8.802150740465352,
+        "trade_count": 1,
+        "order_count": 2,
+        "fee_total": 0.10638774999999998,
+        "slippage_total": 0.0678185816889254,
+        "slippage_pure_total": 0.06383199557449472,
+        "rounding_total": 0.003986586114430679,
+        "slippage_split_ok": true,
+        "funding_total": -0.9747370095346446,
+        "spec_status": "spec_applied",
+        "formal_pass_allowed": false
+      }
+    },
+    "ORDIUSDT": {
+      "run_id": "run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568",
+      "window": {
+        "start_ms": 1704067200000,
+        "end_ms": 1719705600000,
+        "start_utc": "2024-01-01 00:00",
+        "end_utc": "2024-06-30 00:00"
+      },
+      "bars": {
+        "4h": 1306,
+        "1h": 4344,
+        "15m": 17376
+      },
+      "candidates": 1,
+      "spec": {
+        "symbol": "ORDIUSDT",
+        "venue": "binance",
+        "market": "um",
+        "price_step": "0.001",
+        "qty_step": "0.1",
+        "min_qty": "0.1",
+        "max_qty": "20000",
+        "min_notional": "5",
+        "price_precision": 6,
+        "quantity_precision": 1,
+        "order_type": "MARKET",
+        "source_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+        "source_kind": "exchange_public_rest:exchangeInfo",
+        "fetched_at_ms": 1790941589242,
+        "evidence_path": "/Users/boos/Desktop/威科夫因子共振趋势/数据/contracts/旧标的池/exchangeInfo_futures_2026-10-05T045328Z.json",
+        "evidence_sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+        "onboard_ms": 1699360200000,
+        "snapshot_server_ms": 1790941589242,
+        "applicability": "unverified_historical",
+        "applicability_note": "仅有单一时点快照（serverTime=2026-10-05T045328Z），窗口 1704067200000~1719705600000 内无同源证据 ⇒ 不得据此声明历史成交已修正",
+        "formal_pass_allowed": false,
+        "window_start_ms": 1704067200000,
+        "window_end_ms": 1719705600000,
+        "contradiction_samples": [],
+        "blocking": true
+      },
+      "trades": [
+        {
+          "index": 0,
+          "before": {
+            "entry_time": "2024-05-30 13:15",
+            "exit_time": "2024-06-09 13:15",
+            "entry_price": 47.79,
+            "exit_price": 62.050000000000004,
+            "qty": 0.8581093808359787,
+            "gross_pnl": 12.23663977072106,
+            "fees": 0.04712736719551195,
+            "funding_fee": 0.19719087034498134,
+            "net_pnl": 11.992321533180569,
+            "slippage_loss": 0.04290546904179649,
+            "exit_reason": "max_holding_expired"
+          },
+          "after": {
+            "entry_time": "2024-05-30 13:15",
+            "exit_time": "2024-06-09 13:15",
+            "entry_price": 47.783,
+            "exit_price": 62.059,
+            "qty": 0.8,
+            "gross_pnl": 11.420799999999998,
+            "fees": 0.043936800000000005,
+            "funding_fee": 0.18383751512225732,
+            "net_pnl": 11.193025684877743,
+            "slippage_loss": 0.02720000000000482,
+            "slippage_loss_pure": 0.026363040000001094,
+            "rounding_loss": 0.0008369600000037281,
+            "price_audit": {
+              "entry": {
+                "raw_price": "47.768",
+                "post_slip_price": "47.7823304",
+                "post_round_price": "47.783",
+                "price_step": "0.001",
+                "slip_delta": "0.0143304",
+                "round_delta": "0.0006696",
+                "is_buy": true
+              },
+              "exit": {
+                "raw_price": "62.078",
+                "post_slip_price": "62.0593766",
+                "post_round_price": "62.059",
+                "price_step": "0.001",
+                "slip_delta": "-0.0186234",
+                "round_delta": "-0.0003766",
+                "is_buy": false,
+                "reason": "max_holding_expired"
+              }
+            },
+            "exit_reason": "max_holding_expired"
+          }
+        }
+      ],
+      "reconcile": {
+        "initial_equity": 2000.0,
+        "final_cash": 2011.193025684878,
+        "sum_gross_pnl": 11.420799999999998,
+        "sum_entry_fee": 0.019113200000000004,
+        "sum_exit_fee": 0.0248236,
+        "sum_fees": 0.043936800000000005,
+        "sum_slippage_loss": 0.02720000000000482,
+        "sum_slippage_loss_pure": 0.026363040000001094,
+        "sum_rounding_loss": 0.0008369600000037281,
+        "slippage_split_ok": true,
+        "sum_funding_fee": 0.18383751512225732,
+        "funding_settlement_model": "real_events",
+        "fee_model": {
+          "tier": "Binance_VIP0",
+          "maker_fee_rate": 0.0002,
+          "taker_fee_rate": 0.0005
+        },
+        "risk_model": {
+          "risk_per_trade": 0.005,
+          "max_concurrent_trades": 3,
+          "max_portfolio_margin_pct": 0.9,
+          "max_leverage": 1.0
+        },
+        "sum_net_pnl_closed": 11.193025684877743,
+        "unrealized_net_open": 0.0,
+        "final_equity": 2011.193025684878,
+        "expected_cash": 2011.193025684878,
+        "cash_identity_ok": true,
+        "equity_identity_ok": true,
+        "equity_curve_tail_matches_final": true
+      },
+      "precision": {
+        "spec_status": "spec_applied",
+        "run_valid": true,
+        "invalid_reasons": [],
+        "rejects_count": 0,
+        "unclosed_positions": []
+      },
+      "summary_after": {
+        "initial_equity": 2000.0,
+        "final_equity": 2011.193025684878,
+        "net_pnl": 11.193025684877743,
+        "trade_count": 1,
+        "order_count": 2,
+        "fee_total": 0.043936800000000005,
+        "slippage_total": 0.02720000000000482,
+        "slippage_pure_total": 0.026363040000001094,
+        "rounding_total": 0.0008369600000037281,
+        "slippage_split_ok": true,
+        "funding_total": 0.18383751512225732,
+        "spec_status": "spec_applied",
+        "formal_pass_allowed": false
+      }
+    }
+  }
+}

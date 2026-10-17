@@ -1,0 +1,406 @@
+[
+  {
+    "symbol": "RLCUSDT",
+    "run_id": "run_WX_EVENT_TREND_V0_1_RLCUSDT_1792170446",
+    "data_info": {
+      "bar_4h": 1306,
+      "bar_1h": 4344,
+      "bar_15m": 17376,
+      "oi_records": 503367,
+      "funding_records": 6886
+    },
+    "funnel_a": {
+      "boxes": 27,
+      "sweeps": 5,
+      "retests": 3,
+      "breakouts": 0,
+      "volume_rejected": 0,
+      "oi_rejected": 0,
+      "oi_unavailable": 0,
+      "expired": 14,
+      "invalidated": 12,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "funnel_b": {
+      "boxes": 27,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "candidates_count": 0,
+    "executed_trades": 0,
+    "canceled_reasons": [],
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "net_return_pct": 0.0,
+    "trades": [],
+    "elapsed_sec": 1.37
+  },
+  {
+    "symbol": "SANDUSDT",
+    "run_id": "run_WX_EVENT_TREND_V0_1_SANDUSDT_1792170447",
+    "data_info": {
+      "bar_4h": 1306,
+      "bar_1h": 4344,
+      "bar_15m": 17376,
+      "oi_records": 502690,
+      "funding_records": 6265
+    },
+    "funnel_a": {
+      "boxes": 27,
+      "sweeps": 8,
+      "retests": 5,
+      "breakouts": 0,
+      "volume_rejected": 0,
+      "oi_rejected": 0,
+      "oi_unavailable": 0,
+      "expired": 12,
+      "invalidated": 14,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "funnel_b": {
+      "boxes": 27,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "candidates_count": 0,
+    "executed_trades": 0,
+    "canceled_reasons": [],
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "net_return_pct": 0.0,
+    "trades": [],
+    "elapsed_sec": 1.26
+  },
+  {
+    "symbol": "PYTHUSDT",
+    "run_id": "run_WX_EVENT_TREND_V0_1_PYTHUSDT_1792170448",
+    "data_info": {
+      "bar_4h": 1306,
+      "bar_1h": 4344,
+      "bar_15m": 17376,
+      "oi_records": 295560,
+      "funding_records": 6341
+    },
+    "funnel_a": {
+      "boxes": 29,
+      "sweeps": 5,
+      "retests": 4,
+      "breakouts": 0,
+      "volume_rejected": 0,
+      "oi_rejected": 0,
+      "oi_unavailable": 0,
+      "expired": 12,
+      "invalidated": 16,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "funnel_b": {
+      "boxes": 29,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "candidates_count": 0,
+    "executed_trades": 0,
+    "canceled_reasons": [],
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "net_return_pct": 0.0,
+    "trades": [],
+    "elapsed_sec": 1.05
+  },
+  {
+    "symbol": "MOVRUSDT",
+    "run_id": "run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792170452",
+    "data_info": {
+      "bar_4h": 1119,
+      "bar_1h": 4344,
+      "bar_15m": 17376,
+      "oi_records": 285791,
+      "funding_records": 6137
+    },
+    "funnel_a": {
+      "boxes": 28,
+      "sweeps": 7,
+      "retests": 6,
+      "breakouts": 1,
+      "volume_rejected": 0,
+      "oi_rejected": 0,
+      "oi_unavailable": 0,
+      "expired": 12,
+      "invalidated": 14,
+      "candidates": 1,
+      "executed_trades": 1
+    },
+    "funnel_b": {
+      "boxes": 28,
+      "candidates": 1,
+      "executed_trades": 1
+    },
+    "candidates_count": 1,
+    "executed_trades": 1,
+    "canceled_reasons": [],
+    "initial_equity": 2000.0,
+    "final_equity": 1989.3356429846679,
+    "net_pnl": -10.664357015332255,
+    "net_return_pct": -0.5332178507666071,
+    "trades": [
+      {
+        "entry_time": 1708262100000,
+        "entry_price": 23.89,
+        "qty": 5.117637415840447,
+        "exit_time": 1708660800000,
+        "exit_price": 21.95,
+        "exit_reason": "intrabar_stop",
+        "net_pnl": -10.664357015332255,
+        "fees": 0.11729624957106305,
+        "funding_fee": 0.61884417903072
+      }
+    ],
+    "elapsed_sec": 3.38
+  },
+  {
+    "symbol": "ACEUSDT",
+    "run_id": "run_WX_EVENT_TREND_V0_1_ACEUSDT_1792170458",
+    "data_info": {
+      "bar_4h": 1168,
+      "bar_1h": 4344,
+      "bar_15m": 17376,
+      "oi_records": 288126,
+      "funding_records": 6443
+    },
+    "funnel_a": {
+      "boxes": 28,
+      "sweeps": 7,
+      "retests": 4,
+      "breakouts": 1,
+      "volume_rejected": 0,
+      "oi_rejected": 0,
+      "oi_unavailable": 0,
+      "expired": 12,
+      "invalidated": 14,
+      "candidates": 1,
+      "executed_trades": 1
+    },
+    "funnel_b": {
+      "boxes": 28,
+      "candidates": 1,
+      "executed_trades": 1
+    },
+    "candidates_count": 1,
+    "executed_trades": 1,
+    "canceled_reasons": [],
+    "initial_equity": 2000.0,
+    "final_equity": 2003.748992196222,
+    "net_pnl": 3.7489921962222827,
+    "net_return_pct": 0.1874496098110967,
+    "trades": [
+      {
+        "entry_time": 1708920900000,
+        "entry_price": 11.74,
+        "qty": 4.35789617082141,
+        "exit_time": 1709784900000,
+        "exit_price": 12.88,
+        "exit_reason": "max_holding_expired",
+        "net_pnl": 3.7489921962222827,
+        "fees": 0.05364570186281156,
+        "funding_fee": 1.1653637366513157
+      }
+    ],
+    "elapsed_sec": 6.55
+  },
+  {
+    "symbol": "TRBUSDT",
+    "run_id": "run_WX_EVENT_TREND_V0_1_TRBUSDT_1792170460",
+    "data_info": {
+      "bar_4h": 1306,
+      "bar_1h": 4344,
+      "bar_15m": 17376,
+      "oi_records": 503253,
+      "funding_records": 9991
+    },
+    "funnel_a": {
+      "boxes": 30,
+      "sweeps": 4,
+      "retests": 2,
+      "breakouts": 0,
+      "volume_rejected": 0,
+      "oi_rejected": 0,
+      "oi_unavailable": 0,
+      "expired": 13,
+      "invalidated": 16,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "funnel_b": {
+      "boxes": 30,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "candidates_count": 0,
+    "executed_trades": 0,
+    "canceled_reasons": [],
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "net_return_pct": 0.0,
+    "trades": [],
+    "elapsed_sec": 1.42
+  },
+  {
+    "symbol": "BCHUSDT",
+    "run_id": "run_WX_EVENT_TREND_V0_1_BCHUSDT_1792170461",
+    "data_info": {
+      "bar_4h": 1306,
+      "bar_1h": 4344,
+      "bar_15m": 17376,
+      "oi_records": 503336,
+      "funding_records": 7436
+    },
+    "funnel_a": {
+      "boxes": 26,
+      "sweeps": 5,
+      "retests": 3,
+      "breakouts": 0,
+      "volume_rejected": 0,
+      "oi_rejected": 0,
+      "oi_unavailable": 0,
+      "expired": 14,
+      "invalidated": 11,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "funnel_b": {
+      "boxes": 26,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "candidates_count": 0,
+    "executed_trades": 0,
+    "canceled_reasons": [],
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "net_return_pct": 0.0,
+    "trades": [],
+    "elapsed_sec": 1.67
+  },
+  {
+    "symbol": "JOEUSDT",
+    "run_id": "run_WX_EVENT_TREND_V0_1_JOEUSDT_1792170463",
+    "data_info": {
+      "bar_4h": 1306,
+      "bar_1h": 4344,
+      "bar_15m": 17376,
+      "oi_records": 364129,
+      "funding_records": 3888
+    },
+    "funnel_a": {
+      "boxes": 31,
+      "sweeps": 6,
+      "retests": 4,
+      "breakouts": 0,
+      "volume_rejected": 0,
+      "oi_rejected": 0,
+      "oi_unavailable": 0,
+      "expired": 13,
+      "invalidated": 17,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "funnel_b": {
+      "boxes": 31,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "candidates_count": 0,
+    "executed_trades": 0,
+    "canceled_reasons": [],
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "net_return_pct": 0.0,
+    "trades": [],
+    "elapsed_sec": 1.12
+  },
+  {
+    "symbol": "STEEMUSDT",
+    "run_id": "run_WX_EVENT_TREND_V0_1_STEEMUSDT_1792170464",
+    "data_info": {
+      "bar_4h": 1306,
+      "bar_1h": 4344,
+      "bar_15m": 17376,
+      "oi_records": 299590,
+      "funding_records": 6591
+    },
+    "funnel_a": {
+      "boxes": 30,
+      "sweeps": 5,
+      "retests": 1,
+      "breakouts": 0,
+      "volume_rejected": 0,
+      "oi_rejected": 0,
+      "oi_unavailable": 0,
+      "expired": 15,
+      "invalidated": 14,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "funnel_b": {
+      "boxes": 30,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "candidates_count": 0,
+    "executed_trades": 0,
+    "canceled_reasons": [],
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "net_return_pct": 0.0,
+    "trades": [],
+    "elapsed_sec": 1.06
+  },
+  {
+    "symbol": "BANDUSDT",
+    "run_id": "run_WX_EVENT_TREND_V0_1_BANDUSDT_1792170465",
+    "data_info": {
+      "bar_4h": 1306,
+      "bar_1h": 4344,
+      "bar_15m": 17376,
+      "oi_records": 503371,
+      "funding_records": 6805
+    },
+    "funnel_a": {
+      "boxes": 29,
+      "sweeps": 6,
+      "retests": 3,
+      "breakouts": 0,
+      "volume_rejected": 0,
+      "oi_rejected": 0,
+      "oi_unavailable": 0,
+      "expired": 12,
+      "invalidated": 16,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "funnel_b": {
+      "boxes": 29,
+      "candidates": 0,
+      "executed_trades": 0
+    },
+    "candidates_count": 0,
+    "executed_trades": 0,
+    "canceled_reasons": [],
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "net_return_pct": 0.0,
+    "trades": [],
+    "elapsed_sec": 1.31
+  }
+]

@@ -1,0 +1,1618 @@
+{
+  "total": 36,
+  "updated_at": "2026-10-17T06:48:59.113675+00:00",
+  "items": [
+    {
+      "direction": 1,
+      "entry_fee": 0.013591044869016513,
+      "entry_price": 0.03,
+      "entry_time": 1788765300000,
+      "exit_fee": 0.004530348289672171,
+      "exit_order_id": "ord_1781728fdf1e5ea4c6248ec8",
+      "exit_price": 0.01,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1788991200000,
+      "fees": 0.018121393158688683,
+      "funding_fee": 0.014665914851189305,
+      "funding_gaps": [],
+      "gross_pnl": -18.12139315868868,
+      "mae": 0.367,
+      "mfe": 0.0,
+      "net_pnl": -18.15418046669856,
+      "order_id": "ord_f8737fef48c1fb362d04aec9",
+      "qty": 906.0696579344342,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_AIGENSYNUSDT_1788177600000_1788764400000",
+      "signal_type": 1,
+      "slippage_loss": 16.076858685673606,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.018993512924076944,
+          "ts": 1788765300000
+        }
+      ],
+      "symbol": "AIGENSYNUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703",
+      "entry_time_ms": 1788765300000,
+      "exit_time_ms": 1788991200000,
+      "trade_id": "ord_f8737fef48c1fb362d04aec9"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.012836782477410033,
+      "entry_price": 0.07,
+      "entry_time": 1781388900000,
+      "exit_fee": 0.009169130341007166,
+      "exit_order_id": "ord_753171276d61645484b2a485",
+      "exit_price": 0.05,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1782252900000,
+      "fees": 0.022005912818417198,
+      "funding_fee": -0.16839595937763024,
+      "funding_gaps": [],
+      "gross_pnl": -7.335304272805733,
+      "mae": 0.2720000000000001,
+      "mfe": 0.0,
+      "net_pnl": -7.188914226246521,
+      "order_id": "ord_3f5e5d3db686a277995c541e",
+      "qty": 366.7652136402866,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_MEGAUSDT_1780905600000_1781388000000",
+      "signal_type": 1,
+      "slippage_loss": 4.760612473050922,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.04280383734726337,
+          "ts": 1781388900000
+        }
+      ],
+      "symbol": "MEGAUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_MEGAUSDT_1792196807",
+      "entry_time_ms": 1781388900000,
+      "exit_time_ms": 1782252900000,
+      "trade_id": "ord_3f5e5d3db686a277995c541e"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.015476175709605154,
+      "entry_price": 0.01,
+      "entry_time": 1779174900000,
+      "exit_fee": 0.0,
+      "exit_order_id": "ord_15bcc436236283cb00408881",
+      "exit_price": 0.0,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1779941700000,
+      "fees": 0.015476175709605154,
+      "funding_fee": 0.05713517951978271,
+      "funding_gaps": [],
+      "gross_pnl": -30.95235141921031,
+      "mae": 0.33830000000000005,
+      "mfe": 0.058000000000000065,
+      "net_pnl": -31.024962774439697,
+      "order_id": "ord_61ca901294bdf932068e2b25",
+      "qty": 3095.235141921031,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_SPACEUSDT_1778414400000_1779174000000",
+      "signal_type": 1,
+      "slippage_loss": 21.857468446959377,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.006779650389958329,
+          "ts": 1779174900000
+        }
+      ],
+      "symbol": "SPACEUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451",
+      "entry_time_ms": 1779174900000,
+      "exit_time_ms": 1779941700000,
+      "trade_id": "ord_61ca901294bdf932068e2b25"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.01844660759598568,
+      "entry_price": 0.13,
+      "entry_time": 1772558100000,
+      "exit_fee": 0.012770728335682394,
+      "exit_order_id": "ord_3356c1fe08c0d81dc42cf17e",
+      "exit_price": 0.09,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1772793000000,
+      "fees": 0.031217335931668075,
+      "funding_fee": 0.05436338077037956,
+      "funding_gaps": [],
+      "gross_pnl": -11.351758520606575,
+      "mae": 0.29638461538461547,
+      "mfe": 0.16876923076923067,
+      "net_pnl": -11.437339237308622,
+      "order_id": "ord_db54a71c2501c0aceae158f9",
+      "qty": 283.7939630151643,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_MAGMAUSDT_1771833600000_1772557200000",
+      "signal_type": 1,
+      "slippage_loss": 3.7699410617474234,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.09490407772206902,
+          "ts": 1772558100000
+        }
+      ],
+      "symbol": "MAGMAUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_MAGMAUSDT_1792196804",
+      "entry_time_ms": 1772558100000,
+      "exit_time_ms": 1772793000000,
+      "trade_id": "ord_db54a71c2501c0aceae158f9"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.01973301538311112,
+      "entry_price": 1.04,
+      "entry_time": 1771031700000,
+      "exit_fee": 0.01764586952528206,
+      "exit_order_id": "ord_81a0bdc816cb8f4f1b6ea49e",
+      "exit_price": 0.93,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1771895700000,
+      "fees": 0.03737888490839318,
+      "funding_fee": 0.058683027954257456,
+      "funding_gaps": [],
+      "gross_pnl": -4.1742917156581205,
+      "mae": 0.17211538461538464,
+      "mfe": 0.3903846153846153,
+      "net_pnl": -4.2703536285207715,
+      "order_id": "ord_b8d09a5df5f3cb9f0c412e52",
+      "qty": 37.94810650598292,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_EULUSDT_1770912000000_1771030800000",
+      "signal_type": 1,
+      "slippage_loss": 0.26563674554188066,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.7776242233331668,
+          "ts": 1771031700000
+        }
+      ],
+      "symbol": "EULUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_EULUSDT_1792174382",
+      "entry_time_ms": 1771031700000,
+      "exit_time_ms": 1771895700000,
+      "trade_id": "ord_b8d09a5df5f3cb9f0c412e52"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.013260177249745498,
+      "entry_price": 0.02,
+      "entry_time": 1770642900000,
+      "exit_fee": 0.006630088624872749,
+      "exit_order_id": "ord_621107b34f486a40b3aa062d",
+      "exit_price": 0.01,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1771317000000,
+      "fees": 0.019890265874618247,
+      "funding_fee": 0.04603869759659066,
+      "funding_gaps": [],
+      "gross_pnl": -13.260177249745498,
+      "mae": 0.42390000000000005,
+      "mfe": 0.0,
+      "net_pnl": -13.326106213216708,
+      "order_id": "ord_c058440defca1bce4e9ca291",
+      "qty": 1326.0177249745498,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_TRUTHUSDT_1770364800000_1770642000000",
+      "signal_type": 1,
+      "slippage_loss": 8.997830766172743,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.012478603688929148,
+          "ts": 1770642900000
+        }
+      ],
+      "symbol": "TRUTHUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465",
+      "entry_time_ms": 1770642900000,
+      "exit_time_ms": 1771317000000,
+      "trade_id": "ord_c058440defca1bce4e9ca291"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.04043385,
+      "entry_price": 4.419,
+      "entry_time": 1764746100000,
+      "exit_fee": 0.0354837,
+      "exit_order_id": "ord_5cca71ba7a46c76f924b24f1",
+      "exit_price": 3.878,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1764961200000,
+      "fees": 0.07591755,
+      "funding_fee": -0.049799644946323676,
+      "funding_gaps": [],
+      "gross_pnl": -9.90029999999999,
+      "mae": 0.12242588821000215,
+      "mfe": 0.041638379723919476,
+      "net_pnl": -9.926417905053667,
+      "order_id": "ord_d194d941a0928719c0c61f26",
+      "price_audit": {
+        "entry": {
+          "is_buy": true,
+          "post_round_price": "4.419",
+          "post_slip_price": "4.4183251",
+          "price_step": "0.001",
+          "raw_price": "4.417",
+          "round_delta": "0.0006749",
+          "slip_delta": "0.0013251"
+        },
+        "exit": {
+          "is_buy": false,
+          "post_round_price": "3.878",
+          "post_slip_price": "3.87833526023817105128",
+          "price_step": "0.001",
+          "raw_price": "3.8794991099711624",
+          "reason": "intrabar_stop",
+          "round_delta": "-0.00033526023817105128",
+          "slip_delta": "-0.00116384973299134872"
+        }
+      },
+      "qty": 18.3,
+      "rounding_loss": 0.018485932358523582,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_ARUSDT_1764590400000_1764745200000",
+      "signal_type": 1,
+      "slippage_loss": 0.06403371247226634,
+      "slippage_loss_pure": 0.04554778011374276,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 3.8794991099711624,
+          "ts": 1764746100000
+        }
+      ],
+      "symbol": "ARUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_ARUSDT_1792219687",
+      "entry_time_ms": 1764746100000,
+      "exit_time_ms": 1764961200000,
+      "trade_id": "ord_d194d941a0928719c0c61f26"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.0195348,
+      "entry_price": 1.752,
+      "entry_time": 1764738900000,
+      "exit_fee": 0.017614770000000002,
+      "exit_order_id": "ord_baac2f3140e4903736d56011",
+      "exit_price": 1.5798,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1765602900000,
+      "fees": 0.03714957000000001,
+      "funding_fee": 0.028957291313530163,
+      "funding_gaps": [],
+      "gross_pnl": -3.840059999999998,
+      "mae": 0.1383561643835616,
+      "mfe": 0.022888127853881293,
+      "net_pnl": -3.9061668613135283,
+      "order_id": "ord_f38ecc32561124f2f779b8ce",
+      "price_audit": {
+        "entry": {
+          "is_buy": true,
+          "post_round_price": "1.752",
+          "post_slip_price": "1.75192542",
+          "price_step": "0.0001",
+          "raw_price": "1.7514",
+          "round_delta": "0.00007458",
+          "slip_delta": "0.00052542"
+        },
+        "exit": {
+          "is_buy": false,
+          "post_round_price": "1.5798",
+          "post_slip_price": "1.57982591",
+          "price_step": "0.0001",
+          "raw_price": "1.5803",
+          "reason": "max_holding_expired",
+          "round_delta": "-0.00002591",
+          "slip_delta": "-0.00047409"
+        }
+      },
+      "qty": 22.3,
+      "rounding_loss": 0.0022409269999977164,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_SUIUSDT_1764000000000_1764738000000",
+      "signal_type": 1,
+      "slippage_loss": 0.024529999999997297,
+      "slippage_loss_pure": 0.022289072999999583,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 1.3072469734338097,
+          "ts": 1764738900000
+        }
+      ],
+      "symbol": "SUIUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_SUIUSDT_1792214168",
+      "entry_time_ms": 1764738900000,
+      "exit_time_ms": 1765602900000,
+      "trade_id": "ord_f38ecc32561124f2f779b8ce"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.0186589,
+      "entry_price": 0.6019,
+      "entry_time": 1764098100000,
+      "exit_fee": 0.0201314,
+      "exit_order_id": "ord_56a9a23bbb32655466e3b8f8",
+      "exit_price": 0.6494,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1764962100000,
+      "fees": 0.0387903,
+      "funding_fee": -0.08337379735127201,
+      "funding_gaps": [],
+      "gross_pnl": 2.9449999999999994,
+      "mae": 0.03522179764080412,
+      "mfe": 0.24788170792490447,
+      "net_pnl": 2.9895834973512714,
+      "order_id": "ord_955c1aeda72a135328c5eb0f",
+      "price_audit": {
+        "entry": {
+          "is_buy": true,
+          "post_round_price": "0.6019",
+          "post_slip_price": "0.60188051",
+          "price_step": "0.0001",
+          "raw_price": "0.6017",
+          "round_delta": "0.00001949",
+          "slip_delta": "0.00018051"
+        },
+        "exit": {
+          "is_buy": false,
+          "post_round_price": "0.6494",
+          "post_slip_price": "0.64940512",
+          "price_step": "0.0001",
+          "raw_price": "0.6496",
+          "reason": "max_holding_expired",
+          "round_delta": "-0.00000512",
+          "slip_delta": "-0.00019488"
+        }
+      },
+      "qty": 62.0,
+      "rounding_loss": 0.0015258199999987898,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_SPXUSDT_1763812800000_1764097200000",
+      "signal_type": 1,
+      "slippage_loss": 0.02479999999999727,
+      "slippage_loss_pure": 0.02327417999999848,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.4413121877988868,
+          "ts": 1764098100000
+        }
+      ],
+      "symbol": "SPXUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_SPXUSDT_1792214233",
+      "entry_time_ms": 1764098100000,
+      "exit_time_ms": 1764962100000,
+      "trade_id": "ord_955c1aeda72a135328c5eb0f"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.01480834,
+      "entry_price": 0.05762,
+      "entry_time": 1763644500000,
+      "exit_fee": 0.01086596,
+      "exit_order_id": "ord_b30f455b8d47171784c95e7f",
+      "exit_price": 0.04228,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1764508500000,
+      "fees": 0.025674299999999997,
+      "funding_fee": -0.34639546678049815,
+      "funding_gaps": [],
+      "gross_pnl": -7.88476,
+      "mae": 0.28844151336341545,
+      "mfe": 0.15758417216244355,
+      "net_pnl": -7.564038833219502,
+      "order_id": "ord_9efa37c0d0071a1dec5086bb",
+      "price_audit": {
+        "entry": {
+          "is_buy": true,
+          "post_round_price": "0.05762",
+          "post_slip_price": "0.05761728",
+          "price_step": "0.00001",
+          "raw_price": "0.0576",
+          "round_delta": "0.00000272",
+          "slip_delta": "0.00001728"
+        },
+        "exit": {
+          "is_buy": false,
+          "post_round_price": "0.04228",
+          "post_slip_price": "0.04228731",
+          "price_step": "0.00001",
+          "raw_price": "0.0423",
+          "reason": "max_holding_expired",
+          "round_delta": "-0.00000731",
+          "slip_delta": "-0.00001269"
+        }
+      },
+      "qty": 514.0,
+      "rounding_loss": 0.005155420000000591,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_CTSIUSDT_1763467200000_1763643600000",
+      "signal_type": 1,
+      "slippage_loss": 0.020559999999999162,
+      "slippage_loss_pure": 0.015404579999998572,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.038241623367542533,
+          "ts": 1763644500000
+        }
+      ],
+      "symbol": "CTSIUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_CTSIUSDT_1792219713",
+      "entry_time_ms": 1763644500000,
+      "exit_time_ms": 1764508500000,
+      "trade_id": "ord_9efa37c0d0071a1dec5086bb"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.005261628925646893,
+      "entry_price": 0.01,
+      "entry_time": 1763151300000,
+      "exit_fee": 0.0,
+      "exit_order_id": "ord_12cb0abaf03dd1da05f46786",
+      "exit_price": 0.0,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1763654400000,
+      "fees": 0.005261628925646893,
+      "funding_fee": 0.003379990499902067,
+      "funding_gaps": [],
+      "gross_pnl": -10.523257851293787,
+      "mae": 0.9503199999999999,
+      "mfe": 0.0,
+      "net_pnl": -10.531899470719335,
+      "order_id": "ord_f0b4693456030dfeec432ce7",
+      "qty": 1052.3257851293786,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_TAGUSDT_1763049600000_1763150400000",
+      "signal_type": 1,
+      "slippage_loss": 10.393233999567755,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.0005026414465905687,
+          "ts": 1763151300000
+        }
+      ],
+      "symbol": "TAGUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_TAGUSDT_1792196833",
+      "entry_time_ms": 1763151300000,
+      "exit_time_ms": 1763654400000,
+      "trade_id": "ord_f0b4693456030dfeec432ce7"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.025510608,
+      "entry_price": 0.010404,
+      "entry_time": 1762366500000,
+      "exit_fee": 0.023041444,
+      "exit_order_id": "ord_97f3942d9c241d6a5f772dc9",
+      "exit_price": 0.009397,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1763230500000,
+      "fees": 0.048552052,
+      "funding_fee": -0.3028789936244887,
+      "funding_gaps": [],
+      "gross_pnl": -4.938327999999996,
+      "mae": 0.13975394079200312,
+      "mfe": 0.36582083813917726,
+      "net_pnl": -4.684001058375507,
+      "order_id": "ord_cfeaf17633df07935e49c379",
+      "price_audit": {
+        "entry": {
+          "is_buy": true,
+          "post_round_price": "0.010404",
+          "post_slip_price": "0.01040312",
+          "price_step": "0.000001",
+          "raw_price": "0.0104",
+          "round_delta": "0.00000088",
+          "slip_delta": "0.00000312"
+        },
+        "exit": {
+          "is_buy": false,
+          "post_round_price": "0.009397",
+          "post_slip_price": "0.00939718",
+          "price_step": "0.000001",
+          "raw_price": "0.0094",
+          "reason": "max_holding_expired",
+          "round_delta": "-0.00000018",
+          "slip_delta": "-0.00000282"
+        }
+      },
+      "qty": 4904.0,
+      "rounding_loss": 0.00519823999999465,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_RVNUSDT_1762272000000_1762365600000",
+      "signal_type": 1,
+      "slippage_loss": 0.0343280000000003,
+      "slippage_loss_pure": 0.029129760000005653,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.008376772218081481,
+          "ts": 1762366500000
+        }
+      ],
+      "symbol": "RVNUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_RVNUSDT_1792219683",
+      "entry_time_ms": 1762366500000,
+      "exit_time_ms": 1763230500000,
+      "trade_id": "ord_cfeaf17633df07935e49c379"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.036790487499999996,
+      "entry_price": 0.013715,
+      "entry_time": 1762110900000,
+      "exit_fee": 0.03182518,
+      "exit_order_id": "ord_fdadbf4b45a428dc3b60ea69",
+      "exit_price": 0.011864,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1762182900000,
+      "fees": 0.0686156675,
+      "funding_fee": -0.32526565908211197,
+      "funding_gaps": [],
+      "gross_pnl": -9.930615000000001,
+      "mae": 0.15056507473569078,
+      "mfe": 0.08348523514400293,
+      "net_pnl": -9.67396500841789,
+      "order_id": "ord_ab063492d3d03b76f8248b68",
+      "price_audit": {
+        "entry": {
+          "is_buy": true,
+          "post_round_price": "0.013715",
+          "post_slip_price": "0.013714113",
+          "price_step": "0.000001",
+          "raw_price": "0.01371",
+          "round_delta": "0.000000887",
+          "slip_delta": "0.000004113"
+        },
+        "exit": {
+          "is_buy": false,
+          "post_round_price": "0.011864",
+          "post_slip_price": "0.0118641050789536868229",
+          "price_step": "0.000001",
+          "raw_price": "0.011867665378567257",
+          "reason": "intrabar_stop",
+          "round_delta": "-0.0000001050789536868229",
+          "slip_delta": "-0.0000035602996135701771"
+        }
+      },
+      "qty": 5365.0,
+      "rounding_loss": 0.005322503586532605,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_TUSDT_1761451200000_1762110000000",
+      "signal_type": 1,
+      "slippage_loss": 0.04648975601333444,
+      "slippage_loss_pure": 0.04116725242680183,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.011867665378567257,
+          "ts": 1762110900000
+        }
+      ],
+      "symbol": "TUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_TUSDT_1792219727",
+      "entry_time_ms": 1762110900000,
+      "exit_time_ms": 1762182900000,
+      "trade_id": "ord_ab063492d3d03b76f8248b68"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.030583875,
+      "entry_price": 6.685,
+      "entry_time": 1761581700000,
+      "exit_fee": 0.03557977500000001,
+      "exit_order_id": "ord_90d9d1ca67db52359c792229",
+      "exit_price": 7.777,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1762445700000,
+      "fees": 0.06616365,
+      "funding_fee": -0.4483662807546876,
+      "funding_gaps": [],
+      "gross_pnl": 9.991800000000005,
+      "mae": 0.0023934181002243852,
+      "mfe": 0.2979805534779357,
+      "net_pnl": 10.374002630754692,
+      "order_id": "ord_31da4d3fe9e1a1233493dd3d",
+      "price_audit": {
+        "entry": {
+          "is_buy": true,
+          "post_round_price": "6.685",
+          "post_slip_price": "6.6840046",
+          "price_step": "0.001",
+          "raw_price": "6.682",
+          "round_delta": "0.0009954",
+          "slip_delta": "0.0020046"
+        },
+        "exit": {
+          "is_buy": false,
+          "post_round_price": "7.777",
+          "post_slip_price": "7.777666",
+          "price_step": "0.001",
+          "raw_price": "7.78",
+          "reason": "max_holding_expired",
+          "round_delta": "-0.000666",
+          "slip_delta": "-0.002334"
+        }
+      },
+      "qty": 9.15,
+      "rounding_loss": 0.015201809999997273,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_TRUMPUSDT_1760760000000_1761580800000",
+      "signal_type": 1,
+      "slippage_loss": 0.054899999999993954,
+      "slippage_loss_pure": 0.039698189999996684,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 5.600118941730744,
+          "ts": 1761581700000
+        }
+      ],
+      "symbol": "TRUMPUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_TRUMPUSDT_1792214181",
+      "entry_time_ms": 1761581700000,
+      "exit_time_ms": 1762445700000,
+      "trade_id": "ord_31da4d3fe9e1a1233493dd3d"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.01952724765104426,
+      "entry_price": 0.43,
+      "entry_time": 1761552900000,
+      "exit_fee": 0.014531905228684099,
+      "exit_order_id": "ord_daa0fef5607ccb8415cd005a",
+      "exit_price": 0.32,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1762182900000,
+      "fees": 0.03405915287972836,
+      "funding_fee": -0.29032513880818156,
+      "funding_gaps": [],
+      "gross_pnl": -9.990684844720317,
+      "mae": 0.26,
+      "mfe": 0.03232558139534889,
+      "net_pnl": -9.734418858791864,
+      "order_id": "ord_852c9760c2b62459a17f716a",
+      "qty": 90.82440767927562,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_NXPCUSDT_1760745600000_1761552000000",
+      "signal_type": 1,
+      "slippage_loss": 0.2060519391851512,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.3203686846460125,
+          "ts": 1761552900000
+        }
+      ],
+      "symbol": "NXPCUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_NXPCUSDT_1792196812",
+      "entry_time_ms": 1761552900000,
+      "exit_time_ms": 1762182900000,
+      "trade_id": "ord_852c9760c2b62459a17f716a"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.025319176,
+      "entry_price": 0.017096,
+      "entry_time": 1761484500000,
+      "exit_fee": 0.020343016,
+      "exit_order_id": "ord_0a6d383f96194155d9cfb931",
+      "exit_price": 0.013736,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1762166700000,
+      "fees": 0.045662192,
+      "funding_fee": -0.1144554287741412,
+      "funding_gaps": [],
+      "gross_pnl": -9.95232,
+      "mae": 0.20156761815629384,
+      "mfe": 0.0054983621899859815,
+      "net_pnl": -9.88352676322586,
+      "order_id": "ord_ac2e6cdf352587bb342dadea",
+      "price_audit": {
+        "entry": {
+          "is_buy": true,
+          "post_round_price": "0.017096",
+          "post_slip_price": "0.017095127",
+          "price_step": "0.000001",
+          "raw_price": "0.01709",
+          "round_delta": "0.000000873",
+          "slip_delta": "0.000005127"
+        },
+        "exit": {
+          "is_buy": false,
+          "post_round_price": "0.013736",
+          "post_slip_price": "0.013736267794971986329",
+          "price_step": "0.000001",
+          "raw_price": "0.01374038991194557",
+          "reason": "intrabar_stop",
+          "round_delta": "-0.000000267794971986329",
+          "slip_delta": "-0.000004122116973583671"
+        }
+      },
+      "qty": 2962.0,
+      "rounding_loss": 0.0033790347070173296,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_1000XECUSDT_1760745600000_1761483600000",
+      "signal_type": 1,
+      "slippage_loss": 0.030774919182775213,
+      "slippage_loss_pure": 0.027395884475757883,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.01374038991194557,
+          "ts": 1761484500000
+        }
+      ],
+      "symbol": "1000XECUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_1000XECUSDT_1792219701",
+      "entry_time_ms": 1761484500000,
+      "exit_time_ms": 1762166700000,
+      "trade_id": "ord_ac2e6cdf352587bb342dadea"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.0350462515,
+      "entry_price": 0.021481,
+      "entry_time": 1759562100000,
+      "exit_fee": 0.030078334,
+      "exit_order_id": "ord_3e41b3a4b2da5664e7e01e80",
+      "exit_price": 0.018436,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1760109300000,
+      "fees": 0.0651245855,
+      "funding_fee": -0.0435855348152146,
+      "funding_gaps": [],
+      "gross_pnl": -9.935834999999997,
+      "mae": 0.1450584237232904,
+      "mfe": 0.031842093012429615,
+      "net_pnl": -9.957374050684784,
+      "order_id": "ord_c6ecd928d79aa29f85584412",
+      "price_audit": {
+        "entry": {
+          "is_buy": true,
+          "post_round_price": "0.021481",
+          "post_slip_price": "0.0214804422",
+          "price_step": "0.000001",
+          "raw_price": "0.021474",
+          "round_delta": "0.0000005578",
+          "slip_delta": "0.0000064422"
+        },
+        "exit": {
+          "is_buy": false,
+          "post_round_price": "0.018436",
+          "post_slip_price": "0.018436549283563229299",
+          "price_step": "0.000001",
+          "raw_price": "0.01844208190813567",
+          "reason": "intrabar_stop",
+          "round_delta": "-0.000000549283563229299",
+          "slip_delta": "-0.000005532624572440701"
+        }
+      },
+      "qty": 3263.0,
+      "rounding_loss": 0.003612413666806355,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_1000BONKUSDT_1759118400000_1759561200000",
+      "signal_type": 1,
+      "slippage_loss": 0.04268626624668779,
+      "slippage_loss_pure": 0.039073852579881434,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.01844208190813567,
+          "ts": 1759562100000
+        }
+      ],
+      "symbol": "1000BONKUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_1000BONKUSDT_1792214200",
+      "entry_time_ms": 1759562100000,
+      "exit_time_ms": 1760109300000,
+      "trade_id": "ord_c6ecd928d79aa29f85584412"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.03104238859158252,
+      "entry_price": 3.96,
+      "entry_time": 1758222900000,
+      "exit_fee": 0.026025436900013632,
+      "exit_order_id": "ord_07cf2904c700a6d410a00ea6",
+      "exit_price": 3.3200000000000003,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1758520800000,
+      "fees": 0.057067825491596155,
+      "funding_fee": 0.0633352957967597,
+      "funding_gaps": [],
+      "gross_pnl": -10.03390338313778,
+      "mae": 0.20277777777777775,
+      "mfe": 0.06439393939393936,
+      "net_pnl": -10.154306504426136,
+      "order_id": "ord_6f6d86d77c2e557e64822ebe",
+      "qty": 15.677974036152788,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_CVXUSDT_1758024000000_1758222000000",
+      "signal_type": 1,
+      "slippage_loss": 0.2634437186828995,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 3.3268034286876236,
+          "ts": 1758222900000
+        }
+      ],
+      "symbol": "CVXUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_CVXUSDT_1792196746",
+      "entry_time_ms": 1758222900000,
+      "exit_time_ms": 1758520800000,
+      "trade_id": "ord_6f6d86d77c2e557e64822ebe"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.015715420082832325,
+      "entry_price": 0.05,
+      "entry_time": 1757117700000,
+      "exit_fee": 0.028287756149098182,
+      "exit_order_id": "ord_e2f73869e7d71a0882ebd1f1",
+      "exit_price": 0.09,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1757954700000,
+      "fees": 0.04400317623193051,
+      "funding_fee": 1.1142465748915957,
+      "funding_gaps": [],
+      "gross_pnl": 25.144672132531714,
+      "mae": 0.21180000000000004,
+      "mfe": 2.1575999999999995,
+      "net_pnl": 23.98642238140819,
+      "order_id": "ord_9f3aa740e9f674d973a8ef62",
+      "qty": 628.616803313293,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_PUMPBTCUSDT_1756699200000_1757116800000",
+      "signal_type": 1,
+      "slippage_loss": 5.160943955202137,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.034144367811573886,
+          "ts": 1757117700000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.04361,
+          "ts": 1757707200000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.044,
+          "ts": 1757750400000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.04755,
+          "ts": 1757764800000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.04869,
+          "ts": 1757808000000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.04918,
+          "ts": 1757822400000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.0511,
+          "ts": 1757836800000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.07843,
+          "ts": 1757851200000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.08,
+          "ts": 1757865600000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.084,
+          "ts": 1757880000000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.0858,
+          "ts": 1757894400000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.08704,
+          "ts": 1757923200000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.08905,
+          "ts": 1757937600000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.09046,
+          "ts": 1757952000000
+        }
+      ],
+      "symbol": "PUMPBTCUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_PUMPBTCUSDT_1792196819",
+      "entry_time_ms": 1757117700000,
+      "exit_time_ms": 1757954700000,
+      "trade_id": "ord_9f3aa740e9f674d973a8ef62"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.035002722097349455,
+      "entry_price": 0.16,
+      "entry_time": 1753949700000,
+      "exit_fee": 0.10938350655421705,
+      "exit_order_id": "ord_40c04226691703f62741772c",
+      "exit_price": 0.5,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1754813700000,
+      "fees": 0.1443862286515665,
+      "funding_fee": -0.28338184709019915,
+      "funding_gaps": [],
+      "gross_pnl": 148.76156891373518,
+      "mae": 0.12787500000000004,
+      "mfe": 2.8276249999999994,
+      "net_pnl": 148.9005645321738,
+      "order_id": "ord_a9475c64e70fc0bc39957908",
+      "qty": 437.5340262168682,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_SOONUSDT_1753056000000_1753948800000",
+      "signal_type": 1,
+      "slippage_loss": 4.340337540071325,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.13733448168601375,
+          "ts": 1753949700000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.17877,
+          "ts": 1754697600000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.18019,
+          "ts": 1754712000000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.18042,
+          "ts": 1754726400000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.18173,
+          "ts": 1754740800000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.1873,
+          "ts": 1754784000000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.18865,
+          "ts": 1754798400000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.19704,
+          "ts": 1754812800000
+        }
+      ],
+      "symbol": "SOONUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_SOONUSDT_1792174449",
+      "entry_time_ms": 1753949700000,
+      "exit_time_ms": 1754813700000,
+      "trade_id": "ord_a9475c64e70fc0bc39957908"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.02754769816540793,
+      "entry_price": 0.74,
+      "entry_time": 1750666500000,
+      "exit_fee": 0.024197302442588046,
+      "exit_order_id": "ord_e90a80e7adddb1c2189c2209",
+      "exit_price": 0.65,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1751530500000,
+      "fees": 0.05174500060799597,
+      "funding_fee": -0.6917151155228778,
+      "funding_gaps": [],
+      "gross_pnl": -6.700791445639765,
+      "mae": 0.1697297297297298,
+      "mfe": 0.02121621621621628,
+      "net_pnl": -6.060821330724884,
+      "order_id": "ord_cb8616257f3d78bf70ecee02",
+      "qty": 74.4532382848863,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_LAYERUSDT_1750363200000_1750665600000",
+      "signal_type": 1,
+      "slippage_loss": 0.7147510875349041,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.6065426507565901,
+          "ts": 1750666500000
+        }
+      ],
+      "symbol": "LAYERUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_LAYERUSDT_1792196801",
+      "entry_time_ms": 1750666500000,
+      "exit_time_ms": 1751530500000,
+      "trade_id": "ord_cb8616257f3d78bf70ecee02"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.016619021671492228,
+      "entry_price": 0.18,
+      "entry_time": 1747829700000,
+      "exit_fee": 0.011079347780994819,
+      "exit_order_id": "ord_0544aa129e42d2239cb4290c",
+      "exit_price": 0.12,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1748646900000,
+      "fees": 0.02769836945248705,
+      "funding_fee": -1.5483011798601067,
+      "funding_gaps": [],
+      "gross_pnl": -11.07934778099482,
+      "mae": 0.32063888888888886,
+      "mfe": 0.24666666666666665,
+      "net_pnl": -9.558744970587199,
+      "order_id": "ord_76ea526d2137f7bac4aa4ef2",
+      "qty": 184.65579634991366,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_HAEDALUSDT_1747713600000_1747828800000",
+      "signal_type": 1,
+      "slippage_loss": 2.842221564321008,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.12603599754626243,
+          "ts": 1747829700000
+        }
+      ],
+      "symbol": "HAEDALUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_HAEDALUSDT_1792196782",
+      "entry_time_ms": 1747829700000,
+      "exit_time_ms": 1748646900000,
+      "trade_id": "ord_76ea526d2137f7bac4aa4ef2"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.01151931049789649,
+      "entry_price": 0.09,
+      "entry_time": 1746774900000,
+      "exit_fee": 0.01151931049789649,
+      "exit_order_id": "ord_8d5d10ceb6dbaa39e9474cce",
+      "exit_price": 0.09,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1747638900000,
+      "fees": 0.02303862099579298,
+      "funding_fee": 0.13000138241546066,
+      "funding_gaps": [],
+      "gross_pnl": 0.0,
+      "mae": 0.13844444444444443,
+      "mfe": 0.6862222222222224,
+      "net_pnl": -0.15304000341125365,
+      "order_id": "ord_44a876850a20023c5f5d6e7b",
+      "qty": 255.98467773103312,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_GRIFFAINUSDT_1746619200000_1746774000000",
+      "signal_type": 1,
+      "slippage_loss": 4.1879093276797015,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.05102097099100256,
+          "ts": 1746774900000
+        }
+      ],
+      "symbol": "GRIFFAINUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_GRIFFAINUSDT_1792196772",
+      "entry_time_ms": 1746774900000,
+      "exit_time_ms": 1747638900000,
+      "trade_id": "ord_44a876850a20023c5f5d6e7b"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.04220640322688516,
+      "entry_price": 1.1400000000000001,
+      "entry_time": 1732500900000,
+      "exit_fee": 0.05368358305173989,
+      "exit_order_id": "ord_bfa4def025f4e59c81003c6f",
+      "exit_price": 1.45,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1733364900000,
+      "fees": 0.09588998627862505,
+      "funding_fee": 1.4101845734850311,
+      "funding_gaps": [],
+      "gross_pnl": 22.954359649709456,
+      "mae": 0.11412280701754395,
+      "mfe": 0.28947368421052616,
+      "net_pnl": 21.4482850899458,
+      "order_id": "ord_adf68bbad48a2fc541bedc19",
+      "qty": 74.0463214506757,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_SAFEUSDT_1732420800000_1732500000000",
+      "signal_type": 1,
+      "slippage_loss": 0.46649182513927134,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 1.006324310386409,
+          "ts": 1732500900000
+        }
+      ],
+      "symbol": "SAFEUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_SAFEUSDT_1792174439",
+      "entry_time_ms": 1732500900000,
+      "exit_time_ms": 1733364900000,
+      "trade_id": "ord_adf68bbad48a2fc541bedc19"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.02374387980753536,
+      "entry_price": 0.04,
+      "entry_time": 1728969300000,
+      "exit_fee": 0.01780790985565152,
+      "exit_order_id": "ord_bb3f2fced1c98fc87dbddd51",
+      "exit_price": 0.03,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1729683900000,
+      "fees": 0.04155178966318688,
+      "funding_fee": 0.052177498486459806,
+      "funding_gaps": [],
+      "gross_pnl": -11.871939903767682,
+      "mae": 0.21100000000000008,
+      "mfe": 0.0,
+      "net_pnl": -11.965669191917328,
+      "order_id": "ord_5ff0394af8b93ea3e46f2107",
+      "qty": 1187.193990376768,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_GUSDT_1728403200000_1728968400000",
+      "signal_type": 1,
+      "slippage_loss": 7.351187913238196,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.03162206968096699,
+          "ts": 1728969300000
+        }
+      ],
+      "symbol": "GUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_GUSDT_1792196778",
+      "entry_time_ms": 1728969300000,
+      "exit_time_ms": 1729683900000,
+      "trade_id": "ord_5ff0394af8b93ea3e46f2107"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.02050452365507571,
+      "entry_price": 47.79,
+      "entry_time": 1717074900000,
+      "exit_fee": 0.02662284354043624,
+      "exit_order_id": "ord_53fe59c02fc7103c1f061790",
+      "exit_price": 62.050000000000004,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1717938900000,
+      "fees": 0.04712736719551195,
+      "funding_fee": 0.19719087034498134,
+      "funding_gaps": [],
+      "gross_pnl": 12.23663977072106,
+      "mae": 0.07930529399455952,
+      "mfe": 0.37300690521029506,
+      "net_pnl": 11.992321533180569,
+      "order_id": "ord_4895069a82f75d95990b2518",
+      "qty": 0.8581093808359787,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_ORDIUSDT_1716364800000_1717074000000",
+      "signal_type": 1,
+      "slippage_loss": 0.04290546904179649,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 36.189315000781086,
+          "ts": 1717074900000
+        }
+      ],
+      "symbol": "ORDIUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568",
+      "entry_time_ms": 1717074900000,
+      "exit_time_ms": 1717938900000,
+      "trade_id": "ord_4895069a82f75d95990b2518"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.04098438121297609,
+      "entry_price": 132.92000000000002,
+      "entry_time": 1714947300000,
+      "exit_fee": 0.041295803309162556,
+      "exit_order_id": "ord_5be90c2f24ac981851635642",
+      "exit_price": 133.93,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1715811300000,
+      "fees": 0.08228018452213864,
+      "funding_fee": 0.1945104578811018,
+      "funding_gaps": [],
+      "gross_pnl": 0.6228441923729382,
+      "mae": 0.05191092386397848,
+      "mfe": 0.0337797171230814,
+      "net_pnl": 0.3460535499696977,
+      "order_id": "ord_2a8b25cef162f7b9d7813eab",
+      "qty": 0.6166774181910335,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_XMRUSDT_1714550400000_1714946400000",
+      "signal_type": 1,
+      "slippage_loss": 0.05550096763719512,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 116.86400017757569,
+          "ts": 1714947300000
+        }
+      ],
+      "symbol": "XMRUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_XMRUSDT_1792173989",
+      "entry_time_ms": 1714947300000,
+      "exit_time_ms": 1715811300000,
+      "trade_id": "ord_2a8b25cef162f7b9d7813eab"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.022126377948564917,
+      "entry_price": 12.88,
+      "entry_time": 1710746100000,
+      "exit_fee": 0.02288224800270844,
+      "exit_order_id": "ord_ad9482e7efe1e8d998560eb4",
+      "exit_price": 13.32,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1711610100000,
+      "fees": 0.045008625951273355,
+      "funding_fee": 0.1959701671374949,
+      "funding_gaps": [],
+      "gross_pnl": 1.511740108287042,
+      "mae": 0.17034161490683236,
+      "mfe": 0.18501552795031048,
+      "net_pnl": 1.2707613151982737,
+      "order_id": "ord_8a27e5ae54a21107f2dbe763",
+      "qty": 3.435772973379645,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_CYBERUSDT_1710590400000_1710745200000",
+      "signal_type": 1,
+      "slippage_loss": 0.08589432433449234,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 9.983872406789596,
+          "ts": 1710746100000
+        }
+      ],
+      "symbol": "CYBERUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_CYBERUSDT_1792173927",
+      "entry_time_ms": 1710746100000,
+      "exit_time_ms": 1711610100000,
+      "trade_id": "ord_8a27e5ae54a21107f2dbe763"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.025580850522721677,
+      "entry_price": 11.74,
+      "entry_time": 1708920900000,
+      "exit_fee": 0.02806485134008988,
+      "exit_order_id": "ord_fcd89cdb2ac41ac1e4a0e3db",
+      "exit_price": 12.88,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1709784900000,
+      "fees": 0.05364570186281156,
+      "funding_fee": 1.1653637366513157,
+      "funding_gaps": [],
+      "gross_pnl": 4.968001634736409,
+      "mae": 0.15741908006814315,
+      "mfe": 0.22080068143100512,
+      "net_pnl": 3.7489921962222827,
+      "order_id": "ord_7f944079418a013c400b0e94",
+      "qty": 4.35789617082141,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_ACEUSDT_1708516800000_1708920000000",
+      "signal_type": 1,
+      "slippage_loss": 0.08715792341642634,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 9.458750346199814,
+          "ts": 1708920900000
+        }
+      ],
+      "symbol": "ACEUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577",
+      "entry_time_ms": 1708920900000,
+      "exit_time_ms": 1709784900000,
+      "trade_id": "ord_7f944079418a013c400b0e94"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.06113017893221414,
+      "entry_price": 23.89,
+      "entry_time": 1708262100000,
+      "exit_fee": 0.0561660706388489,
+      "exit_order_id": "ord_adabcbda71268b5caa1123e9",
+      "exit_price": 21.95,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1708660800000,
+      "fees": 0.11729624957106305,
+      "funding_fee": 0.61884417903072,
+      "funding_gaps": [],
+      "gross_pnl": -9.928216586730473,
+      "mae": 0.0835077438258686,
+      "mfe": 0.15403934700711594,
+      "net_pnl": -10.664357015332255,
+      "order_id": "ord_029a1fde3508cf42222c255a",
+      "qty": 5.117637415840447,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_MOVRUSDT_1707969600000_1708261200000",
+      "signal_type": 1,
+      "slippage_loss": 0.1662588602634416,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 21.965487424714542,
+          "ts": 1708262100000
+        }
+      ],
+      "symbol": "MOVRUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792171582",
+      "entry_time_ms": 1708262100000,
+      "exit_time_ms": 1708660800000,
+      "trade_id": "ord_029a1fde3508cf42222c255a"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.027733163184644614,
+      "entry_price": 0.18,
+      "entry_time": 1707657300000,
+      "exit_fee": 0.027733163184644614,
+      "exit_order_id": "ord_4b5eb5d129a7e1dd65da714d",
+      "exit_price": 0.18,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1708521300000,
+      "fees": 0.05546632636928923,
+      "funding_fee": 0.6583432371271333,
+      "funding_gaps": [],
+      "gross_pnl": 0.0,
+      "mae": 0.10111111111111108,
+      "mfe": 0.10511111111111122,
+      "net_pnl": -0.7138095634964225,
+      "order_id": "ord_95382a0a6c83c69f5887f049",
+      "qty": 308.1462576071624,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_POLYXUSDT_1706760000000_1707656400000",
+      "signal_type": 1,
+      "slippage_loss": 2.548369550411233,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.14775606050881884,
+          "ts": 1707657300000
+        }
+      ],
+      "symbol": "POLYXUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_POLYXUSDT_1792174186",
+      "entry_time_ms": 1707657300000,
+      "exit_time_ms": 1708521300000,
+      "trade_id": "ord_95382a0a6c83c69f5887f049"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.023207683428242913,
+      "entry_price": 0.07,
+      "entry_time": 1707164100000,
+      "exit_fee": 0.026523066775134756,
+      "exit_order_id": "ord_a8bf9c61b6f7d9a1ee6d7c7c",
+      "exit_price": 0.08,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1707627600000,
+      "fees": 0.049730750203377666,
+      "funding_fee": -0.07382590924314959,
+      "funding_gaps": [],
+      "gross_pnl": 6.630766693783685,
+      "mae": 0.1488571428571429,
+      "mfe": 0.5498571428571427,
+      "net_pnl": 6.654861852823457,
+      "order_id": "ord_9a638a8bcb833f1b1c952afe",
+      "qty": 663.0766693783688,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_COTIUSDT_1706904000000_1707163200000",
+      "signal_type": 1,
+      "slippage_loss": 8.885227369670147,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 0.054997777705785365,
+          "ts": 1707164100000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.06622,
+          "ts": 1707480000000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.06669,
+          "ts": 1707523200000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.06768,
+          "ts": 1707537600000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.07129,
+          "ts": 1707552000000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.07141,
+          "ts": 1707566400000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.07334,
+          "ts": 1707580800000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.08079,
+          "ts": 1707595200000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.08108,
+          "ts": 1707609600000
+        },
+        {
+          "reason": "trail",
+          "stop": 0.08568,
+          "ts": 1707624000000
+        }
+      ],
+      "symbol": "COTIUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145",
+      "entry_time_ms": 1707164100000,
+      "exit_time_ms": 1707627600000,
+      "trade_id": "ord_9a638a8bcb833f1b1c952afe"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.04297258226960467,
+      "entry_price": 12.81,
+      "entry_time": 1706458500000,
+      "exit_fee": 0.03800775621503675,
+      "exit_order_id": "ord_33ac7e20755baa58df037221",
+      "exit_price": 11.33,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1707005700000,
+      "fees": 0.08098033848464142,
+      "funding_fee": 0.15600688757500572,
+      "funding_gaps": [],
+      "gross_pnl": -9.929652109135818,
+      "mae": 0.12240437158469943,
+      "mfe": 0.003825136612021818,
+      "net_pnl": -10.166639335195464,
+      "order_id": "ord_7d7673acbd57514972664f3f",
+      "qty": 6.70922439806474,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_XVSUSDT_1706112000000_1706457600000",
+      "signal_type": 1,
+      "slippage_loss": 0.11396314874629693,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 11.334986039217762,
+          "ts": 1706458500000
+        }
+      ],
+      "symbol": "XVSUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_XVSUSDT_1792174216",
+      "entry_time_ms": 1706458500000,
+      "exit_time_ms": 1707005700000,
+      "trade_id": "ord_7d7673acbd57514972664f3f"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.05689420293040528,
+      "entry_price": 317.78000000000003,
+      "entry_time": 1705328100000,
+      "exit_fee": 0.051947425829999026,
+      "exit_order_id": "ord_2c8fce2acd290a7107135616",
+      "exit_price": 290.15000000000003,
+      "exit_reason": "intrabar_stop",
+      "exit_time": 1706018400000,
+      "fees": 0.1088416287604043,
+      "funding_fee": -0.9972197337644272,
+      "funding_gaps": [],
+      "gross_pnl": -9.893554200812495,
+      "mae": 0.08710428598401411,
+      "mfe": 0.011957958335955548,
+      "net_pnl": -9.005176095808473,
+      "order_id": "ord_d22221ef12d64627cc4d00d4",
+      "qty": 0.3580728990522076,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_BNBUSDT_1705089600000_1705327200000",
+      "signal_type": 1,
+      "slippage_loss": 0.06938284615703566,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 290.2437673762541,
+          "ts": 1705328100000
+        }
+      ],
+      "symbol": "BNBUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973",
+      "entry_time_ms": 1705328100000,
+      "exit_time_ms": 1706018400000,
+      "trade_id": "ord_d22221ef12d64627cc4d00d4"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.017261127952960805,
+      "entry_price": 4.16,
+      "entry_time": 1705068900000,
+      "exit_fee": 0.012613901196394436,
+      "exit_order_id": "ord_2becc7d044487cf28c467eee",
+      "exit_price": 3.04,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1705932900000,
+      "fees": 0.02987502914935524,
+      "funding_fee": 0.08610500023084365,
+      "funding_gaps": [],
+      "gross_pnl": -9.294453513132742,
+      "mae": 0.2793750000000001,
+      "mfe": 0.028846153846153872,
+      "net_pnl": -9.41043354251294,
+      "order_id": "ord_6dfbc593396cb57a3bc6ebbc",
+      "qty": 8.298619208154234,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_OPUSDT_1704643200000_1705068000000",
+      "signal_type": 1,
+      "slippage_loss": 0.1029028781811159,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 2.9594273532169595,
+          "ts": 1705068900000
+        }
+      ],
+      "symbol": "OPUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_OPUSDT_1792172950",
+      "entry_time_ms": 1705068900000,
+      "exit_time_ms": 1705932900000,
+      "trade_id": "ord_6dfbc593396cb57a3bc6ebbc"
+    },
+    {
+      "direction": 1,
+      "entry_fee": 0.015542279464088942,
+      "entry_price": 8.91,
+      "entry_time": 1705040100000,
+      "exit_fee": 0.012978065007050699,
+      "exit_order_id": "ord_65fbb99bace0009d51158b8a",
+      "exit_price": 7.44,
+      "exit_reason": "max_holding_expired",
+      "exit_time": 1705904100000,
+      "fees": 0.02852034447113964,
+      "funding_fee": 0.08514986645188688,
+      "funding_gaps": [],
+      "gross_pnl": -5.128428914076485,
+      "mae": 0.23771043771043773,
+      "mfe": 0.01885521885521877,
+      "net_pnl": -5.242099124999512,
+      "order_id": "ord_51d8c7c90b76a25e8ecf7b3c",
+      "qty": 3.4887271524329835,
+      "signal_id": "cand_ev_WX_EVENT_TREND_V0_1_binance_LPTUSDT_1704384000000_1705039200000",
+      "signal_type": 1,
+      "slippage_loss": 0.06628581589622713,
+      "stop_trace": [
+        {
+          "reason": "init",
+          "stop": 6.052921512842667,
+          "ts": 1705040100000
+        }
+      ],
+      "symbol": "LPTUSDT",
+      "run_id": "run_WX_EVENT_TREND_V0_1_LPTUSDT_1792173591",
+      "entry_time_ms": 1705040100000,
+      "exit_time_ms": 1705904100000,
+      "trade_id": "ord_51d8c7c90b76a25e8ecf7b3c"
+    }
+  ]
+}

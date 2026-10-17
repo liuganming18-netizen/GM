@@ -1,0 +1,21 @@
+....................................F................................... [ 77%]
+.....................                                                    [100%]
+=================================== FAILURES ===================================
+_________ test_exit_failure_keeps_position_open_and_marks_run_invalid __________
+
+    def test_exit_failure_keeps_position_open_and_marks_run_invalid():
+        """出场取整后为 0 ⇒ **不得**把仓位当作已平仓；运行标记为无效/未完成。"""
+        # 价格 0.004 + 步长 0.01：入场（买，向上）能成 0.01，出场（卖，向下）必成 0.00
+        cand, df_1h, df_15m = _entry_scenario(0.004, 0.003)
+        res = run_event_trend_backtest("SOLUSDT", df_1h, df_15m, [cand], [],
+                                       variant="A", price_step="0.01")
+        eng = res["engine_result"]
+        assert eng["trades_count"] == 0
+>       assert eng["open_positions_remaining"], "出场失败时仓位必须仍未平"
+E       AssertionError: 出场失败时仓位必须仍未平
+E       assert []
+
+../../策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py:326: AssertionError
+=========================== short test summary info ============================
+FAILED ../../策略/WyckoffMaster/event_trend_v0_1/tests/test_fill_precision.py::test_exit_failure_keeps_position_open_and_marks_run_invalid
+1 failed, 92 passed in 1.07s

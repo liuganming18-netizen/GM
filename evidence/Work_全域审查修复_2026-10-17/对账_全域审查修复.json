@@ -1,0 +1,119 @@
+{
+  "schema": "wyckoff.audit.global_review_fix/v1",
+  "date": "2026-10-17",
+  "scope": "整个工程（框架/ + UI界面/web/ + 策略/）",
+  "gate": {
+    "before": {"ran": 138, "verdict": "FAILED", "errors": 8, "failures": 0, "skipped": 33, "exit_code": 1},
+    "after":  {"ran": 234, "verdict": "OK",     "errors": 0, "failures": 0, "skipped": 63, "exit_code": 0},
+    "script": "框架/backend/run_tests.sh",
+    "interpreter_used": "/Users/boos/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+  },
+  "baselines": {
+    "py_compile": {"files": 94, "failures": 0},
+    "tsc_noEmit": {"exit_code": 0, "note": "本轮未改前端"},
+    "test_business": {"before": "1 loader ERROR（124 用例不可执行）", "after": "97 用例 / 0 失败 / 23 跳过"}
+  },
+  "defects": [
+    {
+      "id": "D1", "severity": "high", "kind": "production_runtime_crash",
+      "file": "框架/backend/strategies/wx_config.py",
+      "cause": "wx_donchian_wyckoff 于 commit 46ae755 物理删除后 wx=None 占位，但 5 处 wx.<CONST> 未清理",
+      "references": [
+        {"expr": "wx.EFFECTIVE_VIEW_PATH", "site": "load_view()"},
+        {"expr": "wx.EFFECTIVE_VIEW_PATH", "site": "resolve() blocked 文案"},
+        {"expr": "wx.EFFECTIVE_VIEW_PATH", "site": "approximate_375_registration view 段"},
+        {"expr": "wx.REQUIRED_CONFIG", "site": "effective_config()"},
+        {"expr": "wx.REQUIRED_CONFIG", "site": "signal_config_for()"},
+        {"expr": "wx.ARM_IDS", "site": "臂校验"}
+      ],
+      "callers": ["strategies/wx_execution.py:160", "strategies/wx_gate.py binding() -> adapter.v1_registered_configs"],
+      "live_evidence": {"path": "/api/v1/strategies/registered", "status": 500, "body": {"错误": "读取失败", "类型": "AttributeError"}},
+      "fix": "就地重建 ARM_IDS / REQUIRED_CONFIG(18)（逐字取自被删模块 8bb8f1b）；视图路径改从 project_paths.EFFECTIVE_VIEW 解析",
+      "post_fix_check": {"load_view": [null, null], "REQUIRED_CONFIG_len": 18, "ARM_IDS": ["3a", "3b", "3c", "3d"]}
+    },
+    {
+      "id": "D2", "severity": "high", "kind": "production_runtime_crash + status_misclassification + info_leak",
+      "file": "框架/backend/adapter.py",
+      "symbol": "_strategy_shape",
+      "cause": "对 item['required_config'] / item['config_status'] / item['timeframe'] / item['direction'] / item['name'] 硬下标；而 registry.describe_current_backtest 不提供这些键",
+      "existing_at_HEAD": true,
+      "live_evidence": {"path": "/api/v1/strategy", "status": 404, "body": {"错误": "'required_config'"},
+                        "note": "KeyError 属 LookupError ⇒ 被 Handler 的 except LookupError→404 吃掉；状态码应为 500，且回显了内部键名"},
+      "fix": "改用 .get() + 显式默认（缺字段 -> None/[]）",
+      "post_fix_check": {"bare_item_params": [], "bare_item_config_status": null, "full_item_unchanged": true}
+    },
+    {
+      "id": "D3", "severity": "high", "kind": "test_gate_dead",
+      "file": "框架/backend/tests/test_business.py",
+      "line": 40,
+      "cause": "from strategies import common, strategy_a, strategy_b —— strategy_a/b 已于 46ae755 删除，该 commit 漏改此行",
+      "impact": "整文件导入即死，124 个测试不可执行",
+      "fix": ["改导入为 from strategies import common",
+              "整类删除 ConfigValidationTests/StrategyATests/StrategyAPrefixTests/StrategyBTests（测已删除功能）",
+              "保留唯一测 common.quantile 的用例（重命名 CommonQuantileTests，先核对实现）",
+              "删除仅服务上述类的 helper（保留 b_bars/mk）"]
+    },
+    {
+      "id": "D4", "severity": "medium", "kind": "test_non_hermetic",
+      "cause": "上一轮把 MARKET_ARCHIVE 未设置改为回落 project_paths.MARKET_ARCHIVE ⇒ 测试进程接入冷层，混入生产 Parquet 真实数据",
+      "evidence_signature": "5 个 OI 用例 total 恰等于 limit（20000/2000），夹具仅 3456 行",
+      "fix": "夹具 _AdapterCase._bind 显式 MARKET_ARCHIVE=0（零回归开关）；生产代码不改",
+      "fixed_tests": ["test_period_5m_is_archive_only", "test_limit_clamped_both_ends",
+                      "test_auto_merges_tail_without_overlap", "test_auto_pyramid_downsamples_but_keeps_real_values",
+                      "test_bucket_ms_returns_latest_real_observation_per_bucket",
+                      "ContractSignalTests.test_annotations_wired_from_real_signals"]
+    },
+    {
+      "id": "D5", "severity": "medium", "kind": "gate_never_zero",
+      "files": ["test_history_integrity.py", "test_okx_volume_mapping.py", "test_okx_volume_exec_v3.py",
+                "test_okx_volume_fix_isolation.py", "test_okx_volume_fix_rectification.py",
+                "test_pool_gate.py", "test_rest_import_contract.py"],
+      "cause": "守卫用 pytest.skip(allow_module_level=True)，抛 _pytest.outcomes.Skipped（非 unittest.SkipTest 子类）⇒ unittest discover 记为 ERROR",
+      "experiment": {"module_level_unittest_SkipTest": {"unittest_discover": "OK (skipped=1) exit 0", "pytest": "1 skipped exit 0"}},
+      "fix": "统一改抛模块级 unittest.SkipTest；移除不再需要的 import pytest",
+      "post_fix": {"unittest_discover": "OK (skipped=63)", "pytest_channel": "2 skipped"}
+    },
+    {
+      "id": "D6", "severity": "low", "kind": "stale_tests_explicit_skip",
+      "policy": "遗留件显式 SKIP（非 PASS），不静默删除、不当通过",
+      "groups": [
+        {"tests": "BulkImportTests", "count": 4, "reason": "bulk_import 已随旧工作区删除"},
+        {"tests": "OkxImportTests", "count": 2, "reason": "okx_download 已随旧工作区删除"},
+        {"tests": "PoolAndCoverageTests.test_market_item_maps_stored_close_gaps_and_spot_status", "count": 1, "reason": "bulk_import"},
+        {"tests": "RunnerCliTests", "count": 8, "reason": "strategy_runner 现仅接受 --strategy wx_event_trend_v0_1；本类以旧键 A/B 驱动 CLI"},
+        {"tests": "MarketDirectionTests + MarketDirectionGuardTests", "count": 4, "reason": "生效视图已丢失 + 当前族已改 ⇒ 无法构造当前族身份信号"},
+        {"tests": "RegistryInvalidConfigTests", "count": 2, "reason": "旧 A/B 已退役，config_status 变为「已退役清理」"}
+      ],
+      "total_skipped_added": 21
+    }
+  ],
+  "endpoint_sweep": {
+    "instance": {"pid": 18151, "cwd": "框架/backend", "code": "修复前", "restarted": false,
+                 "reason_not_restarted": "运维约定：服务切换/重载由「账本保全」窗口独占"},
+    "routes_probed": 40,
+    "non_200": [
+      {"path": "/api/v1/strategies/registered", "status": 500, "defect": "D1"},
+      {"path": "/api/v1/strategy", "status": 404, "defect": "D2"}
+    ],
+    "ok_200": 38
+  },
+  "changed_files": [
+    "框架/backend/adapter.py",
+    "框架/backend/strategies/wx_config.py",
+    "框架/backend/tests/test_business.py",
+    "框架/backend/tests/test_history_integrity.py",
+    "框架/backend/tests/test_okx_volume_mapping.py",
+    "框架/backend/tests/test_okx_volume_exec_v3.py",
+    "框架/backend/tests/test_okx_volume_fix_isolation.py",
+    "框架/backend/tests/test_okx_volume_fix_rectification.py",
+    "框架/backend/tests/test_pool_gate.py",
+    "框架/backend/tests/test_rest_import_contract.py"
+  ],
+  "diffstat": {"files": 10, "insertions": 240, "deletions": 288},
+  "residual": [
+    "D1/D2 需由「账本保全」窗口重载 8787 后才对用户可见",
+    "registry.py 正被并行窗口在途修改（当前策略切 WX_OI_RESONANCE_V1 -> WX_EVENT_TREND_V0_1）；D6 中依赖注册表形状的 4 个用例待定版后重写",
+    "backtest_api/backtest_runner/backtest_store/datacenter_service 未做逐函数逻辑审查；前端仅类型基线",
+    "生效参数视图 v2.2 永久丢失，全盘无副本，不得伪造"
+  ]
+}

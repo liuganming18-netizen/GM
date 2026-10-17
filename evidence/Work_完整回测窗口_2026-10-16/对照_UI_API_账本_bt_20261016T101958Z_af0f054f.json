@@ -1,0 +1,219 @@
+{
+  "run_id": "bt_20261016T101958Z_af0f054f",
+  "base": "http://127.0.0.1:8787",
+  "ledger": {
+    "path": "/Users/boos/Desktop/威科夫因子共振趋势/回测日志/oi_resonance_v1/runs/bt_20261016T101958Z_af0f054f/ledger.sqlite3",
+    "counts": {
+      "signals": 42,
+      "orders": 12,
+      "trades": 6,
+      "funding": 10,
+      "rejected": 9,
+      "equity": 672
+    },
+    "sums": {
+      "trades": {
+        "net_pnl": 407.387743,
+        "fees": 456.59489,
+        "funding_fee": 31.575921,
+        "gross_pnl": 895.558553,
+        "n": 6
+      },
+      "funding": {
+        "amount": 31.575921,
+        "n": 10
+      }
+    },
+    "errors": null
+  },
+  "api": {
+    "metrics": {
+      "initial_equity": 100000.0,
+      "final_equity": 100407.38774272281,
+      "net_pnl": 407.38774272281444,
+      "net_return_pct": 0.4073877427228144,
+      "gross_pnl": 895.5585533775918,
+      "total_fees": 456.59488956064376,
+      "total_funding_fee": 31.575921094135605,
+      "trades_count": 6,
+      "win_rate_pct": 50.0,
+      "profit_factor": 1.2904890941352825,
+      "max_drawdown_pct": 2.8829237809837425,
+      "sharpe_annualized_sqrt365": -2.5331188983886808
+    },
+    "ledger_counts": {
+      "signals": 42,
+      "orders": 12,
+      "trades": 6,
+      "funding": 10,
+      "equity": 672,
+      "rejected": 9
+    },
+    "counts": {
+      "trades": 6,
+      "orders": 12,
+      "rejected": 9,
+      "equity": 672,
+      "funding_events": 10
+    },
+    "window": {
+      "symbol": "BTCUSDT",
+      "exchange": "binance",
+      "market": "um",
+      "signal_timeframe": "1h",
+      "exec_timeframe": "15m",
+      "window_source": "explicit_utc",
+      "data_end_ms": 1792144800000,
+      "sig_end_ms": 1792144800000,
+      "exec_end_ms": 1792145700000,
+      "signal_series_start_ms": 1789948800000,
+      "win_start_ms": 1790812800000,
+      "win_end_ms": 1791417600000,
+      "window_days": 7.0,
+      "warmup_bars_requested": 240,
+      "warmup_bars": 240,
+      "trade_start_sec": 1790812800,
+      "convention": "UTC 半开区间 [win_start, win_end)；预热段（warmup_bars 根信号 bar）只喂数据不交易；bar 均须已收盘且连续、且**全窗覆盖**"
+    },
+    "hashes": {
+      "code_sha256": "1f9a361da94c5a8229865864ddd17b6dfad014840130317b1ff9a55fad2044d8",
+      "signal_params_hash": "5cc0457b7d0913bf7bb896021276369895fe3eef944702852f542917b72c12db",
+      "exec_params_hash": "a92639c0a2b51e3df59e1d7fc78362611fcc91f0a97ba5310c06f0f24e5b99a5",
+      "input_sha256": "cac8ba7eff827399b97a218ce7861f4f74e5cb5d84b92206d844eb7ff21a8b73",
+      "spec_sha256": "af0f054fefd25e03965f5db4d9699209b117f8b2263cd1f2dff214dd269b742c",
+      "signal_frame_sha256": "22e4978c39a06232b880e5528aee924ec43adea908828cbbe094e6c7077aec03"
+    },
+    "data_quality_status": "ok"
+  },
+  "checks": [
+    {
+      "项": "signals 行数",
+      "账本": 42,
+      "API": 42,
+      "一致": true
+    },
+    {
+      "项": "orders 行数",
+      "账本": 12,
+      "API": 12,
+      "一致": true
+    },
+    {
+      "项": "trades 行数",
+      "账本": 6,
+      "API": 6,
+      "一致": true
+    },
+    {
+      "项": "funding 行数",
+      "账本": 10,
+      "API": 10,
+      "一致": true
+    },
+    {
+      "项": "rejected 行数",
+      "账本": 9,
+      "API": 9,
+      "一致": true
+    },
+    {
+      "项": "equity 行数",
+      "账本": 672,
+      "API": 672,
+      "一致": true
+    },
+    {
+      "项": "API /trades 行数",
+      "账本": 6,
+      "API": 6,
+      "一致": true
+    },
+    {
+      "项": "API /orders 行数",
+      "账本": 12,
+      "API": 12,
+      "一致": true
+    },
+    {
+      "项": "API /rejected 行数",
+      "账本": 9,
+      "API": 9,
+      "一致": true
+    },
+    {
+      "项": "API /equity 行数",
+      "账本": 672,
+      "API": 672,
+      "一致": true
+    },
+    {
+      "项": "chart funding_events 行数",
+      "账本": 10,
+      "API": 10,
+      "一致": true
+    },
+    {
+      "项": "净盈亏 Σ(账本 trades)",
+      "账本": 407.387743,
+      "API": 407.387743,
+      "一致": true
+    },
+    {
+      "项": "手续费 Σ(账本 trades)",
+      "账本": 456.59489,
+      "API": 456.59489,
+      "一致": true
+    },
+    {
+      "项": "资金费 Σ(账本 trades)",
+      "账本": 31.575921,
+      "API": 31.575921,
+      "一致": true
+    },
+    {
+      "项": "毛盈亏 Σ(账本 trades)",
+      "账本": 895.558553,
+      "API": 895.558553,
+      "一致": true
+    },
+    {
+      "项": "资金费 Σ(账本 funding 明细)",
+      "账本": 31.575921,
+      "API": 31.575921,
+      "一致": true
+    },
+    {
+      "项": "逐笔明细（trade_id 级）",
+      "账本": "6 笔",
+      "API": "6 笔",
+      "一致": true,
+      "差异": []
+    },
+    {
+      "项": "订单明细（order_id 级）",
+      "账本": "12 条",
+      "API": "12 条",
+      "一致": true,
+      "差异": []
+    },
+    {
+      "项": "quality.status",
+      "账本": "—",
+      "API": "ok",
+      "一致": true
+    },
+    {
+      "项": "hashes.code_sha256",
+      "账本": "—",
+      "API": "1f9a361da94c5a8229865864ddd17b6dfad014840130317b1ff9a55fad2044d8",
+      "一致": true
+    },
+    {
+      "项": "PIT 声明 (oi_publication_lag_ms)",
+      "账本": "—",
+      "API": "UNSET",
+      "一致": true
+    }
+  ],
+  "all_ok": true
+}

@@ -774,7 +774,149 @@ def _snap(run_id: str, name: str, blob: bytes, **extra) -> dict:
             "bytes": len(blob), **extra}
 
 
+def _run_event_trend(run_id: str, doc: dict) -> dict:
+    from WyckoffMaster.event_trend_v0_1 import EventTrendRunner, EventTrendConfig
+    spec = doc.get("spec") or {}
+    syms = spec.get("symbols") or ["BTCUSDT"]
+    symbol = str(syms[0]).upper()
+    initial_equity = float(spec.get("initial_equity") or (spec.get("params") or {}).get("initial_equity") or 2000.0)
+
+    cfg = EventTrendConfig(initial_equity=initial_equity)
+    runner = EventTrendRunner()
+    
+    # 1. 加载数据
+    df_4h, df_1h, df_15m, oi_ts, oi_vals, funding_events = runner.load_symbol_data(
+        symbol=symbol, start_date="2024-01-01", end_date="2024-06-30"
+    )
+
+    # 2. 跑 A/B/C 三方案并原子落盘
+    abc_res = runner.run_variant_abc(
+        symbol=symbol,
+        df_4h=df_4h,
+        df_1h=df_1h,
+        df_15m=df_15m,
+        oi_ts=oi_ts,
+        oi_vals=oi_vals,
+        funding_events=funding_events,
+        cfg=cfg,
+        initial_equity=initial_equity,
+    )
+    main_run_id = abc_res["main_run_id"]
+    main_dir = Path(runner.runs_base) / main_run_id
+    target_dir = S.run_dir(run_id)
+
+    # 3. 将 main 产物复制到 target_dir
+    import shutil
+    for item in main_dir.iterdir():
+        if item.is_file() and item.name != "run.json":
+            shutil.copy2(item, target_dir / item.name)
+
+    # 4. 构建 chart.json 供图表渲染 —— **统一序列化契约**（`框架/backend/backtest_chart.py`）
+    res_a = abc_res["res_a"]
+    #    历史实现在这里自己拼了一份，写死了 4 处：
+    #      · `trade_id` 用 `f"trd_{tid_idx+1}"`（按行号猜配，与账本真值对不上）；
+    #      · `signals[].t` 取 `candidates.jsonl` 里**不存在**的 `entry_bar_time_ms` ⇒ 恒 0；
+    #      · `signals[].atr/oi_score` 取**不存在**的 `atr_1h`/`oi_growth_pct` ⇒ 恒 0.0；
+    #      · `funding_events[].amount` 恒 0.0（真实 `delta` 落在 `funding.jsonl`）。
+    #    与批量脚本是同一类缺陷 ⇒ 一并收敛到共享实现。
+    import backtest_chart as _BC
+    chart = _BC.build_chart(
+        symbol=symbol,
+        run_dir=target_dir,
+        candles=_BC.candles_from_frame(df_15m),
+        window_start_ms=int(df_1h["timestamp"].iloc[0]),
+        window_end_ms=int(df_1h["timestamp"].iloc[-1]) + 3600 * 1000,
+        initial_equity=initial_equity,
+        run_id=run_id,
+        df_15m=df_15m,
+    )
+    S.write_chart(run_id, chart)
+
+    # 5. 指标与摘要
+    summary_data = res_a.get("summary") or {}
+    final_eq = float(summary_data.get("final_equity") or initial_equity)
+    net_pnl = float(summary_data.get("net_pnl") or (final_eq - initial_equity))
+    ret_pct = float(summary_data.get("net_return_pct") or ((net_pnl / initial_equity * 100.0) if initial_equity else 0.0))
+    trade_cnt = int(summary_data.get("trade_count") or 0)
+    # ⚠ `summary` 里**根本没有** `win_count`/`loss_count`/`win_rate`/`max_drawdown_pct`。
+    # 用 `or 0` 会把「没统计」伪装成「0 胜 0 负」「回撤 0%」⇒ 项目纪律要求缺就是 None。
+    # 真实值由 `GET /metrics` 从本 run 账本现算（胜负=扣费后 net_pnl；回撤=逐点 total_equity）。
+    win_cnt = summary_data.get("win_count")
+    loss_cnt = summary_data.get("loss_count")
+    win_rate = summary_data.get("win_rate")
+    if win_rate is None and win_cnt is not None and trade_cnt:
+        win_rate = float(win_cnt) / trade_cnt * 100.0
+    _mdd_raw = summary_data.get("max_drawdown_pct")
+    mdd = float(_mdd_raw) if _mdd_raw is not None else None
+
+    t_start = int(df_1h["timestamp"].iloc[0])
+    t_end = int(df_1h["timestamp"].iloc[-1]) + 3600 * 1000
+
+    metrics = {
+        "initial_equity": initial_equity,
+        "final_equity": final_eq,
+        "net_pnl": net_pnl,
+        "net_return_pct": ret_pct,
+        "trades_count": trade_cnt,
+        "wins": win_cnt,
+        "losses": loss_cnt,
+        "win_rate_pct": win_rate,
+        "max_drawdown_pct": mdd,
+        "profit_factor": summary_data.get("profit_factor"),
+        "avg_win_loss_ratio": summary_data.get("avg_win_loss_ratio"),
+    }
+
+    win = {
+        "win_start_ms": t_start,
+        "win_end_ms": t_end,
+        "symbol": symbol,
+        "exchange": "binance",
+        "market": "um",
+        "signal_timeframe": "1h",
+        "exec_timeframe": "15m",
+    }
+
+    # 数据质量：**不再硬编码 "ok"**。按本 run 落盘 `summary.json` 的
+    # `reconcile` / `identity` 真实自检结果给；没有该块就报 `unknown`（「无法判定」≠「通过」）。
+    # 注意：这两个块是**回测程序自己写的**，只能证明程序内部一致，不能单独证明结果正确。
+    _rec, _ident, _dq_reasons = {}, {}, []
+    try:
+        _sm = json.loads((target_dir / "summary.json").read_text(encoding="utf-8"))
+        _rec = _sm.get("reconcile") or {}
+        _ident = _sm.get("identity") or {}
+    except Exception:                                       # noqa: BLE001
+        _sm = {}
+    if _rec.get("cash_identity_ok") is False:
+        _dq_reasons.append("现金恒等式不成立")
+    if _rec.get("equity_identity_ok") is False:
+        _dq_reasons.append("权益恒等式不成立")
+    if _rec.get("equity_curve_tail_matches_final") is False:
+        _dq_reasons.append("权益曲线末点与最终权益不一致")
+    if _ident.get("chain_ok") is False:
+        _dq_reasons.append("身份链条不闭合")
+    if not (_rec or _ident):
+        _dq_status = "unknown"
+        _dq_reasons = ["summary.json 无 reconcile/identity 块 ⇒ 无法判定对账"]
+    else:
+        _dq_status = "mismatch" if _dq_reasons else "ok"
+
+    return {
+        "window": win,
+        "metrics": metrics,
+        "data_quality": {
+            "status": _dq_status,
+            "reasons": _dq_reasons,
+            "reconcile_ok": (None if not _rec else not _dq_reasons),
+            "source": "summary.json:reconcile+identity（回测程序自检，非独立证据）",
+        },
+        "hashes": abc_res.get("fingerprints") or {},
+        "summary": abc_res.get("funnel_a") or {},
+    }
+
+
 def _run(run_id: str, doc: dict) -> dict:
+    if (doc.get("spec") or {}).get("strategy_id") == "WX_EVENT_TREND_V0_1" or doc.get("strategy_id") == "WX_EVENT_TREND_V0_1":
+        return _run_event_trend(run_id, doc)
     spec = doc["spec"]
     syms = spec.get("symbols") or []
     if len(syms) != 1:

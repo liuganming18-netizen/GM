@@ -1,0 +1,4 @@
+ UI界面/web/src/App.tsx                          |  6 +--
+ UI界面/web/src/components/BacktestWorkbench.tsx | 70 +++++++++++++++++++++++++
+ UI界面/web/src/components/LabChartPanel.tsx     | 53 +++++++++++++++++--
+ 3 files changed, 123 insertions(+), 6 deletions(-)

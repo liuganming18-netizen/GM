@@ -1,0 +1,29 @@
+{
+  "run_id": "run_WX_EVENT_TREND_V0_1_FIXTURE_E_9000000005",
+  "strategy_id": "WX_EVENT_TREND_V0_1",
+  "status": "succeeded",
+  "spec": {
+    "strategy_id": "WX_EVENT_TREND_V0_1",
+    "symbols": [
+      "FIXUSDT"
+    ],
+    "initial_equity": 2000.0
+  },
+  "metrics": {
+    "initial_equity": 2000.0,
+    "final_equity": 2000.0,
+    "net_pnl": 0.0,
+    "net_return_pct": 0.0,
+    "trades_count": 0,
+    "max_drawdown_pct": null
+  },
+  "data_quality": {
+    "status": "ok",
+    "reasons": [],
+    "reconcile_ok": true,
+    "source": "summary.json:reconcile+identity（回测程序自检，非独立证据）"
+  },
+  "engine": {
+    "strategy_id": "WX_EVENT_TREND_V0_1"
+  }
+}

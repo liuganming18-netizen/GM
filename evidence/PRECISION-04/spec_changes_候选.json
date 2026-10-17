@@ -1,0 +1,42 @@
+{
+ "generated_utc": "2026-10-17T04:50:00Z",
+ "status": "候选，未写入 数据/contracts/旧标的池/",
+ "why_not_written": "本窗口职责只做证据调查；是否采纳为 spec_changes_*.json 由规格/账本窗口决定。且本文件**故意不含任何 kind=no_change 记录**——按 instrument_spec.py 的纪律，『公告里没找到变更』不等于『区间内没变更』，不能据此签发无变更证明。",
+ "usable_for": "把这两条并入 spec_changes_*.json 后，BNBUSDT / COTIUSDT 的变更点才可被 SpecBook 读到；但仅凭它们仍不足以让任何窗口变成 verified（还缺覆盖整窗的 no_change 记录与两端快照）。",
+ "records": [
+  {
+   "symbol": "BNBUSDT",
+   "kind": "change",
+   "effective_ms": 1620703800000,
+   "effective_utc": "2021-05-11T03:30:00Z",
+   "announced_ms": 1620379333346,
+   "announced_utc": "2021-05-07T09:22:13Z",
+   "from_ms": null,
+   "to_ms": null,
+   "fields": [
+    "price_step"
+   ],
+   "source_url": "https://www.binance.com/en/support/announcement/790cd97ae5d54cd6897ad4fc81ab477b",
+   "evidence_path": "evidence/PRECISION-04/原始公告/1620379333346_790cd97ae5d54cd6897ad4fc81ab477b.json",
+   "evidence_sha256": "aad172c3156d2d85c404c83382a87534676797a81e9ae316e5df0861375668f7",
+   "note": "官方公告表格原文：['USDⓈ-M Perpetual', 'BNBUSDT', '0.001', '0.01']；生效时间取自公告正文。from/to 未填：本次只能确认变更点，不能确认变更前后的完整区间。"
+  },
+  {
+   "symbol": "COTIUSDT",
+   "kind": "change",
+   "effective_ms": 1784616000000,
+   "effective_utc": "2026-07-21T06:40:00Z",
+   "announced_ms": 1784540703811,
+   "announced_utc": "2026-07-20T09:45:03Z",
+   "from_ms": null,
+   "to_ms": null,
+   "fields": [
+    "price_step"
+   ],
+   "source_url": "https://www.binance.com/en/support/announcement/f74b3070321a4cdaaea15f9dd8ceb0e8",
+   "evidence_path": "evidence/PRECISION-04/原始公告/1784540703811_f74b3070321a4cdaaea15f9dd8ceb0e8.json",
+   "evidence_sha256": "9e98acb4e8ad826bb211aaed1d0fb91f9528bafbf88c671ad728cb6697e3d5ec",
+   "note": "官方公告表格原文：['2026-07-21 06:40 (UTC)', 'COTIUSDT', '0.00001', '0.000001']；生效时间取自公告正文。from/to 未填：本次只能确认变更点，不能确认变更前后的完整区间。"
+  }
+ ]
+}

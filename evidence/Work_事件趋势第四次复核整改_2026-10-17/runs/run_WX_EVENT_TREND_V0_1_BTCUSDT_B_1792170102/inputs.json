@@ -1,0 +1,159 @@
+{
+  "data_summary": {
+    "bar_15m_count": 17376,
+    "bar_1h_count": 4344,
+    "bar_4h_count": 1306,
+    "funding_records_count": 7436,
+    "oi_records_count": 634207,
+    "time_range_1h": {
+      "end_ms": 1719705600000,
+      "end_utc": "2024-06-30 00:00:00",
+      "start_ms": 1704067200000,
+      "start_utc": "2024-01-01 00:00:00"
+    }
+  },
+  "fingerprints": {
+    "code": {
+      "combined_sha256": "eb8464ab6490b82e7371a35087581f183ac05ee95fdab70f036630a5468d6846",
+      "files": {
+        "策略/WyckoffMaster/event_trend_v0_1/__init__.py": "4a19994813f631fa21112aa10327d5bad14198b2376373647a7528784fc01a99",
+        "策略/WyckoffMaster/event_trend_v0_1/config.py": "74838ed4007917f11ec37221b0b768075b3b5c08259d70f7215b205ff8bc21f4",
+        "策略/WyckoffMaster/event_trend_v0_1/contracts.py": "6895e0949f9b683cd3280e299dfc40f958bcfdccdf6177736e30a45b767ec12d",
+        "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py": "b08b61afb1fb06f05942c2b98a94bf2df8f1fd9f13ca859be60b993d794e386e",
+        "策略/WyckoffMaster/event_trend_v0_1/features.py": "4f49073c91ef68398ea86173508802655aa8247183231a01f7b6a47e4e1061f0",
+        "策略/WyckoffMaster/event_trend_v0_1/runner.py": "ad69072590b9f99780970c0e7403b288fea4f6bab90bd3b99d60c131f52b2898",
+        "策略/WyckoffMaster/event_trend_v0_1/state_machine.py": "21c875a849331ce04c57c85efcacbad9eff5f6095d4a82a42f7461ab4f25144c",
+        "策略/WyckoffMaster/trading_core/contracts.py": "1387432d68e9d184e4c854053de482caeb25b132d3a767f934672d164a5c4ac8",
+        "策略/WyckoffMaster/trading_core/engine.py": "6e22d7cec8221ee606d2650b5d27ff478ba338d0185d35b85e48296556175b88",
+        "策略/WyckoffMaster/trading_core/fill.py": "15e29dd01db7e80c481aa92f6ca45a38d3c3f6cc78d9303552d0b3c11fa91913",
+        "策略/WyckoffMaster/trading_core/funding.py": "436ebba29be84993eba02150595c121b15e8d6c181f926812dd8f154fb1bf396",
+        "策略/WyckoffMaster/trading_core/ledger.py": "c813e5842e8d3d6b1f6f00419099a46f34b850746824613459861a9dfb91e2c7",
+        "策略/WyckoffMaster/trading_core/order.py": "9b9456d9ad96a2ab534b913763b932f54fb8e55d83d23d8d3626a00c9fd975c3",
+        "策略/WyckoffMaster/trading_core/pit.py": "952c31aa847aac4c073d93dfd96ac430e104ca34f7ce5436aec18989d5ce8440",
+        "策略/WyckoffMaster/trading_core/policy.py": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7",
+        "策略/WyckoffMaster/trading_core/position.py": "85f07ea18e7fb23bfa2f933d2be97078f3cd1663f76f761b9e3e4daa91e81327",
+        "策略/WyckoffMaster/trading_core/risk.py": "ad8e14d56e8e6cbf4b8e664bdface1797b05847928f354eeba323ce2e0f2228f",
+        "策略/WyckoffMaster/trading_core/signal.py": "572b226808d48c335256a5507182a0f848445a3d0a8eaa5b0c93827ab629e531"
+      },
+      "missing": []
+    },
+    "config": {
+      "params": {
+        "atr_period_4h": 14,
+        "atr_warmup_bars": 200,
+        "box_bars_4h": 42,
+        "box_max_width_atr": 8.0,
+        "box_min_width_atr": 2.0,
+        "breakout_buffer_atr": 0.1,
+        "breakout_max_hours_after_retest": 168,
+        "breakout_max_total_hours": 336,
+        "breakout_vol_lookback": 20,
+        "breakout_vol_multiplier": 1.5,
+        "cooling_hours": 24,
+        "entry_delay_15m_bars": 1,
+        "er_threshold": 0.3,
+        "initial_equity": 10000.0,
+        "initial_stop_buffer_atr": 0.1,
+        "market": "um",
+        "max_active_positions": 3,
+        "max_gap_up_atr": 0.5,
+        "max_holding_days": 10,
+        "max_notional_per_position": 0.3,
+        "max_participation_of_prev_15m_quote": 0.001,
+        "max_symbol_positions": 1,
+        "max_total_notional": 0.9,
+        "max_total_risk_budget": 0.015,
+        "oi_lookback_hours": 6,
+        "oi_max_time_distance_sec": 900,
+        "oi_min_growth_pct": 0.02,
+        "retest_fail_buffer_atr": 0.1,
+        "retest_max_hours": 72,
+        "retest_max_zone_atr": 0.5,
+        "retest_min_zone_atr": 0.0,
+        "retest_recovery_atr": 0.1,
+        "retest_vol_multiplier": 0.8,
+        "risk_budget_per_trade": 0.005,
+        "slippage_bps": 3.0,
+        "strategy_name": "WX_EVENT_TREND_V0_1",
+        "strategy_version": "v0.1.0",
+        "stress_slippage_bps": 6.0,
+        "stress_taker_fee_bps": 10.0,
+        "sweep_max_hours": 168,
+        "sweep_max_overshoot_atr": 0.5,
+        "sweep_min_recovery_atr": 0.1,
+        "taker_fee_bps": 5.0,
+        "timeframe_env": "4h",
+        "timeframe_event": "1h",
+        "timeframe_exec": "15m",
+        "trailing_lookback_4h_bars": 10,
+        "trailing_trigger_r": 2.0,
+        "venue": "binance"
+      },
+      "sha256": "92389dcd2708455a14a55ee90506fca93c291e4e7e599f89e013b8a7ef07c47a"
+    },
+    "inputs": {
+      "bar_15m": {
+        "columns": [
+          "timestamp",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "quote_volume"
+        ],
+        "rows": 17376,
+        "sha256": "5e92821588e89bce92656e431ca01bedec9ebb6f5cdeba1a97091a11d90c95aa"
+      },
+      "bar_1h": {
+        "columns": [
+          "timestamp",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "quote_volume"
+        ],
+        "rows": 4344,
+        "sha256": "551107db5533513f951f3cb2b53d2b1b07a49397cbdf187ffb8c5d7584c25634"
+      },
+      "bar_4h": {
+        "columns": [
+          "open_time",
+          "close_time",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume"
+        ],
+        "rows": 1306,
+        "sha256": "b03613ec048ae51ba83fb832c24c81d14940b58f5ae6ed7b3d6825de4cc4b14c"
+      },
+      "funding_events": {
+        "count": 7436,
+        "sha256": "a45ee7336d0f71228770593038cc7288cac1b946c9ae1f1d74820a5b2cb6a492"
+      },
+      "oi_ts": {
+        "len": 634207,
+        "name": "oi_ts",
+        "sha256": "77d55406e4fdcbc4a8d49ed3b892011893f7fc7554e914e5dc3ccb3599937dbf"
+      },
+      "oi_values": {
+        "len": 634207,
+        "name": "oi_values",
+        "sha256": "a3776a9a6c63a01afe3652d25ec3a406caf1ae3b3ee97fb0bb39178218380fb6"
+      }
+    },
+    "rules": {
+      "path": "evidence/WX_EVENT_TREND_V0_1_策略与回测冻结规则.md",
+      "sha256": "1f1167de35412cb7d1d3608d8069c4108324f7641de7c369bf94882f1679a8ab"
+    }
+  },
+  "run_id": "run_WX_EVENT_TREND_V0_1_BTCUSDT_B_1792170102",
+  "strategy_version": "v0.1.0",
+  "symbol": "BTCUSDT",
+  "timestamp_created": 1792170102,
+  "variant": "B"
+}

@@ -8,6 +8,7 @@ ehthumbs.db
 Thumbs.db
 *.tmp
 *.bak
+*.bak*
 *.swp
 *~
 
@@ -78,6 +79,9 @@ _backup/
 
 # 本地临时回测快照、工具记忆与前端备份
 回测日志/oi_resonance_v1/runs/
+回测日志/event_trend_v0_1/
+回测日志/batch_tests_archive/
+回测日志/legacy_archive/
 .workbuddy-ai/
 UI界面/web/_archive/
 

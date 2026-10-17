@@ -1,0 +1,58 @@
+{
+  "rows": [
+    {
+      "scenario": "A_两端相同中间变更",
+      "dir": "evidence/PRECISION-01/合成证据/A_两端相同中间变更",
+      "old": {
+        "applicability": "verified",
+        "formal_pass_allowed": true,
+        "price_step": "0.00001",
+        "note": "被两份数值一致的快照包围（2023-12-01T000000Z ≤ 窗口 ≤ 2024-08-01T000000Z）"
+      },
+      "new": {
+        "applicability": "unverified_historical",
+        "formal_pass_allowed": false,
+        "price_step": "0.00001",
+        "reason": "spec_changed_inside_span",
+        "note": "规格数值取自窗口结束前最近的快照 exchangeInfo_futures_2024-03-01T000000Z.json（serverTime=1709251200000），不是全局最新快照。夹住区间内的快照 exchangeInfo_futures_2024-03-01T000000Z.json 规格与两端不同 ⇒ 「两端相同」不能证明中间未变更；窗口内规格不唯一，数值取窗口起点时的规格（exchangeInfo_futures_2023-12-01T000000Z.json），仅作诊断，不得用于正式回测"
+      },
+      "verdict": "旧误判已被拦住"
+    },
+    {
+      "scenario": "B_窗口后改规格",
+      "dir": "evidence/PRECISION-01/合成证据/B_窗口后改规格",
+      "old": {
+        "applicability": "unverified_historical",
+        "formal_pass_allowed": false,
+        "price_step": "0.001",
+        "note": "仅有单一时点快照（serverTime=2025-01-01T000000Z），窗口 1704067200000~1719705600000 内无同源证据 ⇒ 不得据此声明历史成交已修正"
+      },
+      "new": {
+        "applicability": "unverified_historical",
+        "formal_pass_allowed": false,
+        "price_step": "0.00001",
+        "reason": "no_change_evidence",
+        "note": "规格数值取自窗口结束前最近的快照 exchangeInfo_futures_2023-12-01T000000Z.json（serverTime=1701388800000），不是全局最新快照。缺少覆盖窗口的规格变更证据（spec_changes_*.json 无有效记录）⇒ 两端相同仍可能是「改过又改回」，不能 verified"
+      },
+      "verdict": "数值被修正"
+    },
+    {
+      "scenario": "C_证据齐备",
+      "dir": "evidence/PRECISION-01/合成证据/C_证据齐备",
+      "old": {
+        "applicability": "verified",
+        "formal_pass_allowed": true,
+        "price_step": "0.00001",
+        "note": "被两份数值一致的快照包围（2023-12-01T000000Z ≤ 窗口 ≤ 2024-08-01T000000Z）"
+      },
+      "new": {
+        "applicability": "verified",
+        "formal_pass_allowed": true,
+        "price_step": "0.00001",
+        "reason": "bracketed_and_change_evidence_covers_window",
+        "note": "规格数值取自窗口结束前最近的快照 exchangeInfo_futures_2024-03-01T000000Z.json（serverTime=1709251200000），不是全局最新快照。被两份一致快照夹住（exchangeInfo_futures_2023-12-01T000000Z.json ≤ 窗口 ≤ exchangeInfo_futures_2024-08-01T000000Z.json），区间内 3 份快照逐一比较一致，且有变更证据覆盖整窗"
+      },
+      "verdict": "一致"
+    }
+  ]
+}

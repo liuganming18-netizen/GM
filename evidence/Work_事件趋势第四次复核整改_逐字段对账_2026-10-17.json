@@ -1,0 +1,1694 @@
+{
+  "meta": {
+    "title": "WORK-07 第四次复核整改轮 · 逐字段对账（对账①Run内勾稽 / 对账②两次独立Run一致）",
+    "date": "2026-10-17",
+    "timestamp": 1792170307,
+    "strategy": "WX_EVENT_TREND_V0_1",
+    "strategy_version": "v0.1.0",
+    "frozen_rules_sha256": "1f1167de35412cb7d1d3608d8069c4108324f7641de7c369bf94882f1679a8ab",
+    "runs_base": "/Users/boos/Desktop/威科夫因子共振趋势/evidence/Work_事件趋势第四次复核整改_2026-10-17/runs",
+    "governance_status": {
+      "work_06_gate": "FAIL（未解除）",
+      "work_07_engineering_gate": "NOT_ASSERTED（本脚本不自行宣告 PASS）",
+      "work_07_research_gate": "FAIL（真实 2024H1 三币 0 候选，样本不足）",
+      "pit": "UNPROVEN（pit_proven=False，未伪造发布/到达时间）"
+    }
+  },
+  "reconciliation_1_within_run": {
+    "synthetic_single_trade": {
+      "label": "synthetic_single_trade",
+      "trades": 1,
+      "orders": 2,
+      "ledger_events": 13,
+      "equity_points": 21,
+      "all_pass": true,
+      "checks": {
+        "C01_trade_count": {
+          "pass": true,
+          "detail": {
+            "summary": 1,
+            "actual": 1
+          }
+        },
+        "C02_order_count": {
+          "pass": true,
+          "detail": {
+            "summary": 2,
+            "actual": 2
+          }
+        },
+        "C03_net_pnl_sum": {
+          "pass": true,
+          "detail": {
+            "summary": 42.97898536937525,
+            "sum_trades": 42.97898536937525
+          }
+        },
+        "C04_equity_delta": {
+          "pass": true,
+          "detail": {
+            "equity_delta": 42.97898536937464,
+            "sum_net_pnl": 42.97898536937525
+          }
+        },
+        "C05_fee_sum": {
+          "pass": true,
+          "detail": {
+            "summary": 0.5150463149445634,
+            "sum_trades": 0.5150463149445634
+          }
+        },
+        "C06_funding_sum": {
+          "pass": true,
+          "detail": {
+            "summary": 0.050994684647976574,
+            "sum_trades": 0.050994684647976574
+          }
+        },
+        "C07_slippage_sum": {
+          "pass": true,
+          "detail": {
+            "summary": 0.3547456323337425,
+            "sum_trades": 0.3547456323337425
+          }
+        },
+        "C08_equity_curve_ends": {
+          "pass": true,
+          "detail": {
+            "head": 10000.0,
+            "tail": 10042.978985369375,
+            "initial_equity": 10000.0,
+            "final_equity": 10042.978985369375
+          }
+        },
+        "C09_identity_unique": {
+          "pass": true,
+          "detail": {
+            "unmatched": [],
+            "missing_identity_fields": [],
+            "trades": 1,
+            "orders": 2
+          }
+        },
+        "C10_candidate_trade_map": {
+          "pass": true,
+          "detail": {
+            "executed_candidates": 1,
+            "trades": 1,
+            "not_executed_with_order": []
+          }
+        },
+        "C11_position_pairs": {
+          "pass": true,
+          "detail": {
+            "POSITION_OPENED": 1,
+            "POSITION_CLOSED": 1,
+            "trades": 1
+          }
+        },
+        "C12_fill_events": {
+          "pass": true,
+          "detail": {
+            "ORDER_FILLED": 2,
+            "expected": 2
+          }
+        },
+        "C13_fee_events": {
+          "pass": true,
+          "detail": {
+            "FEE_CHARGED": 2,
+            "expected": 2
+          }
+        },
+        "C14_ledger_idempotent": {
+          "pass": true,
+          "detail": {
+            "events": 13,
+            "unique": 13
+          }
+        },
+        "C15_engine_identities": {
+          "pass": true,
+          "detail": {
+            "cash_identity_ok": true,
+            "equity_identity_ok": true,
+            "equity_curve_tail_matches_final": true
+          }
+        },
+        "C16_no_phantom_pnl": {
+          "pass": true,
+          "detail": "有成交，跳过零值检查"
+        }
+      }
+    },
+    "synthetic_two_sequential_trades": {
+      "label": "synthetic_two_sequential_trades",
+      "trades": 2,
+      "orders": 4,
+      "ledger_events": 23,
+      "equity_points": 2306,
+      "all_pass": true,
+      "checks": {
+        "C01_trade_count": {
+          "pass": true,
+          "detail": {
+            "summary": 2,
+            "actual": 2
+          }
+        },
+        "C02_order_count": {
+          "pass": true,
+          "detail": {
+            "summary": 4,
+            "actual": 4
+          }
+        },
+        "C03_net_pnl_sum": {
+          "pass": true,
+          "detail": {
+            "summary": -1.695612238939349,
+            "sum_trades": -1.695612238939349
+          }
+        },
+        "C04_equity_delta": {
+          "pass": true,
+          "detail": {
+            "equity_delta": -1.6956122389401571,
+            "sum_net_pnl": -1.695612238939349
+          }
+        },
+        "C05_fee_sum": {
+          "pass": true,
+          "detail": {
+            "summary": 0.9861510510985528,
+            "sum_trades": 0.9861510510985528
+          }
+        },
+        "C06_funding_sum": {
+          "pass": true,
+          "detail": {
+            "summary": 0.0,
+            "sum_trades": 0.0
+          }
+        },
+        "C07_slippage_sum": {
+          "pass": true,
+          "detail": {
+            "summary": 0.7094611878407964,
+            "sum_trades": 0.7094611878407964
+          }
+        },
+        "C08_equity_curve_ends": {
+          "pass": true,
+          "detail": {
+            "head": 10000.0,
+            "tail": 9998.30438776106,
+            "initial_equity": 10000.0,
+            "final_equity": 9998.30438776106
+          }
+        },
+        "C09_identity_unique": {
+          "pass": true,
+          "detail": {
+            "unmatched": [],
+            "missing_identity_fields": [],
+            "trades": 2,
+            "orders": 4
+          }
+        },
+        "C10_candidate_trade_map": {
+          "pass": true,
+          "detail": {
+            "executed_candidates": 2,
+            "trades": 2,
+            "not_executed_with_order": []
+          }
+        },
+        "C11_position_pairs": {
+          "pass": true,
+          "detail": {
+            "POSITION_OPENED": 2,
+            "POSITION_CLOSED": 2,
+            "trades": 2
+          }
+        },
+        "C12_fill_events": {
+          "pass": true,
+          "detail": {
+            "ORDER_FILLED": 4,
+            "expected": 4
+          }
+        },
+        "C13_fee_events": {
+          "pass": true,
+          "detail": {
+            "FEE_CHARGED": 4,
+            "expected": 4
+          }
+        },
+        "C14_ledger_idempotent": {
+          "pass": true,
+          "detail": {
+            "events": 23,
+            "unique": 23
+          }
+        },
+        "C15_engine_identities": {
+          "pass": true,
+          "detail": {
+            "cash_identity_ok": true,
+            "equity_identity_ok": true,
+            "equity_curve_tail_matches_final": true
+          }
+        },
+        "C16_no_phantom_pnl": {
+          "pass": true,
+          "detail": "有成交，跳过零值检查"
+        },
+        "C17_two_trades_and_expiry": {
+          "pass": true,
+          "detail": {
+            "trades": 2,
+            "exit_reasons": [
+              "max_holding_expired",
+              "max_holding_expired"
+            ],
+            "holding_hours": [
+              240.0,
+              240.0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "reconciliation_2_two_runs": {
+    "synthetic_two_sequential_trades": {
+      "label": "synthetic_two_sequential_trades",
+      "chain_files_identical": true,
+      "disk_files_identical": true,
+      "fingerprints_stable": {
+        "rules": true,
+        "code": true,
+        "config": true,
+        "input": true
+      },
+      "disk_checks": {
+        "run_rep_1": {
+          "files": 15,
+          "manifest_mismatch": [],
+          "commit_mode": "atomic_directory_rename"
+        },
+        "run_rep_2": {
+          "files": 15,
+          "manifest_mismatch": [],
+          "commit_mode": "atomic_directory_rename"
+        }
+      },
+      "per_file": {
+        "orders.jsonl": {
+          "sha256_run1": "cac92b8268e60f81769ee4d2df6b83dab0bafd245e70f1c5eaa896b5137c6630",
+          "sha256_run2": "cac92b8268e60f81769ee4d2df6b83dab0bafd245e70f1c5eaa896b5137c6630",
+          "identical": true,
+          "bytes": 2732
+        },
+        "fills.jsonl": {
+          "sha256_run1": "ccb5c1295a0f9965f390bbf41a2b04d41cbcec21ad15e557d9fc7b8b50b84922",
+          "sha256_run2": "ccb5c1295a0f9965f390bbf41a2b04d41cbcec21ad15e557d9fc7b8b50b84922",
+          "identical": true,
+          "bytes": 1680
+        },
+        "positions.jsonl": {
+          "sha256_run1": "c5255b5ce9bb7a5c7a6838b2de406642a0e0c108b757a325e3f1910b335d09e6",
+          "sha256_run2": "c5255b5ce9bb7a5c7a6838b2de406642a0e0c108b757a325e3f1910b335d09e6",
+          "identical": true,
+          "bytes": 1349
+        },
+        "trades.jsonl": {
+          "sha256_run1": "214afbdbf0c8e2113164ea2e3715f7db6e560eb5b7b213e3d4a6dfeeb863bb91",
+          "sha256_run2": "214afbdbf0c8e2113164ea2e3715f7db6e560eb5b7b213e3d4a6dfeeb863bb91",
+          "identical": true,
+          "bytes": 1416
+        },
+        "rejects.jsonl": {
+          "sha256_run1": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha256_run2": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "identical": true,
+          "bytes": 0
+        },
+        "funding.jsonl": {
+          "sha256_run1": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha256_run2": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "identical": true,
+          "bytes": 0
+        },
+        "ledger.jsonl": {
+          "sha256_run1": "f178748a0e2b3df1418fb63ef2dd989fdde418eab3ffb0854cc894486af867b1",
+          "sha256_run2": "f178748a0e2b3df1418fb63ef2dd989fdde418eab3ffb0854cc894486af867b1",
+          "identical": true,
+          "bytes": 7598
+        },
+        "equity_curve.jsonl": {
+          "sha256_run1": "96da4a16ffb6fd7e773eb4b1831d5b5eb71523087dba16b00560f611a2f52c1f",
+          "sha256_run2": "96da4a16ffb6fd7e773eb4b1831d5b5eb71523087dba16b00560f611a2f52c1f",
+          "identical": true,
+          "bytes": 455742
+        },
+        "decisions.jsonl": {
+          "sha256_run1": "26f18534974500a768c59865b8598309e44d6ee31181c5cad6c11ae881d7b188",
+          "sha256_run2": "26f18534974500a768c59865b8598309e44d6ee31181c5cad6c11ae881d7b188",
+          "identical": true,
+          "bytes": 884
+        },
+        "validation_results.jsonl": {
+          "sha256_run1": "fa067af1fbb101f026af978dc752adb8c34ae75da337a7773675efa7eefa8f3e",
+          "sha256_run2": "fa067af1fbb101f026af978dc752adb8c34ae75da337a7773675efa7eefa8f3e",
+          "identical": true,
+          "bytes": 1712
+        }
+      },
+      "all_pass": true
+    },
+    "synthetic_single_trade": {
+      "label": "synthetic_single_trade",
+      "chain_files_identical": true,
+      "disk_files_identical": true,
+      "fingerprints_stable": {
+        "rules": true,
+        "code": true,
+        "config": true,
+        "input": true
+      },
+      "disk_checks": {
+        "run_rep_1": {
+          "files": 15,
+          "manifest_mismatch": [],
+          "commit_mode": "atomic_directory_rename"
+        },
+        "run_rep_2": {
+          "files": 15,
+          "manifest_mismatch": [],
+          "commit_mode": "atomic_directory_rename"
+        }
+      },
+      "per_file": {
+        "orders.jsonl": {
+          "sha256_run1": "f577b0c7f8b6fc3bc240a413090202d16155b47e18635e9409db15a76c4b2381",
+          "sha256_run2": "f577b0c7f8b6fc3bc240a413090202d16155b47e18635e9409db15a76c4b2381",
+          "identical": true,
+          "bytes": 1357
+        },
+        "fills.jsonl": {
+          "sha256_run1": "2e8dba286a39590daa717feb9c8a60ca8bfc85a44951dac6e52082c582afb892",
+          "sha256_run2": "2e8dba286a39590daa717feb9c8a60ca8bfc85a44951dac6e52082c582afb892",
+          "identical": true,
+          "bytes": 830
+        },
+        "positions.jsonl": {
+          "sha256_run1": "e08eca97e9093bdf4bffd25dfc1f3841fd1249fa0e14fce132c281a3ee7933cd",
+          "sha256_run2": "e08eca97e9093bdf4bffd25dfc1f3841fd1249fa0e14fce132c281a3ee7933cd",
+          "identical": true,
+          "bytes": 672
+        },
+        "trades.jsonl": {
+          "sha256_run1": "2ad4d7c631db57b58e8e939ef8eef00161bd5f88648f992a14559e7a2229213c",
+          "sha256_run2": "2ad4d7c631db57b58e8e939ef8eef00161bd5f88648f992a14559e7a2229213c",
+          "identical": true,
+          "bytes": 734
+        },
+        "rejects.jsonl": {
+          "sha256_run1": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha256_run2": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "identical": true,
+          "bytes": 0
+        },
+        "funding.jsonl": {
+          "sha256_run1": "44651ad1c4b14ea3b160ca5894d86b2f9c8ea12940ec1b3a76a8b5956f09a656",
+          "sha256_run2": "44651ad1c4b14ea3b160ca5894d86b2f9c8ea12940ec1b3a76a8b5956f09a656",
+          "identical": true,
+          "bytes": 271
+        },
+        "ledger.jsonl": {
+          "sha256_run1": "4322cadb0beb301b52f98fb30692e6644eae98c929bfd24764d5a96a56ba54dc",
+          "sha256_run2": "4322cadb0beb301b52f98fb30692e6644eae98c929bfd24764d5a96a56ba54dc",
+          "identical": true,
+          "bytes": 4209
+        },
+        "equity_curve.jsonl": {
+          "sha256_run1": "68cab32915dbe479f027f8cd36d31e607214230c0ef80eff138a9a1ae8f1c20e",
+          "sha256_run2": "68cab32915dbe479f027f8cd36d31e607214230c0ef80eff138a9a1ae8f1c20e",
+          "identical": true,
+          "bytes": 4155
+        },
+        "decisions.jsonl": {
+          "sha256_run1": "7442dc41840282531ac2583a008a0aaf77c53457ba6f5b9ce539b05c310ecfc5",
+          "sha256_run2": "7442dc41840282531ac2583a008a0aaf77c53457ba6f5b9ce539b05c310ecfc5",
+          "identical": true,
+          "bytes": 442
+        },
+        "validation_results.jsonl": {
+          "sha256_run1": "7ec0dbdefa5e2558343926ae5f98416c8553849ae4bfe7f94caf434941e213b0",
+          "sha256_run2": "7ec0dbdefa5e2558343926ae5f98416c8553849ae4bfe7f94caf434941e213b0",
+          "identical": true,
+          "bytes": 897
+        }
+      },
+      "all_pass": true
+    }
+  },
+  "real_market_playback": {
+    "BTCUSDT": {
+      "run_ids": {
+        "A": "run_WX_EVENT_TREND_V0_1_BTCUSDT_A_1792170308",
+        "B": "run_WX_EVENT_TREND_V0_1_BTCUSDT_B_1792170308",
+        "C": "run_WX_EVENT_TREND_V0_1_BTCUSDT_C_1792170308"
+      },
+      "funnel_a": {
+        "boxes": 30,
+        "sweeps": 4,
+        "retests": 2,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 14,
+        "invalidated": 15,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "variant_A": {
+        "label": "BTCUSDT/variant_A",
+        "trades": 0,
+        "orders": 0,
+        "ledger_events": 1,
+        "equity_points": 17376,
+        "all_pass": true,
+        "checks": {
+          "C01_trade_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C02_order_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C03_net_pnl_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C04_equity_delta": {
+            "pass": true,
+            "detail": {
+              "equity_delta": 0.0,
+              "sum_net_pnl": 0.0
+            }
+          },
+          "C05_fee_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C06_funding_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C07_slippage_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C08_equity_curve_ends": {
+            "pass": true,
+            "detail": {
+              "head": 10000.0,
+              "tail": 10000.0,
+              "initial_equity": 10000.0,
+              "final_equity": 10000.0
+            }
+          },
+          "C09_identity_unique": {
+            "pass": true,
+            "detail": {
+              "unmatched": [],
+              "missing_identity_fields": [],
+              "trades": 0,
+              "orders": 0
+            }
+          },
+          "C10_candidate_trade_map": {
+            "pass": true,
+            "detail": {
+              "executed_candidates": 0,
+              "trades": 0,
+              "not_executed_with_order": []
+            }
+          },
+          "C11_position_pairs": {
+            "pass": true,
+            "detail": {
+              "POSITION_OPENED": 0,
+              "POSITION_CLOSED": 0,
+              "trades": 0
+            }
+          },
+          "C12_fill_events": {
+            "pass": true,
+            "detail": {
+              "ORDER_FILLED": 0,
+              "expected": 0
+            }
+          },
+          "C13_fee_events": {
+            "pass": true,
+            "detail": {
+              "FEE_CHARGED": 0,
+              "expected": 0
+            }
+          },
+          "C14_ledger_idempotent": {
+            "pass": true,
+            "detail": {
+              "events": 1,
+              "unique": 1
+            }
+          },
+          "C15_engine_identities": {
+            "pass": true,
+            "detail": {
+              "cash_identity_ok": true,
+              "equity_identity_ok": true,
+              "equity_curve_tail_matches_final": true
+            }
+          },
+          "C16_no_phantom_pnl": {
+            "pass": true,
+            "detail": {
+              "net_pnl": 0.0,
+              "final_equity": 10000.0
+            }
+          }
+        }
+      },
+      "variant_B": {
+        "label": "BTCUSDT/variant_B",
+        "trades": 0,
+        "orders": 0,
+        "ledger_events": 1,
+        "equity_points": 17376,
+        "all_pass": true,
+        "checks": {
+          "C01_trade_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C02_order_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C03_net_pnl_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C04_equity_delta": {
+            "pass": true,
+            "detail": {
+              "equity_delta": 0.0,
+              "sum_net_pnl": 0.0
+            }
+          },
+          "C05_fee_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C06_funding_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C07_slippage_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C08_equity_curve_ends": {
+            "pass": true,
+            "detail": {
+              "head": 10000.0,
+              "tail": 10000.0,
+              "initial_equity": 10000.0,
+              "final_equity": 10000.0
+            }
+          },
+          "C09_identity_unique": {
+            "pass": true,
+            "detail": {
+              "unmatched": [],
+              "missing_identity_fields": [],
+              "trades": 0,
+              "orders": 0
+            }
+          },
+          "C10_candidate_trade_map": {
+            "pass": true,
+            "detail": {
+              "executed_candidates": 0,
+              "trades": 0,
+              "not_executed_with_order": []
+            }
+          },
+          "C11_position_pairs": {
+            "pass": true,
+            "detail": {
+              "POSITION_OPENED": 0,
+              "POSITION_CLOSED": 0,
+              "trades": 0
+            }
+          },
+          "C12_fill_events": {
+            "pass": true,
+            "detail": {
+              "ORDER_FILLED": 0,
+              "expected": 0
+            }
+          },
+          "C13_fee_events": {
+            "pass": true,
+            "detail": {
+              "FEE_CHARGED": 0,
+              "expected": 0
+            }
+          },
+          "C14_ledger_idempotent": {
+            "pass": true,
+            "detail": {
+              "events": 1,
+              "unique": 1
+            }
+          },
+          "C15_engine_identities": {
+            "pass": true,
+            "detail": {
+              "cash_identity_ok": true,
+              "equity_identity_ok": true,
+              "equity_curve_tail_matches_final": true
+            }
+          },
+          "C16_no_phantom_pnl": {
+            "pass": true,
+            "detail": {
+              "net_pnl": 0.0,
+              "final_equity": 10000.0
+            }
+          }
+        }
+      },
+      "variant_C": {
+        "label": "BTCUSDT/variant_C",
+        "trades": 0,
+        "orders": 0,
+        "ledger_events": 1,
+        "equity_points": 17376,
+        "all_pass": true,
+        "checks": {
+          "C01_trade_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C02_order_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C03_net_pnl_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C04_equity_delta": {
+            "pass": true,
+            "detail": {
+              "equity_delta": 0.0,
+              "sum_net_pnl": 0.0
+            }
+          },
+          "C05_fee_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C06_funding_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C07_slippage_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C08_equity_curve_ends": {
+            "pass": true,
+            "detail": {
+              "head": 10000.0,
+              "tail": 10000.0,
+              "initial_equity": 10000.0,
+              "final_equity": 10000.0
+            }
+          },
+          "C09_identity_unique": {
+            "pass": true,
+            "detail": {
+              "unmatched": [],
+              "missing_identity_fields": [],
+              "trades": 0,
+              "orders": 0
+            }
+          },
+          "C10_candidate_trade_map": {
+            "pass": true,
+            "detail": {
+              "executed_candidates": 0,
+              "trades": 0,
+              "not_executed_with_order": []
+            }
+          },
+          "C11_position_pairs": {
+            "pass": true,
+            "detail": {
+              "POSITION_OPENED": 0,
+              "POSITION_CLOSED": 0,
+              "trades": 0
+            }
+          },
+          "C12_fill_events": {
+            "pass": true,
+            "detail": {
+              "ORDER_FILLED": 0,
+              "expected": 0
+            }
+          },
+          "C13_fee_events": {
+            "pass": true,
+            "detail": {
+              "FEE_CHARGED": 0,
+              "expected": 0
+            }
+          },
+          "C14_ledger_idempotent": {
+            "pass": true,
+            "detail": {
+              "events": 1,
+              "unique": 1
+            }
+          },
+          "C15_engine_identities": {
+            "pass": true,
+            "detail": {
+              "cash_identity_ok": true,
+              "equity_identity_ok": true,
+              "equity_curve_tail_matches_final": true
+            }
+          },
+          "C16_no_phantom_pnl": {
+            "pass": true,
+            "detail": {
+              "net_pnl": 0.0,
+              "final_equity": 10000.0
+            }
+          }
+        }
+      }
+    },
+    "ETHUSDT": {
+      "run_ids": {
+        "A": "run_WX_EVENT_TREND_V0_1_ETHUSDT_A_1792170310",
+        "B": "run_WX_EVENT_TREND_V0_1_ETHUSDT_B_1792170310",
+        "C": "run_WX_EVENT_TREND_V0_1_ETHUSDT_C_1792170310"
+      },
+      "funnel_a": {
+        "boxes": 30,
+        "sweeps": 10,
+        "retests": 4,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 12,
+        "invalidated": 17,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "variant_A": {
+        "label": "ETHUSDT/variant_A",
+        "trades": 0,
+        "orders": 0,
+        "ledger_events": 1,
+        "equity_points": 17376,
+        "all_pass": true,
+        "checks": {
+          "C01_trade_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C02_order_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C03_net_pnl_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C04_equity_delta": {
+            "pass": true,
+            "detail": {
+              "equity_delta": 0.0,
+              "sum_net_pnl": 0.0
+            }
+          },
+          "C05_fee_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C06_funding_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C07_slippage_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C08_equity_curve_ends": {
+            "pass": true,
+            "detail": {
+              "head": 10000.0,
+              "tail": 10000.0,
+              "initial_equity": 10000.0,
+              "final_equity": 10000.0
+            }
+          },
+          "C09_identity_unique": {
+            "pass": true,
+            "detail": {
+              "unmatched": [],
+              "missing_identity_fields": [],
+              "trades": 0,
+              "orders": 0
+            }
+          },
+          "C10_candidate_trade_map": {
+            "pass": true,
+            "detail": {
+              "executed_candidates": 0,
+              "trades": 0,
+              "not_executed_with_order": []
+            }
+          },
+          "C11_position_pairs": {
+            "pass": true,
+            "detail": {
+              "POSITION_OPENED": 0,
+              "POSITION_CLOSED": 0,
+              "trades": 0
+            }
+          },
+          "C12_fill_events": {
+            "pass": true,
+            "detail": {
+              "ORDER_FILLED": 0,
+              "expected": 0
+            }
+          },
+          "C13_fee_events": {
+            "pass": true,
+            "detail": {
+              "FEE_CHARGED": 0,
+              "expected": 0
+            }
+          },
+          "C14_ledger_idempotent": {
+            "pass": true,
+            "detail": {
+              "events": 1,
+              "unique": 1
+            }
+          },
+          "C15_engine_identities": {
+            "pass": true,
+            "detail": {
+              "cash_identity_ok": true,
+              "equity_identity_ok": true,
+              "equity_curve_tail_matches_final": true
+            }
+          },
+          "C16_no_phantom_pnl": {
+            "pass": true,
+            "detail": {
+              "net_pnl": 0.0,
+              "final_equity": 10000.0
+            }
+          }
+        }
+      },
+      "variant_B": {
+        "label": "ETHUSDT/variant_B",
+        "trades": 0,
+        "orders": 0,
+        "ledger_events": 1,
+        "equity_points": 17376,
+        "all_pass": true,
+        "checks": {
+          "C01_trade_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C02_order_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C03_net_pnl_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C04_equity_delta": {
+            "pass": true,
+            "detail": {
+              "equity_delta": 0.0,
+              "sum_net_pnl": 0.0
+            }
+          },
+          "C05_fee_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C06_funding_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C07_slippage_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C08_equity_curve_ends": {
+            "pass": true,
+            "detail": {
+              "head": 10000.0,
+              "tail": 10000.0,
+              "initial_equity": 10000.0,
+              "final_equity": 10000.0
+            }
+          },
+          "C09_identity_unique": {
+            "pass": true,
+            "detail": {
+              "unmatched": [],
+              "missing_identity_fields": [],
+              "trades": 0,
+              "orders": 0
+            }
+          },
+          "C10_candidate_trade_map": {
+            "pass": true,
+            "detail": {
+              "executed_candidates": 0,
+              "trades": 0,
+              "not_executed_with_order": []
+            }
+          },
+          "C11_position_pairs": {
+            "pass": true,
+            "detail": {
+              "POSITION_OPENED": 0,
+              "POSITION_CLOSED": 0,
+              "trades": 0
+            }
+          },
+          "C12_fill_events": {
+            "pass": true,
+            "detail": {
+              "ORDER_FILLED": 0,
+              "expected": 0
+            }
+          },
+          "C13_fee_events": {
+            "pass": true,
+            "detail": {
+              "FEE_CHARGED": 0,
+              "expected": 0
+            }
+          },
+          "C14_ledger_idempotent": {
+            "pass": true,
+            "detail": {
+              "events": 1,
+              "unique": 1
+            }
+          },
+          "C15_engine_identities": {
+            "pass": true,
+            "detail": {
+              "cash_identity_ok": true,
+              "equity_identity_ok": true,
+              "equity_curve_tail_matches_final": true
+            }
+          },
+          "C16_no_phantom_pnl": {
+            "pass": true,
+            "detail": {
+              "net_pnl": 0.0,
+              "final_equity": 10000.0
+            }
+          }
+        }
+      },
+      "variant_C": {
+        "label": "ETHUSDT/variant_C",
+        "trades": 0,
+        "orders": 0,
+        "ledger_events": 1,
+        "equity_points": 17376,
+        "all_pass": true,
+        "checks": {
+          "C01_trade_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C02_order_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C03_net_pnl_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C04_equity_delta": {
+            "pass": true,
+            "detail": {
+              "equity_delta": 0.0,
+              "sum_net_pnl": 0.0
+            }
+          },
+          "C05_fee_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C06_funding_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C07_slippage_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C08_equity_curve_ends": {
+            "pass": true,
+            "detail": {
+              "head": 10000.0,
+              "tail": 10000.0,
+              "initial_equity": 10000.0,
+              "final_equity": 10000.0
+            }
+          },
+          "C09_identity_unique": {
+            "pass": true,
+            "detail": {
+              "unmatched": [],
+              "missing_identity_fields": [],
+              "trades": 0,
+              "orders": 0
+            }
+          },
+          "C10_candidate_trade_map": {
+            "pass": true,
+            "detail": {
+              "executed_candidates": 0,
+              "trades": 0,
+              "not_executed_with_order": []
+            }
+          },
+          "C11_position_pairs": {
+            "pass": true,
+            "detail": {
+              "POSITION_OPENED": 0,
+              "POSITION_CLOSED": 0,
+              "trades": 0
+            }
+          },
+          "C12_fill_events": {
+            "pass": true,
+            "detail": {
+              "ORDER_FILLED": 0,
+              "expected": 0
+            }
+          },
+          "C13_fee_events": {
+            "pass": true,
+            "detail": {
+              "FEE_CHARGED": 0,
+              "expected": 0
+            }
+          },
+          "C14_ledger_idempotent": {
+            "pass": true,
+            "detail": {
+              "events": 1,
+              "unique": 1
+            }
+          },
+          "C15_engine_identities": {
+            "pass": true,
+            "detail": {
+              "cash_identity_ok": true,
+              "equity_identity_ok": true,
+              "equity_curve_tail_matches_final": true
+            }
+          },
+          "C16_no_phantom_pnl": {
+            "pass": true,
+            "detail": {
+              "net_pnl": 0.0,
+              "final_equity": 10000.0
+            }
+          }
+        }
+      }
+    },
+    "SOLUSDT": {
+      "run_ids": {
+        "A": "run_WX_EVENT_TREND_V0_1_SOLUSDT_A_1792170312",
+        "B": "run_WX_EVENT_TREND_V0_1_SOLUSDT_B_1792170312",
+        "C": "run_WX_EVENT_TREND_V0_1_SOLUSDT_C_1792170312"
+      },
+      "funnel_a": {
+        "boxes": 29,
+        "sweeps": 6,
+        "retests": 1,
+        "breakouts": 0,
+        "volume_rejected": 0,
+        "oi_rejected": 0,
+        "oi_unavailable": 0,
+        "expired": 15,
+        "invalidated": 12,
+        "candidates": 0,
+        "executed_trades": 0
+      },
+      "variant_A": {
+        "label": "SOLUSDT/variant_A",
+        "trades": 0,
+        "orders": 0,
+        "ledger_events": 1,
+        "equity_points": 17376,
+        "all_pass": true,
+        "checks": {
+          "C01_trade_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C02_order_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C03_net_pnl_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C04_equity_delta": {
+            "pass": true,
+            "detail": {
+              "equity_delta": 0.0,
+              "sum_net_pnl": 0.0
+            }
+          },
+          "C05_fee_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C06_funding_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C07_slippage_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C08_equity_curve_ends": {
+            "pass": true,
+            "detail": {
+              "head": 10000.0,
+              "tail": 10000.0,
+              "initial_equity": 10000.0,
+              "final_equity": 10000.0
+            }
+          },
+          "C09_identity_unique": {
+            "pass": true,
+            "detail": {
+              "unmatched": [],
+              "missing_identity_fields": [],
+              "trades": 0,
+              "orders": 0
+            }
+          },
+          "C10_candidate_trade_map": {
+            "pass": true,
+            "detail": {
+              "executed_candidates": 0,
+              "trades": 0,
+              "not_executed_with_order": []
+            }
+          },
+          "C11_position_pairs": {
+            "pass": true,
+            "detail": {
+              "POSITION_OPENED": 0,
+              "POSITION_CLOSED": 0,
+              "trades": 0
+            }
+          },
+          "C12_fill_events": {
+            "pass": true,
+            "detail": {
+              "ORDER_FILLED": 0,
+              "expected": 0
+            }
+          },
+          "C13_fee_events": {
+            "pass": true,
+            "detail": {
+              "FEE_CHARGED": 0,
+              "expected": 0
+            }
+          },
+          "C14_ledger_idempotent": {
+            "pass": true,
+            "detail": {
+              "events": 1,
+              "unique": 1
+            }
+          },
+          "C15_engine_identities": {
+            "pass": true,
+            "detail": {
+              "cash_identity_ok": true,
+              "equity_identity_ok": true,
+              "equity_curve_tail_matches_final": true
+            }
+          },
+          "C16_no_phantom_pnl": {
+            "pass": true,
+            "detail": {
+              "net_pnl": 0.0,
+              "final_equity": 10000.0
+            }
+          }
+        }
+      },
+      "variant_B": {
+        "label": "SOLUSDT/variant_B",
+        "trades": 0,
+        "orders": 0,
+        "ledger_events": 1,
+        "equity_points": 17376,
+        "all_pass": true,
+        "checks": {
+          "C01_trade_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C02_order_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C03_net_pnl_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C04_equity_delta": {
+            "pass": true,
+            "detail": {
+              "equity_delta": 0.0,
+              "sum_net_pnl": 0.0
+            }
+          },
+          "C05_fee_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C06_funding_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C07_slippage_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C08_equity_curve_ends": {
+            "pass": true,
+            "detail": {
+              "head": 10000.0,
+              "tail": 10000.0,
+              "initial_equity": 10000.0,
+              "final_equity": 10000.0
+            }
+          },
+          "C09_identity_unique": {
+            "pass": true,
+            "detail": {
+              "unmatched": [],
+              "missing_identity_fields": [],
+              "trades": 0,
+              "orders": 0
+            }
+          },
+          "C10_candidate_trade_map": {
+            "pass": true,
+            "detail": {
+              "executed_candidates": 0,
+              "trades": 0,
+              "not_executed_with_order": []
+            }
+          },
+          "C11_position_pairs": {
+            "pass": true,
+            "detail": {
+              "POSITION_OPENED": 0,
+              "POSITION_CLOSED": 0,
+              "trades": 0
+            }
+          },
+          "C12_fill_events": {
+            "pass": true,
+            "detail": {
+              "ORDER_FILLED": 0,
+              "expected": 0
+            }
+          },
+          "C13_fee_events": {
+            "pass": true,
+            "detail": {
+              "FEE_CHARGED": 0,
+              "expected": 0
+            }
+          },
+          "C14_ledger_idempotent": {
+            "pass": true,
+            "detail": {
+              "events": 1,
+              "unique": 1
+            }
+          },
+          "C15_engine_identities": {
+            "pass": true,
+            "detail": {
+              "cash_identity_ok": true,
+              "equity_identity_ok": true,
+              "equity_curve_tail_matches_final": true
+            }
+          },
+          "C16_no_phantom_pnl": {
+            "pass": true,
+            "detail": {
+              "net_pnl": 0.0,
+              "final_equity": 10000.0
+            }
+          }
+        }
+      },
+      "variant_C": {
+        "label": "SOLUSDT/variant_C",
+        "trades": 0,
+        "orders": 0,
+        "ledger_events": 1,
+        "equity_points": 17376,
+        "all_pass": true,
+        "checks": {
+          "C01_trade_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C02_order_count": {
+            "pass": true,
+            "detail": {
+              "summary": 0,
+              "actual": 0
+            }
+          },
+          "C03_net_pnl_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C04_equity_delta": {
+            "pass": true,
+            "detail": {
+              "equity_delta": 0.0,
+              "sum_net_pnl": 0.0
+            }
+          },
+          "C05_fee_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C06_funding_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C07_slippage_sum": {
+            "pass": true,
+            "detail": {
+              "summary": 0.0,
+              "sum_trades": 0.0
+            }
+          },
+          "C08_equity_curve_ends": {
+            "pass": true,
+            "detail": {
+              "head": 10000.0,
+              "tail": 10000.0,
+              "initial_equity": 10000.0,
+              "final_equity": 10000.0
+            }
+          },
+          "C09_identity_unique": {
+            "pass": true,
+            "detail": {
+              "unmatched": [],
+              "missing_identity_fields": [],
+              "trades": 0,
+              "orders": 0
+            }
+          },
+          "C10_candidate_trade_map": {
+            "pass": true,
+            "detail": {
+              "executed_candidates": 0,
+              "trades": 0,
+              "not_executed_with_order": []
+            }
+          },
+          "C11_position_pairs": {
+            "pass": true,
+            "detail": {
+              "POSITION_OPENED": 0,
+              "POSITION_CLOSED": 0,
+              "trades": 0
+            }
+          },
+          "C12_fill_events": {
+            "pass": true,
+            "detail": {
+              "ORDER_FILLED": 0,
+              "expected": 0
+            }
+          },
+          "C13_fee_events": {
+            "pass": true,
+            "detail": {
+              "FEE_CHARGED": 0,
+              "expected": 0
+            }
+          },
+          "C14_ledger_idempotent": {
+            "pass": true,
+            "detail": {
+              "events": 1,
+              "unique": 1
+            }
+          },
+          "C15_engine_identities": {
+            "pass": true,
+            "detail": {
+              "cash_identity_ok": true,
+              "equity_identity_ok": true,
+              "equity_curve_tail_matches_final": true
+            }
+          },
+          "C16_no_phantom_pnl": {
+            "pass": true,
+            "detail": {
+              "net_pnl": 0.0,
+              "final_equity": 10000.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "summary": {
+    "reconciliation_1_runs_total": 11,
+    "reconciliation_1_all_pass": true,
+    "reconciliation_2_all_pass": true,
+    "synthetic_trades_single": 1,
+    "synthetic_trades_two": 2,
+    "real_market_candidates": {
+      "BTCUSDT": 0,
+      "ETHUSDT": 0,
+      "SOLUSDT": 0
+    }
+  }
+}

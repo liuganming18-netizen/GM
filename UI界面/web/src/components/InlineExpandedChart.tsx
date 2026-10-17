@@ -296,8 +296,8 @@ const InlineExpandedChartInner: React.FC<InlineExpandedChartProps> = ({
     () => (isOkx ? ALL_TIMEFRAMES.filter((tf) => tf !== '8h') : ALL_TIMEFRAMES),
     [isOkx],
   );
-  /** 默认周期 = 当前**最细**的可得周期（1m 已永久删除，故为 5m）；已存周期若已不再提供则回落到它。 */
-  const [selectedTf, setSelectedTf] = useState<Timeframe>(() => readStoredTimeframe(token.id)?.timeframe ?? '5m');
+  /** 默认周期优先展示日线（1d）；已存周期若已不再提供则回落到 1d。 */
+  const [selectedTf, setSelectedTf] = useState<Timeframe>(() => readStoredTimeframe(token.id)?.timeframe ?? '1d');
   const [oiUnit, setOiUnit] = useState<'amount' | 'usd'>('amount');
   /** 十字线悬停态：由官方库的 `subscribeCrosshairMove` 驱动（不再是数组下标） */
   const [hover, setHover] = useState<ChartHover | null>(null);

@@ -30,7 +30,7 @@
 
 import { ApiError, apiGet, apiPost } from './client';
 
-export const LAB_STRATEGY_ID = 'WX_OI_RESONANCE_V1';
+export const LAB_STRATEGY_ID = 'WX_EVENT_TREND_V0_1';
 export const LAB_CONTRACT_VERSION = 'bt_api_v1';
 
 /** 研究回测信封（**不含**旧 Envelope 的 account_id / rule_version / data_version 等）。 */
@@ -500,6 +500,19 @@ export interface LabChartCandle {
   v: number;
 }
 
+/**
+ * `chart.candles` 的**线上实际格式**是长度 6 的数组元组，不是对象。
+ *
+ * 事实（2026-10-17 实测，`回测日志/event_trend_v0_1/runs/<run>/chart.json` 与
+ * `GET /api/v1/backtests/{id}/chart` 一致）：
+ *   candles[0] === [1704067200000, 11.665, 11.719, 11.652, 11.709, 12762.9]
+ *   顺序 = [t, o, h, l, c, v]
+ * 而 `backtest_runner.py` / `backtest_api.py` 的源码写的是 `{"t":…,"o":…}` 对象 ⇒
+ * **落盘格式与源码不一致**（落盘端被压缩过，源码未同步）。前端两种都接受，
+ * 由 `labCandlesToBars` 统一归一化 —— 这样落盘端无论往哪边收敛都不会再画不出 K 线。
+ */
+export type LabChartCandleTuple = [number, number, number, number, number, number];
+
 export interface LabChartSignal {
   t: number;
   kind: string;
@@ -539,7 +552,7 @@ export interface LabChart {
   symbol: string;
   exec_timeframe: string;
   window: { start_ms: number; end_ms: number };
-  candles: LabChartCandle[];
+  candles: (LabChartCandle | LabChartCandleTuple)[];
   signals: LabChartSignal[];
   trades: LabChartTrade[];
   funding_events: LabChartFundingEvent[];
@@ -792,11 +805,25 @@ export interface LabDefaults {
 }
 
 const EMPTY_DEFAULTS: LabDefaults = {
-  signal_params: null, exec_params: null,
-  window_start_ms: null, window_end_ms: null,
-  symbol: null, exchange: null, market: null,
-  signal_timeframe: null, exec_timeframe: null,
-  params_from_run: null, window_from_run: null,
+  signal_params: null,
+  exec_params: {
+    initial_equity: 2000.0,
+    risk_per_trade: 0.005,
+    fee_rate: 0.0005,
+    maker_fee_rate: 0.0002,
+    taker_fee_rate: 0.0005,
+    slippage_bps: 3.0,
+    max_concurrent_trades: 3,
+  },
+  window_start_ms: 1704067200000, // 2024-01-01 00:00:00 UTC
+  window_end_ms: 1719705600000,   // 2024-06-30 00:00:00 UTC
+  symbol: 'BTCUSDT',
+  exchange: 'binance',
+  market: 'um',
+  signal_timeframe: '1h',
+  exec_timeframe: '15m',
+  params_from_run: null,
+  window_from_run: null,
 };
 
 /**

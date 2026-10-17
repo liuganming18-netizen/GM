@@ -1,0 +1,46 @@
+{
+  "verified_at": "2026-10-16T23:25:00+08:00",
+  "strategy_rule": "WX_EVENT_TREND_V0_1",
+  "strategy_frozen_hash": "1f1167de35412cb7d1d3608d8069c4108324f7641de7c369bf94882f1679a8ab",
+  "input_sample": {
+    "symbol": "SOLUSDT",
+    "file": "/Users/boos/Desktop/威科夫因子共振趋势/回测日志/oi_resonance_v1/runs/bt_20261016T101649Z_4aa21d94/inputs/signal_bars.csv",
+    "sha256": "3f6992759ccd0bfb6be501a7025d36aebf6aa8462525494f021500a77cd780ad",
+    "total_1h_bars": 970,
+    "total_oi_records": 11588,
+    "total_4h_bars_warmed": 492,
+    "range_start": "2026-09-06T00:00:00+00:00",
+    "range_end": "2026-10-16T09:00:00+00:00"
+  },
+  "event_funnel": {
+    "box_formed_count": 6,
+    "expired_count": 3,
+    "invalidated_count": 3,
+    "candidates_count": 0,
+    "total_state_transitions": 13
+  },
+  "idempotence_and_robustness": {
+    "repeat_run_exact_match": true,
+    "duplicate_bar_injection_count": 99,
+    "duplicate_injection_exact_match": true,
+    "crash_recovery_exact_match": true
+  },
+  "oi_ablation": {
+    "oi_growth_threshold": 0.02,
+    "low_oi_candidate_rejected_in_variant_a": true,
+    "low_oi_candidate_passed_in_variant_b": true,
+    "decision_difference_verified": true
+  },
+  "trading_core_integration": {
+    "trading_core_version": "trading_engine_v1.0.0",
+    "variant_a_net_pnl": 42.979,
+    "variant_c_net_pnl": 41.5431,
+    "variant_c_cost_stress_verified": true
+  },
+  "gate_status": {
+    "work_06_gate": "FAIL",
+    "work_07_engine_gate": "PASS",
+    "work_07_research_gate": "PENDING_LONGER_HISTORY",
+    "live_allowed": false
+  }
+}

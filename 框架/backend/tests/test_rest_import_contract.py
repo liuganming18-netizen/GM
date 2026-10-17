@@ -23,16 +23,21 @@
 import importlib.util as _ilu_w1
 from pathlib import Path as _PathW1
 
-import pytest as _pytest_w1
-
 MIG_W1 = _PathW1(__file__).resolve().parents[3].joinpath('数据', '研究输入', '外部迁移_2026-10-16')
 _missing_w1 = [str(p) for p in () if not p.exists()]
 _missing_w1 += [m for m in ('_pool_restfill',) if _ilu_w1.find_spec(m) is None]
 if _missing_w1:
-    _pytest_w1.skip(
+    # 统一用模块级 `unittest.SkipTest`（2026-10-17 实测）：
+    #   · `unittest discover` ⇒ `OK (skipped=1)`、退出码 0；
+    #   · `pytest`           ⇒ `1 skipped`、退出码 0。
+    # 旧写法 `pytest.skip(allow_module_level=True)` 抛的是 `Skipped`，**不是**
+    # `unittest.SkipTest` 子类 ⇒ `unittest discover` 把它记成 **ERROR**（而非 skipped），
+    # 令 `run_tests.sh` 门禁**永远非 0**。改用 `SkipTest` 后两种 runner 语义一致，
+    # 仍是「显式 SKIP，非 PASS」。
+    import unittest as _ut_w1
+    raise _ut_w1.SkipTest(
         "W1: 旧工作区遗留组件未迁移且禁止恢复 ⇒ 显式 SKIP（非 PASS）: "
-        + ", ".join(_missing_w1),
-        allow_module_level=True,
+        + ", ".join(_missing_w1)
     )
 # ── W1-GUARD-END ──
 

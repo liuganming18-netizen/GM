@@ -27,14 +27,14 @@ except Exception:                                         # noqa: BLE001
         import legacy_retirement as _RET                  # type: ignore
     except Exception:                                     # noqa: BLE001
         class _RET:                                       # type: ignore
-            RETIRED_STRATEGY_KEYS = ("3a", "3b", "3c", "3d", "A", "B")
+            RETIRED_STRATEGY_KEYS = ("3a", "3b", "3c", "3d", "A", "B", "wx_oi_resonance_v1", "WX_OI_RESONANCE_V1")
             RETIRED_AT = "2026-10-16"
-            SUCCESSOR_STRATEGY_ID = "WX_OI_RESONANCE_V1"
-            RETIREMENT_REASON = "旧 F_WX（3a–3d）与旧 A/B 已彻底退役清除"
+            SUCCESSOR_STRATEGY_ID = "WX_EVENT_TREND_V0_1"
+            RETIREMENT_REASON = "旧策略与旧候选已退役归档"
 
-# ── 单一「当前唯一策略」元数据（WORK-04B 核心收敛）───────────────────────────
-CURRENT_BACKTEST_KEY = "wx_oi_resonance_v1"
-CURRENT_BACKTEST_ID = "WX_OI_RESONANCE_V1"
+# ── 单一「当前唯一策略」元数据（升级为 WX_EVENT_TREND_V0_1）───────────────────
+CURRENT_BACKTEST_KEY = "wx_event_trend_v0_1"
+CURRENT_BACKTEST_ID = "WX_EVENT_TREND_V0_1"
 _BACKTEST_CACHE = {"entry": None, "error": None, "loaded": False}
 
 
@@ -46,20 +46,20 @@ def backtest_entry(key=None):
     try:
         import sys
         from pathlib import Path
-        strat_dir = Path(__file__).resolve().parents[3] / "策略"
-        if str(strat_dir) not in sys.path:
-            sys.path.insert(0, str(strat_dir))
-        from WyckoffMaster.oi_resonance_v1 import registry_entry as _re   # type: ignore
-        _BACKTEST_CACHE["entry"] = _re
-    except Exception as exc:                                          # noqa: BLE001
+        backend_dir = Path(__file__).resolve().parents[1]
+        if str(backend_dir) not in sys.path:
+            sys.path.insert(0, str(backend_dir))
+        import event_trend_bridge as _et_bridge
+        _BACKTEST_CACHE["entry"] = _et_bridge
+    except Exception as exc:  # noqa: BLE001
         _BACKTEST_CACHE["error"] = f"{type(exc).__name__}: {exc}"
     return _BACKTEST_CACHE["entry"], _BACKTEST_CACHE["error"]
 
 
-# 当前唯一启用集为新策略 WX_OI_RESONANCE_V1
+# 当前唯一启用集为新策略 WX_EVENT_TREND_V0_1
 CURRENT_RUN_KEYS = (CURRENT_BACKTEST_KEY,)
-# 旧策略键（3a–3d、A、B）已退役，仅存静态标识，无运行实体
-LEGACY_KEYS = ("3a", "3b", "3c", "3d", "A", "B")
+# 旧策略键（3a–3d、A、B、wx_oi_resonance_v1）已退役
+LEGACY_KEYS = ("3a", "3b", "3c", "3d", "A", "B", "wx_oi_resonance_v1")
 
 _new_mod, _ = backtest_entry()
 REGISTRY = {}
@@ -146,27 +146,7 @@ def list_legacy(con):
 #   · 本函数只**新增**一份「当前回测策略」元数据，供回测接口与回执引用。
 #
 # 候选包依赖 numpy/pandas ⇒ **懒加载 + 失败如实报缺**，绝不在导入期拖垮后端。
-CURRENT_BACKTEST_KEY = "wx_oi_resonance_v1"
-CURRENT_BACKTEST_ID = "WX_OI_RESONANCE_V1"
-_BACKTEST_CACHE = {"entry": None, "error": None, "loaded": False}
-
-
-def backtest_entry(key=None):
-    """懒加载候选包注册表对象。不可用 ⇒ `(None, 原因)`（不静默降级）。"""
-    if _BACKTEST_CACHE["loaded"]:
-        return _BACKTEST_CACHE["entry"], _BACKTEST_CACHE["error"]
-    _BACKTEST_CACHE["loaded"] = True
-    try:
-        import sys
-        from pathlib import Path
-        strat_dir = Path(__file__).resolve().parents[3] / "策略"
-        if str(strat_dir) not in sys.path:
-            sys.path.insert(0, str(strat_dir))
-        from WyckoffMaster.oi_resonance_v1 import registry_entry as _re   # type: ignore
-        _BACKTEST_CACHE["entry"] = _re
-    except Exception as exc:                                          # noqa: BLE001
-        _BACKTEST_CACHE["error"] = f"{type(exc).__name__}: {exc}"
-    return _BACKTEST_CACHE["entry"], _BACKTEST_CACHE["error"]
+# ── 当前回测策略元数据描述 ────────────────────────────────────────────────
 
 
 def describe_current_backtest(con=None):

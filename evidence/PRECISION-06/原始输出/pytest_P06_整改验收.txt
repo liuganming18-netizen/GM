@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.12, pytest-9.1.1, pluggy-1.6.0 -- /Users/boos/.workbuddy-ai/binaries/python/envs/default/bin/python
+rootdir: /Users/boos/Desktop/威科夫因子共振趋势
+collecting ... collected 6 items
+
+evidence/PRECISION-06/隔离复现/test_p06_整改验收草案.py::test_FIX_01_step_coarser_than_price_is_rejected XFAIL [ 16%]
+evidence/PRECISION-06/隔离复现/test_p06_整改验收草案.py::test_FIX_02_out_of_range_fill_is_rejected_end_to_end XFAIL [ 33%]
+evidence/PRECISION-06/隔离复现/test_p06_整改验收草案.py::test_GUARD_01_correct_tick_still_fills_inside_bar PASSED [ 50%]
+evidence/PRECISION-06/隔离复现/test_p06_整改验收草案.py::test_GUARD_02_zero_price_exit_still_rejected PASSED [ 66%]
+evidence/PRECISION-06/隔离复现/test_p06_整改验收草案.py::test_GUARD_03_missing_spec_still_refused PASSED [ 83%]
+evidence/PRECISION-06/隔离复现/test_p06_整改验收草案.py::test_GUARD_04_historical_specification_stays_unverified PASSED [100%]
+
+========================= 4 passed, 2 xfailed in 0.32s =========================

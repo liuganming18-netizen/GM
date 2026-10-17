@@ -1,0 +1,80 @@
+PRECISION-07 / 工具 10 · XMR 与 SOON 逐段订正
+滑点参数：{'XMRUSDT': {'slippage_bps': 3.0, 'step': '0.01'}, 'SOONUSDT': {'slippage_bps': 3.0, 'step': '0.01'}}（来源 inputs.json params，缺省 3.0）
+
+[XMRUSDT · 入场] 2024-05-05T22:15:00Z
+  实证：action=open side=BUY reason=entry type=MARKET status=FILLED
+  交叉：fill_price=132.92000000000002 action=open
+  参考价 132.88 ← bar.open（engine.py:441 raw_open）
+  滑点后 132.919864（3.0bps，Δ=+0.0398640000）
+  取整后 132.92（step=0.01）  记录 132.92000000000002  复算：True（float 尾巴（值等价，差≤1e-9））
+  K线 O=132.88 H=132.97 L=132.21 C=132.25  → [132.21, 132.97]
+  越界 0.0（0.000000%）方向=inside
+  拆解：滑点段 0.0（0.00%）+ 取整段 0.0（0.00%）
+  容差 raw×slip = 0.0398640000；越界>容差：False
+  R7-零容差=允许  R7-容差=滑点=允许  R7-容差=滑点+1档=允许
+  三段分类：inside（滑点段已越界=False）
+  → 区间内（无越界，不涉及拒绝）
+  P06 原分类：未在报告正文分类（仅在表3b 出现）
+
+[XMRUSDT · 出场] 2024-05-15T22:15:00Z
+  实证：action=exit_max_holding side=SELL reason=max_holding_expired type=STOP_MARKET status=FILLED
+  交叉：fill_price=133.93 action=exit_max_holding
+  参考价 133.98 ← bar.open（reason=max_holding_expired，到期/缺口按开盘价）
+  滑点后 133.939806（3.0bps，Δ=-0.0401940000）
+  取整后 133.93（step=0.01）  记录 133.93  复算：True（逐位一致）
+  K线 O=133.98 H=134.36 L=133.98 C=134.2  → [133.98, 134.36]
+  越界 0.05（0.037319%）方向=below_low
+  拆解：滑点段 0.040194（80.39%）+ 取整段 0.009806（19.61%）
+  容差 raw×slip = 0.0401940000；越界>容差：True
+  R7-零容差=拒绝  R7-容差=滑点=拒绝  R7-容差=滑点+1档=允许
+  三段分类：slip_dominant（滑点段已越界=True）
+  → 滑点主导（该 K 线容不下 3bps）→ 越界即拒，标记 slippage_exceeds_bar_range
+  P06 原分类：B 类「滑点导致」→ 不该拒
+
+[SOONUSDT · 入场] 2025-07-31T08:15:00Z
+  实证：action=open side=BUY reason=entry type=MARKET status=FILLED
+  交叉：fill_price=0.16 action=open
+  参考价 0.15557 ← bar.open（engine.py:441 raw_open）
+  滑点后 0.155616671（3.0bps，Δ=+0.0000466710）
+  取整后 0.16（step=0.01）  记录 0.16  复算：True（逐位一致）
+  K线 O=0.15557 H=0.15557 L=0.15358 C=0.15448  → [0.15358, 0.15557]
+  越界 0.00443（2.847593%）方向=above_high
+  拆解：滑点段 4.6671e-05（1.05%）+ 取整段 0.004383329（98.95%）
+  容差 raw×slip = 0.0000466710；越界>容差：True
+  R7-零容差=拒绝  R7-容差=滑点=拒绝  R7-容差=滑点+1档=允许
+  三段分类：round_dominant（滑点段已越界=True）
+  → 取整主导 → 越界即拒（R7 零容差）；且滑点后已越界，该 K 线容不下 3bps
+  P06 原分类：未在报告正文分类（仅在表3b 出现）
+
+[SOONUSDT · 出场] 2025-08-10T08:15:00Z
+  实证：action=exit_max_holding side=SELL reason=max_holding_expired type=STOP_MARKET status=FILLED
+  交叉：fill_price=0.5 action=exit_max_holding
+  参考价 0.50549 ← bar.open（reason=max_holding_expired，到期/缺口按开盘价）
+  滑点后 0.505338353（3.0bps，Δ=-0.0001516470）
+  取整后 0.5（step=0.01）  记录 0.5  复算：True（逐位一致）
+  K线 O=0.50549 H=0.51097 L=0.4903 C=0.50227  → [0.4903, 0.51097]
+  越界 0.0（0.000000%）方向=inside
+  拆解：滑点段 0.0（0.00%）+ 取整段 0.0（0.00%）
+  容差 raw×slip = 0.0001516470；越界>容差：False
+  R7-零容差=允许  R7-容差=滑点=允许  R7-容差=滑点+1档=允许
+  三段分类：inside（滑点段已越界=False）
+  → 区间内（无越界，不涉及拒绝）
+  P06 原分类：B 类「滑点导致」→ 不该拒（越界 2.8%）
+
+关键断言：
+  [OK] XMRUSDT-入场 复算逐位一致
+  [OK] XMRUSDT-出场 复算逐位一致
+  [OK] SOONUSDT-入场 复算逐位一致
+  [OK] SOONUSDT-出场 复算逐位一致
+  [OK] SOON 入场越界 2.85% 左右（P06 误记为出场）
+  [OK] SOON 出场在区间内（P06 记为越界 2.8%）
+  [OK] XMR 出场越界 > 容差（P06 归为不该拒）
+  [OK] XMR 出场滑点段已越界（非纯取整）
+  [OK] XMR 出场滑点主导（滑点占越界 > 50%）
+  [OK] SOON 入场取整主导（取整占越界 > 50%）
+  [OK] SOON 入场取整占越界 > 98%
+  [OK] XMR 出场滑点占越界 > 80%
+  [OK] R7 零容差下：区间内的腿全部允许
+  [OK] R7 零容差下：越界的腿全部拒绝
+
+断言汇总：全部通过（14/14）

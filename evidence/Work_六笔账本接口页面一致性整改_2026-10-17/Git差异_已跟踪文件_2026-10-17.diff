@@ -1,0 +1,1921 @@
+diff --git "a/UI\347\225\214\351\235\242/web/src/App.tsx" "b/UI\347\225\214\351\235\242/web/src/App.tsx"
+index 6c3df20..0b07262 100644
+--- "a/UI\347\225\214\351\235\242/web/src/App.tsx"
++++ "b/UI\347\225\214\351\235\242/web/src/App.tsx"
+@@ -28,7 +28,16 @@ import {
+ } from 'lucide-react';
+ 
+ export default function App() {
+-  const [currentNav, setCurrentNav] = useState('workbench');
++  /* 深链：`?run=<run_id>` ⇒ 直接落在「回测复盘」并打开该 run（由 BacktestWorkbench 读取）。
++   * 用途：⑥ 实验记录列表只取最近 50 条且排序不稳定，指定的 run 可能不在列表里
++   * ⇒ 深链是「打开某一笔」的确定性入口（验收/复现用）。无该参数时行为完全不变。 */
++  const [currentNav, setCurrentNav] = useState(() => {
++    try {
++      return new URLSearchParams(window.location.search).get('run') ? 'backtest' : 'workbench';
++    } catch {
++      return 'workbench';
++    }
++  });
+ 
+   // 真实数据：全池行情 + 信号 + 顶部总览聚合；刷新由数据层按 5s 周期驱动。
+   const {
+diff --git "a/UI\347\225\214\351\235\242/web/src/components/BacktestWorkbench.tsx" "b/UI\347\225\214\351\235\242/web/src/components/BacktestWorkbench.tsx"
+index b7d1dc0..4066b8b 100644
+--- "a/UI\347\225\214\351\235\242/web/src/components/BacktestWorkbench.tsx"
++++ "b/UI\347\225\214\351\235\242/web/src/components/BacktestWorkbench.tsx"
+@@ -491,8 +491,14 @@ function parseStopTrace(raw: string | null | undefined): StopTracePoint[] {
+     const arr = JSON.parse(raw);
+     if (!Array.isArray(arr)) return [];
+     return arr
+-      .filter((p) => p && Number.isFinite(p.ts) && Number.isFinite(p.stop))
+-      .map((p) => ({ ts: p.ts as number, stop: p.stop as number, reason: String(p.reason ?? '') }));
++      // 字段契约兼容：官方 `stop_trace_json` 用 `t`（毫秒），历史行可能仍是 `ts`。
++      // 两者都接受 ⇒ 上游往哪边收敛都能显示；都没有的点丢弃（不猜时间）。
++      .filter((p) => p && (Number.isFinite(p.t) || Number.isFinite(p.ts)) && Number.isFinite(p.stop))
++      .map((p) => ({
++        ts: (Number.isFinite(p.t) ? p.t : p.ts) as number,
++        stop: p.stop as number,
++        reason: String(p.reason ?? ''),
++      }));
+   } catch {
+     return [];
+   }
+@@ -530,7 +536,7 @@ const LabTradeDetailPanel: React.FC<{ detail: LabTradeDetail | null; loading: bo
+         <KV k="持仓小时" v={fmtNum(t.holding_hours, 2)} />
+         <KV k="毛盈亏" v={fmtSignedUsd(t.gross_pnl, 2)} />
+         <KV k="手续费" v={`${fmtUsd(t.fees, 2)}（入 ${fmtNum(t.entry_fee, 2)} / 出 ${fmtNum(t.exit_fee, 2)}）`} />
+-        <KV k="资金费" v={`${fmtUsd(t.funding_fee, 2)}（${t.funding_events ?? 0} 事件）`} />
++        <KV k="资金费" v={`${fmtUsd(t.funding_fee, 2)}（${t.funding_events ?? '—'} 事件）`} />
+         <KV k="净盈亏" v={fmtSignedUsd(t.net_pnl, 2)} />
+         <KV k="MFE / MAE" v={`${fmtNum(t.mfe, 6)} / ${fmtNum(t.mae, 6)}`} />
+         <KV k="funding_gaps" v={t.funding_gaps_json ?? '—'} />
+@@ -643,7 +649,7 @@ const LabTradeDetailPanel: React.FC<{ detail: LabTradeDetail | null; loading: bo
+                 {funding.map((f) => (
+                   <tr key={`${f.funding_time_ms}-${f.amount}`}>
+                     <td className="py-1 pr-2 text-neutral-500">{fmtUtc(f.funding_time_ms)}</td>
+-                    <td className="py-1 px-2 text-right">{f.rate}</td>
++                    <td className="py-1 px-2 text-right">{f.rate ?? '—'}</td>
+                     <td className="py-1 px-2 text-right">{fmtNum(f.mark, 2)}</td>
+                     <td className="py-1 px-2 text-right">{fmtNum(f.qty, 6)}</td>
+                     <td className="py-1 px-2 text-right">{fmtNum(f.amount, 6)}</td>
+@@ -986,13 +992,34 @@ export const BacktestWorkbench: React.FC = () => {
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+   }, [activeRun?.run_id]);
+ 
+-  /* 自动选中最新 run（仅首次） */
++  /* 自动选中最新/有成交的 run（仅首次） */
+   const didPick = useRef(false);
++
++  /* ── 深链：`?run=<run_id>` 直接打开指定 run ──
++   * 为什么需要：⑥ 实验记录列表只取最近 50 条，且同批 run 的 `created_at` 完全相同
++   * ⇒ 排序不稳定，指定的 run 可能根本不在列表里（实测有成交的 run 会滑出前 50）。
++   * 深链只设定「当前所选 run」，**不改变列表语义、不改任何取数口径**，
++   * 让「打开某一笔」可复现（验收 / 复现问题用）。
++   * 声明在「自动选最新」之前 ⇒ `didPick` 置真，压掉自动选择。 */
++  useEffect(() => {
++    let rid: string | null = null;
++    try {
++      rid = new URLSearchParams(window.location.search).get('run');
++    } catch {
++      rid = null;
++    }
++    if (rid) {
++      didPick.current = true;
++      setSelectedRunId(rid);
++    }
++  }, []);
++
+   useEffect(() => {
+     if (didPick.current) return;
+     if (runs.length === 0) return;
+     didPick.current = true;
+-    setSelectedRunId((prev) => prev ?? runs[0].run_id);
++    const bestRun = runs.find((r) => (r.trades_count ?? 0) > 0) ?? runs[0];
++    setSelectedRunId((prev) => prev ?? bestRun.run_id);
+   }, [runs]);
+ 
+   /* ── 所选 run 的详情 / 指标 / 曲线 / 逐笔 / 图表 / 质量（响应身份一律核对 run_id）── */
+@@ -1278,6 +1305,30 @@ export const BacktestWorkbench: React.FC = () => {
+     quality.data?.data_quality != null;
+ 
+   const tradeRows: LabTradeRow[] = useMemo(() => trades.data?.items ?? [], [trades.data]);
++  /**
++   * 逐笔明细 → ③ 资金分析（水下回撤）联动载荷。
++   * 只吃逐笔账本里的**真实** entry/exit 毫秒时间戳；缺失即不给定位（不推断、不用 K 线时刻顶替）。
++   */
++  const focusTrade = useMemo(() => {
++    if (!selectedTradeId) return null;
++    const t = tradeRows.find((x) => x.trade_id === selectedTradeId);
++    if (!t) return null;
++    if (!Number.isFinite(t.entry_time_ms) || !Number.isFinite(t.exit_time_ms)) return null;
++    return { tradeId: t.trade_id, entryMs: t.entry_time_ms, exitMs: t.exit_time_ms };
++  }, [selectedTradeId, tradeRows]);
++
++  /**
++   * 逐笔明细行索引（真实 trade_id + 进出场毫秒）。
++   * 图载荷 `chart.trades[].trade_id` 实测为 `null` ⇒ 执行视图靠它把 id 换回来，
++   * 否则「选中高亮 / 图上点击定位」全失效。
++   */
++  const tradeIndex = useMemo(
++    () =>
++      tradeRows
++        .filter((t) => Number.isFinite(t.entry_time_ms) && Number.isFinite(t.exit_time_ms))
++        .map((t) => ({ tradeId: t.trade_id, entryMs: t.entry_time_ms, exitMs: t.exit_time_ms })),
++    [tradeRows],
++  );
+   const equityPoints: LabEquityPoint[] = useMemo(() => equity.data?.items ?? [], [equity.data]);
+   const chartPayload: LabChart | null = chart.data?.chart ?? null;
+   const orderRows: LabOrderRow[] = useMemo(() => orders.data?.items ?? [], [orders.data]);
+@@ -1304,6 +1355,23 @@ export const BacktestWorkbench: React.FC = () => {
+   const retirement: LabRetirementInfo | null = list.data?.retirement ?? null;
+   const excludedLegacy = list.data?.excluded_legacy ?? [];
+ 
++  /**
++   * 逐笔为空时，用**本 run 自己的真实载荷**解释「为什么空」。
++   *
++   * 事件驱动策略的绝大多数 run 本来就不成交：4h 箱体没发生有效突破 ⇒ 无候选 ⇒ 无成交。
++   * 这是链条**真实地停在了前面某一环**，不是「记录丢了」。区分这两件事，
++   * 才能让「K 线 → 候选 → 逐笔」这条链在空结果时也看得懂。
++   */
++  const tradesEmptyHint = useMemo(() => {
++    const nSig = (chartPayload?.signals ?? []).filter(
++      (s) => Number.isFinite(s?.t) && s.t > 0,
++    ).length;
++    if (nSig > 0) {
++      return `本 run 有 ${nSig} 个候选信号，但未触发成交（执行环为空）——链条止于「候选 → 执行」之间，不是记录缺失`;
++    }
++    return '本 run 无候选信号（4h 箱体未发生有效突破）⇒ 无逐笔成交。这是策略的真实产出，不是记录缺失';
++  }, [chartPayload]);
++
+   /** 该月平仓笔数（按**真实**平仓时间；仅作旧热力图的「补充事实」列，非收益口径）。 */
+   const monthCloseCounts = useMemo(() => {
+     const out: Record<string, number> = {};
+@@ -1639,30 +1707,34 @@ export const BacktestWorkbench: React.FC = () => {
+           </div>
+         )}
+ 
++        {/* 三条提示一律**单行**：整块列表会白占 ~50px/条，把单屏布局顶出屏幕。
++            全文（逐条原因）进 title，信息不删。 */}
+         {blockingErrors.length > 0 && (
+-          <div className="ds-note ds-note--neg ds-note--col" style={{ margin: '8px 12px 10px' }} data-testid="lab-form-errors">
+-            <div className="font-bold">提交前校验未通过（后台仍会独立校验）：</div>
+-            <ul className="list-disc pl-4">
+-              {blockingErrors.map((e, i) => (
+-                <li key={i}>{e}</li>
+-              ))}
+-            </ul>
++          <div
++            className="ds-note ds-note--neg"
++            style={{ margin: '6px 12px 8px', alignItems: 'center', columnGap: 8, rowGap: 2 }}
++            data-testid="lab-form-errors"
++            title={blockingErrors.map((e, i) => `${i + 1}. ${e}`).join('\n')}
++          >
++            <span className="font-bold whitespace-nowrap">提交前校验未通过</span>
++            <span className="ds-truncate">{blockingErrors.join(' · ')}</span>
+           </div>
+         )}
+ 
+         {createErrors.length > 0 && (
+-          <div className="ds-note ds-note--neg ds-note--col" style={{ margin: '8px 12px 10px' }} data-testid="lab-create-errors">
+-            <div className="font-bold">后台拒绝创建（原样显示后台原因，失败保留）：</div>
+-            <ul className="list-disc pl-4">
+-              {createErrors.map((e, i) => (
+-                <li key={i}>{e}</li>
+-              ))}
+-            </ul>
++          <div
++            className="ds-note ds-note--neg"
++            style={{ margin: '6px 12px 8px', alignItems: 'center', columnGap: 8, rowGap: 2 }}
++            data-testid="lab-create-errors"
++            title={createErrors.map((e, i) => `${i + 1}. ${e}`).join('\n')}
++          >
++            <span className="font-bold whitespace-nowrap">后台拒绝创建</span>
++            <span className="ds-truncate">{createErrors.join(' · ')}</span>
+           </div>
+         )}
+ 
+         {createNotice && (
+-          <div className="ds-note ds-note--info" style={{ margin: '8px 12px 10px' }} data-testid="lab-create-notice">
++          <div className="ds-note ds-note--info" style={{ margin: '6px 12px 8px' }} data-testid="lab-create-notice">
+             {createNotice}
+           </div>
+         )}
+@@ -1762,6 +1834,7 @@ export const BacktestWorkbench: React.FC = () => {
+               selectedTradeId={selectedTradeId}
+               onSelectTrade={setSelectedTradeId}
+               orders={orderRows}
++              tradeIndex={tradeIndex}
+             />
+           </div>
+           <div className="ds-col-5" data-lab-section="lab-funding">
+@@ -1776,6 +1849,7 @@ export const BacktestWorkbench: React.FC = () => {
+               monthCloseCounts={monthCloseCounts}
+               windowStartMs={detail.data?.window?.win_start_ms ?? null}
+               windowEndMs={detail.data?.window?.win_end_ms ?? null}
++              focusTrade={focusTrade}
+             />
+           </div>
+         </div>
+@@ -1799,7 +1873,7 @@ export const BacktestWorkbench: React.FC = () => {
+               </div>
+             }
+           >
+-          <div className="ds-tablewrap" style={{ maxHeight: '17.25rem' }} title="点击任意行 ⇒ 图表定位该笔成交 + 显示单笔详情">
++          <div className="ds-tablewrap" style={{ maxHeight: '17.25rem' }} title="点击任意行 ⇒ 执行视图定位该笔 + ③ 资金分析切到「水下回撤」并定位该笔区间">
+             <table className={`ds-table ds-table--clickable${allCols.trades ? ' ds-table--all' : ''}`}>
+               <thead>
+                 <tr>
+@@ -1821,8 +1895,8 @@ export const BacktestWorkbench: React.FC = () => {
+               <tbody>
+                 {tradeRows.length === 0 ? (
+                   <tr>
+-                    <td colSpan={allCols.trades ? 13 : 7} className="ds-table__empty">
+-                      {trades.loading ? '读取中…' : '无真实成交记录（后台账本为空）——不显示任何演示成绩'}
++                    <td colSpan={allCols.trades ? 13 : 7} className="ds-table__empty" data-testid="lab-trades-empty">
++                      {trades.loading ? '读取中…' : tradesEmptyHint}
+                     </td>
+                   </tr>
+                 ) : (
+@@ -1893,18 +1967,15 @@ export const BacktestWorkbench: React.FC = () => {
+           </div>
+         }
+       >
+-        {/* 新旧归属：本列表仅含当前策略；旧策略 run 已退役并排除 */}
+-        <div
+-          className="ds-note ds-note--warn"
+-          style={{ marginBottom: 8, columnGap: 12, rowGap: 4, alignItems: 'center' }}
++        {/* 新旧归属：本列表仅含当前策略；旧策略 run 已退役并排除。
++            常态（无被排除 run）**不刷横幅**，收成一行可展开说明；有被排除 run 才标黄提示。 */}
++        <details
++          className="ds-details"
++          style={{ marginBottom: 8 }}
+           data-testid="lab-run-attribution"
+         >
+-          <span className="font-bold">新旧归属</span>
+-          <span>
+-            仅含当前策略 <span className="font-mono">{retirement?.successor_strategy_id ?? LAB_STRATEGY_ID}</span>
+-          </span>
+-          <span
+-            className="text-amber-700"
++          <summary
++            className={excludedLegacy.length > 0 ? 'text-amber-700' : undefined}
+             title={
+               (retirement?.retired_strategy_keys
+                 ? `已退役旧策略：${retirement.retired_strategy_keys.join(' / ')}${retirement.retired_at ? `（${retirement.retired_at}）` : ''}\n`
+@@ -1914,19 +1985,35 @@ export const BacktestWorkbench: React.FC = () => {
+                 : '无被排除 run')
+             }
+           >
+-            已退役旧策略与身份存疑 run 共排除 {excludedLegacy.length} 条 · 旧结果不得当成新策略成绩（悬停看明细）
+-          </span>
+-        </div>
++            归属：仅含当前策略 {retirement?.successor_strategy_id ?? LAB_STRATEGY_ID}
++            {excludedLegacy.length > 0
++              ? ` · 已排除旧/存疑 run ${excludedLegacy.length} 条`
++              : ' · 无被排除 run'}
++          </summary>
++          <div className="ds-details__body text-[10px] text-neutral-400 space-y-0.5">
++            <div>
++              已退役旧策略：
++              {retirement?.retired_strategy_keys?.length
++                ? `${retirement.retired_strategy_keys.join(' / ')}${retirement.retired_at ? `（${retirement.retired_at}）` : ''}`
++                : '—'}
++            </div>
++            <div>
++              被排除的旧 / 身份存疑 run：
++              {excludedLegacy.length > 0 ? excludedLegacy.map((x) => x.run_id).join('、') : '无'}
++              {excludedLegacy.length > 0 ? ' ⇒ 旧结果不得当成新策略成绩' : ''}
++            </div>
++          </div>
++        </details>
+ 
+-        <div className="ds-tablewrap" style={{ maxHeight: '14.75rem' }}>
++        <div className="ds-tablewrap" style={{ maxHeight: '11rem' }}>
+             <table className={`ds-table ds-table--clickable${allCols.runs ? ' ds-table--all' : ''}`}>
+               <thead>
+                 <tr>
+-                  <th className="py-1.5 px-2">run_id</th>
++                  <th className="py-1.5 px-2">标的</th>
++                  <th className="py-1.5 px-2">运行 ID</th>
+                   <th className="py-1.5 px-2">状态</th>
+                   <th className="py-1.5 px-2" data-secondary>归属</th>
+                   <th className="py-1.5 px-2">创建时间（UTC）</th>
+-                  <th className="py-1.5 px-2" data-secondary>标的 / 窗口</th>
+                   <th className="py-1.5 px-2 text-right">净收益</th>
+                   <th className="py-1.5 px-2 text-right">回撤</th>
+                   <th className="py-1.5 px-2 text-right">笔数</th>
+@@ -1945,6 +2032,10 @@ export const BacktestWorkbench: React.FC = () => {
+                   runs.map((r) => {
+                     const sel = r.run_id === selectedRunId;
+                     const h = hashMap[r.run_id];
++                    const symbolText = (r.symbols ?? []).join(',') || '—';
++                    const displayRunId = r.run_id.length > 24 
++                      ? `${r.run_id.slice(0, 10)}...${r.run_id.slice(-8)}` 
++                      : r.run_id;
+                     return (
+                       <tr
+                         key={r.run_id}
+@@ -1955,7 +2046,10 @@ export const BacktestWorkbench: React.FC = () => {
+                         }}
+                         aria-selected={sel}
+                       >
+-                        <td className="py-1.5 px-2 text-neutral-200 whitespace-nowrap">{r.run_id}</td>
++                        <td className="py-1.5 px-2 font-semibold text-emerald-400 whitespace-nowrap">{symbolText}</td>
++                        <td className="py-1.5 px-2 text-neutral-300 font-mono text-xs whitespace-nowrap" title={r.run_id}>
++                          {displayRunId}
++                        </td>
+                         <td className="py-1.5 px-2">
+                           <span className={`ds-badge ${statusTone(r.status)}`}>{r.status}</span>
+                         </td>
+@@ -1971,17 +2065,21 @@ export const BacktestWorkbench: React.FC = () => {
+                           )}
+                         </td>
+                         <td className="py-1.5 px-2 text-neutral-500 whitespace-nowrap">{fmtIsoUtc(r.created_at)}</td>
+-                        <td className="py-1.5 px-2 text-neutral-400 whitespace-nowrap" data-secondary>
+-                          {(r.symbols ?? []).join(',') || '—'}
+-                          {r.window ? ` · ${fmtUtc(r.window.win_start_ms)}→${fmtUtc(r.window.win_end_ms)}` : ''}
+-                        </td>
+-                        <td className={`py-1.5 px-2 text-right ${(r.net_return_pct ?? 0) >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
++                        <td className={`py-1.5 px-2 text-right ${(r.net_return_pct ?? 0) >= 0 ? 'text-emerald-500 font-medium' : 'text-rose-500 font-medium'}`}>
+                           {fmtPct(r.net_return_pct, 4)}
+                         </td>
+-                        <td className="py-1.5 px-2 text-right text-rose-600">
++                        <td className="py-1.5 px-2 text-right text-rose-500 font-medium">
+                           {r.max_drawdown_pct === null || r.max_drawdown_pct === undefined ? '—' : `-${r.max_drawdown_pct.toFixed(4)}%`}
+                         </td>
+-                        <td className="py-1.5 px-2 text-right">{r.trades_count ?? '—'}</td>
++                        <td className="py-1.5 px-2 text-right">
++                          {(r.trades_count ?? 0) > 0 ? (
++                            <span className="font-bold text-amber-400 bg-amber-950/40 px-1.5 py-0.5 rounded border border-amber-800/60">
++                              {r.trades_count} 笔
++                            </span>
++                          ) : (
++                            <span className="text-neutral-500">0</span>
++                          )}
++                        </td>
+                         <td className="py-1.5 px-2 text-neutral-500" data-secondary title={h?.spec_sha256 ?? '未取到'}>
+                           {h ? shortHash(h.spec_sha256, 10) : '—'}
+                         </td>
+diff --git "a/UI\347\225\214\351\235\242/web/src/components/LabChartPanel.tsx" "b/UI\347\225\214\351\235\242/web/src/components/LabChartPanel.tsx"
+index fe7f0c0..4ae54e9 100644
+--- "a/UI\347\225\214\351\235\242/web/src/components/LabChartPanel.tsx"
++++ "b/UI\347\225\214\351\235\242/web/src/components/LabChartPanel.tsx"
+@@ -35,7 +35,7 @@ import {
+   type ChartHover,
+   type ChartViewport,
+ } from './LightweightChart';
+-import type { Candle } from '../types/crypto';
++import type { Candle, Timeframe } from '../types/crypto';
+ import type { LabChart, LabChartTrade, LabOrderRow } from '../api/labBacktest';
+ 
+ /* ── 格式化（未知一律 '—'）────────────────────────────────────────────────── */
+@@ -62,37 +62,142 @@ const fmtVolume = (v: number | null | undefined): string => {
+   return v.toFixed(4);
+ };
+ 
++/* ══════════════════ 执行视图周期选择（日线 – 5分线）═════════════════════════
++ *
++ * 事实边界（不得含糊）：
++ * · 本 run 的图表载荷 `GET /backtests/{id}/chart` **只有执行周期（15m）的真实 K 线**。
++ * · 比执行周期**更粗**的周期，由这些真实 15m K 线按 **UTC 边界精确聚合**得到：
++ *     O = 桶内首根 open，H = 桶内 max(high)，L = 桶内 min(low)，C = 桶内末根 close，
++ *     V = 桶内 volume 求和，t = 桶起点。
++ *   这是这些周期的**定义式**算法（不是均值、不是插值、不改时间戳），成交量精确可加。
++ * · 比执行周期**更细**的 5m **无法**从 15m 还原 ⇒ 明确禁用并给出原因（不做假图）。
++ *
++ * 聚合只是「换个尺度看同一份真实数据」，标记（开平仓/订单/止损轨迹）仍落在**真实时点**上。
++ */
++const TF_MS: Record<Timeframe, number> = {
++  '5m': 300_000,
++  '15m': 900_000,
++  '30m': 1_800_000,
++  '1h': 3_600_000,
++  '4h': 14_400_000,
++  '8h': 28_800_000,
++  '12h': 43_200_000,
++  '1d': 86_400_000,
++};
++
++export interface LabChartTfOption {
++  value: Timeframe;
++  label: string;
++  enabled: boolean;
++  reason?: string;
++}
++
++/** 周期选项：日线 → 5分线（与全站 `Timeframe` 同一套值，不做第二套命名）。 */
++export const LAB_CHART_TF_OPTIONS: LabChartTfOption[] = [
++  { value: '1d', label: '日线', enabled: true },
++  { value: '12h', label: '12h', enabled: true },
++  { value: '8h', label: '8h', enabled: true },
++  { value: '4h', label: '4h', enabled: true },
++  { value: '1h', label: '1h', enabled: true },
++  { value: '30m', label: '30m', enabled: true },
++  { value: '15m', label: '15m', enabled: true },
++  {
++    value: '5m',
++    label: '5分线',
++    enabled: false,
++    reason: '本 run 的执行周期是 15m，比它更细的 5m 无法从 15m 还原（不插值、不合成）⇒ 禁用',
++  },
++];
++
++/**
++ * 把基础周期 K 线按 UTC 边界聚合到更粗周期。
++ * 目标周期 ≤ 基础周期时**原样返回**（不反向合成、不编造细粒度）。
++ */
++export function bucketCandles(base: Candle[], baseTf: string, targetTf: string): Candle[] {
++  if (!base.length || targetTf === baseTf) return base;
++  const step = TF_MS[targetTf as Timeframe];
++  const baseStep = TF_MS[baseTf as Timeframe];
++  if (!step || !baseStep || step <= baseStep) return base;
++
++  const out: Candle[] = [];
++  let cur: Candle | null = null;
++  let curBucket = Number.NaN;
++  for (const b of base) {
++    if (!Number.isFinite(b?.timestamp)) continue;
++    const bucket = Math.floor(b.timestamp / step) * step;
++    if (bucket !== curBucket) {
++      if (cur) out.push(cur);
++      curBucket = bucket;
++      cur = { ...b, time: new Date(bucket).toISOString(), timestamp: bucket };
++    } else if (cur) {
++      cur.high = Math.max(cur.high ?? b.high ?? 0, b.high ?? 0);
++      cur.low = Math.min(cur.low ?? b.low ?? Number.POSITIVE_INFINITY, b.low ?? Number.POSITIVE_INFINITY);
++      cur.close = b.close;
++      cur.volume = (cur.volume ?? 0) + (b.volume ?? 0);
++    }
++  }
++  if (cur) out.push(cur);
++  return out;
++}
++
++/**
++ * 归一化一根 K 线：线上实际是 `[t,o,h,l,c,v]` **数组元组**，源码里写的是对象。
++ * 两种都接受（见 `LabChartCandleTuple` 注释）；都不合法 ⇒ 返回 null（该根丢弃，不补 0）。
++ */
++function normalizeCandle(raw: unknown): Candle | null {
++  let t: unknown, o: unknown, h: unknown, l: unknown, c: unknown, v: unknown;
++  if (Array.isArray(raw)) {
++    [t, o, h, l, c, v] = raw;
++  } else if (raw && typeof raw === 'object') {
++    const r = raw as Record<string, unknown>;
++    t = r.t;
++    o = r.o;
++    h = r.h;
++    l = r.l;
++    c = r.c;
++    v = r.v;
++  } else {
++    return null;
++  }
++  if (!Number.isFinite(t) || (t as number) <= 0) return null;
++  if (![o, h, l, c].every((x) => typeof x === 'number' && Number.isFinite(x))) return null;
++  return {
++    time: new Date(t as number).toISOString(),
++    timestamp: t as number,
++    open: o as number,
++    high: h as number,
++    low: l as number,
++    close: c as number,
++    volume: typeof v === 'number' && Number.isFinite(v) ? v : null,
++    volumeUsd: null,
++    isClosed: true,
++  };
++}
++
+ /** 真实 chart.candles → 前端 `Candle`（`volumeUsd` 保持 null，不用名义额冒名）。 */
+ export function labCandlesToBars(chart: LabChart | null): Candle[] {
+   if (!chart?.candles) return [];
+   const out: Candle[] = [];
+   for (const c of chart.candles) {
+-    if (!Number.isFinite(c.t) || c.t <= 0) continue;
+-    if (![c.o, c.h, c.l, c.c].every((x) => typeof x === 'number' && Number.isFinite(x))) continue;
+-    out.push({
+-      time: new Date(c.t).toISOString(),
+-      timestamp: c.t,
+-      open: c.o,
+-      high: c.h,
+-      low: c.l,
+-      close: c.c,
+-      volume: Number.isFinite(c.v) ? c.v : null,
+-      volumeUsd: null,
+-      isClosed: true,
+-    });
++    const bar = normalizeCandle(c);
++    if (bar) out.push(bar);
+   }
+   return out;
+ }
+ 
+ /** 开/平仓 + 信号标记（真实 trades / signals ⇒ 官方 markers）。 */
+-function buildTradeMarkers(chart: LabChart | null, selectedTradeId: string | null): SeriesMarker<Time>[] {
++function buildTradeMarkers(
++  chart: LabChart | null,
++  selectedTrade: LabChartTrade | null,
++  idOf: (t: LabChartTrade) => string | null,
++): SeriesMarker<Time>[] {
+   const out: SeriesMarker<Time>[] = [];
+   if (!chart?.trades) return out;
+   for (const t of chart.trades) {
+-    const sel = t.trade_id === selectedTradeId;
++    const sel = selectedTrade !== null && idOf(t) === idOf(selectedTrade);
+     if (Number.isFinite(t.entry?.t)) {
+       out.push({
+-        id: `entry-${t.trade_id}`,
++        id: `entry-${idOf(t) ?? t.entry.t}`,
+         time: toChartSeconds(t.entry.t),
+         position: 'belowBar',
+         shape: 'arrowUp',
+@@ -103,7 +208,7 @@ function buildTradeMarkers(chart: LabChart | null, selectedTradeId: string | nul
+     }
+     if (Number.isFinite(t.exit?.t)) {
+       out.push({
+-        id: `exit-${t.trade_id}`,
++        id: `exit-${idOf(t) ?? t.exit.t}`,
+         time: toChartSeconds(t.exit.t),
+         position: 'aboveBar',
+         shape: 'arrowDown',
+@@ -116,6 +221,32 @@ function buildTradeMarkers(chart: LabChart | null, selectedTradeId: string | nul
+   return out;
+ }
+ 
++/**
++ * 候选信号标记（真实 `chart.signals` ⇒ 官方 markers）。
++ *
++ * 这是「K 线 → 逐笔」链条的**第一环**：箱体突破那一刻的候选。没有它，
++ * 图上就只剩开/平仓两支箭头，看不出「为什么在这根开仓」。
++ *
++ * `t <= 0` 的一律丢弃（历史 run 的 `chart.signals` 曾被上游写死成 `t: 0`）——
++ * 宁可少画一个点，也不在错误的位置画一个假点。
++ */
++function buildSignalMarkers(chart: LabChart | null): SeriesMarker<Time>[] {
++  const out: SeriesMarker<Time>[] = [];
++  for (const s of chart?.signals ?? []) {
++    if (!Number.isFinite(s?.t) || s.t <= 0) continue;
++    out.push({
++      id: `sig-${s.t}`,
++      time: toChartSeconds(s.t),
++      position: 'aboveBar',
++      shape: 'circle',
++      color: '#3b6ef6',
++      text: s.kind === 'box_breakout' ? '箱体突破' : '候选',
++      size: 1,
++    });
++  }
++  return out;
++}
++
+ /** 保护止损轨迹（引擎实况记录，不重建、不造点）。 */
+ const LAB_STOP_COLOR = '#b45309';
+ 
+@@ -158,6 +289,14 @@ export interface LabChartPanelProps {
+   onSelectTrade: (tradeId: string | null) => void;
+   /** 账本 `orders` 表（真实委托明细）；缺失 ⇒ 不画订单标记，不造点。 */
+   orders?: LabOrderRow[] | null;
++  /**
++   * 逐笔明细行索引（真实 trade_id + 进出场毫秒）。
++   *
++   * 为什么需要：线上 `chart.trades[].trade_id` 实测为 `null`（落盘端缺陷，2026-10-17），
++   * 而 `GET /trades` 给的是真实 `trd_N`。只靠图载荷 ⇒ 选中高亮 / 图上点击定位全失效。
++   * 这里用**两边都有的真实时间戳**把 id 补回来；不用猜、不造假 id。
++   */
++  tradeIndex?: { tradeId: string; entryMs: number; exitMs: number }[] | null;
+ }
+ 
+ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+@@ -168,12 +307,24 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+   selectedTradeId,
+   onSelectTrade,
+   orders = null,
++  tradeIndex = null,
+ }) => {
+-  const bars = useMemo(() => labCandlesToBars(chart), [chart]);
++  /* 本 run 自己的执行周期 = 图表载荷里的真实粒度，也是「原始」基准 */
++  const baseTf = (chart?.exec_timeframe ?? '15m') as string;
++  const [tf, setTf] = useState<Timeframe>(baseTf as Timeframe);
++  /* 换 run（标的 / 执行周期变化）⇒ 周期回到该 run 自己的执行周期，不沿用上一条的视角 */
++  useEffect(() => {
++    setTf(baseTf as Timeframe);
++  }, [baseTf, chart?.symbol]);
++
++  const rawBars = useMemo(() => labCandlesToBars(chart), [chart]);
++  /** 展示用 K 线：等于执行周期时原样，更粗时按 UTC 边界精确聚合（见 bucketCandles 注释） */
++  const bars = useMemo(() => bucketCandles(rawBars, baseTf, tf), [rawBars, baseTf, tf]);
++  const isAggregated = tf !== baseTf;
+   const gridTimes = useMemo(() => buildCandleGrid(bars), [bars]);
+   const viewKey = useMemo(
+-    () => (chart ? `lab:${chart.symbol}:${chart.exec_timeframe}:${chart.window?.start_ms ?? 0}` : 'lab:empty'),
+-    [chart],
++    () => (chart ? `lab:${chart.symbol}:${chart.exec_timeframe}:${tf}:${chart.window?.start_ms ?? 0}` : 'lab:empty'),
++    [chart, tf],
+   );
+   /** 单图工作台：同步组只含这一张图（复用既有 hub 契约，行为与旧调用一致）。 */
+   const syncHub = useMemo(() => createChartSyncHub(), [viewKey]);
+@@ -187,14 +338,38 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+   const onHover = useCallback((h: ChartHover | null) => setHover(h), []);
+   const onViewportChange = useCallback((v: ChartViewport) => setViewport(v), []);
+ 
+-  const extraMarkers = useMemo(
+-    () => [...buildTradeMarkers(chart, selectedTradeId), ...buildOrderMarkers(orders)],
+-    [chart, selectedTradeId, orders],
++  /**
++   * 图载荷里一笔的**真实 id**：优先用载荷自带的 `trade_id`；
++   * 若为 `null`（落盘端缺陷）⇒ 用 entry 时刻去逐笔明细索引里换回真实 id。
++   * 两边用的都是真实毫秒时间戳，不猜、不造。
++   */
++  const idByEntryMs = useMemo(() => {
++    const m = new Map<number, string>();
++    for (const x of tradeIndex ?? []) {
++      if (Number.isFinite(x?.entryMs) && x.tradeId) m.set(x.entryMs, x.tradeId);
++    }
++    return m;
++  }, [tradeIndex]);
++
++  const idOf = useCallback(
++    (t: LabChartTrade): string | null =>
++      t.trade_id ?? (Number.isFinite(t.entry?.t) ? (idByEntryMs.get(t.entry.t) ?? null) : null),
++    [idByEntryMs],
+   );
+ 
+-  const selectedTrade: LabChartTrade | null = useMemo(
+-    () => chart?.trades?.find((t) => t.trade_id === selectedTradeId) ?? null,
+-    [chart, selectedTradeId],
++  const selectedTrade: LabChartTrade | null = useMemo(() => {
++    const list = chart?.trades ?? [];
++    if (!selectedTradeId || list.length === 0) return null;
++    return list.find((t) => idOf(t) === selectedTradeId) ?? null;
++  }, [chart, selectedTradeId, idOf]);
++
++  const extraMarkers = useMemo(
++    () => [
++      ...buildSignalMarkers(chart),
++      ...buildTradeMarkers(chart, selectedTrade, idOf),
++      ...buildOrderMarkers(orders),
++    ],
++    [chart, selectedTrade, idOf, orders],
+   );
+ 
+   /* ── 止损轨迹叠加：用现有 onReady 句柄加官方 LineSeries，不重写 K 线引擎 ── */
+@@ -206,9 +381,18 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+ 
+     const created: ISeriesApi<'Line'>[] = [];
+     for (const t of chart.trades) {
+-      const trace = (t.stop_trace ?? []).filter((p) => Number.isFinite(p.t) && Number.isFinite(p.stop));
++      // 字段契约兼容：官方 runner 落 `t`，历史批量脚本落 `ts`（同值不同名）。
++      // 两种都接受 ⇒ 上游无论往哪边收敛都能画；两者都没有的点直接丢弃，不猜时间。
++      const trace = (t.stop_trace ?? [])
++        .map((p) => ({
++          t: Number.isFinite(p?.t) ? p.t : Number((p as unknown as { ts?: number })?.ts),
++          stop: p?.stop,
++        }))
++        .filter((p) => Number.isFinite(p.t) && Number.isFinite(p.stop));
++      // 单点（只有 `init`、之后没有止损调整）**不合成轨迹**：一个点画不出线，
++      // 硬拉一条会伪造「止损一路没动」的走势。如实显示在下方读数行里。
+       if (trace.length < 2) continue;
+-      const isSel = t.trade_id === selectedTradeId;
++      const isSel = selectedTrade !== null && idOf(t) === idOf(selectedTrade);
+       try {
+         const s = api.addSeries(LineSeries, {
+           color: isSel ? LAB_STOP_COLOR : 'rgba(180, 83, 9, 0.35)',
+@@ -238,7 +422,7 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+       }
+       overlayRef.current = [];
+     };
+-  }, [handle, chart, selectedTradeId]);
++  }, [handle, chart, selectedTrade, idOf]);
+ 
+   /* ── 选中交易 ⇒ 用现有 setViewport 定位 entry/exit 区间 ── */
+   useEffect(() => {
+@@ -259,8 +443,10 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+     if (!api || !chart?.trades?.length) return;
+     const byTime = new Map<number, string>();
+     for (const t of chart.trades) {
+-      if (Number.isFinite(t.entry?.t)) byTime.set(toChartSeconds(t.entry.t), t.trade_id);
+-      if (Number.isFinite(t.exit?.t)) byTime.set(toChartSeconds(t.exit.t), t.trade_id);
++      const id = idOf(t);
++      if (!id) continue;
++      if (Number.isFinite(t.entry?.t)) byTime.set(toChartSeconds(t.entry.t), id);
++      if (Number.isFinite(t.exit?.t)) byTime.set(toChartSeconds(t.exit.t), id);
+     }
+     const handler = (param: { time?: unknown }) => {
+       const sec = typeof param?.time === 'number' ? (param.time as number) : null;
+@@ -280,7 +466,7 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+         /* 图已销毁：忽略 */
+       }
+     };
+-  }, [handle, chart, onSelectTrade]);
++  }, [handle, chart, onSelectTrade, idOf]);
+ 
+   const hoveredBar = hover?.candle ?? null;
+   const hoveredSignal = useMemo(() => {
+@@ -291,6 +477,20 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+   const tp = chart?.take_profit ?? null;
+   const noFixedTp = tp ? tp.exists === false : null;
+ 
++  /** 选中交易的止损轨迹读数：**账本有几个点就报几个点**。
++   *  只有 1 个 `init` 点（无后续调整）时如实说明，**不合成轨迹**。 */
++  const stopTraceInfo = useMemo(() => {
++    if (!selectedTrade) return null;
++    const tr = (selectedTrade.stop_trace ?? [])
++      .map((p) => ({
++        t: Number.isFinite(p?.t) ? p.t : Number((p as unknown as { ts?: number })?.ts),
++        stop: p?.stop,
++      }))
++      .filter((p) => Number.isFinite(p.t) && Number.isFinite(p.stop));
++    return { n: tr.length, init: tr.length > 0 ? tr[0].stop : null,
++             adjustments: Math.max(0, tr.length - 1) };
++  }, [selectedTrade]);
++
+   return (
+     <div
+       className="bg-white border border-neutral-200 rounded-lg shadow-sm overflow-hidden text-neutral-100"
+@@ -302,27 +502,59 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+             className="text-xs font-bold text-neutral-100"
+             title="真实 K 线 / 成交量 / 信号 / 开平仓 / 保护止损轨迹；成交量 = 原始 base 量（不是 USDT 名义额）"
+           >
+-            ④ 执行视图 · {chart?.symbol ?? '—'} · {chart?.exec_timeframe ?? '—'}
++            ④ 执行视图 · {chart?.symbol ?? '—'}
+           </h3>
++
++          {/* 周期选择：日线 – 5分线（与全站 Timeframe 同一套值）。
++              比执行周期更粗 ⇒ 由本 run 真实 K 线按 UTC 边界精确聚合；更细的 5m 明确禁用。 */}
++          <div
++            className="flex items-center bg-white border border-neutral-200 rounded p-0.5 text-[10px] shrink-0"
++            role="group"
++            aria-label="K 线周期"
++            data-testid="lab-chart-tf"
++          >
++            {LAB_CHART_TF_OPTIONS.map((o) => (
++              <button
++                key={o.value}
++                type="button"
++                disabled={!o.enabled}
++                title={
++                  o.reason ??
++                  (o.value === baseTf
++                    ? '本 run 的执行周期（原始粒度，未做任何聚合）'
++                    : `由本 run 的 ${baseTf} 真实 K 线按 UTC 边界聚合（O=首/H=最高/L=最低/C=末/V=求和）`)
++                }
++                aria-pressed={tf === o.value}
++                onClick={() => o.enabled && setTf(o.value)}
++                data-tf={o.value}
++                className={`px-1.5 py-0.5 rounded whitespace-nowrap transition-colors ${
++                  !o.enabled
++                    ? 'text-neutral-300 cursor-not-allowed'
++                    : tf === o.value
++                      ? 'bg-[var(--ds-accent)] text-white font-bold'
++                      : 'text-neutral-500 hover:text-neutral-100'
++                }`}
++              >
++                {o.label}
++              </button>
++            ))}
++          </div>
++
++          {/* 计数合并成一行小字（原为三个独立徽章） */}
+           <span
+-            className="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-mono"
+-            title="来自后台真实 K 线载荷的根数（非合成 / 非静态 demo）"
++            className="text-[10px] text-neutral-400 font-mono whitespace-nowrap"
++            title={
++              isAggregated
++                ? `展示 ${tf}：由本 run 的 ${baseTf} 真实 K 线按 UTC 边界精确聚合（不是第二个数据源）`
++                : `本 run 执行周期 ${baseTf} 的真实 K 线根数（非合成 / 非静态 demo）`
++            }
+           >
+             {bars.length} 根
++            {isAggregated ? `（${tf}·聚合）` : ''}
++            {chart?.trades ? ` · 开平仓 ${chart.trades.length} 笔` : ''}
++            {orders && orders.length > 0 ? ` · 委托 ${orders.length} 条` : ''}
+           </span>
+-          {chart?.trades && (
+-            <span className="px-1.5 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-200 text-[10px] font-mono">
+-              开平仓 {chart.trades.length} 笔
+-            </span>
+-          )}
+-          {orders && orders.length > 0 && (
+-            <span
+-              className="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200 text-[10px] font-mono"
+-              title="委托标记为 inBar 圆点，按 phase 着色"
+-            >
+-              委托 {orders.length} 条
+-            </span>
+-          )}
++
+           {selectedTrade && (
+             <button
+               onClick={() => onSelectTrade(null)}
+@@ -341,7 +573,8 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+         </div>
+       </div>
+ 
+-      {/* 止盈口径 + 标记图例 + 成交时刻口径（**同一行**；口径原文移到 title，不占视野） */}
++      {/* 止盈口径 + 标记图例（同一行；口径原文在 title，不占视野）。
++          常态（止盈已配置）**不刷徽章**，只报「无固定止盈」这类需要解释的异常。 */}
+       <div className="px-3 py-1 border-b border-neutral-200 bg-white text-[10px] flex flex-wrap items-center gap-x-3 gap-y-1">
+         {noFixedTp === true && (
+           <span
+@@ -351,17 +584,8 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+             无固定止盈
+           </span>
+         )}
+-        {noFixedTp === false && (
+-          <span
+-            className="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200"
+-            title={tp?.note ? `口径：${tp.note}` : undefined}
+-          >
+-            止盈规则已配置
+-          </span>
+-        )}
+         {noFixedTp === null && <span className="text-neutral-400">止盈规则字段缺失 ⇒ 不做假设</span>}
+         <span className="text-neutral-500 flex flex-wrap items-center gap-x-2">
+-          <span className="font-semibold">图例</span>
+           <span>▲ 开仓</span>
+           <span>▼ 平仓</span>
+           <span className="text-amber-700">— 保护止损</span>
+@@ -415,22 +639,24 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+             )}
+           </>
+         ) : (
+-          <span className="text-neutral-400">将鼠标移到 K 线上查看该根真实 OHLC / 原始成交量 / 信号</span>
++          <span className="text-neutral-400">悬停 K 线看该根真实 OHLC / 量 / 信号</span>
+         )}
+       </div>
+ 
+-      <div className="relative w-full h-[273px] bg-white">
++      <div
++        className="relative w-full h-[273px] bg-white"
++        title="悬停看该根真实 OHLC / 原始成交量 / 信号；点击下方明细行或图上开/平仓标记 ⇒ 定位该笔 entry/exit 区间并高亮"
++      >
+         {bars.length === 0 ? (
+           <div className="absolute inset-0 flex flex-col items-center justify-center text-xs text-neutral-500 gap-1">
+             <span>{loading ? '正在读取真实图表载荷…' : '无真实 K 线数据（不绘制任何合成 K 线 / 静态 demo）'}</span>
+             {error && <span className="text-rose-600">取数错误：{error}</span>}
+             {missingReason && <span className="text-amber-700">后台说明：{missingReason}</span>}
+-          </div>
+-        ) : (
++          </div>        ) : (
+           <CandleVolumeChart
+             key={viewKey}
+             bars={bars}
+-            timeframe="15m"
++            timeframe={tf}
+             gridTimes={gridTimes}
+             viewKey={viewKey}
+             initialViewport={null}
+@@ -443,26 +669,32 @@ export const LabChartPanel: React.FC<LabChartPanelProps> = ({
+         )}
+       </div>
+ 
+-      {/* 选中定位读数 */}
+-      <div className="px-3 py-1.5 border-t border-neutral-200 bg-neutral-50 text-[10px] font-mono flex flex-wrap gap-x-4 gap-y-1">
+-        {selectedTrade ? (
+-          <>
+-            <span className="text-emerald-700 font-semibold">已选中 trade_id = {selectedTrade.trade_id}</span>
+-            <span>entry {fmtUtc(selectedTrade.entry.t)} @ {fmtNum(selectedTrade.entry.price, 4)}</span>
+-            <span>exit {fmtUtc(selectedTrade.exit.t)} @ {fmtNum(selectedTrade.exit.price, 4)}（{selectedTrade.exit.reason}）</span>
+-            <span>止损轨迹 {selectedTrade.stop_trace?.length ?? 0} 点（引擎实况）</span>
+-            {locateInfo && (
+-              <span className={locateInfo.ok ? 'text-neutral-400' : 'text-amber-700'}>
+-                定位范围 {fmtUtc(locateInfo.fromMs)} → {fmtUtc(locateInfo.toMs)}（{locateInfo.ok ? '已落实' : '未落实（图未就绪）'}）
+-              </span>
+-            )}
+-          </>
+-        ) : (
+-          <span className="text-neutral-400">
+-            点击下方明细行或图上开/平仓标记 ⇒ 定位该笔 entry/exit 区间并高亮标记
++      {/* 选中定位读数：**只有真的选中某笔才出现**。
++          未选中时不再常驻「点击下方明细行…」这类操作提示 —— 它属于说明而非数据，
++          已收进图表区 title（悬停可见），不再占一行高度。 */}
++      {selectedTrade && (
++        <div className="px-3 py-1.5 border-t border-neutral-200 bg-neutral-50 text-[10px] font-mono flex flex-wrap gap-x-4 gap-y-1">
++          <span className="text-emerald-700 font-semibold">已选中 {selectedTrade.trade_id}</span>
++          <span>entry {fmtUtc(selectedTrade.entry.t)} @ {fmtNum(selectedTrade.entry.price, 4)}</span>
++          <span>
++            exit {fmtUtc(selectedTrade.exit.t)} @ {fmtNum(selectedTrade.exit.price, 4)}（{selectedTrade.exit.reason}）
+           </span>
+-        )}
+-      </div>
++          <span>
++            止损轨迹 {stopTraceInfo?.n ?? 0} 点
++            {stopTraceInfo?.n === 0 && '（账本无止损点 ⇒ 不合成）'}
++            {stopTraceInfo?.n === 1 &&
++              `（仅初始止损 ${fmtNum(stopTraceInfo.init, 4)}，无后续调整 ⇒ 不合成轨迹）`}
++            {stopTraceInfo !== null && stopTraceInfo.n > 1 &&
++              `（含 ${stopTraceInfo.adjustments} 次调整）`}
++          </span>
++          {locateInfo && (
++            <span className={locateInfo.ok ? 'text-neutral-400' : 'text-amber-700'}>
++              定位 {fmtUtc(locateInfo.fromMs)} → {fmtUtc(locateInfo.toMs)}
++              {locateInfo.ok ? '' : '（未落实：图未就绪）'}
++            </span>
++          )}
++        </div>
++      )}
+     </div>
+   );
+ };
+diff --git "a/\346\241\206\346\236\266/backend/backtest_api.py" "b/\346\241\206\346\236\266/backend/backtest_api.py"
+index fe15d4b..8254fdf 100644
+--- "a/\346\241\206\346\236\266/backend/backtest_api.py"
++++ "b/\346\241\206\346\236\266/backend/backtest_api.py"
+@@ -24,12 +24,15 @@
+ """
+ from __future__ import annotations
+ 
++import re
+ import threading
+ from typing import Any, Dict, List, Optional, Tuple
+ 
+ import backtest_runner as RUN
+ import backtest_store as S
+-import oi_resonance_bridge as BR
++import event_trend_bridge as BR
++import ledger_links as LL
++import backtest_metrics as MET
+ 
+ CONTRACT_VERSION = "bt_api_v1"
+ 
+@@ -37,6 +40,17 @@ _THREADS: Dict[str, threading.Thread] = {}
+ _THREADS_LOCK = threading.Lock()
+ 
+ 
++def _facts(run_id: str) -> LL.LedgerFacts:
++    """本 run 的账本事实（真实标识关联；一次读盘多处复用）。
++
++    这些 run 的账本落成了 **JSONL**（无 `ledger.sqlite3`），且 `trades.jsonl` /
++    `orders.jsonl` 本身不带 `trade_id` —— 因此**必须**走本模块按真实标识关联，
++    绝不能让 `read_ledger_rows` 的 `f"trd_{len(rows)+1}"` 兜底生效（那是按行号猜配）。
++    """
++    return LL.load_ledger_facts(S.run_dir(run_id), run_id)
++
++
++
+ def _envelope(**kw) -> dict:
+     base = {
+         "mode": "research_backtest", "contract_version": CONTRACT_VERSION,
+@@ -55,16 +69,20 @@ def _envelope(**kw) -> dict:
+ def list_experiments(params: Optional[dict] = None) -> dict:
+     params = params or {}
+     try:
+-        limit = int((params.get("limit") or ["50"])[0])
++        limit = int((params.get("limit") or ["500"])[0])
+     except (ValueError, TypeError):
+-        limit = 50
+-    runs = S.list_runs(limit=max(1, min(limit, 500)))
++        limit = 500
++    runs = S.list_runs(limit=max(1, min(limit, 1000)))
+     # ── WORK-04 新旧归属：运行列表**只含新策略** `WX_OI_RESONANCE_V1` ─────────────
+     # 运行根（`回测日志/oi_resonance_v1/runs`）本应只含新策略 run；此处仍按 strategy_id
+     # 显式核对，把非新策略 / 身份缺失的 run **排除出当前列表**并单独登记（不冒充新结果）。
+     current: List[dict] = []
+     excluded_legacy: List[dict] = []
+     for r in runs:
++        rid = str(r.get("run_id") or "")
++        # 内部消融变体仅用于对账，不作为主回测记录干扰前端列表
++        if re.search(r"_(A|B|C)_[0-9]+$", rid):
++            continue
+         sid = (r.get("spec") or {}).get("strategy_id") or r.get("strategy_id")
+         if sid == BR.STRATEGY_ID:
+             current.append(r)
+@@ -82,7 +100,7 @@ def list_experiments(params: Optional[dict] = None) -> dict:
+                      retirement=_retirement_block(),
+                      excluded_legacy=excluded_legacy,
+                      excluded_legacy_total=len(excluded_legacy),
+-                     note="研究回测实验列表（**仅当前策略** WX_OI_RESONANCE_V1；只读；"
++                     note=f"研究回测实验列表（**仅当前策略** {BR.STRATEGY_ID}；只读；"
+                           "创建走 POST /api/v1/backtests）。旧策略 run 已排除并单列 excluded_legacy。")
+ 
+ 
+@@ -183,12 +201,40 @@ def get_metrics(run_id: str) -> Tuple[dict, int]:
+     doc, err = _require_done(run_id)
+     if err:
+         return err
++    # 指标**由本 run 账本现算**（不是读 summary.json 里可能不存在的字段）：
++    #   · 胜负 = 扣费后 net_pnl（>0 盈 / <0 亏 / =0 平）
++    #   · 最大回撤 = equity_curve.total_equity 逐点峰值回撤（含未实现浮盈浮亏）
++    #   · profit_factor（聚合口径）与 avg_win_loss_ratio（均值口径）**分开、不混用**
++    metrics, notes = MET.compute_metrics(S.run_dir(run_id), run_id, doc)
++    stored = doc.get("metrics") or {}
++    bench: Optional[dict] = None
++    monthly: Optional[dict] = None
++    try:
++        chart = _backfill_chart(run_id, S.read_chart(run_id))
++        bench = MET.compute_benchmark(chart)
++        if bench is None:
++            notes.append("chart.json 无基准序列 ⇒ benchmark_buy_hold 返回缺失（不伪造）")
++    except S.RunNotFound:
++        notes.append("chart.json 缺失 ⇒ benchmark_buy_hold 返回缺失（不伪造）")
++    try:
++        monthly = MET.compute_monthly_returns(
++            S.read_ledger_rows(run_id, "equity", order_by="ts_ms ASC"),
++            metrics.get("initial_equity"))
++        if monthly is None:
++            notes.append("权益曲线不足 2 点 ⇒ monthly_returns 返回缺失（不伪造）")
++    except S.RunNotFound:
++        notes.append("equity 表不可读 ⇒ monthly_returns 返回缺失（不伪造）")
+     return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+-                     metrics=doc.get("metrics"),
+-                     benchmark_buy_hold=doc.get("benchmark_buy_hold"),
+-                     monthly_returns=doc.get("monthly_returns"),
++                     metrics=metrics,
++                     metrics_from_ledger=True,
++                     metrics_stored_summary=stored,
++                     metrics_notes=notes,
++                     benchmark_buy_hold=bench,
++                     monthly_returns=monthly,
+                      formal_m4_gate=doc.get("formal_m4_gate"),
+-                     m4_disclaimer=doc.get("m4_disclaimer")), 200
++                     m4_disclaimer=doc.get("m4_disclaimer"),
++                     note=("metrics 由本 run 账本现算（净值口径）；metrics_stored_summary 为"
++                           "落盘 summary 原值，仅供对照，不作为展示来源")), 200
+ 
+ 
+ def get_quality(run_id: str) -> Tuple[dict, int]:
+@@ -213,44 +259,67 @@ def get_equity(run_id: str) -> Tuple[dict, int]:
+     bench_meta: Optional[dict] = None
+     try:
+         chart = S.read_chart(run_id)
+-        b = chart.get("benchmark") or {}
+-        bench_series = b.get("equity_series") or []
+-        if b:
+-            bench_meta = {k: v for k, v in b.items() if k != "equity_series"}
++        chart = _backfill_chart(run_id, chart)   # 修掉批量脚本写死的 benchmark.return_pct = 0.0
++        bench_series = (chart.get("benchmark") or {}).get("equity_series") or []
++        # 基准**成本口径如实标注**：批量脚本落盘的基准序列是 `initial_equity × close_i / open_0`，
++        # 即**纯价格**口径（不含手续费/滑点/资金费）⇒ 只给 price_only_return_pct，
++        # net_return_pct 留空，**不把纯价格收益冒充「净收益」**与策略净收益并列比较。
++        bench_meta = MET.compute_benchmark(chart)
++        if bench_meta is None:
++            bench_meta = {"note": "本 run 的 chart.json 未含基准序列 ⇒ 无基准（不伪造）"}
+     except S.RunNotFound:
+         bench_series, bench_meta = [], {"note": "chart.json 缺失 ⇒ 无基准序列（不伪造）"}
+     return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+                      items=rows, total=len(rows),
+                      benchmark=bench_meta, benchmark_equity=bench_series,
+-                     note=("策略权益曲线取自账本 equity 表；benchmark_equity 为**同成本**"
+-                           "买入持有基准逐点净值（同手续费/滑点/真实资金费）")), 200
++                     note=("策略权益曲线取自账本 equity 表（含未实现浮盈浮亏）；"
++                           "benchmark_equity 为本 run 落盘的买入持有基准逐点净值，"
++                           "其成本口径见 benchmark.cost_model（纯价格口径时不给 net_return_pct）")), 200
+ 
+ 
+ def get_trades(run_id: str) -> Tuple[dict, int]:
+     doc, err = _require_done(run_id)
+     if err:
+         return err
+-    rows = S.read_ledger_rows(run_id, "trades", order_by="entry_time_ms ASC")
++    facts = _facts(run_id)
++    rows = facts.trade_rows
++    unresolved = [r for r in rows if not r.get("trade_id")]
++    notes = list(facts.notes)
++    if unresolved:
++        notes.append(
++            f"{len(unresolved)} 笔交易的 trade_id 在账本里无法唯一确定 ⇒ 如实留空（不按行号猜配）")
+     return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+-                     items=rows, total=len(rows)), 200
++                     items=rows, total=len(rows),
++                     trade_id_source="ledger:positions.jsonl POSITION_CLOSED.payload.trade_id",
++                     unresolved_trade_ids=len(unresolved),
++                     link_notes=notes,
++                     note=("trade_id / 关联订单 / 资金费归属全部取自本 run 账本的真实标识；"
++                           "stop_trace 已统一为 `t`（毫秒），无后续止损调整时即为单点")), 200
+ 
+ 
+ def get_orders(run_id: str) -> Tuple[dict, int]:
+     """**全局**订单/成交明细（同一 `run_id` 账本 `orders` 表；与逐笔同源）。
+ 
+     纪律：只读账本，缺失表/账本 ⇒ 空列表（不编造）。金额/数量原样来自账本。
++    `trade_id` 用**真实 `order_id` 反查**归属（`orders.jsonl` 本身没有该字段），
++    关联不上 ⇒ `trade_id=None` + `trade_link="unlinked"`，**绝不按顺序套用第 N 笔**。
+     """
+     doc, err = _require_done(run_id)
+     if err:
+         return err
+     try:
+-        rows = S.read_ledger_rows(run_id, "orders", order_by="ts_ms ASC")
++        facts = _facts(run_id)
+     except S.RunNotFound:
+         return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+                          items=[], total=0, missing_reason="账本缺失（orders 表不可读）"), 200
++    rows = facts.all_orders()
++    unlinked = sum(1 for r in rows if not r.get("trade_id"))
+     return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+                      items=rows, total=len(rows),
+-                     note="全局订单/成交明细（同一 run_id 账本 orders 表；与逐笔同源）"), 200
++                     unlinked_orders=unlinked,
++                     link_notes=list(facts.notes),
++                     note=("全局订单/成交明细（同一 run_id 账本 orders 表）；"
++                           "trade_id 由真实 order_id 反查，关联不上则如实留空")), 200
+ 
+ 
+ def get_rejected(run_id: str) -> Tuple[dict, int]:
+@@ -272,24 +341,318 @@ def get_rejected(run_id: str) -> Tuple[dict, int]:
+ 
+ 
+ def get_trade(run_id: str, trade_id: str) -> Tuple[dict, int]:
++    """单笔明细：**同一真实 `trade_id`** 联结逐笔 / 开平仓订单 / 资金费 / 原始候选信号。
++
++    关联只用真实标识：订单走 `trades.order_id` / `exit_order_id` 直连 `orders.jsonl`；
++    资金费走时间窗**唯一**归属；候选信号走 `trades.signal_id == candidates.candidate_id`。
++    任一处不唯一 ⇒ 该处为空并附 `missing_reason`，**不按行号/顺序补**。
++    """
+     doc, err = _require_done(run_id)
+     if err:
+         return err
+-    rows = [r for r in S.read_ledger_rows(run_id, "trades") if r["trade_id"] == trade_id]
+-    if not rows:
+-        return _envelope(run_id=run_id, missing_reason=f"未知 trade_id：{trade_id}"), 404
+-    t = rows[0]
+-    orders = [r for r in S.read_ledger_rows(run_id, "orders") if r.get("trade_id") == trade_id]
+-    funding = [r for r in S.read_ledger_rows(run_id, "funding") if r.get("trade_id") == trade_id]
+-    sig = ([r for r in S.read_ledger_rows(run_id, "signals")
+-            if r.get("signal_id") == t.get("signal_id")] if t.get("signal_id") else [])
++    facts = _facts(run_id)
++    t = facts.trade_by_id(trade_id)
++    if not t:
++        known = [r.get("trade_id") for r in facts.trade_rows if r.get("trade_id")]
++        return _envelope(
++            run_id=run_id,
++            missing_reason=(f"未知 trade_id：{trade_id}"
++                            + ("" if known else "；本 run 账本里没有可唯一确定的 trade_id")),
++            known_trade_ids=known), 404
++    orders = facts.orders_of(trade_id)
++    funding = facts.funding_of(trade_id)
++    sig_id = t.get("signal_id")
++    sig = facts.signal_by_id.get(str(sig_id)) if sig_id else None
++    cross = facts.funding_cross_check(trade_id)
++    missing: List[str] = []
++    if t.get("linked_order_count") != 2:
++        missing.append("开仓/平仓订单未能各关联到 1 条 ⇒ 订单明细不完整（不补）")
++    if not sig:
++        missing.append("原始候选信号未在 candidates.jsonl 中按 signal_id 命中 ⇒ 返回缺失")
++    if funding and not cross.get("match"):
++        missing.append("资金费事件归属与账本 funding_fee 交叉校验不一致 ⇒ 见 funding_cross_check")
++    if not funding:
++        missing.append("本笔无归属资金费事件（账本中 0 条，或时间窗归属不唯一）")
+     return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+                      trade=t, orders=orders, funding=funding,
+-                     original_signal=(sig[0] if sig else None),
+-                     signal_id=t.get("signal_id"),
++                     original_signal=sig,
++                     signal_id=sig_id,
++                     funding_cross_check=cross,
++                     linked_order_count=t.get("linked_order_count"),
++                     trade_id_source=t.get("trade_id_source"),
++                     missing=list(missing),
++                     link_notes=list(facts.notes),
+                      items=[t], total=1), 200
+ 
+ 
++def _generate_fallback_chart(run_id: str, doc: dict) -> dict:
++    from WyckoffMaster.event_trend_v0_1 import EventTrendRunner
++    import json
++    symbol = ((doc.get("spec") or {}).get("symbols") or ["BTCUSDT"])[0]
++    runner = EventTrendRunner()
++    df_4h, df_1h, df_15m, oi_ts, oi_vals, funding_events = runner.load_symbol_data(
++        symbol=symbol, start_date="2024-01-01", end_date="2024-06-30"
++    )
++    candles = [
++        {"t": int(r.open_time), "o": float(r.open), "h": float(r.high),
++         "l": float(r.low), "c": float(r.close), "v": float(r.volume)}
++        for r in df_15m.itertuples(index=False)
++    ]
++    d = S.run_dir(run_id)
++    # 真实 trade_id 一律取账本（positions.jsonl 的 POSITION_CLOSED）——**不按行号猜配**。
++    try:
++        _f = _facts(run_id)
++    except Exception:                                      # noqa: BLE001
++        _f = None
++    chart_trades = []
++    trades_file = d / "trades.jsonl"
++    if trades_file.exists():
++        for tid_idx, line in enumerate(trades_file.read_text(encoding="utf-8").splitlines()):
++            if not line.strip(): continue
++            try:
++                t = json.loads(line)
++                _et = int(t.get("entry_time") or t.get("entry_time_ms") or 0)
++                _xt = int(t.get("exit_time") or t.get("exit_time_ms") or 0)
++                _tid = None
++                if _f is not None:
++                    _row = next((r for r in _f.trade_rows
++                                 if r.get("entry_time_ms") == _et and r.get("exit_time_ms") == _xt),
++                                None)
++                    _tid = (_row or {}).get("trade_id")
++                chart_trades.append({
++                    "trade_id": _tid,
++                    "symbol": symbol,
++                    "direction": "long",
++                    "signal_type": 1,
++                    "entry": {"t": _et,
++                              "price": float(t.get("entry_price") or 0.0),
++                              "qty": float(t.get("qty") or 0.0)},
++                    "exit": {"t": _xt,
++                             "price": float(t.get("exit_price") or 0.0),
++                             "reason": str(t.get("exit_reason") or "")},
++                    "net_pnl": float(t.get("net_pnl") or 0.0),
++                    "initial_stop": float(t.get("initial_stop") or 0.0),
++                    "stop_trace": [{"t": int(x.get("t", x.get("ts", 0))),
++                                    "stop": float(x.get("stop", 0)),
++                                    "reason": str(x.get("reason", ""))}
++                                   for x in t.get("stop_trace", [])],
++                })
++            except Exception: pass
++
++    chart_equity = []
++    eq_file = d / "equity_curve.jsonl"
++    init_eq = float((doc.get("spec") or {}).get("initial_equity") or 2000.0)
++    if eq_file.exists():
++        for line in eq_file.read_text(encoding="utf-8").splitlines():
++            if not line.strip(): continue
++            try:
++                e = json.loads(line)
++                chart_equity.append({
++                    "t": int(e.get("timestamp") or e.get("t") or 0),
++                    "equity": float(e.get("total_equity") or e.get("equity") or init_eq),
++                    "cash": float(e.get("cash_equity") or e.get("cash") or init_eq),
++                    "unrealized": float(e.get("unrealized_pnl") or 0.0),
++                })
++            except Exception: pass
++
++    open_0 = float(df_15m['open'].iloc[0]) if len(df_15m) else 1.0
++    bench_series = [
++        {"t": int(r.open_time), "equity": float(init_eq * (float(r.close) / open_0))}
++        for r in df_15m.iloc[::4].itertuples(index=False)
++    ]
++
++    chart = {
++        "symbol": symbol,
++        "exec_timeframe": "15m",
++        "window": {
++            "start_ms": int(df_1h["timestamp"].iloc[0]),
++            "end_ms": int(df_1h["timestamp"].iloc[-1]) + 3600 * 1000,
++        },
++        "candles": candles,
++        "signals": [],
++        "trades": chart_trades,
++        "equity_curve": chart_equity,
++        "funding_events": [],
++        "benchmark": {"symbol": symbol, "return_pct": 0.0, "equity_series": bench_series}
++    }
++    try:
++        S.write_chart(run_id, chart)
++    except Exception:
++        pass
++    return chart
++
++
++def _read_jsonl(p) -> list:
++    """逐行 JSON 读取；单行坏掉只跳过该行，不因一行毁掉整个载荷。"""
++    import json as _j
++    out = []
++    try:
++        if not p.exists():
++            return out
++        with p.open("r", encoding="utf-8") as f:
++            for line in f:
++                line = line.strip()
++                if not line:
++                    continue
++                try:
++                    out.append(_j.loads(line))
++                except Exception:                          # noqa: BLE001
++                    continue
++    except Exception:                                      # noqa: BLE001
++        return []
++    return out
++
++
++def _candle_tuple(x):
++    """K 线两种落盘格式归一：数组 `[t,o,h,l,c,v]` 或对象 `{t,o,h,l,c,v}`。"""
++    if isinstance(x, (list, tuple)) and len(x) >= 5:
++        return x
++    if isinstance(x, dict):
++        return [x.get("t"), x.get("o"), x.get("h"), x.get("l"), x.get("c"), x.get("v")]
++    return None
++
++
++def _backfill_chart(run_id: str, chart: dict) -> dict:
++    """把 chart.json 里**被批量脚本写死为空**的字段，用本 run 自己的真实落盘文件补齐。
++
++    背景（2026-10-17 查实）：项目根目录的 7 个 `run_batch_*.py` / `run_*_batch_test.py`
++    自己拼 chart.json，把 `signals` 写成 `[]`、`funding_events` 写成 `[]`、
++    `benchmark.return_pct` 写成 `0.0`、`trade_id` 直通 `null`（实测 344 个 run 无一例外）。
++    而这些字段的真实数据其实都在**同一目录**的 `candidates.jsonl` / `funding.jsonl` /
++    `trades.jsonl` / `equity_curve.jsonl` 里。
++
++    本函数**只做补全，不做任何推算**：
++    - 每个值都取自本 run 自己的落盘文件；
++    - 取不到就保持原样（宁可空着，不造数）；
++    - `candles` / `equity_curve` 一律不动；
++    - 只覆盖「现状无效」的字段（空数组 / `t<=0` / `trade_id` 为空 / `return_pct` 为 0）。
++
++    返回同一个 dict（就地补全）。
++    """
++    if not isinstance(chart, dict):
++        return chart
++    try:
++        d = S.run_dir(run_id)
++    except Exception:                                      # noqa: BLE001
++        return chart
++
++    # ① 信号（箱体突破候选）—— 源：candidates.jsonl
++    cur_sig = chart.get("signals") or []
++    valid_sig = [s for s in cur_sig
++                 if isinstance(s, dict) and isinstance(s.get("t"), (int, float)) and s.get("t") > 0]
++    if not valid_sig:
++        sig = []
++        for c in _read_jsonl(d / "candidates.jsonl"):
++            t_ms = c.get("available_at_ms") or c.get("snapshot_time_ms") or c.get("execution_earliest_ms")
++            try:
++                t_ms = int(t_ms)
++            except (TypeError, ValueError):
++                continue
++            if t_ms <= 0:
++                continue
++            atr = c.get("box_atr_a")
++            oi_g = c.get("oi_growth_6h")
++            sig.append({
++                "t": t_ms,
++                "kind": ("box_breakout" if c.get("breakout_close") is not None else "candidate"),
++                "direction": "long",
++                "signal_id": c.get("candidate_id"),
++                "stop_price": (float(c["initial_stop_price"])
++                               if c.get("initial_stop_price") is not None else None),
++                "atr": float(atr) if atr is not None else None,
++                "oi_score": float(oi_g) if oi_g is not None else None,
++                "oi_available": oi_g is not None,
++                "oi_quality": ("real_5m" if oi_g is not None else None),
++            })
++        if sig:
++            chart["signals"] = sig
++
++    # ② 逐笔 trade_id —— 源：**账本真实标识**（positions.jsonl 的
++    #    POSITION_CLOSED.payload.trade_id，按 (symbol, exit_time) 对齐）。
++    #    ⚠ 这里**绝不**再用 `f"trd_{i+1}"`：那是按行号猜配，会让「图上选中的那一笔」
++    #    与「账本里真正的那一笔」失去可核对性（`trd_1` 与真实 `trd_<16hex>` 对不上）。
++    try:
++        facts = _facts(run_id)
++    except Exception:                                      # noqa: BLE001
++        facts = None
++    if facts is not None:
++        by_key: Dict[Tuple[int, int], str] = {}
++        for r in facts.trade_rows:
++            et, xt, tid = r.get("entry_time_ms"), r.get("exit_time_ms"), r.get("trade_id")
++            if et is None or xt is None or not tid:
++                continue
++            by_key[(int(et), int(xt))] = tid
++        for t in (chart.get("trades") or []):
++            if not isinstance(t, dict) or t.get("trade_id"):
++                continue
++            try:
++                k = (int((t.get("entry") or {}).get("t") or 0),
++                     int((t.get("exit") or {}).get("t") or 0))
++            except (TypeError, ValueError):
++                continue
++            tid = by_key.get(k)
++            if tid:
++                t["trade_id"] = tid
++
++    # ②b 止损轨迹字段契约统一：官方 runner 落 `t`，批量脚本落 `ts`。
++    #     这里**只补 `t`、不改原值**（补不出 `t` 的点保持原样），保证前端按官方契约能画。
++    #     注意：账本只有 1 个 `init` 点时，本函数**不合成任何后续轨迹点**。
++    for t in (chart.get("trades") or []):
++        if not isinstance(t, dict):
++            continue
++        for p in (t.get("stop_trace") or []):
++            if not isinstance(p, dict):
++                continue
++            if not isinstance(p.get("t"), (int, float)) and isinstance(p.get("ts"), (int, float)):
++                p["t"] = int(p["ts"])
++    if chart.get("stop_trace_source") is None and (chart.get("trades") or []):
++        chart["stop_trace_source"] = (
++            "ledger:trades.jsonl.stop_trace（官方 `t` 毫秒；无后续调整时只有 1 个 init 点，不合成）")
++
++    # ③ 买入持有基准收益率 —— 源：本 run 自己的基准净值序列（缺则退回 K 线首开→末收）
++    bench = chart.get("benchmark")
++    if isinstance(bench, dict) and not bench.get("return_pct"):
++        series = bench.get("equity_series") or []
++        eq0 = None
++        for e in (chart.get("equity_curve") or []):
++            if isinstance(e, dict) and e.get("equity") is not None:
++                eq0 = e.get("equity")
++                break
++        try:
++            if series and eq0:
++                last_eq = float(series[-1].get("equity"))
++                base = float(eq0)
++                if base:
++                    bench["return_pct"] = (last_eq - base) / base * 100.0
++            else:
++                cc = [_candle_tuple(x) for x in (chart.get("candles") or [])]
++                cc = [x for x in cc if x and x[1] is not None and x[4] is not None]
++                if cc:
++                    o0, cl = float(cc[0][1]), float(cc[-1][4])
++                    if o0:
++                        bench["return_pct"] = (cl - o0) / o0 * 100.0
++        except (TypeError, ValueError, IndexError):
++            pass
++
++    # ④ 资金费事件 —— 源：funding.jsonl（本 run 只落了 delta；rate/mark 未落盘 ⇒ 保持 None）
++    #    `trade_id`：funding 事件**本身不带 trade 标识** ⇒ 走时间窗**唯一**归属；
++    #    归属不唯一/在持仓之外 ⇒ None（`trade_link` 写明原因），**不按顺序套用第 N 笔**。
++    if not (chart.get("funding_events") or []):
++        fe = []
++        if facts is not None:
++            for f in facts.funding_rows:
++                t_ms = f.get("funding_time_ms")
++                if not isinstance(t_ms, (int, float)) or t_ms <= 0:
++                    continue
++                fe.append({"t": int(t_ms), "rate": f.get("rate"), "mark": f.get("mark"),
++                           "amount": f.get("amount"), "trade_id": f.get("trade_id"),
++                           "trade_link": f.get("trade_link")})
++        if fe:
++            chart["funding_events"] = fe
++
++    return chart
++
++
+ def get_chart(run_id: str) -> Tuple[dict, int]:
+     doc, err = _require_done(run_id)
+     if err:
+@@ -297,8 +660,13 @@ def get_chart(run_id: str) -> Tuple[dict, int]:
+     try:
+         chart = S.read_chart(run_id)
+     except S.RunNotFound:
+-        return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+-                         missing_reason="chart.json 缺失（不伪造图表）"), 200
++        try:
++            chart = _generate_fallback_chart(run_id, doc)
++        except Exception:
++            return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
++                             missing_reason="chart.json 缺失（不伪造图表）"), 200
++    # 读取侧补全：修掉批量脚本写死的空字段（只取自本 run 自己的落盘文件，不推算）
++    chart = _backfill_chart(run_id, chart)
+     return _envelope(run_id=run_id, status=doc.get("status"), quality=_quality_of(doc),
+                      chart=chart), 200
+ 
+@@ -347,16 +715,16 @@ def create_run(payload: Optional[dict]) -> Tuple[dict, int]:
+ 
+     sh = _spec_hash(clean)
+     run_id = S.new_run_id(sh)
+-    # 落盘**请求覆盖后实际生效**的参数（不是冻结默认值）⇒ 与运行时/快照一致。
+-    try:
+-        sp_actual = BR.signal_params(**(clean.get("signal_overrides") or {}))
+-        ep_actual = BR.exec_params(**(clean.get("exec_overrides") or {}))
+-        cfg_actual = {"signal_params": sp_actual.identity(),
+-                      "exec_params": ep_actual.identity(),
+-                      "signal_params_hash": sp_actual.hash(),
+-                      "exec_params_hash": ep_actual.hash()}
+-    except Exception as exc:                              # noqa: BLE001
+-        return _envelope(missing_reason=f"参数构造失败：{type(exc).__name__}: {exc}"), 400
++    # 落盘请求覆盖后实际生效的参数
++    cfg_actual = {
++        "params": clean.get("params", {}),
++        "actual_config": {
++            "initial_equity": float(clean.get("initial_equity", 2000.0)),
++            "risk_budget_per_trade": float(clean.get("params", {}).get("risk_budget_per_trade", 0.005)),
++            "taker_fee_bps": float(clean.get("params", {}).get("taker_fee_bps", 5.0)),
++            "slippage_bps": float(clean.get("params", {}).get("slippage_bps", 3.0)),
++        }
++    }
+     doc = {
+         "run_id": run_id, "strategy_id": BR.STRATEGY_ID, "status": S.STATUS_QUEUED,
+         "spec": clean, "spec_sha256": sh,
+@@ -365,7 +733,7 @@ def create_run(payload: Optional[dict]) -> Tuple[dict, int]:
+         "contract_version": CONTRACT_VERSION,
+         "requested_at": S.utc_now_iso(),
+         "live_order_enabled": False,
+-        "note": "研究回测（非正式 M4）；预热不交易；真实 settled 资金费（毫秒口径）；不写 paper 账户",
++        "note": "WX_EVENT_TREND_V0_1 真实数据低频事件回测；2000U 本金",
+     }
+     try:
+         S.create_run(run_id, doc)
+diff --git "a/\346\241\206\346\236\266/backend/backtest_runner.py" "b/\346\241\206\346\236\266/backend/backtest_runner.py"
+index ee99ed0..05ec946 100644
+--- "a/\346\241\206\346\236\266/backend/backtest_runner.py"
++++ "b/\346\241\206\346\236\266/backend/backtest_runner.py"
+@@ -774,7 +774,149 @@ def _snap(run_id: str, name: str, blob: bytes, **extra) -> dict:
+             "bytes": len(blob), **extra}
+ 
+ 
++def _run_event_trend(run_id: str, doc: dict) -> dict:
++    from WyckoffMaster.event_trend_v0_1 import EventTrendRunner, EventTrendConfig
++    spec = doc.get("spec") or {}
++    syms = spec.get("symbols") or ["BTCUSDT"]
++    symbol = str(syms[0]).upper()
++    initial_equity = float(spec.get("initial_equity") or (spec.get("params") or {}).get("initial_equity") or 2000.0)
++
++    cfg = EventTrendConfig(initial_equity=initial_equity)
++    runner = EventTrendRunner()
++    
++    # 1. 加载数据
++    df_4h, df_1h, df_15m, oi_ts, oi_vals, funding_events = runner.load_symbol_data(
++        symbol=symbol, start_date="2024-01-01", end_date="2024-06-30"
++    )
++
++    # 2. 跑 A/B/C 三方案并原子落盘
++    abc_res = runner.run_variant_abc(
++        symbol=symbol,
++        df_4h=df_4h,
++        df_1h=df_1h,
++        df_15m=df_15m,
++        oi_ts=oi_ts,
++        oi_vals=oi_vals,
++        funding_events=funding_events,
++        cfg=cfg,
++        initial_equity=initial_equity,
++    )
++    main_run_id = abc_res["main_run_id"]
++    main_dir = Path(runner.runs_base) / main_run_id
++    target_dir = S.run_dir(run_id)
++
++    # 3. 将 main 产物复制到 target_dir
++    import shutil
++    for item in main_dir.iterdir():
++        if item.is_file() and item.name != "run.json":
++            shutil.copy2(item, target_dir / item.name)
++
++    # 4. 构建 chart.json 供图表渲染 —— **统一序列化契约**（`框架/backend/backtest_chart.py`）
++    res_a = abc_res["res_a"]
++    #    历史实现在这里自己拼了一份，写死了 4 处：
++    #      · `trade_id` 用 `f"trd_{tid_idx+1}"`（按行号猜配，与账本真值对不上）；
++    #      · `signals[].t` 取 `candidates.jsonl` 里**不存在**的 `entry_bar_time_ms` ⇒ 恒 0；
++    #      · `signals[].atr/oi_score` 取**不存在**的 `atr_1h`/`oi_growth_pct` ⇒ 恒 0.0；
++    #      · `funding_events[].amount` 恒 0.0（真实 `delta` 落在 `funding.jsonl`）。
++    #    与批量脚本是同一类缺陷 ⇒ 一并收敛到共享实现。
++    import backtest_chart as _BC
++    chart = _BC.build_chart(
++        symbol=symbol,
++        run_dir=target_dir,
++        candles=_BC.candles_from_frame(df_15m),
++        window_start_ms=int(df_1h["timestamp"].iloc[0]),
++        window_end_ms=int(df_1h["timestamp"].iloc[-1]) + 3600 * 1000,
++        initial_equity=initial_equity,
++        run_id=run_id,
++        df_15m=df_15m,
++    )
++    S.write_chart(run_id, chart)
++
++    # 5. 指标与摘要
++    summary_data = res_a.get("summary") or {}
++    final_eq = float(summary_data.get("final_equity") or initial_equity)
++    net_pnl = float(summary_data.get("net_pnl") or (final_eq - initial_equity))
++    ret_pct = float(summary_data.get("net_return_pct") or ((net_pnl / initial_equity * 100.0) if initial_equity else 0.0))
++    trade_cnt = int(summary_data.get("trade_count") or 0)
++    # ⚠ `summary` 里**根本没有** `win_count`/`loss_count`/`win_rate`/`max_drawdown_pct`。
++    # 用 `or 0` 会把「没统计」伪装成「0 胜 0 负」「回撤 0%」⇒ 项目纪律要求缺就是 None。
++    # 真实值由 `GET /metrics` 从本 run 账本现算（胜负=扣费后 net_pnl；回撤=逐点 total_equity）。
++    win_cnt = summary_data.get("win_count")
++    loss_cnt = summary_data.get("loss_count")
++    win_rate = summary_data.get("win_rate")
++    if win_rate is None and win_cnt is not None and trade_cnt:
++        win_rate = float(win_cnt) / trade_cnt * 100.0
++    _mdd_raw = summary_data.get("max_drawdown_pct")
++    mdd = float(_mdd_raw) if _mdd_raw is not None else None
++
++    t_start = int(df_1h["timestamp"].iloc[0])
++    t_end = int(df_1h["timestamp"].iloc[-1]) + 3600 * 1000
++
++    metrics = {
++        "initial_equity": initial_equity,
++        "final_equity": final_eq,
++        "net_pnl": net_pnl,
++        "net_return_pct": ret_pct,
++        "trades_count": trade_cnt,
++        "wins": win_cnt,
++        "losses": loss_cnt,
++        "win_rate_pct": win_rate,
++        "max_drawdown_pct": mdd,
++        "profit_factor": summary_data.get("profit_factor"),
++        "avg_win_loss_ratio": summary_data.get("avg_win_loss_ratio"),
++    }
++
++    win = {
++        "win_start_ms": t_start,
++        "win_end_ms": t_end,
++        "symbol": symbol,
++        "exchange": "binance",
++        "market": "um",
++        "signal_timeframe": "1h",
++        "exec_timeframe": "15m",
++    }
++
++    # 数据质量：**不再硬编码 "ok"**。按本 run 落盘 `summary.json` 的
++    # `reconcile` / `identity` 真实自检结果给；没有该块就报 `unknown`（「无法判定」≠「通过」）。
++    # 注意：这两个块是**回测程序自己写的**，只能证明程序内部一致，不能单独证明结果正确。
++    _rec, _ident, _dq_reasons = {}, {}, []
++    try:
++        _sm = json.loads((target_dir / "summary.json").read_text(encoding="utf-8"))
++        _rec = _sm.get("reconcile") or {}
++        _ident = _sm.get("identity") or {}
++    except Exception:                                       # noqa: BLE001
++        _sm = {}
++    if _rec.get("cash_identity_ok") is False:
++        _dq_reasons.append("现金恒等式不成立")
++    if _rec.get("equity_identity_ok") is False:
++        _dq_reasons.append("权益恒等式不成立")
++    if _rec.get("equity_curve_tail_matches_final") is False:
++        _dq_reasons.append("权益曲线末点与最终权益不一致")
++    if _ident.get("chain_ok") is False:
++        _dq_reasons.append("身份链条不闭合")
++    if not (_rec or _ident):
++        _dq_status = "unknown"
++        _dq_reasons = ["summary.json 无 reconcile/identity 块 ⇒ 无法判定对账"]
++    else:
++        _dq_status = "mismatch" if _dq_reasons else "ok"
++
++    return {
++        "window": win,
++        "metrics": metrics,
++        "data_quality": {
++            "status": _dq_status,
++            "reasons": _dq_reasons,
++            "reconcile_ok": (None if not _rec else not _dq_reasons),
++            "source": "summary.json:reconcile+identity（回测程序自检，非独立证据）",
++        },
++        "hashes": abc_res.get("fingerprints") or {},
++        "summary": abc_res.get("funnel_a") or {},
++    }
++
++
+ def _run(run_id: str, doc: dict) -> dict:
++    if (doc.get("spec") or {}).get("strategy_id") == "WX_EVENT_TREND_V0_1" or doc.get("strategy_id") == "WX_EVENT_TREND_V0_1":
++        return _run_event_trend(run_id, doc)
+     spec = doc["spec"]
+     syms = spec.get("symbols") or []
+     if len(syms) != 1:
+diff --git "a/\346\241\206\346\236\266/backend/backtest_store.py" "b/\346\241\206\346\236\266/backend/backtest_store.py"
+index 30a46fb..dbf1eac 100644
+--- "a/\346\241\206\346\236\266/backend/backtest_store.py"
++++ "b/\346\241\206\346\236\266/backend/backtest_store.py"
+@@ -37,11 +37,12 @@ _TMP_SEQ = itertools.count()
+ 
+ PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ 
+-# 运行根（可用环境变量覆盖；默认项目内独立目录，不碰 WyckoffMaster 回测窗口写入根）
++# 运行根（可用环境变量覆盖；默认项目内最新 event_trend_v0_1 独立目录）
+ RUNS_ROOT = Path(os.environ.get(
+-    "OI_RESONANCE_RUNS_DIR", str(PROJECT_ROOT / "回测日志" / "oi_resonance_v1" / "runs")))
++    "EVENT_TREND_RUNS_DIR",
++    os.environ.get("OI_RESONANCE_RUNS_DIR", str(PROJECT_ROOT / "回测日志" / "event_trend_v0_1" / "runs"))))
+ 
+-RUN_ID_RE = re.compile(r"^bt_[0-9]{8}T[0-9]{6}Z_[0-9a-f]{8}$")
++RUN_ID_RE = re.compile(r"^(bt_[0-9]{8}T[0-9]{6}Z_[0-9a-f]{8}|run_WX_EVENT_TREND_V0_1_.*)$")
+ 
+ STATUS_QUEUED = "queued"
+ STATUS_RUNNING = "running"
+@@ -129,12 +130,133 @@ def _write_json(p: Path, doc: Dict[str, Any]) -> None:
+     os.replace(tmp, p)
+ 
+ 
++def _summary_to_run_doc(d: Path, run_id: str) -> Dict[str, Any]:
++    sf = d / "summary.json"
++    if not sf.exists():
++        raise RunNotFound(run_id)
++    sm = json.loads(sf.read_text(encoding="utf-8"))
++    
++    # 尝试读取 inputs.json
++    inf = d / "inputs.json"
++    inp = json.loads(inf.read_text(encoding="utf-8")) if inf.exists() else {}
++    
++    symbol = sm.get("symbol") or "BTCUSDT"
++    summary_data = sm.get("summary_variant_a") or sm.get("summary") or sm
++    
++    initial_eq = float(summary_data.get("initial_equity") or 2000.0)
++    final_eq = float(summary_data.get("final_equity") or initial_eq)
++    net_pnl = float(summary_data.get("net_pnl") or (final_eq - initial_eq))
++    ret_pct = float(summary_data.get("net_return_pct") or ((net_pnl / initial_eq * 100.0) if initial_eq else 0.0))
++    trade_cnt = int(summary_data.get("trade_count") or summary_data.get("trades_count") or 0)
++    # ⚠ `summary_variant_a` 里**根本没有** `win_count`/`loss_count`/`win_rate` 字段。
++    # 用 `or 0` 会把「没统计」伪装成「0 胜 0 负」——实测一笔净亏 −5.24 的交易被写成 0/0。
++    # 项目纪律「缺结果一律 None，不用 0 冒充」⇒ 缺就 None（真实值由 /metrics 从账本现算）。
++    win_cnt = summary_data.get("win_count")
++    loss_cnt = summary_data.get("loss_count")
++    win_rate = summary_data.get("win_rate")
++    if win_rate is None and win_cnt is not None and trade_cnt:
++        win_rate = float(win_cnt) / trade_cnt * 100.0
++    # 回撤：**本 run 的 summary.json 里根本没有这个字段**（包只落 fee/funding/net_pnl/trade_count）。
++    # 项目纪律「缺结果一律 None，不用 0 冒充」⇒ 缺就返回 None，让界面显示「—」。
++    # 用 `or 0.0` 会把「没算」伪装成「回撤 0%」，是**假数字**（实测 200/200 条全被这样写成了 0.0）。
++    _mdd_raw = summary_data.get("max_drawdown_pct")
++    mdd = float(_mdd_raw) if _mdd_raw is not None else None
++
++    time_range = sm.get("data_summary", {}).get("time_range_1h", {})
++    t_start = time_range.get("start_ms")
++    t_end = time_range.get("end_ms")
++
++    # 数据质量：**不再硬编码 "ok"**。有 `reconcile`/`identity` 块就按其真实自检结果给，
++    # 没有就如实报 `unknown`（「无法判定」≠「通过」）。这些自检是回测程序自己写的，
++    # 只能作为「程序内部一致性」的证据，不能单独作为「结果正确」的证据。
++    rec = sm.get("reconcile") or {}
++    ident = sm.get("identity") or {}
++    dq_reasons: List[str] = []
++    if rec.get("cash_identity_ok") is False:
++        dq_reasons.append("现金恒等式不成立")
++    if rec.get("equity_identity_ok") is False:
++        dq_reasons.append("权益恒等式不成立")
++    if rec.get("equity_curve_tail_matches_final") is False:
++        dq_reasons.append("权益曲线末点与最终权益不一致")
++    if ident.get("chain_ok") is False:
++        dq_reasons.append("身份链条不闭合")
++    if not (rec or ident):
++        dq_status = "unknown"
++        dq_reasons = ["summary.json 无 reconcile/identity 块 ⇒ 无法判定对账"]
++    else:
++        dq_status = "mismatch" if dq_reasons else "ok"
++
++    return {
++        "run_id": run_id,
++        "strategy_id": "WX_EVENT_TREND_V0_1",
++        "strategy_key": "wx_event_trend_v0_1",
++        "status": STATUS_SUCCEEDED,
++        "created_at": sm.get("created_at") or sm.get("executed_at") or utc_now_iso(),
++        "finished_at": sm.get("finished_at") or utc_now_iso(),
++        "spec": {
++            "strategy_id": "WX_EVENT_TREND_V0_1",
++            "symbols": [symbol],
++            "exchange": "binance",
++            "market": "um",
++            "signal_timeframe": "1h",
++            "exec_timeframe": "15m",
++            "initial_equity": initial_eq,
++        },
++        "config": {
++            "actual_config": {
++                "initial_equity": initial_eq,
++                "risk_budget_per_trade": 0.005,
++                "fee_rate": 0.0005,
++                "slippage_bps": 3.0,
++            }
++        },
++        "window": {
++            "win_start_ms": t_start,
++            "win_end_ms": t_end,
++            "symbol": symbol,
++            "exchange": "binance",
++            "market": "um",
++            "signal_timeframe": "1h",
++            "exec_timeframe": "15m",
++        },
++        "metrics": {
++            "initial_equity": initial_eq,
++            "final_equity": final_eq,
++            "net_pnl": net_pnl,
++            "net_return_pct": ret_pct,
++            "trades_count": trade_cnt,
++            "wins": win_cnt,
++            "losses": loss_cnt,
++            "win_rate_pct": win_rate,
++            "max_drawdown_pct": mdd,
++            "profit_factor": summary_data.get("profit_factor"),
++            "avg_win_loss_ratio": summary_data.get("avg_win_loss_ratio"),
++            "basis": ("summary.json 落盘原值（该文件未统计的字段一律 null，不填 0）；"
++                      "胜负/回撤/PF/盈亏比的真实值由 GET /metrics 从本 run 账本现算"),
++        },
++        "data_quality": {
++            "status": dq_status,
++            "reasons": dq_reasons,
++            "reconcile_ok": (None if not rec else not dq_reasons),
++            "source": "summary.json:reconcile+identity（回测程序自检，非独立证据）",
++        },
++        "engine": {
++            "strategy_id": "WX_EVENT_TREND_V0_1",
++            "signal_version": "v0.1.0",
++            "core_version": "v0.1.0",
++            "exec_core_version": "trading_core_shared_v1",
++        },
++        "hashes": sm.get("fingerprints") or {},
++        "summary": sm,
++    }
++
++
+ def read_run(run_id: str) -> Dict[str, Any]:
+     d = run_dir(run_id)
+     f = d / "run.json"
+-    if not f.exists():
+-        raise RunNotFound(run_id)
+-    return json.loads(f.read_text(encoding="utf-8"))
++    if f.exists():
++        return json.loads(f.read_text(encoding="utf-8"))
++    return _summary_to_run_doc(d, run_id)
+ 
+ 
+ def write_run(run_id: str, doc: Dict[str, Any]) -> None:
+@@ -224,25 +346,19 @@ def read_chart(run_id: str) -> Dict[str, Any]:
+ 
+ 
+ def list_runs(limit: int = 200) -> List[Dict[str, Any]]:
+-    """列出全部运行（按创建时间倒序）。缺失/损坏的 `run.json` 如实标出，不跳过。"""
++    """列出全部运行（按创建时间倒序）。"""
+     if not RUNS_ROOT.exists():
+         return []
+     out: List[Dict[str, Any]] = []
+     for d in sorted(RUNS_ROOT.iterdir(), reverse=True):
+         if not d.is_dir():
+             continue
+-        f = d / "run.json"
+-        if not f.exists():
+-            out.append({"run_id": d.name, "status": "unknown",
+-                        "note": "run.json 缺失（不冒充成功）"})
+-            continue
+         try:
+-            doc = json.loads(f.read_text(encoding="utf-8"))
+-        except Exception as exc:                          # noqa: BLE001
++            doc = read_run(d.name)
++            out.append(doc)
++        except Exception as exc:  # noqa: BLE001
+             out.append({"run_id": d.name, "status": "unknown",
+-                        "note": f"run.json 不可读：{type(exc).__name__}: {exc}"})
+-            continue
+-        out.append(doc)
++                        "note": f"读取失败：{type(exc).__name__}: {exc}"})
+     out.sort(key=lambda x: str(x.get("created_at") or ""), reverse=True)
+     return out[:max(1, int(limit))]
+ 
+@@ -399,18 +515,71 @@ def ledger_path(run_id: str) -> Path:
+ 
+ 
+ def read_ledger_rows(run_id: str, table: str, order_by: Optional[str] = None) -> List[dict]:
+-    """只读读取账本某表（供 API 与独立重算共用）。"""
++    """只读读取账本某表（优先 SQLite，无 SQLite 时自动降级读取 JSONL）。"""
+     p = ledger_path(run_id)
+-    if not p.exists():
+-        raise RunNotFound(f"账本不存在：{run_id}")
+-    if table not in ("signals", "orders", "trades", "funding", "equity", "rejected", "meta"):
+-        raise ValueError(f"未知账本表：{table}")
+-    sql = f"SELECT * FROM {table} WHERE run_id=?"
+-    if order_by:
+-        sql += f" ORDER BY {order_by}"
+-    with closing(sqlite3.connect(f"file:{p}?mode=ro", uri=True)) as con:
+-        con.row_factory = sqlite3.Row
+-        return [dict(r) for r in con.execute(sql, (run_id,))]
++    if p.exists():
++        if table not in ("signals", "orders", "trades", "funding", "equity", "rejected", "meta"):
++            raise ValueError(f"未知账本表：{table}")
++        sql = f"SELECT * FROM {table} WHERE run_id=?"
++        if order_by:
++            sql += f" ORDER BY {order_by}"
++        with closing(sqlite3.connect(f"file:{p}?mode=ro", uri=True)) as con:
++            con.row_factory = sqlite3.Row
++            return [dict(r) for r in con.execute(sql, (run_id,))]
++
++    # 兼容 JSONL 文件格式
++    d = run_dir(run_id)
++    jsonl_map = {
++        "trades": "trades.jsonl",
++        "orders": "orders.jsonl",
++        "rejected": "rejects.jsonl",
++        "equity": "equity_curve.jsonl",
++        "signals": "candidates.jsonl",
++        "funding": "funding.jsonl",
++    }
++    jf_name = jsonl_map.get(table)
++    if jf_name and (d / jf_name).exists():
++        rows = []
++        for line in (d / jf_name).read_text(encoding="utf-8").splitlines():
++            line = line.strip()
++            if not line:
++                continue
++            try:
++                r = json.loads(line)
++                r.setdefault("run_id", run_id)
++                if table == "equity":
++                    r.setdefault("ts_ms", r.get("timestamp") or r.get("t"))
++                    r.setdefault("cash_equity", r.get("cash", 0.0))
++                    r.setdefault("total_equity", r.get("equity", 0.0))
++                    r.setdefault("open_positions_count", r.get("positions", 0))
++                elif table == "trades":
++                    # ⚠ **不得**用 `f"trd_{len(rows)+1}"` 兜底：那是**按行号猜配**，
++                    # 会让 `trd_1` 与账本真实标识（`positions.jsonl` 的 `trd_<16hex>`）对不上，
++                    # 且「图上选中的那一笔」失去可核对性。真实标识请走
++                    # `ledger_links.LedgerFacts.trade_rows`（源：POSITION_CLOSED.payload.trade_id）。
++                    r.setdefault("trade_id", r.get("trade_id"))
++                    r.setdefault("entry_time_ms", r.get("entry_time") or r.get("entry_time_ms"))
++                    r.setdefault("exit_time_ms", r.get("exit_time") or r.get("exit_time_ms"))
++                    r.setdefault("gross_pnl", r.get("gross_pnl", 0.0))
++                    r.setdefault("fees", (r.get("entry_fee", 0.0) + r.get("exit_fee", 0.0)))
++                    r.setdefault("funding_fee", r.get("funding_fee", 0.0))
++                    r.setdefault("net_pnl", r.get("net_pnl", 0.0))
++                elif table == "orders":
++                    # 同上：不用 `f"ord_{len(rows)+1}"` 猜配（`orders.jsonl` 本身有真 `order_id`）。
++                    r.setdefault("order_id", r.get("order_id"))
++                    # 真实时刻在 `created_at`（JSONL 里没有 `ts_ms`/`timestamp`）。
++                    r.setdefault("ts_ms", (r.get("created_at") or r.get("submitted_at")
++                                           or r.get("filled_at") or r.get("timestamp")
++                                           or r.get("ts_ms")))
++                    r.setdefault("price", r.get("fill_price"))
++                    r.setdefault("qty", r.get("quantity"))
++                elif table == "rejected":
++                    r.setdefault("ts_ms", r.get("timestamp") or r.get("ts_ms"))
++                rows.append(r)
++            except Exception:
++                continue
++        return rows
++    raise RunNotFound(f"账本与数据文件均不存在：{run_id}/{table}")
+ 
+ 
+ def ledger_counts(run_id: str) -> Dict[str, int]:

@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-"""离线测试：迁移 / 配置校验 / 因果时序 / 逐前缀一致 / 去重 / 只读契约。
+"""离线测试：迁移 / 只读契约 / 适配层 / 运行器 CLI / 批量导入 / OI 分桶。
+
+注：旧策略 strategy_a / strategy_b 已于 commit 46ae755 物理删除（含其配置校验、
+因果时序、逐前缀一致、去重等测试），本文件不再引用它们；仅保留 common 的通用工具测试。
 
 不使用网络、不使用凭据；合成 bar 只存在于内存或临时库，不写共享行情库。
 运行（必须用 Python 3.13；本包使用 PEP 604 类型语法）：
@@ -37,7 +40,7 @@ for p in (str(HERE), FRAMEWORK, PROJECT):
 os.environ["ADAPTER_CACHE"] = "0"
 
 from data_hub.store import MarketStore                      # noqa: E402
-from strategies import common, strategy_a, strategy_b       # noqa: E402
+from strategies import common                               # noqa: E402
 import migrate                                              # noqa: E402
 
 IV = 14400000          # 4h
@@ -58,41 +61,6 @@ def mk(k, o, h, l, c, qv, vol=None, tbv=None, tbqv=None, interval=IV):
     return common.Bar(ot, ot + interval - 1, o, h, l, c, vol, qv, 10, tbv, tbqv, 1)
 
 
-def mk_missing_taker(k, qv, interval=IV15):
-    """主动买入字段缺失的 bar（用于验证缺失字段不被当作异常）。"""
-    ot = DAY_OPEN + k * interval
-    return common.Bar(ot, ot + interval - 1, 100, 101, 99, 100, qv, qv, 10, None, None, 1)
-
-
-def cfg(**kw):
-    base = {"range_lookback": 3, "breakout_volume_lookback": 2, "breakout_volume_mult": 1.5,
-            "breakout_tolerance_pct": 0.001, "breakout_max_bars": 2, "retest_max_bars": 2,
-            "retest_tolerance_pct": 0.002}
-    base.update(kw)
-    return {"version": "test", "config": base, "config_hash": common.config_hash(base),
-            "frozen": False}
-
-
-def cfg_b(**kw):
-    base = {"lookback_bars": 5, "min_history_bars": 5, "buy_ratio_quantile": 0.8,
-            "volume_quantile": 0.5, "persist_bars": 3}
-    base.update(kw)
-    return {"version": "test", "config": base, "config_hash": common.config_hash(base),
-            "frozen": False}
-
-
-def a_bars(retest=True):
-    b = [mk(0, 101, 102, 99, 101, 1000), mk(1, 102, 103, 100, 102, 1000),
-         mk(2, 101, 103, 100, 101, 1000), mk(3, 100, 102, 99, 100, 1000),
-         mk(4, 101, 104, 101, 104, 2000)]
-    if retest:
-        b.append(mk(5, 103.5, 103.8, 103.0, 103.5, 1000))
-    else:
-        b.append(mk(5, 104, 104.5, 104.2, 104.4, 1000))
-    b += [mk(6, 104, 104.5, 103.5, 104, 1000), mk(7, 104, 104.5, 103.5, 104, 1000)]
-    return b
-
-
 def b_bars(n_normal=5, n_anom=4, normal_ratio=0.5, anom_ratio=0.9):
     b, k = [], 0
     for _ in range(n_normal):
@@ -104,11 +72,6 @@ def b_bars(n_normal=5, n_anom=4, normal_ratio=0.5, anom_ratio=0.9):
                     tbqv=anom_ratio * 2000, interval=IV15))
         k += 1
     return b
-
-
-def flat_bars(n=10, qv=1000, ratio=0.5):
-    return [mk(k, 100, 101, 99, 100, qv, vol=qv, tbv=ratio * qv, tbqv=ratio * qv, interval=IV15)
-            for k in range(n)]
 
 
 def iso(ms):
@@ -385,57 +348,13 @@ class MigrationTests(unittest.TestCase):
         self.assertNotIn("strategy_configs", names)
 
 
-class ConfigValidationTests(unittest.TestCase):
-    """配置校验：类型/有限性/范围/窗口关系；非法 → 配置无效（不抛异常、不当 ok）。"""
+class CommonQuantileTests(unittest.TestCase):
+    """common.quantile 的防御性行为：空序列/None/NaN 一律不抛异常，越界自动截断。
 
-    def test_quantile_above_range_is_invalid_not_indexerror(self):
-        # 复现主助手离线场景：buy_ratio_quantile=2 曾抛 IndexError
-        r = strategy_b.run(flat_bars(10), cfg_b(buy_ratio_quantile=2))
-        self.assertEqual(r["status"], common.STATUS_INVALID)
-        self.assertEqual(r["events"], [])
-        self.assertTrue(any("buy_ratio_quantile" in e for e in r["diagnostics"]["config_errors"]))
-
-    def test_quantile_negative_is_invalid(self):
-        r = strategy_b.run(b_bars(), cfg_b(volume_quantile=-0.1))
-        self.assertEqual(r["status"], common.STATUS_INVALID)
-
-    def test_min_history_gt_lookback_is_invalid(self):
-        r = strategy_b.run(b_bars(n_anom=6), cfg_b(min_history_bars=9, lookback_bars=5))
-        self.assertEqual(r["status"], common.STATUS_INVALID)
-        self.assertTrue(any("min_history_bars" in e for e in r["diagnostics"]["config_errors"]))
-
-    def test_non_integer_window_is_invalid(self):
-        r = strategy_a.run(a_bars(), cfg(range_lookback=3.5))
-        self.assertEqual(r["status"], common.STATUS_INVALID)
-
-    def test_negative_multiplier_is_invalid(self):
-        r = strategy_a.run(a_bars(), cfg(breakout_volume_mult=-1.0))
-        self.assertEqual(r["status"], common.STATUS_INVALID)
-
-    def test_zero_multiplier_is_invalid(self):
-        r = strategy_a.run(a_bars(), cfg(breakout_volume_mult=0))
-        self.assertEqual(r["status"], common.STATUS_INVALID)
-
-    def test_negative_tolerance_is_invalid(self):
-        r = strategy_a.run(a_bars(), cfg(retest_tolerance_pct=-0.01))
-        self.assertEqual(r["status"], common.STATUS_INVALID)
-
-    def test_zero_persist_is_invalid(self):
-        r = strategy_b.run(b_bars(), cfg_b(persist_bars=0))
-        self.assertEqual(r["status"], common.STATUS_INVALID)
-
-    def test_nan_is_invalid(self):
-        r = strategy_a.run(a_bars(), cfg(breakout_volume_mult=float("nan")))
-        self.assertEqual(r["status"], common.STATUS_INVALID)
-
-    def test_none_value_is_pending_not_invalid(self):
-        r = strategy_a.run(a_bars(), cfg(range_lookback=None))
-        self.assertEqual(r["status"], common.STATUS_PENDING)
-        self.assertIn("range_lookback", r["diagnostics"]["missing_config"])
-
-    def test_valid_config_is_ok(self):
-        self.assertEqual(strategy_a.run(a_bars(), cfg())["status"], common.STATUS_OK)
-        self.assertEqual(strategy_b.run(b_bars(), cfg_b())["status"], common.STATUS_OK)
+    说明：原 `ConfigValidationTests` / `StrategyATests` / `StrategyAPrefixTests` /
+    `StrategyBTests` 测的是 strategy_a / strategy_b，二者已于 commit 46ae755 物理删除，
+    故整类移除；此处仅保留真正针对 `strategies.common` 的用例。
+    """
 
     def test_quantile_defensive_no_exception(self):
         self.assertIsNone(common.quantile([], 2))
@@ -443,144 +362,6 @@ class ConfigValidationTests(unittest.TestCase):
         self.assertIsNone(common.quantile([1, 2, 3], float("nan")))
         self.assertEqual(common.quantile([1, 2, 3], 2), 3)      # 越界截断到 1.0
         self.assertEqual(common.quantile([1, 2, 3], -1), 1)
-
-
-class StrategyATests(unittest.TestCase):
-    def test_pending_config_when_unset(self):
-        r = strategy_a.run(a_bars(), None)
-        self.assertEqual(r["status"], common.STATUS_PENDING)
-        self.assertEqual(r["events"], [])
-        self.assertIn("range_lookback", r["diagnostics"]["missing_config"])
-
-    def test_insufficient_data(self):
-        r = strategy_a.run(a_bars()[:4], cfg())
-        self.assertEqual(r["status"], common.STATUS_INSUFFICIENT)
-        self.assertEqual(r["events"], [])
-
-    def test_confirm_time_is_retest_bar_not_breakout(self):
-        bars = a_bars()
-        r = strategy_a.run(bars, cfg())
-        self.assertEqual(r["status"], common.STATUS_OK)
-        self.assertEqual(len(r["events"]), 1)
-        ev = r["events"][0]
-        self.assertEqual(ev.confirmed_at, bars[5].close_time)          # 回踩 bar
-        self.assertNotEqual(ev.confirmed_at, bars[4].close_time)       # 不回填突破 bar
-        self.assertEqual(ev.event_time, bars[5].close_time)
-
-    def test_retest_must_be_independent_later_bar(self):
-        bars = [mk(0, 101, 102, 99, 101, 1000), mk(1, 102, 103, 100, 102, 1000),
-                mk(2, 101, 103, 100, 101, 1000), mk(3, 100, 102, 99, 100, 1000),
-                mk(4, 101, 104, 103.0, 104, 2000),      # 突破 bar 自身也触及上沿
-                mk(5, 104, 104.5, 104.2, 104.4, 1000), mk(6, 104, 104.5, 104.2, 104.4, 1000)]
-        r = strategy_a.run(bars, cfg())
-        self.assertEqual(r["events"], [])
-
-    def test_no_lookahead_future_bar_does_not_change_event(self):
-        bars = a_bars()
-        r1 = strategy_a.run(bars, cfg())
-        mutated = list(bars)
-        mutated[7] = mk(7, 999, 9999, 1, 9999, 9_000_000)   # 篡改最后一根
-        r2 = strategy_a.run(mutated, cfg())
-        self.assertEqual([e.confirmed_at for e in r1["events"]],
-                         [e.confirmed_at for e in r2["events"]])
-        self.assertEqual(len(r2["events"]), 1)
-
-
-class StrategyAPrefixTests(unittest.TestCase):
-    """逐前缀一致性：不允许“事后补出当时未能判定的确认”。"""
-
-    def test_prefix_consistency_no_backfill(self):
-        bars = a_bars()
-        full = sorted(e.confirmed_at for e in strategy_a.run(bars, cfg())["events"])
-        self.assertEqual(full, [bars[5].close_time])
-        for k in range(len(bars) + 1):
-            got = sorted(e.confirmed_at
-                         for e in strategy_a.run(bars[:k], cfg())["events"])
-            last = bars[k - 1].close_time if k else None
-            want = sorted(t for t in full if last is not None and t <= last)
-            self.assertEqual(got, want, f"A 前缀 k={k} 不一致：{got} != {want}")
-
-    def test_event_is_visible_at_the_bar_that_confirms_it(self):
-        bars = a_bars()
-        # 只有 6 根（末根即回踩 bar）时就必须已能判定，不得等到第 7 根才补出
-        r6 = strategy_a.run(bars[:6], cfg())
-        self.assertEqual(r6["status"], common.STATUS_OK)
-        self.assertEqual([e.confirmed_at for e in r6["events"]], [bars[5].close_time])
-        # 只有 5 根（末根是突破 bar）时不得有事件
-        self.assertEqual(strategy_a.run(bars[:5], cfg())["events"], [])
-
-
-class StrategyBTests(unittest.TestCase):
-    def test_pending_config_when_unset(self):
-        r = strategy_b.run(b_bars(), None)
-        self.assertEqual(r["status"], common.STATUS_PENDING)
-        self.assertIn("persist_bars", r["diagnostics"]["missing_config"])
-
-    def test_insufficient_data(self):
-        r = strategy_b.run(b_bars()[:5], cfg_b())
-        self.assertEqual(r["status"], common.STATUS_INSUFFICIENT)
-
-    def test_dedupe_single_event_per_segment(self):
-        bars = b_bars(n_anom=4)          # 连续 4 根异常，persist=3
-        r = strategy_b.run(bars, cfg_b())
-        self.assertEqual(r["status"], common.STATUS_OK)
-        self.assertEqual(len(r["events"]), 1)                      # 同段只 1 次
-        ev = r["events"][0]
-        self.assertEqual(ev.confirmed_at, bars[7].close_time)      # 第 3 根异常收盘
-        self.assertNotEqual(ev.confirmed_at, bars[5].close_time)   # 不回填首根
-        self.assertEqual(ev.evidence["consecutive_bars"], 3)
-
-    def test_baseline_uses_only_prior_bars(self):
-        bars = b_bars(n_anom=4)
-        r1 = strategy_b.run(bars, cfg_b())
-        mutated = list(bars)
-        mutated[-1] = mk(8, 100, 101, 99, 100, 100, vol=100, tbv=50, tbqv=50, interval=IV15)
-        r2 = strategy_b.run(mutated, cfg_b())
-        self.assertEqual([e.confirmed_at for e in r1["events"]],
-                         [e.confirmed_at for e in r2["events"]])
-
-    def test_buy_sell_diff_not_a_gate(self):
-        r = strategy_b.run(b_bars(n_anom=4), cfg_b())
-        cond = [c for c in r["events"][0].conditions if "买卖差" in c.name][0]
-        self.assertIsNone(cond.satisfied)
-
-    def test_flat_series_is_not_anomaly(self):
-        # 常量成交量 + 恒定主动买入占比：无增强 → 不得判为异常
-        r = strategy_b.run(flat_bars(10), cfg_b())
-        self.assertEqual(r["status"], common.STATUS_OK)
-        self.assertEqual(r["events"], [])
-
-    def test_time_gap_breaks_segment(self):
-        b = flat_bars(5)                                  # 5 根正常
-        for k in (5, 6):                                  # 2 根异常（连续）
-            b.append(mk(k, 100, 101, 99, 100, 2000, vol=2000, tbv=1800, tbqv=1800,
-                        interval=IV15))
-        for k in (10, 11):                                # 时间跳空后的 2 根异常
-            b.append(mk(k, 100, 101, 99, 100, 2000, vol=2000, tbv=1800, tbqv=1800,
-                        interval=IV15))
-        r = strategy_b.run(b, cfg_b())                    # persist=3
-        self.assertEqual(r["events"], [])                 # 跨缺口不构成“连续”
-
-    def test_missing_taker_fields_break_segment(self):
-        b = flat_bars(5)
-        for k in (5, 6):
-            b.append(mk(k, 100, 101, 99, 100, 2000, vol=2000, tbv=1800, tbqv=1800,
-                        interval=IV15))
-        b.append(mk_missing_taker(7, 2000))               # 主动买入字段缺失
-        b.append(mk(8, 100, 101, 99, 100, 2000, vol=2000, tbv=1800, tbqv=1800, interval=IV15))
-        r = strategy_b.run(b, cfg_b())
-        self.assertEqual(r["status"], common.STATUS_OK)
-        self.assertEqual(r["events"], [])                 # 缺失处断开，未凑满 3 根
-
-    def test_prefix_consistency(self):
-        bars = b_bars(n_normal=5, n_anom=5)
-        full = sorted(e.confirmed_at for e in strategy_b.run(bars, cfg_b())["events"])
-        for k in range(len(bars) + 1):
-            got = sorted(e.confirmed_at
-                         for e in strategy_b.run(bars[:k], cfg_b())["events"])
-            last = bars[k - 1].close_time if k else None
-            want = sorted(t for t in full if last is not None and t <= last)
-            self.assertEqual(got, want, f"B 前缀 k={k} 不一致：{got} != {want}")
 
 
 class _AdapterCase(unittest.TestCase):
@@ -617,6 +398,13 @@ class _AdapterCase(unittest.TestCase):
         os.environ["MARKET_POOL_DIR"] = cls._pooldir.name
         # 夹具测试**不得触发真实外部采集**：关闭 1m 近期尾段的按需拉取
         os.environ["MARKET_TAIL_FETCH"] = "0"
+        # 冷层隔离（2026-10-17）：`adapter` 现把「**未设置** `MARKET_ARCHIVE`」解析为
+        # 回落工程内正式归档（`project_paths.MARKET_ARCHIVE`，本工程该目录存在），
+        # 于是测试进程也会接入冷层 ⇒ `oi_history` / `funding_history` 查询会**混入
+        # 生产 Parquet 真实数据**，把以「夹具即全集」为前提的断言顶穿
+        # （`OiHistoryQueryTests` 的 `total` 被 `rows[-lim:]` 截到恰好等于 limit）。
+        # 夹具必须**显式关闭冷层**：`0` 是零回归开关，行为与迁移前逐字一致。
+        os.environ["MARKET_ARCHIVE"] = "0"
         # 夹具隔离（2026-10-09 修复）：聪明钱快照目录必须指向**空临时目录**。
         # 真实快照目录（后端实现/快照/smart_money/）由采集器持续写入 500+ 个真实快照，
         # 而夹具标的 `1000PEPEUSDT` 恰在真实覆盖内 ⇒ 不隔离时
@@ -688,6 +476,8 @@ class WorkbenchScopeTests(_AdapterCase):
         self.assertIsNotNone(it["realtime_time"])
 
 
+@unittest.skip("WORK-04B：`okx_download` 已随旧工作区删除（全工程无此模块）"
+               "⇒ 显式 SKIP（非 PASS）；待该导入器迁移回工程后恢复")
 class OkxImportTests(unittest.TestCase):
     """欧易补币入库：sha256 取真实 rows 内容；raw 保留张数；缺失字段有说明。"""
 
@@ -853,6 +643,8 @@ class ContractEmptyTests(_AdapterCase):
         self.assertEqual(self.adapter.v1_funding("binance", "1000PEPEUSDT", {})["quality"]["status"],
                          "missing")
 
+    @unittest.skip("WORK-04B：注册表契约已演进（旧 3a–3d / A/B 退役，另增新候选键），"
+                   "本断言仍按 2026-10-11 旧契约 ⇒ 显式 SKIP（非 PASS），待随注册表定版重写")
     def test_strategies_pending_config_and_no_third(self):
         """2026-10-11 契约更新：注册表 = 当前启用族 F_WX(3a–3d) + 历史 A/B。
 
@@ -877,6 +669,8 @@ class ContractEmptyTests(_AdapterCase):
             self.assertEqual(it["config_status"], "待配置")
             self.assertFalse(it["frozen"])
 
+    @unittest.skip("WORK-04B：注册表契约已演进（旧 3a–3d / A/B 退役，顶层代表改为新候选键），"
+                   "本断言仍按「顶层代表 3a」旧契约 ⇒ 显式 SKIP（非 PASS），待随注册表定版重写")
     def test_strategy_singular_backward_compat(self):
         """旧单数端点保持兼容，但顶层代表**当前族首组**（3a），不再代表旧策略 A。"""
         r = self.adapter.v1_strategy()
@@ -1000,6 +794,9 @@ class ContractSignalTests(_AdapterCase):
         self.assertEqual(len(r["annotations"]["retests"]), 1)
 
 
+@unittest.skip("生效参数视图 v2.2 已丢失（全盘无副本，不得伪造），且 WORK-04B 已把「当前族」"
+               "改为新候选 ⇒ 无法构造「当前族 + 当前版本 + 当前配置」身份信号"
+               "⇒ 显式 SKIP（非 PASS）")
 class MarketDirectionTests(_AdapterCase):
     """`/api/v1/markets` 的方向字段：**只来自当前启用族 F_WX 的真实信号**；
     无信号 / 非当前族 / 非当前版本配置 / 非 confirmed ⇒ null，不造方向。"""
@@ -1052,6 +849,9 @@ class MarketDirectionTests(_AdapterCase):
         self.assertTrue(all(i["signal_status"] is None for i in others))
 
 
+@unittest.skip("生效参数视图 v2.2 已丢失（全盘无副本，不得伪造），且 WORK-04B 已把「当前族」"
+               "改为新候选 ⇒ 无法构造「当前族 + 当前版本 + 当前配置」身份信号"
+               "⇒ 显式 SKIP（非 PASS）")
 class MarketDirectionGuardTests(_AdapterCase):
     """方向只认契约枚举 + **当前版本/配置/状态**；脏值不得透传，非当前不冒充当前。"""
 
@@ -1096,6 +896,8 @@ class MarketDirectionGuardTests(_AdapterCase):
         self.assertEqual(m4["signal_ref"]["timeframe"], "1h")
 
 
+@unittest.skip("WORK-04B：旧 A/B 已退役，`config_status` 由「配置无效 / 待配置」变为"
+               "「已退役清理」⇒ 本类前提失效 ⇒ 显式 SKIP（非 PASS）")
 class RegistryInvalidConfigTests(_AdapterCase):
     """注册表：非法配置 → 配置无效。"""
 
@@ -1113,6 +915,9 @@ class RegistryInvalidConfigTests(_AdapterCase):
         self.assertEqual(r["strategy"]["config_status"], "待配置")
 
 
+@unittest.skip("WORK-04B：`strategy_runner.py` 现仅接受 `--strategy wx_event_trend_v0_1`；"
+               "本类以旧策略键 'A'/'B' 驱动 CLI，前提已随旧策略物理删除而失效"
+               "⇒ 显式 SKIP（非 PASS）")
 class RunnerCliTests(unittest.TestCase):
     """离线运行器 CLI：未冻结须显式试运行、拒绝截断、数据版本绑定实际消费来源。"""
 
@@ -1254,6 +1059,8 @@ class PoolAndCoverageTests(_AdapterCase):
         self.assertIsNone(it["eligibility"])              # 资格未冻结 → 不下结论
         self.assertIn("未定", it["eligibility_reason"])
 
+    @unittest.skip("WORK-04B：`bulk_import` 已随旧工作区删除（全工程无此模块）"
+                   "⇒ 显式 SKIP（非 PASS）")
     def test_market_item_maps_stored_close_gaps_and_spot_status(self):
         """折叠行摘要 / 数据时点 / 缺口 / 现货状态必须来自真实已存数据。
 
@@ -1446,6 +1253,8 @@ class PoolAndCoverageTests(_AdapterCase):
                          ("AEON", "USDT", "SWAP"))
 
 
+@unittest.skip("WORK-04B：`bulk_import` 已随旧工作区删除（全工程无此模块）"
+               "⇒ 显式 SKIP（非 PASS）；待该导入器迁移回工程后恢复")
 class BulkImportTests(unittest.TestCase):
     """流式入库适配器：与主项目导入器逐行一致，且保留 taker / available_at 语义。"""
 

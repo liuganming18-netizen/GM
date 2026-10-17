@@ -1,0 +1,267 @@
+{
+ "generated_utc": "2026-10-17T06:23:24Z",
+ "note": "进程内 monkeypatch，跑完立即还原；生产文件未改动。",
+ "cases": [
+  {
+   "case": "space",
+   "symbol": "SPACEUSDT",
+   "step": "0.01",
+   "note": "SPACE 型：step/raw = 1.03",
+   "results": {
+    "baseline": {
+     "trades_count": 0,
+     "run_valid": false,
+     "invalid_reasons": [
+      "exit_eod_fill_rejected:nonpositive_or_nonfinite_exit_fill",
+      "exit_gap_fill_rejected:nonpositive_or_nonfinite_exit_fill",
+      "exit_intrabar_fill_rejected:nonpositive_or_nonfinite_exit_fill"
+     ],
+     "rejects_count": 39,
+     "rejected_reasons": [],
+     "orders": [
+      [
+       "open",
+       "FILLED",
+       0.01
+      ]
+     ],
+     "entry_price": null,
+     "exit_price": null
+    },
+    "R6": {
+     "trades_count": 0,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 1,
+     "rejected_reasons": [
+      "price_step_coarser_than_price"
+     ],
+     "orders": [],
+     "entry_price": null,
+     "exit_price": null
+    },
+    "R6ratio_0.01": {
+     "trades_count": 0,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 1,
+     "rejected_reasons": [
+      "price_step_too_coarse_for_price"
+     ],
+     "orders": [],
+     "entry_price": null,
+     "exit_price": null
+    }
+   }
+  },
+  {
+   "case": "coti",
+   "symbol": "COTIUSDT",
+   "step": "0.01",
+   "note": "COTI 型：step/raw = 0.16，两条腿都越界",
+   "results": {
+    "baseline": {
+     "trades_count": 1,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 0,
+     "rejected_reasons": [],
+     "orders": [
+      [
+       "open",
+       "FILLED",
+       0.07
+      ],
+      [
+       "exit_stop",
+       "FILLED",
+       0.06
+      ]
+     ],
+     "entry_price": 0.07,
+     "exit_price": 0.06
+    },
+    "R6": {
+     "trades_count": 1,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 0,
+     "rejected_reasons": [],
+     "orders": [
+      [
+       "open",
+       "FILLED",
+       0.07
+      ],
+      [
+       "exit_stop",
+       "FILLED",
+       0.06
+      ]
+     ],
+     "entry_price": 0.07,
+     "exit_price": 0.06
+    },
+    "R6ratio_0.01": {
+     "trades_count": 0,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 1,
+     "rejected_reasons": [
+      "price_step_too_coarse_for_price"
+     ],
+     "orders": [],
+     "entry_price": null,
+     "exit_price": null
+    }
+   }
+  },
+  {
+   "case": "normal",
+   "symbol": "SOLUSDT",
+   "step": "0.01",
+   "note": "正常成交：step/raw = 0.0001",
+   "results": {
+    "baseline": {
+     "trades_count": 1,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 0,
+     "rejected_reasons": [],
+     "orders": [
+      [
+       "open",
+       "FILLED",
+       100.03
+      ],
+      [
+       "exit_gap",
+       "FILLED",
+       98.57
+      ]
+     ],
+     "entry_price": 100.03,
+     "exit_price": 98.57
+    },
+    "R6": {
+     "trades_count": 1,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 0,
+     "rejected_reasons": [],
+     "orders": [
+      [
+       "open",
+       "FILLED",
+       100.03
+      ],
+      [
+       "exit_gap",
+       "FILLED",
+       98.57
+      ]
+     ],
+     "entry_price": 100.03,
+     "exit_price": 98.57
+    },
+    "R6ratio_0.01": {
+     "trades_count": 1,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 0,
+     "rejected_reasons": [],
+     "orders": [
+      [
+       "open",
+       "FILLED",
+       100.03
+      ],
+      [
+       "exit_gap",
+       "FILLED",
+       98.57
+      ]
+     ],
+     "entry_price": 100.03,
+     "exit_price": 98.57
+    }
+   }
+  },
+  {
+   "case": "tick",
+   "symbol": "SPACEUSDT",
+   "step": "0.000001",
+   "note": "真实 tick：step/raw = 0.0001",
+   "results": {
+    "baseline": {
+     "trades_count": 1,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 0,
+     "rejected_reasons": [],
+     "orders": [
+      [
+       "open",
+       "FILLED",
+       0.009721
+      ],
+      [
+       "exit_stop",
+       "FILLED",
+       0.006777
+      ]
+     ],
+     "entry_price": 0.009721,
+     "exit_price": 0.006777
+    },
+    "R6": {
+     "trades_count": 1,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 0,
+     "rejected_reasons": [],
+     "orders": [
+      [
+       "open",
+       "FILLED",
+       0.009721
+      ],
+      [
+       "exit_stop",
+       "FILLED",
+       0.006777
+      ]
+     ],
+     "entry_price": 0.009721,
+     "exit_price": 0.006777
+    },
+    "R6ratio_0.01": {
+     "trades_count": 1,
+     "run_valid": true,
+     "invalid_reasons": [],
+     "rejects_count": 0,
+     "rejected_reasons": [],
+     "orders": [
+      [
+       "open",
+       "FILLED",
+       0.009721
+      ],
+      [
+       "exit_stop",
+       "FILLED",
+       0.006777
+      ]
+     ],
+     "entry_price": 0.009721,
+     "exit_price": 0.006777
+    }
+   }
+  }
+ ],
+ "matrix": {
+  "baseline": "现状 strict=True",
+  "R6": "step > raw ⇒ 拒绝",
+  "R6ratio_0.01": "step > 1% × raw ⇒ 拒绝"
+ }
+}

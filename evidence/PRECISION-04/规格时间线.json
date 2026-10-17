@@ -1,0 +1,2777 @@
+{
+ "generated_utc": "2026-10-17T05:11:22Z",
+ "observations": 23,
+ "timeline": [
+  {
+   "kind": "archive_capture",
+   "server_utc": "2021-01-04T19:51:02Z",
+   "server_ms": 1609789862039,
+   "sha256": "0c3613accfe9acf01cb6fb0523835ee52dea17f1a7df9de84e6a1fe39e27dfd2",
+   "file": "exchangeInfo_20210104195101Z.json",
+   "symbol_count": 80,
+   "present": {
+    "BNBUSDT": {
+     "tick": "0.001",
+     "price_min": "0.001",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "100000",
+     "min_notional": null,
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "COTIUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2021-04-11T15:55:06Z",
+   "server_ms": 1618156506552,
+   "sha256": "2592fc151dcb835ddcf63b37302bafd2a9c58bd1a73b476b64d3a3c1fae8116a",
+   "file": "exchangeInfo_20210411155506Z.json",
+   "symbol_count": 112,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00001",
+     "price_max": "100000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "10000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "500000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.001",
+     "price_min": "0.001",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "20000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2021-04-16T20:35:56Z",
+   "server_ms": 1618605356836,
+   "sha256": "970382942ae9adc7cbb26d6cdce0a8cb1686c2bd924a21e66355e7dccc12dd9c",
+   "file": "exchangeInfo_20210416203556Z.json",
+   "symbol_count": 113,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00001",
+     "price_max": "100000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "10000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "500000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.001",
+     "price_min": "0.001",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "20000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2021-06-16T04:07:32Z",
+   "server_ms": 1623816452540,
+   "sha256": "a9e3aeec289a7c578a3672964bd07832ffe90c9694c0b7ead89a59cdec721c34",
+   "file": "exchangeInfo_20210616214245Z.json",
+   "symbol_count": 119,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "100000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "10000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "500000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "20000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2021-07-16T03:30:00Z",
+   "server_ms": 1626406200844,
+   "sha256": "77597fe554b18c1912674e4a7930fb734349556ea2c1eadf3ff2d8bd527b9983",
+   "file": "exchangeInfo_20210716214352Z.json",
+   "symbol_count": 122,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "100000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "10000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "1000000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "20000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2021-09-14T10:15:15Z",
+   "server_ms": 1631614515372,
+   "sha256": "d4a0a7da347e6de4ed905c994496d1f50e6339d3e7f789a0dfb289e13ef526da",
+   "file": "exchangeInfo_20210914214535Z.json",
+   "symbol_count": 135,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "100000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "250000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "1500",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2021-10-14T16:00:45Z",
+   "server_ms": 1634227245497,
+   "sha256": "deea440dc3b232b6e0f3450f2d305e1820eb41a977297682a21d2212b66edc83",
+   "file": "exchangeInfo_20211014214606Z.json",
+   "symbol_count": 140,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "100000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "250000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "1500",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2021-12-13T03:30:03Z",
+   "server_ms": 1639366203405,
+   "sha256": "d44dc4cc6d8e62310741a2f4ec109e4df89ae069b53a17a25e64e7e866f08beb",
+   "file": "exchangeInfo_20211213214732Z.json",
+   "symbol_count": 145,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "250000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "1500",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2022-03-18T12:00:38Z",
+   "server_ms": 1647604838598,
+   "sha256": "daf896e7a75b375e88d7b9abe5ace6d2bd9c8ea58df59442e30074e761a9a1a5",
+   "file": "exchangeInfo_20220318130953Z.json",
+   "symbol_count": 152,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "250000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "1500",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2022-09-08T12:00:16Z",
+   "server_ms": 1662638416395,
+   "sha256": "a5584430ee6555d072fdda81943c0cf6fd0670d072039efe7758c485e7f45fcd",
+   "file": "exchangeInfo_20220908123350Z.json",
+   "symbol_count": 185,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "250000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "1500",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2022-09-13T14:00:11Z",
+   "server_ms": 1663077611941,
+   "sha256": "16fbbd8bf0542358e0c632b8c5a4193ad8a8c45f5549d8f1f8c2910d1b74be6d",
+   "file": "exchangeInfo_20220913143555Z.json",
+   "symbol_count": 187,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "250000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "1500",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2022-09-14T14:00:38Z",
+   "server_ms": 1663164038572,
+   "sha256": "09f9935d7fdcd07c5a97543992d5167d1ceac5323f177780ab856fb62fe2bfbc",
+   "file": "exchangeInfo_20220914151943Z.json",
+   "symbol_count": 188,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "250000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "1500",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2022-09-16T20:00:29Z",
+   "server_ms": 1663358429913,
+   "sha256": "ed334d8825267d7608e0ccbb1d10ee8e1dbb6b011b28c88f55ce915405200316",
+   "file": "exchangeInfo_20220916203339Z.json",
+   "symbol_count": 189,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "800000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "1500",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2022-11-16T20:00:10Z",
+   "server_ms": 1668628810820,
+   "sha256": "7ba77a8cfe4397f58e5439b617e3bf4c9280e7fde0e59b63e55838158ee824f5",
+   "file": "exchangeInfo_20221116205542Z.json",
+   "symbol_count": 195,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "800000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "2000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2022-11-21T16:00:12Z",
+   "server_ms": 1669046412010,
+   "sha256": "31c7a56e4e1ba058e26aa42e0397f6a142de2c43c520987770e42a2d6d8057cd",
+   "file": "exchangeInfo_20221121164449Z.json",
+   "symbol_count": 195,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "800000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "2000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2022-11-27T16:00:11Z",
+   "server_ms": 1669564811170,
+   "sha256": "bf4407236f8acb76f16b5199592b7b82da519e004c03c2a28ed907072a2c6ee4",
+   "file": "exchangeInfo_20221127174756Z.json",
+   "symbol_count": 195,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "800000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "2000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2023-11-02T08:47:08Z",
+   "server_ms": 1698914828849,
+   "sha256": "6a3b256bcc2a05d3542897bc45df57417dc33b51506231099186ba9a73f21572",
+   "file": "exchangeInfo_20231102093209Z.json",
+   "symbol_count": 272,
+   "present": {
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00328",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "5000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "800000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "2000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "SPACEUSDT",
+    "AIGENSYNUSDT",
+    "TRUTHUSDT",
+    "ORDIUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2026-02-17T04:00:13Z",
+   "server_ms": 1771300813648,
+   "sha256": "fef22b65892ec2254be2850762621b4982ac462c66de31ee9d6c38df61a1c2ac",
+   "file": "exchangeInfo_20260217041328Z.json",
+   "symbol_count": 683,
+   "present": {
+    "SPACEUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "40000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "4000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1769168700000,
+     "status": "TRADING"
+    },
+    "TRUTHUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "60000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "6000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1759321800000,
+     "status": "TRADING"
+    },
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00001",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "50000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "5000000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "2000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    },
+    "ORDIUSDT": {
+     "tick": "0.001",
+     "price_min": "0.001",
+     "price_max": "2000",
+     "lot_step": "0.1",
+     "lot_min": "0.1",
+     "lot_max": "200000",
+     "mkt_step": "0.1",
+     "mkt_min": "0.1",
+     "mkt_max": "20000",
+     "min_notional": "5",
+     "pricePrecision": 6,
+     "quantityPrecision": 1,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1699360200000,
+     "status": "TRADING"
+    }
+   },
+   "absent": [
+    "AIGENSYNUSDT"
+   ]
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2026-05-10T10:00:13Z",
+   "server_ms": 1778407213208,
+   "sha256": "56b89ecf852317d7892b644d14304f530679ddc5d55fd434044775cb14fbd1ea",
+   "file": "exchangeInfo_20260510103016Z.json",
+   "symbol_count": 720,
+   "present": {
+    "SPACEUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "40000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "4000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1769168700000,
+     "status": "TRADING"
+    },
+    "AIGENSYNUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "20000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "2000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1777472100000,
+     "status": "TRADING"
+    },
+    "TRUTHUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "60000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "6000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1759321800000,
+     "status": "TRADING"
+    },
+    "COTIUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00001",
+     "price_max": "20000",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "50000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "5000000",
+     "min_notional": "5",
+     "pricePrecision": 5,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "2000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1569398400000,
+     "status": "TRADING"
+    },
+    "ORDIUSDT": {
+     "tick": "0.001",
+     "price_min": "0.001",
+     "price_max": "2000",
+     "lot_step": "0.1",
+     "lot_min": "0.1",
+     "lot_max": "200000",
+     "mkt_step": "0.1",
+     "mkt_min": "0.1",
+     "mkt_max": "20000",
+     "min_notional": "5",
+     "pricePrecision": 6,
+     "quantityPrecision": 1,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1699360200000,
+     "status": "TRADING"
+    }
+   },
+   "absent": []
+  },
+  {
+   "kind": "archive_capture",
+   "server_utc": "2026-10-01T02:49:48Z",
+   "server_ms": 1790822988056,
+   "sha256": "d0debe525e5746d7ba65bd6275467a433ad2b61b2cc1663d56e715ad7ba4d886",
+   "file": "exchangeInfo_20261001035141Z.json",
+   "symbol_count": 919,
+   "present": {
+    "SPACEUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "50000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "12000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1769168700000,
+     "status": "TRADING"
+    },
+    "AIGENSYNUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "30000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "3000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1777472100000,
+     "status": "TRADING"
+    },
+    "TRUTHUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "60000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "6000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1759320000000,
+     "status": "TRADING"
+    },
+    "COTIUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "70000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "7000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "2000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1581321600000,
+     "status": "TRADING"
+    },
+    "ORDIUSDT": {
+     "tick": "0.001",
+     "price_min": "0.001",
+     "price_max": "2000",
+     "lot_step": "0.1",
+     "lot_min": "0.1",
+     "lot_max": "200000",
+     "mkt_step": "0.1",
+     "mkt_min": "0.1",
+     "mkt_max": "20000",
+     "min_notional": "5",
+     "pricePrecision": 6,
+     "quantityPrecision": 1,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1699360200000,
+     "status": "TRADING"
+    }
+   },
+   "absent": []
+  },
+  {
+   "kind": "local_snapshot",
+   "server_utc": "2026-10-02T11:46:29Z",
+   "server_ms": 1790941589240,
+   "sha256": "07445c2f07ef9670bc92fdb6d175ab745040d8bf3c6bb7c3c9d44cda34d99cef",
+   "file": "exchangeInfo_futures_2026-10-05T015512Z.json",
+   "symbol_count": 920,
+   "present": {
+    "SPACEUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "50000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "12000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1769168700000,
+     "status": "TRADING"
+    },
+    "AIGENSYNUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "30000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "3000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1777472100000,
+     "status": "TRADING"
+    },
+    "TRUTHUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "60000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "6000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1759320000000,
+     "status": "TRADING"
+    },
+    "COTIUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "70000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "7000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "2000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1581321600000,
+     "status": "TRADING"
+    },
+    "ORDIUSDT": {
+     "tick": "0.001",
+     "price_min": "0.001",
+     "price_max": "2000",
+     "lot_step": "0.1",
+     "lot_min": "0.1",
+     "lot_max": "200000",
+     "mkt_step": "0.1",
+     "mkt_min": "0.1",
+     "mkt_max": "20000",
+     "min_notional": "5",
+     "pricePrecision": 6,
+     "quantityPrecision": 1,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1699360200000,
+     "status": "TRADING"
+    }
+   },
+   "absent": []
+  },
+  {
+   "kind": "local_snapshot",
+   "server_utc": "2026-10-02T11:46:29Z",
+   "server_ms": 1790941589242,
+   "sha256": "e0ecf7bdfb50c3c04798dd2d7cd2144208004e94649b66223233a8ef9e28e835",
+   "file": "exchangeInfo_futures_2026-10-05T045328Z.json",
+   "symbol_count": 920,
+   "present": {
+    "SPACEUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "50000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "12000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1769168700000,
+     "status": "TRADING"
+    },
+    "AIGENSYNUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "30000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "3000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1777472100000,
+     "status": "TRADING"
+    },
+    "TRUTHUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "60000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "6000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1759320000000,
+     "status": "TRADING"
+    },
+    "COTIUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "70000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "7000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "2000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1581321600000,
+     "status": "TRADING"
+    },
+    "ORDIUSDT": {
+     "tick": "0.001",
+     "price_min": "0.001",
+     "price_max": "2000",
+     "lot_step": "0.1",
+     "lot_min": "0.1",
+     "lot_max": "200000",
+     "mkt_step": "0.1",
+     "mkt_min": "0.1",
+     "mkt_max": "20000",
+     "min_notional": "5",
+     "pricePrecision": 6,
+     "quantityPrecision": 1,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1699360200000,
+     "status": "TRADING"
+    }
+   },
+   "absent": []
+  },
+  {
+   "kind": "live_fetch",
+   "server_utc": "2026-10-16T08:01:14Z",
+   "server_ms": 1792137674763,
+   "sha256": "918bc3087252d4fee05e9cf8f49039b9c182e3a304a1fef4e63180d18b2fa338",
+   "file": "当前响应_exchangeInfo.json",
+   "symbol_count": 927,
+   "present": {
+    "SPACEUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "50000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "20000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1769168700000,
+     "status": "TRADING"
+    },
+    "AIGENSYNUSDT": {
+     "tick": "0.00001",
+     "price_min": "0.00001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "30000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "3000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1777472100000,
+     "status": "TRADING"
+    },
+    "TRUTHUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "60000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "6000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1759320000000,
+     "status": "TRADING"
+    },
+    "COTIUSDT": {
+     "tick": "0.000001",
+     "price_min": "0.000001",
+     "price_max": "200",
+     "lot_step": "1",
+     "lot_min": "1",
+     "lot_max": "70000000",
+     "mkt_step": "1",
+     "mkt_min": "1",
+     "mkt_max": "7000000",
+     "min_notional": "5",
+     "pricePrecision": 7,
+     "quantityPrecision": 0,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1615273200000,
+     "status": "TRADING"
+    },
+    "BNBUSDT": {
+     "tick": "0.01",
+     "price_min": "6.6",
+     "price_max": "100000",
+     "lot_step": "0.01",
+     "lot_min": "0.01",
+     "lot_max": "100000",
+     "mkt_step": "0.01",
+     "mkt_min": "0.01",
+     "mkt_max": "2000",
+     "min_notional": "5",
+     "pricePrecision": 3,
+     "quantityPrecision": 2,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1581321600000,
+     "status": "TRADING"
+    },
+    "ORDIUSDT": {
+     "tick": "0.001",
+     "price_min": "0.001",
+     "price_max": "2000",
+     "lot_step": "0.1",
+     "lot_min": "0.1",
+     "lot_max": "200000",
+     "mkt_step": "0.1",
+     "mkt_min": "0.1",
+     "mkt_max": "20000",
+     "min_notional": "5",
+     "pricePrecision": 6,
+     "quantityPrecision": 1,
+     "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+     ],
+     "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+     ],
+     "onboard_ms": 1699360200000,
+     "status": "TRADING"
+    }
+   },
+   "absent": []
+  }
+ ],
+ "observed_changes": {
+  "SPACEUSDT": [
+   {
+    "between": [
+     "2026-05-10T10:00:13Z",
+     "2026-10-01T02:49:48Z"
+    ],
+    "from_file": "exchangeInfo_20260510103016Z.json",
+    "to_file": "exchangeInfo_20261001035141Z.json",
+    "diff": {
+     "lot_max": {
+      "from": "40000000",
+      "to": "50000000"
+     },
+     "mkt_max": {
+      "from": "4000000",
+      "to": "12000000"
+     }
+    }
+   },
+   {
+    "between": [
+     "2026-10-02T11:46:29Z",
+     "2026-10-16T08:01:14Z"
+    ],
+    "from_file": "exchangeInfo_futures_2026-10-05T045328Z.json",
+    "to_file": "当前响应_exchangeInfo.json",
+    "diff": {
+     "mkt_max": {
+      "from": "12000000",
+      "to": "20000000"
+     }
+    }
+   }
+  ],
+  "AIGENSYNUSDT": [
+   {
+    "between": [
+     "2026-05-10T10:00:13Z",
+     "2026-10-01T02:49:48Z"
+    ],
+    "from_file": "exchangeInfo_20260510103016Z.json",
+    "to_file": "exchangeInfo_20261001035141Z.json",
+    "diff": {
+     "lot_max": {
+      "from": "20000000",
+      "to": "30000000"
+     },
+     "mkt_max": {
+      "from": "2000000",
+      "to": "3000000"
+     }
+    }
+   }
+  ],
+  "TRUTHUSDT": [
+   {
+    "between": [
+     "2026-05-10T10:00:13Z",
+     "2026-10-01T02:49:48Z"
+    ],
+    "from_file": "exchangeInfo_20260510103016Z.json",
+    "to_file": "exchangeInfo_20261001035141Z.json",
+    "diff": {
+     "onboard_ms": {
+      "from": 1759321800000,
+      "to": 1759320000000
+     }
+    }
+   }
+  ],
+  "COTIUSDT": [
+   {
+    "between": [
+     "2021-04-16T20:35:56Z",
+     "2021-06-16T04:07:32Z"
+    ],
+    "from_file": "exchangeInfo_20210416203556Z.json",
+    "to_file": "exchangeInfo_20210616214245Z.json",
+    "diff": {
+     "price_min": {
+      "from": "0.00001",
+      "to": "0.00328"
+     }
+    }
+   },
+   {
+    "between": [
+     "2021-06-16T04:07:32Z",
+     "2021-07-16T03:30:00Z"
+    ],
+    "from_file": "exchangeInfo_20210616214245Z.json",
+    "to_file": "exchangeInfo_20210716214352Z.json",
+    "diff": {
+     "mkt_max": {
+      "from": "500000",
+      "to": "1000000"
+     }
+    }
+   },
+   {
+    "between": [
+     "2021-07-16T03:30:00Z",
+     "2021-09-14T10:15:15Z"
+    ],
+    "from_file": "exchangeInfo_20210716214352Z.json",
+    "to_file": "exchangeInfo_20210914214535Z.json",
+    "diff": {
+     "lot_max": {
+      "from": "10000000",
+      "to": "5000000"
+     },
+     "mkt_max": {
+      "from": "1000000",
+      "to": "250000"
+     }
+    }
+   },
+   {
+    "between": [
+     "2021-10-14T16:00:45Z",
+     "2021-12-13T03:30:03Z"
+    ],
+    "from_file": "exchangeInfo_20211014214606Z.json",
+    "to_file": "exchangeInfo_20211213214732Z.json",
+    "diff": {
+     "price_max": {
+      "from": "100000",
+      "to": "20000"
+     }
+    }
+   },
+   {
+    "between": [
+     "2022-09-14T14:00:38Z",
+     "2022-09-16T20:00:29Z"
+    ],
+    "from_file": "exchangeInfo_20220914151943Z.json",
+    "to_file": "exchangeInfo_20220916203339Z.json",
+    "diff": {
+     "mkt_max": {
+      "from": "250000",
+      "to": "800000"
+     }
+    }
+   },
+   {
+    "between": [
+     "2023-11-02T08:47:08Z",
+     "2026-02-17T04:00:13Z"
+    ],
+    "from_file": "exchangeInfo_20231102093209Z.json",
+    "to_file": "exchangeInfo_20260217041328Z.json",
+    "diff": {
+     "price_min": {
+      "from": "0.00328",
+      "to": "0.00001"
+     },
+     "lot_max": {
+      "from": "5000000",
+      "to": "50000000"
+     },
+     "mkt_max": {
+      "from": "800000",
+      "to": "5000000"
+     }
+    }
+   },
+   {
+    "between": [
+     "2026-05-10T10:00:13Z",
+     "2026-10-01T02:49:48Z"
+    ],
+    "from_file": "exchangeInfo_20260510103016Z.json",
+    "to_file": "exchangeInfo_20261001035141Z.json",
+    "diff": {
+     "tick": {
+      "from": "0.00001",
+      "to": "0.000001"
+     },
+     "price_min": {
+      "from": "0.00001",
+      "to": "0.000001"
+     },
+     "price_max": {
+      "from": "20000",
+      "to": "200"
+     },
+     "lot_max": {
+      "from": "50000000",
+      "to": "70000000"
+     },
+     "mkt_max": {
+      "from": "5000000",
+      "to": "7000000"
+     },
+     "pricePrecision": {
+      "from": 5,
+      "to": 7
+     }
+    }
+   }
+  ],
+  "BNBUSDT": [
+   {
+    "between": [
+     "2021-01-04T19:51:02Z",
+     "2021-04-11T15:55:06Z"
+    ],
+    "from_file": "exchangeInfo_20210104195101Z.json",
+    "to_file": "exchangeInfo_20210411155506Z.json",
+    "diff": {
+     "mkt_max": {
+      "from": "100000",
+      "to": "20000"
+     },
+     "min_notional": {
+      "from": null,
+      "to": "5"
+     }
+    }
+   },
+   {
+    "between": [
+     "2021-04-16T20:35:56Z",
+     "2021-06-16T04:07:32Z"
+    ],
+    "from_file": "exchangeInfo_20210416203556Z.json",
+    "to_file": "exchangeInfo_20210616214245Z.json",
+    "diff": {
+     "tick": {
+      "from": "0.001",
+      "to": "0.01"
+     },
+     "price_min": {
+      "from": "0.001",
+      "to": "6.6"
+     }
+    }
+   },
+   {
+    "between": [
+     "2021-07-16T03:30:00Z",
+     "2021-09-14T10:15:15Z"
+    ],
+    "from_file": "exchangeInfo_20210716214352Z.json",
+    "to_file": "exchangeInfo_20210914214535Z.json",
+    "diff": {
+     "mkt_max": {
+      "from": "20000",
+      "to": "1500"
+     }
+    }
+   },
+   {
+    "between": [
+     "2022-09-16T20:00:29Z",
+     "2022-11-16T20:00:10Z"
+    ],
+    "from_file": "exchangeInfo_20220916203339Z.json",
+    "to_file": "exchangeInfo_20221116205542Z.json",
+    "diff": {
+     "mkt_max": {
+      "from": "1500",
+      "to": "2000"
+     }
+    }
+   },
+   {
+    "between": [
+     "2026-05-10T10:00:13Z",
+     "2026-10-01T02:49:48Z"
+    ],
+    "from_file": "exchangeInfo_20260510103016Z.json",
+    "to_file": "exchangeInfo_20261001035141Z.json",
+    "diff": {
+     "onboard_ms": {
+      "from": 1569398400000,
+      "to": 1581321600000
+     }
+    }
+   }
+  ],
+  "ORDIUSDT": []
+ }
+}

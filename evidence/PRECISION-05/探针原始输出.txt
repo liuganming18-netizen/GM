@@ -1,0 +1,378 @@
+==========================================================================================
+A_价格闸门_legacy(strict=False)
+  [FAIL] raw_price=0
+        expected = 'reject'
+        got = 'accepted'
+        result = "FillQuote(entry_fill=0.0, stop_fill=98.97030000000001, source='simulated_bar', slippage_rate=0.00030000000000000003, price_step=0.01, audit={})"
+  [FAIL] raw_price=-1
+        expected = 'reject'
+        got = 'accepted'
+        result = "FillQuote(entry_fill=-1.0, stop_fill=98.97030000000001, source='simulated_bar', slippage_rate=0.00030000000000000003, price_step=0.01, audit={})"
+  [PASS] raw_price=nan
+        expected = 'reject'
+        got = 'InvalidOperation'
+        reason = 'px: non_finite'
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] raw_price=inf
+        expected = 'reject'
+        got = 'InvalidOperation'
+        reason = 'px: non_finite'
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] raw_price=None
+        expected = 'reject'
+        got = 'TypeError'
+        reason = "unsupported operand type(s) for *: 'NoneType' and 'float'"
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] raw_price='abc'
+        expected = 'reject'
+        got = 'TypeError'
+        reason = "can't multiply sequence by non-int of type 'float'"
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [FAIL] exit raw_price=0
+        expected = 'reject'
+        got = 'accepted'
+        result = '0.0'
+  [PASS] exit raw_price=nan
+        expected = 'reject'
+        got = 'InvalidOperation'
+        reason = 'px: non_finite'
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+==========================================================================================
+A_价格闸门_strict(strict=True)
+  [PASS] raw_price=0
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'nonpositive_raw_price'
+        detail = "{'raw_price': '0.0', 'stage': 'entry', 'reason': 'nonpositive_raw_price'}"
+  [PASS] raw_price=-1
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'nonpositive_raw_price'
+        detail = "{'raw_price': '-1.0', 'stage': 'entry', 'reason': 'nonpositive_raw_price'}"
+  [PASS] raw_price=nan
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price'
+        detail = "{'raw_price': 'nan', 'stage': 'entry', 'detail': 'raw_price: non_finite', 'reason': 'non_finite_or_invalid_price'}"
+  [PASS] raw_price=inf
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price'
+        detail = "{'raw_price': 'inf', 'stage': 'entry', 'detail': 'raw_price: non_finite', 'reason': 'non_finite_or_invalid_price'}"
+  [PASS] raw_price=None
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price'
+        detail = "{'raw_price': 'None', 'stage': 'entry', 'detail': 'raw_price: NoneType', 'reason': 'non_finite_or_invalid_price'}"
+  [PASS] raw_price='abc'
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price'
+        detail = '{\'raw_price\': \'abc\', \'stage\': \'entry\', \'detail\': "[<class \'decimal.ConversionSyntax\'>]", \'reason\': \'non_finite_or_invalid_price\'}'
+  [PASS] exit raw_price=0
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'nonpositive_raw_price'
+        detail = "{'raw_price': '0.0', 'stage': 'exit', 'reason': 'nonpositive_raw_price'}"
+  [PASS] exit raw_price=nan
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price'
+        detail = "{'raw_price': 'nan', 'stage': 'exit', 'detail': 'raw_price: non_finite', 'reason': 'non_finite_or_invalid_price'}"
+==========================================================================================
+B_步长处理_legacy(strict=False)
+  [FAIL] price_step=0
+        expected = 'reject'
+        got = 'accepted'
+        result = "FillQuote(entry_fill=100.03, stop_fill=98.97030000000001, source='simulated_bar', slippage_rate=0.00030000000000000003, price_step=0.0, audit={})"
+  [FAIL] price_step=-0.01
+        expected = 'reject'
+        got = 'accepted'
+        result = "FillQuote(entry_fill=100.03, stop_fill=98.97030000000001, source='simulated_bar', slippage_rate=0.00030000000000000003, price_step=-0.01, audit={})"
+  [PASS] price_step=nan
+        expected = 'reject'
+        got = 'InvalidOperation'
+        reason = 'step: non_finite'
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] price_step=inf
+        expected = 'reject'
+        got = 'InvalidOperation'
+        reason = 'step: non_finite'
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] price_step='abc'
+        expected = 'reject'
+        got = 'ValueError'
+        reason = "could not convert string to float: 'abc'"
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [PASS] price_step=None
+        expected = 'reject'
+        got = 'TypeError'
+        reason = "float() argument must be a string or a real number, not 'NoneType'"
+        note = '非 FillRejected 的异常也算拒绝，但类型不同，需人工确认'
+  [INFO] 0.004076 用 step=0.000001 买
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.004078
+        step_used = '0.000001'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+  [INFO] 0.004076 用 step=0.01 买
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.01
+        step_used = '0.01'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+  [INFO] 0.004076 用 step=0.01 卖
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.0
+        step_used = '0.01'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+  [INFO] 0.000001 用 step=0.01 卖
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.0
+        step_used = '0.01'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+==========================================================================================
+B_步长处理_strict(strict=True)
+  [PASS] price_step=0
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'invalid_price_step_nonpositive'
+        detail = "{'price_step': '0.0', 'stage': 'entry', 'raw_price': '100.0', 'reason': 'invalid_price_step_nonpositive'}"
+  [PASS] price_step=-0.01
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'invalid_price_step_nonpositive'
+        detail = "{'price_step': '-0.01', 'stage': 'entry', 'raw_price': '100.0', 'reason': 'invalid_price_step_nonpositive'}"
+  [PASS] price_step=nan
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price_step'
+        detail = "{'price_step': 'nan', 'stage': 'entry', 'detail': 'price_step: non_finite', 'reason': 'non_finite_or_invalid_price_step'}"
+  [PASS] price_step=inf
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price_step'
+        detail = "{'price_step': 'inf', 'stage': 'entry', 'detail': 'price_step: non_finite', 'reason': 'non_finite_or_invalid_price_step'}"
+  [PASS] price_step='abc'
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price_step'
+        detail = '{\'price_step\': \'abc\', \'stage\': \'entry\', \'detail\': "[<class \'decimal.ConversionSyntax\'>]", \'reason\': \'non_finite_or_invalid_price_step\'}'
+  [PASS] price_step=None
+        expected = 'reject'
+        got = 'FillRejected'
+        reason = 'non_finite_or_invalid_price_step'
+        detail = "{'price_step': 'None', 'stage': 'entry', 'detail': 'price_step: NoneType', 'reason': 'non_finite_or_invalid_price_step'}"
+  [INFO] 0.004076 用 step=0.000001 买
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.004078
+        step_used = '0.000001'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+  [INFO] 0.004076 用 step=0.01 买
+        expected = '观察'
+        got = 'accepted'
+        fill_price = 0.01
+        step_used = '0.01'
+        note = '步长合法即放行；是否合理由调用方/规格闸门负责'
+  [INFO] 0.004076 用 step=0.01 卖
+        expected = '观察'
+        got = 'FillRejected'
+        reason = 'nonpositive_or_nonfinite_exit_fill'
+  [INFO] 0.000001 用 step=0.01 卖
+        expected = '观察'
+        got = 'FillRejected'
+        reason = 'nonpositive_or_nonfinite_exit_fill'
+==========================================================================================
+C_四笔异常复现
+  [INFO] SPACEUSDT entry
+        bar_open = 0.009718
+        recorded = 0.01
+        announced_tick = '0.000001'
+        legacy(strict=False)_step_0.01 = 0.01
+        legacy(strict=False)_tick = 0.009721
+        strict(strict=True)_step_0.01 = 0.01
+        strict(strict=True)_tick = 0.009721
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] SPACEUSDT exit
+        bar_open = 0.007033
+        recorded = 0.0
+        announced_tick = '0.000001'
+        legacy(strict=False)_step_0.01 = 0.0
+        legacy(strict=False)_tick = 0.00703
+        strict(strict=True)_step_0.01 = 'REJECT:nonpositive_or_nonfinite_exit_fill'
+        strict(strict=True)_tick = 0.00703
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] AIGENSYNUSDT entry
+        bar_open = 0.02125
+        recorded = 0.03
+        announced_tick = '0.00001'
+        legacy(strict=False)_step_0.01 = 0.03
+        legacy(strict=False)_tick = 0.02126
+        strict(strict=True)_step_0.01 = 0.03
+        strict(strict=True)_tick = 0.02126
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] AIGENSYNUSDT exit
+        bar_open = 0.01957
+        recorded = 0.01
+        announced_tick = '0.00001'
+        legacy(strict=False)_step_0.01 = 0.01
+        legacy(strict=False)_tick = 0.01956
+        strict(strict=True)_step_0.01 = 0.01
+        strict(strict=True)_tick = 0.01956
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] TRUTHUSDT entry
+        bar_open = 0.015693
+        recorded = 0.02
+        announced_tick = '0.000001'
+        legacy(strict=False)_step_0.01 = 0.02
+        legacy(strict=False)_tick = 0.015698
+        strict(strict=True)_step_0.01 = 0.02
+        strict(strict=True)_tick = 0.015698
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] TRUTHUSDT exit
+        bar_open = 0.013363
+        recorded = 0.01
+        announced_tick = '0.000001'
+        legacy(strict=False)_step_0.01 = 0.01
+        legacy(strict=False)_tick = 0.013358
+        strict(strict=True)_step_0.01 = 0.01
+        strict(strict=True)_tick = 0.013358
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] COTIUSDT entry
+        bar_open = 0.06228
+        recorded = 0.07
+        announced_tick = '0.00001'
+        legacy(strict=False)_step_0.01 = 0.07
+        legacy(strict=False)_tick = 0.0623
+        strict(strict=True)_step_0.01 = 0.07
+        strict(strict=True)_tick = 0.0623
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] COTIUSDT exit
+        bar_open = 0.08624
+        recorded = 0.08
+        announced_tick = '0.00001'
+        legacy(strict=False)_step_0.01 = 0.08
+        legacy(strict=False)_tick = 0.08621
+        strict(strict=True)_step_0.01 = 0.08
+        strict(strict=True)_tick = 0.08621
+        reproduce_exact_legacy = True
+        note = 'legacy 复现=当时的成交模型仍能算出同一价格；strict 若报 REJECT 说明该笔会被新闸门拦下'
+  [INFO] legacy(strict=False)：0.0068 按 0.01 卖出
+        fill_price = 0.0
+        produced_zero = True
+        note = '能产出 0 价 ⇒ 该模式下没有零价防线'
+  [INFO] strict(strict=True)：0.0068 按 0.01 卖出
+        got = 'REJECT'
+        reason = 'nonpositive_or_nonfinite_exit_fill'
+        note = '被拒 ⇒ 该模式下零价有防线'
+==========================================================================================
+D_规格闸门
+  [PASS] 无 instrument_spec 且无 price_step
+        expected = 'raise'
+        got = 'ExecutionInputError'
+        reason = 'instrument_spec_required: 必须提供交易所合约规格（或显式 price_step）；禁止用固定 0.01 默认值成交'
+  [PASS] price_step='0'
+        expected = 'raise'
+        got = 'ExecutionInputError'
+        reason = "invalid_price_step_nonpositive:'0'"
+  [PASS] price_step='-1'
+        expected = 'raise'
+        got = 'ExecutionInputError'
+        reason = "invalid_price_step_nonpositive:'-1'"
+  [PASS] price_step='abc'
+        expected = 'raise'
+        got = 'ExecutionInputError'
+        reason = "invalid_price_step:'abc'"
+  [INFO] 显式 price_step='0.01'（无规格）
+        expected = '放行但降级'
+        got = 'ExecutionInputError'
+        reason = 'missing_quote_volume_for_participation_cap: 15m 帧必须提供 quote_volume'
+        note = '若在此处就报错，说明还有更前置的校验'
+==========================================================================================
+E_历史规格判定
+  [INFO] SPACEUSDT
+        window = ['2026-01-31T20:00:00Z', '2026-07-30T19:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.000001'
+        qty_step = '1'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1769889600000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+  [INFO] AIGENSYNUSDT
+        window = ['2026-05-07T23:00:00Z', '2026-06-30T06:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.00001'
+        qty_step = '1'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1778194800000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+  [INFO] TRUTHUSDT
+        window = ['2025-10-09T20:00:00Z', '2026-04-07T20:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.000001'
+        qty_step = '1'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1760040000000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+  [INFO] COTIUSDT
+        window = ['2024-01-01T00:00:00Z', '2024-06-30T00:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.000001'
+        qty_step = '1'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+  [INFO] BNBUSDT
+        window = ['2024-01-01T00:00:00Z', '2024-06-30T00:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.01'
+        qty_step = '0.01'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+  [INFO] ORDIUSDT
+        window = ['2024-01-01T00:00:00Z', '2024-06-30T00:00:00Z']
+        applicability = 'unverified_historical'
+        formal_pass_allowed = False
+        blocking = True
+        price_step = '0.001'
+        qty_step = '0.1'
+        applicability_note = '窗口结束早于全部快照 ⇒ 规格数值取自最早的未来快照 exchangeInfo_futures_2026-10-05T015512Z.json（serverTime=1790941589240），仅作参考，不构成窗口内证据。没有任何快照的 serverTime 早于窗口开始 1704067200000 ⇒ 窗口起点之前无证据'
+        verdict_ok = True
+==========================================================================================
+F_数量闸门
+  [INFO] qty=1.5（非整步长，price=100）
+        ok = False
+        violations = ['LOT_SIZE', 'MARKET_LOT_SIZE']
+  [INFO] qty=0（price=100）
+        ok = False
+        violations = ['LOT_SIZE', 'MARKET_LOT_SIZE', 'MIN_NOTIONAL']
+  [INFO] qty=-1（price=100）
+        ok = False
+        violations = ['LOT_SIZE', 'MARKET_LOT_SIZE', 'MIN_NOTIONAL']
+  [INFO] qty=999999999999（超 max，price=100）
+        ok = False
+        violations = ['LOT_SIZE', 'MARKET_LOT_SIZE']
+  [INFO] qty=1（整步长，price=100 ⇒ 名义额 100）
+        ok = True
+        violations = []
+  [INFO] qty=1（整步长，price=0.01 ⇒ 名义额 0.01）
+        ok = False
+        violations = ['MIN_NOTIONAL']
+
+写出: /Users/boos/Desktop/威科夫因子共振趋势/evidence/PRECISION-05/保护机制探针结果.json

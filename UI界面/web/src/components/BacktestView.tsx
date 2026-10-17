@@ -37,7 +37,7 @@ export const BacktestView: React.FC = () => {
         <div className="ds-pagehead__row">
           <div className="ds-pagehead__title">
             <h1>回测复盘</h1>
-            <span className="ds-pagehead__sub">单策略独立研究 · WX_OI_RESONANCE_V1</span>
+            <span className="ds-pagehead__sub">低频事件趋势研究 · WX_EVENT_TREND_V0_1</span>
           </div>
           <div className="ds-pagehead__spacer" />
           <div className="ds-seg" role="tablist" aria-label="回测视图">

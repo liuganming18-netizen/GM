@@ -1,0 +1,1736 @@
+{
+ "label": "收工",
+ "generated_utc": "2026-10-17T07:06:41Z",
+ "root": "/Users/boos/Desktop/威科夫因子共振趋势",
+ "git": {
+  "toplevel": {
+   "exit": 0,
+   "stdout": "/Users/boos/Desktop/威科夫因子共振趋势",
+   "stderr": ""
+  },
+  "branch": {
+   "exit": 0,
+   "stdout": "wyckoff-v3.1-main",
+   "stderr": ""
+  },
+  "head": {
+   "exit": 0,
+   "stdout": "54b867bac71aae224f461f30290b882602923f1a",
+   "stderr": ""
+  },
+  "head_time": {
+   "exit": 0,
+   "stdout": "2026-10-16T22:45:45+08:00",
+   "stderr": ""
+  },
+  "status": {
+   "exit": 0,
+   "stdout": "M \"UI\\347\\225\\214\\351\\235\\242/web/src/App.tsx\"\n M \"UI\\347\\225\\214\\351\\235\\242/web/src/api/labBacktest.ts\"\n M \"UI\\347\\225\\214\\351\\235\\242/web/src/api/useMarketData.ts\"\n M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/BacktestView.tsx\"\n M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/BacktestWorkbench.tsx\"\n M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/DataCenterView.tsx\"\n M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/InlineExpandedChart.tsx\"\n M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/LabChartPanel.tsx\"\n M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/LabFundingPanel.tsx\"\n M \"UI\\347\\225\\214\\351\\235\\242/web/src/index.css\"\n M \"evidence/Work_\\347\\255\\226\\347\\225\\245\\346\\240\\270\\345\\277\\203\\346\\224\\266\\346\\225\\233_2026-10-16/\\345\\267\\245\\345\\205\\267_\\350\\241\\214\\344\\270\\272\\344\\270\\200\\350\\207\\264\\346\\200\\247\\346\\240\\270\\351\\252\\214.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/adapter.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/backtest_api.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/backtest_runner.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/backtest_store.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/datacenter_service.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/legacy_retirement.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/market_repository.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/strategies/registry.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/strategies/wx_config.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_business.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_history_integrity.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_okx_volume_exec_v3.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_okx_volume_fix_isolation.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_okx_volume_fix_rectification.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_okx_volume_mapping.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_pool_gate.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_rest_import_contract.py\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/_index.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__0GUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000000BOBUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000000MOGUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000BONKUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000CATUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000CHEEMSUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000FLOKIUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000LUNCUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000PEPEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000RATSUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000SATSUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000SHIBUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000XECUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1INCHUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1MBABYDOGEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__2ZUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__4USDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AAVEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ACEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ACHUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ACTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ACUUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ADAUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AEROUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AEVOUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AGLDUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AGTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AIAUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AIGENSYNUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AINUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AIOTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AIOUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AIXBTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AKEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AKTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALCHUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALGOUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALICEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALLOUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALPINEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ANIMEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ANKRUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__APEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__API3USDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__APRUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__APTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ARBUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AVAXUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__BNBUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__BTCUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__DOGEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__DOTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ETHUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__LINKUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__LTCUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__SOLUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__SUIUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__TRXUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__XRPUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/_index.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/_progress.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/_wanted.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__0GUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000000MOGUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000BONKUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000CATUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000CHEEMSUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000FLOKIUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000LUNCUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000PEPEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000RATSUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000SATSUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000SHIBUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000XECUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1INCHUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1MBABYDOGEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__2ZUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__4USDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AAVEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ACEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ACHUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ACTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ACUUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ADAUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AEROUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AEVOUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AGLDUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AGTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AIAUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AIGENSYNUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AINUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AIOTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AIOUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AIXBTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AKEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AKTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALCHUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALGOUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALICEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALLOUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALPINEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ANIMEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ANKRUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__APEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__API3USDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__APRUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__APTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ARBUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AVAXUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__BNBUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__BTCUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__BTRUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__BUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__CAPUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__DOGEUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__DOTUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ETHUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__LINKUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__LTCUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__SOLUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__SUIUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__TRXUSDT.json\"\n M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__XRPUSDT.json\"\n M \"\\347\\255\\226\\347\\225\\245/WyckoffMaster/trading_core/engine.py\"\n M \"\\347\\255\\226\\347\\225\\245/WyckoffMaster/trading_core/fill.py\"\n M \"\\347\\255\\226\\347\\225\\245/WyckoffMaster/trading_core/policy.py\"\n M \"\\347\\255\\226\\347\\225\\245/WyckoffMaster/trading_core/position.py\"\n?? \"UI\\347\\225\\214\\351\\235\\242/evidence/Work_\\345\\233\\236\\346\\265\\213\\345\\244\\215\\347\\233\\230\\351\\241\\265\\344\\270\\211\\351\\241\\271\\346\\224\\271\\351\\200\\240_2026-10-17/\"\n?? \"UI\\347\\225\\214\\351\\235\\242/evidence/Work_\\345\\233\\236\\346\\265\\213\\351\\223\\276\\346\\235\\241\\350\\257\\212\\346\\226\\255_2026-10-17/\"\n?? \"UI\\347\\225\\214\\351\\235\\242/evidence/Work_\\346\\225\\260\\346\\215\\256\\344\\270\\255\\345\\277\\203\\351\\241\\265\\350\\257\\204\\345\\256\\241_2026-10-17/\"\n?? \"UI\\347\\225\\214\\351\\235\\242/web/public/all_trades.json\"\n?? \"UI\\347\\225\\214\\351\\235\\242/web/scripts/shot_datacenter.mjs\"\n?? \"UI\\347\\225\\214\\351\\235\\242/web/scripts/shot_datacenter_tabs.mjs\"\n?? \"UI\\347\\225\\214\\351\\235\\242/web/scripts/verify_backtest_link.mjs\"\n?? evidence/AUDIT-375-V3/\n?? evidence/BACKTEST-LOSS-01/\n?? evidence/PRECISION-01/\n?? evidence/PRECISION-02/\n?? evidence/PRECISION-03/\n?? evidence/PRECISION-04/\n?? evidence/PRECISION-05/\n?? evidence/PRECISION-06/\n?? evidence/PRECISION-07/\n?? \"evidence/WORK-06_\\347\\213\\254\\347\\253\\213\\351\\252\\214\\346\\224\\266\\346\\212\\245\\345\\221\\212_2026-10-16.md\"\n?? \"evidence/WORK-07_Codex\\347\\213\\254\\347\\253\\213\\345\\244\\215\\346\\240\\270_2026-10-16.md\"\n?? \"evidence/WORK-07_\\344\\270\\211\\345\\270\\201\\344\\272\\244\\344\\273\\230\\347\\254\\254\\344\\270\\211\\346\\254\\241\\347\\213\\254\\347\\253\\213\\345\\244\\215\\346\\240\\270_2026-10-16.md\"\n?? \"evidence/WORK-07_\\345\\205\\210\\350\\241\\214\\345\\267\\245\\347\\250\\213\\345\\256\\236\\347\\216\\260\\344\\270\\216\\344\\270\\211\\345\\270\\201\\351\\252\\214\\350\\257\\201\\346\\212\\245\\345\\221\\212_2026-10-16.md\"\n?? \"evidence/WORK-07_\\345\\205\\210\\350\\241\\214\\345\\267\\245\\347\\250\\213\\345\\256\\236\\347\\216\\260\\346\\230\\240\\345\\260\\204\\350\\241\\250\\344\\270\\216\\346\\225\\260\\346\\215\\256\\350\\246\\206\\347\\233\\226\\346\\270\\205\\345\\215\\225_2026-10-16.md\"\n?? \"evidence/WORK-07_\\345\\270\\202\\345\\234\\272\\344\\272\\213\\344\\273\\266\\351\\227\\255\\347\\216\\257_\\346\\225\\264\\346\\224\\271\\351\\252\\214\\346\\224\\266\\346\\212\\245\\345\\221\\212_2026-10-16.md\"\n?? \"evidence/WORK-07_\\345\\270\\202\\345\\234\\272\\344\\272\\213\\344\\273\\266\\351\\227\\255\\347\\216\\257_\\347\\216\\260\\346\\234\\211\\345\\256\\236\\347\\216\\260\\347\\233\\230\\347\\202\\271\\344\\270\\216\\346\\225\\260\\346\\215\\256\\345\\245\\221\\347\\272\\246\\350\\256\\276\\350\\256\\241_2026-10-16.md\"\n?? \"evidence/WORK-07_\\346\\225\\264\\346\\224\\271\\345\\220\\216\\344\\272\\214\\346\\254\\241\\347\\213\\254\\347\\253\\213\\345\\244\\215\\346\\240\\270_2026-10-16.md\"\n?? \"evidence/WORK-07_\\346\\225\\264\\346\\224\\271\\346\\233\\264\\346\\255\\243\\346\\212\\245\\345\\221\\212_2026-10-16.md\"\n?? \"evidence/WORK-07_\\347\\254\\254\\345\\233\\233\\346\\254\\241\\347\\213\\254\\347\\253\\213\\345\\244\\215\\346\\240\\270_2026-10-17.md\"\n?? \"evidence/WX_EVENT_TREND_V0_1_\\347\\255\\226\\347\\225\\245\\344\\270\\216\\345\\233\\236\\346\\265\\213\\345\\206\\273\\347\\273\\223\\350\\247\\204\\345\\210\\231.md\"\n?? evidence/Work_2025Q4_100_batch2_summary.json\n?? evidence/Work_2025Q4_100_batch_summary.json\n?? \"evidence/Work_SOL\\344\\272\\213\\344\\273\\266\\345\\233\\236\\346\\224\\276\\351\\252\\214\\350\\257\\201\\347\\273\\223\\346\\236\\234_2026-10-16.json\"\n?? \"evidence/Work_\\344\\270\\211\\345\\270\\201\\344\\272\\213\\344\\273\\266\\345\\233\\236\\346\\265\\213\\344\\270\\216\\345\\257\\271\\350\\264\\246\\347\\273\\223\\346\\236\\234_2026-10-16.json\"\n?? \"evidence/Work_\\344\\272\\213\\344\\273\\266\\350\\266\\213\\345\\212\\277\\347\\254\\254\\345\\233\\233\\346\\254\\241\\345\\244\\215\\346\\240\\270\\346\\225\\264\\346\\224\\271_2026-10-17/\"\n?? \"evidence/Work_\\344\\272\\213\\344\\273\\266\\350\\266\\213\\345\\212\\277\\347\\254\\254\\345\\233\\233\\346\\254\\241\\345\\244\\215\\346\\240\\270\\346\\225\\264\\346\\224\\271_\\351\\200\\220\\345\\255\\227\\346\\256\\265\\345\\257\\271\\350\\264\\246_2026-10-17.json\"\n?? \"evidence/Work_\\344\\272\\213\\344\\273\\266\\350\\266\\213\\345\\212\\277\\347\\254\\254\\345\\233\\233\\346\\254\\241\\345\\244\\215\\346\\240\\270\\346\\225\\264\\346\\224\\271_\\351\\200\\220\\345\\255\\227\\346\\256\\265\\345\\257\\271\\350\\264\\246_2026-10-17.py\"\n?? \"evidence/Work_\\344\\272\\213\\344\\273\\266\\350\\266\\213\\345\\212\\277\\347\\254\\254\\345\\233\\233\\346\\254\\241\\345\\244\\215\\346\\240\\270\\346\\225\\264\\346\\224\\271\\346\\212\\245\\345\\221\\212_2026-10-17.md\"\n?? \"evidence/Work_\\344\\272\\244\\346\\230\\223\\345\\217\\260OI\\345\\205\\250\\345\\216\\206\\345\\217\\262_2026-10-17/\"\n?? \"evidence/Work_\\345\\205\\250\\345\\237\\237\\345\\256\\241\\346\\237\\245\\344\\277\\256\\345\\244\\215_2026-10-17/\"\n?? \"evidence/Work_\\345\\205\\255\\347\\254\\224\\350\\264\\246\\346\\234\\254\\346\\216\\245\\345\\217\\243\\351\\241\\265\\351\\235\\242\\344\\270\\200\\350\\207\\264\\346\\200\\247\\346\\225\\264\\346\\224\\271_2026-10-17/\"\n?? \"evidence/Work_\\345\\256\\214\\346\\225\\264\\345\\233\\236\\346\\265\\213\\347\\252\\227\\345\\217\\243_2026-10-16/\"\n?? \"evidence/Work_\\346\\210\\220\\344\\272\\244\\347\\262\\276\\345\\272\\246\\344\\277\\256\\345\\244\\215_2026-10-17/\"\n?? \"evidence/Work_\\351\\232\\217\\346\\234\\27210\\345\\270\\201\\344\\272\\213\\344\\273\\266\\345\\233\\236\\346\\265\\213\\347\\273\\223\\346\\236\\234_2026-10-17.json\"\n?? \"evidence/Work_\\351\\232\\217\\346\\234\\27210\\345\\270\\201\\347\\254\\254\\344\\272\\214\\346\\211\\271\\344\\272\\213\\344\\273\\266\\345\\233\\236\\346\\265\\213\\347\\273\\223\\346\\236\\234_2026-10-17.json\"\n?? evidence/audit_375_runs_20261017/\n?? evidence/fix_historical_runs_and_validate.py\n?? evidence/run_all_symbols_validation.py\n?? evidence/run_batch_10_test.py\n?? evidence/run_random_10_backtest.py\n?? run_batch_2025q4_100.py\n?? run_batch_2025q4_100_batch2.py\n?? run_batch_round3_50.py\n?? run_batch_round3_50.py.bak_20261017\n?? run_batch_round4_all_remain.py\n?? run_batch_round4_all_remain.py.bak_20261017\n?? run_batch_round5_100.py\n?? run_batch_round5_100.py.bak_20261017\n?? run_batch_round6_100.py\n?? run_batch_round6_100.py.bak_20261017\n?? run_clean_batch_test.py\n?? run_clean_batch_test.py.bak_20261017\n?? run_expand_batch_test.py\n?? run_expand_batch_test.py.bak_20261017\n?? run_random_50_batch_test.py\n?? run_random_50_batch_test.py.bak_20261017\n?? selected_100_symbols_2025q4.json\n?? selected_100_symbols_2025q4_batch2.json\n?? \"\\345\\233\\236\\346\\265\\213\\346\\227\\245\\345\\277\\227/batch_tests_archive/\"\n?? \"\\345\\233\\236\\346\\265\\213\\346\\227\\245\\345\\277\\227/event_trend_v0_1/\"\n?? \"\\345\\233\\236\\346\\265\\213\\346\\227\\245\\345\\277\\227/legacy_archive/\"\n?? \"\\346\\241\\206\\346\\236\\266/backend/backtest_chart.py\"\n?? \"\\346\\241\\206\\346\\236\\266/backend/backtest_metrics.py\"\n?? \"\\346\\241\\206\\346\\236\\266/backend/event_trend_bridge.py\"\n?? \"\\346\\241\\206\\346\\236\\266/backend/ledger_links.py\"\n?? \"\\347\\255\\226\\347\\225\\245/WyckoffMaster/event_trend_v0_1/\"",
+   "stderr": ""
+  }
+ },
+ "status_summary": {
+  "total": 231,
+  "self_p07": 1,
+  "other": 230,
+  "self_entries": [
+   "?? evidence/PRECISION-07/"
+  ],
+  "other_entries": [
+   "M \"UI\\347\\225\\214\\351\\235\\242/web/src/App.tsx\"",
+   " M \"UI\\347\\225\\214\\351\\235\\242/web/src/api/labBacktest.ts\"",
+   " M \"UI\\347\\225\\214\\351\\235\\242/web/src/api/useMarketData.ts\"",
+   " M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/BacktestView.tsx\"",
+   " M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/BacktestWorkbench.tsx\"",
+   " M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/DataCenterView.tsx\"",
+   " M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/InlineExpandedChart.tsx\"",
+   " M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/LabChartPanel.tsx\"",
+   " M \"UI\\347\\225\\214\\351\\235\\242/web/src/components/LabFundingPanel.tsx\"",
+   " M \"UI\\347\\225\\214\\351\\235\\242/web/src/index.css\"",
+   " M \"evidence/Work_\\347\\255\\226\\347\\225\\245\\346\\240\\270\\345\\277\\203\\346\\224\\266\\346\\225\\233_2026-10-16/\\345\\267\\245\\345\\205\\267_\\350\\241\\214\\344\\270\\272\\344\\270\\200\\350\\207\\264\\346\\200\\247\\346\\240\\270\\351\\252\\214.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/adapter.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/backtest_api.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/backtest_runner.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/backtest_store.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/datacenter_service.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/legacy_retirement.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/market_repository.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/strategies/registry.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/strategies/wx_config.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_business.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_history_integrity.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_okx_volume_exec_v3.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_okx_volume_fix_isolation.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_okx_volume_fix_rectification.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_okx_volume_mapping.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_pool_gate.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/tests/test_rest_import_contract.py\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/_index.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__0GUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000000BOBUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000000MOGUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000BONKUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000CATUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000CHEEMSUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000FLOKIUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000LUNCUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000PEPEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000RATSUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000SATSUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000SHIBUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1000XECUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1INCHUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__1MBABYDOGEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__2ZUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__4USDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AAVEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ACEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ACHUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ACTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ACUUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ADAUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AEROUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AEVOUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AGLDUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AGTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AIAUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AIGENSYNUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AINUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AIOTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AIOUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AIXBTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AKEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AKTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALCHUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALGOUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALICEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALLOUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALPINEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ALTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ANIMEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ANKRUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__APEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__API3USDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__APRUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__APTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ARBUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__AVAXUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__BNBUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__BTCUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__DOGEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__DOTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__ETHUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__LINKUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__LTCUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__SOLUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__SUIUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__TRXUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/public_extras/binance__XRPUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/_index.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/_progress.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/_wanted.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__0GUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000000MOGUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000BONKUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000CATUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000CHEEMSUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000FLOKIUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000LUNCUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000PEPEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000RATSUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000SATSUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000SHIBUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1000XECUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1INCHUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__1MBABYDOGEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__2ZUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__4USDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AAVEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ACEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ACHUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ACTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ACUUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ADAUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AEROUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AEVOUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AGLDUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AGTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AIAUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AIGENSYNUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AINUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AIOTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AIOUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AIXBTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AKEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AKTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALCHUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALGOUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALICEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALLOUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALPINEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ALTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ANIMEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ANKRUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__APEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__API3USDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__APRUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__APTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ARBUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__AVAXUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__BNBUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__BTCUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__BTRUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__BUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__CAPUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__DOGEUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__DOTUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__ETHUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__LINKUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__LTCUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__SOLUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__SUIUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__TRXUSDT.json\"",
+   " M \"\\346\\241\\206\\346\\236\\266/backend/\\345\\277\\253\\347\\205\\247/smart_money/binance__XRPUSDT.json\"",
+   " M \"\\347\\255\\226\\347\\225\\245/WyckoffMaster/trading_core/engine.py\"",
+   " M \"\\347\\255\\226\\347\\225\\245/WyckoffMaster/trading_core/fill.py\"",
+   " M \"\\347\\255\\226\\347\\225\\245/WyckoffMaster/trading_core/policy.py\"",
+   " M \"\\347\\255\\226\\347\\225\\245/WyckoffMaster/trading_core/position.py\"",
+   "?? \"UI\\347\\225\\214\\351\\235\\242/evidence/Work_\\345\\233\\236\\346\\265\\213\\345\\244\\215\\347\\233\\230\\351\\241\\265\\344\\270\\211\\351\\241\\271\\346\\224\\271\\351\\200\\240_2026-10-17/\"",
+   "?? \"UI\\347\\225\\214\\351\\235\\242/evidence/Work_\\345\\233\\236\\346\\265\\213\\351\\223\\276\\346\\235\\241\\350\\257\\212\\346\\226\\255_2026-10-17/\"",
+   "?? \"UI\\347\\225\\214\\351\\235\\242/evidence/Work_\\346\\225\\260\\346\\215\\256\\344\\270\\255\\345\\277\\203\\351\\241\\265\\350\\257\\204\\345\\256\\241_2026-10-17/\"",
+   "?? \"UI\\347\\225\\214\\351\\235\\242/web/public/all_trades.json\"",
+   "?? \"UI\\347\\225\\214\\351\\235\\242/web/scripts/shot_datacenter.mjs\"",
+   "?? \"UI\\347\\225\\214\\351\\235\\242/web/scripts/shot_datacenter_tabs.mjs\"",
+   "?? \"UI\\347\\225\\214\\351\\235\\242/web/scripts/verify_backtest_link.mjs\"",
+   "?? evidence/AUDIT-375-V3/",
+   "?? evidence/BACKTEST-LOSS-01/",
+   "?? evidence/PRECISION-01/",
+   "?? evidence/PRECISION-02/",
+   "?? evidence/PRECISION-03/",
+   "?? evidence/PRECISION-04/",
+   "?? evidence/PRECISION-05/",
+   "?? evidence/PRECISION-06/",
+   "?? \"evidence/WORK-06_\\347\\213\\254\\347\\253\\213\\351\\252\\214\\346\\224\\266\\346\\212\\245\\345\\221\\212_2026-10-16.md\"",
+   "?? \"evidence/WORK-07_Codex\\347\\213\\254\\347\\253\\213\\345\\244\\215\\346\\240\\270_2026-10-16.md\"",
+   "?? \"evidence/WORK-07_\\344\\270\\211\\345\\270\\201\\344\\272\\244\\344\\273\\230\\347\\254\\254\\344\\270\\211\\346\\254\\241\\347\\213\\254\\347\\253\\213\\345\\244\\215\\346\\240\\270_2026-10-16.md\"",
+   "?? \"evidence/WORK-07_\\345\\205\\210\\350\\241\\214\\345\\267\\245\\347\\250\\213\\345\\256\\236\\347\\216\\260\\344\\270\\216\\344\\270\\211\\345\\270\\201\\351\\252\\214\\350\\257\\201\\346\\212\\245\\345\\221\\212_2026-10-16.md\"",
+   "?? \"evidence/WORK-07_\\345\\205\\210\\350\\241\\214\\345\\267\\245\\347\\250\\213\\345\\256\\236\\347\\216\\260\\346\\230\\240\\345\\260\\204\\350\\241\\250\\344\\270\\216\\346\\225\\260\\346\\215\\256\\350\\246\\206\\347\\233\\226\\346\\270\\205\\345\\215\\225_2026-10-16.md\"",
+   "?? \"evidence/WORK-07_\\345\\270\\202\\345\\234\\272\\344\\272\\213\\344\\273\\266\\351\\227\\255\\347\\216\\257_\\346\\225\\264\\346\\224\\271\\351\\252\\214\\346\\224\\266\\346\\212\\245\\345\\221\\212_2026-10-16.md\"",
+   "?? \"evidence/WORK-07_\\345\\270\\202\\345\\234\\272\\344\\272\\213\\344\\273\\266\\351\\227\\255\\347\\216\\257_\\347\\216\\260\\346\\234\\211\\345\\256\\236\\347\\216\\260\\347\\233\\230\\347\\202\\271\\344\\270\\216\\346\\225\\260\\346\\215\\256\\345\\245\\221\\347\\272\\246\\350\\256\\276\\350\\256\\241_2026-10-16.md\"",
+   "?? \"evidence/WORK-07_\\346\\225\\264\\346\\224\\271\\345\\220\\216\\344\\272\\214\\346\\254\\241\\347\\213\\254\\347\\253\\213\\345\\244\\215\\346\\240\\270_2026-10-16.md\"",
+   "?? \"evidence/WORK-07_\\346\\225\\264\\346\\224\\271\\346\\233\\264\\346\\255\\243\\346\\212\\245\\345\\221\\212_2026-10-16.md\"",
+   "?? \"evidence/WORK-07_\\347\\254\\254\\345\\233\\233\\346\\254\\241\\347\\213\\254\\347\\253\\213\\345\\244\\215\\346\\240\\270_2026-10-17.md\"",
+   "?? \"evidence/WX_EVENT_TREND_V0_1_\\347\\255\\226\\347\\225\\245\\344\\270\\216\\345\\233\\236\\346\\265\\213\\345\\206\\273\\347\\273\\223\\350\\247\\204\\345\\210\\231.md\"",
+   "?? evidence/Work_2025Q4_100_batch2_summary.json",
+   "?? evidence/Work_2025Q4_100_batch_summary.json",
+   "?? \"evidence/Work_SOL\\344\\272\\213\\344\\273\\266\\345\\233\\236\\346\\224\\276\\351\\252\\214\\350\\257\\201\\347\\273\\223\\346\\236\\234_2026-10-16.json\"",
+   "?? \"evidence/Work_\\344\\270\\211\\345\\270\\201\\344\\272\\213\\344\\273\\266\\345\\233\\236\\346\\265\\213\\344\\270\\216\\345\\257\\271\\350\\264\\246\\347\\273\\223\\346\\236\\234_2026-10-16.json\"",
+   "?? \"evidence/Work_\\344\\272\\213\\344\\273\\266\\350\\266\\213\\345\\212\\277\\347\\254\\254\\345\\233\\233\\346\\254\\241\\345\\244\\215\\346\\240\\270\\346\\225\\264\\346\\224\\271_2026-10-17/\"",
+   "?? \"evidence/Work_\\344\\272\\213\\344\\273\\266\\350\\266\\213\\345\\212\\277\\347\\254\\254\\345\\233\\233\\346\\254\\241\\345\\244\\215\\346\\240\\270\\346\\225\\264\\346\\224\\271_\\351\\200\\220\\345\\255\\227\\346\\256\\265\\345\\257\\271\\350\\264\\246_2026-10-17.json\"",
+   "?? \"evidence/Work_\\344\\272\\213\\344\\273\\266\\350\\266\\213\\345\\212\\277\\347\\254\\254\\345\\233\\233\\346\\254\\241\\345\\244\\215\\346\\240\\270\\346\\225\\264\\346\\224\\271_\\351\\200\\220\\345\\255\\227\\346\\256\\265\\345\\257\\271\\350\\264\\246_2026-10-17.py\"",
+   "?? \"evidence/Work_\\344\\272\\213\\344\\273\\266\\350\\266\\213\\345\\212\\277\\347\\254\\254\\345\\233\\233\\346\\254\\241\\345\\244\\215\\346\\240\\270\\346\\225\\264\\346\\224\\271\\346\\212\\245\\345\\221\\212_2026-10-17.md\"",
+   "?? \"evidence/Work_\\344\\272\\244\\346\\230\\223\\345\\217\\260OI\\345\\205\\250\\345\\216\\206\\345\\217\\262_2026-10-17/\"",
+   "?? \"evidence/Work_\\345\\205\\250\\345\\237\\237\\345\\256\\241\\346\\237\\245\\344\\277\\256\\345\\244\\215_2026-10-17/\"",
+   "?? \"evidence/Work_\\345\\205\\255\\347\\254\\224\\350\\264\\246\\346\\234\\254\\346\\216\\245\\345\\217\\243\\351\\241\\265\\351\\235\\242\\344\\270\\200\\350\\207\\264\\346\\200\\247\\346\\225\\264\\346\\224\\271_2026-10-17/\"",
+   "?? \"evidence/Work_\\345\\256\\214\\346\\225\\264\\345\\233\\236\\346\\265\\213\\347\\252\\227\\345\\217\\243_2026-10-16/\"",
+   "?? \"evidence/Work_\\346\\210\\220\\344\\272\\244\\347\\262\\276\\345\\272\\246\\344\\277\\256\\345\\244\\215_2026-10-17/\"",
+   "?? \"evidence/Work_\\351\\232\\217\\346\\234\\27210\\345\\270\\201\\344\\272\\213\\344\\273\\266\\345\\233\\236\\346\\265\\213\\347\\273\\223\\346\\236\\234_2026-10-17.json\"",
+   "?? \"evidence/Work_\\351\\232\\217\\346\\234\\27210\\345\\270\\201\\347\\254\\254\\344\\272\\214\\346\\211\\271\\344\\272\\213\\344\\273\\266\\345\\233\\236\\346\\265\\213\\347\\273\\223\\346\\236\\234_2026-10-17.json\"",
+   "?? evidence/audit_375_runs_20261017/",
+   "?? evidence/fix_historical_runs_and_validate.py",
+   "?? evidence/run_all_symbols_validation.py",
+   "?? evidence/run_batch_10_test.py",
+   "?? evidence/run_random_10_backtest.py",
+   "?? run_batch_2025q4_100.py",
+   "?? run_batch_2025q4_100_batch2.py",
+   "?? run_batch_round3_50.py",
+   "?? run_batch_round3_50.py.bak_20261017",
+   "?? run_batch_round4_all_remain.py",
+   "?? run_batch_round4_all_remain.py.bak_20261017",
+   "?? run_batch_round5_100.py",
+   "?? run_batch_round5_100.py.bak_20261017",
+   "?? run_batch_round6_100.py",
+   "?? run_batch_round6_100.py.bak_20261017",
+   "?? run_clean_batch_test.py",
+   "?? run_clean_batch_test.py.bak_20261017",
+   "?? run_expand_batch_test.py",
+   "?? run_expand_batch_test.py.bak_20261017",
+   "?? run_random_50_batch_test.py",
+   "?? run_random_50_batch_test.py.bak_20261017",
+   "?? selected_100_symbols_2025q4.json",
+   "?? selected_100_symbols_2025q4_batch2.json",
+   "?? \"\\345\\233\\236\\346\\265\\213\\346\\227\\245\\345\\277\\227/batch_tests_archive/\"",
+   "?? \"\\345\\233\\236\\346\\265\\213\\346\\227\\245\\345\\277\\227/event_trend_v0_1/\"",
+   "?? \"\\345\\233\\236\\346\\265\\213\\346\\227\\245\\345\\277\\227/legacy_archive/\"",
+   "?? \"\\346\\241\\206\\346\\236\\266/backend/backtest_chart.py\"",
+   "?? \"\\346\\241\\206\\346\\236\\266/backend/backtest_metrics.py\"",
+   "?? \"\\346\\241\\206\\346\\236\\266/backend/event_trend_bridge.py\"",
+   "?? \"\\346\\241\\206\\346\\236\\266/backend/ledger_links.py\"",
+   "?? \"\\347\\255\\226\\347\\225\\245/WyckoffMaster/event_trend_v0_1/\""
+  ]
+ },
+ "run_count": 31,
+ "runs": [
+  "run_WX_EVENT_TREND_V0_1_1000BONKUSDT_1792214200",
+  "run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577",
+  "run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703",
+  "run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973",
+  "run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145",
+  "run_WX_EVENT_TREND_V0_1_CVXUSDT_1792196746",
+  "run_WX_EVENT_TREND_V0_1_CYBERUSDT_1792173927",
+  "run_WX_EVENT_TREND_V0_1_EULUSDT_1792174382",
+  "run_WX_EVENT_TREND_V0_1_GRIFFAINUSDT_1792196772",
+  "run_WX_EVENT_TREND_V0_1_GUSDT_1792196778",
+  "run_WX_EVENT_TREND_V0_1_HAEDALUSDT_1792196782",
+  "run_WX_EVENT_TREND_V0_1_LAYERUSDT_1792196801",
+  "run_WX_EVENT_TREND_V0_1_LPTUSDT_1792173591",
+  "run_WX_EVENT_TREND_V0_1_MAGMAUSDT_1792196804",
+  "run_WX_EVENT_TREND_V0_1_MEGAUSDT_1792196807",
+  "run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792171582",
+  "run_WX_EVENT_TREND_V0_1_NXPCUSDT_1792196812",
+  "run_WX_EVENT_TREND_V0_1_OPUSDT_1792172950",
+  "run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568",
+  "run_WX_EVENT_TREND_V0_1_POLYXUSDT_1792174186",
+  "run_WX_EVENT_TREND_V0_1_PUMPBTCUSDT_1792196819",
+  "run_WX_EVENT_TREND_V0_1_SAFEUSDT_1792174439",
+  "run_WX_EVENT_TREND_V0_1_SOONUSDT_1792174449",
+  "run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451",
+  "run_WX_EVENT_TREND_V0_1_SPXUSDT_1792214233",
+  "run_WX_EVENT_TREND_V0_1_SUIUSDT_1792214168",
+  "run_WX_EVENT_TREND_V0_1_TAGUSDT_1792196833",
+  "run_WX_EVENT_TREND_V0_1_TRUMPUSDT_1792214181",
+  "run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465",
+  "run_WX_EVENT_TREND_V0_1_XMRUSDT_1792173989",
+  "run_WX_EVENT_TREND_V0_1_XVSUSDT_1792174216"
+ ],
+ "files": [
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_1000BONKUSDT_1792214200/trades.jsonl",
+   "exists": true,
+   "bytes": 1359,
+   "sha256": "361344d774a4306edb3a2948ba6b94b96a8ac0ff7b937e64384e1880abed8c50"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_1000BONKUSDT_1792214200/orders.jsonl",
+   "exists": true,
+   "bytes": 1479,
+   "sha256": "64e5c19656c283a1b0d5ff6bc4474b5bd2e0c64efc5c82e5574862b5f3a0d30e"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_1000BONKUSDT_1792214200/fills.jsonl",
+   "exists": true,
+   "bytes": 856,
+   "sha256": "626b1a80533b216d85ce42a126bec0dc417009a8850834531cbd3caa2865aefe"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_1000BONKUSDT_1792214200/chart.json",
+   "exists": true,
+   "bytes": 2772581,
+   "sha256": "591c48ce86e876cde04a44e4b030858716110839e32de1b441fd82126b1b9186"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_1000BONKUSDT_1792214200/inputs.json",
+   "exists": true,
+   "bytes": 9995,
+   "sha256": "f6fb136d5a4dfcd5d70194cb4b74070dca7dcf24c4c5c8669077fceb046d94dc"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_1000BONKUSDT_1792214200/summary.json",
+   "exists": true,
+   "bytes": 8413,
+   "sha256": "22dd5a2208927fd2c2ba48e4e98adc7adbecf568e6d712a65444359618d285aa"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577/trades.jsonl",
+   "exists": true,
+   "bytes": 793,
+   "sha256": "9b7e744b306bd57c8adf715d2e9f593bd910adb85d71dcb5612e3f00f1f5522d"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577/orders.jsonl",
+   "exists": true,
+   "bytes": 1493,
+   "sha256": "6e95facbea0b493fd9427560e0c91d11cc1453fda6bdfaf908a6ebbd501ee4f9"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577/fills.jsonl",
+   "exists": true,
+   "bytes": 884,
+   "sha256": "317497b8f3ae36fae1639652eb86dc48b6d03158898a6176dd96b367d2abd353"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577/chart.json",
+   "exists": true,
+   "bytes": 2836530,
+   "sha256": "e1be96e1dd6e63bce40080cb6f4b486137d6a2af3b9eecc50de107788a5f1f05"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577/inputs.json",
+   "exists": true,
+   "bytes": 6431,
+   "sha256": "4949f0b9389c7626705f51bc71bc50d3c5382f74fd2d89ce1175504ef483235f"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ACEUSDT_1792171577/summary.json",
+   "exists": true,
+   "bytes": 2776,
+   "sha256": "e6450279372c06e0ac4d6d3bf0e3dc0501663f9510a47bab3b684f3d8b556034"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703/trades.jsonl",
+   "exists": true,
+   "bytes": 773,
+   "sha256": "c0b3bf010a099f7dc0f953d1adfc843c4810a753a8205e583443bc017ead4e88"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703/orders.jsonl",
+   "exists": true,
+   "bytes": 1512,
+   "sha256": "0383ad84c797532d0a6ec1cadb7343e7f40d17c6e990ba72150c0fa0b1db936e"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703/fills.jsonl",
+   "exists": true,
+   "bytes": 887,
+   "sha256": "9ce8ff7fb0dabbecbfb004766aa603c19dffdefa1dcdefb447f62a616ad03672"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703/chart.json",
+   "exists": true,
+   "bytes": 1898844,
+   "sha256": "65481eea551b025845f30d7a576ce6b8270025bbf0fa4b51cd9adf513a3791ea"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703/inputs.json",
+   "exists": true,
+   "bytes": 6436,
+   "sha256": "d0cbadb32870b4a4d1505fd534da6deecbc8591a9b7c8d5992da8225a73cbf05"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_AIGENSYNUSDT_1792196703/summary.json",
+   "exists": true,
+   "bytes": 2804,
+   "sha256": "acdb15a75a5241ddcc2308e56a3b4f4995d4f4929e35200aff280969ed183810"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973/trades.jsonl",
+   "exists": true,
+   "bytes": 817,
+   "sha256": "31ae3c76f5cfd91ee646a4e6f1e400179d42e4bf700f28acdfd1e0460891bdfd"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973/orders.jsonl",
+   "exists": true,
+   "bytes": 1515,
+   "sha256": "efd1a2d39adae33d306589ad4c44e4b9ec0d923d563755cbf7c64468f4a7b8cc"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973/fills.jsonl",
+   "exists": true,
+   "bytes": 901,
+   "sha256": "ee5d93aaf9b01b0796f1875e66e09105492526be42d17b18c3e9188f841b3f11"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973/chart.json",
+   "exists": true,
+   "bytes": 2926302,
+   "sha256": "0994ba7edb65e6c9f83550ae279c4ac203ea497f527a0741de4d8439f5c21ff9"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973/inputs.json",
+   "exists": true,
+   "bytes": 6431,
+   "sha256": "a72f7280182cf0b190038c05a729abf2d5a91c336a4f3ae3710f92259e7468db"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_BNBUSDT_1792172973/summary.json",
+   "exists": true,
+   "bytes": 2781,
+   "sha256": "8b0efffa2451f75511f21ff2a6d91e4650b4218795df7a2f3266317dde3f94e0"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145/trades.jsonl",
+   "exists": true,
+   "bytes": 1321,
+   "sha256": "6df57a089bb4c21cc7a6924cad8709ac7699ab1bd3bcedaa564d8755e248e31e"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145/orders.jsonl",
+   "exists": true,
+   "bytes": 1483,
+   "sha256": "3afd004d659fb3414c31494ffdf632ae3932e478a698652ad91b8a51fa432b9e"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145/fills.jsonl",
+   "exists": true,
+   "bytes": 875,
+   "sha256": "38aaf7a65117925de214f6dc73fdfa58b849029542db9ecedbe873ba8f5192d1"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145/chart.json",
+   "exists": true,
+   "bytes": 2939565,
+   "sha256": "077b8992118db875b50a38a67f47df6cc707b71d2bd9dfe8bb168e279621d284"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145/inputs.json",
+   "exists": true,
+   "bytes": 6433,
+   "sha256": "12dae7902cdd1b175384551ce9656f7bb0cbdd01efa333409561b66af2989f83"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_COTIUSDT_1792174145/summary.json",
+   "exists": true,
+   "bytes": 2780,
+   "sha256": "77e5870136ad737639b1807bc33297efd9d0ddfd531be21ff596ad6b81999dfa"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CVXUSDT_1792196746/trades.jsonl",
+   "exists": true,
+   "bytes": 804,
+   "sha256": "fbf26189364b6d9eeb1d3567ae78c2b945938dff14f0824560c2775018e3ba75"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CVXUSDT_1792196746/orders.jsonl",
+   "exists": true,
+   "bytes": 1503,
+   "sha256": "6957f13440fe086dcfdb1b83ecc55178025c91a82b363d685dabb680ecbc803f"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CVXUSDT_1792196746/fills.jsonl",
+   "exists": true,
+   "bytes": 887,
+   "sha256": "29883dd64462d3df62ffa2cfb5907d389753fe9cad79837daa30c94d2f98866a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CVXUSDT_1792196746/chart.json",
+   "exists": true,
+   "bytes": 2676870,
+   "sha256": "5f57a2042f21424de47548bb4e806adbaed3b0eb26bb57ee485cf290055c66ea"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CVXUSDT_1792196746/inputs.json",
+   "exists": true,
+   "bytes": 6431,
+   "sha256": "e136083cf6ecd5c0b46c6d197f14c1a957661ef7c8e7ea013caa6b37552166ed"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CVXUSDT_1792196746/summary.json",
+   "exists": true,
+   "bytes": 2786,
+   "sha256": "df8fe418e1dddc2175aa8fcd5755738e6cc31ce4486c40c40058622f8614efae"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CYBERUSDT_1792173927/trades.jsonl",
+   "exists": true,
+   "bytes": 799,
+   "sha256": "2342de99e86ac4b1f398ceb7172fdc17b4d27e4ec5a3037532fda30939e778c0"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CYBERUSDT_1792173927/orders.jsonl",
+   "exists": true,
+   "bytes": 1503,
+   "sha256": "4766195d8c4eb464b6332c8fa62a876c6fcb93ad10ffe078f1759f085351a758"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CYBERUSDT_1792173927/fills.jsonl",
+   "exists": true,
+   "bytes": 892,
+   "sha256": "9593c0a2198a8ad3452b8eb59468b5c1c1ee6c8c3b3a577eb56a07f0bd1c1e63"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CYBERUSDT_1792173927/chart.json",
+   "exists": true,
+   "bytes": 2723673,
+   "sha256": "27024429d215893f3b05d32c5a5f1d2bb9aa0f870047e5445847824b40704617"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CYBERUSDT_1792173927/inputs.json",
+   "exists": true,
+   "bytes": 6435,
+   "sha256": "aef3b3eb12fe8593169d44710965cf0639c5b2db4e685728ead2a131e1f4fb1a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_CYBERUSDT_1792173927/summary.json",
+   "exists": true,
+   "bytes": 2791,
+   "sha256": "35dbd02d4cba82447fc886c3975eda01ef4e9dd670a99f8056e486107861b29e"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_EULUSDT_1792174382/trades.jsonl",
+   "exists": true,
+   "bytes": 796,
+   "sha256": "74ccae6e08381d00e641d72b099095ac816404a1d06888f7c0650d0b9ebcfaa3"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_EULUSDT_1792174382/orders.jsonl",
+   "exists": true,
+   "bytes": 1494,
+   "sha256": "69dbec61b40af211000cdbf2a461f2dbea54654c0e7907c8e8901c85cfeacd80"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_EULUSDT_1792174382/fills.jsonl",
+   "exists": true,
+   "bytes": 883,
+   "sha256": "b3337f254f039d11ef29396403c8bade237b5bb3836c03719c39600533558255"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_EULUSDT_1792174382/chart.json",
+   "exists": true,
+   "bytes": 2598070,
+   "sha256": "d8d7f0779444ad5c40b2b3e8af6f43cd18919dc90b4f174fe382b6773ebf1b25"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_EULUSDT_1792174382/inputs.json",
+   "exists": true,
+   "bytes": 6428,
+   "sha256": "efb259d137427f78b335a01dc635a48b17987374c892e8d224ab795715b6b85f"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_EULUSDT_1792174382/summary.json",
+   "exists": true,
+   "bytes": 2791,
+   "sha256": "ad23495239b6131539f3e67aa92dcb8731a91db68835887cd10ca3af9e0cc8a6"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GRIFFAINUSDT_1792196772/trades.jsonl",
+   "exists": true,
+   "bytes": 791,
+   "sha256": "cee42d532d2b3074f7a86ae5fdbae90605d76218747317903e7437ebcaea26b2"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GRIFFAINUSDT_1792196772/orders.jsonl",
+   "exists": true,
+   "bytes": 1518,
+   "sha256": "26b1e84bf854dbdd4501143ef5ca25bedb81d54c69adabaa31c6b9979e83d14a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GRIFFAINUSDT_1792196772/fills.jsonl",
+   "exists": true,
+   "bytes": 900,
+   "sha256": "ff1ab1d3082e4e172ee9b4c1b5210230e6e0b494ffdcce422745b0dba6e2b9a9"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GRIFFAINUSDT_1792196772/chart.json",
+   "exists": true,
+   "bytes": 2775824,
+   "sha256": "ad7f0573e846ae30c3388f8e88cc989a7254343c3dbc2d7ceb97693fef249e0a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GRIFFAINUSDT_1792196772/inputs.json",
+   "exists": true,
+   "bytes": 6441,
+   "sha256": "51ee187bd553fd88d7892f855844d3d562c1d5c62dd7188b964daad87a58a076"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GRIFFAINUSDT_1792196772/summary.json",
+   "exists": true,
+   "bytes": 2786,
+   "sha256": "fad484587c8845f72dc0d90cfec8dc2326ed27edae26b4f349e81b152dd259f1"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GUSDT_1792196778/trades.jsonl",
+   "exists": true,
+   "bytes": 770,
+   "sha256": "9ee57cf51e9a1c059dd88ef89e3c3abc0250a4e05444f23dc187ba35e01efd8c"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GUSDT_1792196778/orders.jsonl",
+   "exists": true,
+   "bytes": 1480,
+   "sha256": "0d0c1ca81768b205594f9a8d747f4a588d17e0edacf377be7f5f5a40009bc84f"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GUSDT_1792196778/fills.jsonl",
+   "exists": true,
+   "bytes": 864,
+   "sha256": "cfd125be78894e5c28a412d645d28d108ae803d9bc75de66e7c7ed65c952c146"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GUSDT_1792196778/chart.json",
+   "exists": true,
+   "bytes": 2919872,
+   "sha256": "c372515dcd4fa8dbce7a37097a0de22f1964401338b013351c73cf8474d4f62f"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GUSDT_1792196778/inputs.json",
+   "exists": true,
+   "bytes": 6427,
+   "sha256": "dec9e3cc141675fb18d8a533a621a03946edafebf0a2a7de5acd57aa78c59b00"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_GUSDT_1792196778/summary.json",
+   "exists": true,
+   "bytes": 2783,
+   "sha256": "6e0bc741fafac5b1e6af02f76f97d05d7304915dea0b79153a3bb02db141310b"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_HAEDALUSDT_1792196782/trades.jsonl",
+   "exists": true,
+   "bytes": 796,
+   "sha256": "84c435f9b2b3ed2e7b6b29f524d2e61a425a25fd57eca5065d641380e19a5431"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_HAEDALUSDT_1792196782/orders.jsonl",
+   "exists": true,
+   "bytes": 1504,
+   "sha256": "fc99febccb95d4ae901a58da6968bf4e130b13f52fe2374b452a40a614d7a90a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_HAEDALUSDT_1792196782/fills.jsonl",
+   "exists": true,
+   "bytes": 883,
+   "sha256": "814f1f9e213db1c33d4614b4f45b545e09b3f8300ee28375ea2beaaf93d86acd"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_HAEDALUSDT_1792196782/chart.json",
+   "exists": true,
+   "bytes": 3050525,
+   "sha256": "11cc36db7213d0bffff2c641cbe4be534ec7bcf274ef510ff402088c1085b128"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_HAEDALUSDT_1792196782/inputs.json",
+   "exists": true,
+   "bytes": 6437,
+   "sha256": "0c0eea4de6ac566e0c2e811b2de1013518c141561a987da15d2493c5cd3317bb"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_HAEDALUSDT_1792196782/summary.json",
+   "exists": true,
+   "bytes": 2785,
+   "sha256": "f22b1084cfcb30ba7d0b6925ca90009e735cd26e3a8c73804b13985290b1900b"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LAYERUSDT_1792196801/trades.jsonl",
+   "exists": true,
+   "bytes": 796,
+   "sha256": "e549bb7c85d0ab9b63d4bf150b7a551d04774c25cf6ad0f4fbedddb2596c3d38"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LAYERUSDT_1792196801/orders.jsonl",
+   "exists": true,
+   "bytes": 1501,
+   "sha256": "69a0cdeaa5d3ca1bd1d385c388e68492a379128bb7b0de81098c7c0094883f53"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LAYERUSDT_1792196801/fills.jsonl",
+   "exists": true,
+   "bytes": 888,
+   "sha256": "68f18f3012ac414ca56e4a9775df4977d8ab4a5805c6dcbd842db6eae2a57d87"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LAYERUSDT_1792196801/chart.json",
+   "exists": true,
+   "bytes": 2678492,
+   "sha256": "ef815e7e23e727017adffa55a2e5eac0555a7578bc866aa4da129a6ca6b648d5"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LAYERUSDT_1792196801/inputs.json",
+   "exists": true,
+   "bytes": 6435,
+   "sha256": "3d7242d7a83bd97081a1be365b04ea163498bb5cf9306c386c158c5c8a3e13d7"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LAYERUSDT_1792196801/summary.json",
+   "exists": true,
+   "bytes": 2787,
+   "sha256": "ffdbd403b6691ad099466fe865183a0f65a4364ebb8f5c56bf52d851672b7e48"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LPTUSDT_1792173591/trades.jsonl",
+   "exists": true,
+   "bytes": 796,
+   "sha256": "3357801548930d2bd6a4eee54a4cb98fa90d4d73e553bbd75806778f5ceff3ec"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LPTUSDT_1792173591/orders.jsonl",
+   "exists": true,
+   "bytes": 1496,
+   "sha256": "01713ee4048ffaa21be90c4a55dafd4a760e066818f6fb445e73ad77f11a78b4"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LPTUSDT_1792173591/fills.jsonl",
+   "exists": true,
+   "bytes": 887,
+   "sha256": "acc084ddccdf51372c6780ca2a309de5710cba23293d39f005bc434c3117f329"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LPTUSDT_1792173591/chart.json",
+   "exists": true,
+   "bytes": 2789079,
+   "sha256": "bd06c9b1a42ef2f7413d9ab6471762ad1ec306b49309b08a4940c654bf6ae5ff"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LPTUSDT_1792173591/inputs.json",
+   "exists": true,
+   "bytes": 6431,
+   "sha256": "8a6a17f2f861e7b79b9e5256bc439389d0aa92f890254f60712583612507fa54"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_LPTUSDT_1792173591/summary.json",
+   "exists": true,
+   "bytes": 2768,
+   "sha256": "3ef49f3a97b30eb886f78ea65a06bc3185aeb4b3ea8318577246edf228793505"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MAGMAUSDT_1792196804/trades.jsonl",
+   "exists": true,
+   "bytes": 796,
+   "sha256": "6f0d34e26f80be05d6ac1f97dd51c591a561b36fb4a224166cfb50b688fb6496"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MAGMAUSDT_1792196804/orders.jsonl",
+   "exists": true,
+   "bytes": 1497,
+   "sha256": "b7641fa63239e3bb6526fbd2222f2aa128778deedfde2f7938759b050017959d"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MAGMAUSDT_1792196804/fills.jsonl",
+   "exists": true,
+   "bytes": 877,
+   "sha256": "ec7e7d282c7fa81123cb502fdf06ec3a86ce4d1967eee1766f9ab7d963c1e4a8"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MAGMAUSDT_1792196804/chart.json",
+   "exists": true,
+   "bytes": 2890661,
+   "sha256": "52e2bd90b5897b314cfaf74832f466c7e47b0c7242b23a23e32a0129381b5222"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MAGMAUSDT_1792196804/inputs.json",
+   "exists": true,
+   "bytes": 6432,
+   "sha256": "afddf6e0bea63f0d6a4702abb55fbb2d0ca626c33d388ce9f86a812feef6b4f7"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MAGMAUSDT_1792196804/summary.json",
+   "exists": true,
+   "bytes": 2798,
+   "sha256": "cd84a1cf63f71079af51e976fb1a25e90d94204ae8f546e39a20ccac2cdf5dba"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MEGAUSDT_1792196807/trades.jsonl",
+   "exists": true,
+   "bytes": 782,
+   "sha256": "1c2151ae87583aab65a9a67fa7cf4075bb2860c1aed7cc6798e7fa3047f84b3f"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MEGAUSDT_1792196807/orders.jsonl",
+   "exists": true,
+   "bytes": 1502,
+   "sha256": "ce3de27464dddd5ce386cbc02216494676e3c6f9b020be7e4e844697187f6f07"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MEGAUSDT_1792196807/fills.jsonl",
+   "exists": true,
+   "bytes": 888,
+   "sha256": "d59a4da7d7c167603977df6ae3551114084571b9cbf73241970ccf90cd4098ef"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MEGAUSDT_1792196807/chart.json",
+   "exists": true,
+   "bytes": 2735877,
+   "sha256": "5480a121399e196dafbe4d5e42725e94b81c4005dce2ce065443cfd6d600be73"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MEGAUSDT_1792196807/inputs.json",
+   "exists": true,
+   "bytes": 6430,
+   "sha256": "5790e2d0ce95c252352d735657185cc1231ba15f4849294db5ae10a635481e7d"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MEGAUSDT_1792196807/summary.json",
+   "exists": true,
+   "bytes": 2790,
+   "sha256": "5d2217d28e976e5e071a4c1097da3bcedd81cf3f154ac4e57035873b171bb6db"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792171582/trades.jsonl",
+   "exists": true,
+   "bytes": 787,
+   "sha256": "a5748674287bb86766f35a1830d81c13ac025dd12139cbc2e6252f79b505434c"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792171582/orders.jsonl",
+   "exists": true,
+   "bytes": 1491,
+   "sha256": "fb017467282f20b6a903259d84abdbd97a6c9a9f97ca06b80bcd887389e7c366"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792171582/fills.jsonl",
+   "exists": true,
+   "bytes": 874,
+   "sha256": "e4bc0d07dafce33df87e96b9692fae44d665b864fe3497b68c4dc53ee0b3f722"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792171582/chart.json",
+   "exists": true,
+   "bytes": 2843094,
+   "sha256": "871d2a99aa9cb9a37c8294b95674a5cddb8197269a31c2b54de89bef1383318b"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792171582/inputs.json",
+   "exists": true,
+   "bytes": 6433,
+   "sha256": "928e9b69576f10738b1c222162f4793a8e11ac9063c372f6a2b3a7fb979a6870"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_MOVRUSDT_1792171582/summary.json",
+   "exists": true,
+   "bytes": 2774,
+   "sha256": "3d5909ddf68717d4c908e08685b50d43c28e701035a4d548028a890c4e1981f8"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_NXPCUSDT_1792196812/trades.jsonl",
+   "exists": true,
+   "bytes": 776,
+   "sha256": "89cbe3ab7c642566ffdf39ef65e1c536093da864d2ce01b5b81f1c5c60827065"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_NXPCUSDT_1792196812/orders.jsonl",
+   "exists": true,
+   "bytes": 1491,
+   "sha256": "0d0f7897e98c7413a3733672d6b53bcd82f58e8ffbb5d9aac512f13edf21aa6e"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_NXPCUSDT_1792196812/fills.jsonl",
+   "exists": true,
+   "bytes": 874,
+   "sha256": "f324c3a6ab7755ed7c245515fd43ebaec47e301de4bb9e4c144e7beaf8596d72"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_NXPCUSDT_1792196812/chart.json",
+   "exists": true,
+   "bytes": 2624385,
+   "sha256": "f527af7a1a14bc68d229b2dd47d14bd98f5d0e726fb1b5c3d25287e598de29e9"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_NXPCUSDT_1792196812/inputs.json",
+   "exists": true,
+   "bytes": 6433,
+   "sha256": "681ee2e028b0db8e31ab0cdfec8eebab3425a591be4ae8b675a12b91102ef33a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_NXPCUSDT_1792196812/summary.json",
+   "exists": true,
+   "bytes": 2783,
+   "sha256": "19ce7efd1d27a782c61dc1b9f13ca46fbb903b7b9b6f6350a0b062bb7a052e93"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_OPUSDT_1792172950/trades.jsonl",
+   "exists": true,
+   "bytes": 792,
+   "sha256": "26678cb795aa54eb50c02a147b32e9565781edda97a9e27d2fc0c9d44b9b59d6"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_OPUSDT_1792172950/orders.jsonl",
+   "exists": true,
+   "bytes": 1492,
+   "sha256": "34ee50342bb7f366397137015d6db214267b4ac59c19066d62d3c4540522f7f3"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_OPUSDT_1792172950/fills.jsonl",
+   "exists": true,
+   "bytes": 882,
+   "sha256": "7a7153e4090f593286f633ddee7ea447775db5befec4ed355f69ab53aac7dfd6"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_OPUSDT_1792172950/chart.json",
+   "exists": true,
+   "bytes": 2952930,
+   "sha256": "9f549b2fed23b0a26fd2cab56a3bc80c600d1899a69da6ca78ada03a7aae8904"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_OPUSDT_1792172950/inputs.json",
+   "exists": true,
+   "bytes": 6429,
+   "sha256": "9397cfc03b039b1393aef3bb6a49f3871b5c49a20847099c249a581a225305f7"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_OPUSDT_1792172950/summary.json",
+   "exists": true,
+   "bytes": 2776,
+   "sha256": "903ef2231968ca989e3373d131ab067927de6750913021ca2ed7d45b63b8efe5"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568/trades.jsonl",
+   "exists": true,
+   "bytes": 811,
+   "sha256": "0b69e3a93f2354eb7596bf4d399d6412a708ff6af2c2b2ff43391bd3cf6cf52e"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568/orders.jsonl",
+   "exists": true,
+   "bytes": 1515,
+   "sha256": "66f4b830606d45f85909767c4891e9d9bdd8bdfb4553ee0e0c79e2a1dff43859"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568/fills.jsonl",
+   "exists": true,
+   "bytes": 903,
+   "sha256": "abd0713fe12a41a31562d1d61216e9ad9223301cf13cbb561981ba4a59e011d9"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568/chart.json",
+   "exists": true,
+   "bytes": 2615224,
+   "sha256": "d1e3faec5f5158f2e6817616c523089fcbe9bbd424c2b69b120a21b213adbe42"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568/inputs.json",
+   "exists": true,
+   "bytes": 6433,
+   "sha256": "04281aaec8dd9a80768a77437aa00ee5f1bca9502289f8a0b2da61a124f1f0a1"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_ORDIUSDT_1792171568/summary.json",
+   "exists": true,
+   "bytes": 2788,
+   "sha256": "838b80717469a71b6110c2106fb7fd34149463a022794ae1afbc508721bf4d25"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_POLYXUSDT_1792174186/trades.jsonl",
+   "exists": true,
+   "bytes": 784,
+   "sha256": "aa7c13f81777d588806aa9adbcf024642eba762ef65ef5dd36321ac6748b7b6f"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_POLYXUSDT_1792174186/orders.jsonl",
+   "exists": true,
+   "bytes": 1506,
+   "sha256": "b106da8ad1ca9f6030b0fa610f2c8c8a217017cb50bb6f84ffa249170f511c9d"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_POLYXUSDT_1792174186/fills.jsonl",
+   "exists": true,
+   "bytes": 891,
+   "sha256": "217cd841364ad620099bdec5e5605c743285e6ebb1eadf5aff56c3a66225fcd8"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_POLYXUSDT_1792174186/chart.json",
+   "exists": true,
+   "bytes": 2943055,
+   "sha256": "5223a10bae2a9d42e241db27207e476c8fbee25d041c1dba73da128afb8eea02"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_POLYXUSDT_1792174186/inputs.json",
+   "exists": true,
+   "bytes": 6435,
+   "sha256": "2886aeef995a170d791a47391241c3e1ce6339e57c984850f25fd27464969b8a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_POLYXUSDT_1792174186/summary.json",
+   "exists": true,
+   "bytes": 2767,
+   "sha256": "c44885775795916d6ef4a0e985095ed33a1f4722b414b439669c7078e03ed10e"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_PUMPBTCUSDT_1792196819/trades.jsonl",
+   "exists": true,
+   "bytes": 1552,
+   "sha256": "a472b250d1c7b2da2c607690467a5fc8282e18812c1bf84c5af45925eb6ec000"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_PUMPBTCUSDT_1792196819/orders.jsonl",
+   "exists": true,
+   "bytes": 1493,
+   "sha256": "9956366d58a0babb678606bac1f9136a264debb268e0861f08df01ab30c877c7"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_PUMPBTCUSDT_1792196819/fills.jsonl",
+   "exists": true,
+   "bytes": 882,
+   "sha256": "d45b9a73dc5526bdc629db346aa22a0ec2dd1f45124cfcc6657e64ba61fafae2"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_PUMPBTCUSDT_1792196819/chart.json",
+   "exists": true,
+   "bytes": 2858195,
+   "sha256": "70aef50f41b6611b546e2c0c98eaba39eb30b50c589e7d3b2d8efd706732da17"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_PUMPBTCUSDT_1792196819/inputs.json",
+   "exists": true,
+   "bytes": 6439,
+   "sha256": "e20474d90b5b83d181844914dd3a303024570e0e6b862db5703542a01a25d0a1"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_PUMPBTCUSDT_1792196819/summary.json",
+   "exists": true,
+   "bytes": 2777,
+   "sha256": "70b28cc39865489655f381c2815b662d90da85852a8e9de6c04167c2f0f43da0"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SAFEUSDT_1792174439/trades.jsonl",
+   "exists": true,
+   "bytes": 805,
+   "sha256": "8309ccbe3fc19969ea5bef311cf2561f5d5a32e053ceace20b9e5971bc817854"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SAFEUSDT_1792174439/orders.jsonl",
+   "exists": true,
+   "bytes": 1508,
+   "sha256": "fde9c5d1697c0f191740554ed2c53eb450d99e06dae15938ab8570c2c2bf00e3"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SAFEUSDT_1792174439/fills.jsonl",
+   "exists": true,
+   "bytes": 898,
+   "sha256": "eba9a1c4f354536990239ec4de38e486f7ec52ae2149e793b1907f61f82320b2"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SAFEUSDT_1792174439/chart.json",
+   "exists": true,
+   "bytes": 2870585,
+   "sha256": "beac5f36f6fe2b198eade90f4304005326af91aa43cd10d9d390f5c1b73302b5"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SAFEUSDT_1792174439/inputs.json",
+   "exists": true,
+   "bytes": 6433,
+   "sha256": "93969bdc3af199f2edc8c3b4e95584edc685cd3bc1d82e50f6c3d72cfa545cad"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SAFEUSDT_1792174439/summary.json",
+   "exists": true,
+   "bytes": 2770,
+   "sha256": "1a44cfb6520b4bc94f922a1d03259d9c5188d33412b3ab7bd302419151702bd9"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SOONUSDT_1792174449/trades.jsonl",
+   "exists": true,
+   "bytes": 1205,
+   "sha256": "9e32c59e2ee21c81ff12a109707c159233308ea85562d5565b5e17d471c56c1f"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SOONUSDT_1792174449/orders.jsonl",
+   "exists": true,
+   "bytes": 1488,
+   "sha256": "73677970be6f18c21e458a074d9a4aec27e2dc39963c854e4c86c0c51eba84e8"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SOONUSDT_1792174449/fills.jsonl",
+   "exists": true,
+   "bytes": 886,
+   "sha256": "0b51aa87adcaff7a577a4c3766d0935e5c87349e0d94a1f8218ce40b19958abd"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SOONUSDT_1792174449/chart.json",
+   "exists": true,
+   "bytes": 2853752,
+   "sha256": "ab7e58149c3563e823fbc357fb97b26889a2c734df6b4ac53d71e470a8a21176"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SOONUSDT_1792174449/inputs.json",
+   "exists": true,
+   "bytes": 6433,
+   "sha256": "35d37359eb07f44c89f19b17ba0001349df9c0ee546925e45f2c5276035773eb"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SOONUSDT_1792174449/summary.json",
+   "exists": true,
+   "bytes": 2769,
+   "sha256": "b56ad127c53ba56cdaea0b0ffff3fedf3edbc2d4fac1770e6a7be67c571c1f08"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451/trades.jsonl",
+   "exists": true,
+   "bytes": 780,
+   "sha256": "5aef6d263f9e4253bf711f57ce864334b7e01ce4d711adb2a1cceeb66b46b307"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451/orders.jsonl",
+   "exists": true,
+   "bytes": 1482,
+   "sha256": "b6d50e6541e5054676b5db2aae4c88795d3b2e73e711810db29077dba649bea7"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451/fills.jsonl",
+   "exists": true,
+   "bytes": 860,
+   "sha256": "721e5594244ecdcb4360a752ae8c05c7224c2aed97129c9c0481dd0941f027b4"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451/chart.json",
+   "exists": true,
+   "bytes": 2873761,
+   "sha256": "54839d11f5c5b46ac182433e5b6c661f053dc9cf4e8e7b939f1783c2cb5ab3f2"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451/inputs.json",
+   "exists": true,
+   "bytes": 6432,
+   "sha256": "5e12ae335d964d14e724a26a2af893a4bd6c071e8e4d83711578d4530a908126"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPACEUSDT_1792174451/summary.json",
+   "exists": true,
+   "bytes": 2780,
+   "sha256": "2956423c0d040afffff50c1be0e58e06c4f80523557655e35d8567dae66f653b"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPXUSDT_1792214233/trades.jsonl",
+   "exists": true,
+   "bytes": 1279,
+   "sha256": "5d431fc14f6cc3ca60b62948fc066ae55c3f6b3bc36f428ff20060ed16a5377a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPXUSDT_1792214233/orders.jsonl",
+   "exists": true,
+   "bytes": 1452,
+   "sha256": "51ac896a80ee4e570bb241e46fcb2baa16eb9e81d8d647ef5e00387c94e73e8a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPXUSDT_1792214233/fills.jsonl",
+   "exists": true,
+   "bytes": 841,
+   "sha256": "3a17267e9abaf70d2d49f77ae04e71c78b8da3423e1e57adaa2218946f7385f9"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPXUSDT_1792214233/chart.json",
+   "exists": true,
+   "bytes": 2565703,
+   "sha256": "c13d50138f6d3b4371c00cf0cb51ea09287038c96e7e1edc8b8755795e23d9b1"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPXUSDT_1792214233/inputs.json",
+   "exists": true,
+   "bytes": 9964,
+   "sha256": "32458c377fb65ceb30da3e234b0f5a4c3275844cfcdbb585e79da75449ae65b0"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SPXUSDT_1792214233/summary.json",
+   "exists": true,
+   "bytes": 8335,
+   "sha256": "141b12fd80226082654d2201e18c7ddc24756551314d90084043a179064f573f"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SUIUSDT_1792214168/trades.jsonl",
+   "exists": true,
+   "bytes": 1301,
+   "sha256": "899538850ff6cea846c82d550d253c50f3a10dc906855c03bf839dc97ad4e143"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SUIUSDT_1792214168/orders.jsonl",
+   "exists": true,
+   "bytes": 1462,
+   "sha256": "5f137c21bac48c8e5d8c40bae449681aebe085156d9779caa6ddf6c7170e5179"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SUIUSDT_1792214168/fills.jsonl",
+   "exists": true,
+   "bytes": 851,
+   "sha256": "8b0e6b88c53c5d15dc8d8197e560e4004133e05495b8fe9244bdb1a1ab84658f"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SUIUSDT_1792214168/chart.json",
+   "exists": true,
+   "bytes": 2549742,
+   "sha256": "d54b2d02f5f7999458791104c77d441cc718a19e2c3d6f775f0999eccda915c4"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SUIUSDT_1792214168/inputs.json",
+   "exists": true,
+   "bytes": 9993,
+   "sha256": "85ff85614b19c78780557cc6286113116658b53d129ad2aecf18d7ff8648b945"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_SUIUSDT_1792214168/summary.json",
+   "exists": true,
+   "bytes": 8424,
+   "sha256": "77f962803db89fde2fdcd73e2787378b59a0c2df0d3331f01ea1f8f928662e83"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TAGUSDT_1792196833/trades.jsonl",
+   "exists": true,
+   "bytes": 762,
+   "sha256": "77f5f4fbc7bb060e9f47109cb26c82e05459c5c4264d24a7e500f99e21c38641"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TAGUSDT_1792196833/orders.jsonl",
+   "exists": true,
+   "bytes": 1478,
+   "sha256": "a02ba01ee4b9a835a6f2c69474b094c0c3a5367c028e0b3d20091f0d3b81f8ba"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TAGUSDT_1792196833/fills.jsonl",
+   "exists": true,
+   "bytes": 856,
+   "sha256": "6964a5ffd35d5013561c5264bbd18c2015d34514c9e77f2aa62624d63a88352a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TAGUSDT_1792196833/chart.json",
+   "exists": true,
+   "bytes": 2956489,
+   "sha256": "35da66720c6378f84149c9571309b87002ef8ef4f691c20abadedae04566d58c"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TAGUSDT_1792196833/inputs.json",
+   "exists": true,
+   "bytes": 6431,
+   "sha256": "af00c6a6da3c70b4522dcf8aa771823c14e278896663670fe7d6d60f33d84f91"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TAGUSDT_1792196833/summary.json",
+   "exists": true,
+   "bytes": 2784,
+   "sha256": "e0fe287ddd6b0d13b724699c291cd4ad67d7beea7f8c0572e2d7a1f775b8be87"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUMPUSDT_1792214181/trades.jsonl",
+   "exists": true,
+   "bytes": 1277,
+   "sha256": "faec16472e90f8e316a4d820a72eaab92d90637de20b51dfef4ad702f19be9da"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUMPUSDT_1792214181/orders.jsonl",
+   "exists": true,
+   "bytes": 1468,
+   "sha256": "66d574717088fb75c585d64fad099db31f370bf360f32dac79389a0c19f63545"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUMPUSDT_1792214181/fills.jsonl",
+   "exists": true,
+   "bytes": 857,
+   "sha256": "66d8788639c1b5e7da19f3d1893aa4025293da268118d67ef573b82e29490362"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUMPUSDT_1792214181/chart.json",
+   "exists": true,
+   "bytes": 2600828,
+   "sha256": "60f9d651cf6c74ed8736f8fd1cec41e72753a017ff397e3f393774fffe481107"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUMPUSDT_1792214181/inputs.json",
+   "exists": true,
+   "bytes": 10013,
+   "sha256": "a814094decfc8e354dc35269188765b31f097a51e41a766c73486a9b536476d3"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUMPUSDT_1792214181/summary.json",
+   "exists": true,
+   "bytes": 8396,
+   "sha256": "a924b3a3fa44c7231b586d749385cfa3f9b604e4c7a0e1299c44c3db505d468a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465/trades.jsonl",
+   "exists": true,
+   "bytes": 782,
+   "sha256": "513b385af83f6d8f9f652058abb79fa605d02e256c193c1a5e106cb7c90699da"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465/orders.jsonl",
+   "exists": true,
+   "bytes": 1502,
+   "sha256": "adcf861e9b41fdf91ea1731fafc29f0d255cd869b90c4d3bf00615541065c771"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465/fills.jsonl",
+   "exists": true,
+   "bytes": 880,
+   "sha256": "e5a0b9557d627ab3dec35a2e7f0ff1373bd4a91ad986c169c60ec1159ae3fd81"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465/chart.json",
+   "exists": true,
+   "bytes": 2831815,
+   "sha256": "0754b24d7f6af6cd1f4eb7ff0edd57dc29486748929f431492251f89326678eb"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465/inputs.json",
+   "exists": true,
+   "bytes": 6435,
+   "sha256": "1de7e320e0b6b8179ebe461f4b73c6ab5edf7846afa8acf99f069d7093439d22"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_TRUTHUSDT_1792174465/summary.json",
+   "exists": true,
+   "bytes": 2794,
+   "sha256": "ecd0b831b79dc275bf48932277d2293007822035db4f0d5bb712fdcb88f7dad0"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XMRUSDT_1792173989/trades.jsonl",
+   "exists": true,
+   "bytes": 810,
+   "sha256": "a66ec4906b5d3dd7618e69face269c0351845c4b553cf224b92be9b8f176ad9d"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XMRUSDT_1792173989/orders.jsonl",
+   "exists": true,
+   "bytes": 1513,
+   "sha256": "4ff700444c69217417f6957a55962be607942ed0582533896afec8035500a20a"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XMRUSDT_1792173989/fills.jsonl",
+   "exists": true,
+   "bytes": 902,
+   "sha256": "98734ea9a907e2969fb7e6c8fe10862593a0db1ad0cef2c7cf044c513d0ea190"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XMRUSDT_1792173989/chart.json",
+   "exists": true,
+   "bytes": 2661061,
+   "sha256": "d3ad3bb1c7767ad352b505f727e8aeda26064972780af1b9ca247971a84d62f9"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XMRUSDT_1792173989/inputs.json",
+   "exists": true,
+   "bytes": 6431,
+   "sha256": "ad32bc1155214ca0fe4f78ac6e132943a38aa705c27a7b3f128c0369c8644a29"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XMRUSDT_1792173989/summary.json",
+   "exists": true,
+   "bytes": 2774,
+   "sha256": "b86e0515fa5bc55863a0cdf7ba0e21af0ac406f83c7721c9800ace52be55a2f0"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XVSUSDT_1792174216/trades.jsonl",
+   "exists": true,
+   "bytes": 791,
+   "sha256": "199b43a576f8d314f14b3446294036487483ea77a24c9682390c76d0016b5542"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XVSUSDT_1792174216/orders.jsonl",
+   "exists": true,
+   "bytes": 1486,
+   "sha256": "5230c83db67e8637a6a8a7be58485d3837492643cafb26c8848683b410dd6025"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XVSUSDT_1792174216/fills.jsonl",
+   "exists": true,
+   "bytes": 870,
+   "sha256": "9e6dacdde556f942d7a99e9137ab069afbbca23a7782d3851e1ebea02290d41b"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XVSUSDT_1792174216/chart.json",
+   "exists": true,
+   "bytes": 2856928,
+   "sha256": "9104f86d38455e7eb587436eebcc68027dc1d1db55e0d4c0eb45683c349074c0"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XVSUSDT_1792174216/inputs.json",
+   "exists": true,
+   "bytes": 6431,
+   "sha256": "8f2923eff82db6f8a86610b6d276cc118fe9ffeda6ea62eb670e7ed79c1e8567"
+  },
+  {
+   "group": "run",
+   "path": "回测日志/event_trend_v0_1/runs/run_WX_EVENT_TREND_V0_1_XVSUSDT_1792174216/summary.json",
+   "exists": true,
+   "bytes": 2789,
+   "sha256": "8c6c86f5fdafad0780a5d644154d171cba477970f42852ac6c461435bcda5f21"
+  },
+  {
+   "group": "code",
+   "path": "策略/WyckoffMaster/trading_core/fill.py",
+   "exists": true,
+   "bytes": 18376,
+   "sha256": "f050652c0d83b41a8a60f4d088c7864d553a935814496ad3f481563ec303ec5b"
+  },
+  {
+   "group": "code",
+   "path": "策略/WyckoffMaster/trading_core/engine.py",
+   "exists": true,
+   "bytes": 59121,
+   "sha256": "c86d454bcd933f1cca65d5d1871ddd794d96f2342cdbb47e25c234e3fa7dc3e2"
+  },
+  {
+   "group": "code",
+   "path": "策略/WyckoffMaster/trading_core/position.py",
+   "exists": true,
+   "bytes": 7783,
+   "sha256": "5df732b2eb0bb5d1aba25388f704dc5784f7930c5ed67f5c0e7daf67f86522fc"
+  },
+  {
+   "group": "code",
+   "path": "策略/WyckoffMaster/trading_core/policy.py",
+   "exists": true,
+   "bytes": 10309,
+   "sha256": "6303d06ae6fea38be8c0a3fe5304742aa65476ccb5e6c57e29d5cc8d903f8be7"
+  },
+  {
+   "group": "code",
+   "path": "策略/WyckoffMaster/event_trend_v0_1/engine_adapter.py",
+   "exists": true,
+   "bytes": 29445,
+   "sha256": "fc956b5502c5ff977402d34a0678955aeb62f1e8d702cda0a0bd033cd20dc139"
+  },
+  {
+   "group": "code",
+   "path": "策略/WyckoffMaster/event_trend_v0_1/runner.py",
+   "exists": true,
+   "bytes": 32550,
+   "sha256": "07e9800130bb2318b8abbf9a45c387e45e0c8bd7f19d49d3ed76a7c48e51a8cb"
+  },
+  {
+   "group": "code",
+   "path": "策略/WyckoffMaster/event_trend_v0_1/instrument_spec.py",
+   "exists": true,
+   "bytes": 52564,
+   "sha256": "97b9842de9a2e7c843416aa919841e81719834ecdb7940ff416196378fc1ab3a"
+  },
+  {
+   "group": "code",
+   "path": "策略/WyckoffMaster/event_trend_v0_1/config.py",
+   "exists": true,
+   "bytes": 4758,
+   "sha256": "29a42d98f7b7c5302b7adc0cef20b4ea832d76c41acdef2f2447ee234afc69ae"
+  },
+  {
+   "group": "p06",
+   "path": "evidence/PRECISION-06/PRECISION-06_越界成交腿与strict保护专项核验_2026-10-17.md",
+   "exists": true,
+   "bytes": 38060,
+   "sha256": "13d8b9f70fa914b7e93dfbf24ba130cc8e7a65220d6a2ab848581d4e16814136"
+  },
+  {
+   "group": "p06",
+   "path": "evidence/PRECISION-06/表3_12条成交腿核验明细.csv",
+   "exists": true,
+   "bytes": 5720,
+   "sha256": "ce5977299a2c1f1bb9ae1b547cea6fc22741510cfd0f3d349762d884631c4d34"
+  },
+  {
+   "group": "p06",
+   "path": "evidence/PRECISION-06/表3b_全量成交腿扫描.csv",
+   "exists": true,
+   "bytes": 10404,
+   "sha256": "613e6920aeecccccfa8645fabc93023f49f2953d6c031a414e216db194a8b5c0"
+  },
+  {
+   "group": "p06",
+   "path": "evidence/PRECISION-06/表5_影子整改覆盖.csv",
+   "exists": true,
+   "bytes": 1890,
+   "sha256": "f49ffdbcaf1fe1638c091e043449f8b4909f5c1ee976fead6d846ec3c4a20089"
+  },
+  {
+   "group": "p06",
+   "path": "evidence/PRECISION-06/逐腿核验.json",
+   "exists": true,
+   "bytes": 473303,
+   "sha256": "b8ea565a2dabe65b8710d4e28dafbd171d6cac48373e25ce352685375b50cb1c"
+  },
+  {
+   "group": "p06",
+   "path": "evidence/PRECISION-06/影子整改.json",
+   "exists": true,
+   "bytes": 24189,
+   "sha256": "e57bdd2f7ee16e56ac1f6168790a133b72c3a7a06e4f3a72b79bae3b30ef28b2"
+  },
+  {
+   "group": "p06",
+   "path": "evidence/PRECISION-06/影子端到端.json",
+   "exists": true,
+   "bytes": 5062,
+   "sha256": "f74f7e52e396ac5f08a13c7ece4a4480124fccab18a73e13bc4783c3b94e3c50"
+  },
+  {
+   "group": "p06",
+   "path": "evidence/PRECISION-06/整改影响面.json",
+   "exists": true,
+   "bytes": 2559,
+   "sha256": "e9648f262b2a912b0369985f7e2f5945b5126a11f563c10b56aa4d19e3a546d8"
+  },
+  {
+   "group": "p06",
+   "path": "evidence/PRECISION-06/隔离复现/test_p06_现状固定.py",
+   "exists": true,
+   "bytes": 11520,
+   "sha256": "10abcf619cc95c59b69e41f7e64ca493935e2d6459e2e14cc97f78a4c451aa3f"
+  },
+  {
+   "group": "p06",
+   "path": "evidence/PRECISION-06/隔离复现/test_p06_整改验收草案.py",
+   "exists": true,
+   "bytes": 8421,
+   "sha256": "5b65f19be3eb6ebaab27d65dc3d8d5d6e91e84951e569599829709fdcf895265"
+  }
+ ]
+}
